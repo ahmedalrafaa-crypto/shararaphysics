@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>معاينة بطاقة التقرير — أداة داخلية</title>
+<link rel="icon" type="image/png" href="assets/logo-ar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2d3142; --ink-soft:#5c6178; --bg:#f4f6ff; --card:#fff;
+    --violet:#6c5ce7; --violet-deep:#4834d4; --blue:#4d96ff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Cairo","Segoe UI",Tahoma,sans-serif;background:var(--bg);color:var(--ink);padding:24px 16px 60px}
+  .wrap{max-width:760px;margin:0 auto}
+  h1{font-weight:900;color:var(--violet-deep);text-align:center;margin-bottom:6px;font-size:1.5rem}
+  .sub{text-align:center;color:var(--ink-soft);margin-bottom:26px;font-size:.92rem}
+  .bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:26px}
+  button{
+    font-family:inherit;font-weight:800;font-size:.9rem;color:#fff;border:0;cursor:pointer;
+    background:linear-gradient(135deg,var(--violet),var(--blue));border-radius:999px;padding:10px 20px;
+    box-shadow:0 6px 16px rgba(108,92,231,.3);transition:transform .15s;
+  }
+  button:hover{transform:translateY(-2px)}
+  button:active{transform:translateY(0)}
+  button.ghost{background:#fff;color:var(--violet-deep);border:2px solid var(--violet);box-shadow:none}
+  button.green{background:linear-gradient(135deg,#2ecc8f,#00c2cb);box-shadow:0 6px 16px rgba(46,204,143,.3)}
+  .panel{
+    background:var(--card);border-radius:22px;padding:18px;
+    box-shadow:0 10px 30px rgba(72,52,212,.10);
+  }
+  .hint{text-align:center;color:var(--ink-soft);font-weight:700;padding:40px 0}
+  #preview canvas{display:block;width:100%;height:auto;border-radius:14px}
+  .note{margin-top:18px;font-size:.82rem;color:var(--ink-soft);text-align:center;line-height:1.8}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🖼️ معاينة بطاقة التقرير</h1>
+  <p class="sub">أداة داخلية لمعاينة renderReportCard وshareReportCard بصرياً — لا تُستخدم من قِبل الطالب</p>
+
+  <div class="bar">
+    <button id="btnMock">🎲 بيانات تجريبية</button>
+    <button id="btnEmpty" class="ghost">🧭 حالة فارغة</button>
+    <button id="btnReal" class="ghost">📂 بياناتي الحقيقية</button>
+    <button id="btnShare" class="green">📤 اختبار المشاركة/التنزيل</button>
+  </div>
+
+  <div class="panel">
+    <div id="preview"><p class="hint">⏳ يجهّز المعاينة...</p></div>
+  </div>
+
+  <p class="note">"بياناتي الحقيقية" تقرأ phy3m_progress وphy3m_analytics من localStorage هذا المتصفح فعلياً.<br>"اختبار المشاركة" يستخدم آخر بيانات مُعاينة؛ على المتصفحات التي لا تدعم مشاركة الملفات سينزّل PNG مباشرة.</p>
+</div>
+
+<script src="js/core.js"></script>
+<script src="js/report-card.js"></script>
+<script>
+(function () {
+  var lastData = null;
+
+  function mockTopics() {
+    return [
+      { ch: "ch0", name: "أساسيات الرياضيات", emoji: "🧮", total: 12, correct: 11, percent: 92, color: "#ea34cb" },
+      { ch: "ch1", name: "الكهربائية الساكنة", emoji: "⚡", total: 20, correct: 15, percent: 75, color: "#725be6" },
+      { ch: "ch2", name: "المغناطيس", emoji: "🧲", total: 10, correct: 4, percent: 40, color: "#e63d37" },
+      { ch: "ch3", name: "التيار الكهربائي", emoji: "🔌", total: 16, correct: 9, percent: 56, color: "#0ea026" },
+      { ch: "ch4", name: "البطارية والقوة الدافعة", emoji: "🔋", total: 8, correct: 8, percent: 100, color: "#08af78" }
+    ];
+  }
+  function mockData() {
+    var topics = mockTopics();
+    var totalQuestions = topics.reduce(function (s, t) { return s + t.total; }, 0);
+    var totalCorrect = topics.reduce(function (s, t) { return s + t.correct; }, 0);
+    return {
+      generatedAt: Date.now(),
+      totalQuestions: totalQuestions,
+      totalCorrect: totalCorrect,
+      overall: Math.round(100 * totalCorrect / totalQuestions),
+      chaptersStudied: topics.length,
+      starsTotal: 27,
+      topics: topics
+    };
+  }
+  function emptyData() {
+    return { generatedAt: Date.now(), totalQuestions: 0, totalCorrect: 0, overall: 0, chaptersStudied: 0, starsTotal: 0, topics: [] };
+  }
+
+  function show(data) {
+    lastData = data;
+    var host = document.getElementById("preview");
+    host.innerHTML = '<p class="hint">⏳ يرسم البطاقة...</p>';
+    renderReportCard(data).then(function (canvas) {
+      host.innerHTML = "";
+      host.appendChild(canvas);
+    });
+  }
+
+  document.getElementById("btnMock").addEventListener("click", function () { show(mockData()); });
+  document.getElementById("btnEmpty").addEventListener("click", function () { show(emptyData()); });
+  document.getElementById("btnReal").addEventListener("click", function () { show(buildReportData()); });
+  document.getElementById("btnShare").addEventListener("click", function () {
+    shareReportCard(lastData || mockData());
+  });
+
+  show(mockData());
+})();
+</script>
+</body>
+</html>

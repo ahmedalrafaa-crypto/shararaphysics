@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 6: كفاءة المحولة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch7">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السابع</a> / الدرس 6</span>
+  </div>
+
+  <div class="hero">
+    <h1>📊 الدرس 6: كفاءة المحولة</h1>
+    <p>لا توجد محولة مثالية 100% في الواقع — جزء صغير من القدرة يضيع حرارةً. <b>الكفاءة η</b> تخبرنا كم من القدرة الداخلة خرج فعلاً مفيداً.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🎯</span>
+    <span>محولة كفاءتها 95% تعني: من كل 100 واط تدخلها، يخرج 95 واط مفيداً ويضيع 5 واط حرارةً. كلما قلّت الخسائر، ارتفعت الكفاءة نحو 100%.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📜</span> تعريف الكفاءة وقانونها</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما المقصود بكفاءة المحولة؟ واكتب قانونها</summary>
+      <div class="ans">كفاءة المحولة: النسبة بين القدرة الخارجية P₂ إلى القدرة الداخلة P₁ مضروبة في 100%، ويُرمز لها بالرمز <b>η</b> (وتُسمّى إيتا).
+        <div class="bigout" style="margin-top:10px"><span class="hl">η = ( P₂ / P₁ ) × 100%</span><small>كفاءة المحولة = (القدرة الخارجة ÷ القدرة الداخلة) × 100%</small></div>
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما العلاقة بين القدرة الداخلة والخارجة والقدرة المفقودة؟</summary>
+      <div class="ans">القدرة المفقودة (الضائعة) = القدرة الداخلة − القدرة الخارجة:
+        <div class="bigout" style="margin-top:8px">P<sub>Loss</sub> = P₁ − P₂</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- ======== حاسبة الكفاءة ======== -->
+  <div class="sim">
+    <h3>🧪 حاسبة كفاءة المحولة</h3>
+    <p class="sim-sub">اكتب القدرة الداخلة والخارجة، وشاهد الكفاءة والقدرة المفقودة فوراً.</p>
+    <div class="mathtool">
+      <label style="font-weight:800">P₁ (الداخلة) =</label><input type="number" id="p1" value="220" style="width:110px"><span style="font-weight:800">W</span>
+      <label style="font-weight:800">P₂ (الخارجة) =</label><input type="number" id="p2" value="209" style="width:110px"><span style="font-weight:800">W</span>
+    </div>
+    <div class="bigout" id="effOut"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✏️</span> أمثلة محلولة خطوة بخطوة</div>
+
+  <div class="example">
+    <div class="exq">مثال ١ (من الملزمة): إذا كانت القدرة الداخلة في الملف الابتدائي لمحولة (220W) وخسائر القدرة فيها (11W). جد كفاءة المحولة.</div>
+    <div class="givens">المعطيات: P₁ = 220W ، P<sub>Loss</sub> = 11W ، η = ؟</div>
+    <div class="step"><b>الخطوة ١:</b> نوجد القدرة الخارجة:
+      <div class="math">P₂ = P₁ − P<sub>Loss</sub> = 220 − 11 = 209 W</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نطبّق قانون الكفاءة:
+      <div class="math">η = (P₂/P₁) × 100% = (209/220) × 100%</div></div>
+    <div class="step"><b>الخطوة ٣:</b>
+      <div class="math">η = 95 %</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٢ (من الملزمة): محولة كهربائية كفاءتها (80%) والقدرة الخارجة منها (4.8 kW). ما مقدار القدرة الداخلة في المحولة؟</div>
+    <div class="givens">المعطيات: η = 80% ، P₂ = 4.8 kW ، P₁ = ؟</div>
+    <div class="step"><b>الخطوة ١:</b> من قانون الكفاءة:
+      <div class="math">η = (P₂/P₁) × 100% ⟹ 80/100 = 4.8/P₁</div></div>
+    <div class="step"><b>الخطوة ٢:</b> ضرب تبادلي:
+      <div class="math">80 × P₁ = 100 × 4.8</div></div>
+    <div class="step"><b>الخطوة ٣:</b>
+      <div class="math">P₁ = (100 × 4.8)/80 = 480/80 = 6 kW</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٣ (من الملزمة): محولة كهربائية كفاءتها 95% إذا كانت القدرة الداخلة منها (9.5 kW). ما مقدار القدرة الخارجية في المحولة؟</div>
+    <div class="givens">المعطيات: η = 95% ، P₁ = 9.5 kW ، P₂ = ؟</div>
+    <div class="step"><b>الخطوة ١:</b> من قانون الكفاءة:
+      <div class="math">η = (P₂/P₁) × 100% ⟹ 95/100 = P₂/9.5</div></div>
+    <div class="step"><b>الخطوة ٢:</b> ضرب تبادلي:
+      <div class="math">100 × P₂ = 95 × 9.5</div></div>
+    <div class="step"><b>الخطوة ٣:</b>
+      <div class="math">P₂ = (95 × 9.5)/100 ≈ 9 kW</div></div>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>كفاءة المحولة: <b>η = (P₂/P₁) × 100%</b> ، والقدرة المفقودة P<sub>Loss</sub> = P₁ − P₂.</li>
+      <li>كلما قلّت خسائر القدرة اقتربت الكفاءة من 100% (المحولة المثالية).</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz6"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson5.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson7.html">الدرس التالي: خسائر القدرة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- حاسبة الكفاءة ---------- */
+(function () {
+  var p1 = document.getElementById("p1"), p2 = document.getElementById("p2");
+  var out = document.getElementById("effOut");
+  function calc() {
+    var P1 = parseFloat(p1.value), P2 = parseFloat(p2.value);
+    if (!isFinite(P1) || !isFinite(P2) || P1 === 0) { out.innerHTML = "أدخل قيماً صحيحة (P₁ ≠ 0)"; return; }
+    var eff = P2 / P1 * 100, loss = P1 - P2;
+    var r = function (x) { return Math.round(x * 100) / 100; };
+    out.innerHTML = "η = (P₂/P₁) × 100% = (" + P2 + "/" + P1 + ") × 100%<br>= <span class='hl'>" +
+      r(eff) + " %</span>" +
+      "<small>القدرة المفقودة P_Loss = P₁ − P₂ = " + r(loss) + " W" +
+      (P2 > P1 ? " ⚠ القدرة الخارجة لا يمكن أن تتجاوز الداخلة!" : "") + "</small>";
+  }
+  [p1, p2].forEach(function (el) { el.addEventListener("input", calc); });
+  calc();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz6", [
+  { q: "كفاءة المحولة η تُعرّف بأنها النسبة بين:",
+    opts: ["القدرة الخارجة إلى الداخلة مضروبة في 100%", "الداخلة إلى الخارجة مضروبة في 100%", "الفولطية إلى التيار", "عدد لفات الثانوي إلى الابتدائي"], a: 0,
+    why: "η = (P₂/P₁) × 100%." },
+  { q: "قانون كفاءة المحولة هو:",
+    opts: ["η = (P₂/P₁) × 100%", "η = (P₁/P₂) × 100%", "η = P₁ − P₂", "η = P₁ × P₂"], a: 0,
+    why: "الخارجة على الداخلة في المئة." },
+  { q: "القدرة المفقودة في المحولة تساوي:",
+    opts: ["P₁ − P₂", "P₂ − P₁", "P₁ × P₂", "P₁ + P₂"], a: 0,
+    why: "الداخلة ناقص الخارجة = ما ضاع حرارةً." },
+  { q: "محولة P₁ = 220W وخسائرها 11W ، كفاءتها =",
+    opts: ["95%", "5%", "11%", "100%"], a: 0,
+    why: "P₂ = 220 − 11 = 209 ⟹ η = 209/220 × 100 = 95%." },
+  { q: "محولة كفاءتها 80% وقدرتها الخارجة 4.8 kW ، فإن الداخلة =",
+    opts: ["6 kW", "3.84 kW", "4.8 kW", "60 kW"], a: 0,
+    why: "P₁ = (100 × 4.8)/80 = 6 kW." },
+  { q: "محولة كفاءتها 95% وقدرتها الداخلة 9.5 kW ، فإن الخارجة ≈",
+    opts: ["9 kW", "10 kW", "0.9 kW", "95 kW"], a: 0,
+    why: "P₂ = (95 × 9.5)/100 ≈ 9 kW." },
+  { q: "كلما قلّت خسائر القدرة في المحولة فإن كفاءتها:",
+    opts: ["تقترب من 100%", "تقترب من صفر", "لا تتغيّر", "تصبح سالبة"], a: 0,
+    why: "خسائر أقل ⟵ P₂ أقرب إلى P₁ ⟵ كفاءة أعلى." },
+  { q: "رمز كفاءة المحولة η يُسمّى:",
+    opts: ["إيتا", "أوميغا", "بيتا", "لامدا"], a: 0,
+    why: "η حرف يوناني يُنطق (إيتا)." }
+], { onDone: function (stars) { Phy.setLesson("ch7", "6", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

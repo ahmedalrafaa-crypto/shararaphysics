@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: التطبيقات وأقسام المواد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الأول</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏭 الدرس 5: التطبيقات وأقسام المواد</h1>
+    <p>من صبغ السيارات إلى آلة الاستنساخ — الكهربائية الساكنة تشتغل حولنا!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚗</span>
+    <span>هل تعلم أن طلاء سيارة أبيك صُبغ باستخدام <b>الكهربائية الساكنة</b>؟ قطرات الصبغ المشحونة تتوزع بالتساوي فيخرج الطلاء متجانساً وجميلاً!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">⚙️</span> تطبيقات الكهربائية الساكنة</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما الفائدة (التطبيقات العملية) من الكهربائية الساكنة؟ / تستثمر الكهربائية الساكنة في عدد من الأجهزة عددها؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١.</b> في جهاز المرذاذ ((جهاز صبغ السيارات))<br>
+        <b>٢.</b> جهاز الإستنساخ<br>
+        <b>٣.</b> أجهزة الترسيب في معامل الإسمنت<br>
+        <b>٤.</b> تثبيت مواد التجميل والعدسات اللاصقة.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما هو المرذاذ؟ وما هو الغرض منهُ؟ وكيف يعمل؟ <span class="wz">وزاري</span></summary>
+      <div class="ans"><b>المرذاذ:</b> هو أحد التطبيقات الكهربائية الساكنة يستخدم لغرض صبغ الأجسام (مثل السيارات والكراسي) حيث توصل فوهة المرذاذ بالقطب الموجب للمصدر الكهربائي وهذا يجعل جميع قطيرات الصبغه الخارجية من فوهة الجهاز مشحونة بشحنة موجبة. فتتباعد قطرات الصبغ بعضها عن بعض بسبب قوى التنافر بينها. أما الجسم المراد صبغهُ فيوصل مع القطب السالب للمصدر أو يوصل بالأرض وهذا يساعد على انجذاب قطرات الصبغ الى الجسم المراد صبغهُ وبالتالي تكون عملية الطلاء جيدة ومتجانسة.</div>
+    </details>
+  </div>
+
+  <!-- ======== رسم متحرك: المرذاذ ======== -->
+  <div class="sim">
+    <h3>🎬 شاهد: كيف يعمل المرذاذ؟</h3>
+    <p class="sim-sub">قطرات الصبغ الموجبة تتنافر فتتوزع، والجسم السالب يجذبها إليه.</p>
+    <canvas id="sprayСanvas" width="700" height="300"></canvas>
+    <div class="controls">
+      <button class="btn" id="sprayBtn">🎨 ابدأ الرش!</button>
+      <button class="btn ghost" id="sprayReset">🔄 إعادة</button>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">🔌</span> اختلاف المواد من حيث التوصيل الكهربائي</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> تقسم المواد من حيث قابليتها للتوصيل الكهربائي الى ثلاثة أقسام عددها مع الشرح والأمثلة؟</summary>
+      <div class="ans">
+        <b>١. الموصلات:</b> هي المواد التي تحتوي على وفرة من الشحنات الكهربائية السالبة الشحنة ((الكتروناتها ضعيفة الإرتباط بنواتها)) <b>مثل</b> النحاس، الألمنيوم وغيرها.<br>
+        <b>٢. العوازل:</b> هي المواد التي لا تتحرك فيها الشحنات الكهربائية بحرية ((تكون الكتروناتها قوية الإرتباط)) بالنواة. <b>مثل</b> الزجاج والصوف والخشب وغيرها.<br>
+        <b>٣. أشباه الموصلات:</b> هي المواد التي تمتلك قابلية التوصيل الكهربائي في ظروف معينة وتسلك سلوك العوازل في الظروف الأخرى، مثل السليكون والجرمانيوم.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف تكون حركة الالكترونات في الموصلات؟ ولماذا؟</summary>
+      <div class="ans">تتحرك الكتروناتها بسهولة لان الكتروناتها ضعيفة الإرتباط بنواتها.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف تكون حركة الالكترونات العوازل؟ ولماذا؟</summary>
+      <div class="ans">لا تتحرك الكتروناتها بحرية لان الكتروناتها قوية الإرتباط بنواتها.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما هي الظروف التي تكون فيها أشباه الموصلات مواد موصلة؟</summary>
+      <div class="ans">درجة حرارة عالية – الضوء – احتوائها على شوائب من مواد اخرى.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الفرق بين المواد الموصلة والمواد العازلة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <div class="tblwrap"><table class="nice">
+          <tr><th></th><th>المواد الموصلة</th><th>المواد العازلة</th></tr>
+          <tr><td><b>١</b></td><td>هي مواد تحتوي على وفرة من الشحنات الكهربائية السالبة وتكون جيدة التوصيل الكهربائي</td><td>هي المواد التي تكون ضعيفة التوصيل الكهربائي</td></tr>
+          <tr><td><b>٢</b></td><td>الكتروناتها ضعيفة الارتباط بالنواة</td><td>تكون الكتروناتها قوية الارتباط بنواة الذرة</td></tr>
+          <tr><td><b>٣</b></td><td>تتحرك الإلكترونات فيها بسهولة</td><td>لا تتحرك فيها الشحنات الكهربائية بحرية</td></tr>
+          <tr><td><b>٤</b></td><td>مثل النحاس والفضة والالمنيوم وغيرها</td><td>مثل الزجاج والصوف والخشب</td></tr>
+        </table></div>
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> عدم إنجذاب قصاصات الورق الصغيرة الى ساق النحاس المدلوكة بالصوف عند مسكة اليد.؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">وذلك لأن الشحنات الكهربائية المتولدة على ساق النحاس قد تسربت الى الأرض عن طريق الجسم.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> إنجذاب قصاصات الورق الى ساق النحاس المدلوك بالصوف عند مسكه بمادة عازلة أو عند لبس كف من مادة عازلة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">وذلك لأن ساق النحاس قد أحتفظ بالشحنات الكهربائية لفترة قصيرة مما أدى الى إنجذاب قصاصات الورق.</div>
+    </details>
+  </div>
+
+  <!-- ======== لعبة التصنيف ======== -->
+  <div class="sim classify">
+    <h3>🎮 لعبة: صنّف المواد!</h3>
+    <p class="sim-sub">اضغط على المادة ثم اضغط على السلة الصحيحة. هل تحصل على 8/8؟</p>
+    <div class="pool" id="pool"></div>
+    <div class="buckets">
+      <div class="bucket" data-cat="cond"><b>🔌 موصلات</b><div class="placed"></div></div>
+      <div class="bucket" data-cat="ins"><b>🧱 عوازل</b><div class="placed"></div></div>
+      <div class="bucket" data-cat="semi"><b>💡 أشباه موصلات</b><div class="placed"></div></div>
+    </div>
+    <div class="controls">
+      <span class="readout" id="clsScore">النتيجة: 0 / 8</span>
+      <button class="btn ghost small" id="clsReset">🔄 من جديد</button>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz5"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson4.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: قانون كولوم ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- المرذاذ ---------- */
+(function () {
+  var cv = document.getElementById("sprayСanvas"), ctx = cv.getContext("2d");
+  var spraying = false, drops = [];
+  document.getElementById("sprayBtn").onclick = function () { spraying = true; };
+  document.getElementById("sprayReset").onclick = function () { spraying = false; drops = []; painted = {}; };
+  var painted = {};
+
+  function tick() {
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    // المسدس (يمين — RTL)
+    ctx.fillStyle = "#4a4e69";
+    ctx.fillRect(600, 130, 70, 34);
+    ctx.fillRect(640, 160, 22, 40);
+    ctx.fillStyle = "#ff6b6b"; ctx.font = "bold 15px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("+ فوهة موجبة", 630, 115);
+    // الجسم المراد صبغه (سيارة مبسطة يسار)
+    ctx.fillStyle = "#dfe3f5";
+    ctx.beginPath();
+    if (ctx.roundRect) { ctx.roundRect(60, 120, 180, 70, 18); ctx.fill(); }
+    else ctx.fillRect(60, 120, 180, 70);
+    ctx.beginPath();
+    if (ctx.roundRect) { ctx.roundRect(95, 85, 100, 50, 14); ctx.fill(); } else ctx.fillRect(95, 85, 100, 50);
+    ctx.fillStyle = "#2d3142";
+    ctx.beginPath(); ctx.arc(105, 195, 18, 0, 7); ctx.fill();
+    ctx.beginPath(); ctx.arc(200, 195, 18, 0, 7); ctx.fill();
+    ctx.fillStyle = "#4d96ff"; ctx.font = "bold 15px Cairo";
+    ctx.fillText("− الجسم سالب / مؤرض", 150, 240);
+    // بقع الطلاء الثابتة
+    ctx.fillStyle = "#6c5ce7";
+    for (var key in painted) {
+      var p = painted[key];
+      ctx.beginPath(); ctx.arc(p.x, p.y, 5, 0, 7); ctx.fill();
+    }
+    // قطرات
+    if (spraying && drops.length < 90 && Math.random() < .8)
+      drops.push({ x: 598, y: 147, vx: -(3 + Math.random() * 2), vy: -1 + Math.random() * 2, id: Math.random() });
+    drops = drops.filter(function (d) {
+      // تنافر بسيط بين القطرات
+      drops.forEach(function (o) {
+        if (o === d) return;
+        var dx = d.x - o.x, dy = d.y - o.y, dd = dx * dx + dy * dy;
+        if (dd < 900 && dd > 0) { d.vx += dx / dd * 6; d.vy += dy / dd * 6; }
+      });
+      // انجذاب نحو السيارة
+      d.vx += (150 - d.x) * 0.0012; d.vy += (150 - d.y) * 0.0012;
+      d.x += d.vx; d.y += d.vy;
+      ctx.fillStyle = "#6c5ce7";
+      ctx.beginPath(); ctx.arc(d.x, d.y, 4, 0, 7); ctx.fill();
+      ctx.fillStyle = "#fff"; ctx.font = "9px Cairo"; ctx.fillText("+", d.x, d.y + 3);
+      if (d.x < 245 && d.y > 80 && d.y < 195) {
+        painted[d.id] = { x: Math.max(65, d.x), y: d.y };
+        if (Object.keys(painted).length > 260) delete painted[Object.keys(painted)[0]];
+        return false;
+      }
+      return d.x > -10 && d.y > -10 && d.y < cv.height + 10;
+    });
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- لعبة التصنيف ---------- */
+(function () {
+  var items = [
+    { n: "النحاس", c: "cond" }, { n: "الزجاج", c: "ins" },
+    { n: "السليكون", c: "semi" }, { n: "الألمنيوم", c: "cond" },
+    { n: "الصوف", c: "ins" }, { n: "الجرمانيوم", c: "semi" },
+    { n: "الفضة", c: "cond" }, { n: "الخشب", c: "ins" }
+  ];
+  var pool = document.getElementById("pool"), sel = null, score = 0, placedCount = 0;
+  function build() {
+    pool.innerHTML = ""; sel = null; score = 0; placedCount = 0;
+    document.querySelectorAll(".bucket .placed").forEach(function (p) { p.innerHTML = ""; });
+    updateScore();
+    items.slice().sort(function () { return Math.random() - .5; }).forEach(function (it) {
+      var b = document.createElement("button");
+      b.className = "chipm"; b.textContent = it.n; b.dataset.c = it.c;
+      b.onclick = function () {
+        document.querySelectorAll(".chipm").forEach(function (x) { x.classList.remove("sel"); });
+        b.classList.add("sel"); sel = b;
+      };
+      pool.appendChild(b);
+    });
+  }
+  function updateScore() {
+    document.getElementById("clsScore").textContent = "النتيجة: " + score + " / 8";
+  }
+  document.querySelectorAll(".bucket").forEach(function (bk) {
+    bk.onclick = function () {
+      if (!sel) return;
+      var ok = sel.dataset.c === bk.dataset.cat;
+      var span = document.createElement("span");
+      span.textContent = sel.textContent + (ok ? " ✓" : " ✗");
+      if (!ok) span.className = "bad";
+      bk.querySelector(".placed").appendChild(span);
+      if (ok) score++;
+      placedCount++;
+      sel.remove(); sel = null;
+      updateScore();
+      if (placedCount === 8 && score === 8) Phy.confetti();
+    };
+  });
+  document.getElementById("clsReset").onclick = build;
+  build();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz5", [
+  { q: "توصل فوهة المرذاذ (جهاز صبغ السيارات) بـ:",
+    opts: ["القطب السالب للمصدر", "القطب الموجب للمصدر", "الأرض فقط", "لا توصل بشيء"], a: 1,
+    why: "الفوهة موجبة فتخرج القطرات موجبة وتتنافر فتتوزع، والجسم يوصل بالسالب أو بالأرض." },
+  { q: "تتباعد قطرات الصبغ الخارجة من المرذاذ بعضها عن بعض بسبب:",
+    opts: ["الجاذبية", "قوى التنافر بينها لأنها مشحونة بالشحنة نفسها", "الرياح", "حرارة الجهاز"], a: 1,
+    why: "كل القطرات موجبة، والشحنات المتشابهة تتنافر — فتتوزع الصبغة بالتساوي." },
+  { q: "المواد التي تكون الكتروناتها ضعيفة الارتباط بالنواة هي:",
+    opts: ["العوازل", "الموصلات", "أشباه الموصلات", "الغازات"], a: 1,
+    why: "ضعف الارتباط يسمح للإلكترونات بالحركة بسهولة = مواد موصلة." },
+  { q: "السليكون والجرمانيوم من:",
+    opts: ["الموصلات", "العوازل", "أشباه الموصلات", "الفلزات النبيلة"], a: 2,
+    why: "توصلان في ظروف معينة (حرارة عالية، ضوء، شوائب) وتعزلان في غيرها." },
+  { q: "لا تنجذب قصاصات الورق لساق نحاس مدلوك بالصوف عند مسكه باليد مباشرة لأن:",
+    opts: ["النحاس عازل", "الشحنات تسربت إلى الأرض عن طريق الجسم", "الصوف امتص الشحنات", "الورق ثقيل"], a: 1,
+    why: "سؤال وزاري: جسم الإنسان موصل، فتتسرب الشحنات إلى الأرض — الحل: مسكه بمادة عازلة." },
+  { q: "أي من الآتية ليست من تطبيقات الكهربائية الساكنة؟",
+    opts: ["جهاز المرذاذ", "جهاز الاستنساخ", "أجهزة الترسيب في معامل الإسمنت", "المحرك الكهربائي"], a: 3,
+    why: "التطبيقات: المرذاذ، الاستنساخ، الترسيب، تثبيت مواد التجميل والعدسات — المحرك يعمل بالتيار." }
+], { onDone: function (stars) { Phy.setLesson("ch1", "5", { stars: stars }); } });
+</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: طبقات الغلاف الجوي الخمس</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch9">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل التاسع</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>🌡️ الدرس 2: طبقات الغلاف الجوي الخمس</h1>
+    <p>الغلاف الجوي ليس طبقة واحدة، بل خمس طبقات يعلو بعضها بعضاً من سطح الأرض حتى حافة الفضاء. لكل طبقة اسمها وارتفاعها وخصائصها. لنتعرّف عليها من الأسفل إلى الأعلى!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚀</span>
+    <span>لو ركبت صاروخاً من الأرض إلى الفضاء لعبرت خمس طبقات مختلفة، تتغيّر فيها الحرارة صعوداً وهبوطاً بشكل عجيب! تخيّل أن الحرارة تنخفض ثم تصعد ثم تنخفض ثم تصعد من جديد.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🗂️</span> عدد طبقات الغلاف الجوي</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> عدّد طبقات الغلاف الجوي؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١.</b> التروبوسفير &nbsp; <b>٢.</b> الستراتوسفير &nbsp; <b>٣.</b> الميزوسفير &nbsp; <b>٤.</b> الثرموسفير &nbsp; <b>٥.</b> الإكسوسفير
+        <br><span style="color:#0369a1">(مرتّبة من الأقرب إلى سطح الأرض إلى الأبعد نحو الفضاء)</span>
+      </div>
+    </details>
+  </div>
+
+  <!-- ======== المخطط التفاعلي لطبقات الغلاف الجوي ======== -->
+  <div class="sim">
+    <h3>🛰️ مخطط طبقات الغلاف الجوي — انقر أي طبقة</h3>
+    <p class="sim-sub">هذا مقطع من سطح الأرض إلى الفضاء. انقر أي طبقة لتقرأ ارتفاعها وأهم مميزاتها. جرّب الطبقات الخمس كلها!</p>
+    <canvas id="layers" width="700" height="470" style="cursor:pointer"></canvas>
+    <div class="controls"><span class="readout" id="layerOut">👆 انقر إحدى الطبقات الخمس في المخطط.</span></div>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>ترتيب الطبقات من الأرض للأعلى: <b>التروبوسفير ← الستراتوسفير ← الميزوسفير ← الثرموسفير ← الإكسوسفير</b>.</li>
+      <li>حيلة للحفظ: <b>«ت س م ث إ»</b> — تروبو، ستراتو، ميزو، ثرمو، إكسو.</li>
+      <li>سنتعمّق في كل طبقة في الدروس القادمة (3، 4، 5).</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson1.html">⮕ الدرس السابق</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: التروبوسفير والستراتوسفير ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- المخطط التفاعلي للطبقات ---------- */
+(function () {
+  var cv = document.getElementById("layers"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height, out = document.getElementById("layerOut");
+  var sel = -1, t = 0;
+  // من الأعلى (الفضاء) للأسفل (الأرض) في الرسم
+  var bands = [
+    { name: "الإكسوسفير", em: "🌌", alt: "أعلى من 500 كم", col: "#0f172a",
+      info: "الإكسوسفير: أعلى طبقات جو الأرض، تقع على ارتفاع يزيد على 500 كم، تمثّل الغلاف الغازي الخارجي، وجزيئات الغاز فيها تُفلت إلى الفضاء." },
+    { name: "الثرموسفير", em: "🔴", alt: "90 – 500 كم", col: "#7c2d12",
+      info: "الثرموسفير (الطبقة الحرارية / الأيونوسفير): حرارتها تزداد مع الارتفاع وتصل ~1000°C، وتعكس الموجات الراديوية ذات التردد الأقل من 300 كيلوهرتز." },
+    { name: "الميزوسفير", em: "☄️", alt: "50 – 90 كم", col: "#1e3a8a",
+      info: "الميزوسفير: في منتصف الغلاف الجوي، مكوّناتها الهيليوم والهيدروجين، ضغط منخفض وكثافة قليلة، وأبرد طبقة تصل ~-120°C (فيها تحترق الشهب)." },
+    { name: "الستراتوسفير", em: "☂️", alt: "14 – 50 كم", col: "#0e7490",
+      info: "الستراتوسفير: الطبقة الثانية، ترتفع من 14 إلى 50 كم، حرارتها تزداد مع الارتفاع، وتحتوي على طبقة الأوزون الواقية." },
+    { name: "التروبوسفير", em: "🌧️", alt: "0 – 14 كم", col: "#0284c7",
+      info: "التروبوسفير: الطبقة الأولى القريبة من الأرض (~14 كم)، تحدث فيها كل الظواهر المناخية وتشكّل 80% من الغلاف، وحرارتها تتناقص 6.5°C لكل كيلومتر." }
+  ];
+  var top = 20, bh = (H - top - 40) / bands.length;
+
+  function draw() {
+    t += 0.03;
+    ctx.clearRect(0, 0, W, H);
+    bands.forEach(function (b, i) {
+      var y = top + i * bh;
+      ctx.fillStyle = b.col; ctx.globalAlpha = (sel === i) ? 1 : 0.82;
+      ctx.fillRect(0, y, W, bh - 3);
+      ctx.globalAlpha = 1;
+      if (sel === i) { ctx.strokeStyle = "#fde047"; ctx.lineWidth = 4; ctx.strokeRect(2, y + 1, W - 4, bh - 5); }
+      ctx.fillStyle = "#fff"; ctx.font = "bold 20px Cairo"; ctx.textAlign = "right";
+      ctx.fillText(b.em + "  " + b.name, W - 20, y + bh / 2 - 2);
+      ctx.font = "600 14px Cairo"; ctx.fillStyle = "#e2e8f0";
+      ctx.fillText("الارتفاع: " + b.alt, W - 20, y + bh / 2 + 20);
+    });
+    // نجوم في الأعلى
+    ctx.fillStyle = "#fff";
+    for (var s = 0; s < 20; s++) {
+      var sx = (s * 137) % W, sy = top + ((s * 53) % (bh * 1.6));
+      ctx.globalAlpha = 0.4 + 0.4 * Math.abs(Math.sin(t + s));
+      ctx.fillRect(sx, sy, 2, 2);
+    }
+    ctx.globalAlpha = 1;
+    // الأرض في الأسفل
+    ctx.fillStyle = "#16a34a"; ctx.fillRect(0, H - 40, W, 40);
+    ctx.fillStyle = "#fff"; ctx.font = "bold 16px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("🌍 سطح الأرض", W / 2, H - 14);
+    // سهم الارتفاع
+    ctx.strokeStyle = "#94a3b8"; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(24, H - 40); ctx.lineTo(24, top); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(24, top); ctx.lineTo(20, top + 10); ctx.lineTo(28, top + 10); ctx.closePath();
+    ctx.fillStyle = "#94a3b8"; ctx.fill();
+    ctx.save(); ctx.translate(14, H / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillStyle = "#64748b"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("الارتفاع ⇧", 0, 0); ctx.restore();
+    requestAnimationFrame(draw);
+  }
+
+  cv.onclick = function (e) {
+    var r = cv.getBoundingClientRect();
+    var y = (e.clientY - r.top) * (H / r.height);
+    var i = Math.floor((y - top) / bh);
+    if (i >= 0 && i < bands.length) {
+      sel = i;
+      out.innerHTML = "<b>" + bands[i].em + " " + bands[i].name + "</b> — " + bands[i].info;
+    }
+  };
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "عدد طبقات الغلاف الجوي الرئيسية هو:",
+    opts: ["خمس طبقات", "ثلاث طبقات", "سبع طبقات", "طبقتان"], a: 0,
+    why: "خمس طبقات: التروبوسفير، الستراتوسفير، الميزوسفير، الثرموسفير، الإكسوسفير." },
+  { q: "الطبقة الأولى القريبة من سطح الأرض هي:",
+    opts: ["التروبوسفير", "الستراتوسفير", "الإكسوسفير", "الثرموسفير"], a: 0,
+    why: "التروبوسفير أقرب طبقة لسطح الأرض (0–14 كم)." },
+  { q: "الترتيب الصحيح للطبقات من الأرض إلى الفضاء هو:",
+    opts: ["تروبوسفير ← ستراتوسفير ← ميزوسفير ← ثرموسفير ← إكسوسفير", "إكسوسفير ← ثرموسفير ← ميزوسفير ← ستراتوسفير ← تروبوسفير", "ستراتوسفير ← تروبوسفير ← ميزوسفير ← إكسوسفير ← ثرموسفير", "ميزوسفير ← تروبوسفير ← ستراتوسفير ← ثرموسفير ← إكسوسفير"], a: 0,
+    why: "من الأسفل للأعلى: تروبو ← ستراتو ← ميزو ← ثرمو ← إكسو." },
+  { q: "الطبقة التي تحتوي على طبقة الأوزون هي:",
+    opts: ["الستراتوسفير", "التروبوسفير", "الميزوسفير", "الإكسوسفير"], a: 0,
+    why: "طبقة الأوزون توجد في الستراتوسفير." },
+  { q: "أعلى طبقات الغلاف الجوي (نحو الفضاء) هي:",
+    opts: ["الإكسوسفير", "التروبوسفير", "الستراتوسفير", "الميزوسفير"], a: 0,
+    why: "الإكسوسفير أعلى الطبقات (فوق 500 كم)." },
+  { q: "الطبقة الموجودة في منتصف الغلاف الجوي (50–90 كم) هي:",
+    opts: ["الميزوسفير", "التروبوسفير", "الثرموسفير", "الإكسوسفير"], a: 0,
+    why: "الميزوسفير في المنتصف بين 50 و90 كم." }
+], { onDone: function (stars) { Phy.setLesson("ch9", "2", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

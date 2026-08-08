@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>استوديو اللوغو — أ. أحمد رافع</title>
+<link rel="icon" type="image/svg+xml" href="logo-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2d3142; --ink-soft:#5c6178; --bg:#f4f6ff; --card:#fff;
+    --violet:#6c5ce7; --violet-deep:#4834d4; --yellow:#ffc93c;
+    --coral:#ff6b6b; --teal:#00c2cb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Cairo","Segoe UI",Tahoma,sans-serif;background:var(--bg);color:var(--ink);padding:24px 16px 60px}
+  .wrap{max-width:920px;margin:0 auto}
+  h1{font-weight:900;color:var(--violet-deep);text-align:center;margin-bottom:6px}
+  .sub{text-align:center;color:var(--ink-soft);margin-bottom:28px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+  .card{background:var(--card);border-radius:22px;padding:20px;text-align:center;
+        box-shadow:0 10px 30px rgba(72,52,212,.10)}
+  .card h2{font-size:18px;font-weight:800;margin-bottom:4px}
+  .card p{font-size:13px;color:var(--ink-soft);margin-bottom:12px}
+  canvas{max-width:100%;height:auto;border-radius:14px;background:
+         repeating-conic-gradient(#eceefc 0 25%, #fff 0 50%) 0 0/24px 24px;}
+  .banner-card{grid-column:1 / -1}
+  button{margin-top:14px;font-family:inherit;font-weight:800;font-size:15px;color:#fff;
+         background:linear-gradient(135deg,var(--violet),var(--violet-deep));
+         border:0;border-radius:14px;padding:10px 26px;cursor:pointer}
+  button:active{transform:scale(.97)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>⚡ استوديو اللوغو</h1>
+  <p class="sub">اضغط "تحميل PNG" واستعمل الصورة في واتساب وتلغرام وفيسبوك وغلاف الملزمة</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>الصورة الشخصية (دائرية)</h2>
+      <p>مثالية لواتساب وتلغرام — 1024×1024</p>
+      <canvas id="avatar" width="1024" height="1024"></canvas>
+      <br><button onclick="dl('avatar','logo-avatar')">⬇️ تحميل PNG</button>
+    </div>
+
+    <div class="card">
+      <h2>الأيقونة (مربعة)</h2>
+      <p>للتطبيقات والطباعة — 1024×1024</p>
+      <canvas id="icon" width="1024" height="1024"></canvas>
+      <br><button onclick="dl('icon','logo-icon')">⬇️ تحميل PNG</button>
+    </div>
+
+    <div class="card banner-card">
+      <h2>البانر باسمك</h2>
+      <p>لغلاف فيسبوك ويوتيوب وواجهة الملزمة — 1600×640</p>
+      <canvas id="banner" width="1600" height="640"></canvas>
+      <br><button onclick="dl('banner','logo-banner')">⬇️ تحميل PNG</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* رسم الذرّة والبرق — نفس تصميم logo-icon.svg */
+function drawAtom(ctx, cx, cy, s, boltScale) {
+  boltScale = boltScale || 1;
+  // توهّج خلف النواة
+  var glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, 150 * s);
+  glow.addColorStop(0, "rgba(255,255,255,0.28)");
+  glow.addColorStop(1, "rgba(255,255,255,0)");
+  ctx.fillStyle = glow;
+  ctx.beginPath(); ctx.arc(cx, cy, 150 * s, 0, 7); ctx.fill();
+
+  // المدارات الثلاثة
+  ctx.lineWidth = 13 * s;
+  ctx.strokeStyle = "#ffffff";
+  [[0, .9], [60, .55], [120, .55]].forEach(function (o) {
+    ctx.save();
+    ctx.translate(cx, cy); ctx.rotate(o[0] * Math.PI / 180);
+    ctx.globalAlpha = o[1];
+    ctx.beginPath(); ctx.ellipse(0, 0, 176 * s, 72 * s, 0, 0, 7); ctx.stroke();
+    ctx.restore();
+  });
+  ctx.globalAlpha = 1;
+
+  // الإلكترونات
+  function electron(deg, x, y, color) {
+    ctx.save();
+    ctx.translate(cx, cy); ctx.rotate(deg * Math.PI / 180);
+    ctx.fillStyle = color;
+    ctx.beginPath(); ctx.arc((x - 256) * s, (y - 256) * s, 17 * s, 0, 7); ctx.fill();
+    ctx.restore();
+  }
+  electron(0, 410, 226, "#ffc93c");
+  electron(60, 118, 292, "#ff6b6b");
+  electron(120, 399, 290, "#00c2cb");
+
+  // البرق
+  var b = s * boltScale;
+  ctx.save();
+  ctx.translate(cx, cy); ctx.scale(b, b); ctx.translate(-256, -256);
+  ctx.beginPath();
+  ctx.moveTo(280, 150); ctx.lineTo(200, 268); ctx.lineTo(250, 268);
+  ctx.lineTo(224, 362); ctx.lineTo(308, 240); ctx.lineTo(256, 240);
+  ctx.lineTo(300, 150); ctx.closePath();
+  ctx.fillStyle = "#ffc93c";
+  ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 7; ctx.lineJoin = "round";
+  ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+
+function gradientBG(ctx, w, h) {
+  var g = ctx.createLinearGradient(0, 0, w, h);
+  g.addColorStop(0, "#6c5ce7"); g.addColorStop(1, "#4834d4");
+  return g;
+}
+
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+
+function drawAvatar() {
+  var c = document.getElementById("avatar"), ctx = c.getContext("2d");
+  ctx.clearRect(0, 0, 1024, 1024);
+  ctx.save();
+  ctx.beginPath(); ctx.arc(512, 512, 512, 0, 7); ctx.clip();
+  ctx.fillStyle = gradientBG(ctx, 1024, 1024); ctx.fillRect(0, 0, 1024, 1024);
+  drawAtom(ctx, 512, 512, 1.85);
+  ctx.restore();
+}
+
+function drawIcon() {
+  var c = document.getElementById("icon"), ctx = c.getContext("2d");
+  ctx.clearRect(0, 0, 1024, 1024);
+  roundRect(ctx, 0, 0, 1024, 1024, 230);
+  ctx.save(); ctx.clip();
+  ctx.fillStyle = gradientBG(ctx, 1024, 1024); ctx.fillRect(0, 0, 1024, 1024);
+  drawAtom(ctx, 512, 512, 2);
+  ctx.restore();
+}
+
+function drawBanner() {
+  var c = document.getElementById("banner"), ctx = c.getContext("2d");
+  ctx.clearRect(0, 0, 1600, 640);
+  roundRect(ctx, 0, 0, 1600, 640, 0);
+  ctx.fillStyle = gradientBG(ctx, 1600, 640); ctx.fillRect(0, 0, 1600, 640);
+
+  // نجوم صغيرة للزينة
+  ctx.fillStyle = "rgba(255,255,255,0.35)";
+  [[90,90],[240,480],[520,120],[700,540],[1330,80],[1520,420],[60,330],[1560,220]]
+    .forEach(function (p) { ctx.beginPath(); ctx.arc(p[0], p[1], 5, 0, 7); ctx.fill(); });
+
+  // الذرّة على اليمين
+  drawAtom(ctx, 1270, 320, 1.35);
+
+  // النصوص
+  ctx.textAlign = "right";
+  ctx.fillStyle = "#ffffff";
+  ctx.font = "900 130px Cairo";
+  ctx.fillText("الأستاذ أحمد رافع", 990, 265);
+  ctx.fillStyle = "#ffc93c";
+  ctx.font = "700 62px Cairo";
+  ctx.fillText("مدرّس الفيزياء · الثالث المتوسط", 990, 385);
+  ctx.fillStyle = "rgba(255,255,255,0.85)";
+  ctx.font = "700 44px Cairo";
+  ctx.fillText("📞 07800155157", 990, 505);
+}
+
+function drawAll() { drawAvatar(); drawIcon(); drawBanner(); }
+
+function dl(id, name) {
+  var c = document.getElementById(id);
+  c.toBlob(function (blob) {
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = name + ".png";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }, "image/png");
+}
+
+/* ننتظر تحميل خط Cairo قبل الرسم حتى يظهر الاسم بالخط الصحيح */
+document.fonts.load('900 130px Cairo').then(function () {
+  return document.fonts.load('700 62px Cairo');
+}).then(drawAll);
+document.fonts.ready.then(drawAll);
+</script>
+</body>
+</html>

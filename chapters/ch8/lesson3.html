@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: الطاقة المائية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch8">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثامن</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>💧 الدرس 3: الطاقة المائية</h1>
+    <p>الماء المحجوز خلف سدٍّ عالٍ يختزن <b>طاقة وضع</b> هائلة. أطلقه ليسقط، فتتحول إلى <b>طاقة حركية</b> تدير التوربين... وتصبح كهرباء! هذه فكرة السدود الكهرومائية.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🏞️</span>
+    <span>سدّ الموصل وسدّ حديثة في العراق لا يخزنان الماء فقط — بل يحوّلان سقوطه إلى كهرباء تُضيء مدناً بأكملها. كيف؟ الجاذبية تفعل معظم العمل!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🌊</span> ثانياً: مصادر الطاقة المائية</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> وضّح مفهوم مصادر الطاقة المائية؟ أو اذكر مبدأ عمل تكنولوجيا طاقة المياه؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">تعتمد على أساس تحويل <b>الطاقة المختزنة (طاقة الوضع)</b> في المياه المحفوظة خلف السدود أو الأماكن المرتفعة، وتحويلها إلى <b>طاقة حركية</b> أثناء السقوط؛ حيث يتدفق الماء خلال أنبوب إلى توربين مائي أو هيدروليكي، وعندما يندفع الماء يقوم بتدوير المولدات الكهربائية الكبيرة المرتبطة به فينتج طاقة كهربائية.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف يتم إنتاج الطاقة الكهربائية باستخدام مصادر الطاقة المائية؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">أثناء سقوط الماء المحفوظ خلف الأماكن المرتفعة والسدود، يتدفق الماء خلال الأنبوب أو المجرى إلى توربين مائي أو هيدروليكي، وعندما يندفع يقوم بتدوير المولدات الكهربائية المرتبطة به فتنتج الطاقة الكهربائية.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الفائدة العملية من استخدام تكنولوجيا طاقة المياه؟</summary>
+      <div class="ans">توليد الطاقة الكهربائية، وذلك من خلال تحويل طاقة الوضع المخزونة في المياه إلى طاقة ميكانيكية تعمل على تدوير التوربينات المولّدة للكهرباء.</div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>إنّ الطاقة المتولّدة من حركة أو سقوط المياه تُدعى <b>الطاقة المائية</b>. <span class="wz">وزاري</span></li>
+      <li>مصادر الطاقة المائية تعتمد على تحويل <b>الطاقة الكامنة المختزنة</b> في الماء إلى <b>طاقة ميكانيكية حركية</b> أثناء سقوط الماء. <span class="wz">وزاري</span></li>
+    </ul>
+  </div>
+
+  <!-- ======== محاكاة السد الكهرومائي ======== -->
+  <div class="sim">
+    <h3>🎬 السد الكهرومائي: من طاقة الوضع إلى كهرباء</h3>
+    <p class="sim-sub">غيّر ارتفاع منسوب الماء خلف السد ثم افتح البوابة. كلما زاد الارتفاع زادت طاقة الوضع، فيندفع الماء أسرع ويدور التوربين أقوى وتزداد الكهرباء.</p>
+    <canvas id="dam" width="700" height="400"></canvas>
+    <div class="controls">
+      <label>ارتفاع منسوب الماء: <b><span id="hVal">70</span>%</b></label>
+      <input type="range" id="hSlide" min="20" max="100" value="70">
+      <button class="btn green" id="gateBtn">🚪 افتح البوابة</button>
+    </div>
+    <div class="controls"><span class="readout" id="damState">البوابة مغلقة — الماء يختزن طاقة وضع خلف السد.</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson2.html">⮕ الدرس السابق</a>
+    <a class="btn" href="lesson4.html">الدرس التالي: الطاقة النووية ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة السد الكهرومائي ---------- */
+(function () {
+  var cv = document.getElementById("dam"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height, t = 0;
+  var level = 70, open = false, spin = 0, glow = 0;
+  var hSlide = document.getElementById("hSlide"), hVal = document.getElementById("hVal");
+  var gateBtn = document.getElementById("gateBtn"), state = document.getElementById("damState");
+  var drops = [];
+
+  hSlide.oninput = function () { level = +hSlide.value; hVal.textContent = level; };
+  gateBtn.onclick = function () {
+    open = !open;
+    gateBtn.textContent = open ? "🚪 أغلق البوابة" : "🚪 افتح البوابة";
+    gateBtn.classList.toggle("green", !open);
+  };
+
+  function tick() {
+    t += 0.05;
+    var speed = level / 100;               // كلما ارتفع المنسوب زادت السرعة
+    var flow = open ? speed : 0;
+    spin += open ? (0.05 + speed * 0.35) : 0;
+    glow += ((open ? speed : 0) - glow) * 0.06;
+    ctx.clearRect(0, 0, W, H);
+
+    // السماء
+    ctx.fillStyle = "#e0f2fe"; ctx.fillRect(0, 0, W, H);
+    var groundY = 340;
+
+    // خزان الماء خلف السد (يسار)
+    var damX = 300;                        // موضع جدار السد
+    var waterTop = groundY - (level / 100) * 220;
+    ctx.fillStyle = "#38bdf8";
+    ctx.fillRect(20, waterTop, damX - 20 - 40, groundY - waterTop);
+    // تموّج السطح
+    ctx.strokeStyle = "#0ea5e9"; ctx.lineWidth = 2; ctx.beginPath();
+    for (var x = 20; x < damX - 40; x += 6) {
+      var yy = waterTop + Math.sin(x / 18 + t) * 3;
+      if (x === 20) ctx.moveTo(x, yy); else ctx.lineTo(x, yy);
+    }
+    ctx.stroke();
+    ctx.fillStyle = "#0369a1"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("طاقة وضع مختزنة", 150, waterTop - 10);
+    // سهم الارتفاع
+    ctx.strokeStyle = "#0369a1"; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(35, waterTop); ctx.lineTo(35, groundY); ctx.stroke();
+    ctx.fillText("h", 46, (waterTop + groundY) / 2);
+
+    // جدار السد
+    ctx.fillStyle = "#9ca3af";
+    ctx.beginPath();
+    ctx.moveTo(damX - 40, groundY); ctx.lineTo(damX - 20, 90);
+    ctx.lineTo(damX, 90); ctx.lineTo(damX, groundY); ctx.closePath(); ctx.fill();
+    ctx.strokeStyle = "#6b7280"; ctx.lineWidth = 2; ctx.stroke();
+
+    // الأنبوب (penstock) المائل نحو التوربين
+    var pTopX = damX - 30, pTopY = groundY - 30, pBotX = 430, pBotY = groundY;
+    ctx.strokeStyle = "#64748b"; ctx.lineWidth = 20; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(pTopX, pTopY); ctx.lineTo(pBotX, pBotY); ctx.stroke();
+    ctx.strokeStyle = "#94a3b8"; ctx.lineWidth = 12; ctx.beginPath(); ctx.moveTo(pTopX, pTopY); ctx.lineTo(pBotX, pBotY); ctx.stroke();
+    ctx.lineCap = "butt";
+    ctx.fillStyle = "#475569"; ctx.fillText("أنبوب", (pTopX + pBotX) / 2 + 10, pBotY + 44);
+
+    // ماء يتدفق داخل الأنبوب
+    if (open) {
+      for (var i = 0; i < 10; i++) {
+        var f = ((t * (0.6 + speed) + i / 10) % 1);
+        var wx = pTopX + f * (pBotX - pTopX), wy = pTopY + f * (pBotY - pTopY);
+        ctx.beginPath(); ctx.arc(wx, wy, 4, 0, Math.PI * 2); ctx.fillStyle = "#0ea5e9"; ctx.fill();
+      }
+    }
+
+    // التوربين المائي
+    var tx = 470, ty = groundY;
+    ctx.save(); ctx.translate(tx, ty); ctx.rotate(spin);
+    for (var b = 0; b < 8; b++) {
+      ctx.rotate(Math.PI / 4);
+      ctx.fillStyle = "#0d9488";
+      ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(26, -7); ctx.lineTo(26, 7); ctx.closePath(); ctx.fill();
+    }
+    ctx.restore();
+    ctx.beginPath(); ctx.arc(tx, ty, 8, 0, Math.PI * 2); ctx.fillStyle = "#0f766e"; ctx.fill();
+    ctx.fillStyle = "#0f766e"; ctx.fillText("توربين", tx, ty + 44);
+
+    // عمود للمولد
+    ctx.strokeStyle = "#475569"; ctx.lineWidth = 5;
+    ctx.beginPath(); ctx.moveTo(tx + 26, ty); ctx.lineTo(560, ty); ctx.stroke();
+
+    // المولد
+    var gx = 600, gy = groundY;
+    ctx.fillStyle = glow > 0.3 ? "#16a34a" : "#94a3b8";
+    ctx.beginPath(); ctx.arc(gx, gy, 30, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = "#334155"; ctx.lineWidth = 2; ctx.stroke();
+    ctx.fillStyle = "#fff"; ctx.font = "bold 20px Cairo"; ctx.fillText("G", gx, gy + 7);
+    ctx.fillStyle = "#15803d"; ctx.font = "bold 12px Cairo"; ctx.fillText("المولد", gx, gy + 48);
+
+    // مصباح فوق المولد
+    var ly = 120;
+    ctx.strokeStyle = glow > 0.3 ? "#facc15" : "#cbd5e1"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(gx, gy - 30); ctx.lineTo(gx, ly + 18); ctx.stroke();
+    if (glow > 0.05) {
+      var g = ctx.createRadialGradient(gx, ly, 4, gx, ly, 40);
+      g.addColorStop(0, "rgba(250,204,21," + (0.85 * glow) + ")"); g.addColorStop(1, "rgba(250,204,21,0)");
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(gx, ly, 40, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.beginPath(); ctx.arc(gx, ly, 16, 0, Math.PI * 2);
+    ctx.fillStyle = glow > 0.2 ? "#fde047" : "#e5e7eb"; ctx.fill();
+    ctx.strokeStyle = "#9ca3af"; ctx.lineWidth = 2; ctx.stroke();
+
+    // الأرض
+    ctx.fillStyle = "#a3a380"; ctx.fillRect(0, groundY + 12, W, H - groundY - 12);
+
+    // شريط الطاقة
+    ctx.fillStyle = "#15803d"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    var msg = !open ? "البوابة مغلقة — الماء يختزن طاقة وضع"
+      : (level >= 80 ? "منسوب عالٍ ⟵ طاقة وضع كبيرة ⟵ كهرباء أقوى! ⚡"
+        : level >= 50 ? "الماء يسقط ويدير التوربين ⟵ تتولّد الكهرباء" : "منسوب منخفض ⟵ طاقة أقل");
+    ctx.fillText(msg, W / 2, 30);
+
+    if (open) state.textContent = "الماء يسقط بطاقة الوضع فيتحول إلى طاقة حركية تدير التوربين والمولد ⟵ كهرباء. منسوب أعلى = كهرباء أكثر.";
+    else state.textContent = "البوابة مغلقة — الماء يختزن طاقة وضع خلف السد.";
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "الطاقة المتولّدة من حركة أو سقوط المياه تُدعى:",
+    opts: ["الطاقة المائية", "الطاقة النووية", "الطاقة الشمسية", "الطاقة الكيميائية"], a: 0,
+    why: "طاقة حركة/سقوط الماء = الطاقة المائية." },
+  { q: "تعتمد مصادر الطاقة المائية على تحويل:",
+    opts: ["طاقة الوضع المختزنة في الماء إلى طاقة حركية أثناء السقوط", "الحرارة إلى ضوء", "الطاقة النووية إلى كيميائية", "الصوت إلى حركة"], a: 0,
+    why: "طاقة الوضع (كامنة) ⟵ طاقة حركية ⟵ تدير التوربين." },
+  { q: "أين يُختزن الماء لاستثمار طاقته؟",
+    opts: ["خلف السدود أو في الأماكن المرتفعة", "في باطن الأرض العميق", "في خزانات النفط", "داخل المفاعل النووي"], a: 0,
+    why: "الماء المحفوظ خلف السدود/الأماكن المرتفعة يمتلك طاقة وضع عالية." },
+  { q: "عندما يندفع الماء الساقط فإنه:",
+    opts: ["يدير التوربين المائي المرتبط بالمولد فتتولّد الكهرباء", "يبرّد المولد فقط", "يُطفئ التوربين", "يوقف الدائرة"], a: 0,
+    why: "اندفاع الماء يدير التوربين ⟵ المولد ⟵ كهرباء." },
+  { q: "كلما زاد ارتفاع منسوب الماء خلف السد فإن:",
+    opts: ["طاقة الوضع تزداد فتزداد الطاقة الكهربائية المتولّدة", "تقل الطاقة المتولّدة", "يتوقف التوربين", "لا يتغيّر شيء"], a: 0,
+    why: "ارتفاع أعلى ⟵ طاقة وضع أكبر ⟵ اندفاع أقوى ⟵ كهرباء أكثر." },
+  { q: "الفائدة العملية من تكنولوجيا طاقة المياه هي:",
+    opts: ["توليد الطاقة الكهربائية", "حرق الوقود", "تخصيب اليورانيوم", "تحلية الهواء"], a: 0,
+    why: "تحويل طاقة الوضع في الماء إلى طاقة ميكانيكية تدير التوربينات المولّدة للكهرباء." }
+], { onDone: function (stars) { Phy.setLesson("ch8", "3", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

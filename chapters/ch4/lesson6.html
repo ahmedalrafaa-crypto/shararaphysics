@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 6: بطارية الوقود</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch4">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الرابع</a> / الدرس 6</span>
+  </div>
+
+  <div class="hero">
+    <h1>🚀 الدرس 6: بطارية الوقود</h1>
+    <p>بطارية لا تفرغ أبداً ما دام الوقود يصلها! تدخل الهيدروجين والأوكسجين... فتخرج كهرباء وماء نقي. خيال؟ لا، علم!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">💧</span>
+    <span>ناتج «عادم» هذه البطارية ليس دخاناً ولا غازات سامة... بل <b>ماء</b>! لهذا تعتبر صديقة للبيئة وتسيّر المركبات الحديثة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> ما المقصود ببطارية الوقود؟</div>
+  <div class="defbox">
+    <b class="term">بطاريه الوقود</b><b>:</b> هي خليه قادره على توليد التيار الكهربائي باعتمادها على الوقود الذي يجهز من مصدر خارجي و لا ينتهي مفعولها فهي تعمل باستمرار طالما يتم تجهيزها بالوقود ومن امثلتها بطاريه وقود الهيدروجين.
+  </div>
+
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما هو مبدا عمل خليه وقود الهيدروجين؟</summary>
+      <div class="ans">اساس عملها التفاعلات الكيميائية.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كم فولط تولد الخلية الواحدة لبطارية الوقود؟</summary>
+      <div class="ans">تولد كل خليه منها فرق جهد كهربائي قدره فولطاً واحدا لذلك كلما ازداد عدد الشرائح الموصلة بعضها مع بعض ازداد فرق الجهد الخارج منها.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الفائدة العملية لبطارية الوقود؟</summary>
+      <div class="ans">
+        <b>١.</b> تشغيل الحاسوب.<br>
+        <b>٢.</b> في تسيير المركبات الحديثة.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف تعمل خليه وقود الهيدروجين؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">تعمل على تحويل الطاقة الكيميائية الى طاقه كهربائية و يتم تخزين الهيدروجين بشكل سائل في اوعيه خاصه فأثناء عمل خليه الوقود يتم تحويل غاز الهيدروجين و غاز الاوكسجين المأخوذ من الجو الى ماء و طاقه كهربائية.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما مكونات خلايا الوقود؟</summary>
+      <div class="ans">تتكون من شرائح رقيقه وتولد كل خليه فرق جهد كهربائي قدره فولطا واحدا لذلك كلما ازداد عدد الشرائح الموصلة بعضها مع بعض ازداد فرق الجهد الخارج منها.</div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة: خلية وقود الهيدروجين ======== -->
+  <div class="sim">
+    <h3>🎬 شغّل خلية وقود الهيدروجين</h3>
+    <p class="sim-sub">افتح صمام الهيدروجين وراقب: هيدروجين + أوكسجين من الجو ⟵ ماء + طاقة كهربائية!</p>
+    <canvas id="fuelSim" width="700" height="380"></canvas>
+    <div class="controls">
+      <button class="btn green" id="fuelBtn">🔛 افتح صمام الوقود</button>
+      <label>عدد الشرائح: <input type="range" id="cellRange" min="1" max="6" value="1" step="1"> <span class="readout" id="cellLabel">1 شريحة = 1 V</span></label>
+    </div>
+    <div class="controls"><span class="readout" id="fuelState">الهيدروجين مخزون بشكل سائل في وعاء خاص — افتح الصمام لبدء العمل!</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🌱</span> مميزات خلية وقود الهيدروجين</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما مميزات خليه وقود الهيدروجين؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١.</b> عدم حصول تلوث او استهلاك المصادر الوقود التقليدي.<br>
+        <b>٢.</b> تكنولوجيا الهيدروجين لا تسبب اخطار فهي امنه عند الاستعمال.<br>
+        <b>٣.</b> كفاءه تشغيلها عالية جدا.<br>
+        <b>٤.</b> عمرها طويل بالمقارنة مع باقي انواع البطاريات.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> عند استعمال بطاريه الوقود فإنها لا تسبب تلوث للبيئة او استهلاكا لمصادر الوقود التقليدية التي تؤثر في صحه الانسان؟</summary>
+      <div class="ans">لان الهيدروجين ينتج من الماء بالأكسدة ويعود الى الماء مره اخرى.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> تعد بطاريه الوقود امنه عند استعمالها؟</summary>
+      <div class="ans">لأنه تكنولوجيا الهيدروجين لا تحتوي على اي عناصر تسبب في اخطار ممكنه.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> تعد بطاريه وقود الهيدروجين احد تطبيقات قانون حفظ الطاقة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">لأنها تحول الطاقة الكيميائية الى طاقه كهربائية.</div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>بطارية الوقود <b>لا ينتهي مفعولها</b> — تعمل باستمرار طالما يتم تجهيزها بالوقود من مصدر خارجي.</li>
+      <li>كل خليه تولد <b>فولطاً واحداً</b>، وكلما ازداد عدد الشرائح الموصلة ازداد فرق الجهد الخارج.</li>
+      <li>نواتج عملها: <b>ماء + طاقه كهربائية</b> — لهذا فهي صديقة للبيئة!</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz6"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson5.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson7.html">الدرس التالي: القوة الدافعة الكهربائية ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة خلية وقود الهيدروجين ---------- */
+(function () {
+  var cv = document.getElementById("fuelSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height;
+  var on = false, t = 0, glow = 0, drops = [];
+  var cells = 1;
+  var btn = document.getElementById("fuelBtn");
+  var state = document.getElementById("fuelState");
+  var rng = document.getElementById("cellRange");
+  var lbl = document.getElementById("cellLabel");
+
+  var fcX = W / 2, fcY = H / 2, fcW = 150, fcH = 190;
+
+  btn.onclick = function () {
+    on = !on;
+    btn.textContent = on ? "⏹️ اغلق صمام الوقود" : "🔛 افتح صمام الوقود";
+    btn.classList.toggle("green", !on);
+    state.textContent = on
+      ? "الخلية تعمل! الهيدروجين والأوكسجين يتحولان إلى ماء وطاقة كهربائية — المصباح يتوهج والماء يتقطر."
+      : "أغلقنا الصمام — توقف الوقود فتوقفت الخلية فوراً (مفعولها لا ينتهي ما دام الوقود موجوداً).";
+  };
+  rng.oninput = function () {
+    cells = +rng.value;
+    lbl.textContent = cells + (cells === 1 ? " شريحة" : " شرائح") + " = " + cells + " V";
+    if (on) state.textContent = "كلما ازداد عدد الشرائح الموصلة ازداد فرق الجهد الخارج: الآن " + cells + " V!";
+  };
+
+  function tick() {
+    t += 0.016;
+    ctx.clearRect(0, 0, W, H);
+    ctx.textAlign = "center";
+
+    // وعاء الهيدروجين (يسار)
+    ctx.fillStyle = "#dbeafe";
+    ctx.beginPath(); ctx.roundRect(40, fcY - 70, 100, 140, 14); ctx.fill();
+    ctx.strokeStyle = "#2b6cb0"; ctx.lineWidth = 3; ctx.stroke();
+    ctx.fillStyle = "#2b6cb0"; ctx.font = "bold 14px Cairo";
+    ctx.fillText("H₂", 90, fcY - 20);
+    ctx.font = "bold 11.5px Cairo";
+    ctx.fillText("هيدروجين سائل", 90, fcY + 2);
+    ctx.fillText("(وعاء خاص)", 90, fcY + 18);
+    // أنبوب الهيدروجين
+    ctx.strokeStyle = "#2b6cb0"; ctx.lineWidth = 8;
+    ctx.beginPath(); ctx.moveTo(140, fcY); ctx.lineTo(fcX - fcW / 2, fcY); ctx.stroke();
+
+    // الأوكسجين من الجو (أعلى يمين)
+    ctx.fillStyle = "#0e9f6e"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("O₂ من الجو", fcX + fcW / 2 + 70, fcY - 66);
+    ctx.strokeStyle = "#0e9f6e"; ctx.lineWidth = 8;
+    ctx.beginPath(); ctx.moveTo(fcX + fcW / 2 + 110, fcY - 50); ctx.lineTo(fcX + fcW / 2, fcY - 50); ctx.stroke();
+
+    // جزيئات الغاز تتحرك عند التشغيل
+    if (on) {
+      for (var i = 0; i < 4; i++) {
+        var f = ((t * 0.5 + i / 4) % 1);
+        // هيدروجين
+        ctx.fillStyle = "#2b6cb0";
+        ctx.beginPath(); ctx.arc(140 + f * (fcX - fcW / 2 - 140), fcY, 5, 0, Math.PI * 2); ctx.fill();
+        // اوكسجين
+        ctx.fillStyle = "#0e9f6e";
+        ctx.beginPath(); ctx.arc(fcX + fcW / 2 + 110 - f * 110, fcY - 50, 5, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+
+    // جسم الخلية: شرائح رقيقة
+    var slabW = Math.max(10, fcW / cells - 6);
+    for (var s = 0; s < cells; s++) {
+      var sx = fcX - fcW / 2 + s * (fcW / cells) + 3;
+      ctx.fillStyle = s % 2 ? "#a7c4e0" : "#c2d8ee";
+      ctx.beginPath(); ctx.roundRect(sx, fcY - fcH / 2, fcW / cells - 6, fcH, 6); ctx.fill();
+      ctx.strokeStyle = "#5a83ab"; ctx.lineWidth = 1.5; ctx.stroke();
+    }
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 13px Cairo";
+    ctx.fillText("خلية الوقود (" + cells + " " + (cells === 1 ? "شريحة" : "شرائح") + ")", fcX, fcY - fcH / 2 - 12);
+
+    // مخرج الماء (أسفل)
+    ctx.strokeStyle = "#5eb0e5"; ctx.lineWidth = 8;
+    ctx.beginPath(); ctx.moveTo(fcX, fcY + fcH / 2); ctx.lineTo(fcX, fcY + fcH / 2 + 24); ctx.stroke();
+    if (on && Math.random() < 0.06) drops.push({ x: fcX, y: fcY + fcH / 2 + 26, v: 0 });
+    drops.forEach(function (d) { d.v += 0.15; d.y += d.v; });
+    drops = drops.filter(function (d) { return d.y < H - 26; });
+    ctx.fillStyle = "#5eb0e5";
+    drops.forEach(function (d) {
+      ctx.beginPath(); ctx.arc(d.x, d.y, 4, 0, Math.PI * 2); ctx.fill();
+    });
+    // كأس الماء
+    ctx.strokeStyle = "#9db2c9"; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.moveTo(fcX - 26, H - 52); ctx.lineTo(fcX - 22, H - 16); ctx.lineTo(fcX + 22, H - 16); ctx.lineTo(fcX + 26, H - 52);
+    ctx.stroke();
+    ctx.fillStyle = "#5eb0e5"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("ماء 💧", fcX + 62, H - 24);
+
+    // المصباح (يمين) وأسلاك
+    var lx = fcX + fcW / 2 + 120, ly = fcY + 40;
+    ctx.strokeStyle = "#9a7b4f"; ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.moveTo(fcX + fcW / 2, fcY + 20); ctx.lineTo(lx, fcY + 20); ctx.lineTo(lx, ly - 20);
+    ctx.moveTo(fcX + fcW / 2, fcY + 60); ctx.lineTo(lx, fcY + 60); // رجوع مبسط
+    ctx.stroke();
+    glow += ((on ? 0.4 + cells / 8 : 0) - glow) * 0.07;
+    if (glow > 0.03) {
+      var grd = ctx.createRadialGradient(lx, ly, 5, lx, ly, 40);
+      grd.addColorStop(0, "rgba(255,214,90," + (0.6 * glow) + ")");
+      grd.addColorStop(1, "rgba(255,214,90,0)");
+      ctx.fillStyle = grd;
+      ctx.beginPath(); ctx.arc(lx, ly, 40, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.beginPath(); ctx.arc(lx, ly, 17, 0, Math.PI * 2);
+    ctx.fillStyle = glow > 0.03 ? "#ffe28a" : "#f2f2f2"; ctx.fill();
+    ctx.strokeStyle = "#d9a520"; ctx.lineWidth = 3; ctx.stroke();
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 12px Cairo";
+    ctx.fillText(on ? cells + " V ⚡" : "0 V", lx, ly + 38);
+
+    // معادلة العمل
+    ctx.font = "bold 14px Cairo";
+    ctx.fillStyle = on ? "#0e7490" : "#b9c0cc";
+    ctx.fillText("هيدروجين + اوكسجين ⟵ ماء + طاقه كهربائية", W / 2, 30);
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz6", [
+  { q: "بطاريه الوقود هي خليه قادره على توليد التيار الكهربائي باعتمادها على:",
+    opts: ["الوقود الذي يجهز من مصدر خارجي", "الشمس", "مواد كيميائية مخزونة بداخلها تنتهي", "الاحتكاك"], a: 0,
+    why: "تعتمد على وقود من مصدر خارجي ولا ينتهي مفعولها ما دام الوقود مجهزاً." },
+  { q: "بطارية الوقود لا ينتهي مفعولها لأنها:",
+    opts: ["تعمل باستمرار طالما يتم تجهيزها بالوقود", "تشحن نفسها", "لا تحتاج وقوداً", "تعمل بالمغناطيس"], a: 0,
+    why: "ما دام الوقود يصلها من الخارج فهي تعمل — مثالها بطارية وقود الهيدروجين." },
+  { q: "مبدا عمل خليه وقود الهيدروجين هو:",
+    opts: ["التفاعلات الكيميائية", "الحث الكهرومغناطيسي", "انعكاس الضوء", "تمدد الغازات"], a: 0,
+    why: "اساس عملها التفاعلات الكيميائية." },
+  { q: "تولد الخلية الواحدة لبطارية الوقود فرق جهد قدره:",
+    opts: ["فولطاً واحدا", "12 فولط", "1.5 فولط", "2 فولط"], a: 0,
+    why: "فولط واحد لكل خلية — وكلما ازداد عدد الشرائح الموصلة ازداد فرق الجهد الخارج." },
+  { q: "اثناء عمل خليه الوقود يتم تحويل غاز الهيدروجين وغاز الاوكسجين المأخوذ من الجو الى:",
+    opts: ["ماء و طاقه كهربائية", "دخان وحرارة", "حامض الكبريتيك", "غاز سام"], a: 0,
+    why: "النواتج: ماء + طاقة كهربائية — والهيدروجين مخزون بشكل سائل في أوعية خاصة." },
+  { q: "من الفوائد العملية لبطارية الوقود:",
+    opts: ["تشغيل الحاسوب وتسيير المركبات الحديثة", "تشغيل الساعات فقط", "إنارة الشوارع فقط", "صناعة المغانط"], a: 0,
+    why: "الفائدتان: تشغيل الحاسوب + تسيير المركبات الحديثة." },
+  { q: "من مميزات خليه وقود الهيدروجين:",
+    opts: ["عدم حصول تلوث وكفاءه عالية جدا وعمر طويل وأمان عند الاستعمال", "رخيصة الثمن فقط", "تلوث اقل من البنزين قليلاً", "عمرها قصير لكنها قوية"], a: 0,
+    why: "المميزات الأربع: لا تلوث ولا استهلاك للوقود التقليدي، آمنة، كفاءة عالية جداً، عمر طويل." },
+  { q: "لا تسبب بطاريه الوقود تلوثاً للبيئة لان الهيدروجين:",
+    opts: ["ينتج من الماء بالأكسدة ويعود الى الماء مره اخرى", "غاز خامل لا يتفاعل", "لا يستخدم اصلاً", "يتحول الى نيتروجين"], a: 0,
+    why: "دورة نظيفة: من الماء وإليه — لا تلوث ولا استهلاك للوقود التقليدي." },
+  { q: "تعد بطاريه وقود الهيدروجين احد تطبيقات قانون حفظ الطاقة لأنها:",
+    opts: ["تحول الطاقة الكيميائية الى طاقه كهربائية", "تولّد طاقة من لا شيء", "تفني الطاقة", "تخزن الضوء"], a: 0,
+    why: "سؤال وزاري: الطاقة لا تفنى ولا تستحدث — بل تتحول من كيميائية إلى كهربائية." }
+], { onDone: function (stars) { Phy.setLesson("ch4", "6", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: المجال المغناطيسي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch2">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثاني</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>🌀 الدرس 4: المجال المغناطيسي</h1>
+    <p>قوة خفية تحيط بالمغناطيس... لا تراها العين لكن برادة الحديد تفضح أسرارها!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">✨</span>
+    <span>انثر برادة حديد حول مغناطيس وانقر بلطف... سترى <b>خطوطاً منتظمة مذهلة</b> ترسم نفسها! هذه هي خريطة المجال المغناطيسي الخفي.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> التعريف الأهم في الدرس</div>
+  <div class="defbox">
+    <b class="term">المجال المغناطيسي</b> <span class="wz">وزاري</span><b>:</b> هو الحيز الذي يحيط بالمغناطيس والذي يظهر فيه تأثير القوة المغناطيسية.
+  </div>
+
+  <div class="section-title"><span class="ico">〰️</span> خطوط القوى المغناطيسية</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما هي مميزات خطوط القوى المغناطيسية (خطوط المجال المغناطيسي)؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١.</b> خطوط مقفلة غير مرئية.<br>
+        <b>٢.</b> تتجه من القطب الشمالي نحو القطب الجنوبي خارج المغناطيس ومكملة دورتها داخله.<br>
+        <b>٣.</b> لا تتقاطع فيما بينها بل تتنافر.<br>
+        <b>٤.</b> تكون مزدحمة عند الأقطاب.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف يمكن تمثيل المجال المغناطيسي؟</summary>
+      <div class="ans">يمثل بالرسم بخطوط وهمية (غير مرئية) تسمى خطوط القوى المغناطيسية باستخدام بوصلة أو عدة بوصلات وكذلك يمكن من خلال مشاهدتها باستخدام برادة الحديد.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الفائدة العملية من استعمال (البوصلة المغناطيسية، مجموعة من البوصلات المغناطيسية الصغيرة، برادة الحديد)؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">لرسم خطوط المجال المغناطيسي حول المغناطيس.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الفائدة العملية من استعمال برادة الحديد؟</summary>
+      <div class="ans">للكشف عن خطوط المجال المغناطيسي.</div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>يمكن رسم خطوط المجال المغناطيسي باستعمال <b>بوصلة مغناطيسية</b>، ويمكن الكشف عنها باستعمال <b>برادة حديد</b>.</li>
+      <li>يمكن للمجال المغناطيسي النفاذ خلال جسم الإنسان وكذلك خلال مواد مختلفة منها الورق المقوى والزجاج والماء.</li>
+    </ul>
+  </div>
+
+  <!-- ======== المحاكاة: راسم خطوط المجال ======== -->
+  <div class="sim">
+    <h3>🧪 راسم خطوط المجال المغناطيسي</h3>
+    <p class="sim-sub">اختر الحالة وشاهد كيف ترسم الخطوط نفسها — لاحظ اتجاهها من N إلى S وازدحامها عند الأقطاب! (هذه رسوم مطلوبة وزارياً ✍️)</p>
+    <canvas id="fieldSim" width="700" height="360"></canvas>
+    <div class="controls">
+      <button class="btn small" data-mode="bar">🧲 ساق واحدة</button>
+      <button class="btn small ghost" data-mode="ns">N مقابل S</button>
+      <button class="btn small ghost" data-mode="nn">N مقابل N</button>
+      <button class="btn small ghost" data-mode="u">مغناطيس U</button>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">🔬</span> نشاط برادة الحديد</div>
+  <div class="card">
+    <details class="qa">
+      <summary><span class="tag">نشاط</span> اشرح نشاط يمكنك فيه مشاهدة خطوط المجال المغناطيسي باستعمال برادة الحديد لساق مغناطيسية؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>الأدوات:</b> ١. ساق مغناطيسية &nbsp; ٢. لوح من الزجاج وبرادة حديد.<br>
+        <b>العمل:</b><br>
+        <b>١.</b> نضع لوح الزجاج على الساق المغناطيسية وبمستوى افقي.<br>
+        <b>٢.</b> ننثر برادة الحديد على لوح الزجاج وننقر اللوح بالطف، نلاحظ ان برادة الحديد ترتبت بشكل خطوط.<br>
+        <b>الاستنتاج:</b> ان برادة الحديد التي ترتبت بشكل خطوط هي تلك الخطوط التي تمثل المجال المغناطيسي حول الساق المغناطيسية.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> تكون قوة جذب المغناطيس عند الأقطاب اكبر من المنتصف؟</summary>
+      <div class="ans">لان القوة المغناطيسية تتركز عند الاقطاب كون خطوط المجال المغناطيسي مزدحمه عند الاطراف وضعيفة في المنتصف.</div>
+    </details>
+  </div>
+
+  <!-- ======== رسم متحرك: نشاط برادة الحديد ======== -->
+  <div class="sim">
+    <h3>🎬 شاهد النشاط: برادة الحديد ترسم الخطوط!</h3>
+    <p class="sim-sub">نفّذ خطوات النشاط الوزاري بنفسك: انثر البرادة على لوح الزجاج ثم انقر اللوح بلطف وشاهد الخطوط تظهر.</p>
+    <canvas id="filingsSim" width="700" height="360"></canvas>
+    <div class="controls">
+      <button class="btn" id="sprinkleBtn">🧂 انثر برادة الحديد</button>
+      <button class="btn green" id="tapBtn" disabled>👆 انقر اللوح بلطف</button>
+      <button class="btn ghost" id="filingsReset">🔄 إعادة</button>
+    </div>
+    <div class="controls"><span class="readout" id="filingsState">وضعنا لوح الزجاج فوق الساق المغناطيسية — ابدأ بنثر البرادة!</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz4"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson3.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: نفاذ المجال ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- راسم خطوط المجال ---------- */
+(function () {
+  var cv = document.getElementById("fieldSim"), ctx = cv.getContext("2d");
+  var mode = "bar";
+  var reveal = 0; // رسم تدريجي للخطوط
+
+  // كل حالة: مغانط للرسم + أقطاب للحساب
+  function setup() {
+    var W = cv.width, H = cv.height, cx = W / 2, cy = H / 2;
+    if (mode === "bar") return {
+      mags: [{ x: cx, y: cy, w: 170, h: 44, ang: 0 }],
+      poles: [{ x: cx - 85, y: cy, s: +1 }, { x: cx + 85, y: cy, s: -1 }]
+    };
+    if (mode === "ns") return {
+      mags: [{ x: cx - 165, y: cy, w: 150, h: 44, ang: 0 }, { x: cx + 165, y: cy, w: 150, h: 44, ang: 0 }],
+      poles: [{ x: cx - 240, y: cy, s: +1 }, { x: cx - 90, y: cy, s: -1 },
+              { x: cx + 90, y: cy, s: +1 }, { x: cx + 240, y: cy, s: -1 }]
+    };
+    if (mode === "nn") return {
+      mags: [{ x: cx - 165, y: cy, w: 150, h: 44, ang: 0, swap: true }, { x: cx + 165, y: cy, w: 150, h: 44, ang: 0, swap: false }],
+      poles: [{ x: cx - 240, y: cy, s: -1 }, { x: cx - 90, y: cy, s: +1 },
+              { x: cx + 90, y: cy, s: +1 }, { x: cx + 240, y: cy, s: -1 }]
+    };
+    // مغناطيس U: قطبان متقابلان في الأعلى
+    return {
+      u: true,
+      poles: [{ x: cx - 70, y: 120, s: +1 }, { x: cx + 70, y: 120, s: -1 }]
+    };
+  }
+
+  function field(px, py, poles) {
+    var bx = 0, by = 0;
+    poles.forEach(function (p) {
+      var dx = px - p.x, dy = py - p.y;
+      var d2 = dx * dx + dy * dy + 40;
+      var d = Math.sqrt(d2);
+      bx += p.s * dx / (d2 * d);
+      by += p.s * dy / (d2 * d);
+    });
+    return { x: bx, y: by };
+  }
+
+  // تتبع خطوط الانسياب من حول الأقطاب الشمالية
+  function traceLines(cfg) {
+    var lines = [];
+    cfg.poles.forEach(function (p) {
+      if (p.s !== 1) return;
+      // لمغناطيس U نكتفي بالنصف العلوي كي يطابق رسم الملزمة بين القطبين
+      var angles = [];
+      if (cfg.u) { for (var k = 0; k <= 10; k++) angles.push(-Math.PI + k * Math.PI / 10); }
+      else { for (var k2 = 0; k2 < 16; k2++) angles.push(k2 * Math.PI / 8); }
+      angles.forEach(function (a) {
+        var x = p.x + Math.cos(a) * 26, y = p.y + Math.sin(a) * 26;
+        var pts = [{ x: x, y: y }];
+        for (var i = 0; i < 900; i++) {
+          var B = field(x, y, cfg.poles);
+          var m = Math.sqrt(B.x * B.x + B.y * B.y);
+          if (m < 1e-9) break;
+          x += B.x / m * 4; y += B.y / m * 4;
+          pts.push({ x: x, y: y });
+          if (x < -30 || x > cv.width + 30 || y < -30 || y > cv.height + 30) break;
+          var near = cfg.poles.some(function (q) {
+            return q.s === -1 && (x - q.x) * (x - q.x) + (y - q.y) * (y - q.y) < 26 * 26;
+          });
+          if (near) break;
+        }
+        if (pts.length > 8) lines.push(pts);
+      });
+    });
+    return lines;
+  }
+
+  var cfg = setup(), lines = traceLines(cfg);
+
+  document.querySelectorAll("[data-mode]").forEach(function (b) {
+    b.onclick = function () {
+      mode = b.dataset.mode;
+      document.querySelectorAll("[data-mode]").forEach(function (x) { x.classList.add("ghost"); });
+      b.classList.remove("ghost");
+      cfg = setup(); lines = traceLines(cfg); reveal = 0;
+    };
+  });
+
+  function drawMagnet(m) {
+    ctx.save(); ctx.translate(m.x, m.y);
+    var swap = m.swap;
+    ctx.fillStyle = swap ? "#457b9d" : "#e63946";
+    ctx.fillRect(-m.w / 2, -m.h / 2, m.w / 2, m.h);
+    ctx.fillStyle = swap ? "#e63946" : "#457b9d";
+    ctx.fillRect(0, -m.h / 2, m.w / 2, m.h);
+    ctx.fillStyle = "#fff"; ctx.font = "bold 18px Cairo"; ctx.textAlign = "center";
+    ctx.fillText(swap ? "S" : "N", -m.w / 4, 7);
+    ctx.fillText(swap ? "N" : "S", m.w / 4, 7);
+    ctx.strokeStyle = "#2d3142"; ctx.lineWidth = 2;
+    ctx.strokeRect(-m.w / 2, -m.h / 2, m.w, m.h);
+    ctx.restore();
+  }
+
+  function drawU() {
+    var cx = cv.width / 2;
+    ctx.lineWidth = 44; ctx.lineCap = "butt";
+    // نصف حدوة: أحمر (N) يسار، أزرق (S) يمين
+    ctx.strokeStyle = "#e63946";
+    ctx.beginPath(); ctx.moveTo(cx - 70, 130); ctx.lineTo(cx - 70, 250);
+    ctx.arc(cx, 250, 70, Math.PI, Math.PI / 2, true); ctx.stroke();
+    ctx.strokeStyle = "#457b9d";
+    ctx.beginPath(); ctx.moveTo(cx + 70, 130); ctx.lineTo(cx + 70, 250);
+    ctx.arc(cx, 250, 70, 0, Math.PI / 2); ctx.stroke();
+    ctx.fillStyle = "#fff"; ctx.font = "bold 20px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("N", cx - 70, 160); ctx.fillText("S", cx + 70, 160);
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    if (reveal < 1) reveal = Math.min(1, reveal + 0.02);
+
+    // الخطوط
+    ctx.lineWidth = 1.6; ctx.strokeStyle = "#f3722c";
+    lines.forEach(function (pts) {
+      var n = Math.floor(pts.length * reveal);
+      if (n < 2) return;
+      ctx.beginPath(); ctx.moveTo(pts[0].x, pts[0].y);
+      for (var i = 1; i < n; i++) ctx.lineTo(pts[i].x, pts[i].y);
+      ctx.stroke();
+      // سهم في منتصف الخط
+      var mi = Math.floor(n / 2);
+      if (mi > 2 && mi < n - 2) {
+        var p1 = pts[mi - 2], p2 = pts[mi + 2];
+        var ang = Math.atan2(p2.y - p1.y, p2.x - p1.x);
+        ctx.save(); ctx.translate(pts[mi].x, pts[mi].y); ctx.rotate(ang);
+        ctx.fillStyle = "#e63946";
+        ctx.beginPath(); ctx.moveTo(6, 0); ctx.lineTo(-4, -4); ctx.lineTo(-4, 4); ctx.closePath(); ctx.fill();
+        ctx.restore();
+      }
+    });
+
+    if (cfg.u) drawU();
+    else cfg.mags.forEach(drawMagnet);
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- رسم متحرك: نشاط برادة الحديد ---------- */
+(function () {
+  var cv = document.getElementById("filingsSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height, cx = W / 2, cy = H / 2 + 14;
+  var poles = [{ x: cx - 80, y: cy, s: +1 }, { x: cx + 80, y: cy, s: -1 }];
+  var filings = [], stage = 0; // 0 فارغ، 1 منثورة، 2 مرتبة
+
+  var sprinkleBtn = document.getElementById("sprinkleBtn");
+  var tapBtn = document.getElementById("tapBtn");
+  var state = document.getElementById("filingsState");
+
+  function fieldAngle(px, py) {
+    var bx = 0, by = 0;
+    poles.forEach(function (p) {
+      var dx = px - p.x, dy = py - p.y;
+      var d2 = dx * dx + dy * dy + 40, d = Math.sqrt(d2);
+      bx += p.s * dx / (d2 * d); by += p.s * dy / (d2 * d);
+    });
+    return Math.atan2(by, bx);
+  }
+
+  function sprinkle() {
+    filings = [];
+    for (var i = 0; i < 320; i++) {
+      var x = 90 + Math.random() * (W - 180);
+      var y = 70 + Math.random() * (H - 140);
+      // لا نضعها فوق جسم المغناطيس نفسه
+      if (Math.abs(x - cx) < 88 && Math.abs(y - cy) < 26) { i--; continue; }
+      filings.push({
+        x: x, y: y, ty: y,
+        drop: 40 + Math.random() * 60,        // تسقط من الأعلى
+        a: Math.random() * Math.PI,           // زاوية عشوائية
+        ta: null, t: 0
+      });
+    }
+    filings.forEach(function (f) { f.y = f.ty - f.drop; });
+    stage = 1;
+    tapBtn.disabled = false;
+    state.textContent = "الخطوة ٢: نثرنا البرادة على لوح الزجاج — الآن انقر اللوح بلطف!";
+  }
+  function tap() {
+    filings.forEach(function (f) {
+      f.ta = fieldAngle(f.x, f.ty);
+      f.t = 0;
+    });
+    stage = 2;
+    tapBtn.disabled = true;
+    state.textContent = "✨ الاستنتاج: البرادة ترتبت بشكل خطوط — هذه هي خطوط المجال المغناطيسي حول الساق!";
+  }
+  function reset() {
+    filings = []; stage = 0; tapBtn.disabled = true;
+    state.textContent = "وضعنا لوح الزجاج فوق الساق المغناطيسية — ابدأ بنثر البرادة!";
+  }
+  sprinkleBtn.onclick = sprinkle;
+  tapBtn.onclick = tap;
+  document.getElementById("filingsReset").onclick = reset;
+
+  function tick() {
+    ctx.clearRect(0, 0, W, H);
+
+    // الساق المغناطيسية (تحت اللوح)
+    ctx.save(); ctx.translate(cx, cy);
+    ctx.fillStyle = "#e63946"; ctx.fillRect(-85, -22, 85, 44);
+    ctx.fillStyle = "#457b9d"; ctx.fillRect(0, -22, 85, 44);
+    ctx.fillStyle = "#fff"; ctx.font = "bold 20px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("N", -42, 8); ctx.fillText("S", 42, 8);
+    ctx.strokeStyle = "#2d3142"; ctx.lineWidth = 2; ctx.strokeRect(-85, -22, 170, 44);
+    ctx.restore();
+
+    // لوح الزجاج فوقها
+    ctx.fillStyle = "rgba(160,215,255,.16)";
+    ctx.strokeStyle = "rgba(90,160,220,.55)"; ctx.lineWidth = 2;
+    ctx.beginPath();
+    if (ctx.roundRect) { ctx.roundRect(70, 52, W - 140, H - 104, 14); ctx.fill(); ctx.stroke(); }
+    else { ctx.fillRect(70, 52, W - 140, H - 104); ctx.strokeRect(70, 52, W - 140, H - 104); }
+    ctx.fillStyle = "#5a8fc0"; ctx.font = "12px Cairo"; ctx.textAlign = "start";
+    ctx.fillText("لوح الزجاج", 84, 72);
+
+    // البرادة
+    filings.forEach(function (f) {
+      if (f.y < f.ty) { f.y = Math.min(f.ty, f.y + 5); } // سقوط النثر
+      var a = f.a;
+      if (stage === 2 && f.ta !== null) {
+        if (f.t < 1) f.t += 0.03;
+        // أقصر فرق زاوية
+        var diff = f.ta - f.a;
+        while (diff > Math.PI / 2) diff -= Math.PI;
+        while (diff < -Math.PI / 2) diff += Math.PI;
+        a = f.a + diff * f.t;
+      }
+      ctx.save(); ctx.translate(f.x, f.y); ctx.rotate(a);
+      ctx.strokeStyle = "#3d4152"; ctx.lineWidth = 1.6;
+      ctx.beginPath(); ctx.moveTo(-4.5, 0); ctx.lineTo(4.5, 0); ctx.stroke();
+      ctx.restore();
+    });
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz4", [
+  { q: "المجال المغناطيسي هو:",
+    opts: ["قطعة المغناطيس نفسها", "الحيز الذي يحيط بالمغناطيس والذي يظهر فيه تأثير القوة المغناطيسية", "خط الشمال والجنوب", "برادة الحديد"], a: 1,
+    why: "التعريف الوزاري للمجال المغناطيسي." },
+  { q: "تتجه خطوط المجال المغناطيسي خارج المغناطيس من:",
+    opts: ["الجنوبي إلى الشمالي", "الشمالي إلى الجنوبي ومكملة دورتها داخله", "الوسط إلى الأطراف", "لا اتجاه لها"], a: 1,
+    why: "من مميزاتها: تتجه من القطب الشمالي نحو الجنوبي خارج المغناطيس ومكملة دورتها داخله." },
+  { q: "خطوط القوى المغناطيسية:",
+    opts: ["تتقاطع فيما بينها", "مرئية بالعين", "لا تتقاطع فيما بينها بل تتنافر", "مفتوحة وغير مقفلة"], a: 2,
+    why: "خطوط مقفلة غير مرئية ولا تتقاطع بل تتنافر." },
+  { q: "تكون خطوط المجال المغناطيسي مزدحمة عند:",
+    opts: ["منتصف المغناطيس", "الأقطاب", "خارج المجال", "كل الأماكن بالتساوي"], a: 1,
+    why: "مزدحمة عند الأقطاب — ولهذا تكون قوة الجذب عند الأقطاب أكبر." },
+  { q: "الفائدة العملية من استعمال برادة الحديد:",
+    opts: ["رسم خطوط المجال", "الكشف عن خطوط المجال المغناطيسي", "صنع مغناطيس", "قياس التيار"], a: 1,
+    why: "برادة الحديد تكشف عن خطوط المجال، أما البوصلة فترسمها." },
+  { q: "تكون قوة جذب المغناطيس عند الأقطاب اكبر من المنتصف لأن:",
+    opts: ["الأقطاب أثقل", "خطوط المجال مزدحمة عند الأطراف وضعيفة في المنتصف", "المنتصف من النحاس", "الأقطاب ملونة"], a: 1,
+    why: "القوة المغناطيسية تتركز عند الأقطاب كون خطوط المجال مزدحمة عند الأطراف." }
+], { onDone: function (stars) { Phy.setLesson("ch2", "4", { stars: stars }); } });
+</script>
+</body>
+</html>

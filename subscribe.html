@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الاشتراك — فيزياء الثالث متوسط — أ. أحمد رافع</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/logo-ar.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+  </div>
+
+  <div class="hero">
+    <span class="chip">⚡ افتح كل الفصول والأدوات</span>
+    <h1>اشترك وافتح رحلتك كاملة</h1>
+    <p>وصول كامل للفصول المتقدمة، اختباراتها، وأداتي تحليل الأداء والتوقعات الوزارية.</p>
+  </div>
+
+  <div class="pricing-grid">
+    <div class="plan-card">
+      <h3>⚡ الاشتراك الشهري</h3>
+      <div class="price">5,000<small> د.ع / شهر</small></div>
+      <ul class="plan-feats">
+        <li>وصول كامل لـ 7 فصول (من الثالث للتاسع) + اختباراتها</li>
+        <li>أداة تحليل الأداء الذكية</li>
+        <li>التوقعات الوزارية (+600 سؤال محلول)</li>
+        <li>يعمل على أي جهاز</li>
+      </ul>
+      <a class="btn ghost" id="wa-monthly" target="_blank" rel="noopener noreferrer" href="#">اشترك شهري</a>
+    </div>
+
+    <div class="plan-card best">
+      <span class="best-badge">🏆 الأوفر</span>
+      <h3>🚀 الاشتراك السنوي</h3>
+      <div class="price">30,000<small> د.ع / سنة</small></div>
+      <p class="save">توفّر 30,000 د.ع مقارنة بالاشتراك الشهري (نص السعر تقريباً)</p>
+      <ul class="plan-feats">
+        <li>كل مزايا الاشتراك الشهري</li>
+        <li>يغطي السنة الدراسية كاملة</li>
+        <li>ما تكرر الدفع كل شهر</li>
+        <li>يعمل على أي جهاز</li>
+      </ul>
+      <a class="btn" id="wa-yearly" target="_blank" rel="noopener noreferrer" href="#">اشترك سنوي</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>💬 عندك سؤال؟</h2>
+    <p>تواصل معنا مباشرة عبر واتساب لأي استفسار عن الدفع أو الاشتراك.</p>
+    <a class="btn ghost" id="wa-general" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:12px">📱 تواصل عبر واتساب</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع · 📞 07800155157</footer>
+</div>
+
+<script>
+(function () {
+  var WHATSAPP_NUMBER = "9647800155157";
+  function waLink(message) {
+    return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+  }
+  document.getElementById("wa-monthly").href = waLink("مرحباً، أريد الاشتراك الشهري (5,000 د.ع)");
+  document.getElementById("wa-yearly").href = waLink("مرحباً، أريد الاشتراك السنوي (30,000 د.ع)");
+  document.getElementById("wa-general").href = waLink("مرحباً، عندي سؤال عن الاشتراك");
+})();
+</script>
+</body>
+</html>

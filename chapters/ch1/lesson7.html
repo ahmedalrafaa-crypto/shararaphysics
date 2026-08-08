@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 7: المجال الكهربائي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الأول</a> / الدرس 7</span>
+  </div>
+
+  <div class="hero">
+    <h1>🌐 الدرس 7: المجال الكهربائي</h1>
+    <p>الشحنة تؤثر فيما حولها حتى دون أن تلمسه — هذه هي قوة المجال!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">👻</span>
+    <span>كيف «تشعر» شحنة بوجود شحنة أخرى بعيدة عنها؟ الجواب: كل شحنة تصنع حولها <b>مجالاً كهربائياً</b> غير مرئي، مثل هالة من التأثير!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> التعريفات الأساسية</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما المقصود بـ: ١- المجال الكهربائي في أي نقطة ٢- مقدار المجال الكهربائي؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>المجال الكهربائي:</b> هو الحيز الذي تظهر فيه تأثير القوة الكهربائية على الشحنات الاختبارية الداخلة فيه.<br>
+        <b>مقدار المجال الكهربائي:</b> هو القوة الكهربائية لوحدة الشحنة والمؤثرة في شحنة اختبارية صغيرة موجبة موضوعه عند نقطه بداخله ويحسب بالعلاقة التالية: E = F / q
+      </div>
+    </details>
+    <div class="lawbox">
+      قانون المجال الكهربائي
+      <div class="formula">E = F / q</div>
+      <p style="margin-top:10px;font-size:.9rem">
+        E: المجال الكهربائي ووحداته N/C ·
+        F: القوة الكهربائية وتقاس بالنيوتن N ·
+        q: الشحنة الاختبارية وتقاس بالكولوم C
+      </p>
+    </div>
+    <div class="defbox"><b class="term">الشحنة الاختبارية:</b> هي شحنة موجبة صغيرة المقدار لا تؤثر على الشحنات المجاورة لها باي قوة.</div>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف نستدل على وجود المجال الكهربائي؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">لنفرض لدينا شحنة نقطية موجبة في نقطة معينه وان هذه الشحنة تحدث في الحيز المحيط بها تاثيرا يعرف بالمجال الكهربائي ويختبر هذا المجال في اي نقطة بواسطة شحنة صغير موجبة تسمى شحنة الاختبار توضع في تلك النقطة وتقاس القوة فيها لمعرفة المجال الكهربائي.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف يمكن تمثيل المجال الكهربائي؟ وما مميزات خطوط المجال الكهربائي؟</summary>
+      <div class="ans">يمكن تمثيل المجال الكهربائي بخطوط وهمية (غير مرئية) تبدأ من الشحنة الموجبة وتنتهي بالشحنة السالبة تسمى خطوط المجال الكهربائي.</div>
+    </details>
+  </div>
+
+  <!-- ======== راسم خطوط المجال ======== -->
+  <div class="sim">
+    <h3>🧪 راسم خطوط المجال الكهربائي</h3>
+    <p class="sim-sub">اختر الحالة وشاهد شكل الخطوط — وهذا بالضبط سؤال «وضح بالرسم شكل المجال الكهربائي للحالات التالية» الوزاري!</p>
+    <div class="controls" style="margin-top:0;margin-bottom:12px">
+      <button class="btn small" data-cfg="dipole">شحنتان مختلفتان</button>
+      <button class="btn small ghost" data-cfg="twoPos">شحنتان متشابهتان</button>
+      <button class="btn small ghost" data-cfg="pos">شحنة موجبة</button>
+      <button class="btn small ghost" data-cfg="neg">شحنة سالبة</button>
+      <button class="btn small ghost" data-cfg="plates">لوحان متوازيان</button>
+    </div>
+    <canvas id="fieldSim" width="700" height="330"></canvas>
+    <div class="controls"><span class="readout" id="fieldMsg" style="flex:1"></span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> المجال الكهربائي المنتظم</div>
+  <div class="card">
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما المقصود بالمجال الكهربائي المنتظم؟</summary>
+      <div class="ans">هو المجال المتولد بين لوحين معدنيين مستويين متوازيين مشحونين بشحنتين متساويتين مقدارا ومختلفتين في النوع فتكون خطوط هذا المجال متوازية مع بعضها بأبعاد متساوية وتكون عمودية على اللوحين.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الفرق بين المجال الكهربائي بين شحنتين نقطيتين والمجال الكهربائي بين لوحين معدنيين مستويين متوازيين مشحونين بشحنتين متساويتين في المقدار مختلفتين نوعا؟</summary>
+      <div class="ans">المجال الكهربائي بين شحنتين نقطيتين يمثل بخطوط تبدأ من الشحنة الموجبة وتنتهي بالشحنة السالبة. اما المجال بين لوحين معدنيين تمثل بخطوط متوازية مع بعضها وتبتعد عن بعضها بأبعاد متساوية وتكون عمودية على اللوحين.</div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">✏️</span> أمثلة محلولة خطوة بخطوة</div>
+
+  <div class="example">
+    <div class="exq">مثال (٢): شحنة كهربائية نقطية موجبة (+2×10⁻⁹ C) وضعت عند نقطة في مجال كهربائي فتأثرت بقوة مقدارها (4×10⁻⁶ N). ما مقدار المجال الكهربائي؟</div>
+    <div class="givens">المعطيات: q = +2×10⁻⁹ C — F = 4×10⁻⁶ N — المطلوب: E</div>
+    <div class="step"><b>الخطوة ١:</b> نطبق قانون المجال:
+      <div class="math">E = F / q</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نعوض:
+      <div class="math">E = (4×10⁻⁶) / (2×10⁻⁹)</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نقسم ونطرح الأسس:
+      <div class="math">E = 2×10⁻⁶⁺⁹ = 2×10³ N/C</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال (خارجي): شحنة كهربائية مقدارها (6μC) وضعت عند نقطة A في مجال كهربائي وكان مقدار القوة الكهربائية المؤثر فيها (24N). جد مقدار المجال الكهربائي في تلك النقطة.</div>
+    <div class="givens">المعطيات: q = 6μC = 6×10⁻⁶ C — F = 24 N — المطلوب: E</div>
+    <div class="step"><b>الخطوة ١:</b> حولنا المايكروكولوم: 6μC = 6×10⁻⁶ C.</div>
+    <div class="step"><b>الخطوة ٢:</b> نعوض في E = F/q:
+      <div class="math">E = 24 / (6×10⁻⁶)</div></div>
+    <div class="step"><b>الخطوة ٣:</b> النتيجة:
+      <div class="math">E = 4×10⁺⁶ N/C</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال (خارجي): شحنة كهربائية مقدارها (3μC) وضعت عند النقطة P في مجال كهربائي وكان مقدار المجال الكهربائي (4×10⁺⁶ N/C). احسب مقدار القوة الكهربائية المؤثرة فيها؟ <span class="wz">وزاري</span></div>
+    <div class="givens">المعطيات: q = 3μC = 3×10⁻⁶ C — E = 4×10⁺⁶ N/C — المطلوب: F</div>
+    <div class="step"><b>الخطوة ١:</b> نرتب القانون: من E = F/q نحصل على:
+      <div class="math">F = E × q</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نعوض:
+      <div class="math">F = 4×10⁺⁶ × 3×10⁻⁶</div></div>
+    <div class="step"><b>الخطوة ٣:</b> النتيجة:
+      <div class="math">F = 12 N</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz7"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson6.html">⬅ الدرس السابق</a>
+    <a class="btn coral" href="exam.html">🏆 جاهز؟ الاختبار النهائي للفصل!</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- راسم خطوط المجال ---------- */
+(function () {
+  var cv = document.getElementById("fieldSim"), ctx = cv.getContext("2d");
+  var cfg = "dipole";
+  var msgs = {
+    dipole: "شحنتان مختلفتان: الخطوط تخرج من الموجبة (+) وتدخل في السالبة (−).",
+    twoPos: "شحنتان متشابهتان (موجبتان): الخطوط تتنافر ولا تلتقي أبداً — بينهما نقطة تعادل.",
+    pos: "شحنة موجبة مفردة: الخطوط تخرج منها إلى الخارج في كل الاتجاهات.",
+    neg: "شحنة سالبة مفردة: الخطوط تدخل إليها من كل الاتجاهات.",
+    plates: "المجال المنتظم بين لوحين متوازيين: خطوط متوازية بأبعاد متساوية وعمودية على اللوحين."
+  };
+  document.querySelectorAll("[data-cfg]").forEach(function (b) {
+    b.onclick = function () {
+      cfg = b.dataset.cfg;
+      document.querySelectorAll("[data-cfg]").forEach(function (x) { x.className = "btn small ghost"; });
+      b.className = "btn small";
+      draw();
+    };
+  });
+
+  function charges() {
+    if (cfg === "dipole") return [{ x: 480, y: 165, q: 1 }, { x: 220, y: 165, q: -1 }];
+    if (cfg === "twoPos") return [{ x: 480, y: 165, q: 1 }, { x: 220, y: 165, q: 1 }];
+    if (cfg === "pos") return [{ x: 350, y: 165, q: 1 }];
+    if (cfg === "neg") return [{ x: 350, y: 165, q: -1 }];
+    return [];
+  }
+
+  function field(x, y, chs) {
+    var ex = 0, ey = 0;
+    chs.forEach(function (c) {
+      var dx = x - c.x, dy = y - c.y, d2 = dx * dx + dy * dy;
+      if (d2 < 100) d2 = 100;
+      var d = Math.sqrt(d2);
+      ex += c.q * dx / (d2 * d) * 10000;
+      ey += c.q * dy / (d2 * d) * 10000;
+    });
+    return { x: ex, y: ey };
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    document.getElementById("fieldMsg").textContent = msgs[cfg];
+    if (cfg === "plates") {
+      var top = 60, bot = 270, x1 = 170, x2 = 530;
+      ctx.fillStyle = "#ff6b6b"; ctx.fillRect(x1, top, x2 - x1, 14);
+      ctx.fillStyle = "#4d96ff"; ctx.fillRect(x1, bot, x2 - x1, 14);
+      ctx.font = "bold 16px Cairo"; ctx.textAlign = "center";
+      ctx.fillStyle = "#ff6b6b"; ctx.fillText("+ + + + + + + + اللوح الموجب", 350, top - 12);
+      ctx.fillStyle = "#4d96ff"; ctx.fillText("− − − − − − − − اللوح السالب", 350, bot + 40);
+      ctx.strokeStyle = "#6c5ce7"; ctx.fillStyle = "#6c5ce7"; ctx.lineWidth = 2.5;
+      for (var x = x1 + 30; x <= x2 - 30; x += 42) {
+        ctx.beginPath(); ctx.moveTo(x, top + 16); ctx.lineTo(x, bot - 4); ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(x, bot - 2); ctx.lineTo(x - 6, bot - 14); ctx.lineTo(x + 6, bot - 14); ctx.fill();
+      }
+      ctx.lineWidth = 1;
+      return;
+    }
+    var chs = charges();
+    ctx.lineWidth = 2; ctx.strokeStyle = "#8f7ff0";
+    chs.forEach(function (c) {
+      if (c.q < 0 && chs.length > 1) return; // نرسم من الموجبة فقط في حالة الثنائي
+      var N = 14;
+      for (var i = 0; i < N; i++) {
+        var a = i * Math.PI * 2 / N + 0.11;
+        var px = c.x + Math.cos(a) * 26, py = c.y + Math.sin(a) * 26;
+        var dir = c.q > 0 ? 1 : -1;
+        ctx.beginPath(); ctx.moveTo(px, py);
+        var arrowAt = null;
+        for (var s = 0; s < 260; s++) {
+          var f = field(px, py, chs);
+          var m = Math.hypot(f.x, f.y); if (m < 1e-6) break;
+          px += dir * f.x / m * 4; py += dir * f.y / m * 4;
+          ctx.lineTo(px, py);
+          if (s === 22) arrowAt = { x: px, y: py, dx: dir * f.x / m, dy: dir * f.y / m };
+          if (px < 5 || px > cv.width - 5 || py < 5 || py > cv.height - 5) break;
+          var stop = chs.some(function (o) { return o !== c && Math.hypot(px - o.x, py - o.y) < 24; });
+          if (stop) break;
+        }
+        ctx.stroke();
+        if (arrowAt) {
+          ctx.save(); ctx.translate(arrowAt.x, arrowAt.y);
+          ctx.rotate(Math.atan2(arrowAt.dy, arrowAt.dx));
+          ctx.fillStyle = "#8f7ff0";
+          ctx.beginPath(); ctx.moveTo(7, 0); ctx.lineTo(-4, -5); ctx.lineTo(-4, 5); ctx.fill();
+          ctx.restore();
+        }
+      }
+    });
+    // الشحنات فوق الخطوط
+    chs.forEach(function (c) {
+      ctx.beginPath(); ctx.arc(c.x, c.y, 24, 0, 7);
+      ctx.fillStyle = c.q > 0 ? "#ff6b6b" : "#4d96ff"; ctx.fill();
+      ctx.strokeStyle = "#fff"; ctx.lineWidth = 3; ctx.stroke(); ctx.lineWidth = 1;
+      ctx.fillStyle = "#fff"; ctx.font = "bold 24px Cairo"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.fillText(c.q > 0 ? "+" : "−", c.x, c.y + 2); ctx.textBaseline = "alphabetic";
+    });
+  }
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz7", [
+  { q: "المجال الكهربائي هو:",
+    opts: ["قوة بين شحنتين", "الحيز الذي يظهر فيه تأثير القوة الكهربائية على الشحنات الاختبارية الداخلة فيه", "خطوط مرئية حول الشحنة", "شحنة كبيرة"], a: 1,
+    why: "تعريف وزاري — احفظه حرفياً!" },
+  { q: "قانون مقدار المجال الكهربائي:",
+    opts: ["E = F × q", "E = q / F", "E = F / q", "E = K·q₁q₂/r²"], a: 2,
+    why: "المجال = القوة لوحدة الشحنة، ووحداته N/C." },
+  { q: "الشحنة الاختبارية هي شحنة:",
+    opts: ["سالبة كبيرة", "موجبة صغيرة المقدار لا تؤثر على الشحنات المجاورة باي قوة", "متعادلة", "موجبة كبيرة المقدار"], a: 1,
+    why: "موجبة وصغيرة حتى لا تشوه المجال الذي نقيسه." },
+  { q: "خطوط المجال الكهربائي:",
+    opts: ["تبدأ من السالبة وتنتهي بالموجبة", "وهمية تبدأ من الموجبة وتنتهي بالسالبة", "مرئية ودائرية", "لا اتجاه لها"], a: 1,
+    why: "خطوط وهمية (غير مرئية) من الموجبة إلى السالبة." },
+  { q: "المجال المنتظم بين لوحين متوازيين تكون خطوطه:",
+    opts: ["دائرية", "متقاطعة", "متوازية بأبعاد متساوية وعمودية على اللوحين", "تخرج من اللوح السالب"], a: 2,
+    why: "هذا تعريف المجال المنتظم — بين لوحين بشحنتين متساويتين مقداراً مختلفتين نوعاً." },
+  { q: "شحنة (+2×10⁻⁹ C) تأثرت بقوة (4×10⁻⁶ N)، مقدار المجال الكهربائي:",
+    opts: ["2×10³ N/C", "8×10⁻¹⁵ N/C", "2×10⁻³ N/C", "0.5×10³ N/C"], a: 0,
+    why: "E = F/q = 4×10⁻⁶ ÷ 2×10⁻⁹ = 2×10³ N/C." },
+  { q: "شحنة (3μC) في مجال مقداره (4×10⁶ N/C)، القوة المؤثرة فيها:",
+    opts: ["12 N", "1.33 N", "12×10⁶ N", "0.75 N"], a: 0,
+    why: "سؤال وزاري: F = E×q = 4×10⁶ × 3×10⁻⁶ = 12 N." }
+], { onDone: function (stars) { Phy.setLesson("ch1", "7", { stars: stars }); } });
+</script>
+</body>
+</html>

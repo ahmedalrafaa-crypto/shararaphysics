@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفصل الخامس: الطاقة والقدرة الكهربائية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch5">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="../../index.html">الرئيسية</a> / الفصل الخامس</span>
+  </div>
+
+  <div class="hero">
+    <h1>💡 الفصل الخامس: الطاقة والقدرة الكهربائية</h1>
+    <p>لماذا مصباح 100W أسطع من 20W؟ وكم يكلف تشغيل المكيف ساعة كاملة بالدينار؟ وكيف تحميك الكهرباء في بيتك من نفسها؟ كل الأجوبة هنا!</p>
+    <span class="chip" id="chpct">0% مكتمل</span>
+  </div>
+
+  <div class="pbar" style="margin-bottom:24px"><div id="pb" style="width:0%"></div></div>
+
+  <div class="path" id="path">
+    <a class="node" href="lesson1.html" data-ls="1">
+      <span class="dot">💪</span>
+      <span class="info"><b>الدرس 1: القدرة الكهربائية ووحداتها</b>
+        <span class="sub">تعريف القدرة الوزاري وقانون P = E/t والواط + مقارنة مصباحي 20W و100W</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson2.html" data-ls="2">
+      <span class="dot">📐</span>
+      <span class="info"><b>الدرس 2: قوانين القدرة الثلاثة والنشاط الوزاري</b>
+        <span class="sub">P=IV و P=I²R و P=V²/R مع الإثباتين + محاكاة نشاط حساب القدرة (وزاري 2019)</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson3.html" data-ls="3">
+      <span class="dot">🧮</span>
+      <span class="info"><b>الدرس 3: مسائل القدرة الكهربائية</b>
+        <span class="sub">مسائل المدفأة والابريق والمقاومات المتوازية محلولة خطوة بخطوة + الواجب</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson4.html" data-ls="4">
+      <span class="dot">🏠</span>
+      <span class="info"><b>الدرس 4: قدرة الأجهزة المنزلية وتوهج المصابيح</b>
+        <span class="sub">نشاط الأجهزة المنزلية وتيار كل جهاز + أي المصابيح أكثر توهجاً؟ + مختبر التوهج</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson5.html" data-ls="5">
+      <span class="dot">⚡</span>
+      <span class="info"><b>الدرس 5: الطاقة الكهربائية E = P × t</b>
+        <span class="sub">تعريف الطاقة ووحداتها والميزانية المنزلية + مسائل المجفف والابريق والمكيف</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson6.html" data-ls="6">
+      <span class="dot">💰</span>
+      <span class="info"><b>الدرس 6: كلفة الطاقة الكهربائية</b>
+        <span class="sub">cost = P×t×unit price ومسائل الكلفة بالدينار + حاسبة الكلفة والواجبات</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson7.html" data-ls="7">
+      <span class="dot">🔌</span>
+      <span class="info"><b>الدرس 7: الكهرباء في بيوتنا</b>
+        <span class="sub">السلك الحي والمتعادل والمؤرض والقبس الثلاثي والفاصم وقاطع الدورة + مخطط تفاعلي</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson8.html" data-ls="8">
+      <span class="dot">🛡️</span>
+      <span class="info"><b>الدرس 8: التأريض وتجنب الصعقة الكهربائية</b>
+        <span class="sub">عملية التأريض ولغز الطائر على السلك وأضرار التيار وإجراءات الحماية + محاكاة</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node exam" href="exam.html" data-ls="exam">
+      <span class="dot">🏆</span>
+      <span class="info"><b>الاختبار النهائي للفصل</b>
+        <span class="sub">أسئلة الفصل ومسائله والأسئلة الوزارية — اجمع 3 نجوم!</span>
+        <span class="stars"></span></span>
+    </a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var pct = Phy.chapterPercent("ch5", 8);
+  document.getElementById("pb").style.width = pct + "%";
+  document.getElementById("chpct").textContent = pct + "% مكتمل";
+  document.querySelectorAll(".node").forEach(function (n) {
+    var ls = n.dataset.ls, info = null;
+    if (ls === "exam") info = Phy.getExam("ch5");
+    else info = Phy.getLesson("ch5", ls);
+    if (info && (info.done || info.stars !== undefined)) {
+      n.classList.add("done");
+      var st = n.querySelector(".stars");
+      if (info.stars !== undefined && info.stars !== null)
+        st.textContent = Phy.starsStr(info.stars);
+      else st.textContent = "✓ مكتمل";
+    }
+  });
+})();
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

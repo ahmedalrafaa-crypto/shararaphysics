@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 8: الأقمار الصناعية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch9">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل التاسع</a> / الدرس 8</span>
+  </div>
+
+  <div class="hero">
+    <h1>🛰️ الدرس 8: الأقمار الصناعية</h1>
+    <p>حولنا في الفضاء تدور آلاف الأقمار الصناعية: تنقل مكالماتنا، وتبثّ قنواتنا، وترشدنا عبر GPS، وتراقب الطقس. لنتعرّف على أنواعها الثلاثة وارتفاعاتها.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🌐</span>
+    <span>حين تشاهد مباراة تُبثّ مباشرة من قارّة أخرى، أو يرشدك تطبيق الخرائط، فأنت تستفيد من قمر صناعي يدور على ارتفاع قد يبلغ 36000 كيلومتراً فوق رأسك!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🛰️</span> ما هو القمر الصناعي؟</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما هو القمر الصناعي؟</summary>
+      <div class="ans">القمر الصناعي: هو تابع يدور حول الأرض، يحمل أجهزة ومعدّات إلكترونية تُستعمل في الاتصالات والأغراض العلمية والعسكرية والاقتصادية وغيرها.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> اذكر استعمالات الأقمار الصناعية؟ وما الفائدة العملية منها (الغرض)؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١. أقمار صناعية للاتصالات:</b> أقمار مخصّصة لأغراض الاتصالات الهاتفية والقنوات الفضائية التلفازية ونقل المعلومات، وتكون على ارتفاعات عالية من سطح الأرض بحدود (36000 km) وهي أعلى من بقية الأقمار.<br>
+        <b>٢. أقمار صناعية علمية:</b> الغاية منها مراقبة الطقس والأنواع الجوية والنشاط الشمسي، وأقمار منظومة تحديد المواقع العالمي GPS، وتكون على ارتفاعات متوسطة.<br>
+        <b>٣. أقمار صناعية للأغراض العسكرية:</b> تدور في مدارات خاصة بارتفاعات واطئة نسبياً لمسح وتصوير المواقع العسكرية لأغراض التجسّس وغيرها.
+      </div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة مدارات الأقمار ======== -->
+  <div class="sim">
+    <h3>🎬 مدارات الأقمار الصناعية — اختر نوعاً</h3>
+    <p class="sim-sub">لكل نوع ارتفاع مداره: العسكرية واطئة، العلمية (GPS) متوسطة، والاتصالات عالية جداً (36000 كم). اضغط الأزرار لتُبرز كل مدار وتقرأ عنه.</p>
+    <canvas id="orbits" width="700" height="440"></canvas>
+    <div class="controls">
+      <button class="btn" id="bMil">🪖 عسكرية (واطئة)</button>
+      <button class="btn" id="bSci">🛰️ علمية GPS (متوسطة)</button>
+      <button class="btn" id="bCom">📡 اتصالات (36000 كم)</button>
+    </div>
+    <div class="controls"><span class="readout" id="orbOut">👆 اختر نوع القمر الصناعي من الأزرار أعلاه.</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">⚖️</span> مقارنة الأقمار الصناعية <span class="wz" style="margin-inline-start:8px">وزاري</span></div>
+  <table class="cmptable">
+    <thead><tr><th>الوجه</th><th>أقمار الاتصالات</th><th>الأقمار العلمية</th><th>الأقمار العسكرية</th></tr></thead>
+    <tbody>
+      <tr><td>الغرض</td><td>الاتصالات الهاتفية والقنوات الفضائية ونقل المعلومات</td><td>مراقبة الطقس والأنواع الجوية والنشاط الشمسي و GPS</td><td>مسح وتصوير المواقع العسكرية لغرض التجسّس</td></tr>
+      <tr><td>الارتفاع</td><td>عالية جداً بحدود 36000km</td><td>متوسطة</td><td>واطئة نسبياً</td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson7.html">⮕ الدرس السابق</a>
+    <a class="btn" href="exam.html">🏆 الاختبار النهائي للفصل</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة مدارات الأقمار ---------- */
+(function () {
+  var cv = document.getElementById("orbits"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height, t = 0, sel = "all";
+  var out = document.getElementById("orbOut");
+  var cx = W / 2, cy = H / 2, earthR = 46;
+  var orbits = [
+    { key: "mil", r: 90,  col: "#ef4444", em: "🪖", sp: 1.4, name: "عسكرية", info: "🪖 <b>أقمار عسكرية:</b> مدارات خاصة بارتفاعات واطئة نسبياً، لمسح وتصوير المواقع العسكرية لأغراض التجسّس." },
+    { key: "sci", r: 140, col: "#22c55e", em: "🛰️", sp: 0.9, name: "علمية GPS", info: "🛰️ <b>أقمار علمية:</b> على ارتفاعات متوسطة، لمراقبة الطقس والنشاط الشمسي ومنظومة تحديد المواقع GPS." },
+    { key: "com", r: 195, col: "#38bdf8", em: "📡", sp: 0.5, name: "اتصالات", info: "📡 <b>أقمار اتصالات:</b> على ارتفاعات عالية جداً بحدود 36000 كم (أعلى من بقيتها)، للاتصالات الهاتفية والقنوات الفضائية ونقل المعلومات." }
+  ];
+
+  document.getElementById("bMil").onclick = function () { pick("mil"); };
+  document.getElementById("bSci").onclick = function () { pick("sci"); };
+  document.getElementById("bCom").onclick = function () { pick("com"); };
+  function pick(k) { sel = k; var o = orbits.filter(function (x) { return x.key === k; })[0]; out.innerHTML = o.info; }
+
+  function draw() {
+    t += 0.01;
+    ctx.clearRect(0, 0, W, H);
+    var bg = ctx.createRadialGradient(cx, cy, 40, cx, cy, W / 1.5); bg.addColorStop(0, "#0b1220"); bg.addColorStop(1, "#020617");
+    ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+    // نجوم
+    ctx.fillStyle = "#fff";
+    for (var s = 0; s < 60; s++) { var sx = (s * 149) % W, sy = (s * 97) % H; ctx.globalAlpha = .3 + .5 * Math.abs(Math.sin(t * 3 + s)); ctx.fillRect(sx, sy, 2, 2); }
+    ctx.globalAlpha = 1;
+
+    // مدارات
+    orbits.forEach(function (o) {
+      var active = (sel === "all" || sel === o.key);
+      ctx.strokeStyle = active ? o.col : "rgba(148,163,184,0.25)"; ctx.lineWidth = active ? 2 : 1;
+      ctx.setLineDash(active ? [] : [4, 4]);
+      ctx.beginPath(); ctx.arc(cx, cy, o.r, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]);
+      // القمر
+      var ang = t * o.sp * (o.key === "mil" ? 3 : o.key === "sci" ? 2 : 1);
+      var px = cx + o.r * Math.cos(ang), py = cy + o.r * Math.sin(ang);
+      ctx.globalAlpha = active ? 1 : 0.4;
+      ctx.font = "20px Cairo"; ctx.textAlign = "center"; ctx.fillText(o.em, px, py + 7);
+      if (active) { ctx.fillStyle = o.col; ctx.font = "bold 12px Cairo"; ctx.fillText(o.name, px, py - 14); }
+      ctx.globalAlpha = 1;
+    });
+
+    // الأرض
+    var eg = ctx.createRadialGradient(cx - 14, cy - 14, 6, cx, cy, earthR);
+    eg.addColorStop(0, "#38bdf8"); eg.addColorStop(1, "#1d4ed8");
+    ctx.fillStyle = eg; ctx.beginPath(); ctx.arc(cx, cy, earthR, 0, Math.PI * 2); ctx.fill();
+    ctx.font = "26px Cairo"; ctx.textAlign = "center"; ctx.fillText("🌍", cx, cy + 9);
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "القمر الصناعي هو:",
+    opts: ["تابع يدور حول الأرض يحمل أجهزة ومعدّات إلكترونية", "نجم يلمع ليلاً", "طائرة عسكرية", "برج اتصالات على الأرض"], a: 0,
+    why: "القمر الصناعي: تابع يدور حول الأرض يحمل معدّات إلكترونية للاتصالات والأغراض العلمية والعسكرية." },
+  { q: "أقمار الاتصالات الصناعية تكون على ارتفاع عالٍ جداً بحدود:",
+    opts: ["36000 km", "360 km", "500 km", "90 km"], a: 0,
+    why: "أقمار الاتصالات على ارتفاع ~36000 كم وهي أعلى من بقية الأقمار." },
+  { q: "الغاية من الأقمار الصناعية العلمية هي:",
+    opts: ["مراقبة الطقس والأنواع الجوية والنشاط الشمسي و GPS", "تصوير المواقع العسكرية", "أغراض الاتصالات الهاتفية فقط", "الإضاءة الليلية"], a: 0,
+    why: "الأقمار العلمية لمراقبة الطقس والنشاط الشمسي ومنظومة GPS." },
+  { q: "الأقمار الصناعية العسكرية تدور في مدارات:",
+    opts: ["واطئة نسبياً لمسح وتصوير المواقع العسكرية", "عالية جداً 36000 كم", "خارج المجموعة الشمسية", "على سطح الأرض"], a: 0,
+    why: "الأقمار العسكرية بارتفاعات واطئة نسبياً للتصوير والتجسّس." },
+  { q: "منظومة تحديد المواقع العالمي (GPS) من الأقمار الصناعية:",
+    opts: ["العلمية", "العسكرية", "أقمار الاتصالات فقط", "لا علاقة لها بالأقمار"], a: 0,
+    why: "GPS من الأقمار العلمية ذات الارتفاعات المتوسطة." },
+  { q: "أعلى الأقمار الصناعية ارتفاعاً عن سطح الأرض هي:",
+    opts: ["أقمار الاتصالات", "الأقمار العسكرية", "الأقمار العلمية", "كلها بالارتفاع نفسه"], a: 0,
+    why: "أقمار الاتصالات (~36000 كم) أعلى من بقية الأقمار." }
+], { onDone: function (stars) { Phy.setLesson("ch9", "8", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

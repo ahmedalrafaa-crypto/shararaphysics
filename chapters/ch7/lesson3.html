@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: لماذا التيار المتناوب؟</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch7">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السابع</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔄 الدرس 3: لماذا التيار المتناوب؟</h1>
+    <p>لو ربطت المحولة ببطارية، هل يشتغل جهازك؟ الجواب <b>لا</b>! هذا الدرس كله «عللات وزارية» تفسّر لماذا لا تعيش المحولة إلا على التيار المتناوب.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔋❌</span>
+    <span>البطارية تعطي تياراً ثابتاً لا يتغيّر... والمحولة تحتاج <b>تغيّراً</b> لتعمل. تيار ثابت = فيض ثابت = لا تيار محتث = لا شيء!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">💬</span> عللات المحولة والتيار المتناوب</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">علل</span> تُعدّ المحولة الكهربائية من أجهزة التيار المتناوب؟</summary>
+      <div class="ans">لأنها لا تعمل على التيار المستمر الذي لا يولّد تياراً محتثاً في الملف الثانوي لعدم حدوث تغير في المجال المغناطيسي داخل القلب الحديد.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> تحتاج المحولة الكهربائية لاشتغالها إلى تيار متناوب؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">لأن التيار المتناوب ينعكس اتجاهه دورياً فيولّد تغيراً في الفيض المغناطيسي خلال الملفين ويتولد تيار محتث في كل من الملفين، وتنتقل القدرة الكهربائية بين الملفين بسبب التغير الحاصل في الفيض المغناطيسي الذي ولّده التيار المتناوب خلال قلب الحديد المغلق.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> لا تعمل المحولة الكهربائية على التيار المستمر؟</summary>
+      <div class="ans">لأن التيار الكهربائي المستمر ثابت في المقدار والاتجاه لا يولّد تغيراً في المجال المغناطيسي داخل القلب الحديدي وبالتالي لا يولّد تياراً محتثاً في الملف الثانوي للمحولة.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> هل تعمل المحولة الكهربائية لو وُضعت بطارية بين طرفي ملفها الابتدائي؟ وضّح ذلك.</summary>
+      <div class="ans">لا تعمل، لأن تيار البطارية تيار مستمر ثابت المقدار والاتجاه فلا يولّد تغيراً في المجال المغناطيسي ولا يولّد تياراً محتثاً في الملف الثانوي.</div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة AC مقابل DC ======== -->
+  <div class="sim">
+    <h3>🎬 جرّب بنفسك: تيار متناوب أم بطارية؟</h3>
+    <p class="sim-sub">بدّل المصدر بين تيار متناوب وبطارية، وراقب الفيض في القلب ومصباح الحمل. متى يتوهّج المصباح؟ ولماذا يبقى مطفأً مع البطارية؟</p>
+    <canvas id="acdcSim" width="700" height="360"></canvas>
+    <div class="controls">
+      <button class="btn green" id="acBtn">🔄 مصدر متناوب (AC)</button>
+      <button class="btn" id="dcBtn">🔋 بطارية (مستمر DC)</button>
+    </div>
+    <div class="controls"><span class="readout" id="acdcState">مصدر متناوب: التيار ينعكس دورياً ⟵ فيض متغيّر ⟵ تيار محتث ⟵ المصباح يتوهّج!</span></div>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>المحولة الكهربائية تعمل على التيار <b>المتناوب</b>. <span class="wz">وزاري</span></li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz3"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson2.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson4.html">الدرس التالي: قانون المحولة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة AC مقابل DC ---------- */
+(function () {
+  var cv = document.getElementById("acdcSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height, t = 0;
+  var mode = "ac", glow = 0; // ac | dc
+  var acBtn = document.getElementById("acBtn"), dcBtn = document.getElementById("dcBtn");
+  var state = document.getElementById("acdcState");
+
+  function setMode(m) {
+    mode = m;
+    acBtn.classList.toggle("green", m === "ac");
+    dcBtn.classList.toggle("green", m === "dc");
+    state.textContent = m === "ac"
+      ? "مصدر متناوب: التيار ينعكس دورياً ⟵ فيض متغيّر ⟵ تيار محتث ⟵ المصباح يتوهّج!"
+      : "بطارية (مستمر): تيار ثابت المقدار والاتجاه ⟵ فيض ثابت لا يتغيّر ⟵ لا تيار محتث ⟵ المصباح مطفأ.";
+  }
+  acBtn.onclick = function () { setMode("ac"); };
+  dcBtn.onclick = function () { setMode("dc"); };
+
+  // منحنى التيار (رسم بياني صغير أعلى)
+  var samples = [];
+  function tick() {
+    t += 0.05;
+    var target = mode === "ac" ? 1 : 0;
+    glow += (target - glow) * 0.06;
+
+    ctx.clearRect(0, 0, W, H);
+    ctx.textAlign = "center";
+
+    // ---- الرسم البياني للتيار الابتدائي ----
+    var gx = 40, gy = 70, gw = 300, gh = 90;
+    ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 1;
+    ctx.strokeRect(gx, gy, gw, gh);
+    ctx.beginPath(); ctx.moveTo(gx, gy + gh / 2); ctx.lineTo(gx + gw, gy + gh / 2); ctx.stroke();
+    var val = mode === "ac" ? Math.sin(t * 2) : 1;
+    samples.push(val); if (samples.length > gw) samples.shift();
+    ctx.strokeStyle = mode === "ac" ? "#0d9488" : "#ef4444"; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    for (var i = 0; i < samples.length; i++) {
+      var px = gx + (gw - samples.length) + i;
+      var py = gy + gh / 2 - samples[i] * (gh / 2 - 8);
+      if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    }
+    ctx.stroke();
+    ctx.fillStyle = "#475569"; ctx.font = "bold 12px Cairo";
+    ctx.fillText(mode === "ac" ? "تيار الابتدائي: متناوب (متغيّر)" : "تيار الابتدائي: مستمر (ثابت)", gx + gw / 2, gy - 10);
+
+    // ---- القلب والملفان ----
+    var coreX = 500;
+    ctx.fillStyle = "#94a3b8"; ctx.fillRect(coreX - 14, 60, 28, 250);
+    ctx.strokeStyle = "#64748b"; ctx.lineWidth = 2; ctx.strokeRect(coreX - 14, 60, 28, 250);
+
+    // فيض
+    if (mode === "ac") {
+      var amp = Math.abs(Math.sin(t * 2));
+      ctx.strokeStyle = "rgba(13,148,136," + (0.25 + 0.55 * amp) + ")"; ctx.lineWidth = 2.5;
+      for (var k = 0; k < 3; k++) { ctx.beginPath(); ctx.ellipse(coreX, 185, 46 + k * 12, 120, 0, 0, Math.PI * 2); ctx.stroke(); }
+    } else {
+      ctx.strokeStyle = "rgba(148,163,184,.7)"; ctx.lineWidth = 2.5;
+      for (var k2 = 0; k2 < 3; k2++) { ctx.beginPath(); ctx.ellipse(coreX, 185, 46 + k2 * 12, 120, 0, 0, Math.PI * 2); ctx.stroke(); }
+      ctx.fillStyle = "#94a3b8"; ctx.font = "bold 11px Cairo";
+      ctx.fillText("فيض ثابت", coreX, 300);
+    }
+
+    // ملف ابتدائي (أسفل) وثانوي (أعلى)
+    function coil(topY, botY, color) {
+      ctx.strokeStyle = color; ctx.lineWidth = 4; ctx.lineCap = "round";
+      var n = 5, h = (botY - topY) / n;
+      for (var i = 0; i < n; i++) { ctx.beginPath(); ctx.ellipse(coreX, topY + i * h + h / 2, 26, h / 2, 0, -0.3, Math.PI + 0.3); ctx.stroke(); }
+      ctx.lineCap = "butt";
+    }
+    coil(70, 170, "#7c3aed");
+    coil(200, 300, "#0d9488");
+    ctx.fillStyle = "#6d28d9"; ctx.font = "bold 11px Cairo"; ctx.fillText("ثانوي N₂", coreX + 70, 120);
+    ctx.fillStyle = "#0f766e"; ctx.fillText("ابتدائي N₁", coreX + 70, 260);
+
+    // المصدر (يسار أسفل)
+    var sx = 130, sy = 250;
+    if (mode === "ac") {
+      ctx.beginPath(); ctx.arc(sx, sy, 22, 0, Math.PI * 2); ctx.fillStyle = "#fff"; ctx.fill();
+      ctx.strokeStyle = "#0f766e"; ctx.lineWidth = 3; ctx.stroke();
+      ctx.beginPath();
+      for (var x = -13; x <= 13; x++) { var yy = sy - 7 * Math.sin(x / 13 * Math.PI * 2); if (x === -13) ctx.moveTo(sx + x, yy); else ctx.lineTo(sx + x, yy); }
+      ctx.strokeStyle = "#0d9488"; ctx.lineWidth = 2.5; ctx.stroke();
+      ctx.fillStyle = "#0f766e"; ctx.font = "bold 11px Cairo"; ctx.fillText("مصدر متناوب", sx, sy + 38);
+    } else {
+      ctx.fillStyle = "#fff"; ctx.fillRect(sx - 24, sy - 14, 48, 28);
+      ctx.fillStyle = "#0e9f6e"; ctx.fillRect(sx - 24, sy - 14, 24, 28);
+      ctx.fillStyle = "#e63946"; ctx.fillRect(sx, sy - 14, 24, 28);
+      ctx.strokeStyle = "#2d3142"; ctx.lineWidth = 2; ctx.strokeRect(sx - 24, sy - 14, 48, 28);
+      ctx.fillStyle = "#fff"; ctx.font = "bold 15px Cairo"; ctx.fillText("−", sx - 12, sy + 6); ctx.fillText("+", sx + 12, sy + 6);
+      ctx.fillStyle = "#b91c1c"; ctx.font = "bold 11px Cairo"; ctx.fillText("بطارية (مستمر)", sx, sy + 38);
+    }
+    // أسلاك للابتدائي
+    ctx.strokeStyle = "#7a5c1e"; ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(sx + 22, sy); ctx.lineTo(coreX - 28, 290);
+    ctx.moveTo(sx, sy - 22); ctx.lineTo(sx, 210); ctx.lineTo(coreX - 28, 210);
+    ctx.stroke();
+
+    // المصباح على الثانوي (يسار أعلى)
+    var lx = 130, ly = 120;
+    ctx.strokeStyle = "#7a5c1e"; ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(coreX - 28, 90); ctx.lineTo(lx + 18, ly - 8);
+    ctx.moveTo(coreX - 28, 150); ctx.lineTo(lx - 18, ly + 8);
+    ctx.stroke();
+    if (glow > 0.02) {
+      var g = ctx.createRadialGradient(lx, ly, 3, lx, ly, 40);
+      g.addColorStop(0, "rgba(250,204,21," + (0.85 * glow) + ")"); g.addColorStop(1, "rgba(250,204,21,0)");
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(lx, ly, 40, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.beginPath(); ctx.arc(lx, ly, 15, 0, Math.PI * 2);
+    ctx.fillStyle = glow > 0.15 ? "#fde047" : "#e5e7eb"; ctx.fill();
+    ctx.strokeStyle = "#9ca3af"; ctx.lineWidth = 2; ctx.stroke();
+    ctx.fillStyle = mode === "ac" ? "#b45309" : "#94a3b8"; ctx.font = "bold 12px Cairo";
+    ctx.fillText(mode === "ac" ? "المصباح يتوهّج ✓" : "المصباح مطفأ ✗", lx, ly - 26);
+
+    requestAnimationFrame(tick);
+  }
+  setMode("ac");
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz3", [
+  { q: "تُعدّ المحولة من أجهزة التيار المتناوب لأنها لا تعمل على التيار المستمر الذي:",
+    opts: ["لا يولّد تغيراً في المجال المغناطيسي داخل القلب فلا يولّد تياراً محتثاً", "يولّد فيضاً كبيراً جداً", "يحرق الملفين فوراً", "يعكس اتجاهه بسرعة"], a: 0,
+    why: "المستمر ثابت ⟵ فيض ثابت ⟵ لا تيار محتث في الثانوي." },
+  { q: "تحتاج المحولة لاشتغالها إلى تيار متناوب لأنه (وزاري):",
+    opts: ["ينعكس اتجاهه دورياً فيولّد تغيراً في الفيض المغناطيسي خلال الملفين", "لا يتغيّر أبداً", "لا يحتاج قلباً حديدياً", "يسخّن الأسلاك لتوليد الطاقة"], a: 0,
+    why: "انعكاس اتجاه AC دورياً = فيض متغيّر = تيار محتث = نقل القدرة بين الملفين." },
+  { q: "لو ربطنا بطارية بين طرفي الملف الابتدائي فإن المحولة:",
+    opts: ["لا تعمل لأن تيار البطارية مستمر ثابت لا يولّد تغيراً في المجال المغناطيسي", "تعمل بكفاءة عالية", "ترفع الفولطية فقط", "تعمل لكن بتيار عكسي"], a: 0,
+    why: "تيار البطارية مستمر ثابت ⟵ لا تغيّر في الفيض ⟵ لا تيار محتث في الثانوي." },
+  { q: "سبب توهّج مصباح الملف الثانوي عند استخدام مصدر متناوب هو:",
+    opts: ["التغير الدوري في الفيض المغناطيسي يولّد تياراً محتثاً في الثانوي", "الحرارة المنبعثة من القلب", "لمس الملفين لبعضهما", "شحن البطارية للمصباح"], a: 0,
+    why: "الفيض المتغيّر (من AC) هو مصدر التيار المحتث في الثانوي." },
+  { q: "التيار المستمر ثابت في:",
+    opts: ["المقدار والاتجاه", "المقدار فقط", "الاتجاه فقط", "لا شيء منهما"], a: 0,
+    why: "ثبات المقدار والاتجاه ⟵ فيض ثابت ⟵ سبب فشل المحولة معه." }
+], { onDone: function (stars) { Phy.setLesson("ch7", "3", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="شعار أ. أحمد رافع — فاء الفيزياء">
+  <!-- خلفية بيضاء بإطار خفيف -->
+  <rect width="512" height="512" rx="118" fill="#ffffff"/>
+  <rect x="10" y="10" width="492" height="492" rx="108" fill="none" stroke="#4834d4" stroke-width="10" opacity="0.18"/>
+
+  <!-- المدار الذهبي -->
+  <ellipse cx="320" cy="290" rx="155" ry="62" transform="rotate(-28 320 290)"
+           fill="none" stroke="#ffc93c" stroke-width="11"/>
+
+  <!-- حرف الفاء الهندسي: نقطته إلكترون يدور على المدار -->
+  <circle cx="320" cy="290" r="46" fill="none" stroke="#4834d4" stroke-width="30"/>
+  <path d="M 366 302 Q 366 336 322 336 H 140 Q 118 336 112 316"
+        fill="none" stroke="#4834d4" stroke-width="30" stroke-linecap="round"/>
+  <circle cx="363" cy="206" r="20" fill="#ffc93c" stroke="#ffffff" stroke-width="6"/>
+</svg>

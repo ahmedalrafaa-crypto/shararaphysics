@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفصل الرابع: البطارية والقوة الدافعة الكهربائية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch4">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="../../index.html">الرئيسية</a> / الفصل الرابع</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔋 الفصل الرابع: البطارية والقوة الدافعة الكهربائية</h1>
+    <p>من ليمونة تولّد كهرباء... إلى بطارية تشغّل سيارة كاملة! تعال نكتشف ما الذي يحدث داخل البطارية، وكيف نصنعها ونشحنها ونعتني بها.</p>
+    <span class="chip" id="chpct">0% مكتمل</span>
+  </div>
+
+  <div class="pbar" style="margin-bottom:24px"><div id="pb" style="width:0%"></div></div>
+
+  <div class="path" id="path">
+    <a class="node" href="lesson1.html" data-ls="1">
+      <span class="dot">🍋</span>
+      <span class="info"><b>الدرس 1: ما البطارية؟ وكيف تصنع؟</b>
+        <span class="sub">تعريف البطارية ومكوناتها وأشكالها + نشاطا بطارية الليمون والخلية البسيطة</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson2.html" data-ls="2">
+      <span class="dot">🗂️</span>
+      <span class="info"><b>الدرس 2: تصنيف البطاريات وخلية دانيال</b>
+        <span class="sub">الأولية والثانوية والوقود + الخلية الكلفانية البسيطة والجسر الملحي + محاكاة</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson3.html" data-ls="3">
+      <span class="dot">🔦</span>
+      <span class="info"><b>الدرس 3: الخلية الجافة (كاربون – خارصين)</b>
+        <span class="sub">مكوناتها وقطباها والعجينة الإلكتروليتية ومميزاتها + مخطط تفاعلي</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson4.html" data-ls="4">
+      <span class="dot">🚗</span>
+      <span class="info"><b>الدرس 4: البطارية الثانوية وبطارية السيارة</b>
+        <span class="sub">الفرق بين الأولية والثانوية، تركيب بطارية السيارة وشحنها والعناية بها + محاكاة الشحن</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson5.html" data-ls="5">
+      <span class="dot">📱</span>
+      <span class="info"><b>الدرس 5: بطارية أيون الليثيوم</b>
+        <span class="sub">مكوناتها الخمسة ومميزاتها ومقارنتها بالجافة + مخطط طبقاتها التفاعلي</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson6.html" data-ls="6">
+      <span class="dot">🚀</span>
+      <span class="info"><b>الدرس 6: بطارية الوقود</b>
+        <span class="sub">خلية وقود الهيدروجين: كيف تعمل ولماذا لا تلوث البيئة؟ + محاكاة الخلية</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson7.html" data-ls="7">
+      <span class="dot">⚡</span>
+      <span class="info"><b>الدرس 7: القوة الدافعة الكهربائية والمقاومة الداخلية</b>
+        <span class="sub">قانون emf = w/q وأمثلة محلولة خطوة بخطوة ومسائل الفصل + حاسبة تفاعلية</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node exam" href="exam.html" data-ls="exam">
+      <span class="dot">🏆</span>
+      <span class="info"><b>الاختبار النهائي للفصل</b>
+        <span class="sub">أسئلة الفصل ومسائله والأسئلة الوزارية — اجمع 3 نجوم!</span>
+        <span class="stars"></span></span>
+    </a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var pct = Phy.chapterPercent("ch4", 7);
+  document.getElementById("pb").style.width = pct + "%";
+  document.getElementById("chpct").textContent = pct + "% مكتمل";
+  document.querySelectorAll(".node").forEach(function (n) {
+    var ls = n.dataset.ls, info = null;
+    if (ls === "exam") info = Phy.getExam("ch4");
+    else info = Phy.getLesson("ch4", ls);
+    if (info && (info.done || info.stars !== undefined)) {
+      n.classList.add("done");
+      var st = n.querySelector(".stars");
+      if (info.stars !== undefined && info.stars !== null)
+        st.textContent = Phy.starsStr(info.stars);
+      else st.textContent = "✓ مكتمل";
+    }
+  });
+})();
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

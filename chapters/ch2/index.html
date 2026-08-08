@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفصل الثاني: المغناطيس</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch2">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="../../index.html">الرئيسية</a> / الفصل الثاني</span>
+  </div>
+
+  <div class="hero">
+    <h1>🧲 الفصل الثاني: المغناطيس</h1>
+    <p>حجر غامض اكتشفه اليونانيون قبل 25 قرناً... واليوم يرفع السيارات ويدير المولدات ويغلق باب الثلاجة! اكتشف سرّه بنفسك.</p>
+    <span class="chip" id="chpct">0% مكتمل</span>
+  </div>
+
+  <div class="pbar" style="margin-bottom:24px"><div id="pb" style="width:0%"></div></div>
+
+  <div class="path" id="path">
+    <a class="node" href="lesson1.html" data-ls="1">
+      <span class="dot">🧲</span>
+      <span class="info"><b>الدرس 1: قصة اكتشاف المغناطيس</b>
+        <span class="sub">المغنيت والحجر المغناطيسي، أشكال المغانط واستعمالاتها + بوصلة تفاعلية</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson2.html" data-ls="2">
+      <span class="dot">🔍</span>
+      <span class="info"><b>الدرس 2: المواد المغناطيسية</b>
+        <span class="sub">دايا، بارا، فيرو مغناطيسية — الفروق والأمثلة + لعبة التصنيف</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson3.html" data-ls="3">
+      <span class="dot">🧭</span>
+      <span class="info"><b>الدرس 3: الأقطاب المغناطيسية</b>
+        <span class="sub">التجاذب والتنافر وتقطيع المغناطيس + محاكاة الأقطاب</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson4.html" data-ls="4">
+      <span class="dot">🌀</span>
+      <span class="info"><b>الدرس 4: المجال المغناطيسي</b>
+        <span class="sub">خطوط القوى المغناطيسية وميزاتها + راسم خطوط المجال</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson5.html" data-ls="5">
+      <span class="dot">✋</span>
+      <span class="info"><b>الدرس 5: نفاذ المجال المغناطيسي</b>
+        <span class="sub">عبر جسم الإنسان والكارتون والماء + تجربة النفاذ</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson6.html" data-ls="6">
+      <span class="dot">⚡</span>
+      <span class="info"><b>الدرس 6: تمغنط المواد</b>
+        <span class="sub">الدلك والحث والمغناطيس الكهربائي + مختبر المغناطيس الكهربائي</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node exam" href="exam.html" data-ls="exam">
+      <span class="dot">🏆</span>
+      <span class="info"><b>الاختبار النهائي للفصل</b>
+        <span class="sub">أسئلة الفصل والأسئلة الوزارية — اجمع 3 نجوم!</span>
+        <span class="stars"></span></span>
+    </a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var pct = Phy.chapterPercent("ch2", 6);
+  document.getElementById("pb").style.width = pct + "%";
+  document.getElementById("chpct").textContent = pct + "% مكتمل";
+  document.querySelectorAll(".node").forEach(function (n) {
+    var ls = n.dataset.ls, info = null;
+    if (ls === "exam") info = Phy.getExam("ch2");
+    else info = Phy.getLesson("ch2", ls);
+    if (info && (info.done || info.stars !== undefined)) {
+      n.classList.add("done");
+      var st = n.querySelector(".stars");
+      if (info.stars !== undefined && info.stars !== null)
+        st.textContent = Phy.starsStr(info.stars);
+      else st.textContent = "✓ مكتمل";
+    }
+  });
+})();
+</script>
+</body>
+</html>

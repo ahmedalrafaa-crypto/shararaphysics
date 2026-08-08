@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: علاقة القدرة والتيار</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch7">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السابع</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>⚖️ الدرس 5: علاقة القدرة والتيار</h1>
+    <p>المحولة لا تصنع طاقة من العدم! في المحولة المثالية <b>القدرة الداخلة = القدرة الخارجة</b>. وهذا يعطينا سرّاً مهماً: كلما رفعت الفولطية... خفض التيار.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🍰</span>
+    <span>تخيّل القدرة كقطعة كعك ثابتة الحجم: المحولة تعيد تقطيعها فقط — فولطية أكبر × تيار أصغر، أو فولطية أصغر × تيار أكبر. الحاصل واحد!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📜</span> القدرة الداخلة والخارجة</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">تذكير</span> علاقة القدرة بفرق الجهد والتيار</summary>
+      <div class="ans">درسنا سابقاً أن: القدرة = فرق الجهد × التيار
+        <div class="bigout" style="margin-top:8px">P = I × V</div>
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> اكتب القدرة الداخلة في الابتدائي والخارجة من الثانوي</summary>
+      <div class="ans">
+        <b>القدرة الداخلة في الملف الابتدائي</b> = تيار الابتدائي × فولطية الابتدائي:
+        <div class="bigout" style="margin:8px 0">P₁ = I₁ × V₁</div>
+        <b>القدرة الخارجة من الملف الثانوي</b> = تيار الثانوي × فولطية الثانوي:
+        <div class="bigout" style="margin-top:8px">P₂ = I₂ × V₂</div>
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما العلاقة في المحولة المثالية؟</summary>
+      <div class="ans">إذا فرضنا أن القدرة الداخلة تساوي القدرة الخارجة (أي أن المحولة <b>مثالية</b> لا يحصل ضياع في القدرة) فيمكننا القول:
+        <div class="bigout" style="margin-top:8px">P₁ = P₂ &nbsp;&nbsp;⟹&nbsp;&nbsp; <span class="hl">I₁ × V₁ = I₂ × V₂</span></div>
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">اشتقاق</span> ربط اللفات بالفولطية والتيار</summary>
+      <div class="ans">من I₁ × V₁ = I₂ × V₂ نرتّب فنحصل على:
+        <div class="bigout" style="margin:8px 0">V₂ / V₁ = I₁ / I₂ &nbsp; ... (1)</div>
+        وبما أن الفولطية تتناسب طردياً مع عدد اللفات:
+        <div class="bigout" style="margin:8px 0">V₂ / V₁ = N₂ / N₁ &nbsp; ... (2)</div>
+        وبمقارنة (1) و(2) نحصل على العلاقة الكاملة:
+        <div class="bigout" style="margin-top:8px"><span class="hl">N₂ / N₁ = V₂ / V₁ = I₁ / I₂</span></div>
+      </div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>المحولة <b>الرافعة للفولطية تكون خافضة للتيار</b> في الوقت نفسه، وبالعكس المحولة الخافضة للفولطية تكون رافعة للتيار في الوقت نفسه.</li>
+      <li>لاحظ: التيار يتناسب <b>عكسياً</b> مع عدد اللفات ( I₁/I₂ = N₂/N₁ ).</li>
+    </ul>
+  </div>
+
+  <!-- ======== حاسبة المحولة الكاملة ======== -->
+  <div class="sim">
+    <h3>🧪 حاسبة المحولة المثالية الكاملة</h3>
+    <p class="sim-sub">اكتب معطيات الابتدائي وعدد لفات الملفين، وشاهد فولطية وتيار الثانوي والقدرة (على فرض محولة مثالية P₁ = P₂).</p>
+    <div class="mathtool">
+      <label style="font-weight:800">V₁ =</label><input type="number" id="v1" value="240" style="width:90px">
+      <label style="font-weight:800">I₁ =</label><input type="number" id="i1" value="3" style="width:90px">
+      <label style="font-weight:800">N₁ =</label><input type="number" id="n1" value="600" style="width:90px">
+      <label style="font-weight:800">N₂ =</label><input type="number" id="n2" value="1800" style="width:90px">
+    </div>
+    <div class="bigout" id="pOut"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✏️</span> أمثلة محلولة خطوة بخطوة</div>
+
+  <div class="example">
+    <div class="exq">مثال ١ (من الملزمة): محولة مثالية N₁ = 600 لفة و N₂ = 1800 لفة، والقدرة المتناوبة الداخلة في الابتدائي 720W بفولطية 240V. احسب التيار المنساب في ملفها الثانوي.</div>
+    <div class="givens">المعطيات: N₁ = 600 ، N₂ = 1800 ، P₁ = 720W ، V₁ = 240V ، I₂ = ؟</div>
+    <div class="step"><b>الخطوة ١:</b> نوجد تيار الابتدائي من القدرة:
+      <div class="math">P₁ = I₁ × V₁ ⟹ 720 = I₁ × 240 ⟹ I₁ = 720/240 = 3 A</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نستخدم N₂/N₁ = I₁/I₂:
+      <div class="math">1800 / 600 = 3 / I₂ ⟹ 3 = 3 / I₂</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نحلّ:
+      <div class="math">I₂ = 3 / 3 = 1 A</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٢ (من الملزمة): محولة كفاءتها 100% ونسبة التحويل فيها ½ تعمل على فولطية متناوبة 220V والتيار المنساب في ملفها الثانوي 1.1A. احسب: ١) فولطية الثانوي ٢) تيار الابتدائي.</div>
+    <div class="givens">المعطيات: V₁ = 220V ، N₂/N₁ = ½ ، I₂ = 1.1A</div>
+    <div class="step"><b>١) فولطية الثانوي:</b> نستخدم N₂/N₁ = V₂/V₁:
+      <div class="math">½ = V₂ / 220 ⟹ 2V₂ = 220 ⟹ V₂ = 110 V</div></div>
+    <div class="step"><b>٢) تيار الابتدائي:</b> نستخدم N₂/N₁ = I₁/I₂:
+      <div class="math">½ = I₁ / 1.1 ⟹ 2I₁ = 1.1 ⟹ I₁ = 0.55 A</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٣ (من الملزمة): مصباح مكتوب عليه (6V, 12W) رُبط مع الملف الثانوي لمحولة مثالية، والابتدائي مع مصدر متناوب 240V وعدد لفات الابتدائي 8000 لفة، فتوهّج المصباح توهجاً اعتيادياً. احسب: ١) عدد لفات الثانوي ٢) التيار في المصباح ٣) التيار في الابتدائي.</div>
+    <div class="givens">المعطيات: V₂ = 6V ، P₂ = 12W ، V₁ = 240V ، N₁ = 8000</div>
+    <div class="step"><b>١) لفات الثانوي:</b> V₂/V₁ = N₂/N₁:
+      <div class="math">6/240 = N₂/8000 ⟹ N₂ = (6 × 8000)/240 = 200 لفة</div></div>
+    <div class="step"><b>٢) تيار المصباح (الثانوي):</b> P₂ = I₂ × V₂:
+      <div class="math">12 = I₂ × 6 ⟹ I₂ = 12/6 = 2 A</div></div>
+    <div class="step"><b>٣) تيار الابتدائي:</b> I₁/I₂ = V₂/V₁:
+      <div class="math">I₁/2 = 6/240 ⟹ I₁ = (2 × 6)/240 = 0.05 A</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz5"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson4.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: كفاءة المحولة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- حاسبة المحولة المثالية ---------- */
+(function () {
+  var v1 = document.getElementById("v1"), i1 = document.getElementById("i1"),
+      n1 = document.getElementById("n1"), n2 = document.getElementById("n2");
+  var out = document.getElementById("pOut");
+  function calc() {
+    var V1 = parseFloat(v1.value), I1 = parseFloat(i1.value), N1 = parseFloat(n1.value), N2 = parseFloat(n2.value);
+    if (![V1, I1, N1, N2].every(isFinite) || N1 === 0 || N2 === 0) { out.innerHTML = "أدخل قيماً صحيحة (N ≠ 0)"; return; }
+    var V2 = V1 * N2 / N1, I2 = I1 * N1 / N2, P = V1 * I1;
+    var r = function (x) { return Math.round(x * 1000) / 1000; };
+    out.innerHTML =
+      "V₂ = V₁ × N₂/N₁ = <span class='hl'>" + r(V2) + " V</span>&nbsp;&nbsp;|&nbsp;&nbsp;" +
+      "I₂ = I₁ × N₁/N₂ = <span class='hl'>" + r(I2) + " A</span>" +
+      "<small>P₁ = P₂ = V₁ × I₁ = " + r(P) + " W&nbsp; (تحقّق: V₂ × I₂ = " + r(V2 * I2) + " W) — " +
+      (N2 > N1 ? "رافعة للفولطية / خافضة للتيار" : (N2 < N1 ? "خافضة للفولطية / رافعة للتيار" : "نسبة التحويل = 1")) + "</small>";
+  }
+  [v1, i1, n1, n2].forEach(function (el) { el.addEventListener("input", calc); });
+  calc();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz5", [
+  { q: "القدرة الداخلة في الملف الابتدائي تُحسب من:",
+    opts: ["P₁ = I₁ × V₁", "P₁ = I₁ / V₁", "P₁ = V₁ − I₁", "P₁ = N₁ × V₁"], a: 0,
+    why: "القدرة = التيار × فرق الجهد." },
+  { q: "في المحولة المثالية (لا ضياع في القدرة):",
+    opts: ["P₁ = P₂ أي I₁V₁ = I₂V₂", "P₁ أكبر من P₂ دائماً", "P₂ أكبر من P₁ دائماً", "لا علاقة بين P₁ و P₂"], a: 0,
+    why: "القدرة الداخلة = الخارجة في المحولة المثالية." },
+  { q: "العلاقة الكاملة التي تربط اللفات والفولطية والتيار:",
+    opts: ["N₂/N₁ = V₂/V₁ = I₁/I₂", "N₂/N₁ = V₂/V₁ = I₂/I₁", "N₂/N₁ = V₁/V₂ = I₁/I₂", "N₁/N₂ = V₂/V₁ = I₁/I₂"], a: 0,
+    why: "لاحظ أن التيار مقلوب: I₁/I₂ وليس I₂/I₁." },
+  { q: "المحولة الرافعة للفولطية تكون في الوقت نفسه:",
+    opts: ["خافضة للتيار", "رافعة للتيار", "لا تؤثر على التيار", "قاطعة للتيار"], a: 0,
+    why: "القدرة ثابتة: فولطية أعلى ⟵ تيار أقل." },
+  { q: "التيار في المحولة يتناسب مع عدد اللفات تناسباً:",
+    opts: ["عكسياً ( I₁/I₂ = N₂/N₁ )", "طردياً ( I₁/I₂ = N₁/N₂ )", "لا يتناسب معه", "أُسّياً"], a: 0,
+    why: "على عكس الفولطية، التيار عكسي مع عدد اللفات." },
+  { q: "محولة مثالية P₁ = 720W و V₁ = 240V ، فإن تيار الابتدائي I₁ =",
+    opts: ["3 A", "2 A", "480 A", "0.3 A"], a: 0,
+    why: "I₁ = P₁/V₁ = 720/240 = 3 A." },
+  { q: "في المثال السابق إذا كان N₁ = 600 و N₂ = 1800 فإن تيار الثانوي I₂ =",
+    opts: ["1 A", "9 A", "3 A", "6 A"], a: 0,
+    why: "N₂/N₁ = I₁/I₂ ⟹ 1800/600 = 3/I₂ ⟹ I₂ = 1 A." },
+  { q: "مصباح (6V, 12W) على ثانوي محولة مثالية — التيار المنساب فيه:",
+    opts: ["2 A", "72 A", "0.5 A", "6 A"], a: 0,
+    why: "P₂ = I₂ × V₂ ⟹ 12 = I₂ × 6 ⟹ I₂ = 2 A." }
+], { onDone: function (stars) { Phy.setLesson("ch7", "5", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

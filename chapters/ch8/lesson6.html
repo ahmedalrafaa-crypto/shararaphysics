@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 6: الطاقة الشمسية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch8">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثامن</a> / الدرس 6</span>
+  </div>
+
+  <div class="hero">
+    <h1>☀️ الدرس 6: الطاقة الشمسية</h1>
+    <p>الشمس مصدر الحياة على الأرض، وطاقتها مجانية ونظيفة ولا تنضب. نحوّلها إلى كهرباء بالخلية الشمسية، ونستثمر حرارتها في السخان الشمسي وتحلية المياه.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔆</span>
+    <span>لوح صغير على السطح يلتقط ضوء الشمس ويحوّله كهرباء تُشغّل بيتاً كاملاً — بلا وقود، بلا دخان، وبلا فاتورة! كيف تفعل الخلية الشمسية ذلك؟</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🌞</span> أولاً: الطاقة الشمسية</div>
+  <div class="card">
+    <div class="notebox" style="margin-top:0"><ul><li>الطاقة الشمسية: هي الطاقة التي تستقبلها الأرض على سطحها، وتُعدّ مصدر الحياة، وهي المصدر المباشر وغير المباشر لمختلف أنواع الطاقات المتوفرة عليها.</li></ul></div>
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما هي مميزات (مزايا) الطاقة الشمسية؟ / لماذا تُعدّ في طليعة مصادر الطاقة المتجددة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١.</b> تتميّز بسهولة توفّرها في الكثير من بقاع العالم.<br>
+        <b>٢.</b> خلوّها من أي تأثيرات سلبية على البيئة، حيث لا تتسبّب في انطلاق غازات أو مواد كيميائية ضارّة بالبيئة أو الإنسان.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> اذكر استعمالات الطاقة الشمسية؟</summary>
+      <div class="ans">
+        <b>١.</b> تقنية توليد الكهرباء.<br>
+        <b>٢.</b> تقنية التطبيقات الحرارية، وهي نوعان: &nbsp;أ- تقنية تحلية المياه المالحة. &nbsp;ب- تقنية تسخين المياه والتدفئة.
+      </div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">🔋</span> استثمار الطاقة الشمسية في توليد الكهرباء</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما مبدأ عمل الخلية الشمسية؟</summary>
+      <div class="ans">تحوّل طاقة ضوء الشمس إلى طاقة كهربائية.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> توضَع طبقة من الزجاج على لوح الخلية الشمسية عند صناعتها؟ ما الفائدة؟</summary>
+      <div class="ans">لحماية الخلية الشمسية من التأثيرات الجوية.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الاختلاف بين الخلية الجافة والخلية الشمسية؟</summary>
+      <div class="ans">الاختلاف بينهما على أساس مبدأ العمل: فالخلية الجافة تحوّل <b>الطاقة الكيميائية</b> إلى طاقة كهربائية، بينما الخلية الشمسية تحوّل <b>طاقة أشعة الشمس</b> إلى طاقة كهربائية.</div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة الخلية والسخان الشمسي ======== -->
+  <div class="sim">
+    <h3>🎬 الشمس تعمل: خلية شمسية أم سخّان شمسي؟</h3>
+    <p class="sim-sub">بدّل بين الوضعين، وغيّر شدّة سطوع الشمس. في الخلية: الضوء يحرّر إلكترونات فيضيء المصباح. في السخّان: اللون الأسود يمتصّ الأشعة فيسخن الماء.</p>
+    <canvas id="solar" width="700" height="400"></canvas>
+    <div class="controls">
+      <button class="btn green" id="modeBtn">🔆 الوضع: خلية شمسية</button>
+      <label>سطوع الشمس: <b><span id="sVal">80</span>%</b></label>
+      <input type="range" id="sun" min="0" max="100" value="80">
+    </div>
+    <div class="controls"><span class="readout" id="solarState">الخلية الشمسية تحوّل ضوء الشمس إلى كهرباء تُضيء المصباح.</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🔥</span> التطبيقات الحرارية للطاقة الشمسية</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما هو السخّان الشمسي؟</summary>
+      <div class="ans">السخّان الشمسي: عبارة عن منظومة متكاملة تُستعمل في تجميع الأشعة الشمسية الساقطة واستثمار طاقتها الحرارية في تسخين المياه وتدفئة البيوت خلال فترة سطوع الشمس.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> تُستخدم معادن مطلية باللون الأسود (مثل أكاسيد الكروم والكوبلت) في منظومات السخّان الشمسي؟</summary>
+      <div class="ans">لغرض امتصاص أكبر كمية ممكنة من الأشعة الشمسية، وأن اللون الأسود ماصّ جيّد للأشعة.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الطرق المستعملة في تحلية المياه بالطاقة الشمسية؟</summary>
+      <div class="ans">
+        <b>١. الطريقة غير المباشرة:</b> تعتمد على توفير الطاقة الكهربائية لتشغيل وحدات التحلية باستعمال الخلايا الشمسية للحصول على طاقة حرارية أو كهربائية أو ميكانيكية.<br>
+        <b>٢. الطريقة المباشرة:</b> يُستعمل ضوء الشمس مباشرة لتسخين المياه غير النقية وتحويلها إلى بخار، ثم تحويل البخار إلى ماء نقي باستعمال المقطّر الشمسي.
+      </div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>هناك أنواع من السخانات الشمسية تُستعمل فيها المرايا بشكل <b>قطع مكافئ</b> لتركيز الأشعة والحصول على حرارة تسخين أعلى.</li>
+      <li>تُستثمر الخلايا الشمسية في توليد الطاقة الكهربائية لتشغيل محركات ترفع مياه الآبار.</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson5.html">⮕ الدرس السابق</a>
+    <a class="btn" href="lesson7.html">الدرس التالي: الرياح والوقود الحيوي ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة الخلية والسخان الشمسي ---------- */
+(function () {
+  var cv = document.getElementById("solar"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height, t = 0;
+  var cellMode = true, sunLevel = 80;
+  var modeBtn = document.getElementById("modeBtn"), sun = document.getElementById("sun");
+  var sVal = document.getElementById("sVal"), state = document.getElementById("solarState");
+  var elec = [];
+
+  modeBtn.onclick = function () {
+    cellMode = !cellMode;
+    modeBtn.textContent = cellMode ? "🔆 الوضع: خلية شمسية" : "🔥 الوضع: سخّان شمسي";
+  };
+  sun.oninput = function () { sunLevel = +sun.value; sVal.textContent = sunLevel; };
+
+  function tick() {
+    t += 0.05;
+    var s = sunLevel / 100;
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = "#e0f2fe"; ctx.fillRect(0, 0, W, H);
+
+    // الشمس
+    var sx = 110, sy = 90, R = 34 + 6 * s;
+    var g = ctx.createRadialGradient(sx, sy, 6, sx, sy, R + 30 * s);
+    g.addColorStop(0, "rgba(250,204,21," + (0.5 + 0.5 * s) + ")");
+    g.addColorStop(1, "rgba(250,204,21,0)");
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(sx, sy, R + 30 * s, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(sx, sy, R, 0, Math.PI * 2);
+    ctx.fillStyle = s > 0.05 ? "#facc15" : "#e5e7eb"; ctx.fill();
+    ctx.strokeStyle = "#f59e0b"; ctx.lineWidth = 2; ctx.stroke();
+
+    // الجهاز المستهدف
+    var dx = 470, dy = 250;
+
+    // أشعة الشمس نحو الجهاز
+    if (s > 0.05) {
+      ctx.strokeStyle = "rgba(250,204,21," + (0.3 + 0.5 * s) + ")"; ctx.lineWidth = 3;
+      for (var i = 0; i < 6; i++) {
+        var f = ((t * 0.5 + i / 6) % 1);
+        var rx = sx + f * (dx - 40 - sx), ry = sy + f * (dy - 40 - sy);
+        ctx.beginPath(); ctx.moveTo(rx, ry); ctx.lineTo(rx + 14, ry + 10); ctx.stroke();
+      }
+    }
+
+    if (cellMode) {
+      /* ===== خلية شمسية ===== */
+      // اللوح (مائل)
+      ctx.save(); ctx.translate(dx, dy); ctx.rotate(-0.35);
+      ctx.fillStyle = "#1e3a8a"; ctx.fillRect(-70, -46, 140, 92);
+      ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 2;
+      for (var c = -2; c <= 2; c++) { ctx.beginPath(); ctx.moveTo(c * 28, -46); ctx.lineTo(c * 28, 46); ctx.stroke(); }
+      for (var r = -1; r <= 1; r++) { ctx.beginPath(); ctx.moveTo(-70, r * 30); ctx.lineTo(70, r * 30); ctx.stroke(); }
+      // زجاج لامع
+      ctx.fillStyle = "rgba(255,255,255," + (0.12 + 0.25 * s) + ")"; ctx.fillRect(-70, -46, 140, 20);
+      ctx.restore();
+      ctx.fillStyle = "#1e3a8a"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+      ctx.fillText("الخلية الشمسية (طبقة زجاج تحميها)", dx, dy + 74);
+
+      // قاعدة
+      ctx.strokeStyle = "#64748b"; ctx.lineWidth = 5;
+      ctx.beginPath(); ctx.moveTo(dx, dy + 30); ctx.lineTo(dx, dy + 62); ctx.stroke();
+
+      // سلك إلى المصباح
+      var lx = 620, ly = 150;
+      ctx.strokeStyle = s > 0.1 ? "#f59e0b" : "#cbd5e1"; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.moveTo(dx + 40, dy - 20); ctx.lineTo(lx, dy - 20); ctx.lineTo(lx, ly + 16); ctx.stroke();
+
+      // إلكترونات متحركة (كثافتها حسب الشدة)
+      if (Math.random() < s) elec.push({ p: 0 });
+      elec = elec.filter(function (e) {
+        e.p += 0.01 + 0.02 * s;
+        if (e.p >= 1) return false;
+        var ex = dx + 40 + e.p * (lx - dx - 40), ey = dy - 20;
+        ctx.beginPath(); ctx.arc(ex, ey, 4, 0, Math.PI * 2);
+        ctx.fillStyle = "#f59e0b"; ctx.fill();
+        ctx.fillStyle = "#fff"; ctx.font = "8px Cairo"; ctx.fillText("e", ex, ey + 3);
+        return true;
+      });
+
+      // المصباح
+      if (s > 0.05) {
+        var gg = ctx.createRadialGradient(lx, ly, 4, lx, ly, 40 * s + 6);
+        gg.addColorStop(0, "rgba(250,204,21," + (0.85 * s) + ")"); gg.addColorStop(1, "rgba(250,204,21,0)");
+        ctx.fillStyle = gg; ctx.beginPath(); ctx.arc(lx, ly, 40 * s + 6, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.beginPath(); ctx.arc(lx, ly, 16, 0, Math.PI * 2);
+      ctx.fillStyle = s > 0.1 ? "#fde047" : "#e5e7eb"; ctx.fill();
+      ctx.strokeStyle = "#9ca3af"; ctx.lineWidth = 2; ctx.stroke();
+      ctx.fillStyle = "#334155"; ctx.font = "bold 12px Cairo"; ctx.fillText("مصباح", lx, ly + 40);
+
+      ctx.fillStyle = "#15803d"; ctx.font = "bold 13px Cairo";
+      ctx.fillText(s > 0.1 ? "ضوء الشمس ⟵ إلكترونات تنساب ⟵ كهرباء تُضيء المصباح ⚡" : "لا ضوء ⟵ لا كهرباء", W / 2, 30);
+      state.textContent = "الخلية الشمسية تحوّل طاقة ضوء الشمس إلى طاقة كهربائية. كلما زاد السطوع زادت الكهرباء.";
+    } else {
+      /* ===== سخّان شمسي ===== */
+      elec = [];
+      // اللوح الماص الأسود
+      ctx.save(); ctx.translate(dx, dy); ctx.rotate(-0.35);
+      ctx.fillStyle = "#111827"; ctx.fillRect(-75, -40, 150, 80);
+      ctx.strokeStyle = "#374151"; ctx.lineWidth = 2; ctx.strokeRect(-75, -40, 150, 80);
+      // أنابيب الماء
+      ctx.strokeStyle = "#3b82f6"; ctx.lineWidth = 4;
+      for (var p = -2; p <= 2; p++) { ctx.beginPath(); ctx.moveTo(p * 28, -40); ctx.lineTo(p * 28, 40); ctx.stroke(); }
+      ctx.restore();
+      ctx.fillStyle = "#111827"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+      ctx.fillText("لوح أسود ماصّ (أكاسيد الكروم والكوبلت)", dx, dy + 70);
+
+      // خزان الماء الساخن
+      var tkx = 615, tky = 150;
+      var heat = s;
+      ctx.fillStyle = "#94a3b8"; ctx.fillRect(tkx - 26, tky - 34, 52, 90);
+      ctx.strokeStyle = "#475569"; ctx.lineWidth = 2; ctx.strokeRect(tkx - 26, tky - 34, 52, 90);
+      // ماء بلون يسخن مع الشدة
+      var wr = Math.round(59 + 180 * heat), wb = Math.round(246 - 180 * heat);
+      ctx.fillStyle = "rgb(" + wr + ",130," + wb + ")";
+      ctx.fillRect(tkx - 22, tky - 6, 44, 58);
+      ctx.fillStyle = "#1e293b"; ctx.font = "bold 11px Cairo";
+      ctx.fillText("خزان الماء", tkx, tky + 72);
+      ctx.fillText(Math.round(20 + 60 * heat) + "°", tkx, tky + 24);
+      // أنبوب يربط اللوح بالخزان
+      ctx.strokeStyle = "#3b82f6"; ctx.lineWidth = 5;
+      ctx.beginPath(); ctx.moveTo(dx + 46, dy - 10); ctx.lineTo(tkx, dy - 10); ctx.lineTo(tkx, tky + 56); ctx.stroke();
+      // بخار عند الحرارة العالية
+      if (heat > 0.55) {
+        ctx.strokeStyle = "rgba(203,213,225,0.7)"; ctx.lineWidth = 4; ctx.lineCap = "round";
+        for (var b = 0; b < 3; b++) {
+          var ph = (t + b) % 1;
+          ctx.beginPath(); ctx.moveTo(tkx - 10 + b * 10, tky - 34 - ph * 20);
+          ctx.lineTo(tkx - 6 + b * 10, tky - 44 - ph * 20); ctx.stroke();
+        }
+        ctx.lineCap = "butt";
+      }
+
+      ctx.fillStyle = "#c2410c"; ctx.font = "bold 13px Cairo";
+      ctx.fillText(heat > 0.1 ? "اللون الأسود يمتصّ الأشعة ⟵ يسخن الماء 🔥" : "لا سطوع ⟵ لا تسخين", W / 2, 30);
+      state.textContent = "السخّان الشمسي يجمع الأشعة ويستثمر حرارتها في تسخين الماء؛ اللون الأسود ماصّ جيّد للأشعة.";
+    }
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "مبدأ عمل الخلية الشمسية هو تحويل:",
+    opts: ["الطاقة الضوئية (ضوء الشمس) إلى طاقة كهربائية", "الحرارة إلى ضوء", "الطاقة الكيميائية إلى ضوء", "الحركة إلى حرارة"], a: 0,
+    why: "س3 من أسئلة الفصل: الخلية الشمسية تحوّل الطاقة الضوئية إلى كهربائية." },
+  { q: "الاختلاف بين الخلية الجافة والخلية الشمسية أن الجافة تحوّل:",
+    opts: ["الطاقة الكيميائية إلى كهربائية، بينما الشمسية تحوّل ضوء الشمس إلى كهربائية", "ضوء الشمس فقط", "الحرارة إلى صوت", "الكهرباء إلى ضوء"], a: 0,
+    why: "الجافة: كيميائية ⟵ كهرباء، الشمسية: ضوء الشمس ⟵ كهرباء." },
+  { q: "توضَع طبقة من الزجاج على لوح الخلية الشمسية من أجل:",
+    opts: ["حماية الخلية من التأثيرات الجوية", "تبريد المصباح", "زيادة الوزن", "تلوين اللوح"], a: 0,
+    why: "الزجاج يحمي الخلية من التأثيرات الجوية." },
+  { q: "تُطلى معادن السخّان الشمسي باللون الأسود لأن:",
+    opts: ["اللون الأسود ماصّ جيّد للأشعة فيمتصّ أكبر كمية ممكنة", "الأسود يعكس الأشعة", "الأسود أرخص", "الأسود يبرّد الماء"], a: 0,
+    why: "الأسود ماصّ جيّد للأشعة ⟵ حرارة أكبر لتسخين الماء." },
+  { q: "من مزايا الطاقة الشمسية أنها:",
+    opts: ["متوفّرة بسهولة وخالية من التأثيرات السلبية على البيئة", "ملوّثة للهواء", "تنفد بسرعة", "متوفّرة ليلاً فقط"], a: 0,
+    why: "سهلة التوفّر ونظيفة لا تُطلق غازات أو مواد ضارّة." },
+  { q: "السخّان الشمسي منظومة تُستعمل في:",
+    opts: ["تجميع الأشعة الشمسية واستثمار حرارتها في تسخين المياه والتدفئة", "توليد الكهرباء بالانشطار", "حرق الوقود", "ضخّ الغاز"], a: 0,
+    why: "السخّان يجمع الأشعة ويستثمر طاقتها الحرارية لتسخين الماء وتدفئة البيوت." }
+], { onDone: function (stars) { Phy.setLesson("ch8", "6", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

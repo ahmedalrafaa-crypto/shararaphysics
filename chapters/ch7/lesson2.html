@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: مبدأ عمل المحولة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch7">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السابع</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔁 الدرس 2: مبدأ عمل المحولة (الحث المتبادل)</h1>
+    <p>الملفان لا يلمس أحدهما الآخر، ولا سلك يصلهما... فكيف تنتقل الطاقة من الابتدائي إلى الثانوي؟ الجواب: <b>جسر خفيّ من الفيض المغناطيسي</b> يمرّ في القلب الحديدي.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🌉</span>
+    <span>الملف الابتدائي «يتكلم» والملف الثانوي «يسمع» — واللغة بينهما هي خطوط المجال المغناطيسي المتغيّرة في القلب. هذا هو الحث المتبادل.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">⚙️</span> كيف تعمل المحولة؟</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> كيف تعمل المحولة الكهربائية؟</summary>
+      <div class="ans">تعمل على أساس ظاهرة <b>الحث المتبادل</b> بين الملفين، فعند انسياب تيار متناوب في الملف الابتدائي للمحولة يولّد مجالاً مغناطيسياً متغيّراً داخل القلب الحديدي فيشجّ هذا المجال الملف الثانوي كما يشجّ الملف الابتدائي.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما هو أساس عمل المحولة (مبدأ عمل المحولة)؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">الحث المتبادل بين ملفين متجاورين بينهما تواشج تام يوفّره القلب الحديد المغلق.</div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة الحث المتبادل ======== -->
+  <div class="sim">
+    <h3>🎬 شاهد الحث المتبادل داخل المحولة</h3>
+    <p class="sim-sub">التيار المتناوب في الملف الابتدائي يولّد فيضاً متغيّراً يدور في القلب المغلق ويشجّ الملف الثانوي فيولّد فيه تياراً محتثاً. أغلق المفتاح وراقب الفيض والحمل!</p>
+    <canvas id="mutSim" width="700" height="380"></canvas>
+    <div class="controls">
+      <button class="btn green" id="mutBtn">🔒 أغلق المفتاح</button>
+    </div>
+    <div class="controls"><span class="readout" id="mutState">المفتاح مفتوح — لا فيض متغيّر في القلب، والحمل متوقف.</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧲</span> لماذا القلب مغلق من الحديد المطاوع؟</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما فائدة القلب المغلق من الحديد المطاوع في المحولة؟</summary>
+      <div class="ans">يوفّر <b>تواشجاً تاماً</b> بين الملفين الابتدائي والثانوي، أي يوجّه خطوط المجال المغناطيسي كلها لتمرّ خلال الملف الثانوي فلا تتسرّب، فتنتقل الطاقة بينهما بأعلى كفاءة ممكنة.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الظاهرة التي تعمل بها المحولة الكهربائية؟</summary>
+      <div class="ans">ظاهرة الحث الكهرومغناطيسي المتبادل بين الملفين.</div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>مبدأ عمل المحولة: <b>الحث المتبادل</b> بين ملفين متجاورين بينهما تواشج تام يوفّره القلب الحديد المغلق. <span class="wz">وزاري</span></li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz2"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson1.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: لماذا التيار المتناوب؟ ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة الحث المتبادل ---------- */
+(function () {
+  var cv = document.getElementById("mutSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height, t = 0;
+  var closed = false, glow = 0;
+  var btn = document.getElementById("mutBtn");
+  var state = document.getElementById("mutState");
+
+  btn.onclick = function () {
+    closed = !closed;
+    btn.textContent = closed ? "🔓 افتح المفتاح" : "🔒 أغلق المفتاح";
+    btn.classList.toggle("green", !closed);
+    state.textContent = closed
+      ? "تيار متناوب في الملف الابتدائي ⟵ فيض متغيّر يدور في القلب ⟵ يشجّ الملف الثانوي ⟵ تيار محتث يُشغّل الحمل!"
+      : "المفتاح مفتوح — لا فيض متغيّر في القلب، والحمل متوقف.";
+  };
+
+  // إطار القلب المستطيل المغلق
+  var L = 220, R = 480, Tp = 90, B = 290; // حدود القلب الخارجية
+  var th = 34; // سُمك القلب
+
+  function coilOn(side, color) {
+    // يلف حول الساق العمودي (يسار=الابتدائي، يمين=الثانوي)
+    var cx = side === "L" ? L + th / 2 : R - th / 2;
+    ctx.strokeStyle = color; ctx.lineWidth = 4; ctx.lineCap = "round";
+    for (var i = 0; i < 6; i++) {
+      var y = Tp + 30 + i * 28;
+      ctx.beginPath();
+      ctx.ellipse(cx, y, 26, 12, 0, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+    ctx.lineCap = "butt";
+  }
+
+  function tick() {
+    t += 0.05;
+    glow += (((closed ? 1 : 0)) - glow) * 0.07;
+    ctx.clearRect(0, 0, W, H);
+    ctx.textAlign = "center";
+
+    // القلب المغلق (مستطيل مجوّف)
+    ctx.fillStyle = "#94a3b8";
+    ctx.fillRect(L, Tp, R - L, B - Tp);
+    ctx.clearRect(L + th, Tp + th, (R - L) - 2 * th, (B - Tp) - 2 * th);
+    ctx.strokeStyle = "#64748b"; ctx.lineWidth = 2;
+    ctx.strokeRect(L, Tp, R - L, B - Tp);
+    ctx.strokeRect(L + th, Tp + th, (R - L) - 2 * th, (B - Tp) - 2 * th);
+    ctx.fillStyle = "#475569"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("قلب مغلق من الحديد المطاوع", (L + R) / 2, Tp - 12);
+
+    // خطوط الفيض تدور داخل القلب المغلق (تنبض)
+    if (closed) {
+      var amp = Math.abs(Math.sin(t));
+      var dir = Math.sin(t) >= 0 ? 1 : -1;
+      ctx.strokeStyle = "rgba(13,148,136," + (0.3 + 0.55 * amp) + ")";
+      ctx.lineWidth = 3;
+      var mx = L + th / 2, Mx = R - th / 2, my = Tp + th / 2, My = B - th / 2;
+      ctx.beginPath(); ctx.rect(mx, my, Mx - mx, My - my); ctx.stroke();
+      // أسهم اتجاه الفيض
+      ctx.fillStyle = "rgba(15,118,110," + (0.4 + 0.5 * amp) + ")";
+      var ax = (L + R) / 2, ay = my;
+      ctx.beginPath();
+      if (dir > 0) { ctx.moveTo(ax - 8, ay - 6); ctx.lineTo(ax + 8, ay); ctx.lineTo(ax - 8, ay + 6); }
+      else { ctx.moveTo(ax + 8, ay - 6); ctx.lineTo(ax - 8, ay); ctx.lineTo(ax + 8, ay + 6); }
+      ctx.closePath(); ctx.fill();
+      ctx.fillStyle = "#0f766e"; ctx.font = "bold 11px Cairo";
+      ctx.fillText("فيض مغناطيسي متغيّر Φ", (L + R) / 2, (Tp + B) / 2 + 4);
+    }
+
+    // الملف الابتدائي (يسار) فيروزي
+    coilOn("L", "#0d9488");
+    ctx.fillStyle = "#0f766e"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("الملف الابتدائي N₁", L + th / 2, B + 22);
+
+    // الملف الثانوي (يمين) بنفسجي
+    coilOn("R", "#7c3aed");
+    ctx.fillStyle = "#6d28d9";
+    ctx.fillText("الملف الثانوي N₂", R - th / 2, B + 22);
+
+    // مصدر متناوب + مفتاح (يسار)
+    var sx = 90, sy = 200;
+    ctx.beginPath(); ctx.arc(sx, sy, 24, 0, Math.PI * 2);
+    ctx.fillStyle = "#fff"; ctx.fill();
+    ctx.strokeStyle = "#0f766e"; ctx.lineWidth = 3; ctx.stroke();
+    ctx.beginPath();
+    for (var x = -14; x <= 14; x++) {
+      var yy = sy - 8 * Math.sin(x / 14 * Math.PI * 2);
+      if (x === -14) ctx.moveTo(sx + x, yy); else ctx.lineTo(sx + x, yy);
+    }
+    ctx.strokeStyle = "#0d9488"; ctx.lineWidth = 2.5; ctx.stroke();
+    ctx.fillStyle = "#0f766e"; ctx.font = "bold 11px Cairo";
+    ctx.fillText("مصدر متناوب V₁", sx, sy + 40);
+
+    // أسلاك الابتدائي + المفتاح
+    var pcx = L + th / 2;
+    ctx.strokeStyle = "#7a5c1e"; ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(sx, sy - 24); ctx.lineTo(sx, 130); ctx.lineTo(pcx - 26, 130); // علوي للمفتاح
+    ctx.moveTo(sx + 24, sy); ctx.lineTo(pcx - 26, 250);                       // سفلي
+    ctx.stroke();
+    // المفتاح
+    ctx.strokeStyle = "#e63946"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(pcx - 26, 130);
+    if (closed) ctx.lineTo(pcx - 26, 145); else ctx.lineTo(pcx - 46, 118);
+    ctx.stroke();
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 10px Cairo";
+    ctx.fillText(closed ? "مغلق" : "مفتوح", pcx - 60, 128);
+
+    // تيار متحرك في الابتدائي
+    if (closed) {
+      ctx.fillStyle = "#0d9488";
+      for (var i = 0; i < 4; i++) {
+        var f = ((t * 0.3 + i / 4) % 1);
+        ctx.beginPath(); ctx.arc(sx + 24 + f * (pcx - 26 - sx - 24), sy - f * (sy - 250), 3, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+
+    // الحمل (مصباح) على الثانوي (يمين)
+    var lx = 610, ly = 200, scx = R - th / 2;
+    ctx.strokeStyle = "#7a5c1e"; ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(scx + 26, 130); ctx.lineTo(lx, 130); ctx.lineTo(lx, ly - 20);
+    ctx.moveTo(scx + 26, 250); ctx.lineTo(lx, 250); ctx.lineTo(lx, ly + 20);
+    ctx.stroke();
+    if (glow > 0.02) {
+      var g = ctx.createRadialGradient(lx, ly, 4, lx, ly, 42);
+      g.addColorStop(0, "rgba(250,204,21," + (0.85 * glow) + ")");
+      g.addColorStop(1, "rgba(250,204,21,0)");
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(lx, ly, 42, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.beginPath(); ctx.arc(lx, ly, 16, 0, Math.PI * 2);
+    ctx.fillStyle = glow > 0.15 ? "#fde047" : "#e5e7eb"; ctx.fill();
+    ctx.strokeStyle = "#9ca3af"; ctx.lineWidth = 2; ctx.stroke();
+    ctx.fillStyle = "#6d28d9"; ctx.font = "bold 11px Cairo";
+    ctx.fillText("الحمل V₂", lx, ly + 36);
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz2", [
+  { q: "تعمل المحولة الكهربائية على أساس ظاهرة:",
+    opts: ["الحث المتبادل بين الملفين", "التوصيل المباشر بسلك بين الملفين", "التأين الكيميائي", "الجاذبية الأرضية"], a: 0,
+    why: "الحث المتبادل: الفيض المتغيّر في القلب يشجّ الملف الثانوي." },
+  { q: "مبدأ عمل المحولة (وزاري) هو الحث المتبادل بين ملفين متجاورين بينهما تواشج تام يوفّره:",
+    opts: ["القلب الحديد المغلق", "الهواء المحيط", "مصدر التيار المستمر", "سلك النحاس الرابط"], a: 0,
+    why: "القلب المغلق من الحديد المطاوع يوفّر التواشج التام بين الملفين." },
+  { q: "عند انسياب تيار متناوب في الملف الابتدائي يتولد داخل القلب الحديدي:",
+    opts: ["مجال مغناطيسي متغيّر يشجّ الملف الثانوي", "مجال كهربائي ساكن", "حرارة فقط دون مجال", "تيار مستمر ثابت"], a: 0,
+    why: "المجال المغناطيسي المتغيّر هو الذي يشجّ الملف الثانوي ويولّد فيه التيار المحتث." },
+  { q: "ينتقل التيار المحتث بين ملفَّي المحولة رغم عدم اتصالهما مباشرة بسبب:",
+    opts: ["الفيض المغناطيسي المتغيّر الذي يربطهما عبر القلب", "سلك خفيّ يصلهما", "لمس الملفين لبعضهما", "الشحنات الساكنة"], a: 0,
+    why: "لا اتصال كهربائياً مباشراً بينهما — الرابط هو الفيض المغناطيسي في القلب." },
+  { q: "فائدة كون قلب المحولة مغلقاً من الحديد المطاوع:",
+    opts: ["يوفّر تواشجاً تاماً فيوجّه كل خطوط المجال خلال الملف الثانوي", "يزيد وزن المحولة فقط", "يمنع مرور الفيض", "يحوّل التيار إلى مستمر"], a: 0,
+    why: "التواشج التام = أعلى كفاءة في نقل الطاقة بين الملفين." }
+], { onDone: function (stars) { Phy.setLesson("ch7", "2", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

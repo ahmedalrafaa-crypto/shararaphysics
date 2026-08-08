@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: الطاقة المتجددة (البديلة)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch8">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثامن</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>♻️ الدرس 5: الطاقة المتجددة (البديلة)</h1>
+    <p>الوقود الأحفوري يوماً ما سينفد ويلوّث الهواء. فهل من بديل لا ينضب؟ نعم — <b>الطاقة المتجددة</b>: الشمس والرياح والوقود الحيوي والمد والجزر. لماذا نفضّلها؟ ولماذا تُسمّى «متجددة»؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🌱</span>
+    <span>الشمس تشرق كل يوم، والرياح تهبّ، والأمواج تتحرك بلا توقّف... طاقة مجانية، نظيفة، ولا تنفد. هذا هو سرّ الطاقة المتجددة!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🌟</span> المصادر البديلة للطاقة</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما الأسباب التي جعلت استعمال الطاقة المتجددة يُفضَّل على أنواع الطاقة غير المتجددة؟ أو ما مزاياها؟</summary>
+      <div class="ans">
+        <b>١.</b> إنها طاقة لا تُستنفَد.<br>
+        <b>٢.</b> طاقة نظيفة (غير ملوّثة) على عكس أنواع الوقود الأحفوري الذي ينبعث منه عند احتراقه مواد هيدروكربونية تؤثّر في البيئة.<br>
+        <b>٣.</b> ممكن أن تكون متاحة محلياً عكس الوقود الأحفوري.<br>
+        <b>٤.</b> قلّة تكاليف إنتاج الطاقة منها.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">صح/خطأ</span> «يُفضَّل استعمال الطاقة المتجددة على غير المتجددة لأنها طاقة تُستنفَد» — هل الجملة صحيحة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans"><b>خاطئة</b>؛ لأن الطاقة المتجددة <b>لا تُستنفَد</b>.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> عدّد أهم مصادر الطاقة البديلة (الطاقة المتجددة)؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        ١. الطاقة الشمسية &nbsp; (Solar energy)<br>
+        ٢. طاقة الرياح &nbsp; (Wind energy)<br>
+        ٣. طاقة الوقود الحيوي &nbsp; (Biofuel energy)<br>
+        ٤. طاقة المد والجزر &nbsp; (Tidal energy)
+      </div>
+    </details>
+  </div>
+
+  <!-- ======== لعبة تصنيف المصادر ======== -->
+  <div class="sim">
+    <h3>🎯 لعبة: صنّف مصدر الطاقة</h3>
+    <p class="sim-sub">انقر مصدراً لتختاره، ثم انقر الصندوق الصحيح: هل هو <b>متجدد</b> أم <b>غير متجدد</b>؟ اجمع كل المصادر بشكل صحيح!</p>
+    <div class="sortpool" id="pool"></div>
+    <div class="sortgame">
+      <div class="sortbucket renew" data-b="renew"><h4>♻️ طاقة متجددة</h4><div class="bucketitems" id="bk-renew"></div></div>
+      <div class="sortbucket nonrenew" data-b="nonrenew"><h4>🛢️ طاقة غير متجددة</h4><div class="bucketitems" id="bk-nonrenew"></div></div>
+    </div>
+    <div class="controls">
+      <button class="btn ghost" id="sortReset">🔄 إعادة اللعبة</button>
+      <span class="readout" id="sortState">اختر مصدراً من الأعلى ثم انقر الصندوق المناسب.</span>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">⚖️</span> مقارنة: متجددة مقابل غير متجددة</div>
+  <div class="card">
+    <p style="margin-top:0"><b>قارن بين الطاقة الأحفورية (غير المتجددة) والطاقة المتجددة؟</b></p>
+    <table class="cmptable">
+      <thead><tr><th class="renew">الطاقة المتجددة ♻️</th><th class="nonrenew">الطاقة غير المتجددة 🛢️</th></tr></thead>
+      <tbody>
+        <tr><td>لا تُستنفَد</td><td>تُستنفَد</td></tr>
+        <tr><td>طاقة نظيفة (غير ملوّثة)</td><td>طاقة غير نظيفة (ملوّثة)</td></tr>
+        <tr><td>متاحة محلياً</td><td>يمكن أن تكون غير متاحة محلياً</td></tr>
+        <tr><td>تكاليف إنتاجها قليلة</td><td>تكاليف إنتاجها عالية</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson4.html">⮕ الدرس السابق</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: الطاقة الشمسية ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- لعبة تصنيف المصادر ---------- */
+(function () {
+  var items = [
+    { id: "solar", name: "☀️ الطاقة الشمسية", cat: "renew" },
+    { id: "wind", name: "🌬️ طاقة الرياح", cat: "renew" },
+    { id: "bio", name: "🌾 الوقود الحيوي", cat: "renew" },
+    { id: "tidal", name: "🌊 المد والجزر", cat: "renew" },
+    { id: "oil", name: "🛢️ النفط", cat: "nonrenew" },
+    { id: "coal", name: "⛏️ الفحم الحجري", cat: "nonrenew" },
+    { id: "gas", name: "🔥 الغاز الطبيعي", cat: "nonrenew" },
+    { id: "nuclear", name: "⚛️ الطاقة النووية", cat: "nonrenew" }
+  ];
+  var pool = document.getElementById("pool"), state = document.getElementById("sortState");
+  var selected = null, placed = 0;
+
+  function build() {
+    pool.innerHTML = ""; selected = null; placed = 0;
+    document.getElementById("bk-renew").innerHTML = "";
+    document.getElementById("bk-nonrenew").innerHTML = "";
+    var shuffled = items.slice().sort(function () { return Math.random() - 0.5; });
+    shuffled.forEach(function (it) {
+      var b = document.createElement("button");
+      b.className = "sorttoken"; b.textContent = it.name; b.dataset.id = it.id;
+      b.onclick = function () {
+        if (b.classList.contains("placed")) return;
+        pool.querySelectorAll(".sorttoken").forEach(function (x) { x.classList.remove("sel"); });
+        b.classList.add("sel"); selected = it;
+        state.textContent = "اخترت «" + it.name + "» — الآن انقر الصندوق الصحيح.";
+      };
+      pool.appendChild(b);
+    });
+    state.textContent = "اختر مصدراً من الأعلى ثم انقر الصندوق المناسب.";
+  }
+  build();
+  document.getElementById("sortReset").onclick = build;
+
+  document.querySelectorAll(".sortbucket").forEach(function (bucket) {
+    bucket.onclick = function () {
+      if (!selected) { state.textContent = "👆 اختر مصدراً أولاً من الأعلى."; return; }
+      var tok = pool.querySelector('.sorttoken[data-id="' + selected.id + '"]');
+      var correct = bucket.dataset.b === selected.cat;
+      var clone = document.createElement("span");
+      clone.className = "sorttoken placed " + (correct ? "ok" : "bad");
+      clone.textContent = selected.name + (correct ? " ✓" : " ✗");
+      bucket.querySelector(".bucketitems").appendChild(clone);
+      tok.classList.add("placed"); tok.classList.remove("sel");
+      tok.style.visibility = "hidden";
+      state.textContent = correct
+        ? "أحسنت! «" + selected.name + "» " + (selected.cat === "renew" ? "متجددة" : "غير متجددة") + " ✅"
+        : "خطأ! «" + selected.name + "» هي في الحقيقة " + (selected.cat === "renew" ? "متجددة ♻️" : "غير متجددة 🛢️") + ".";
+      selected = null; placed++;
+      if (placed === items.length) {
+        var okCount = document.querySelectorAll(".sorttoken.ok").length;
+        state.textContent = "انتهت اللعبة! أجبت بشكل صحيح عن " + okCount + " من " + items.length + " مصادر. 🎉";
+        if (okCount === items.length) Phy.confetti();
+      }
+    };
+  });
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "من مزايا الطاقة المتجددة أنها:",
+    opts: ["لا تُستنفَد ونظيفة وقليلة التكاليف", "ملوّثة وتنفد بسرعة", "غالية جداً دائماً", "متوفّرة فقط في مكان واحد"], a: 0,
+    why: "المتجددة: لا تُستنفَد، نظيفة، متاحة محلياً، وقليلة التكاليف." },
+  { q: "«يُفضَّل استعمال الطاقة المتجددة لأنها تُستنفَد» — هذه العبارة:",
+    opts: ["خاطئة؛ لأن الطاقة المتجددة لا تُستنفَد", "صحيحة", "صحيحة جزئياً", "لا يمكن الحكم عليها"], a: 0,
+    why: "خاطئة — الطاقة المتجددة لا تُستنفَد، وهذا سبب تفضيلها." },
+  { q: "أهم مصادر الطاقة المتجددة (البديلة) هي:",
+    opts: ["الشمسية والرياح والوقود الحيوي والمد والجزر", "النفط والفحم والغاز والنووية", "الفحم والرياح فقط", "النووية والمائية"], a: 0,
+    why: "المتجددة الأربعة: الشمسية، الرياح، الوقود الحيوي، المد والجزر." },
+  { q: "أيٌّ من الآتي مصدر طاقة متجدد؟",
+    opts: ["طاقة الخلايا الشمسية", "الغاز الطبيعي", "النفط", "الطاقة النووية"], a: 0,
+    why: "س2 من أسئلة الفصل: الخلايا الشمسية مصدر متجدد، أما الباقي فغير متجدد." },
+  { q: "أيٌّ من الآتي مصدر طاقة غير متجدد؟",
+    opts: ["طاقة الفحم الحجري", "طاقة المد والجزر", "طاقة الرياح", "طاقة الهيدروجين"], a: 0,
+    why: "س1 من أسئلة الفصل: الفحم الحجري غير متجدد." },
+  { q: "في المقارنة، الطاقة غير المتجددة تتميّز بأنها:",
+    opts: ["تُستنفَد وملوّثة وتكاليفها عالية", "لا تُستنفَد ونظيفة", "رخيصة ونظيفة", "متجددة دائماً"], a: 0,
+    why: "غير المتجددة: تُستنفَد، ملوّثة، وقد تكون غير متاحة محلياً وعالية التكلفة." }
+], { onDone: function (stars) { Phy.setLesson("ch8", "5", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

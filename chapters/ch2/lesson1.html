@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 1: قصة اكتشاف المغناطيس</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch2">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثاني</a> / الدرس 1</span>
+  </div>
+
+  <div class="hero">
+    <h1>🧲 الدرس 1: قصة اكتشاف المغناطيس</h1>
+    <p>قبل 25 قرناً وجد اليونانيون حجراً غريباً يجذب الحديد... فبدأت الحكاية!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚪</span>
+    <span>لماذا ينغلق باب الثلاجة من تلقاء نفسه؟ وكيف تعرف البوصلة طريق الشمال دائماً حتى في وسط البحر؟ السرّ كله في <b>المغناطيس</b>!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📜</span> قصة الاكتشاف</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> أوضح بإيجاز تاريخ اكتشاف المغناطيس؟</summary>
+      <div class="ans">منذ 25 قرنا اكتشف اليونانيون معدنا يجذب اليه قطع الحديد اطلقوا علية أسم <b>المغنيت</b> والذي يتركب من أوكسيد الحديد الأسود ورمزه الكيميائي هو <span class="formula-inline">Fe₃O₄</span> واصبح معروفا باسم <b>الحجر المغناطيسي</b>.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما هي اشكال المغناطيس الصناعي؟</summary>
+      <div class="ans"><b>١.</b> ساق مغناطيسية مستقيمة &nbsp;&nbsp; <b>٢.</b> مغناطيس بشكل حرف <span class="formula-inline">U</span></div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">🏗️</span> استعمالات المغانط الكهربائية</div>
+  <div class="card">
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما استعمالات المغانط الكهربائية؟ ما الفائدة العملية من المغناطيسية؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١.</b> تستعمل لرفع قطع الفولاذ أو الحديد (السكراب)<br>
+        <b>٢.</b> يستعمل في مولدات الصوت (السماعة) والمولدات والمحركات الكهربائية والتلفاز وأجهزة التسجيل الصوتي<br>
+        <b>٣.</b> يستعمل في الحروف المطبعية للآلة الكاتبة<br>
+        <b>٤.</b> يستعمل في بوصلة الملاحة
+      </div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> التعريف الأهم في الدرس</div>
+  <div class="defbox">
+    <b class="term">ابرة البوصلة</b> <span class="wz">وزاري</span><b>:</b> هي عبارة عن مغناطيس دائمي صغير يمكنه الدوران بحرية في مستوى أفقي حول محور شاقولي مدبب وتتجه نحو الشمال المغناطيسي الأرضي.
+  </div>
+
+  <!-- ======== المحاكاة: البوصلة والمغناطيس ======== -->
+  <div class="sim">
+    <h3>🧪 جرب بنفسك: البوصلة والمغناطيس</h3>
+    <p class="sim-sub">اسحب المغناطيس وقرّبه من البوصلة — لاحظ كيف تنحرف الإبرة عن الشمال! اقلب المغناطيس وشاهد الفرق.</p>
+    <canvas id="compassSim" width="700" height="340"></canvas>
+    <div class="controls">
+      <button class="btn" id="flipMag">🔄 اقلب قطبي المغناطيس</button>
+      <button class="btn ghost" id="resetMag">↩️ إبعاد المغناطيس</button>
+      <span class="readout" id="compState">الإبرة تشير نحو الشمال المغناطيسي الأرضي 🧭</span>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson2.html">الدرس التالي: المواد المغناطيسية ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة البوصلة والمغناطيس ---------- */
+(function () {
+  var cv = document.getElementById("compassSim"), ctx = cv.getContext("2d");
+  var compass = { x: 200, y: 175, r: 78 };
+  var mag = { x: 560, y: 90, flip: 1, home: { x: 560, y: 90 } };
+  var needle = -Math.PI / 2, needleV = 0; // زاوية الإبرة (الشمال = أعلى)
+  var dragging = false;
+
+  function pos(e) {
+    var r = cv.getBoundingClientRect();
+    var t = e.touches ? e.touches[0] : e;
+    return { x: (t.clientX - r.left) * cv.width / r.width, y: (t.clientY - r.top) * cv.height / r.height };
+  }
+  function down(e) {
+    var p = pos(e);
+    if (Math.abs(p.x - mag.x) < 75 && Math.abs(p.y - mag.y) < 45) { dragging = true; e.preventDefault(); }
+  }
+  function move(e) {
+    if (!dragging) return;
+    var p = pos(e);
+    mag.x = Math.max(60, Math.min(cv.width - 60, p.x));
+    mag.y = Math.max(35, Math.min(cv.height - 35, p.y));
+    e.preventDefault();
+  }
+  cv.addEventListener("mousedown", down); cv.addEventListener("mousemove", move);
+  addEventListener("mouseup", function () { dragging = false; });
+  cv.addEventListener("touchstart", down, { passive: false });
+  cv.addEventListener("touchmove", move, { passive: false });
+  addEventListener("touchend", function () { dragging = false; });
+
+  document.getElementById("flipMag").onclick = function () { mag.flip *= -1; };
+  document.getElementById("resetMag").onclick = function () { mag.x = mag.home.x; mag.y = mag.home.y; };
+
+  // مجال قطبين: N موجب، S سالب
+  function field(px, py) {
+    var half = 52 * mag.flip;
+    var poles = [
+      { x: mag.x - half, y: mag.y, s: +1 },  // N
+      { x: mag.x + half, y: mag.y, s: -1 }   // S
+    ];
+    var bx = 0, by = 0;
+    poles.forEach(function (p) {
+      var dx = px - p.x, dy = py - p.y;
+      var d2 = dx * dx + dy * dy + 60;
+      var d = Math.sqrt(d2);
+      bx += p.s * dx / (d2 * d);
+      by += p.s * dy / (d2 * d);
+    });
+    return { x: bx * 1e6, y: by * 1e6 };
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    // مجال المغناطيس عند البوصلة + مجال أرضي ضعيف نحو الأعلى (الشمال)
+    var B = field(compass.x, compass.y);
+    B.y -= 14; // المجال الأرضي
+    var target = Math.atan2(B.y, B.x);
+    var diff = target - needle;
+    while (diff > Math.PI) diff -= 2 * Math.PI;
+    while (diff < -Math.PI) diff += 2 * Math.PI;
+    needleV = needleV * 0.85 + diff * 0.08;
+    needle += needleV;
+
+    var strength = Math.sqrt(B.x * B.x + (B.y + 14) * (B.y + 14));
+    document.getElementById("compState").textContent = strength > 8
+      ? "الإبرة تتأثر بمجال المغناطيس! 🧲"
+      : "الإبرة تشير نحو الشمال المغناطيسي الأرضي 🧭";
+
+    // جسم البوصلة
+    ctx.save();
+    ctx.beginPath(); ctx.arc(compass.x, compass.y, compass.r + 12, 0, 7);
+    ctx.fillStyle = "#c9a227"; ctx.fill();
+    ctx.beginPath(); ctx.arc(compass.x, compass.y, compass.r, 0, 7);
+    ctx.fillStyle = "#fffdf5"; ctx.fill();
+    ctx.strokeStyle = "#e5d9a8"; ctx.lineWidth = 2; ctx.stroke();
+    ctx.fillStyle = "#8a7a3b"; ctx.font = "bold 15px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("N", compass.x, compass.y - compass.r + 20);
+    ctx.fillText("S", compass.x, compass.y + compass.r - 8);
+    ctx.fillText("E", compass.x + compass.r - 14, compass.y + 5);
+    ctx.fillText("W", compass.x - compass.r + 14, compass.y + 5);
+    // الإبرة
+    ctx.translate(compass.x, compass.y); ctx.rotate(needle);
+    ctx.beginPath(); ctx.moveTo(58, 0); ctx.lineTo(-8, -9); ctx.lineTo(-8, 9); ctx.closePath();
+    ctx.fillStyle = "#e63946"; ctx.fill();          // رأس شمالي أحمر
+    ctx.beginPath(); ctx.moveTo(-58, 0); ctx.lineTo(-8, -9); ctx.lineTo(-8, 9); ctx.closePath();
+    ctx.fillStyle = "#457b9d"; ctx.fill();          // ذيل جنوبي أزرق
+    ctx.beginPath(); ctx.arc(0, 0, 6, 0, 7); ctx.fillStyle = "#2d3142"; ctx.fill();
+    ctx.restore();
+
+    // المغناطيس (ساق N حمراء / S زرقاء)
+    ctx.save(); ctx.translate(mag.x, mag.y);
+    var f = mag.flip;
+    ctx.fillStyle = "#e63946";
+    ctx.fillRect(f === 1 ? -60 : 0, -18, 60, 36);
+    ctx.fillStyle = "#457b9d";
+    ctx.fillRect(f === 1 ? 0 : -60, -18, 60, 36);
+    ctx.fillStyle = "#fff"; ctx.font = "bold 18px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("N", -30 * f, 7); ctx.fillText("S", 30 * f, 7);
+    ctx.strokeStyle = "#2d3142"; ctx.lineWidth = 2; ctx.strokeRect(-60, -18, 120, 36);
+    ctx.restore();
+    ctx.fillStyle = "#5c6178"; ctx.font = "13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("اسحب المغناطيس 👆", mag.x, mag.y - 30);
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "اكتشف اليونانيون معدن المغنيت الذي يجذب قطع الحديد منذ:",
+    opts: ["5 قرون", "10 قرون", "25 قرنا", "100 قرن"], a: 2,
+    why: "منذ 25 قرنا اكتشف اليونانيون معدنا يجذب اليه قطع الحديد اطلقوا عليه اسم المغنيت." },
+  { q: "يتركب المغنيت (الحجر المغناطيسي) من أوكسيد الحديد الأسود ورمزه الكيميائي:",
+    opts: ["FeO", "Fe₂O₃", "Fe₃O₄", "FeS"], a: 2,
+    why: "المغنيت = أوكسيد الحديد الأسود Fe₃O₄ وأصبح معروفا باسم الحجر المغناطيسي." },
+  { q: "أشكال المغناطيس الصناعي هي:",
+    opts: ["ساق مستقيمة فقط", "ساق مغناطيسية مستقيمة ومغناطيس بشكل حرف U", "كرة ومكعب", "حرف U فقط"], a: 1,
+    why: "شكلان: الساق المستقيمة والمغناطيس بشكل حرف U." },
+  { q: "أي مما يأتي ليس من استعمالات المغانط الكهربائية؟",
+    opts: ["رفع قطع الفولاذ (السكراب)", "مولدات الصوت والمحركات الكهربائية", "الحروف المطبعية للآلة الكاتبة", "صبغ السيارات"], a: 3,
+    why: "صبغ السيارات (المرذاذ) من تطبيقات الكهربائية الساكنة في الفصل الأول، وليس من استعمالات المغانط الكهربائية." },
+  { q: "إبرة البوصلة مغناطيس دائمي صغير يدور بحرية في:",
+    opts: ["مستوى شاقولي حول محور أفقي", "مستوى أفقي حول محور شاقولي مدبب", "أي مستوى كان", "مستوى مائل"], a: 1,
+    why: "تدور في مستوى أفقي حول محور شاقولي مدبب — سؤال وزاري." },
+  { q: "تتجه إبرة البوصلة دائما نحو:",
+    opts: ["الشرق", "الجنوب الجغرافي", "الشمال المغناطيسي الأرضي", "الغرب"], a: 2,
+    why: "إبرة البوصلة تتجه نحو الشمال المغناطيسي الأرضي." }
+], { onDone: function (stars) { Phy.setLesson("ch2", "1", { stars: stars }); } });
+</script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 7: المولد الكهربائي المتناوب والمستمر</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch6">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السادس</a> / الدرس 7</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏭 الدرس 7: المولد الكهربائي المتناوب والمستمر</h1>
+    <p>من أين تأتي كهرباء بيتك؟ من مولدات ضخمة تدور ليل نهار... مبدؤها اكتشاف فرداي الذي تعلمته في الدرس السابق!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">💫</span>
+    <span>ملف يدور بين قطبي مغناطيس = كهرباء! هذه هي الفكرة كلها — وكل محطات الكهرباء في العالم مجرد نسخ عملاقة منها.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> المولد الكهربائي للتيار المتناوب</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> اذكر بعض تطبيقات ظاهرة الحث الذاتي ؟</summary>
+      <div class="ans">
+        <b>١.</b> المولد الكهربائي للتيار المتناوب.<br>
+        <b>٢.</b> المولد البسيط للتيار المستمر.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما هو المولد الكهربائي للتيار المتناوب ؟ وما الفائدة العملية منه؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">هو جهاز يعمل على تحويل الطاقة الميكانيكية (الحركية) إلى طاقة كهربائية بوجود مجال مغناطيسي ويعد المصدر الرئيسي المستعمل في إنتاج الطاقة الكهربائية.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما مبدأ عمل المولد الكهربائي ؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">اساس عمله هو مبدأ الحث الكهرومغناطيسي حسب اكتشاف العالم فرداي.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> مما يتركب (المكونات الاساسية) المولد الكهربائي للتيار المتناوب ؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١.</b> ملف من سلك موصل معزول ملفوف حول قلب من الحديد المطاوع.<br>
+        <b>٢.</b> حلقتين معزولتين بعضهما.<br>
+        <b>٣.</b> فرشتان من الكاربون (فحمات).<br>
+        <b>٤.</b> مغناطيس دائمي أو مغناطيس كهربائي بشكل حرف U.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> وضح عمل المولد الكهربائي (أو ماذا يحدث عنده دوران ملف بين قطبي المغناطيس)؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">عند دوران الملف داخل المجال مغناطيسي منتظم قاطعا خطوط القوة المغناطيسية تتولد قوة دافعة كهربائية محتثه emf مسببة انسياب تيار كهربائي محتث متناوب في ملف النواة ينتقل عبر الحلقتين المعدنيتين والفرشاتين الملامستين لهما إلى الدائرة الكهربائية الخارجية ويسمى بالتيار المتناوب.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الفائدة العملية من فرشتها الكاربون (الفحمات)؟</summary>
+      <div class="ans">ربط الملف في الدائرة الخارجية الكهربائية.</div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة المولد ======== -->
+  <div class="sim">
+    <h3>🎬 شغّل المولد الكهربائي وشاهد شكل التيار</h3>
+    <p class="sim-sub">أدر الملف وراقب موجة التيار — ثم بدّل الحلقتين بمبادل لتحصل على تيار مستمر!</p>
+    <canvas id="genSim" width="700" height="400"></canvas>
+    <div class="controls">
+      <button class="btn green" id="gBtn">🔄 أدر الملف</button>
+      <button class="btn" id="gMode">🔁 بدّل إلى مولد التيار المستمر (مبادل)</button>
+    </div>
+    <div class="controls"><span class="readout" id="gState">مولد متناوب: ملف + حلقتان معزولتان + فرشتا كاربون + مغناطيس U.</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🔋</span> المولد البسيط للتيار المستمر</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> مم يتركب مولد التيار المستمر؟</summary>
+      <div class="ans">
+        <b>١.</b> ملف من سلك موصل معزول ملفوف حول قلب من الحديد المطاوع.<br>
+        <b>٢.</b> المبادل (عبارة عن نصفي حلقة معدنية معزولتين كهربائيا عن بعضهما و متصلتين بطرفي ملف النواة).<br>
+        <b>٣.</b> فرشتان من الكاربون (فحمات).<br>
+        <b>٤.</b> مغناطيس دائمي بشكل حرف U.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما فائدة المبادل في المولد البسيط للتيار المستمر؟</summary>
+      <div class="ans">يعطي تيار باتجاه واحد والذي يسمى بالتيار المستمر.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف يمكن تحويل مولد تيار متناوب إلى مولد التيار المستمر؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">يتم تحويل مولد تيار متناوب إلى مولد التيار المستمر وذلك برفع حلقتي الزلق منه وربط طرفي الملف بنصفي حلقة معدنية معزولتين كهربائيا ومتصلتين بطرفي ملف النواة تسمى المبادل.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">قارن</span> ما الفرق بين مولد التيار المتناوب و مولد التيار المستمر من حيث التيار الخارج والأجزاء؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <div class="tblwrap"><table class="nice">
+          <tr><th>مولد التيار المتناوب</th><th>مولد التيار المستمر</th></tr>
+          <tr><td>يولد تيار متغير في المقدار والاتجاه</td><td>يولد تيار متغير في المقدار الثابت في الاتجاه</td></tr>
+          <tr><td>يوصل طرفي ملفه بحلقتين معدنيتين منفصلتين</td><td>يوصل طرفا ملفه إلى نصفي حلقة معدنية معزولتين كهربائياً عن بعضهما (المبادل)</td></tr>
+        </table></div>
+      </div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>التيار المتناوب: موجة تتغير في <b>المقدار والاتجاه</b> — التيار المستمر من المولد: يتغير في المقدار لكنه <b>ثابت الاتجاه</b> (أنصاف موجات موجبة).</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz7"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson6.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson8.html">الدرس التالي: المحرك الكهربائي ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة المولد ---------- */
+(function () {
+  var cv = document.getElementById("genSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height;
+  var spinning = false, dc = false, angle = 0, t = 0;
+  var wave = [];
+  var btn = document.getElementById("gBtn");
+  var modeBtn = document.getElementById("gMode");
+  var state = document.getElementById("gState");
+
+  var cx = 190, cy = 150; // مركز الملف
+  var graphX = 400, graphY = 90, graphW = 270, graphH = 130;
+
+  btn.onclick = function () {
+    spinning = !spinning;
+    btn.textContent = spinning ? "⏸️ أوقف الدوران" : "🔄 أدر الملف";
+    btn.classList.toggle("green", !spinning);
+    state.textContent = spinning
+      ? (dc ? "الملف يدور والمبادل يعكس التوصيل كل نصف دورة — تيار باتجاه واحد!" : "الملف يدور قاطعاً خطوط المجال — تيار متناوب يتغير في المقدار والاتجاه!")
+      : "توقف الدوران — لا قطع لخطوط المجال، لا تيار.";
+  };
+  modeBtn.onclick = function () {
+    dc = !dc;
+    wave = [];
+    modeBtn.textContent = dc ? "🔁 بدّل إلى مولد التيار المتناوب (حلقتان)" : "🔁 بدّل إلى مولد التيار المستمر (مبادل)";
+    state.textContent = dc
+      ? "رفعنا حلقتي الزلق وربطنا نصفي حلقة معزولتين (المبادل) — صار مولد تيار مستمر!"
+      : "أعدنا الحلقتين المنفصلتين — مولد تيار متناوب من جديد.";
+  };
+
+  function tick() {
+    t += 0.016;
+    ctx.clearRect(0, 0, W, H);
+    ctx.textAlign = "center";
+
+    if (spinning) angle += 0.05;
+    var raw = Math.sin(angle);
+    var out = spinning ? (dc ? Math.abs(raw) : raw) : 0;
+
+    // مغناطيس U (قطبان جانبيان)
+    ctx.fillStyle = "#e63946";
+    ctx.fillRect(cx - 150, cy - 55, 44, 110);
+    ctx.fillStyle = "#2b6cb0";
+    ctx.fillRect(cx + 106, cy - 55, 44, 110);
+    ctx.fillStyle = "#fff"; ctx.font = "bold 22px Cairo";
+    ctx.fillText("N", cx - 128, cy + 8);
+    ctx.fillText("S", cx + 128, cy + 8);
+
+    // خطوط مجال بين القطبين
+    for (var k = -1; k <= 1; k++) {
+      ctx.strokeStyle = "rgba(37,99,235,.3)"; ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.moveTo(cx - 104, cy + k * 26); ctx.lineTo(cx + 104, cy + k * 26); ctx.stroke();
+    }
+
+    // الملف الدوار (مستطيل يدور حول محور أفقي — نرسم إسقاطه)
+    var w2 = 85, h2 = 44 * Math.cos(angle);
+    ctx.strokeStyle = "#b45309"; ctx.lineWidth = 6;
+    ctx.strokeRect(cx - w2 / 2, cy - Math.abs(h2) / 2, w2, Math.max(4, Math.abs(h2)));
+    // محور
+    ctx.strokeStyle = "#4a4a55"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx, cy + 92); ctx.stroke();
+
+    // الحلقتان / المبادل
+    if (dc) {
+      // مبادل: نصفا حلقة
+      ctx.strokeStyle = "#d9a520"; ctx.lineWidth = 8;
+      ctx.beginPath(); ctx.arc(cx, cy + 100, 15, Math.PI * 0.1 + angle, Math.PI * 0.9 + angle); ctx.stroke();
+      ctx.beginPath(); ctx.arc(cx, cy + 100, 15, Math.PI * 1.1 + angle, Math.PI * 1.9 + angle); ctx.stroke();
+      ctx.fillStyle = "#2d3142"; ctx.font = "bold 11px Cairo";
+      ctx.fillText("المبادل (نصفا حلقة)", cx, cy + 138);
+    } else {
+      ctx.strokeStyle = "#d9a520"; ctx.lineWidth = 6;
+      ctx.beginPath(); ctx.arc(cx - 8, cy + 100, 12, 0, Math.PI * 2); ctx.stroke();
+      ctx.beginPath(); ctx.arc(cx + 8, cy + 100, 12, 0, Math.PI * 2); ctx.stroke();
+      ctx.fillStyle = "#2d3142"; ctx.font = "bold 11px Cairo";
+      ctx.fillText("حلقتان معزولتان", cx, cy + 138);
+    }
+    // فرشتان
+    ctx.fillStyle = "#4a4a55";
+    ctx.fillRect(cx - 30, cy + 112, 12, 18);
+    ctx.fillRect(cx + 18, cy + 112, 12, 18);
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 11px Cairo";
+    ctx.fillText("فرشتا كاربون", cx, cy + 152);
+
+    // مصباح خارجي
+    var lampX = cx, lampY = cy + 195;
+    var glow = Math.abs(out);
+    if (glow > 0.05) {
+      var grd = ctx.createRadialGradient(lampX, lampY, 4, lampX, lampY, 28);
+      grd.addColorStop(0, "rgba(255,214,90," + glow * 0.7 + ")");
+      grd.addColorStop(1, "rgba(255,214,90,0)");
+      ctx.fillStyle = grd;
+      ctx.beginPath(); ctx.arc(lampX, lampY, 28, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.beginPath(); ctx.arc(lampX, lampY, 13, 0, Math.PI * 2);
+    ctx.fillStyle = glow > 0.05 ? "#ffe28a" : "#f0f0f0"; ctx.fill();
+    ctx.strokeStyle = "#d9a520"; ctx.lineWidth = 2.5; ctx.stroke();
+
+    // ===== الرسم البياني =====
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(graphX, graphY, graphW, graphH);
+    ctx.strokeStyle = "#b9c0cc"; ctx.lineWidth = 1.5;
+    ctx.strokeRect(graphX, graphY, graphW, graphH);
+    // محور الصفر
+    var zeroY = graphY + graphH / 2;
+    ctx.strokeStyle = "#8d99ae"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(graphX, zeroY); ctx.lineTo(graphX + graphW, zeroY); ctx.stroke();
+
+    if (spinning) {
+      wave.push(out);
+      if (wave.length > graphW - 10) wave.shift();
+    }
+    ctx.strokeStyle = dc ? "#0e9f6e" : "#e63946"; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    wave.forEach(function (v, i) {
+      var px = graphX + 5 + i, py = zeroY - v * (graphH / 2 - 12);
+      if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 13px Cairo";
+    ctx.fillText(dc ? "التيار الخارج من مولد التيار المستمر (اتجاه واحد)" : "التيار الخارج من المولد المتناوب (يتغير مقداراً واتجاهاً)", graphX + graphW / 2, graphY - 10);
+    ctx.font = "bold 11px Cairo";
+    ctx.fillText("الزمن ⟵", graphX + graphW / 2, graphY + graphH + 16);
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz7", [
+  { q: "المولد الكهربائي للتيار المتناوب جهاز يعمل على تحويل:",
+    opts: ["الطاقة الميكانيكية (الحركية) إلى طاقة كهربائية بوجود مجال مغناطيسي", "الكهربائية الى ميكانيكية", "الكيميائية الى كهربائية", "الضوئية الى حرارية"], a: 0,
+    why: "تعريف وزاري — وهو المصدر الرئيسي في إنتاج الطاقة الكهربائية." },
+  { q: "مبدأ عمل المولد الكهربائي هو:",
+    opts: ["الحث الكهرومغناطيسي حسب اكتشاف العالم فرداي", "التفاعلات الكيميائية", "قانون كولوم", "الاحتكاك"], a: 0,
+    why: "سؤال وزاري — أساس عمله ظاهرة الحث الكهرومغناطيسي." },
+  { q: "من المكونات الأساسية للمولد المتناوب:",
+    opts: ["ملف حول قلب حديد مطاوع وحلقتان معزولتان وفرشتان من الكاربون ومغناطيس U", "مبادل وبطارية", "عجينة الكتروليتية", "ناقوس ومطرقة"], a: 0,
+    why: "المكونات الأربعة الوزارية — لاحظ: حلقتان (وليس مبادل!)." },
+  { q: "عند دوران الملف داخل المجال قاطعا خطوط القوة تتولد:",
+    opts: ["قوة دافعة كهربائية محتثة مسببة تيارا متناوبا ينتقل عبر الحلقتين والفرشاتين", "شحنة ساكنة", "حرارة فقط", "مجال كهربائي ثابت"], a: 0,
+    why: "شرح العمل الوزاري — التيار يخرج للدائرة الخارجية عبر الحلقتين ثم الفرشتين." },
+  { q: "الفائدة العملية من فرشتي الكاربون (الفحمات):",
+    opts: ["ربط الملف في الدائرة الخارجية الكهربائية", "توليد المجال المغناطيسي", "زيادة سرعة الدوران", "تبريد المولد"], a: 0,
+    why: "الفرشتان تلامسان الحلقتين وتنقلان التيار للدائرة الخارجية." },
+  { q: "المبادل في مولد التيار المستمر عبارة عن:",
+    opts: ["نصفي حلقة معدنية معزولتين كهربائيا ومتصلتين بطرفي ملف النواة", "حلقتين كاملتين منفصلتين", "قرص من الحديد", "مفتاح كهربائي"], a: 0,
+    why: "المبادل = نصفا حلقة معزولان — وفائدته إعطاء تيار باتجاه واحد." },
+  { q: "فائدة المبادل في المولد البسيط للتيار المستمر:",
+    opts: ["يعطي تيارا باتجاه واحد والذي يسمى بالتيار المستمر", "يزيد سرعة الملف", "يقلل الاحتكاك", "يعكس المجال المغناطيسي"], a: 0,
+    why: "المبادل يعكس التوصيل كل نصف دورة فيبقى التيار الخارج باتجاه واحد." },
+  { q: "لتحويل مولد تيار متناوب إلى مولد تيار مستمر:",
+    opts: ["نرفع حلقتي الزلق ونربط طرفي الملف بنصفي حلقة معزولتين (المبادل)", "نعكس المغناطيس", "نزيد عدد اللفات", "نضيف بطارية"], a: 0,
+    why: "سؤال وزاري — استبدال الحلقتين بالمبادل." },
+  { q: "مولد التيار المتناوب يولد تيارا:",
+    opts: ["متغيرا في المقدار والاتجاه", "ثابتا في المقدار والاتجاه", "متغيرا في المقدار ثابتا في الاتجاه", "معدوما"], a: 0,
+    why: "من جدول المقارنة الوزاري — اما مولد المستمر: متغير المقدار ثابت الاتجاه." },
+  { q: "من تطبيقات ظاهرة الحث الذاتي:",
+    opts: ["المولد الكهربائي للتيار المتناوب والمولد البسيط للتيار المستمر", "البطارية الجافة", "المدفأة الكهربائية", "الفاصم"], a: 0,
+    why: "التطبيقان المذكوران في الملزمة." }
+], { onDone: function (stars) { Phy.setLesson("ch6", "7", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

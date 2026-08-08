@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: الشحنة الكهربائية والذرة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الأول</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>⚛️ الدرس 2: الشحنة الكهربائية والذرة</h1>
+    <p>كل شيء حولك مبني من ذرات... ومن داخل الذرة تبدأ حكاية الشحنة!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔍</span>
+    <span>تتألف المادة من جسيمات صغيرة جداً تدعى <b>الذرات</b>. فما الذي يجعل جسماً «موجباً» وآخر «سالباً»؟ الجواب في الإلكترونات!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> الذرة ومكوناتها</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما هي الذرة؟ وماهي مكوناتها؟</summary>
+      <div class="ans">هي جسيمات صغيرة جدا مكونه للمادة وتحتوي الكترونات <b>سالبة الشحنة</b> تدور بسرعة عالية جدا حول نواة الذرة التي تحتوي بداخلها على بروتونات <b>موجبة الشحنة</b> ونيوترونات <b>متعادلة الشحنة</b>.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> في معظم المواد تكون الذرة المتعادلة كهربائيا. ماذا نقصد بذلك؟ متى تكون الذرة متعادلة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">أي ان الذرة يكون فيها عدد الكترونات مساوياً الى عدد بروتوناتها، ويكون صافي شحنته يساوي صفر.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف تفسر ظهور الشحنات الكهربائية الساكنة (السالبة والموجبة) على أسطح المواد؟ / متى يصير الجسم مشحون بشحنة موجبة ومتى يشحن بشحنة سالبة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١.</b> عند <b>فقدان</b> الذرة عدد من الإلكترونات الخارجية بسبب مؤثر خارجي سوف يقل عدد الإلكترونات لذلك تصبح أيونا موجب فتظهر شحنة <b>موجبة</b> على الجسم.<br>
+        <b>٢.</b> عند <b>اكتساب</b> الذرة عدد من الإلكترونات الخارجية سوف يزداد عدد الإلكترونات لذلك تصبح ايونا سالب فتظهر شحنة <b>سالبة</b> على الجسم.
+      </div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة: مختبر الذرة ======== -->
+  <div class="sim">
+    <h3>🧪 مختبر الذرة: اصنع أيوناً بنفسك!</h3>
+    <p class="sim-sub">أضف أو أزل إلكترونات وراقب شحنة الذرة. البروتونات (الحمراء) ثابتة في النواة = 3.</p>
+    <canvas id="atomSim" width="700" height="330"></canvas>
+    <div class="controls">
+      <button class="btn green" id="addE">➕ اكتساب إلكترون</button>
+      <button class="btn coral" id="remE">➖ فقدان إلكترون</button>
+      <span class="readout" id="atomState"></span>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">📌</span> ملاحظات مهمة</div>
+  <div class="notebox">
+    <ul>
+      <li>البروتون داخل نواة الذرة وشحنته <b>موجبة</b> ومقدارها يساوي مقدار شحنة الالكترون.</li>
+      <li>ان شحنة الإلكترون أو البروتون تعد <b>أصغر وحدة قياس للشحنات</b>.</li>
+      <li>أن شحنة أي جسم مشحون تساوي <b>مضاعفات صحيحة</b> لمقدار شحنة الالكترون <span class="wz">وزاري</span>:<br>
+      <span class="formula-inline">عدد الإلكترونات = شحنة الجسم ÷ شحنة الإلكترون</span></li>
+      <li>أوضحت التجارب ان مقدار شحنة الالكترون <span class="formula-inline">(1.6 × 10⁻¹⁹ C)</span> والكولوم وحدة قياس الشحنات الكهربائية.</li>
+      <li>الكولوم الواحد <span class="formula-inline">(1C)</span> يعادل شحنة كمية من الالكترونات عددها <span class="formula-inline">6.25 × 10¹⁸</span> الكترون.</li>
+      <li>الكولوم وحدة كبيرة واجزائها الشائعة الاستعمال هي:<br>
+        المايكروكولوم <span class="formula-inline">1μC = 10⁻⁶ C</span> — والنانوكولوم <span class="formula-inline">1nC = 10⁻⁹ C</span></li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">🔬</span> نشاطان مهمان</div>
+  <div class="card">
+    <details class="qa">
+      <summary><span class="tag">نشاط</span> وضح بنشاط تبين فيه أن الشحنات المتشابهة تتنافر.</summary>
+      <div class="ans">
+        <b>ادوات النشاط:</b> ١- ساقان متماثلان من المطاط الصلب ٢- قطعة من الصوف أو الفرو ٣- خيط من القطن أو الحرير ٤- حاملان.<br>
+        <b>العمل:</b> ١- نعلق ساقي المطاط بوضع افقي بخيطين بواسطة حاملان ونجعلهما متقاربين مع بعضهما. ٢- ندلكهما وعلى انفراد بقطعة الصوف ((سيشحنان بالشحنة السالبة)). ٣- نترك الساقين معلقين بحرية نلاحظ <b>تنافرهما</b> مع بعضهما.<br>
+        <b>الإستنتاج:</b> نستنتج من ذلك أن الشحنات المتشابهة تتنافر مع بعضها.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">نشاط</span> وضح بنشاط تبين فيه أن الشحنات المختلفة تتجاذب.</summary>
+      <div class="ans">
+        <b>الأدوات:</b> ١- ساق من المطاط وآخر من الزجاج ٢- قطعة من الصوف وأخرى من الحرير ٣- حاملان ٤- خيط من القطن أو الحرير.<br>
+        <b>العمل:</b> ١- نعلق ساق من الزجاج والساق الآخر من المطاط بوضع افقي بخيطين بواسطة حاملان ونجعلهما متقاربين مع بعض. ٢- ندلك ساق الزجاج بقطعة الحرير (سينشحن الساق بالشحنة الموجبة). وندلك ساق المطاط بقطعة الصوف (ستنشحن الساق بالشحنة السالبة). ٣- نترك الساقين معلقين بحرية نلاحظ <b>تجاذبهما</b>.<br>
+        <b>الإستنتاج:</b> أن الساقين المشحونان بالشحنة المختلفة يتجاذبا مع بعضهما.
+      </div>
+    </details>
+    <div class="notebox">
+      <ul>
+        <li>عند دلك ساق من المطاط بقطعة صوف أو فرو سوف تصبح شحنتهُ <b>سالبة</b> لأنهُ قد <b>اكتسب</b> الإلكترونات.</li>
+        <li>عند دلك ساق من الزجاج بقطعة من الحرير سوف تصبح شحنتهُ <b>موجبة</b> لأنهُ <b>فقد</b> الإلكترونات.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">✏️</span> مثال محلول خطوة بخطوة</div>
+  <div class="example">
+    <div class="exq">مثال (خارجي): ما عدد الإلكترونات المفقودة لجسم متعادل الشحنة فقد شحنة مقدارها 4.8×10⁻¹¹ C ؟</div>
+    <div class="givens">المعطيات: شحنة الجسم المفقودة = 4.8×10⁻¹¹ C — شحنة الإلكترون = 1.6×10⁻¹⁹ C</div>
+    <div class="step"><b>الخطوة ١:</b> نكتب العلاقة: عدد الإلكترونات المفقودة = شحنة الجسم الفاقد ÷ شحنة الإلكترون</div>
+    <div class="step"><b>الخطوة ٢:</b> نعوض: <div class="math">n = (4.8 × 10⁻¹¹) ÷ (1.6 × 10⁻¹⁹)</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نقسم الأعداد ونطرح الأسس: <div class="math">n = 3 × 10⁻¹¹⁺¹⁹ = 3 × 10⁸ electron</div>
+      ✨ إذن فقد الجسم 300 مليون إلكترون!</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz2"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson1.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: طرائق الشحن ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- مختبر الذرة ---------- */
+(function () {
+  var cv = document.getElementById("atomSim"), ctx = cv.getContext("2d");
+  var protons = 3, electrons = 3, t = 0;
+
+  document.getElementById("addE").addEventListener("click", function () {
+    if (electrons < 8) electrons++;
+  });
+  document.getElementById("remE").addEventListener("click", function () {
+    if (electrons > 0) electrons--;
+  });
+
+  function state() {
+    var net = protons - electrons;
+    var el = document.getElementById("atomState");
+    if (net === 0) el.innerHTML = "⚖️ ذرة <b>متعادلة</b>: عدد الإلكترونات = عدد البروتونات، صافي الشحنة صفر";
+    else if (net > 0) el.innerHTML = "🔴 أيون <b>موجب</b> (+" + net + "): فقدت إلكترونات فظهرت شحنة موجبة";
+    else el.innerHTML = "🔵 أيون <b>سالب</b> (" + net + "): اكتسبت إلكترونات فظهرت شحنة سالبة";
+  }
+
+  function tick() {
+    t += 0.016;
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    var cx = cv.width / 2, cy = cv.height / 2;
+    // مدارات
+    ctx.strokeStyle = "#d5d9f7"; ctx.setLineDash([6, 6]);
+    [70, 110, 145].forEach(function (r) {
+      ctx.beginPath(); ctx.ellipse(cx, cy, r * 1.6, r * 0.85, 0, 0, 7); ctx.stroke();
+    });
+    ctx.setLineDash([]);
+    // النواة: بروتونات ونيوترونات
+    for (var i = 0; i < protons; i++) {
+      var a = i * 2.1 + 0.5;
+      drawBall(cx + Math.cos(a) * 14, cy + Math.sin(a) * 14, 13, "#ff6b6b", "+");
+      var an = i * 2.1 + 1.6;
+      drawBall(cx + Math.cos(an) * 15, cy + Math.sin(an) * 15 - 4, 12, "#b8bedd", "");
+    }
+    // إلكترونات
+    for (var e = 0; e < electrons; e++) {
+      var ring = e % 3, rr = [70, 110, 145][ring];
+      var ang = t * (1.2 - ring * 0.25) + e * (Math.PI * 2 / Math.max(1, electrons)) * 1.7;
+      var ex = cx + Math.cos(ang) * rr * 1.6, ey = cy + Math.sin(ang) * rr * 0.85;
+      drawBall(ex, ey, 10, "#4d96ff", "−");
+    }
+    // عداد
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 15px Cairo"; ctx.textAlign = "right";
+    ctx.fillText("بروتونات: " + protons + " 🔴", cv.width - 16, 28);
+    ctx.fillText("إلكترونات: " + electrons + " 🔵", cv.width - 16, 52);
+    var net = protons - electrons;
+    ctx.fillStyle = net === 0 ? "#2ecc8f" : net > 0 ? "#ff6b6b" : "#4d96ff";
+    ctx.fillText("صافي الشحنة: " + (net > 0 ? "+" + net : net), cv.width - 16, 76);
+    state();
+    requestAnimationFrame(tick);
+  }
+  function drawBall(x, y, r, col, sym) {
+    ctx.beginPath(); ctx.arc(x, y, r, 0, 7);
+    ctx.fillStyle = col; ctx.fill();
+    ctx.strokeStyle = "rgba(255,255,255,.6)"; ctx.stroke();
+    if (sym) {
+      ctx.fillStyle = "#fff"; ctx.font = "bold " + r + "px Cairo";
+      ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.fillText(sym, x, y + 1);
+      ctx.textBaseline = "alphabetic";
+    }
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz2", [
+  { q: "الذرة المتعادلة هي ذرة:",
+    opts: ["لاتحمل مكوناتها أية شحنة", "عدد الكتروناتها يساوي عدد بروتوناتها", "عدم الكتروناتها أكبر من عدد بروتوناتها", "عند الكتروناتها يساوي عدد نيوتروناتها"], a: 1,
+    why: "سؤال وزاري: التعادل يعني عدد الإلكترونات = عدد البروتونات وصافي الشحنة صفر." },
+  { q: "يصير الجسم مشحوناً بشحنة موجبة اذا كانت بعض ذراته تمتلك:",
+    opts: ["عدد من الالكترونات أكبر من عدد البروتونات", "عدد من الالكترونات اقل من عدد البروتونات", "عدد من النيوترونات في النواة أكبر من عدد الالكترونات", "عدد من البروتونات في النواة اكبر من عدد النيوترونات"], a: 1,
+    why: "فقدان الإلكترونات يجعل البروتونات أكثر عدداً فتظهر شحنة موجبة." },
+  { q: "شحنة الإلكترون تساوي:",
+    opts: ["1.6 × 10⁻¹⁹ C", "6.25 × 10¹⁸ C", "9 × 10⁹ C", "10⁻⁶ C"], a: 0,
+    why: "شحنة الإلكترون = 1.6×10⁻¹⁹ كولوم، وهي أصغر وحدة للشحنات." },
+  { q: "عند فقدان شحنة مقدارها (1.6 × 10⁻⁹ C) من جسم موصل معزول متعادل الشحة فأن عدد الألكترونات التي فقدت من هذا الجسم يساوي:",
+    opts: ["10⁸ الكترونا", "10¹⁰ الكترونا", "10⁹ الكترونا", "10¹² الكترونا"], a: 1,
+    why: "n = (1.6×10⁻⁹) ÷ (1.6×10⁻¹⁹) = 10¹⁰ إلكترون." },
+  { q: "الكولوم الواحد (1C) يعادل شحنة كمية من الالكترونات عددها:",
+    opts: ["1.6 × 10⁻¹⁹", "6.25 × 10¹⁸", "9 × 10⁹", "3 × 10⁸"], a: 1,
+    why: "1C = 6.25×10¹⁸ إلكترون." },
+  { q: "عند دلك ساق من الزجاج بقطعة من الحرير تصبح شحنة الساق:",
+    opts: ["سالبة لأنه اكتسب إلكترونات", "موجبة لأنه فقد إلكترونات", "متعادلة", "موجبة لأنه اكتسب بروتونات"], a: 1,
+    why: "الزجاج يفقد الإلكترونات للحرير فيصبح موجباً — البروتونات لا تنتقل أبداً!" }
+], { onDone: function (stars) { Phy.setLesson("ch1", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

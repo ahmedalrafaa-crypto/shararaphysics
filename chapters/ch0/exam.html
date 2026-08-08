@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الاختبار النهائي — الفصل التمهيدي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch0">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل التمهيدي</a> / الاختبار النهائي</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 الاختبار النهائي: أساسيات الرياضيات</h1>
+    <p>12 سؤالاً على كل المهارات: التدوين العلمي، ضرب وقسمة القوى، الجذور، إيجاد المجهول، وتحويل الوحدات. اجمع 3 نجوم لتصبح جاهزاً للفيزياء!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div class="hook">
+    <span class="em">📝</span>
+    <span><b>نصيحة الأستاذ:</b> جاوب دون الرجوع للدروس. إذا أخطأت سيظهر لك الشرح فوراً لتتعلم من الخطأ.</span>
+  </div>
+
+  <div id="examQuiz"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../ch1/index.html">ابدأ الفصل الأول: الكهربائية الساكنة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("ch0");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+})();
+
+Phy.quiz("examQuiz", [
+  { q: "العدد 45000 بالتدوين العلمي هو:",
+    opts: ["45 × 10³", "4.5 × 10⁴", "450 × 10²", "45 × 10⁻³"], a: 0,
+    why: "نحذف الأصفار الثلاثة من نهاية العدد فيبقى 45 (عدد طبيعي بدون فاصلة)، والأس = 3." },
+  { q: "العدد 0.00072 بالتدوين العلمي هو:",
+    opts: ["72 × 10⁻⁵", "7.2 × 10⁻⁴", "720 × 10⁻⁶", "7.2 × 10⁴"], a: 0,
+    why: "نحرّك الفاصلة حتى تختفي فيتكوّن العدد الطبيعي 72 من كل أرقامه المعنوية، وعدد خطوات التحريك (5) يصبح الأس سالباً." },
+  { q: "العدد 5 × 10³ بصورته العادية:",
+    opts: ["5000", "500", "0.005", "50000"], a: 0,
+    why: "أس موجب 3 ← 5 يتبعها 3 أصفار = 5000." },
+  { q: "10⁵ × 10⁴ يساوي:",
+    opts: ["10⁹", "10²⁰", "10¹", "10⁻¹"], a: 0,
+    why: "ضرب ← نجمع الأسس: 5 + 4 = 9." },
+  { q: "10³ ÷ 10⁻²  يساوي:",
+    opts: ["10⁵", "10¹", "10⁻⁶", "10⁻¹"], a: 0,
+    why: "قسمة ← نطرح: 3 − (−2) = 5." },
+  { q: "(3×10⁻⁶) × (2×10⁻⁶) يساوي:",
+    opts: ["6 × 10⁻¹²", "6 × 10⁻⁶", "5 × 10⁻¹²", "6 × 10¹²"], a: 0,
+    why: "المعاملات 3×2=6، والأسس −6+−6=−12." },
+  { q: "√(10⁶) يساوي:",
+    opts: ["10³", "10¹²", "10²", "10³⁶"], a: 0,
+    why: "نقسم الأس على 2: 6÷2 = 3." },
+  { q: "إذا كان q² = 4×10⁻¹² فإن q تساوي:",
+    opts: ["2 × 10⁻⁶", "4 × 10⁻⁶", "2 × 10⁻¹²", "16 × 10⁻⁶"], a: 0,
+    why: "√4=2، والأس −12÷2=−6." },
+  { q: "حل المعادلة: 2x + 6 = 20، قيمة x:",
+    opts: ["7", "13", "10", "14"], a: 0,
+    why: "ننقل 6: 2x=14، ونقسم على 2: x=7." },
+  { q: "من العلاقة F = K·q²/r²، عند عزل r² نحصل على:",
+    opts: ["r² = K·q² / F", "r² = F / (K·q²)", "r² = F·K·q²", "r² = q² / (K·F)"], a: 0,
+    why: "نضرب في r² ونقسم على F: r² = K·q²/F." },
+  { q: "6 cm بوحدة المتر تساوي:",
+    opts: ["6 × 10⁻² m", "6 × 10² m", "0.6 m", "6 × 10⁻³ m"], a: 0,
+    why: "سنتي = ×10⁻² ← 6×10⁻² = 0.06 m." },
+  { q: "4 μC بوحدة الكولوم تساوي:",
+    opts: ["4 × 10⁻⁶ C", "4 × 10⁻³ C", "4 × 10⁻⁹ C", "4 × 10⁶ C"], a: 0,
+    why: "مايكرو = ×10⁻⁶ ← 4×10⁻⁶ C." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("ch0", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

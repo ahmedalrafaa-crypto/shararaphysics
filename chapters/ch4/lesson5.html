@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: بطارية أيون الليثيوم</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch4">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الرابع</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>📱 الدرس 5: بطارية أيون الليثيوم</h1>
+    <p>البطارية التي بين يديك الآن! في موبايلك وحاسوبك وكاميرتك... لماذا اختار العالم كله هذه البطارية بالذات؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🤳</span>
+    <span>اتركها شهراً كاملاً دون استعمال فتفقد <b>5%</b> فقط من شحنتها... بينما الجافة تفقد <b>20%</b>! هذا أحد أسرار تفوقها.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> ما بطارية أيون الليثيوم؟</div>
+  <div class="defbox">
+    <b class="term">بطارية (ايون_الليثيوم)</b><b>:</b> هي بطاريه ثانوية يمكن اعاده شحنها لمرات عده و لها فوائد كثيره منها تشغيل الحاسوب النقال _ الموبايل _ الكاميرات _ تشغيل الموسيقى.
+  </div>
+
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما مكونات بطاريه (ايون_ الليثيوم) ؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١.</b> غلاف متين يتحمل الضغط العالي والحرارة المتولدة.<br>
+        <b>٢.</b> قطب موجب (مصنوع من اوكسيد كوبلت الليثيوم).<br>
+        <b>٣.</b> العازل: مصنوع من البلاستيك يعزل القطب الموجب عن القطب السالب ويسمح لمرور الايونات من خلاله.<br>
+        <b>٤.</b> قطب سالب (مصنوع من الكربون).<br>
+        <b>٥.</b> محلول الكتروليتي من مادة الايثر تغمر فيه الشرائح (القطب الموجب، العازل، القطب السالب).
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما مميزات بطاريه (ايون _الليثيوم) ؟</summary>
+      <div class="ans">
+        <b>١.</b> بطاريه ثانويه يمكن اعاده شحنها مرات عده دون ان تستهلك.<br>
+        <b>٢.</b> لها القابلية بالاحتفاظ بالشحنة اكثر من اي بطاريه.<br>
+        <b>٣.</b> في حاله عدم استعمالها تفقد من شحنتها (٥%) بالشهر بالمقارنة مع البطارية الجافه التي تفقد من شحنتها (٢٠%) بالشهر.<br>
+        <b>٤.</b> تصنع بأشكال واحجام مختلفة.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما اساس عمل بطاريه (ايون_الليثيوم)؟</summary>
+      <div class="ans">اساس عملها التفاعلات الكيميائية فهي تحول الطاقة الكيميائية الى طاقه كهربائية.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الفائدة العملية من استخدام بطاريه ايون الليثيوم؟</summary>
+      <div class="ans">
+        <b>١.</b> تستخدم في اجهزه الحاسب النقال.<br>
+        <b>٢.</b> تستخدم في اجهزه الموبايل.<br>
+        <b>٣.</b> تستخدم في اجهزه تشغيل الموسيقى.<br>
+        <b>٤.</b> تستخدم في الكاميرات.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الفائدة العملية من وجود العازل في بطاريه ايون الليثيوم؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">يعمل على عزل القطب الموجب عن القطب السالب داخل البطارية وكذلك يسمح للأيونات المرور من خلاله.</div>
+    </details>
+  </div>
+
+  <!-- ======== مخطط تفاعلي: طبقات بطارية الليثيوم ======== -->
+  <div class="sim">
+    <h3>🎬 استكشف طبقات بطارية أيون الليثيوم</h3>
+    <p class="sim-sub">اضغط على كل طبقة لتتعرف عليها — اكتشف المكونات الخمسة كلها!</p>
+    <canvas id="liSim" width="700" height="400"></canvas>
+    <div class="controls"><span class="readout" id="liState">اضغط على أي طبقة من طبقات البطارية 👆</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">⚖️</span> قارن: الليثيوم × الجافة</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">قارن</span> قارن بين بطاريه (ايون _الليثيوم) و البطارية الجافه ؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <div class="tblwrap"><table class="nice">
+          <tr><th>بطارية (ايون _الليثيوم)</th><th>البطارية الجافة</th></tr>
+          <tr><td>بطاريه ثانويه</td><td>بطاريه اوليه</td></tr>
+          <tr><td>يمكن اعاده شحنها</td><td>لا يمكن اعاده شحنها</td></tr>
+          <tr><td>تحتوي على عازل يفصل بين القطب الموجب والقطب السالب</td><td>لا تحتوى على عازل</td></tr>
+          <tr><td>ذات وسط سائل الكتروليتي</td><td>ذات وسط جاف</td></tr>
+          <tr><td>تفقد (٥%) من شحنتها في الشهر في حاله عدم الاستعمال</td><td>تفقد (٢٠%) من شحنتها في الشهر في حاله عدم استعمالها</td></tr>
+        </table></div>
+      </div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>القطب الموجب من <b>اوكسيد كوبلت الليثيوم</b> والقطب السالب من <b>الكربون</b> — لاحظ الفرق عن الخلية الجافة!</li>
+      <li>المحلول الالكتروليتي من مادة <b>الايثر</b> تغمر فيه الشرائح الثلاث: القطب الموجب، العازل، القطب السالب.</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz5"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson4.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: بطارية الوقود ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- مخطط طبقات بطارية الليثيوم ---------- */
+(function () {
+  var cv = document.getElementById("liSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height;
+  var state = document.getElementById("liState");
+  var found = {}, active = null, glowT = 0, t = 0;
+
+  // شرائح مائلة (منظور بسيط) داخل غلاف
+  var cx = W / 2, cy = H / 2 + 10;
+  var layers = [
+    { id: "case",  name: "الغلاف المتين: يتحمل الضغط العالي والحرارة المتولدة", short: "الغلاف المتين", col: "#8d99ae" },
+    { id: "pos",   name: "القطب الموجب: مصنوع من اوكسيد كوبلت الليثيوم", short: "القطب الموجب", col: "#5b8def" },
+    { id: "sep",   name: "العازل البلاستيكي: يعزل الموجب عن السالب ويسمح لمرور الايونات من خلاله", short: "العازل", col: "#ffd23f" },
+    { id: "neg",   name: "القطب السالب: مصنوع من الكربون", short: "القطب السالب", col: "#4a4a55" },
+    { id: "sol",   name: "المحلول الالكتروليتي من مادة الايثر تغمر فيه الشرائح الثلاث", short: "المحلول الالكتروليتي", col: "#7fd4a8" }
+  ];
+  // مواضع الشرائح داخل الغلاف: [x بداية] بعرض 56 لكل شريحة
+  var sw = 62, gap = 20, startX = cx - (sw * 3 + gap * 2) / 2;
+  var innerTop = cy - 110, innerBot = cy + 110;
+
+  function hit(x, y) {
+    // الشرائح الثلاث
+    var slabs = ["pos", "sep", "neg"];
+    for (var i = 0; i < 3; i++) {
+      var sx = startX + i * (sw + gap);
+      if (x > sx && x < sx + sw && y > innerTop + 14 && y < innerBot - 14) return slabs[i];
+    }
+    // داخل الغلاف = محلول
+    if (x > cx - 170 && x < cx + 170 && y > innerTop && y < innerBot) return "sol";
+    // إطار الغلاف
+    if (x > cx - 195 && x < cx + 195 && y > innerTop - 26 && y < innerBot + 26) return "case";
+    return null;
+  }
+
+  cv.addEventListener("click", function (ev) {
+    var r = cv.getBoundingClientRect();
+    var x = (ev.clientX - r.left) * (W / r.width);
+    var y = (ev.clientY - r.top) * (H / r.height);
+    var id = hit(x, y);
+    if (!id) return;
+    active = id; glowT = 1; found[id] = true;
+    var p = layers.filter(function (q) { return q.id === id; })[0];
+    var n = Object.keys(found).length;
+    state.textContent = "✔ " + p.name + (n === 5 ? " — رائع! اكتشفت المكونات الخمسة كلها 🎉" : " (اكتشفت " + n + " من 5)");
+  });
+
+  function tick() {
+    t += 0.016; glowT *= 0.97;
+    ctx.clearRect(0, 0, W, H);
+    ctx.textAlign = "center";
+
+    // الغلاف
+    ctx.fillStyle = active === "case" ? "#9daabb" : "#8d99ae";
+    ctx.beginPath();
+    ctx.roundRect(cx - 195, innerTop - 26, 390, (innerBot - innerTop) + 52, 18);
+    ctx.fill();
+    // فتحة القطب أعلى
+    ctx.fillStyle = "#d9a520";
+    ctx.fillRect(cx - 26, innerTop - 40, 52, 16);
+
+    // المحلول
+    ctx.fillStyle = active === "sol" ? "#93e0b8" : "#7fd4a8";
+    ctx.beginPath();
+    ctx.roundRect(cx - 170, innerTop, 340, innerBot - innerTop, 10);
+    ctx.fill();
+    // فقاعات المحلول
+    for (var b = 0; b < 10; b++) {
+      var bx = cx - 160 + ((b * 97) % 320);
+      var byy = innerTop + 14 + ((b * 61 + t * 16) % (innerBot - innerTop - 24));
+      ctx.fillStyle = "rgba(255,255,255,.35)";
+      ctx.beginPath(); ctx.arc(bx, innerBot - (byy - innerTop), 3, 0, Math.PI * 2); ctx.fill();
+    }
+
+    // الشرائح الثلاث
+    var slabs = [
+      { id: "pos", col: "#5b8def", label: "+" },
+      { id: "sep", col: "#ffd23f", label: "" },
+      { id: "neg", col: "#4a4a55", label: "−" }
+    ];
+    slabs.forEach(function (s, i) {
+      var sx = startX + i * (sw + gap);
+      ctx.fillStyle = s.col;
+      if (active === s.id) { ctx.save(); ctx.shadowColor = "#fff"; ctx.shadowBlur = 16 * glowT; }
+      ctx.beginPath();
+      ctx.roundRect(sx, innerTop + 14, sw, innerBot - innerTop - 28, 8);
+      ctx.fill();
+      if (active === s.id) ctx.restore();
+      if (s.label) {
+        ctx.fillStyle = "#fff"; ctx.font = "bold 26px Cairo";
+        ctx.fillText(s.label, sx + sw / 2, cy + 10);
+      }
+    });
+
+    // أيونات تعبر العازل
+    var sepX = startX + (sw + gap) + sw / 2;
+    for (var k = 0; k < 4; k++) {
+      var f = ((t * 0.25 + k / 4) % 1);
+      var ix = startX + sw / 2 + f * (2 * (sw + gap));
+      var iy = innerTop + 40 + k * 44;
+      ctx.fillStyle = "#e63946";
+      ctx.beginPath(); ctx.arc(ix, iy, 5, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#fff"; ctx.font = "bold 9px Cairo";
+      ctx.fillText("+", ix, iy + 3.5);
+    }
+    ctx.fillStyle = "#7a5c00"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("الأيونات تمر عبر العازل", sepX, innerTop + 4);
+
+    // تسميات
+    ctx.fillStyle = "#0e7490"; ctx.font = "bold 12.5px Cairo";
+    ctx.fillText("القطب الموجب", startX + sw / 2, innerBot + 42);
+    ctx.fillText("(اوكسيد كوبلت الليثيوم)", startX + sw / 2, innerBot + 58);
+    ctx.fillText("العازل", startX + sw + gap + sw / 2, innerBot + 42);
+    ctx.fillText("(بلاستيك)", startX + sw + gap + sw / 2, innerBot + 58);
+    ctx.fillText("القطب السالب", startX + 2 * (sw + gap) + sw / 2, innerBot + 42);
+    ctx.fillText("(كربون)", startX + 2 * (sw + gap) + sw / 2, innerBot + 58);
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 13px Cairo";
+    ctx.fillText("الغلاف المتين + المحلول الالكتروليتي (الايثر)", cx, innerTop - 34);
+
+    // قائمة الاكتشاف
+    layers.forEach(function (p, i) {
+      ctx.font = "bold 12px Cairo"; ctx.textAlign = "left";
+      ctx.fillStyle = found[p.id] ? "#0e9f6e" : "#b9c0cc";
+      ctx.fillText((found[p.id] ? "✔ " : "○ ") + p.short, 14, 46 + i * 21);
+    });
+    ctx.textAlign = "center";
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz5", [
+  { q: "بطارية (ايون_الليثيوم) هي بطاريه:",
+    opts: ["ثانوية يمكن اعاده شحنها لمرات عده", "اولية لا تشحن", "وقود تعمل بالهيدروجين", "كلفانية بسيطة"], a: 0,
+    why: "ثانوية تشحن مرات عدة — تشغل الحاسوب النقال والموبايل والكاميرات وتشغيل الموسيقى." },
+  { q: "القطب الموجب في بطارية ايون الليثيوم مصنوع من:",
+    opts: ["اوكسيد كوبلت الليثيوم", "الكربون", "الخارصين", "الرصاص"], a: 0,
+    why: "الموجب: اوكسيد كوبلت الليثيوم — والسالب: الكربون." },
+  { q: "القطب السالب في بطارية ايون الليثيوم مصنوع من:",
+    opts: ["الكربون", "النحاس", "اوكسيد الرصاص", "الحديد"], a: 0,
+    why: "القطب السالب من الكربون." },
+  { q: "العازل في بطارية ايون الليثيوم مصنوع من البلاستيك ووظيفته:",
+    opts: ["يعزل القطب الموجب عن السالب ويسمح لمرور الايونات من خلاله", "يمنع مرور اي شيء", "يولد التيار", "يزيد الحرارة"], a: 0,
+    why: "سؤال وزاري: يعزل القطبين عن بعضهما + يسمح للأيونات بالمرور." },
+  { q: "المحلول الالكتروليتي في بطارية ايون الليثيوم من مادة:",
+    opts: ["الايثر", "حامض الكبريتيك", "كلوريد الامونيوم", "الماء المقطر"], a: 0,
+    why: "محلول الكتروليتي من مادة الايثر تغمر فيه الشرائح الثلاث." },
+  { q: "في حاله عدم استعمالها تفقد بطارية ايون الليثيوم من شحنتها بالشهر:",
+    opts: ["(5%) مقابل (20%) للبطارية الجافه", "(20%) مقابل (5%) للجافة", "(50%)", "لا تفقد شيئاً"], a: 0,
+    why: "الليثيوم تفقد 5% شهرياً فقط والجافة 20% — لهذا تحتفظ بالشحنة اكثر من اي بطارية." },
+  { q: "من الفوائد العملية لبطارية ايون الليثيوم انها تستخدم في:",
+    opts: ["الحاسب النقال والموبايل واجهزه تشغيل الموسيقى والكاميرات", "تشغيل محركات السيارات فقط", "الغواصات فقط", "المصابيح المنزلية"], a: 0,
+    why: "الاستخدامات الأربعة: الحاسب النقال، الموبايل، أجهزة الموسيقى، الكاميرات." },
+  { q: "بطارية ايون الليثيوم ذات وسط:",
+    opts: ["سائل الكتروليتي", "جاف", "غازي", "بدون وسط"], a: 0,
+    why: "من جدول المقارنة: الليثيوم وسطها سائل إلكتروليتي، والجافة وسطها جاف." },
+  { q: "اساس عمل بطاريه (ايون_الليثيوم):",
+    opts: ["التفاعلات الكيميائية فهي تحول الطاقة الكيميائية الى طاقه كهربائية", "الاحتكاك", "الحث المغناطيسي", "الطاقة الشمسية"], a: 0,
+    why: "أساس عملها التفاعلات الكيميائية: كيميائية ⟵ كهربائية." }
+], { onDone: function (stars) { Phy.setLesson("ch4", "5", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفصل التمهيدي: أساسيات الرياضيات</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch0">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="../../index.html">الرئيسية</a> / الفصل التمهيدي</span>
+  </div>
+
+  <div class="hero">
+    <h1>🧮 الفصل التمهيدي: أساسيات الرياضيات</h1>
+    <p>قبل أن ندخل عالم الفيزياء، لازم نتقن «سلاح» حل المسائل: الأعداد الأسية، ضرب وقسمة القوى، الجذور، إيجاد المجهول، وتحويل الوحدات. أتقن هذا الفصل وستحل مسائل الفيزياء بثقة!</p>
+    <span class="chip" id="chpct">0% مكتمل</span>
+  </div>
+
+  <div class="pbar" style="margin-bottom:24px"><div id="pb" style="width:0%"></div></div>
+
+  <div class="path" id="path">
+    <a class="node" href="lesson1.html" data-ls="1">
+      <span class="dot">🔟</span>
+      <span class="info"><b>الدرس 1: التدوين العلمي (الأعداد الأسية)</b>
+        <span class="sub">تحويل العدد العشري إلى عدد أسي للأساس 10 وبالعكس + محوّل تفاعلي</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson2.html" data-ls="2">
+      <span class="dot">✖️</span>
+      <span class="info"><b>الدرس 2: ضرب وقسمة قوى العشرة</b>
+        <span class="sub">قاعدة جمع الأسس عند الضرب وطرحها عند القسمة + آلة الأسس</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson3.html" data-ls="3">
+      <span class="dot">√</span>
+      <span class="info"><b>الدرس 3: الجذر التربيعي للقوى</b>
+        <span class="sub">كيف نأخذ جذر عدد أسي؟ نقسم الأس على 2 — مع خدعة الأس الفردي</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson4.html" data-ls="4">
+      <span class="dot">⚖️</span>
+      <span class="info"><b>الدرس 4: إيجاد المجهول (معادلات الدرجة الأولى)</b>
+        <span class="sub">قاعدة الميزان ونقل الحدود لإيجاد المجهول + ميزان تفاعلي</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson5.html" data-ls="5">
+      <span class="dot">📏</span>
+      <span class="info"><b>الدرس 5: تحويل البادئات والوحدات</b>
+        <span class="sub">التحويل من سم إلى متر وغيرها باستخدام قوى العشرة + سلّم البادئات</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node exam" href="exam.html" data-ls="exam">
+      <span class="dot">🏆</span>
+      <span class="info"><b>الاختبار النهائي للفصل التمهيدي</b>
+        <span class="sub">مسائل على كل المهارات — اجمع 3 نجوم لتصبح جاهزاً للفيزياء!</span>
+        <span class="stars"></span></span>
+    </a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var pct = Phy.chapterPercent("ch0", 5);
+  document.getElementById("pb").style.width = pct + "%";
+  document.getElementById("chpct").textContent = pct + "% مكتمل";
+  document.querySelectorAll(".node").forEach(function (n) {
+    var ls = n.dataset.ls, info = null;
+    if (ls === "exam") info = Phy.getExam("ch0");
+    else info = Phy.getLesson("ch0", ls);
+    if (info && (info.done || info.stars !== undefined)) {
+      n.classList.add("done");
+      var st = n.querySelector(".stars");
+      if (info.stars !== undefined && info.stars !== null)
+        st.textContent = Phy.starsStr(info.stars);
+      else st.textContent = "✓ مكتمل";
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="شعار أ. أحمد رافع — الذرّة الهادئة">
+  <!-- خلفية نيلية مسطّحة هادئة -->
+  <rect width="512" height="512" rx="118" fill="#4834d4"/>
+
+  <!-- مداران فقط بدل ثلاثة -->
+  <g fill="none" stroke="#ffffff" stroke-width="14">
+    <ellipse cx="256" cy="256" rx="175" ry="70" transform="rotate(-30 256 256)" opacity="0.95"/>
+    <ellipse cx="256" cy="256" rx="175" ry="70" transform="rotate(30 256 256)" opacity="0.40"/>
+  </g>
+
+  <!-- النواة الذهبية وبداخلها البرق -->
+  <circle cx="256" cy="256" r="62" fill="#ffc93c"/>
+  <path d="M 274 206 L 230 266 h 26 l -14 48 46 -62 h -26 l 24 -46 z" fill="#4834d4"/>
+
+  <!-- إلكترونان فقط -->
+  <circle cx="400" cy="219" r="16" fill="#ffffff"/>
+  <circle cx="112" cy="293" r="12" fill="#ffc93c" stroke="#ffffff" stroke-width="5"/>
+</svg>

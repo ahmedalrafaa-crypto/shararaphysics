@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 6: قانون كولوم</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الأول</a> / الدرس 6</span>
+  </div>
+
+  <div class="hero">
+    <h1>⚖️ الدرس 6: قانون كولوم</h1>
+    <p>أول قانون رياضي في رحلتنا — كم تبلغ القوة بين شحنتين؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">💪</span>
+    <span>عرفنا أن الشحنات تتجاذب وتتنافر... لكن <b>بأي قوة</b>؟ العالم كولوم وضع القانون الذي يحسبها بدقة!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📜</span> نص القانون</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما نص قانون كولوم؟</summary>
+      <div class="ans">القوة الكهربائية المتبادلة بين شحنتين كهربائيتين نقطيتين ساكنتين تتناسب <b>طردياً</b> مع حاصل ضرب مقدار الشحنتين و<b>عكسياً</b> مع مربع البعد بينهما.</div>
+    </details>
+    <div class="lawbox">
+      صيغته الرياضية
+      <div class="formula">F = K × (q₁ × q₂) / r²</div>
+      <p style="margin-top:10px;font-size:.9rem">
+        F: القوة الكهربائية وتقاس بالنيوتن N ·
+        K: ثابت التناسب (ثابت كولوم) ومقداره في الفراغ 9×10⁹ N·m²/C² ·
+        q₁q₂: مقدار الشحنتين وتقاسان بالكولوم C ·
+        r: البعد بين مركزي الشحنتين ويقاس بالمتر m
+      </p>
+    </div>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> على ماذا يعتمد ثابت التناسب في قانون كولوم؟</summary>
+      <div class="ans">يعتمد على نوع مادة الوسط بين الشحنتين.</div>
+    </details>
+  </div>
+
+  <!-- ======== مختبر كولوم ======== -->
+  <div class="sim">
+    <h3>🧪 مختبر كولوم: العب بالشحنات!</h3>
+    <p class="sim-sub">غيّر مقدار الشحنتين والمسافة، وراقب القوة تتغير أمامك (لاحظ: ضِعف المسافة = ربع القوة!)</p>
+    <canvas id="coulombSim" width="700" height="240"></canvas>
+    <div class="controls">
+      <div class="slider-group">q₁ (مايكروكولوم): <span id="q1v">+4</span>
+        <input type="range" id="q1" min="-9" max="9" value="4" step="1"></div>
+      <div class="slider-group">q₂ (مايكروكولوم): <span id="q2v">+9</span>
+        <input type="range" id="q2" min="-9" max="9" value="9" step="1"></div>
+      <div class="slider-group">البعد r (سنتيمتر): <span id="rv">6</span>
+        <input type="range" id="rr" min="3" max="15" value="6" step="1"></div>
+    </div>
+    <div class="controls">
+      <span class="readout" id="coulombOut" style="flex:1"></span>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">🔄</span> جدول التحويلات — احفظه جيداً!</div>
+  <div class="card">
+    <div class="tblwrap"><table class="nice">
+      <tr><th>للتحويل من أجزاء المتر الى المتر</th><th>للتحويل من أجزاء الكولوم الى الكولوم</th></tr>
+      <tr><td>سانتي متر: cm → m نضرب ×10⁻²</td><td>بيكو كولوم: pC → C نضرب ×10⁻¹²</td></tr>
+      <tr><td>ملي متر: mm → m نضرب ×10⁻³</td><td>ملي كولوم: mC → C نضرب ×10⁻³</td></tr>
+      <tr><td>مايكرو متر: μm → m نضرب ×10⁻⁶</td><td>مايكرو كولوم: μC → C نضرب ×10⁻⁶</td></tr>
+      <tr><td>نانو متر: nm → m نضرب ×10⁻⁹</td><td>نانو كولوم: nC → C نضرب ×10⁻⁹</td></tr>
+    </table></div>
+    <div class="notebox">
+      <b>خطوات مهمة جداً عند تطبيق قانون كولوم:</b>
+      <ul>
+        <li>١. أكتب معطيات المسألة بصورة دقيقة جداً.</li>
+        <li>٢. تحويل الوحدات إذا لم تكون موحدة: الإنتباه الى وحدة البعد (يجب أن تكون بالمتر) ووحدة الشحنة بالكولوم ووحدة القوة بالنيوتن.</li>
+        <li>٣. نطبق القانون: F = K × (q₁×q₂) / r²</li>
+        <li>٤. التعويض عن المتغيرات بأرقامها المعطاة.</li>
+        <li>٥. نستخدم العمليات الحسابية المعتادة لإيجاد المطلوب.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">✏️</span> أمثلة محلولة خطوة بخطوة</div>
+
+  <div class="example">
+    <div class="exq">مثال ١: وضعت شحنة نقطية موجبة مقدارها (+4×10⁻⁶ C) على بعد (0.06m) من شحنة كهربائية نقطية موجبة أخرى مقدارها (+9×10⁻⁶ C). احسب مقدار: ١- القوة التي تؤثر بها الشحنة الاولى q₁ على الشحنة الثانية q₂. &nbsp;٢- القوة التي تؤثر بها الشحنة الثانية q₂ على الشحنة الأولى q₁.</div>
+    <div class="givens">المعطيات: q₁ = +4×10⁻⁶ C — q₂ = +9×10⁻⁶ C — r = 0.06 m — المطلوب F₁₂ = ?</div>
+    <div class="step"><b>الخطوة ١:</b> الوحدات موحدة أصلاً (كولوم ومتر) — نطبق القانون مباشرة:
+      <div class="math">F₁₂ = K × (q₁ × q₂) / r²</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نعوض:
+      <div class="math">F₁₂ = 9×10⁹ × (4×10⁻⁶ × 9×10⁻⁶) / (0.06)²</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نحسب البسط والمقام:
+      <div class="math">F₁₂ = 9×10⁹ × (36×10⁻¹²) / (36×10⁻⁴) = 90 N</div></div>
+    <div class="step"><b>الخطوة ٤:</b> وبنفس الطريقة F₂₁ = 90 N.
+      بما ان القوى متبادلة بين الشحنات فانها تخضع لقانون نيوتن الثالث: <span class="formula-inline">F₂₁ = −F₁₂</span> — مقدار القوة الاولى يساوي مقدار القوة الثانية لكن معاكس لها بالاتجاه.</div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٢ (خارجي): شحنتان كهربائيتان نقطيتان مقدارهما (2×10⁻⁶ C) و (−8×10⁻⁶ C) وضعتا على بعد (0.06m) عن بعضهما. احسب مقدار القوة التي تؤثر بها الشحنة الاولى على الشحنة الثانية وما نوعها؟</div>
+    <div class="givens">المعطيات: q₁ = 2×10⁻⁶ C — q₂ = −8×10⁻⁶ C — r = 0.06 m</div>
+    <div class="step"><b>الخطوة ١:</b> نطبق القانون:
+      <div class="math">F = 9×10⁹ × (2×10⁻⁶ × −8×10⁻⁶) / (0.06)²</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نحسب:
+      <div class="math">F = 9×10⁹ × (−16×10⁻¹²) / (36×10⁻⁴) = −40 N</div></div>
+    <div class="step"><b>الخطوة ٣:</b> الإشارة السالبة تعني أن نوع القوى <b>تجاذب</b> (لأن الشحنتين مختلفتان). 💡</div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٣ (خارجي): شحنتان نقطيتان موضوعتان في الهواء مقدار الشحنة الاولى (6μC) ومقدار الشحنة الثانية (2μC) والبعد بينهما (30cm). احسب مقدار القوة الكهربائية المتبادلة بينهما مبينا نوع القوة؟</div>
+    <div class="givens">المعطيات: q₁ = 6μC = 6×10⁻⁶ C — q₂ = 2μC = 2×10⁻⁶ C — r = 30cm = 3×10⁻¹ m</div>
+    <div class="step"><b>الخطوة ١:</b> لاحظ التحويلات! μC ضربنا ×10⁻⁶ و cm ضربنا ×10⁻².</div>
+    <div class="step"><b>الخطوة ٢:</b> نطبق ونعوض:
+      <div class="math">F = 9×10⁹ × (6×10⁻⁶ × 2×10⁻⁶) / (3×10⁻¹)² = 9×10⁹ × (12×10⁻¹²) / (9×10⁻²)</div></div>
+    <div class="step"><b>الخطوة ٣:</b> النتيجة:
+      <div class="math">F = 12×10⁻³ × 10² = 1.2 N</div>
+      والقوة <b>تنافر</b> لأن الشحنتين موجبتان.</div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٤ (خارجي): شحنتان كهربائيتان نقطيتان متماثلتان قوة التنافر بينهما (10N) عندما كان البعد بينهما (6cm). احسب مقدار شحنة كل منهما؟</div>
+    <div class="givens">المعطيات: q₁ = q₂ = q → q₁×q₂ = q² — F = 10N — r = 6cm = 6×10⁻² m</div>
+    <div class="step"><b>الخطوة ١:</b> نطبق القانون مع مجهول q²:
+      <div class="math">10 = 9×10⁹ × q² / (6×10⁻²)²</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نرتب لإيجاد q²:
+      <div class="math">q² = (10 × 36×10⁻⁴) / (9×10⁹) = 40×10⁻¹³ = 4×10⁻¹²</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نأخذ الجذر:
+      <div class="math">q = 2×10⁻⁶ C</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٥ (خارجي): شحنتان كهربائيتان نقطيتان احداهما (4×10⁻⁶ C) والاخرى (9×10⁻⁶ C) قوة التنافر بينهما (90N). احسب مقدار البعد بين الشحنتين؟</div>
+    <div class="givens">المعطيات: q₁ = 4×10⁻⁶ C — q₂ = 9×10⁻⁶ C — F = 90 N — المطلوب: r</div>
+    <div class="step"><b>الخطوة ١:</b> نرتب القانون لإيجاد r²:
+      <div class="math">r² = K × (q₁ × q₂) / F</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نعوض:
+      <div class="math">r² = 9×10⁹ × (4×10⁻⁶ × 9×10⁻⁶) / 90 = 36×10⁻⁴</div></div>
+    <div class="step"><b>الخطوة ٣:</b> الجذر:
+      <div class="math">r = 6×10⁻² m = 0.06 m</div>
+      💡 لاحظ: هذه عكس المثال الأول تماماً — نفس الشحنتين ونفس القوة!</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz6"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson5.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson7.html">الدرس التالي: المجال الكهربائي ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- مختبر كولوم ---------- */
+(function () {
+  var cv = document.getElementById("coulombSim"), ctx = cv.getContext("2d");
+  var q1s = document.getElementById("q1"), q2s = document.getElementById("q2"), rs = document.getElementById("rr");
+
+  function fmt(v) { return (v > 0 ? "+" : "") + v; }
+
+  function draw() {
+    var q1 = +q1s.value, q2 = +q2s.value, r = +rs.value;
+    document.getElementById("q1v").textContent = fmt(q1);
+    document.getElementById("q2v").textContent = fmt(q2);
+    document.getElementById("rv").textContent = r;
+
+    var F = 9e9 * Math.abs(q1 * q2) * 1e-12 / Math.pow(r / 100, 2);
+    var attract = q1 * q2 < 0, zero = q1 === 0 || q2 === 0;
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    var cy = 120, cx = 350, half = r * 18;
+    var x1 = cx + half, x2 = cx - half; // RTL: q1 يمين
+
+    // خط المسافة
+    ctx.strokeStyle = "#c8cdea"; ctx.setLineDash([5, 5]);
+    ctx.beginPath(); ctx.moveTo(x1, cy + 55); ctx.lineTo(x2, cy + 55); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = "#5c6178"; ctx.font = "13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("r = " + r + " cm", cx, cy + 75);
+
+    // الشحنتان
+    [[x1, q1, "q₁"], [x2, q2, "q₂"]].forEach(function (c) {
+      var rad = 18 + Math.abs(c[1]) * 2.2;
+      ctx.beginPath(); ctx.arc(c[0], cy, rad, 0, 7);
+      ctx.fillStyle = c[1] > 0 ? "#ff6b6b" : c[1] < 0 ? "#4d96ff" : "#b8bedd";
+      ctx.fill();
+      ctx.fillStyle = "#fff"; ctx.font = "bold " + (rad * 0.9) + "px Cairo"; ctx.textBaseline = "middle";
+      ctx.fillText(c[1] > 0 ? "+" : c[1] < 0 ? "−" : "0", c[0], cy + 1);
+      ctx.textBaseline = "alphabetic";
+      ctx.fillStyle = "#2d3142"; ctx.font = "bold 14px Cairo";
+      ctx.fillText(c[2] + " = " + fmt(c[1]) + "μC", c[0], cy - rad - 12);
+    });
+
+    // أسهم القوة
+    if (!zero) {
+      var alen = Math.min(90, 14 + F * 1.1);
+      function arrow(x, dir) {
+        ctx.strokeStyle = attract ? "#2ecc8f" : "#ff6b6b";
+        ctx.fillStyle = ctx.strokeStyle; ctx.lineWidth = 5;
+        var from = x, to = x + dir * alen;
+        ctx.beginPath(); ctx.moveTo(from, cy); ctx.lineTo(to, cy); ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(to + dir * 10, cy); ctx.lineTo(to, cy - 7); ctx.lineTo(to, cy + 7);
+        ctx.fill(); ctx.lineWidth = 1;
+      }
+      var r1 = 18 + Math.abs(q1) * 2.2, r2 = 18 + Math.abs(q2) * 2.2;
+      if (attract) { arrow(x1 - r1, -1); arrow(x2 + r2, 1); }
+      else { arrow(x1 + r1, 1); arrow(x2 - r2, -1); }
+    }
+
+    var out = document.getElementById("coulombOut");
+    if (zero) out.innerHTML = "⚠️ إحدى الشحنتين صفر — لا توجد قوة!";
+    else out.innerHTML = "F = 9×10⁹ × (" + Math.abs(q1) + "×10⁻⁶ C × " + Math.abs(q2) + "×10⁻⁶ C) ÷ (" + (r / 100).toFixed(2) + "m)² = <b>" +
+      (F >= 10 ? F.toFixed(0) : F.toFixed(1)) + " N</b> — " +
+      (attract ? "تجاذب 🧲 (شحنتان مختلفتان)" : "تنافر ↔️ (شحنتان متشابهتان)");
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz6", [
+  { q: "حسب قانون كولوم، القوة بين شحنتين تتناسب:",
+    opts: ["طردياً مع البعد", "طردياً مع حاصل ضرب الشحنتين وعكسياً مع مربع البعد", "عكسياً مع الشحنتين", "طردياً مع مربع البعد"], a: 1,
+    why: "F = K·q₁q₂/r² — طردي مع حاصل الضرب، عكسي مع مربع البعد." },
+  { q: "مقدار ثابت كولوم K في الفراغ:",
+    opts: ["9 × 10⁹ N·m²/C²", "1.6 × 10⁻¹⁹ N·m²/C²", "6.25 × 10¹⁸ N·m²/C²", "3 × 10⁸ N·m²/C²"], a: 0,
+    why: "K = 9×10⁹ نيوتن·متر²/كولوم²، ويعتمد على نوع مادة الوسط بين الشحنتين." },
+  { q: "للتحويل من المايكروكولوم μC الى الكولوم نضرب في:",
+    opts: ["10⁻³", "10⁻⁹", "10⁻⁶", "10⁻¹²"], a: 2,
+    why: "1μC = 10⁻⁶ C. أما النانو 10⁻⁹ والبيكو 10⁻¹² والملي 10⁻³." },
+  { q: "شحنتان نقطيتان موجبتان قوة التجاذب بينهما F₁ عندما كان البعد بينهما (3cm)، فأذا ابتعدت الشحنتين عن بعضهما حتى صار البعد بينهما (6cm) عندها القوة F₂ بينهما تساوي:",
+    opts: ["F₂ = ½F₁", "F₂ = 2F₁", "F₂ = 4F₁", "F₂ = ¼F₁"], a: 3,
+    why: "سؤال وزاري: ضاعفنا البعد ×2 فتقل القوة ×4 لأن F تتناسب عكسياً مع مربع البعد." },
+  { q: "الجسم A مشحون بشحنة (+2μC) والجسم B شحنته (+6μC) فأن القوة الكهربائية المتبادلة بين الجسمين:",
+    opts: ["F(AB) = −3F(BA)", "F(AB) = +F(BA)", "F(AB) = −F(BA)", "F(AB) = 3F(BA)"], a: 2,
+    why: "القوى المتبادلة تخضع لقانون نيوتن الثالث: متساويتان مقداراً متعاكستان اتجاهاً — بغض النظر عن اختلاف مقدار الشحنتين!" },
+  { q: "شحنتان مقدار كل منهما 3×10⁻⁹ C والبعد بينهما 5cm، قوة التنافر بينهما:",
+    opts: ["3.24 × 10⁻⁵ N", "3.24 × 10⁵ N", "1.2 N", "90 N"], a: 0,
+    why: "F = 9×10⁹ × (3×10⁻⁹)² ÷ (5×10⁻²)² = 81÷25 ×10⁻⁹⁺⁴ = 3.24×10⁻⁵ N." },
+  { q: "شحنتان نقطيتان موجبتان البعد بينهما (10cm) فاذا استبدلت احدى الشحنتين باخرى سالبة وبالمقدار نفسه فأن مقدار القوة بينهما:",
+    opts: ["صفرا", "اقل مما كان عليه", "اكبر مما كان عليه", "لا يتغير"], a: 3,
+    why: "سؤال وزاري: المقدار لا يتغير (نفس الأرقام في القانون) — يتغير النوع فقط من تنافر إلى تجاذب." }
+], { onDone: function (stars) { Phy.setLesson("ch1", "6", { stars: stars }); } });
+</script>
+</body>
+</html>

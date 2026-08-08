@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 1: ما البطارية؟ وكيف تصنع؟</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch4">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الرابع</a> / الدرس 1</span>
+  </div>
+
+  <div class="hero">
+    <h1>🍋 الدرس 1: ما البطارية؟ وكيف تصنع؟</h1>
+    <p>هل تصدق أن حبة ليمون واحدة يمكن أن تولّد تياراً كهربائياً؟ اليوم سنصنع بطارية بأيدينا ونكتشف سرّ كل البطاريات!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔋</span>
+    <span>موبايلك، ساعتك، سيارة أبيك، وحتى الغواصات العملاقة... كلها تعمل بنفس الفكرة: <b>تفاعل كيميائي</b> يتحول إلى <b>طاقة كهربائية</b>!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> ما البطارية؟ ومما تتكون؟ وما اشكالها؟ و كيف تصنع؟</div>
+  <div class="defbox">
+    <b class="term">البطارية</b><b>:</b> هي مصدر لإنتاج الطاقة الكهربائية عن طريق التفاعل الكيميائي.
+  </div>
+
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما البطارية؟ ومما تتكون؟ وما اشكالها؟ و كيف تصنع؟</summary>
+      <div class="ans">
+        <b class="term">البطارية:</b> هي مصدر لإنتاج الطاقة الكهربائية عن طريق التفاعل الكيميائي.<br>
+        <b class="term">مكوناتها:</b> تتكون من خلية كهربائية واحده او اكثر تحتوي الخلية الواحدة على مواد كيميائية تمكنها من توليد تيار كهربائي.<br>
+        <b class="term">اشكالها:</b> تصنع بأشكال واحجام مختلفة فمنها صغير الحجم مثل بطاريه الساعة اليدوية ومنها كبيره الحجم مثل البطاريات التي تغذي الغواصات بالطاقة.
+      </div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">🔬</span> نشاط: بطارية الليمون</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">نشاط</span> اشرح نشاط توضح فيه كيفيه عمل بطاريه الليمون؟</summary>
+      <div class="ans">
+        <b>الادوات:</b> ١. مقياس للتيار الكهربائي (ملي اميتر) &nbsp; ٢. مسمار مغلون &nbsp; ٣. قطعه من النحاس &nbsp; ٤. حبه ليمون حامض &nbsp; ٥. اسلاك توصيل.<br>
+        <b>العمل:</b><br>
+        <b>١.</b> نغرس المسمار المغلون وقطعه النحاس في الليمون.<br>
+        <b>٢.</b> يعمل النحاس كقطب كهربائي موجب والمسمار المغلون كقطب كهربائي سالب يؤدي الى تولد فرق الجهد بين القطبين.<br>
+        <b>٣.</b> نوصل القطبين بسلكي توصيل الى طرفي مقياس التيار الكهربائي نلاحظ انحراف مؤشر المقياس وهذا دلاله على انسياب تيار كهربائي في الدائرة الخارجية نتيجة انطلاق الالكترونات من المسمار بتأثير المحلول الحامضي متجه نحو النحاس.
+      </div>
+    </details>
+  </div>
+
+  <!-- ======== نشاط متحرك: بطارية الليمون ======== -->
+  <div class="sim">
+    <h3>🎬 نفّذ النشاط بنفسك: بطارية الليمون</h3>
+    <p class="sim-sub">نفّذ خطوات النشاط بالترتيب وراقب ماذا يحدث للإلكترونات ومؤشر الملي أميتر!</p>
+    <canvas id="lemonSim" width="700" height="380"></canvas>
+    <div class="controls">
+      <button class="btn" id="lemonBtn">👉 الخطوة ١: اغرس المسمار وقطعة النحاس</button>
+    </div>
+    <div class="controls"><span class="readout" id="lemonState">أمامك حبة ليمون حامض وملي أميتر — ابدأ بالخطوة الأولى!</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧪</span> نشاط: الخلية البسيطة — من كيمياء إلى كهرباء!</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">نشاط</span> اشرح نشاط توضح فيه تحويل الطاقة الكيميائية إلى كهربائية؟ او وضح بنشاط عمل الخلية البسيطة.</summary>
+      <div class="ans">
+        <b>الادوات:</b> ١. صفيحه من النحاس &nbsp; ٢. صفيحه من الخارصين &nbsp; ٣. وعاء من الزجاج يحتوي على حامض الكبريتيك المخفف &nbsp; ٤. كلفانوميتر حساس &nbsp; ٥. اسلاك توصيل.<br>
+        <b>العمل:</b><br>
+        <b>١.</b> نضع صفيحتا النحاس والخارصين داخل وعاء الزجاج الحاوي على حامض الكبريتيك المخفف.<br>
+        <b>٢.</b> نصل الصفيحتين بسلكي توصيل الى طرفي جهاز الكلفانوميتر.<br>
+        <b>٣.</b> نلاحظه انحراف مؤشر الكلفانوميتر دلاله على انسياب تيار كهربائي في الدائرة.<br>
+        <b>الاستنتاج:</b> الخلية الكهربائية البسيطة عباره عن صفحتين معدنين مختلفين مثل النحاس والخارصين يتولد بينهما فرق جهد كهربائي يقدر حوالي فولطا واحدا اذ ان جهد النحاس اكبر من جهد الخارصين ونتيجة لذلك تتولد طاقه كافيه تسمح بانسياب تيار كهربائي عند ربطها بدائرة خارجية.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> عرف الخلية الكهربائية البسيطة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">هي عباره عن صفحتين من معدنين مختلفين مثل النحاس والخارصين يتولد بينها فرق جهد كهربائي يقدر حوالي فولطا واحدا اذ ان جهد النحاس اكبر من جهد الخارصين ونتيجة لذلك تتولد طاقه كافيه تسمح بانسياب تيار كهربائي عند ربطها بدائرة خارجيه.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما جهاز الكلفانومتر؟</summary>
+      <div class="ans"><b class="term">جهاز الكلفانومتر:</b> هو جهاز يتحسس التيارات الكهربائية صغيره المقدار ويرمز له بالرمز G.</div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>في بطارية الليمون: النحاس <b>قطب موجب (+)</b> والمسمار المغلون <b>قطب سالب (−)</b>، والمحلول الحامضي في الليمون هو الذي يطلق الإلكترونات من المسمار نحو النحاس.</li>
+      <li>في الخلية البسيطة يتولد فرق جهد <b>حوالي فولط واحد</b> لأن جهد النحاس اكبر من جهد الخارصين.</li>
+      <li>الكلفانومتر يتحسس التيارات <b>صغيرة المقدار</b> ورمزه <b>G</b>.</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson2.html">الدرس التالي: تصنيف البطاريات ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- نشاط بطارية الليمون (خطوة بخطوة) ---------- */
+(function () {
+  var cv = document.getElementById("lemonSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height;
+  var step = 0;           // 0 لا شيء، 1 الأقطاب مغروسة، 2 الأسلاك موصولة (تيار)
+  var insert = 0;         // تقدم غرس الأقطاب 0..1
+  var wire = 0;           // تقدم مد الأسلاك 0..1
+  var needle = 0, t = 0;
+  var btn = document.getElementById("lemonBtn");
+  var state = document.getElementById("lemonState");
+
+  var lemonX = W / 2, lemonY = H - 110;
+  var nailX = lemonX + 60, cuX = lemonX - 60;      // المسمار يمين، النحاس يسار
+  var meterX = W / 2, meterY = 78;
+
+  btn.onclick = function () {
+    if (step === 0) {
+      step = 1;
+      btn.textContent = "👉 الخطوة ٢: صِل الأسلاك بالملي أميتر";
+      state.textContent = "غرسنا المسمار المغلون (قطب سالب −) وقطعة النحاس (قطب موجب +) — تولّد فرق جهد بين القطبين!";
+    } else if (step === 1) {
+      step = 2;
+      btn.remove();
+      state.textContent = "انحرف مؤشر الملي أميتر! الإلكترونات تنطلق من المسمار بتأثير المحلول الحامضي متجهة نحو النحاس عبر الدائرة الخارجية.";
+    }
+  };
+
+  function drawWirePath() {
+    ctx.beginPath();
+    ctx.moveTo(nailX, lemonY - 58);
+    ctx.lineTo(nailX + 140, lemonY - 58);
+    ctx.lineTo(nailX + 140, meterY);
+    ctx.lineTo(meterX + 36, meterY);
+    ctx.moveTo(cuX, lemonY - 58);
+    ctx.lineTo(cuX - 140, lemonY - 58);
+    ctx.lineTo(cuX - 140, meterY);
+    ctx.lineTo(meterX - 36, meterY);
+  }
+
+  function tick() {
+    t += 0.016;
+    ctx.clearRect(0, 0, W, H);
+
+    // حبة الليمون
+    ctx.save();
+    ctx.translate(lemonX, lemonY);
+    ctx.beginPath(); ctx.ellipse(0, 0, 120, 72, 0, 0, Math.PI * 2);
+    ctx.fillStyle = "#ffd93b"; ctx.fill();
+    ctx.strokeStyle = "#e0b312"; ctx.lineWidth = 4; ctx.stroke();
+    ctx.beginPath(); ctx.ellipse(-128, 0, 14, 8, 0.4, 0, Math.PI * 2);
+    ctx.fillStyle = "#8bc34a"; ctx.fill();
+    ctx.restore();
+    ctx.fillStyle = "#7a6200"; ctx.font = "bold 14px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("حبة ليمون حامض", lemonX, lemonY + 8);
+
+    // الأقطاب تنغرس تدريجياً
+    if (step >= 1 && insert < 1) insert = Math.min(1, insert + 0.02);
+    if (insert > 0) {
+      var depth = insert * 46;
+      // المسمار المغلون (سالب)
+      ctx.fillStyle = "#9aa5b1";
+      ctx.fillRect(nailX - 5, lemonY - 104 + depth, 10, 100);
+      ctx.fillRect(nailX - 12, lemonY - 110 + depth, 24, 7);
+      // قطعة النحاس (موجب)
+      ctx.fillStyle = "#c96f2f";
+      ctx.fillRect(cuX - 8, lemonY - 104 + depth, 16, 100);
+      ctx.fillStyle = "#2d3142"; ctx.font = "bold 13px Cairo";
+      if (insert > 0.9) {
+        ctx.fillText("مسمار مغلون (−)", nailX + 12, lemonY - 118);
+        ctx.fillText("نحاس (+)", cuX - 12, lemonY - 118);
+      }
+    }
+
+    // الأسلاك
+    if (step >= 2 && wire < 1) wire = Math.min(1, wire + 0.02);
+    if (wire > 0) {
+      ctx.save();
+      drawWirePath();
+      ctx.strokeStyle = "#b0413e"; ctx.lineWidth = 4;
+      var len = 900;
+      ctx.setLineDash([len * wire, len]);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    // إلكترونات متحركة من المسمار نحو النحاس (عبر الدائرة الخارجية)
+    if (step >= 2 && wire >= 1) {
+      var path = [
+        [nailX, lemonY - 58], [nailX + 140, lemonY - 58], [nailX + 140, meterY],
+        [meterX - 36, meterY].slice(), // عبر الجهاز
+        [cuX - 140, meterY], [cuX - 140, lemonY - 58], [cuX, lemonY - 58]
+      ];
+      // مسار مبسط بنقاط متتابعة
+      var pts = [
+        [nailX, lemonY - 58], [nailX + 140, lemonY - 58], [nailX + 140, meterY],
+        [cuX - 140, meterY], [cuX - 140, lemonY - 58], [cuX, lemonY - 58]
+      ];
+      var segLens = [], total = 0;
+      for (var i = 0; i < pts.length - 1; i++) {
+        var dl = Math.hypot(pts[i + 1][0] - pts[i][0], pts[i + 1][1] - pts[i][1]);
+        segLens.push(dl); total += dl;
+      }
+      ctx.fillStyle = "#0891b2";
+      for (var e = 0; e < 10; e++) {
+        var d = ((t * 60 + e * total / 10) % total);
+        var si = 0;
+        while (d > segLens[si]) { d -= segLens[si]; si++; }
+        var p0 = pts[si], p1 = pts[si + 1], f = d / segLens[si];
+        var ex = p0[0] + (p1[0] - p0[0]) * f, ey = p0[1] + (p1[1] - p0[1]) * f;
+        ctx.beginPath(); ctx.arc(ex, ey, 4, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.font = "bold 12px Cairo"; ctx.fillStyle = "#0e7490";
+      ctx.fillText("e⁻ من المسمار نحو النحاس", nailX + 70, lemonY - 74);
+    }
+
+    // الملي أميتر
+    ctx.beginPath(); ctx.arc(meterX, meterY, 36, 0, Math.PI * 2);
+    ctx.fillStyle = "#fff"; ctx.fill();
+    ctx.strokeStyle = "#0891b2"; ctx.lineWidth = 4; ctx.stroke();
+    ctx.strokeStyle = "#b9c0cc"; ctx.lineWidth = 1.5;
+    for (var a = -60; a <= 60; a += 20) {
+      var rad = (a - 90) * Math.PI / 180;
+      ctx.beginPath();
+      ctx.moveTo(meterX + Math.cos(rad) * 27, meterY + Math.sin(rad) * 27);
+      ctx.lineTo(meterX + Math.cos(rad) * 32, meterY + Math.sin(rad) * 32);
+      ctx.stroke();
+    }
+    var target = (step >= 2 && wire >= 1) ? 95 : 0;
+    needle += (target - needle) * 0.06;
+    var na = (-60 + needle - 90) * Math.PI / 180;
+    ctx.strokeStyle = "#e63946"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(meterX, meterY);
+    ctx.lineTo(meterX + Math.cos(na) * 29, meterY + Math.sin(na) * 29); ctx.stroke();
+    ctx.beginPath(); ctx.arc(meterX, meterY, 4, 0, Math.PI * 2); ctx.fillStyle = "#e63946"; ctx.fill();
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 13px Cairo";
+    ctx.fillText("mA", meterX, meterY + 22);
+    ctx.fillText("الملي أميتر", meterX, meterY - 48);
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "البطارية هي:",
+    opts: ["مصدر لإنتاج الطاقة الكهربائية عن طريق التفاعل الكيميائي", "جهاز لقياس التيار الكهربائي", "مقاومة كهربائية كبيرة", "جهاز يخزن الضوء"], a: 0,
+    why: "التعريف من الملزمة: مصدر لإنتاج الطاقة الكهربائية عن طريق التفاعل الكيميائي." },
+  { q: "تتكون البطارية من:",
+    opts: ["خلية كهربائية واحدة او اكثر تحتوي على مواد كيميائية تمكنها من توليد تيار كهربائي", "أسلاك نحاسية فقط", "مغناطيس دائم", "زجاج وماء مقطر"], a: 0,
+    why: "مكوناتها: خلية كهربائية واحدة أو أكثر، تحتوي الخلية الواحدة على مواد كيميائية تولد التيار." },
+  { q: "من الأمثلة على البطاريات كبيرة الحجم:",
+    opts: ["بطارية الساعة اليدوية", "البطاريات التي تغذي الغواصات بالطاقة", "بطارية سماعة الأذن", "بطارية جهاز التحكم"], a: 1,
+    why: "تصنع بأشكال وأحجام مختلفة: صغيرة مثل بطارية الساعة، وكبيرة مثل بطاريات الغواصات." },
+  { q: "في نشاط بطارية الليمون يعمل النحاس:",
+    opts: ["كقطب كهربائي موجب", "كقطب كهربائي سالب", "كعازل", "كمقاومة"], a: 0,
+    why: "النحاس قطب موجب والمسمار المغلون قطب سالب — فيتولد فرق جهد بين القطبين." },
+  { q: "سبب انسياب التيار في دائرة بطارية الليمون هو انطلاق الالكترونات من:",
+    opts: ["النحاس نحو المسمار", "المسمار بتأثير المحلول الحامضي متجهة نحو النحاس", "الملي أميتر نحو الليمونة", "الهواء إلى الأسلاك"], a: 1,
+    why: "الإلكترونات تنطلق من المسمار بتأثير المحلول الحامضي متجهة نحو النحاس." },
+  { q: "الخلية الكهربائية البسيطة عبارة عن صفيحتين من معدنين مختلفين يتولد بينهما فرق جهد يقدر حوالي:",
+    opts: ["فولطاً واحداً", "12 فولط", "220 فولط", "1.5 فولط"], a: 0,
+    why: "حوالي فولط واحد، إذ ان جهد النحاس اكبر من جهد الخارصين." },
+  { q: "جهاز الكلفانومتر هو جهاز:",
+    opts: ["يتحسس التيارات الكهربائية صغيرة المقدار ويرمز له بالرمز G", "يقيس المقاومة الكبيرة", "يولد التيار الكهربائي", "يخزن الشحنات"], a: 0,
+    why: "الكلفانومتر يتحسس التيارات صغيرة المقدار ورمزه G." },
+  { q: "في نشاط الخلية البسيطة نضع صفيحتي النحاس والخارصين في وعاء زجاجي يحتوي على:",
+    opts: ["ماء مقطر", "حامض الكبريتيك المخفف", "زيت", "محلول ملحي مركز"], a: 1,
+    why: "الوعاء الزجاجي يحتوي حامض الكبريتيك المخفف — وانحراف الكلفانوميتر دليل انسياب التيار." }
+], { onDone: function (stars) { Phy.setLesson("ch4", "1", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

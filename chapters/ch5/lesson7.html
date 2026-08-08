@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 7: الكهرباء في بيوتنا</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch5">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الخامس</a> / الدرس 7</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔌 الدرس 7: الكهرباء في بيوتنا</h1>
+    <p>خلف كل قبس في جدار بيتك ثلاثة أسلاك، لكل واحد اسم ووظيفة ورمز... تعرف عليها لتفهم كيف تصلك الكهرباء بأمان!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🏡</span>
+    <span>L و N و E — ثلاثة حروف تحميك أنت وأجهزتك كل يوم: الحي يجلب الكهرباء، والمتعادل يعيدها، والمؤرض... ينقذ حياتك!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> كيف تصلنا الطاقة الكهربائية؟</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما هي الطريقة التي تزودنا بها مؤسسات الطاقة الكهربائية بحيث يكون استعمال الطاقة الكهربائية في حياتنا اليومية بشكل آمن ؟</summary>
+      <div class="ans">
+        تزودنا مؤسسات الطاقة الكهربائية في الطاقة عن طريق سلكين يمر فيهما تيار متناوب فرق الجهد بينهما (220 v):<br>
+        <b>١.</b> السلك الأول يسمى السلك الحي أو الحار وهو سلك جهده يساوي (220 v) ويرمز له <b>L</b>.<br>
+        <b>٢.</b> سلك ثاني يسمى السلك المتعادل او البارد يرمز له <b>N</b>، يمتاز كونه مؤرض عند محطة القدرة.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> فولطية السلك المتعادل ليست عالية ؟</summary>
+      <div class="ans">لكونه مؤرض عند محطة القدرة.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما المقصود بالسلك الحي (الحار) والسلك المتعادل (البارد)؟</summary>
+      <div class="ans">
+        <b>السلك الحي (الحار):</b> هو سلك موصل جهده يساوي 220 volt ويرمز له بالرمز L.<br>
+        <b>السلك المتعادل (البارد):</b> هو سلك موصل فولطيته أقل من السلك الحي لكونه مؤرض ويرمز له بالرمز N.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما السلك المؤرض؟ وما الغرض من استعماله (الفائدة العملية)؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b class="term">السلك المؤرض:</b> هو سلك يربط الجهاز الكهربائي بالأرض ويستعمل للسلامة الكهربائية في حالة حدوث خلل في الدائرة الكهربائية او حدوث تماس بين السلك الحي والغلاف المعدني للجهاز فسوف يؤدي الى انسياب معظم التيار الكهربائي من السلك الحي الى الأرض من خلال السلك المؤرض أي انه يقلل من خطر الصعقة الكهربائية.<br>
+        الغرض من استعماله: لتجنب الصعقة الكهربائية وحماية الاجهزة الكهربائية.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> مما يتركب القبس الكهربائي ذي الفاصم ؟ <span class="wz">وزاري</span></summary>
+      <!-- الملزمة ص83 تعكس الرمزين (الحي N والمتعادل L) سهواً — الصحيح كما في تعريفات الصفحة نفسها: الحي L والمتعادل N -->
+      <div class="ans">يتركب من السلكين الحي L والمتعادل N والسلك المؤرض E والفاصم (Fuse) وجميعها تشكل وسائل امان كهربائي.</div>
+    </details>
+  </div>
+
+  <!-- ======== مخطط القبس التفاعلي ======== -->
+  <div class="sim">
+    <h3>🎬 استكشف القبس الكهربائي ذا الفاصم</h3>
+    <p class="sim-sub">اضغط على كل جزء من أجزاء القبس لتتعرف عليه — اكتشف الأجزاء الأربعة كلها!</p>
+    <canvas id="plugSim" width="700" height="380"></canvas>
+    <div class="controls"><span class="readout" id="plugState">اضغط على أي جزء داخل القبس 👆</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧯</span> الفاصم الكهربائي وقاطع الدورة</div>
+  <div class="defbox">
+    <b class="term">الفاصم الكهربائي</b><b>:</b> سلك معدني فلزي لا يتحمل تيار يزيد مقداره عن الحد المعين له، فإذا تجاوز التيار هذا الحد فعندها يسخن الفاصم لدرجة حرارية تكفي لأنصهاره فينقطع التيار عن الجهاز مما يشكل وسيلة أمان كهربائي.
+  </div>
+
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما الفائدة العملية من وجود الفاصم في القابس الكهربائي؟ وكيف يربط؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">وضيفته حماية الأجهزة الكهربائية من العطب او التلف فيعمل على قطع التيار الكهربائي عن الدائرة عندما ينساب تيار أكبر من التيار المناسب لها ويربط على التوالي مع السلك الحي قبل دخول التيار في الجهاز.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> يربط الفاصم (Fuse) على التوالي مع السلك الحي قبل دخول التيار في الجهاز؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">لكي يؤدي وظيفة الحماية فيقطع الدائرة عندما ينساب تيار في الدائرة أكبر من التيار المنسب لها.</div>
+    </details>
+  </div>
+
+  <div class="defbox">
+    <b class="term">قاطع الدورة</b><b>:</b> جهاز يستعمل للأمان الكهربائي إذ يقوم بقطع التيار الكهربائي تلقائياً في حالة أنسياب تيار في الدائرة الكهربائية أكبر من التيار المصمم لها.
+  </div>
+
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما الفائدة العملية من قاطع الدورة عند ربطه في الدائرة الكهربائية وكيف يربط في الدائرة الكهربائية؟</summary>
+      <div class="ans">وذلك لحماية الاجهزة الكهربائية فيقطع تيار الدائرة الكهربائية تلقائيا في حالة انسياب تيار اكبر من التيار المناسب له ويربط على التوالي.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> هل ان قاطع الدورة يربط على التوالي ام على التوازي في الدائرة الكهربائية مع الجهاز المطلوب حمايته ولماذا ؟</summary>
+      <div class="ans">يربط على التوالي لأنه عندما تصير الدائرة محملة فوق ما تستطيع لا ينساب التيار في الدائرة الكهربائية.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> يربط قاطع الدورة في الدائرة الكهربائية للمنزل على التوالي مع السلك الحار قبل تجهيز الأجهزة بالطاقة الكهربائية؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">لكي يؤدي الحماية للأجهزة الكهربائية فيقطع تيار الدائرة الكهربائية تلقائياً في حالة انسياب تيار أكبر من التيار المناسب لها.</div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>السلك الحي <b>L</b> جهده 220V — السلك المتعادل <b>N</b> مؤرض عند محطة القدرة — السلك المؤرض <b>E</b> متصل بالأرض.</li>
+      <li>الفاصم وقاطع الدورة كلاهما يربط <b>على التوالي مع السلك الحي</b>.</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz7"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson6.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson8.html">الدرس التالي: التأريض وتجنب الصعقة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- مخطط القبس التفاعلي ---------- */
+(function () {
+  var cv = document.getElementById("plugSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height;
+  var state = document.getElementById("plugState");
+  var found = {}, active = null, glowT = 0;
+
+  var cx = W / 2, cy = H / 2 + 14;
+  var parts = [
+    { id: "live", short: "السلك الحي L", name: "السلك الحي (الحار) L: جهده 220V — يجلب التيار (بني/أحمر)" },
+    { id: "neutral", short: "السلك المتعادل N", name: "السلك المتعادل (البارد) N: فولطيته اقل لكونه مؤرض عند محطة القدرة (أزرق)" },
+    { id: "earth", short: "السلك المؤرض E", name: "السلك المؤرض E: يربط الجهاز بالأرض للسلامة الكهربائية ويقلل خطر الصعقة (أخضر/أصفر)" },
+    { id: "fuse", short: "الفاصم Fuse", name: "الفاصم (Fuse): سلك فلزي ينصهر اذا زاد التيار عن الحد المعين فيقطع التيار — يربط على التوالي مع السلك الحي" }
+  ];
+
+  // مواضع العناصر داخل القبس
+  var pos = {
+    earth:  { x: cx, y: cy - 92, w: 46, h: 40 },       // دبوس الأرض أعلى
+    live:   { x: cx - 78, y: cy - 6, w: 44, h: 38 },   // دبوس الحي (يسار بالرسم)
+    neutral:{ x: cx + 78, y: cy - 6, w: 44, h: 38 },   // دبوس المتعادل
+    fuse:   { x: cx - 78, y: cy + 68, w: 64, h: 26 }   // الفاصم تحت دبوس الحي
+  };
+
+  function hit(x, y) {
+    for (var id in pos) {
+      var p = pos[id];
+      if (Math.abs(x - p.x) < p.w / 2 + 8 && Math.abs(y - p.y) < p.h / 2 + 8) return id;
+    }
+    return null;
+  }
+
+  cv.addEventListener("click", function (ev) {
+    var r = cv.getBoundingClientRect();
+    var x = (ev.clientX - r.left) * (W / r.width);
+    var y = (ev.clientY - r.top) * (H / r.height);
+    var id = hit(x, y);
+    if (!id) return;
+    active = id; glowT = 1; found[id] = true;
+    var p = parts.filter(function (q) { return q.id === id; })[0];
+    var n = Object.keys(found).length;
+    state.textContent = "✔ " + p.name + (n === 4 ? " — ممتاز! عرفت مكونات القبس الأربعة 🎉" : " (اكتشفت " + n + " من 4)");
+  });
+
+  function pin(p, color, label, isActive) {
+    ctx.fillStyle = isActive ? "#d9a520" : color;
+    ctx.beginPath();
+    ctx.roundRect(p.x - p.w / 2, p.y - p.h / 2, p.w, p.h, 6);
+    ctx.fill();
+    ctx.strokeStyle = "#5c4a1e"; ctx.lineWidth = 2; ctx.stroke();
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 14px Cairo"; ctx.textAlign = "center";
+    ctx.fillText(label, p.x, p.y + 5);
+  }
+
+  function tick() {
+    glowT *= 0.96;
+    ctx.clearRect(0, 0, W, H);
+    ctx.textAlign = "center";
+
+    // جسم القبس
+    ctx.fillStyle = "#f3f4f8";
+    ctx.beginPath();
+    ctx.roundRect(cx - 150, cy - 130, 300, 240, 26);
+    ctx.fill();
+    ctx.strokeStyle = "#8d99ae"; ctx.lineWidth = 3; ctx.stroke();
+
+    // الكيبل الداخل
+    ctx.strokeStyle = "#4a4a55"; ctx.lineWidth = 12; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(cx, cy + 110); ctx.lineTo(cx, cy + 150); ctx.stroke();
+    ctx.lineCap = "butt";
+
+    // اسلاك داخلية ملونة
+    ctx.lineWidth = 4;
+    // حي (بني) الى دبوس الحي عبر الفاصم
+    ctx.strokeStyle = "#a0522d";
+    ctx.beginPath(); ctx.moveTo(cx - 6, cy + 110); ctx.lineTo(pos.fuse.x + 34, cy + 82); ctx.lineTo(pos.fuse.x + 34, pos.fuse.y); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(pos.fuse.x - 34, pos.fuse.y); ctx.lineTo(pos.live.x, pos.live.y + 40); ctx.stroke();
+    // متعادل (ازرق)
+    ctx.strokeStyle = "#2b6cb0";
+    ctx.beginPath(); ctx.moveTo(cx + 6, cy + 110); ctx.lineTo(pos.neutral.x, cy + 60); ctx.lineTo(pos.neutral.x, pos.neutral.y + 24); ctx.stroke();
+    // مؤرض (اخضر/اصفر)
+    ctx.strokeStyle = "#0e9f6e";
+    ctx.beginPath(); ctx.moveTo(cx, cy + 108); ctx.lineTo(cx, pos.earth.y + 26); ctx.stroke();
+
+    // الفاصم
+    var f = pos.fuse;
+    ctx.fillStyle = active === "fuse" ? "#ffe9b0" : "#fff";
+    ctx.beginPath(); ctx.roundRect(f.x - f.w / 2, f.y - f.h / 2, f.w, f.h, 8); ctx.fill();
+    ctx.strokeStyle = "#c1121f"; ctx.lineWidth = 2.5; ctx.stroke();
+    ctx.strokeStyle = "#c1121f"; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(f.x - f.w / 2 + 6, f.y); ctx.lineTo(f.x + f.w / 2 - 6, f.y); ctx.stroke();
+    ctx.fillStyle = "#c1121f"; ctx.font = "bold 11px Cairo";
+    ctx.fillText("Fuse الفاصم", f.x, f.y + f.h / 2 + 14);
+
+    // الدبابيس
+    pin(pos.earth, "#c9b26b", "E", active === "earth");
+    pin(pos.live, "#c9b26b", "L", active === "live");
+    pin(pos.neutral, "#c9b26b", "N", active === "neutral");
+
+    // تسميات خارجية
+    ctx.fillStyle = "#b45309"; ctx.font = "bold 13px Cairo";
+    ctx.fillText("السلك المؤرض (أعلى)", cx, cy - 122);
+    ctx.textAlign = "right";
+    ctx.fillText("السلك الحي 220V ←", cx - 112, pos.live.y - 26);
+    ctx.textAlign = "left";
+    ctx.fillText("→ السلك المتعادل (مؤرض بالمحطة)", cx + 112, pos.neutral.y - 26);
+    ctx.textAlign = "center";
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 14px Cairo";
+    ctx.fillText("القبس الكهربائي ذو الفاصم — L + N + E + Fuse = وسائل أمان كهربائي", cx, H - 12);
+
+    // قائمة الاكتشاف
+    parts.forEach(function (p, i) {
+      ctx.font = "bold 12px Cairo"; ctx.textAlign = "left";
+      ctx.fillStyle = found[p.id] ? "#0e9f6e" : "#b9c0cc";
+      ctx.fillText((found[p.id] ? "✔ " : "○ ") + p.short, 14, 44 + i * 22);
+    });
+    ctx.textAlign = "center";
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz7", [
+  { q: "تزودنا مؤسسات الطاقة الكهربائية بالطاقة عن طريق سلكين يمر فيهما تيار متناوب فرق الجهد بينهما:",
+    opts: ["(220 v)", "(12 v)", "(1.5 v)", "(6 v)"], a: 0,
+    why: "سلكان بتيار متناوب وفرق جهد 220V: الحي L والمتعادل N." },
+  { q: "السلك الحي (الحار) هو سلك موصل:",
+    opts: ["جهده يساوي 220 volt ويرمز له بالرمز L", "جهده صفر ويرمز له N", "متصل بالأرض دائماً ويرمز له E", "لا يمر فيه تيار"], a: 0,
+    why: "الحي L جهده 220V — وهو الذي يجلب التيار للجهاز." },
+  { q: "فولطية السلك المتعادل ليست عالية:",
+    opts: ["لكونه مؤرض عند محطة القدرة", "لأنه سلك رفيع", "لأنه بعيد عن المحطة", "لأنه من النحاس"], a: 0,
+    why: "علل من الملزمة: المتعادل N مؤرض عند محطة القدرة." },
+  { q: "السلك المؤرض هو سلك يربط الجهاز الكهربائي بالأرض ووظيفته:",
+    opts: ["انسياب معظم التيار الى الأرض عند حدوث تماس فيقلل خطر الصعقة", "زيادة تيار الجهاز", "توليد فرق جهد اضافي", "تسخين الجهاز"], a: 0,
+    why: "سؤال وزاري: عند حدوث خلل او تماس ينساب معظم التيار للأرض عبر E." },
+  { q: "يتركب القبس الكهربائي ذو الفاصم من:",
+    opts: ["السلكين الحي والمتعادل والسلك المؤرض E والفاصم (Fuse)", "سلك واحد فقط", "الفاصم فقط", "سلكين دون فاصم"], a: 0,
+    why: "سؤال وزاري: L + N + E + Fuse وجميعها تشكل وسائل امان كهربائي." },
+  { q: "الفاصم الكهربائي هو سلك معدني فلزي:",
+    opts: ["لا يتحمل تيار يزيد عن الحد المعين له فينصهر ويقطع التيار", "يتحمل اي تيار مهما كان", "يزيد التيار في الدائرة", "يخزن الطاقة"], a: 0,
+    why: "اذا تجاوز التيار الحد يسخن الفاصم لدرجة انصهاره فينقطع التيار — وسيلة أمان." },
+  { q: "يربط الفاصم (Fuse) في القابس:",
+    opts: ["على التوالي مع السلك الحي قبل دخول التيار في الجهاز", "على التوازي مع الجهاز", "مع السلك المتعادل", "مع السلك المؤرض"], a: 0,
+    why: "علل وزاري: توالياً مع الحي ليقطع الدائرة عند انسياب تيار اكبر من المناسب." },
+  { q: "قاطع الدورة جهاز يستعمل للأمان الكهربائي اذ يقوم:",
+    opts: ["بقطع التيار تلقائياً في حالة انسياب تيار اكبر من التيار المصمم لها", "بزيادة التيار", "بتوليد الكهرباء", "بتحويل الفولطية"], a: 0,
+    why: "يقطع التيار تلقائياً عند زيادة التيار عن الحد المصمم له." },
+  { q: "يربط قاطع الدورة في الدائرة الكهربائية:",
+    opts: ["على التوالي لأنه عندما تصير الدائرة محملة فوق ما تستطيع لا ينساب التيار", "على التوازي دائماً", "خارج الدائرة", "مع السلك المؤرض فقط"], a: 0,
+    why: "توالياً مع السلك الحار قبل تجهيز الأجهزة — مثل الفاصم تماماً." }
+], { onDone: function (stars) { Phy.setLesson("ch5", "7", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

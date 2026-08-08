@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 1: ما الكهربائية الساكنة؟</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الأول</a> / الدرس 1</span>
+  </div>
+
+  <div class="hero">
+    <h1>🎈 الدرس 1: ما الكهربائية الساكنة؟</h1>
+    <p>قصة بدأت قبل 2600 سنة بقطعة كهرمان... وتنتهي بصعقة من مقبض الباب!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🤔</span>
+    <span>هل جربت يوماً دلك بالون بشعرك ثم لصقه بالجدار فبقي ملتصقاً؟ أو سمعت «طقطقة» عند خلع كنزة صوفية في الشتاء؟ كل هذا <b>كهربائية ساكنة</b>!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📜</span> قصة الاكتشاف</div>
+  <div class="card">
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> وضح دور العلماء القدماء الذين ساهموا في اكتشاف الكهرباء؟</summary>
+      <div class="ans">
+        لقد وجد الحكيم الاغريقي <b>أرسطو طاليس ٦٠٠ (ق.م)</b> إن مادة الكهرب عند دلكها بقطعة من الصوف تصبح لها القابلية على جذب الاجسام الخفيفة مثل قصاصات الورق وقطع من القش. بعد ذلك وجد العالم الإنكليزي <b>وليام كلبرت عام ١٦٠٠م</b> ان الكثير من هذه المواد تشارك الكهرب في هذه الخاصية لذا يعتبر اول من أطلق عليها اسم <b>الكهربائية</b>.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ماذا يحصل عند دلك مادة الكهرب بقطعة من الصوف؟</summary>
+      <div class="ans">تصير لها القابلية على جذب الأجسام الخفيفة مثل قصاصات الورق.</div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> التعريف الأهم في الدرس</div>
+  <div class="defbox">
+    <b class="term">الكهربائية الساكنة:</b> هي ظاهرة تجمع الشحنات الكهربائية على سطوح الأجسام حيث تكتسب هذهِ الأجسام شحنة من خلال ملامستها للأجسام الأخرى أو عن طريق التقارب الكبير بينها. ونحصل عليها بعدة طرق منها: <b>١.</b> دلك ساق من المطاط بقطعة من الفرو &nbsp;<b>٢.</b> دلك الشعر الجاف بالمشط.
+  </div>
+
+  <!-- ======== المحاكاة: المشط والقصاصات ======== -->
+  <div class="sim">
+    <h3>🧪 جرب بنفسك: المشط وقصاصات الورق</h3>
+    <p class="sim-sub">اضغط «ادلك المشط بالشعر» ثم حرك المشط (بالسحب أو باللمس) قرب القصاصات وشاهد ماذا يحدث!</p>
+    <canvas id="combSim" width="700" height="340"></canvas>
+    <div class="controls">
+      <button class="btn" id="rubBtn">💇‍♂️ ادلك المشط بالشعر</button>
+      <button class="btn ghost" id="resetBtn">🔄 إعادة</button>
+      <span class="readout" id="combState">المشط: متعادل (غير مشحون)</span>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">💬</span> علل الظواهر الآتية</div>
+  <div class="card">
+    <details class="qa">
+      <summary><span class="tag">علل</span> انجذاب قصاصات الورق الصغيرة اذا قربت منها مادة لدنة (بلاستيكية) كالمشط بعد دلكه بالشعر.</summary>
+      <div class="ans">لأن المشط المدلوك يصير مشحوناً بالشحنات الكهربائية الساكنة (عندما يكون الشعر جافاً وبدون زيت).</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> إنجذاب القصاصات أو شعرك من بالون (نفاخة مملوءة بالهواء) بعد دلكه بقطعة من الصوف.</summary>
+      <div class="ans">لان البالون المدلوك بالصوف سوف يشحن بالشحنات الكهربائية الساكنة لذلك سيجذب قصاصات الورق الصغيرة اليه.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> التصاق البالون (النفاخة) بالجدار لعدة ساعات بعد دلكه بالصوف، إذا كان الجو جافاً.</summary>
+      <div class="ans">لأن البالون سيصبح مشحوناً لذا يلتصق بالجدار وتطول فترة التصاقه كلما كان الجو جافاً لان الهواء الرطب يساعد على تفريغ الشحنات الكهربائية بسرعة.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> ما سبب شعورنا عند السير على السجاد ومسك مقبض الباب المعدني، بصعقة كهربائية طفيفة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">بسبب حدوث التفريغ الكهربائي للشحنات الكهربائية المكتسبة نتيجة الاحتكاك بين الجسم ومقبض الباب.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> عند دلك مشط بلاستك بشعرك ثم قربته من ماء ينساب رفيعاً من الحنفية نلاحظ أن الماء ينجذب نحو المشط.</summary>
+      <div class="ans">وذلك لأن المشط بعدما دلك بالشعر اكتسب شحنات كهربائية ساكنة مخالفة لشحنة الماء ونتيجة لهذا الإختلاف نلاحظ أنجذاب الماء نحو المشط.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> عند تزحلق الأطفال في المتنزهات على لعبة التزحلق البلاستيكية وعند نزوله وملامسته بصورة مباشرة لمقبض معدني سوف يشعر الطفل بصعقة كهربائية؟</summary>
+      <div class="ans">لأن عند تزحلق الطفل من أعلى اللعبة سوف تحتك ملابسه بأرضية اللعبة وبالتالي سيكتسب الطفل شحنات كهربائية ساكنة لذا عند ملامسته لمقبض معدني سوف يحصل تفريغ الشحنات التي اكتسبها أثناء عملية الاحتكاك.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> هل يمكن شحن ساق من النحاس بالكهربائية الساكنة؟ وضح ذلك؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">نعم يمكن ذلك. حيث تدلك ساق النحاس بقطعة من الصوف او الفرو مثلاً حيث سيكتسب النحاس الالكترونات وبتالي ستكتسب شحنات سالبة وعند تقريبه من قصاصات ورقية صغيرة نلاحظ انجذابها نحو الساق دليل على انه تم شحنة بالكهربائية الساكنة.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> هل تنجز الشحنات الكهربائية الساكنة شغلاً؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">كلا، لا تنجز شغلاً لأنها شحنات ساكنة وليست متحركة ضمن المادة.</div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson2.html">الدرس التالي: الشحنة الكهربائية ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة المشط والقصاصات ---------- */
+(function () {
+  var cv = document.getElementById("combSim"), ctx = cv.getContext("2d");
+  var charged = false;
+  var comb = { x: 520, y: 80 };
+  var dragging = false;
+  var papers = [];
+  function resetPapers() {
+    papers = [];
+    for (var i = 0; i < 14; i++) papers.push({
+      x: 120 + Math.random() * 380, y: 285 + Math.random() * 25,
+      vx: 0, vy: 0, r: Math.random() * Math.PI, stuck: false
+    });
+  }
+  resetPapers();
+
+  function pos(e) {
+    var r = cv.getBoundingClientRect();
+    var t = e.touches ? e.touches[0] : e;
+    return { x: (t.clientX - r.left) * cv.width / r.width, y: (t.clientY - r.top) * cv.height / r.height };
+  }
+  function down(e) {
+    var p = pos(e);
+    if (Math.abs(p.x - comb.x) < 70 && Math.abs(p.y - comb.y) < 50) { dragging = true; e.preventDefault(); }
+  }
+  function move(e) {
+    if (!dragging) return;
+    var p = pos(e);
+    comb.x = Math.max(50, Math.min(cv.width - 50, p.x));
+    comb.y = Math.max(40, Math.min(cv.height - 60, p.y));
+    e.preventDefault();
+  }
+  cv.addEventListener("mousedown", down); cv.addEventListener("mousemove", move);
+  addEventListener("mouseup", function () { dragging = false; });
+  cv.addEventListener("touchstart", down, { passive: false });
+  cv.addEventListener("touchmove", move, { passive: false });
+  addEventListener("touchend", function () { dragging = false; });
+
+  document.getElementById("rubBtn").addEventListener("click", function () {
+    charged = true;
+    document.getElementById("combState").textContent = "المشط: مشحون ⚡ قرّبه من القصاصات!";
+  });
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    charged = false; resetPapers(); comb.x = 520; comb.y = 80;
+    document.getElementById("combState").textContent = "المشط: متعادل (غير مشحون)";
+  });
+
+  function tick() {
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    // الطاولة
+    ctx.fillStyle = "#e9d8b8"; ctx.fillRect(0, 315, cv.width, 25);
+    // القصاصات
+    papers.forEach(function (pp) {
+      if (charged) {
+        var dx = comb.x - pp.x, dy = (comb.y + 40) - pp.y;
+        var d2 = dx * dx + dy * dy, d = Math.sqrt(d2);
+        if (d < 150 && !pp.stuck) {
+          pp.vx += 220 * dx / (d2 + 400);
+          pp.vy += 220 * dy / (d2 + 400);
+          if (d < 46) { pp.stuck = true; pp.ox = pp.x - comb.x; pp.oy = pp.y - comb.y; }
+        }
+      }
+      if (pp.stuck && charged) { pp.x = comb.x + pp.ox; pp.y = comb.y + pp.oy; }
+      else {
+        pp.x += pp.vx; pp.y += pp.vy;
+        pp.vx *= .92; pp.vy *= .92;
+        pp.vy += .25;
+        if (pp.y > 310) { pp.y = 310; pp.vy = 0; pp.stuck = false; }
+        if (pp.x < 10) pp.x = 10; if (pp.x > cv.width - 10) pp.x = cv.width - 10;
+      }
+      ctx.save(); ctx.translate(pp.x, pp.y); ctx.rotate(pp.r);
+      ctx.fillStyle = "#fff"; ctx.strokeStyle = "#c8cdea";
+      ctx.fillRect(-8, -5, 16, 10); ctx.strokeRect(-8, -5, 16, 10);
+      ctx.restore();
+    });
+    // المشط
+    ctx.save(); ctx.translate(comb.x, comb.y);
+    ctx.fillStyle = charged ? "#6c5ce7" : "#8d99ae";
+    ctx.beginPath();
+    if (ctx.roundRect) { ctx.roundRect(-60, -14, 120, 26, 8); ctx.fill(); }
+    else ctx.fillRect(-60, -14, 120, 26);
+    for (var i = -52; i <= 52; i += 10) ctx.fillRect(i - 2, 12, 5, 26);
+    if (charged) {
+      ctx.fillStyle = "#ffc93c"; ctx.font = "16px Cairo";
+      for (var j = -45; j <= 45; j += 22) ctx.fillText("−", j, 4);
+      ctx.font = "20px Cairo"; ctx.fillText("⚡", 62, -12);
+    }
+    ctx.restore();
+    ctx.fillStyle = "#5c6178"; ctx.font = "13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("اسحب المشط 👆", comb.x, comb.y - 26);
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "أول من لاحظ أن مادة الكهرب تجذب الأجسام الخفيفة بعد دلكها بالصوف هو:",
+    opts: ["وليام كلبرت", "أرسطو طاليس", "نيوتن", "كولوم"], a: 1,
+    why: "أرسطو طاليس (٦٠٠ ق.م) لاحظ الظاهرة، أما وليام كلبرت (١٦٠٠م) فهو أول من أطلق اسم الكهربائية." },
+  { q: "أول من أطلق اسم «الكهربائية» على الظاهرة هو:",
+    opts: ["أرسطو طاليس", "أديسون", "وليام كلبرت", "فولتا"], a: 2,
+    why: "وليام كلبرت عام ١٦٠٠م وجد أن الكثير من المواد تشارك الكهرب في هذه الخاصية." },
+  { q: "يلتصق البالون المدلوك بالصوف بالجدار لفترة أطول عندما يكون الجو:",
+    opts: ["رطباً", "جافاً", "ممطراً", "بارداً ورطباً"], a: 1,
+    why: "الهواء الرطب يساعد على تفريغ الشحنات الكهربائية بسرعة، لذا الجو الجاف يطيل الالتصاق." },
+  { q: "سبب الصعقة الخفيفة عند لمس مقبض الباب بعد السير على السجاد هو:",
+    opts: ["تيار كهربائي من الباب", "حدوث تفريغ كهربائي للشحنات المكتسبة بالاحتكاك", "حرارة اليد", "مغناطيسية المقبض"], a: 1,
+    why: "السير على السجاد يكسب الجسم شحنات ساكنة تتفرغ عند لمس الجسم المعدني." },
+  { q: "هل تنجز الشحنات الكهربائية الساكنة شغلاً؟",
+    opts: ["نعم لأنها مشحونة", "كلا لأنها ساكنة وليست متحركة ضمن المادة", "نعم إذا كانت سالبة", "كلا لأنها صغيرة"], a: 1,
+    why: "الشغل يحتاج حركة، والشحنات الساكنة لا تتحرك ضمن المادة." }
+], { onDone: function (stars) { Phy.setLesson("ch1", "1", { stars: stars }); } });
+</script>
+</body>
+</html>

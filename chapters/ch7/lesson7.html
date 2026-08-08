@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 7: خسائر القدرة في المحولة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch7">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السابع</a> / الدرس 7</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔥 الدرس 7: خسائر القدرة في المحولة</h1>
+    <p>لماذا لا توجد محولة كفاءتها 100%؟ لأن جزءاً من القدرة يتسرّب حرارةً بطريقتين. تعال نعرفهما، والأهم: <b>كيف نقلّلهما</b>.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">♨️</span>
+    <span>ضع يدك على محوّلة تعمل منذ ساعات... ستجدها دافئة! تلك الحرارة هي القدرة الضائعة — عدوّ الكفاءة الذي يحاربه المهندسون بذكاء.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📉</span> نوعا خسائر القدرة</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما أنواع خسائر القدرة في المحولة الكهربائية؟ وكيف يمكن تقليلها؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١. خسارة ناتجة عن مقاومة أسلاك الملفين:</b> تظهر بشكل طاقة حرارية في أسلاك الملفين، ولتقليلها تُصنع الأسلاك من مادة ذات مقاومة صغيرة المقدار (النحاس مثلاً).<br>
+        <b>٢. خسارة التيارات الدوامة:</b> تظهر بشكل طاقة حرارية في القلب الحديد، ولتقليلها يُصنع قلب المحولة بشكل صفائح من الحديد رقيقة ومعزولة ومكبوسة.</div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة التيارات الدوامة ======== -->
+  <div class="sim">
+    <h3>🎬 التيارات الدوامة: قلب مصمت مقابل قلب مصفّح</h3>
+    <p class="sim-sub">بدّل بين قلب مصمت (قطعة واحدة) وقلب مصفّح (صفائح رقيقة معزولة)، وراقب حجم التيارات الدوامة والحرارة المتولدة.</p>
+    <canvas id="eddySim" width="700" height="340"></canvas>
+    <div class="controls">
+      <button class="btn" id="solidBtn">🔥 قلب مصمت (قطعة واحدة)</button>
+      <button class="btn green" id="lamBtn">✅ قلب مصفّح (صفائح معزولة)</button>
+    </div>
+    <div class="controls"><span class="readout" id="eddyState">القلب المصفّح: الصفائح الرقيقة المعزولة تقطّع مسارات التيارات الدوامة فتصغر جداً وتقلّ الحرارة ⟵ كفاءة أعلى.</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">💬</span> أسئلة وعلل الخسائر</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> وضّح الخسارة الناتجة عن مقاومة أسلاك الملفين وكيف يمكن التقليل منها؟</summary>
+      <div class="ans">خسائر ناتجة عن مقاومة أسلاك الملفين تظهر بشكل طاقة حرارية في أسلاك الملف الابتدائي والملف الثانوي أثناء اشتغال المحولة وهي ناتجة عن المقاومة الأومية لأسلاك الملفين، ولتقليل هذه الخسارة تُصنع أسلاك الملفين من مادة ذات مقاومة صغيرة المقدار (كالنحاس).</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما المقصود بالتيارات الدوامة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">وهي تيارات محتثّة داخل القلب الحديد للمحولة أثناء اشتغالها تتولّد بسبب التغير الحاصل في خطوط المجال المغناطيسي خلال قلب الحديد، وتظهر بشكل طاقة حرارية فيه.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> تُصنع أسلاك الملفين للمحولة من مادة ذات مقاومة صغيرة المقدار (النحاس)؟</summary>
+      <div class="ans">وذلك لتقليل الخسارة الناتجة من مقاومة أسلاك الملفين والتي تظهر بشكل طاقة حرارية في الأسلاك.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> يُصنع قلب المحولة الكهربائية بشكل صفائح من الحديد المطاوع رقيقة ومعزولة عن بعضها البعض كهربائياً ومكبوسة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">لتقليل الخسائر الناتجة من التيارات الدوامة.</div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>هناك نوعان من خسائر القدرة في المحولة: خسائر ناتجة عن <b>مقاومة أسلاك الملفين</b> وخسائر ناتجة عن <b>التيارات الدوامة</b>. <span class="wz">وزاري</span></li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz7"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson6.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson8.html">الدرس التالي: نقل الطاقة والاستعمالات ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة التيارات الدوامة ---------- */
+(function () {
+  var cv = document.getElementById("eddySim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height, t = 0;
+  var laminated = true;
+  var solidBtn = document.getElementById("solidBtn"), lamBtn = document.getElementById("lamBtn");
+  var state = document.getElementById("eddyState");
+
+  function setMode(lam) {
+    laminated = lam;
+    lamBtn.classList.toggle("green", lam);
+    solidBtn.classList.toggle("green", !lam);
+    state.textContent = lam
+      ? "القلب المصفّح: الصفائح الرقيقة المعزولة تقطّع مسارات التيارات الدوامة فتصغر جداً وتقلّ الحرارة ⟵ كفاءة أعلى."
+      : "القلب المصمت: تدور تيارات دوامة كبيرة داخل الحديد فتتولّد حرارة كثيرة ⟵ خسارة قدرة عالية.";
+  }
+  solidBtn.onclick = function () { setMode(false); };
+  lamBtn.onclick = function () { setMode(true); };
+
+  var bx = 210, by = 60, bw = 280, bh = 220; // كتلة القلب
+
+  function tick() {
+    t += 0.03;
+    ctx.clearRect(0, 0, W, H);
+    ctx.textAlign = "center";
+
+    // حرارة خلفية (توهج أحمر يزداد مع المصمت)
+    var heat = laminated ? 0.12 : 0.7 + 0.2 * Math.abs(Math.sin(t * 2));
+    var hg = ctx.createLinearGradient(0, by, 0, by + bh);
+    hg.addColorStop(0, "rgba(239,68,68," + heat + ")");
+    hg.addColorStop(1, "rgba(249,115,22," + heat + ")");
+
+    // كتلة القلب
+    ctx.fillStyle = "#94a3b8";
+    ctx.fillRect(bx, by, bw, bh);
+    ctx.fillStyle = hg;
+    ctx.fillRect(bx, by, bw, bh);
+    ctx.strokeStyle = "#475569"; ctx.lineWidth = 2; ctx.strokeRect(bx, by, bw, bh);
+
+    if (laminated) {
+      // صفائح عمودية معزولة
+      var sheets = 10, sw = bw / sheets;
+      ctx.strokeStyle = "#334155"; ctx.lineWidth = 1.5;
+      for (var i = 1; i < sheets; i++) {
+        ctx.beginPath(); ctx.moveTo(bx + i * sw, by); ctx.lineTo(bx + i * sw, by + bh); ctx.stroke();
+      }
+      // دوامات صغيرة داخل كل صفيحة
+      ctx.strokeStyle = "rgba(37,99,235,.8)"; ctx.lineWidth = 2;
+      for (var s = 0; s < sheets; s++) {
+        for (var r = 0; r < 2; r++) {
+          var cx = bx + s * sw + sw / 2, cy = by + 60 + r * 100;
+          ctx.beginPath(); ctx.ellipse(cx, cy, sw / 2 - 3, 22, 0, 0, Math.PI * 2); ctx.stroke();
+          // سهم دوران صغير
+          var a = t * 3 + s;
+          ctx.fillStyle = "rgba(37,99,235,.9)";
+          ctx.beginPath(); ctx.arc(cx + (sw / 2 - 3) * Math.cos(a), cy + 22 * Math.sin(a), 2.5, 0, Math.PI * 2); ctx.fill();
+        }
+      }
+      ctx.fillStyle = "#1e3a8a"; ctx.font = "bold 13px Cairo";
+      ctx.fillText("تيارات دوامة صغيرة جداً — حرارة قليلة", W / 2, by + bh + 30);
+    } else {
+      // دوامات كبيرة تملأ القلب
+      ctx.strokeStyle = "rgba(37,99,235,.9)"; ctx.lineWidth = 3;
+      for (var rr = 0; rr < 4; rr++) {
+        ctx.beginPath();
+        ctx.ellipse(bx + bw / 2, by + bh / 2, 30 + rr * 32, 22 + rr * 24, 0, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+      // نقاط تدور على المدار الكبير
+      ctx.fillStyle = "#1d4ed8";
+      for (var k = 0; k < 4; k++) {
+        var ang = t * 2 + k * Math.PI / 2;
+        ctx.beginPath();
+        ctx.arc(bx + bw / 2 + 120 * Math.cos(ang), by + bh / 2 + 90 * Math.sin(ang), 4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.fillStyle = "#b91c1c"; ctx.font = "bold 13px Cairo";
+      ctx.fillText("تيارات دوامة كبيرة — حرارة عالية وخسارة قدرة", W / 2, by + bh + 30);
+    }
+
+    // ملف حول القلب (رمزي)
+    ctx.strokeStyle = "#0d9488"; ctx.lineWidth = 4; ctx.lineCap = "round";
+    for (var c = 0; c < 4; c++) {
+      ctx.beginPath(); ctx.ellipse(bx, by + 40 + c * 50, 14, 22, 0, Math.PI * 0.5, Math.PI * 1.5); ctx.stroke();
+    }
+    ctx.lineCap = "butt";
+
+    ctx.fillStyle = "#475569"; ctx.font = "bold 12px Cairo";
+    ctx.fillText(laminated ? "قلب مصفّح (صفائح رقيقة معزولة ومكبوسة)" : "قلب مصمت (قطعة حديد واحدة)", W / 2, 34);
+
+    // مؤشر الحرارة
+    ctx.fillStyle = laminated ? "#0f766e" : "#b91c1c"; ctx.font = "bold 13px Cairo";
+    ctx.fillText(laminated ? "🌡 حرارة منخفضة ✓" : "🌡 حرارة مرتفعة ✗", W / 2, H - 8);
+
+    requestAnimationFrame(tick);
+  }
+  setMode(true);
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz7", [
+  { q: "نوعا خسائر القدرة في المحولة هما:",
+    opts: ["خسارة مقاومة أسلاك الملفين وخسارة التيارات الدوامة", "خسارة الفولطية وخسارة التيار", "خسارة الضوء وخسارة الصوت", "خسارة الشحنة وخسارة المجال"], a: 0,
+    why: "الأولى في الأسلاك والثانية في القلب الحديدي." },
+  { q: "الخسارة الناتجة عن مقاومة أسلاك الملفين تظهر بشكل:",
+    opts: ["طاقة حرارية في الأسلاك", "ضوء", "صوت", "مجال كهربائي"], a: 0,
+    why: "المقاومة الأومية تحوّل جزءاً من القدرة إلى حرارة في الأسلاك." },
+  { q: "لتقليل خسارة مقاومة الأسلاك تُصنع الملفات من مادة:",
+    opts: ["ذات مقاومة صغيرة المقدار كالنحاس", "ذات مقاومة عالية", "عازلة تماماً", "مغناطيسية دائمية"], a: 0,
+    why: "مقاومة أقل ⟵ حرارة أقل ⟵ خسارة أقل." },
+  { q: "التيارات الدوامة هي:",
+    opts: ["تيارات محتثّة داخل القلب الحديد تتولّد بسبب تغير خطوط المجال وتظهر حرارةً", "تيارات في الأسلاك فقط", "تيار المصدر الأصلي", "تيار مستمر ثابت"], a: 0,
+    why: "تعريف وزاري: محتثّة في القلب بسبب تغير الفيض، تظهر طاقة حرارية." },
+  { q: "التيارات الدوامة تظهر بشكل طاقة حرارية في:",
+    opts: ["القلب الحديد للمحولة", "أسلاك الملفين فقط", "الحمل الخارجي", "مصدر الفولطية"], a: 0,
+    why: "الدوامة تدور داخل القلب الحديدي فتسخّنه." },
+  { q: "لتقليل خسارة التيارات الدوامة يُصنع القلب:",
+    opts: ["بشكل صفائح رقيقة معزولة عن بعضها ومكبوسة", "قطعة مصمتة واحدة سميكة", "من النحاس", "من الخشب"], a: 0,
+    why: "الصفائح المعزولة تقطّع مسارات الدوامة فتصغر جداً." },
+  { q: "لماذا يُصنع القلب مصفّحاً بدل كونه قطعة مصمتة؟",
+    opts: ["لأن القطعة المصمتة تسمح بتيارات دوامة كبيرة فتزيد الحرارة والخسارة", "لأن الصفائح أرخص فقط", "لزيادة وزن المحولة", "لمنع مرور الفيض"], a: 0,
+    why: "المصمت = دوامات كبيرة = حرارة عالية؛ المصفّح يحدّها." },
+  { q: "أي مما يلي يرفع كفاءة المحولة؟",
+    opts: ["تقليل خسائر الأسلاك والتيارات الدوامة", "زيادة مقاومة الأسلاك", "استخدام قلب مصمت", "ربطها بتيار مستمر"], a: 0,
+    why: "خسائر أقل ⟵ كفاءة أعلى تقترب من المثالية." }
+], { onDone: function (stars) { Phy.setLesson("ch7", "7", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

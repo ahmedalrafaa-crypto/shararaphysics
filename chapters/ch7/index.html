@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفصل السابع: المحولة الكهربائية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch7">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="../../index.html">الرئيسية</a> / الفصل السابع</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔌 الفصل السابع: المحولة الكهربائية</h1>
+    <p>كيف تصل الكهرباء من محطة توليد بعيدة إلى مصباح غرفتك بأمان؟ وكيف يشحن شاحن الموبايل جهازك بـ 5V من قابس بـ 220V؟ الجواب جهاز واحد عبقري: المحوّلة! تعال نفكّها ونعيد بناءها.</p>
+    <span class="chip" id="chpct">0% مكتمل</span>
+  </div>
+
+  <div class="pbar" style="margin-bottom:24px"><div id="pb" style="width:0%"></div></div>
+
+  <div class="path" id="path">
+    <a class="node" href="lesson1.html" data-ls="1">
+      <span class="dot">🔎</span>
+      <span class="info"><b>الدرس 1: التيار المحتث والمحولة الكهربائية</b>
+        <span class="sub">كيف يتولد تيار محتث في ملف ثانوي؟ النشاط الوزاري + تعريف المحولة ومكوناتها</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson2.html" data-ls="2">
+      <span class="dot">🔁</span>
+      <span class="info"><b>الدرس 2: مبدأ عمل المحولة (الحث المتبادل)</b>
+        <span class="sub">الملف الابتدائي والثانوي والقلب الحديدي + محاكاة الفيض الذي يربط الملفين</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson3.html" data-ls="3">
+      <span class="dot">🔄</span>
+      <span class="info"><b>الدرس 3: لماذا التيار المتناوب؟</b>
+        <span class="sub">عللات وزارية: لا تعمل على المستمر ولا على البطارية + محاكاة AC مقابل DC</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson4.html" data-ls="4">
+      <span class="dot">🧮</span>
+      <span class="info"><b>الدرس 4: قانون المحولة ونسبة التحويل</b>
+        <span class="sub">N₂/N₁ = V₂/V₁ ومتى تكون رافعة أو خافضة + حاسبة الفولطية التفاعلية</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson5.html" data-ls="5">
+      <span class="dot">⚖️</span>
+      <span class="info"><b>الدرس 5: علاقة القدرة والتيار</b>
+        <span class="sub">P₁ = P₂ و I₁V₁ = I₂V₂ و V₂/V₁ = I₁/I₂ + حاسبة المحولة الكاملة</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson6.html" data-ls="6">
+      <span class="dot">📊</span>
+      <span class="info"><b>الدرس 6: كفاءة المحولة</b>
+        <span class="sub">η = (P₂/P₁)×100% + مسائل الكفاءة والقدرة المفقودة + حاسبة الكفاءة</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson7.html" data-ls="7">
+      <span class="dot">🔥</span>
+      <span class="info"><b>الدرس 7: خسائر القدرة في المحولة</b>
+        <span class="sub">خسارة مقاومة الملفين وخسارة التيارات الدوامة وكيف نقللها + محاكاة القلب المصفّح</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson8.html" data-ls="8">
+      <span class="dot">🏙️</span>
+      <span class="info"><b>الدرس 8: نقل الطاقة والاستعمالات</b>
+        <span class="sub">لماذا فولطية عالية وتيار واطئ؟ من المحطة إلى المدينة + جدول الرافعة والخافضة</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node exam" href="exam.html" data-ls="exam">
+      <span class="dot">🏆</span>
+      <span class="info"><b>الاختبار النهائي للفصل</b>
+        <span class="sub">أسئلة الفصل ومسائله والأسئلة الوزارية — اجمع 3 نجوم!</span>
+        <span class="stars"></span></span>
+    </a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var pct = Phy.chapterPercent("ch7", 8);
+  document.getElementById("pb").style.width = pct + "%";
+  document.getElementById("chpct").textContent = pct + "% مكتمل";
+  document.querySelectorAll(".node").forEach(function (n) {
+    var ls = n.dataset.ls, info = null;
+    if (ls === "exam") info = Phy.getExam("ch7");
+    else info = Phy.getLesson("ch7", ls);
+    if (info && (info.done || info.stars !== undefined)) {
+      n.classList.add("done");
+      var st = n.querySelector(".stars");
+      if (info.stars !== undefined && info.stars !== null)
+        st.textContent = Phy.starsStr(info.stars);
+      else st.textContent = "✓ مكتمل";
+    }
+  });
+})();
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

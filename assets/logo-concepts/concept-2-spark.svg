@@ -1,0 +1,18 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="شعار أ. أحمد رافع — شرارة الشحنات">
+  <!-- خلفية فاتحة هادئة بإطار خفيف -->
+  <rect width="512" height="512" rx="118" fill="#f4f6ff"/>
+  <rect x="11" y="11" width="490" height="490" rx="107" fill="none" stroke="#4834d4" stroke-width="12" opacity="0.15"/>
+
+  <!-- الشحنة الموجبة -->
+  <circle cx="138" cy="256" r="72" fill="#4834d4"/>
+  <path d="M 112 256 h 52 M 138 230 v 52" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- الشحنة السالبة -->
+  <circle cx="374" cy="256" r="72" fill="#00c2cb"/>
+  <path d="M 348 256 h 52" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- الشرارة الذهبية بينهما -->
+  <polyline points="216,252 243,228 237,256 267,236 261,264 296,242"
+            fill="none" stroke="#ffc93c" stroke-width="13"
+            stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

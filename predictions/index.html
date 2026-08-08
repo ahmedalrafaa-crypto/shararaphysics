@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التوقعات الوزارية — فيزياء الثالث متوسط · أ. أحمد رافع</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../assets/logo-ar.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/predictions.css">
+</head>
+<body>
+<div class="wrap theme-ch9">
+
+  <div class="topbar">
+    <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">· <a href="../index.html">الرئيسية</a> · التوقعات الوزارية</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔮 التوقعات الوزارية</h1>
+    <p>أسئلة متوقّعة للسنوات <b>2026 – 2030</b> (دور أول ودور ثاني) مبنية على تحليل إحصائي لأسئلة السنوات <b>2011 – 2023</b>، وبالبنية الرسمية الحقيقية لورقة الامتحان الوزاري.</p>
+    <span class="chip">📊 تحليل 616 سؤالاً عبر 11 سنة + ورقة رسمية 2025/2026</span>
+  </div>
+
+  <!-- تنويه إلزامي ثابت -->
+  <div class="disclaimer">
+    <span class="em">⚠️</span>
+    <span>هذه <b>توقعات دراسية</b> مبنية على تحليل إحصائي لأسئلة السنوات السابقة، وهي <b>ليست أسئلة مسرّبة أو مضمونة</b>. الغرض منها توجيه المراجعة والتدريب، والاعتماد الأساسي يجب أن يكون على فهم المنهج كاملاً.</span>
+  </div>
+
+  <!-- شريط الإحصائيات -->
+  <div class="section-title"><span class="ico">📊</span> ملخّص التحليل</div>
+  <div class="statsbar">
+    <div class="statcard">
+      <h3>🏆 أكثر الفصول تكراراً (بنسبة الأسئلة)</h3>
+      <div id="stat-chapters"></div>
+    </div>
+    <div class="statcard">
+      <h3>✍️ توزيع أنواع الأسئلة</h3>
+      <div id="stat-types"></div>
+    </div>
+  </div>
+
+  <!-- أولويات المراجعة الذكية -->
+  <div class="section-title"><span class="ico">🎯</span> أولويات المراجعة الذكية</div>
+  <p class="result-count" style="margin-top:-6px">رتّبنا لك المواضيع حسب تكرارها الفعلي في الامتحانات — ابدأ بالعمود الأخضر. علّم ما أتقنته (يُحفظ تلقائياً على جهازك).</p>
+  <div class="prio-progress">
+    <span id="prio-count">أنجزت 0</span>
+    <span class="track"><span class="fill" id="prio-fill" style="width:0%"></span></span>
+  </div>
+  <div class="prio">
+    <div class="priocol must"><h3>🟢 شبه مضمونة</h3><div class="sub">تظهر كل سنة تقريباً — أتقِنها أولاً</div><div id="prio-must"></div></div>
+    <div class="priocol rotate"><h3>🟡 متناوبة</h3><div class="sub">تظهر سنة وتغيب أخرى — راجعها جيداً</div><div id="prio-rotate"></div></div>
+    <div class="priocol comeback"><h3>🔴 مرشّحة للعودة</h3><div class="sub">غابت منذ سنوات ويُتوقّع رجوعها</div><div id="prio-comeback"></div></div>
+  </div>
+
+  <!-- بطاقة القوانين -->
+  <div class="section-title"><span class="ico">📐</span> بطاقة القوانين (للمسائل)</div>
+  <div class="formulas">
+    <div class="fcard"><b>قانون كولوم</b><div class="eq">F = K·q₁·q₂ / r²</div><small>K = 9×10⁹ N·m²/C²</small></div>
+    <div class="fcard"><b>المجال الكهربائي</b><div class="eq">E = F / q = K·q / r²</div><small>الوحدة: N/C</small></div>
+    <div class="fcard"><b>قانون أوم</b><div class="eq">V = I · R</div><small>فولت = أمبير × أوم</small></div>
+    <div class="fcard"><b>المقاومة المكافئة</b><div class="eq">توالي: R=R₁+R₂ · توازي: 1/R=1/R₁+1/R₂</div></div>
+    <div class="fcard"><b>القوة الدافعة</b><div class="eq">emf = I · (R + r)</div><small>r = المقاومة الداخلية</small></div>
+    <div class="fcard"><b>القدرة الكهربائية</b><div class="eq">P = V·I = I²·R = V²/R</div><small>الوحدة: واط W</small></div>
+    <div class="fcard"><b>الطاقة والكلفة</b><div class="eq">W = P · t</div><small>كيلوواط·ساعة</small></div>
+    <div class="fcard"><b>المحوّلة</b><div class="eq">Vₚ/Vₛ = Nₚ/Nₛ = Iₛ/Iₚ</div><small>مثالية: VₚIₚ = VₛIₛ</small></div>
+  </div>
+
+  <!-- أزرار الوضع -->
+  <div class="mode-toggle">
+    <span class="fgroup" style="flex:1 1 auto">
+      <label style="font-size:.78rem;font-weight:800;color:var(--ink-soft)">وضع الامتحان التجريبي — اختر النموذج:</label>
+      <span style="display:flex;gap:8px;flex-wrap:wrap">
+        <select id="exam-pick"></select>
+        <button class="btn small coral" id="start-exam">⏱️ ابدأ الامتحان التجريبي</button>
+      </span>
+    </span>
+  </div>
+
+  <!-- وضع التصفّح -->
+  <div class="browsewrap">
+    <div class="section-title"><span class="ico">🗂️</span> تصفّح الأسئلة المتوقّعة</div>
+    <div class="filters">
+      <span class="fgroup">السنة <select id="f-year"></select></span>
+      <span class="fgroup">الدور <select id="f-door"></select></span>
+      <span class="fgroup">الفصل <select id="f-chapter"></select></span>
+      <span class="fgroup">نوع السؤال <select id="f-type"></select></span>
+    </div>
+    <div class="result-count" id="result-count"></div>
+    <div id="browse-list"></div>
+  </div>
+
+  <!-- وضع الامتحان -->
+  <div class="examwrap" id="examwrap">
+    <div class="examhead">
+      <div>
+        <div class="exmeta" id="exam-title"></div>
+        <div class="exmeta" id="exam-conf" style="font-size:.8rem;opacity:.9"></div>
+      </div>
+      <div class="timer" id="exam-timer">--:--</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn small green" id="reveal-btn">🔓 إنهاء وإظهار الحلول</button>
+        <button class="btn small" id="print-exam">🖨️ طباعة</button>
+        <button class="btn small ghost" id="exit-exam">↩️ خروج</button>
+      </div>
+    </div>
+    <div id="exam-body"></div>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع · 📞 07800155157</footer>
+</div>
+
+<script src="../js/core.js"></script>
+<script src="../js/predictions-data.js"></script>
+<script src="../js/predictions.js"></script>
+<script src="../js/access-control.js"></script>
+</body>
+</html>

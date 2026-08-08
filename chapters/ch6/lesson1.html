@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 1: تجربة أورستد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch6">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السادس</a> / الدرس 1</span>
+  </div>
+
+  <div class="hero">
+    <h1>🧭 الدرس 1: تجربة أورستد</h1>
+    <p>عام 1820 كان أورستد يشرح لطلابه... فلاحظ إبرة بوصلة تنحرف قرب سلك فيه تيار! لحظة غيّرت تاريخ الفيزياء — واليوم ستعيدها بنفسك.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔗</span>
+    <span>قبل أورستد كانت الكهرباء والمغناطيسية عالمين منفصلين... تجربة واحدة أثبتت أنهما <b>وجهان لعملة واحدة</b>!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔬</span> نشاط: تجربة أورستد</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">نشاط</span> اذكر نشاط يمكنك من خلاله معرفة تأثير المجال المغناطيسي للتيار الكهربائي المنساب في السلك. (تجربة اورستد)</summary>
+      <div class="ans">
+        <b>الأدوات:</b> ١. إبرة مغناطيسية تستند على حامل مدبب &nbsp; ٢. سلك غليظ بطول 30 cm &nbsp; ٣. بطارية بفولطية 1.5 v &nbsp; ٤. أسلاك توصيل &nbsp; ٥. مفتاح كهربائي.<br>
+        <b>العمل:</b><br>
+        <b>١.</b> نترك الإبرة المغناطيسية حرة تتجه بموازاة المجال المغناطيسي الأرضي.<br>
+        <b>٢.</b> نجعل السلك الغليظ فوق الإبرة المغناطيسية بحيث يكون موازيا لمحورها.<br>
+        <b>٣.</b> نربط فيصل كل غليظ بين قطبي البطارية وعبر المفتاح الكهربائي.<br>
+        <b>٤.</b> نغلق المفتاح لبرهه من الزمن سنلاحظ انحراف الإبرة المغناطيسية ومن ثم استقرارها بوضع عمودي على طول السلك اما عند انقطاع التيار فإن الإبرة تعود إلى وضعها السابق.<br>
+        <b>٥.</b> نعكس اتجاه التيار وذلك بعكس قطبية النضيدة ونغلق المفتاح لبرهه من الزمن سنلاحظ أيضا انحراف الإبرة عمودي على طول السلك ولكن بوضع معاكس للحالة الأولى.<br>
+        أن انحراف الإبرة يدل على تأثرها بعزم قوة مغناطيسية بسبب وجودها في مجال مغناطيسي كما أن عودتها إلى وضعها السابق عند انقطاع التيار يدل على أن هذا التيار ولد مجال مغناطيسي.<br>
+        <b>الاستنتاج:</b> أنا انسياب التيار الكهربائي في سلك موصل يولد حوله مجالا مغناطيسيا.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما هو أستنتاج أورستد؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">أن أنسياب تيار كهربائي في سلك موصل يولد حوله مجال مغناطيسي.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> في تجربة اورستد ماذا يحدث لو وضعنا الابرة المغناطيسية فوق السلك الغليظ وبصورة موازية له؟</summary>
+      <div class="ans">سوف تنحرف الابرة بشكل عمودي مع السلك، ويكون انحرافها باتجاه معاكس لو كانت تحت السلك.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> في تجربة اورستد ما الغرض من استعمال السلك الغليظ؟</summary>
+      <div class="ans">لان السلك الغيظ تكون مساحة مقطعة العرضي كبيرة وبالتالي سوف يسحب تيار عالي يولد حوله مجال مغناطيسي كافي لأجراء التجربة.</div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة تجربة أورستد ======== -->
+  <div class="sim">
+    <h3>🎬 نفّذ تجربة أورستد بنفسك</h3>
+    <p class="sim-sub">أغلق المفتاح وراقب الإبرة، ثم اعكس قطبية البطارية وشاهد الفرق!</p>
+    <canvas id="oerSim" width="700" height="380"></canvas>
+    <div class="controls">
+      <button class="btn green" id="oerBtn">🔒 أغلق المفتاح</button>
+      <button class="btn" id="revBtn">🔄 اعكس قطبية النضيدة</button>
+    </div>
+    <div class="controls"><span class="readout" id="oerState">الإبرة حرة تتجه بموازاة المجال المغناطيسي الأرضي، والسلك فوقها موازٍ لمحورها.</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">💬</span> أسئلة وعلل التجربة</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ماذا يحصل للإبرة المغناطيسية في تجربة اورستد عند غلق المفتاح الكهربائي الموصل بالبطارية لبرهه من الزمن ؟</summary>
+      <div class="ans">نلاحظ انحراف الإبرة المغناطيسية ومن ثم استقرارها بوضع عمودي على طول السلك ثم عودتها إلى وضعها السابق بعد انقطاع التيار.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ماذا يحصل للإبرة المغناطيسية في تجربة اور ستد عند عكس قطبية النضيدة (عكس اتجاه التيار) وأغلق المفتاح الكهربائي الموصل بالبطارية لفترة من الزمن؟</summary>
+      <div class="ans">نلاحظ انحراف الإبرة المغناطيسية ومن ثمة استقرارها بوضع عمودي على طول السلك باتجاه معاكس للحالة الأولى.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> انحراف الإبرة المغناطيسية الموضوعة أسفل سلك غليظ عند انسياب تيار كهربائي ؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">أن انحراف الإبرة يدل على تأثرها بعزم قوة مغناطيسية بسبب وجودها في مجال مغناطيسي ناشئ من مرور التيار في السلك.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> انعكاس اتجاه الإبرة المغناطيسية عند انعكاس التيار (انعكاس قطبي البطارية) المار في السلك؟</summary>
+      <div class="ans">بسبب انعكاس اتجاه التيار المار في السلك والذي يؤدي إلى تولد مجال مغناطيسي معاكس للحالة الأولى وبالتالي فإن الإبرة المغناطيسية تنحرف تبعا لاتجاه التيار الذي يولد ذلك المجال.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> تعود الإبرة المغناطيسية في تجربة اورستد إلى وضعها السابق عند انقطاع التيار الكهربائي عن السلك المار بموازاتها؟</summary>
+      <div class="ans">لأن عند قطع التيار الكهربائي سوف ينقطع المجال المغناطيسي الذي سبب بتأثرها بعزم قوة مغناطيسية وبالتالي تعود الإبرة إلى وضعها الأصلي لعدم توفر تيار يولد مجال مغناطيسي.</div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>ان انسياب تيار كهربائي في سلك موصل يولد حوله <b>مجال مغناطيسي</b> وهذا ما استنتجه اورستد. <span class="wz">وزاري</span></li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson2.html">الدرس التالي: مجال السلك المستقيم ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة تجربة أورستد ---------- */
+(function () {
+  var cv = document.getElementById("oerSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height;
+  var closed = false, reversed = false, angle = 0, t = 0;
+  var btn = document.getElementById("oerBtn");
+  var rev = document.getElementById("revBtn");
+  var state = document.getElementById("oerState");
+
+  var nx = W / 2, ny = H / 2 + 30; // مركز الإبرة
+  var wireY = ny - 60;
+
+  btn.onclick = function () {
+    closed = !closed;
+    btn.textContent = closed ? "🔓 افتح المفتاح" : "🔒 أغلق المفتاح";
+    btn.classList.toggle("green", !closed);
+    state.textContent = closed
+      ? "انحرفت الإبرة واستقرت بوضع عمودي على طول السلك — التيار ولّد حوله مجالاً مغناطيسياً!"
+      : "انقطع التيار فعادت الإبرة إلى وضعها السابق بموازاة المجال المغناطيسي الأرضي.";
+  };
+  rev.onclick = function () {
+    reversed = !reversed;
+    state.textContent = closed
+      ? "عكسنا قطبية النضيدة: انحرفت الإبرة عمودياً على السلك ولكن بوضع معاكس للحالة الأولى!"
+      : "عكسنا القطبية — أغلق المفتاح لترى انحراف الإبرة بالاتجاه المعاكس.";
+  };
+
+  function tick() {
+    t += 0.016;
+    ctx.clearRect(0, 0, W, H);
+    ctx.textAlign = "center";
+
+    // هدف زاوية الإبرة: 0 = موازية للسلك (شمال-جنوب) — 90 = عمودية
+    var target = closed ? (reversed ? -Math.PI / 2 : Math.PI / 2) : 0;
+    angle += (target - angle) * 0.06;
+
+    // البطارية والمفتاح أعلى
+    var bx = W / 2 - 180, by = 60;
+    ctx.fillStyle = "#fff"; ctx.fillRect(bx - 40, by - 16, 80, 32);
+    ctx.fillStyle = reversed ? "#e63946" : "#0e9f6e"; ctx.fillRect(bx - 40, by - 16, 40, 32);
+    ctx.fillStyle = reversed ? "#0e9f6e" : "#e63946"; ctx.fillRect(bx, by - 16, 40, 32);
+    ctx.strokeStyle = "#2d3142"; ctx.lineWidth = 2; ctx.strokeRect(bx - 40, by - 16, 80, 32);
+    ctx.fillStyle = "#fff"; ctx.font = "bold 17px Cairo";
+    ctx.fillText(reversed ? "+" : "−", bx - 20, by + 6);
+    ctx.fillText(reversed ? "−" : "+", bx + 20, by + 6);
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("بطارية 1.5V", bx, by + 32);
+
+    // المفتاح
+    var sx = W / 2 + 160, sy = 60;
+    ctx.strokeStyle = "#e63946"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(sx - 20, sy);
+    if (closed) ctx.lineTo(sx + 20, sy); else ctx.lineTo(sx + 14, sy - 16);
+    ctx.stroke();
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 12px Cairo";
+    ctx.fillText(closed ? "المفتاح (مغلق)" : "المفتاح (مفتوح)", sx, sy - 24);
+
+    // أسلاك التوصيل إلى السلك الغليظ
+    ctx.strokeStyle = "#9a7b4f"; ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(bx + 40, by); ctx.lineTo(sx - 20, sy);
+    ctx.moveTo(sx + 20, sy); ctx.lineTo(nx + 210, wireY);
+    ctx.moveTo(bx - 40, by); ctx.lineTo(nx - 210, wireY);
+    ctx.stroke();
+
+    // السلك الغليظ فوق الإبرة (أفقي)
+    ctx.strokeStyle = "#b45309"; ctx.lineWidth = 9; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(nx - 210, wireY); ctx.lineTo(nx + 210, wireY); ctx.stroke();
+    ctx.lineCap = "butt";
+    ctx.fillStyle = "#7a5c1e"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("السلك الغليظ (30cm) موازٍ لمحور الإبرة", nx, wireY - 16);
+
+    // تيار متحرك في السلك
+    if (closed) {
+      ctx.fillStyle = "#f43f5e";
+      for (var i = 0; i < 8; i++) {
+        var f = ((t * 0.5 + i / 8) % 1);
+        var px = reversed ? (nx + 200 - f * 400) : (nx - 200 + f * 400);
+        ctx.beginPath(); ctx.arc(px, wireY, 4, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.font = "bold 12px Cairo"; ctx.fillStyle = "#be123c";
+      ctx.fillText(reversed ? "← اتجاه التيار" : "اتجاه التيار →", nx + (reversed ? -150 : 150), wireY + 24);
+    }
+
+    // قاعدة الإبرة (حامل مدبب)
+    ctx.fillStyle = "#8d99ae";
+    ctx.beginPath(); ctx.moveTo(nx - 12, ny + 62); ctx.lineTo(nx + 12, ny + 62); ctx.lineTo(nx, ny); ctx.closePath(); ctx.fill();
+
+    // دائرة البوصلة
+    ctx.beginPath(); ctx.arc(nx, ny, 56, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(255,255,255,.8)"; ctx.fill();
+    ctx.strokeStyle = "#b9c0cc"; ctx.lineWidth = 2; ctx.stroke();
+
+    // الإبرة المغناطيسية (تدور)
+    ctx.save();
+    ctx.translate(nx, ny);
+    ctx.rotate(angle);
+    // نصف أحمر (شمال) يشير يميناً افتراضاً
+    ctx.fillStyle = "#e63946";
+    ctx.beginPath(); ctx.moveTo(0, -7); ctx.lineTo(48, 0); ctx.lineTo(0, 7); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = "#2b6cb0";
+    ctx.beginPath(); ctx.moveTo(0, -7); ctx.lineTo(-48, 0); ctx.lineTo(0, 7); ctx.closePath(); ctx.fill();
+    ctx.restore();
+    ctx.beginPath(); ctx.arc(nx, ny, 5, 0, Math.PI * 2); ctx.fillStyle = "#2d3142"; ctx.fill();
+
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("الإبرة المغناطيسية على حامل مدبب", nx, ny + 88);
+
+    if (closed) {
+      ctx.fillStyle = "#1d4ed8"; ctx.font = "bold 14px Cairo";
+      ctx.fillText(reversed ? "استقرت عمودياً — بوضع معاكس للحالة الأولى!" : "استقرت الإبرة عمودياً على طول السلك!", nx, H - 16);
+    }
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "استنتاج أورستد هو:",
+    opts: ["أن أنسياب تيار كهربائي في سلك موصل يولد حوله مجال مغناطيسي", "أن المغناطيس يولد تياراً كهربائياً", "أن الإبرة المغناطيسية تنجذب للنحاس", "أن البطارية تولد مجالاً كهربائياً فقط"], a: 0,
+    why: "الاستنتاج الوزاري الشهير — أساس الكهرومغناطيسية كلها!" },
+  { q: "في تجربة اورستد نترك الإبرة المغناطيسية حرة فتتجه:",
+    opts: ["بموازاة المجال المغناطيسي الأرضي", "نحو السلك دائماً", "عمودياً على الأرض", "باتجاه عشوائي"], a: 0,
+    why: "الخطوة الأولى: الإبرة الحرة تتجه بموازاة المجال المغناطيسي الأرضي." },
+  { q: "عند غلق المفتاح في تجربة اورستد تنحرف الإبرة وتستقر:",
+    opts: ["بوضع عمودي على طول السلك", "بموازاة السلك", "رأسياً نحو الأعلى", "لا تتحرك ابداً"], a: 0,
+    why: "تنحرف ثم تستقر عمودية على السلك — وعند قطع التيار تعود لوضعها السابق." },
+  { q: "عند عكس قطبية النضيدة وغلق المفتاح تنحرف الإبرة:",
+    opts: ["عمودياً على السلك ولكن بوضع معاكس للحالة الأولى", "بنفس اتجاه الحالة الأولى", "لا تنحرف نهائياً", "تدور دورات كاملة"], a: 0,
+    why: "انعكاس التيار = مجال مغناطيسي معاكس = انحراف معاكس." },
+  { q: "انحراف الإبرة في التجربة يدل على تأثرها بـ:",
+    opts: ["عزم قوة مغناطيسية بسبب وجودها في مجال مغناطيسي ناشئ من مرور التيار", "قوة كهربائية ساكنة", "قوة الجاذبية", "تيار محتث فيها"], a: 0,
+    why: "علل وزاري — المجال الناشئ من التيار يؤثر عليها بعزم قوة مغناطيسية." },
+  { q: "تعود الإبرة إلى وضعها السابق عند انقطاع التيار لأن:",
+    opts: ["المجال المغناطيسي ينقطع لعدم توفر تيار يولده", "الإبرة فقدت مغناطيسيتها", "السلك أصبح مغناطيساً دائمياً", "الأرض فقدت مجالها"], a: 0,
+    why: "لا تيار = لا مجال = الإبرة تعود لمحاذاة مجال الأرض." },
+  { q: "لو وضعنا الابرة المغناطيسية فوق السلك الغليظ وبصورة موازية له:",
+    opts: ["تنحرف عمودياً مع السلك وبانحراف معاكس لو كانت تحت السلك", "لا تنحرف ابداً", "تنحرف بنفس اتجاه ما لو كانت تحته", "تلتصق بالسلك"], a: 0,
+    why: "فوق السلك الانحراف عمودي أيضاً لكن باتجاه معاكس لحالة تحت السلك." },
+  { q: "الغرض من استعمال السلك الغليظ في تجربة اورستد:",
+    opts: ["مساحة مقطعه العرضي كبيرة فيسحب تياراً عالياً يولد مجالاً مغناطيسياً كافياً للتجربة", "لأنه أرخص", "لمنع الكهرباء من التسرب", "ليكون ثقيلاً فلا يتحرك"], a: 0,
+    why: "مقطع كبير ⟸ مقاومة أقل ⟸ تيار عالٍ ⟸ مجال مغناطيسي كافٍ." }
+], { onDone: function (stars) { Phy.setLesson("ch6", "1", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

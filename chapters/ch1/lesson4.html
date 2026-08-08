@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: الكشاف الكهربائي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الأول</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔬 الدرس 4: الكشاف الكهربائي</h1>
+    <p>جهاز بسيط بورقتين رقيقتين... لكنه يكشف أسرار الشحنات كلها!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🕵️‍♀️</span>
+    <span>كيف نعرف إن كان جسم ما <b>مشحوناً</b>؟ وكيف نعرف <b>نوع</b> شحنته؟ المحقق الذي يجيب عن السؤالين اسمه <b>الكشاف الكهربائي</b>!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> تعريفه وتركيبه</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما الكشاف الكهربائي وما الغرض منهُ؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">هو جهاز يستخدم في تجارب الكهربائية الساكنة لأغراض منها:<br>
+        <b>١.</b> الكشف عن وجود شحنة كهربائية على جسم ما.<br>
+        <b>٢.</b> معرفة نوع الشحنة الكهربائية على الجسم المشحون.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> مم يتركب الكشاف الكهربائي؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">يتألف الكشاف الكهربائي من:<br>
+        <b>١.</b> ساق معدنية طويلة.<br>
+        <b>٢.</b> قرص معدني يتصل بالطرف العلوي للساق.<br>
+        <b>٣.</b> ورقتين من الذهب أو الألمنيوم تتصلان بالطرف السفلي للساق.<br>
+        <b>٤.</b> صندوق من الزجاج أو المعدن (للحفاظ عليه من التأثيرات الخارجية).<br>
+        <b>٥.</b> سداد من الفلين في الجزء العلوي من الصندوق.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما هي طرق شحن الكشاف الكهربائي؟</summary>
+      <div class="ans">١- طريقة التماس (التوصيل) &nbsp; ٢- طريقة الحث.</div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة الكشاف ======== -->
+  <div class="sim">
+    <h3>🧪 الكشاف التفاعلي</h3>
+    <p class="sim-sub">اختر ساقاً مشحوناً، ثم قرّبه من القرص أو المسه، وراقب الورقتين! جرب أيضاً لمس القرص بإصبعك (تأريض).</p>
+    <div class="controls" style="margin-top:0;margin-bottom:12px">
+      <button class="btn small" id="rodNeg">ساق مطاط (−) 🖤</button>
+      <button class="btn small ghost" id="rodPos">ساق زجاج (+) 🤍</button>
+    </div>
+    <canvas id="scopeSim" width="700" height="360"></canvas>
+    <div class="controls">
+      <button class="btn" id="nearBtn">👉 تقريب الساق (حث)</button>
+      <button class="btn green" id="touchBtn">🤝 لمس القرص (تماس)</button>
+      <button class="btn coral" id="groundBtn">☝️ لمس بالإصبع (تأريض)</button>
+      <button class="btn ghost" id="awayBtn">🔙 إبعاد الساق</button>
+    </div>
+    <div class="controls"><span class="readout" id="scopeMsg" style="flex:1"></span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">💬</span> أسئلة الكشاف الوزارية</div>
+  <div class="card">
+    <details class="qa">
+      <summary><span class="tag">نشاط</span> اشرح نشاط توضح فيه شحن الكشاف الكهربائي بطريقة التماس؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>الأدوات:</b> ١- كشاف كهربائي ٢- مشط من البلاستك.<br>
+        <b>العمل:</b> ١- ندلك المشط بالشعر بشرط أن يكون جافاً، كي لا يحصل تفريغ كهربائي. ٢- نجعل المشط يلامس قرص الكشاف المتعادل كهربائياً. نلاحظ ابتعاد ورقتي الكشاف.<br>
+        <b>الإستنتاج:</b> عند حصول التماس بين المشط المشحون وقرص الكشاف المتعادل كهربائياً تبتعد ورقتا الكشاف بسبب ظهور قوة تنافر بينهما لإكتساب الورقتين النوع نفسهُ من الشحنات.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">نشاط</span> وضح بنشاط تبين فيه شحن كشاف كهربائي بطريقة الحث؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>الأدوات:</b> ١- كشاف كهربائي ٢- ساق من زجاج ٣- قطعة من الحرير.<br>
+        <b>العمل:</b><br>
+        ١- ندلك ساق الزجاج بقطعة الحرير تظهر على الساق شحنة موجبة.<br>
+        ٢- نقرب ساق الزجاج المشحون من قرص كشاف متعادل الشحنة (سينشحن قرص الكشاف بالشحنة السالبة المقيدة وتنشحن ورقة الألمنيوم بالشحنة الموجبة وهي الشحنة الطليقة) كهربائياً نلاحظ تنافر ورقة الكشاف الكهربائي.<br>
+        ٣- نصل قرص الكشاف بالأرض ((بوضع اصبع اليد على قرص الكشاف)) مع بقاء ساق الزجاج المشحونة بالقرب من قرص الكشاف نلاحظ إنطباق الورقة على ساق الكشاف بسبب اكتساب الكشاف شحنات من الأرض.<br>
+        ٤- نقطع اتصال قرص الكشاف بالأرض ((نرفع اصبع اليد على القرص)) مع بقاء ساق الزجاج المشحونة بالقرب من قرص الكشاف نلاحظ بقاء الورقة ساق الكشاف.<br>
+        ٥- نبعد ساق الزجاج عن الكشاف نلاحظ تنافر ورقة الألمنيوم مع ساق الكشاف وهذا يدل على توزع الشحنات الباقية ((الشحنات التي كانت مقيدة)) على قرص الكشاف والساق والورقة.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف يمكن الكشف عن وجود الشحنة باستخدام الكشاف الكهربائي؟</summary>
+      <div class="ans">يتم الكشف عن وجود الشحنة وذلك عن طريق تقريب الجسم المراد الكشف عن امتلاكه شحنه أم لا من قرص الكشاف، فاذا انفرجت ورقتا الكشاف دل ذلك على ان الجسم مشحون، اما إذا بقيت ورقتي الكشاف منطبقة فان الجسم غير مشحون.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف يمكن معرفة نوع شحنة جسم مشحون باستخدام الكشاف الكهربائي؟</summary>
+      <div class="ans">
+        <b>١.</b> يشحن الكشاف بشحنة معلومة بالنسبة لنا.<br>
+        <b>٢.</b> نقرب الجسم المراد معرفة نوع شحنته من قرص الكشاف، فاذا:<br>
+        &nbsp;&nbsp;أ- أزداد انفراج ورقتي الكشاف دل على ان الجسم مشحون بشحنة <b>مشابهة</b> لشحنة الكشاف.<br>
+        &nbsp;&nbsp;ب- قل انفراج ورقتي الكشاف دل ذلك على ان الجسم مشحون بشحنة <b>مخالفة</b> لشحنة الكشاف.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> يزداد انفراج ورقتي الكشاف الكهربائي المشحون بشحنة سالبة عند تقريب جسم مشحون بشحنة سالبة منهُ؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">يزداد انفراج ورقتي الكشاف الكهربائي لأن الشحنات السالبة على قرص الكشاف تنافرت مع الشحنات السالبة للجسم لذلك زاد انفراج ورقتي الكشاف.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> يزداد إنفراج ورقتي الكشاف الكهربائي المشحون بشحنة موجبة عند تقريب جسم مشحون بشحنة موجبة من قرصه؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">يزداد انفراج ورقتي الكشاف الكهربائي لأن الشحنات الموجبة بقرص الكشاف سوف تتنافر مع الشحنات الموجبة الموجودة في ذلك الجسم.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ماذا يحصل عند ملامسة قرص الكشاف الكهربائي المتعادل لجسم مشحون بشحنة سالبة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">سوف يزداد انفراج ورقتي الكشاف الكهربائي بسبب ظهور قوة تنافر بينهما لإكتساب الورقتين النوع نفسهُ من الشحنات.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> لماذا تنفرج ورقتا الكشاف الكهربائي المشحون بطريقة التماس؟</summary>
+      <div class="ans">وذلك لاكتسابهما شحنة مماثلة لشحنة الجسم الملامس.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> لماذا تنجذب ورقتا الكشاف الكهربائي المشحون بطريق الحث؟</summary>
+      <div class="ans">وذلك لاكتسابهما شحنة مخالفة لشحنة الجسم المقرب من قرص الكشاف.</div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz4"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson3.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: التطبيقات والمواد ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- الكشاف التفاعلي ---------- */
+(function () {
+  var cv = document.getElementById("scopeSim"), ctx = cv.getContext("2d");
+  var rodSign = -1;            // -1 مطاط، +1 زجاج
+  var rodNear = false;         // الساق قريبة
+  var scopeCharge = 0;         // شحنة الكشاف المخزنة (بالتماس)
+  var grounded = false;
+  var leafAngle = 0, target = 0;
+
+  var bNeg = document.getElementById("rodNeg"), bPos = document.getElementById("rodPos");
+  function msg(t) { document.getElementById("scopeMsg").innerHTML = t; }
+
+  bNeg.onclick = function () { rodSign = -1; bNeg.className = "btn small"; bPos.className = "btn small ghost"; update(); };
+  bPos.onclick = function () { rodSign = 1; bPos.className = "btn small"; bNeg.className = "btn small ghost"; update(); };
+
+  document.getElementById("nearBtn").onclick = function () { rodNear = true; grounded = false; update(); };
+  document.getElementById("awayBtn").onclick = function () { rodNear = false; grounded = false; update(); };
+  document.getElementById("touchBtn").onclick = function () {
+    rodNear = true; grounded = false; scopeCharge = rodSign; update(true);
+  };
+  document.getElementById("groundBtn").onclick = function () {
+    grounded = true;
+    if (rodNear) { scopeCharge = 0; msg("☝️ التأريض مع بقاء الساق قريبة: الشحنة الطليقة تسربت! ارفع الساق الآن لترى شحنة الحث (المخالفة).") ; scopeCharge = 0; groundedInduction = true; }
+    else { scopeCharge = 0; msg("☝️ لمس القرص فرّغ شحنة الكشاف إلى الأرض — الورقتان تنطبقان."); }
+    update();
+  };
+  var groundedInduction = false;
+
+  function update(touched) {
+    // حساب الانفراج
+    if (groundedInduction && !rodNear && !grounded) {
+      scopeCharge = -rodSign; groundedInduction = false;
+    }
+    var eff = 0;
+    if (rodNear && !grounded) eff = Math.abs(scopeCharge) ? Math.abs(scopeCharge + rodSign) * 0.5 + 0.5 : 0.8;
+    else eff = Math.abs(scopeCharge) ? 0.7 : 0;
+    if (grounded && rodNear) eff = 0.05;
+    target = eff * 0.65;
+
+    if (touched) msg("🤝 تماس! انتقلت الشحنة (" + (rodSign > 0 ? "الموجبة" : "السالبة") + ") إلى الكشاف — الورقتان اكتسبتا الشحنة نفسها فتنافرتا. <b>التماس يطابق</b>.");
+    else if (rodNear && !grounded && scopeCharge === 0) msg("👉 حث! الشحنة " + (rodSign > 0 ? "السالبة" : "الموجبة") + " المقيدة تجمعت في القرص، و" + (rodSign > 0 ? "الموجبة" : "السالبة") + " الطليقة نزلت للورقتين فانفرجتا.");
+    else if (rodNear && !grounded && scopeCharge !== 0) {
+      if (scopeCharge === rodSign) msg("📈 <b>ازداد الانفراج</b>: شحنة الجسم مشابهة لشحنة الكشاف (تنافر أقوى).");
+      else msg("📉 <b>قلّ الانفراج</b>: شحنة الجسم مخالفة لشحنة الكشاف.");
+    }
+    else if (!rodNear && scopeCharge !== 0) msg("الكشاف مشحون بشحنة " + (scopeCharge > 0 ? "موجبة ✚" : "سالبة −") + " — الورقتان منفرجتان حتى بدون الساق.");
+    else if (!rodNear && scopeCharge === 0) msg("الكشاف متعادل: الورقتان منطبقتان. جرب التقريب أو التماس!");
+  }
+
+  function sign(x, y, s) {
+    ctx.fillStyle = s === "+" ? "#ff6b6b" : "#4d96ff";
+    ctx.font = "bold 16px Cairo"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText(s, x, y); ctx.textBaseline = "alphabetic";
+  }
+
+  function draw() {
+    leafAngle += (target - leafAngle) * 0.08;
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    var cx = 390, topY = 70;
+    // الساق المشحونة
+    var rodX = rodNear ? cx - 105 : 120;
+    ctx.save(); ctx.translate(rodX, topY - 22); ctx.rotate(-0.35);
+    ctx.fillStyle = rodSign < 0 ? "#4a4e69" : "#cfe8ef";
+    if (ctx.roundRect) { ctx.beginPath(); ctx.roundRect(-80, -12, 160, 24, 9); ctx.fill(); } else ctx.fillRect(-80, -12, 160, 24);
+    for (var s = -60; s <= 60; s += 24) {
+      ctx.fillStyle = rodSign < 0 ? "#9ff0ff" : "#ff6b6b";
+      ctx.font = "bold 15px Cairo"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.fillText(rodSign < 0 ? "−" : "+", s, 0);
+    }
+    ctx.restore(); ctx.textBaseline = "alphabetic";
+    ctx.fillStyle = "#5c6178"; ctx.font = "12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText(rodSign < 0 ? "ساق المطاط (−)" : "ساق الزجاج (+)", rodX, topY - 60);
+
+    // القرص
+    ctx.fillStyle = "#ffd166";
+    ctx.beginPath(); ctx.ellipse(cx, topY, 55, 14, 0, 0, 7); ctx.fill();
+    ctx.strokeStyle = "#e0a800"; ctx.stroke();
+    // الساق المعدنية
+    ctx.fillStyle = "#b8bedd"; ctx.fillRect(cx - 5, topY, 10, 120);
+    // الصندوق الزجاجي
+    ctx.strokeStyle = "#9fb4ff"; ctx.lineWidth = 3;
+    ctx.strokeRect(cx - 110, topY + 60, 220, 210);
+    ctx.lineWidth = 1;
+    ctx.fillStyle = "rgba(180,200,255,.12)"; ctx.fillRect(cx - 110, topY + 60, 220, 210);
+    // سداد الفلين
+    ctx.fillStyle = "#c9a37c"; ctx.fillRect(cx - 28, topY + 52, 56, 16);
+    // الورقتان
+    var L = 85, base = { x: cx, y: topY + 122 };
+    [-1, 1].forEach(function (dir) {
+      var a = Math.PI / 2 + dir * leafAngle;
+      ctx.save(); ctx.translate(base.x, base.y); ctx.rotate(dir * leafAngle);
+      var g = ctx.createLinearGradient(0, 0, 0, L);
+      g.addColorStop(0, "#ffe9a8"); g.addColorStop(1, "#f6c453");
+      ctx.fillStyle = g;
+      ctx.fillRect(-4, 0, 8, L);
+      ctx.restore();
+    });
+    // شحنات على القرص والورقتين
+    var showScope = scopeCharge !== 0 ? (scopeCharge > 0 ? "+" : "−") : null;
+    if (rodNear && !grounded && scopeCharge === 0) {
+      var bound = rodSign > 0 ? "−" : "+", free = rodSign > 0 ? "+" : "−";
+      for (var i = 0; i < 3; i++) sign(cx - 40 + i * 12, topY + 2, bound);
+      sign(cx - 14, topY + 150 - 8, free); sign(cx + 14, topY + 150 - 8, free);
+    } else if (showScope) {
+      for (var j = 0; j < 3; j++) sign(cx - 24 + j * 24, topY + 2, showScope);
+      sign(cx - 16 - leafAngle * 40, topY + 175, showScope);
+      sign(cx + 16 + leafAngle * 40, topY + 175, showScope);
+    }
+    if (grounded) { ctx.font = "26px Cairo"; ctx.fillText("☝️", cx + 70, topY - 8); }
+    // تسميات
+    ctx.fillStyle = "#8a90ab"; ctx.font = "11px Cairo";
+    ctx.fillText("قرص معدني", cx + 95, topY + 4);
+    ctx.fillText("ورقتا الألمنيوم", cx + 92, topY + 190);
+    requestAnimationFrame(draw);
+  }
+  update();
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz4", [
+  { q: "الغرض من الكشاف الكهربائي:",
+    opts: ["توليد الشحنات", "الكشف عن وجود الشحنة ومعرفة نوعها", "تخزين الكهرباء", "قياس التيار"], a: 1,
+    why: "سؤال وزاري: كشف وجود شحنة على جسم ما + معرفة نوعها." },
+  { q: "ورقتا الكشاف تصنعان من:",
+    opts: ["الحديد أو النحاس", "الذهب أو الألمنيوم", "الزجاج", "البلاستيك"], a: 1,
+    why: "ورقتان من الذهب أو الألمنيوم تتصلان بالطرف السفلي للساق." },
+  { q: "عند تقريب جسم مشحون بشحنة موجبة من قرص كشاف مشحون بشحنة موجبة ذي الورقتين فان ذلك يؤدي الى:",
+    opts: ["ازدياد أنفراج ورقتي الكشاف", "نقصان مقدار انفراج ورقتي الكشاف", "انطباق ورقتي الكشاف", "لايتأثر مقدار أنفراج ورقتي الكشاف"], a: 0,
+    why: "سؤال وزاري: الشحنات الموجبة تتنافر فيزداد الانفراج." },
+  { q: "قرّبنا جسماً من قرص كشاف متعادل فانفرجت الورقتان، هذا يدل على أن الجسم:",
+    opts: ["متعادل", "مشحون", "موصل", "عازل"], a: 1,
+    why: "انفراج الورقتين عند التقريب = الجسم مشحون؛ بقاؤهما منطبقتين = غير مشحون." },
+  { q: "عند تقريب جسم مشحون بشحنة سالبة من قرص كشاف كهربائي متصل بالأرض:",
+    opts: ["تنفرج الورقتان نتيجة ضهور شحنة سالبة عليها", "تنفرج الورقتان نتيجة ضهور شحنة موجبة عليها", "تبقى ورقتا الكشاف على انطباقها على الرغم من ضهور شحنة موجبة على قرصه", "تبقى ورقتا الكشاف على انطباقها على الرغم من ضهور شحنة سالبة على قرصه"], a: 2,
+    why: "سؤال وزاري: مع الاتصال بالأرض تتسرب الشحنات الطليقة فتبقى الورقتان منطبقتين رغم الشحنة الموجبة المقيدة على القرص." },
+  { q: "شُحن كشاف بطريقة الحث بواسطة ساق زجاج موجبة، فتكون شحنة الكشاف:",
+    opts: ["موجبة مثل الساق", "سالبة (مخالفة للساق)", "متعادلة", "لا يمكن معرفتها"], a: 1,
+    why: "الحث يعطي شحنة مخالفة لشحنة الجسم الشاحن." }
+], { onDone: function (stars) { Phy.setLesson("ch1", "4", { stars: stars }); } });
+</script>
+</body>
+</html>

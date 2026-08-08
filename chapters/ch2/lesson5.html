@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: نفاذ المجال المغناطيسي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch2">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثاني</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>✋ الدرس 5: نفاذ المجال المغناطيسي</h1>
+    <p>حتى يدك لا توقفه! المجال المغناطيسي ينفذ من الكارتون والزجاج والماء وجسم الإنسان.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🪄</span>
+    <span>ضع مغناطيساً فوق كفّك ومثبتات ورق تحت الكف... سترى المثبتات <b>تلتصق بيدك</b> وكأنها مسحورة! المجال المغناطيسي عبر يدك كاملة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🖐️</span> النشاط الأول: النفاذ خلال جسم الإنسان</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">نشاط</span> اشرح نشاط توضح فيه ان المجال المغناطيسي يمكنه النفاذ من خلال جسم الانسان؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>الأدوات:</b> ١. مجموعة من مثبتات الورق مصنوعة من الفولاذ &nbsp; ٢. مغناطيس قوي.<br>
+        <b>طريقة العمل:</b><br>
+        <b>١.</b> نضع الساق المغناطيسية على كف يدنا.<br>
+        <b>٢.</b> نضع راحة يدنا على مجموعة من مثبتات الورق.<br>
+        <b>٣.</b> نرفع كف يدنا الى الاعلى نجد ان مجموعة منها قد انجذبت الى راحة كف يدنا.<br>
+        <b>الاستنتاج:</b> ان انجذاب مثبتات الورق دليل على ان المجال المغناطيسي نفذ من خلال جسم الانسان.
+      </div>
+    </details>
+  </div>
+
+  <!-- ======== رسم متحرك: نشاط النفاذ خلال جسم الإنسان ======== -->
+  <div class="sim">
+    <h3>🎬 شاهد النشاط: المجال ينفذ من كفّك!</h3>
+    <p class="sim-sub">نفّذ خطوات النشاط الوزاري خطوة بخطوة وشاهد مثبتات الورق تنجذب إلى راحة الكف.</p>
+    <canvas id="handSim" width="700" height="360"></canvas>
+    <div class="controls">
+      <button class="btn" id="handNext">▶️ الخطوة ١: نضع المغناطيس على كف اليد</button>
+      <button class="btn ghost" id="handReset">🔄 إعادة</button>
+      <span class="readout" id="handState">اضغط زر الخطوة لبدء النشاط</span>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">📦</span> النشاط الثاني: النفاذ خلال الورق المقوى</div>
+  <div class="card">
+    <details class="qa">
+      <summary><span class="tag">نشاط</span> اشرح نشاطاً توضح فيه أن المجال المغناطيسي يمكن النفاذ خلال قطعة من الورق المقوى (الكارتون)؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>الادوات:</b> ١. ساق مغناطيسية &nbsp; ٢. قطعة من الكارتون &nbsp; ٣. مجموعة مسامير.<br>
+        <b>خطوات العمل:</b><br>
+        <b>١.</b> نمسك الساق المغناطيسية بوضع شاقولي باليد.<br>
+        <b>٢.</b> نضع بعض مسامير الحديد بلطف على قطعة ورق المقوى.<br>
+        <b>٣.</b> نمسك قطعة ورقة المقوى باليد الأخرى ونضعها فوق القطب العلوي للمغناطيس.<br>
+        <b>٤.</b> نحرك الساق المغناطيسية تحت الورقة في مسار دائري أو بخط مستقيم.<br>
+        <b>٥.</b> نلاحظ أن مجموعة المسامير تنجذب نحو القطب المغناطيسي للساق وتتحرك متبعه المسار نفسه لحركة القطب المغناطيسي.<br>
+        <b>الاستنتاج:</b> نستنتج من هذا النشاط أن المجال المغناطيسي يمكنه النفاذ خلال مواد مختلفة منها الورق المقوى.
+      </div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">💧</span> النشاط الثالث: النفاذ خلال الماء</div>
+  <div class="card">
+    <details class="qa">
+      <summary><span class="tag">نشاط</span> اشرح نشاط توضح فيه أن المجال المغناطيسي يمكنه النفاذ من خلال الماء؟</summary>
+      <div class="ans">
+        <b>الادوات:</b> ١- ساق مغناطيسية &nbsp; ٢- مجموعة من المسامير &nbsp; ٣- إسطوانة زجاج &nbsp; ٤- ماء.<br>
+        <b>الخطوات:</b><br>
+        <b>١.</b> نجعل مجموعة المسامير داخل الأسطوانة الزجاجية ثم نضيف كمية مناسبة من الماء في الإسطوانه.<br>
+        <b>٢.</b> نقرب أحد قطبي الساق المغناطيسية من جدار الأسطوانة سنلاحظ أن المسامير تنجذب نحو قطب المغناطيس القريب منها.<br>
+        <b>٣.</b> نحرك القطب المغناطيسي للساق حول الأسطوانة نجد أن المسامير تتحرك متبعة المسار نفسه لحركة القطب المغناطيسي.<br>
+        <b>الاستنتاج:</b> نستنتج من هذا النشاط أن المجال المغناطيسي يمكنه النفاذ خلال مواد مختلفة منها الماء.
+      </div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <b>📌 الخلاصة:</b> يمكن للمجال المغناطيسي النفاذ خلال <b>جسم الإنسان</b> وكذلك خلال مواد مختلفة منها <b>الورق المقوى والزجاج والماء</b>.
+  </div>
+
+  <!-- ======== المحاكاة: اختبار النفاذ ======== -->
+  <div class="sim">
+    <h3>🧪 جرب بنفسك: هل ينفذ المجال؟</h3>
+    <p class="sim-sub">اختر الحاجز ثم اضغط «قرّب المغناطيس» — هل ستنجذب المسامير عبر الحاجز؟</p>
+    <canvas id="passSim" width="700" height="340"></canvas>
+    <div class="controls">
+      <button class="btn small" data-bar="hand">✋ كف اليد</button>
+      <button class="btn small ghost" data-bar="card">📦 ورق مقوى</button>
+      <button class="btn small ghost" data-bar="water">💧 زجاج وماء</button>
+      <button class="btn green" id="passGo">🧲 قرّب المغناطيس</button>
+      <button class="btn ghost" id="passReset">🔄 إعادة</button>
+    </div>
+    <div class="controls"><span class="readout" id="passState">اختر حاجزاً ثم قرّب المغناطيس!</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz5"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson4.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: تمغنط المواد ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة النفاذ ---------- */
+(function () {
+  var cv = document.getElementById("passSim"), ctx = cv.getContext("2d");
+  var barrier = "hand";
+  var magY = 40, targetY = 40, active = false;
+  var clips = [];
+  var names = { hand: "كف اليد", card: "الورق المقوى", water: "الزجاج والماء" };
+
+  function resetClips() {
+    clips = [];
+    for (var i = 0; i < 9; i++) clips.push({
+      x: 220 + i * 30 + (Math.random() * 10 - 5), y: 296, vy: 0, stuck: false, r: (Math.random() - .5) * .8
+    });
+  }
+  resetClips();
+
+  document.querySelectorAll("[data-bar]").forEach(function (b) {
+    b.onclick = function () {
+      barrier = b.dataset.bar;
+      document.querySelectorAll("[data-bar]").forEach(function (x) { x.classList.add("ghost"); });
+      b.classList.remove("ghost");
+      reset();
+    };
+  });
+  function reset() {
+    active = false; targetY = 40; resetClips();
+    document.getElementById("passState").textContent = "اختر حاجزاً ثم قرّب المغناطيس!";
+  }
+  document.getElementById("passGo").onclick = function () { active = true; targetY = 128; };
+  document.getElementById("passReset").onclick = reset;
+
+  function drawBarrier() {
+    var y = 190;
+    if (barrier === "hand") {
+      ctx.fillStyle = "#f1c9a5";
+      ctx.beginPath();
+      if (ctx.roundRect) { ctx.roundRect(150, y - 16, 400, 34, 17); ctx.fill(); } else ctx.fillRect(150, y - 16, 400, 34);
+      for (var i = 0; i < 4; i++) {
+        ctx.beginPath();
+        if (ctx.roundRect) { ctx.roundRect(545 + 0, y - 14 + i * 8, 40 - i * 4, 7, 4); ctx.fill(); }
+      }
+      ctx.fillStyle = "#a5713f"; ctx.font = "13px Cairo"; ctx.textAlign = "center";
+      ctx.fillText("كف اليد ✋", 350, y + 42);
+    } else if (barrier === "card") {
+      ctx.fillStyle = "#d9a45f";
+      ctx.fillRect(150, y - 10, 400, 20);
+      ctx.strokeStyle = "#b07d3a"; ctx.strokeRect(150, y - 10, 400, 20);
+      ctx.fillStyle = "#a5713f"; ctx.font = "13px Cairo"; ctx.textAlign = "center";
+      ctx.fillText("ورق مقوى (كارتون) 📦", 350, y + 34);
+    } else {
+      ctx.fillStyle = "rgba(120,190,255,.35)";
+      ctx.fillRect(150, y - 26, 400, 52);
+      ctx.strokeStyle = "#4d96ff"; ctx.lineWidth = 3; ctx.strokeRect(150, y - 26, 400, 52);
+      ctx.fillStyle = "#2c6fb8"; ctx.font = "13px Cairo"; ctx.textAlign = "center";
+      ctx.fillText("حوض زجاجي مملوء بالماء 💧", 350, y + 44);
+    }
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    magY += (targetY - magY) * 0.08;
+
+    // الأرضية
+    ctx.fillStyle = "#e9d8b8"; ctx.fillRect(0, 312, cv.width, 28);
+
+    drawBarrier();
+
+    // المسامير
+    var attracted = 0;
+    clips.forEach(function (c) {
+      if (active && magY > 100) {
+        var stickY = barrier === "water" ? 222 : (barrier === "card" ? 202 : 210);
+        if (!c.stuck) { c.vy -= 0.9; c.y += c.vy * 0.15; }
+        if (c.y <= stickY) { c.y = stickY; c.stuck = true; }
+        if (c.stuck) attracted++;
+      } else {
+        if (c.y < 296) { c.vy += 0.6; c.y = Math.min(296, c.y + c.vy * 0.2); }
+        else { c.vy = 0; c.stuck = false; }
+      }
+      ctx.save(); ctx.translate(c.x, c.y); ctx.rotate(c.stuck ? 0 : c.r);
+      ctx.strokeStyle = "#6b7280"; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.moveTo(-9, 0); ctx.lineTo(9, 0); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(-9, 0); ctx.lineTo(-9, -5); ctx.stroke();
+      ctx.restore();
+    });
+
+    // المغناطيس فوق الحاجز
+    ctx.save(); ctx.translate(350, magY);
+    ctx.fillStyle = "#e63946"; ctx.fillRect(-60, -16, 60, 32);
+    ctx.fillStyle = "#457b9d"; ctx.fillRect(0, -16, 60, 32);
+    ctx.fillStyle = "#fff"; ctx.font = "bold 16px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("N", -30, 6); ctx.fillText("S", 30, 6);
+    ctx.strokeStyle = "#2d3142"; ctx.lineWidth = 2; ctx.strokeRect(-60, -16, 120, 32);
+    ctx.restore();
+
+    if (active && attracted > 0) {
+      document.getElementById("passState").textContent =
+        "✨ المسامير انجذبت رغم الحاجز — المجال المغناطيسي نفذ خلال " + names[barrier] + "!";
+    }
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- رسم متحرك: النفاذ خلال جسم الإنسان ---------- */
+(function () {
+  var cv = document.getElementById("handSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height;
+  var TABLE_Y = 316;
+  var hand = { x: 350, y: 130, ty: 130 };       // مركز الكف
+  var magOn = false, magDrop = 0;               // المغناطيس فوق الكف
+  var phase = 0;                                 // 0 بداية 1 مغناطيس 2 نزول 3 رفع
+  var clips = [];
+  for (var i = 0; i < 10; i++) clips.push({
+    x: 245 + i * 23, y: TABLE_Y - 8, home: TABLE_Y - 8,
+    stick: i % 3 !== 0, r: (Math.random() - .5) * .9   // أغلبها ينجذب
+  });
+
+  var btn = document.getElementById("handNext");
+  var state = document.getElementById("handState");
+  var labels = [
+    "▶️ الخطوة ١: نضع المغناطيس على كف اليد",
+    "▶️ الخطوة ٢: نضع راحة اليد على مثبتات الورق",
+    "▶️ الخطوة ٣: نرفع كف اليد إلى الأعلى",
+    "✅ انتهى النشاط"
+  ];
+  var msgs = [
+    "الخطوة ١: وضعنا الساق المغناطيسية على كف يدنا 🧲",
+    "الخطوة ٢: وضعنا راحة يدنا على مجموعة من مثبتات الورق",
+    "✨ الاستنتاج: انجذبت المثبتات إلى راحة الكف — المجال المغناطيسي نفذ من خلال جسم الإنسان!",
+    ""
+  ];
+
+  btn.onclick = function () {
+    if (phase >= 3) return;
+    state.textContent = msgs[phase];
+    phase++;
+    btn.textContent = labels[Math.min(phase, 3)];
+    if (phase >= 3) btn.disabled = true;
+    if (phase === 1) magOn = true;
+    if (phase === 2) hand.ty = TABLE_Y - 52;   // ننزل الكف فوق المثبتات
+    if (phase === 3) hand.ty = 120;            // نرفع الكف
+  };
+  document.getElementById("handReset").onclick = function () {
+    phase = 0; magOn = false; magDrop = 0;
+    hand.ty = 130; btn.disabled = false;
+    btn.textContent = labels[0];
+    state.textContent = "اضغط زر الخطوة لبدء النشاط";
+    clips.forEach(function (c) { c.y = c.home; });
+  };
+
+  function tick() {
+    ctx.clearRect(0, 0, W, H);
+
+    // الطاولة
+    ctx.fillStyle = "#e9d8b8"; ctx.fillRect(0, TABLE_Y, W, H - TABLE_Y);
+    ctx.fillStyle = "#c9b083"; ctx.fillRect(0, TABLE_Y, W, 5);
+
+    hand.y += (hand.ty - hand.y) * 0.07;
+    var palmBottom = hand.y + 26;
+
+    // المثبتات: في مرحلة الرفع تلتصق المنجذبة بأسفل الكف
+    clips.forEach(function (c) {
+      var target = c.home;
+      if (phase === 3 && c.stick) target = palmBottom + 8;
+      else if (phase === 2 && c.stick) target = c.home - 2;
+      c.y += (target - c.y) * 0.15;
+      ctx.save(); ctx.translate(c.x, c.y); ctx.rotate(c.y < c.home - 20 ? 0 : c.r);
+      ctx.strokeStyle = "#6b7280"; ctx.lineWidth = 2.6;
+      ctx.beginPath();
+      if (ctx.roundRect) { ctx.roundRect(-8, -4, 16, 8, 4); ctx.stroke(); }
+      else { ctx.strokeRect(-8, -4, 16, 8); }
+      ctx.beginPath();
+      if (ctx.roundRect) { ctx.roundRect(-5, -2, 10, 4, 2); ctx.stroke(); }
+      ctx.restore();
+    });
+
+    // الكف (راحة يد أفقية مع أصابع)
+    ctx.save(); ctx.translate(hand.x, hand.y);
+    ctx.fillStyle = "#f1c9a5";
+    ctx.beginPath();
+    if (ctx.roundRect) { ctx.roundRect(-110, -26, 220, 52, 24); ctx.fill(); }
+    else ctx.fillRect(-110, -26, 220, 52);
+    // أصابع جهة اليسار
+    for (var i = 0; i < 4; i++) {
+      ctx.beginPath();
+      if (ctx.roundRect) { ctx.roundRect(-165, -24 + i * 13, 58, 11, 6); ctx.fill(); }
+    }
+    // إبهام
+    ctx.beginPath();
+    if (ctx.roundRect) { ctx.roundRect(88, -38, 44, 12, 6); ctx.fill(); }
+    ctx.restore();
+
+    // المغناطيس فوق الكف
+    if (magOn) {
+      if (magDrop < 1) magDrop = Math.min(1, magDrop + 0.04);
+      var my = (hand.y - 100) + magDrop * 58; // يهبط حتى يستقر فوق الكف
+      ctx.save(); ctx.translate(hand.x, my);
+      ctx.fillStyle = "#e63946"; ctx.fillRect(-55, -15, 55, 30);
+      ctx.fillStyle = "#457b9d"; ctx.fillRect(0, -15, 55, 30);
+      ctx.fillStyle = "#fff"; ctx.font = "bold 15px Cairo"; ctx.textAlign = "center";
+      ctx.fillText("N", -27, 6); ctx.fillText("S", 27, 6);
+      ctx.strokeStyle = "#2d3142"; ctx.lineWidth = 2; ctx.strokeRect(-55, -15, 110, 30);
+      ctx.restore();
+    }
+
+    // تسميات
+    ctx.fillStyle = "#5c6178"; ctx.font = "13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("مثبتات ورق من الفولاذ", 360, TABLE_Y + 28);
+    ctx.fillText("كف اليد", hand.x + 150, hand.y + 4);
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz5", [
+  { q: "انجذاب مثبتات الورق الى راحة الكف عند وضع مغناطيس فوق الكف دليل على أن:",
+    opts: ["اليد مغناطيس", "المجال المغناطيسي نفذ من خلال جسم الانسان", "مثبتات الورق خفيفة", "الكف مشحونة"], a: 1,
+    why: "استنتاج النشاط الوزاري: المجال المغناطيسي ينفذ خلال جسم الإنسان." },
+  { q: "مثبتات الورق المستعملة في نشاط النفاذ خلال جسم الانسان مصنوعة من:",
+    opts: ["النحاس", "الألمنيوم", "الفولاذ", "البلاستك"], a: 2,
+    why: "الأدوات: مجموعة من مثبتات الورق مصنوعة من الفولاذ ومغناطيس قوي." },
+  { q: "في نشاط الكارتون، عند تحريك الساق المغناطيسية تحت الورقة فإن المسامير:",
+    opts: ["تبقى ثابتة", "تسقط", "تتحرك متبعة المسار نفسه لحركة القطب المغناطيسي", "تتنافر"], a: 2,
+    why: "المسامير تنجذب نحو القطب وتتبع مساره — دليل النفاذ خلال الورق المقوى." },
+  { q: "نشاط الأسطوانة الزجاجية والمسامير والماء يثبت أن المجال المغناطيسي:",
+    opts: ["لا ينفذ خلال الماء", "ينفذ خلال الماء", "يذوب في الماء", "يتبخر"], a: 1,
+    why: "المسامير داخل الماء تتبع حركة القطب — المجال نفذ خلال الزجاج والماء." },
+  { q: "يمكن للمجال المغناطيسي النفاذ خلال:",
+    opts: ["الورق المقوى فقط", "الماء فقط", "جسم الإنسان فقط", "جسم الإنسان والورق المقوى والزجاج والماء"], a: 3,
+    why: "ينفذ خلال جسم الإنسان وخلال مواد مختلفة منها الورق المقوى والزجاج والماء." }
+], { onDone: function (stars) { Phy.setLesson("ch2", "5", { stars: stars }); } });
+</script>
+</body>
+</html>

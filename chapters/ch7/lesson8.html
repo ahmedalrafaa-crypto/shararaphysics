@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 8: نقل الطاقة والاستعمالات</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch7">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السابع</a> / الدرس 8</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏙️ الدرس 8: نقل الطاقة والاستعمالات</h1>
+    <p>من محطة توليد بعيدة إلى مصباح بيتك، تعبر الكهرباء كيلومترات طويلة. لولا المحوّلات لضاع معظمها حرارةً في الأسلاك! تعال نرى الرحلة كاملة.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🗼</span>
+    <span>القاعدة الذهبية لنقل الكهرباء: <b>فولطية عالية جداً وتيار واطئ جداً</b>. لماذا؟ لأن الخسارة الحرارية في الأسلاك تعتمد على التيار — قلّل التيار تقلّ الخسارة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔌</span> نقل الطاقة لمسافات بعيدة</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> كيف تنتقل الطاقة الكهربائية إلى مسافات بعيدة؟ وضّح الفائدة من نقلها بفولطية عالية وتيار واطئ. <span class="wz">وزاري</span></summary>
+      <div class="ans">تنتقل القدرة الكهربائية إلى مسافات بعيدة بفولطية عالية وتيار واطئ، وذلك لتقليل الخسارة التي تحصل بسبب المقاومة الكبيرة في هذه الأسلاك.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> لتجهيز القدرة الكهربائية من محطة توليدها إلى مصنع كبير يبعد عنها بُعداً معيّناً — ما نوع المحولة المستعملة: (١) في بداية خطوط نقل القدرة عند محطة الإرسال؟ (٢) في نهاية خطوط نقل القدرة قبل دخولها المصنع؟</summary>
+      <div class="ans">
+        <b>١)</b> في بداية نقل خطوط القدرة عند محطة الإرسال تُستعمل محولة <b>رافعة</b> (لرفع الفولطية وخفض التيار فتقلّ الخسارة).<br>
+        <b>٢)</b> في نهاية خطوط نقل القدرة قبل دخولها المصنع تُستعمل محولة <b>خافضة</b> (لخفض الفولطية إلى القيمة الآمنة للاستعمال).</div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة نقل القدرة ======== -->
+  <div class="sim">
+    <h3>🎬 رحلة الكهرباء: من المحطة إلى المدينة</h3>
+    <p class="sim-sub">شغّل المحطة وتابع القدرة وهي ترتفع فولطيتها (رافعة) لتعبر الأسلاك بأقل خسارة، ثم تنخفض (خافضة) قبل دخول المدينة.</p>
+    <canvas id="gridSim" width="700" height="330"></canvas>
+    <div class="controls">
+      <button class="btn green" id="gridBtn">▶ شغّل المحطة</button>
+    </div>
+    <div class="controls"><span class="readout" id="gridState">المحطة متوقفة — اضغط لتشغيلها وتتبّع رحلة القدرة الكهربائية.</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🏠</span> استعمالات المحولة</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> اذكر استعمالات المحولة الخافضة</summary>
+      <div class="ans">
+        <b>١.</b> معظم المحولات المستعملة في الفولطية الداخلة إلى المنازل من هذا النوع.<br>
+        <b>٢.</b> المحولة المستعملة في مناطق استلام القدرة المجهّزة إلى المدن.<br>
+        <b>٣.</b> المحولة المستعملة في جهاز اللحام الكهربائي.<br>
+        <b>٤.</b> المحولة المستعملة في شاحنة الموبايل.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> اذكر استعمالات المحولة الرافعة</summary>
+      <div class="ans">
+        <b>١.</b> المحولة المستعملة في جهاز التلفاز في تجهيز الفولطية العالية للقاذف الإلكتروني للشاشة.<br>
+        <b>٢.</b> المحولة المستعملة في محطات توليد الطاقة الكهربائية عند إرسالها إلى المدن.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> في أي المجالات تُستعمل المحولة الكهربائية؟</summary>
+      <div class="ans">
+        <b>المحولة الخافضة للفولطية:</b> تُستعمل في المنازل في جهاز التسجيل والمذياع وشاحنة الموبايل وفي بعض الثلاجات الكهربائية وفي اللحام، وتُستعمل كذلك في نهاية خطوط نقل القدرة الكهربائية إلى المستهلك في المدن.<br>
+        <b>المحولة الرافعة للفولطية:</b> تُستعمل في جهاز التلفاز لتجهيز الفولطية العالية للقاذف الإلكتروني للشاشة، وتُستعمل في محطات توليد الطاقة الكهربائية عند إرسالها للمدن.</div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">⚖️</span> مقارنة المحولة الرافعة والخافضة</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">قارن</span> قارن بين المحولة الرافعة والمحولة الخافضة (وزاري)</summary>
+      <div class="ans">
+        <div class="tblwrap"><table class="nice">
+          <tr><th>المحولة الرافعة</th><th>المحولة الخافضة</th></tr>
+          <tr><td>عدد لفات الملف الثانوي أكبر من عدد لفات ملفها الابتدائي</td><td>عدد لفات ملفها الثانوي أقل من عدد لفات الملف الابتدائي</td></tr>
+          <tr><td>الفولطية الخارجة من الملف الثانوي أكبر من الفولطية الداخلة إلى ملفها الابتدائي</td><td>الفولطية الخارجة من الملف الثانوي أقل من الفولطية الداخلة إلى ملفها الابتدائي</td></tr>
+          <tr><td>التيار الخارج من ملفها الثانوي أقل من التيار الداخل إلى ملفها الابتدائي</td><td>التيار الخارج من ملفها الثانوي أكبر من التيار الداخل إلى ملفها الابتدائي</td></tr>
+          <tr><td>نسبة التحويل أكبر من واحد</td><td>نسبة التحويل أقل من واحد</td></tr>
+          <tr><td>مثل المحولة المستعملة في جهاز التلفاز لتجهيز الفولطية العالية للقاذف الإلكتروني للشاشة</td><td>مثل المحولات المستخدمة في جهاز اللحام الكهربائي</td></tr>
+        </table></div>
+      </div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>تُنقل القدرة الكهربائية لمسافات بعيدة بفولطية <b>عالية</b> وتيار <b>واطئ</b> لتقليل الخسارة بسبب مقاومة الأسلاك. <span class="wz">وزاري</span></li>
+      <li>عند محطة الإرسال تُستعمل محولة <b>رافعة</b>، وقبل دخول المدينة/المصنع محولة <b>خافضة</b>.</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz8"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson7.html">➡ الدرس السابق</a>
+    <a class="btn" href="exam.html">🏆 الاختبار النهائي للفصل</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة نقل القدرة ---------- */
+(function () {
+  var cv = document.getElementById("gridSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height, t = 0;
+  var on = false, glow = 0;
+  var btn = document.getElementById("gridBtn"), state = document.getElementById("gridState");
+
+  btn.onclick = function () {
+    on = !on;
+    btn.textContent = on ? "⏸ أوقف المحطة" : "▶ شغّل المحطة";
+    btn.classList.toggle("green", !on);
+    state.textContent = on
+      ? "القدرة تخرج من المحطة ⟵ محولة رافعة (فولطية عالية، تيار واطئ) ⟵ عبر الأسلاك بأقل خسارة ⟵ محولة خافضة ⟵ فولطية آمنة للمدينة."
+      : "المحطة متوقفة — اضغط لتشغيلها وتتبّع رحلة القدرة الكهربائية.";
+  };
+
+  function transformer(x, y, up) {
+    ctx.fillStyle = up ? "#7c3aed" : "#0d9488";
+    ctx.beginPath(); ctx.arc(x, y, 20, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#fff"; ctx.font = "bold 15px Cairo"; ctx.textAlign = "center";
+    ctx.fillText(up ? "⬆" : "⬇", x, y + 5);
+    ctx.fillStyle = up ? "#6d28d9" : "#0f766e"; ctx.font = "bold 11px Cairo";
+    ctx.fillText(up ? "رافعة" : "خافضة", x, y + 36);
+  }
+
+  function tower(x) {
+    ctx.strokeStyle = "#64748b"; ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(x - 16, 190); ctx.lineTo(x, 90); ctx.lineTo(x + 16, 190);
+    ctx.moveTo(x - 11, 120); ctx.lineTo(x + 11, 120);
+    ctx.moveTo(x - 13, 145); ctx.lineTo(x + 13, 145);
+    ctx.stroke();
+  }
+
+  function tick() {
+    t += 0.04;
+    glow += (((on ? 1 : 0)) - glow) * 0.06;
+    ctx.clearRect(0, 0, W, H);
+    ctx.textAlign = "center";
+
+    // أرضية
+    ctx.fillStyle = "#f1f5f9"; ctx.fillRect(0, 250, W, H - 250);
+
+    // محطة التوليد (يمين — البداية في RTL)
+    var stX = 620;
+    ctx.fillStyle = on ? "#fca5a5" : "#e2e8f0";
+    ctx.fillRect(stX - 40, 200, 80, 50);
+    ctx.strokeStyle = "#64748b"; ctx.lineWidth = 2; ctx.strokeRect(stX - 40, 200, 80, 50);
+    // مدخنتان
+    ctx.fillStyle = "#94a3b8"; ctx.fillRect(stX - 25, 175, 12, 30); ctx.fillRect(stX + 8, 175, 12, 30);
+    ctx.fillStyle = "#475569"; ctx.font = "bold 12px Cairo"; ctx.fillText("محطة توليد", stX, 268);
+
+    // محولة رافعة قرب المحطة
+    transformer(520, 225, true);
+
+    // أبراج وخطوط نقل عالية الفولطية (تيار واطئ)
+    var lineY = 100;
+    tower(430); tower(300); tower(170);
+    ctx.strokeStyle = on ? "#7c3aed" : "#cbd5e1"; ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(500, 210); ctx.lineTo(490, lineY + 20); ctx.lineTo(430, lineY + 20);
+    ctx.lineTo(300, lineY + 20); ctx.lineTo(170, lineY + 20); ctx.lineTo(120, 170);
+    ctx.stroke();
+    ctx.fillStyle = on ? "#6d28d9" : "#94a3b8"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("خطوط نقل: فولطية عالية ↑ ، تيار واطئ ↓ ⟵ خسارة قليلة", 300, lineY - 4);
+
+    // نقاط قدرة تسير على الخط (قليلة = تيار واطئ)
+    if (glow > 0.05) {
+      ctx.fillStyle = "#f59e0b";
+      var pts = [[490, lineY + 20, 430, lineY + 20], [430, lineY + 20, 300, lineY + 20], [300, lineY + 20, 170, lineY + 20]];
+      for (var s = 0; s < pts.length; s++) {
+        var f = ((t * 0.4 + s / 3) % 1);
+        var p = pts[s];
+        ctx.beginPath(); ctx.arc(p[0] + (p[2] - p[0]) * f, p[1], 4, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+
+    // محولة خافضة قرب المدينة (يسار)
+    transformer(120, 225, false);
+
+    // المدينة (يسار — النهاية)
+    ctx.fillStyle = on ? "#a7f3d0" : "#e2e8f0";
+    for (var b = 0; b < 3; b++) {
+      var hh = 40 + b * 12;
+      ctx.fillRect(30 + b * 22, 250 - hh, 18, hh);
+      ctx.strokeStyle = "#64748b"; ctx.lineWidth = 1.5; ctx.strokeRect(30 + b * 22, 250 - hh, 18, hh);
+    }
+    ctx.fillStyle = "#475569"; ctx.font = "bold 12px Cairo"; ctx.fillText("المدينة / المصنع", 62, 268);
+
+    // عنوان الحالة
+    ctx.fillStyle = glow > 0.5 ? "#0f766e" : "#94a3b8"; ctx.font = "bold 13px Cairo";
+    ctx.fillText(glow > 0.5 ? "القدرة تصل المدينة بأقل خسارة ✓" : "المحطة متوقفة", W / 2, H - 8);
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz8", [
+  { q: "تُنقل القدرة الكهربائية لمسافات بعيدة بفولطية عالية وتيار واطئ من أجل:",
+    opts: ["تقليل الخسارة الناتجة عن المقاومة الكبيرة في الأسلاك", "زيادة الخسارة", "تسريع الكهرباء", "تسخين الأسلاك عمداً"], a: 0,
+    why: "الخسارة الحرارية تعتمد على التيار — تيار أقل ⟵ خسارة أقل." },
+  { q: "عند محطة الإرسال (بداية خطوط النقل) تُستعمل محولة:",
+    opts: ["رافعة", "خافضة", "لا محولة", "مستمرة"], a: 0,
+    why: "رافعة لرفع الفولطية وخفض التيار قبل النقل الطويل." },
+  { q: "قبل دخول القدرة إلى المدينة/المصنع (نهاية خطوط النقل) تُستعمل محولة:",
+    opts: ["خافضة", "رافعة", "لا شيء", "بطارية"], a: 0,
+    why: "خافضة لإنزال الفولطية إلى القيمة الآمنة للاستعمال." },
+  { q: "المحولة المستعملة في شاحنة الموبايل هي:",
+    opts: ["خافضة للفولطية", "رافعة للفولطية", "مثالية دائماً", "مستمرة"], a: 0,
+    why: "تخفض 220V إلى فولطية صغيرة تناسب الجهاز." },
+  { q: "المحولة المستعملة في جهاز التلفاز لتجهيز الفولطية العالية للقاذف الإلكتروني هي:",
+    opts: ["رافعة للفولطية", "خافضة للفولطية", "لا تحتاج محولة", "مصدر مستمر"], a: 0,
+    why: "القاذف الإلكتروني يحتاج فولطية عالية ⟵ محولة رافعة." },
+  { q: "في المحولة الرافعة، عدد لفات الثانوي مقارنة بالابتدائي:",
+    opts: ["أكبر", "أقل", "متساوٍ", "صفر"], a: 0,
+    why: "لفات ثانوي أكثر ⟵ فولطية خارجة أعلى (رافعة)." },
+  { q: "في المحولة الخافضة، التيار الخارج من الثانوي مقارنة بالداخل للابتدائي:",
+    opts: ["أكبر", "أقل", "متساوٍ", "معدوم"], a: 0,
+    why: "خافضة للفولطية = رافعة للتيار (القدرة ثابتة)." },
+  { q: "جهاز اللحام الكهربائي يستعمل محولة:",
+    opts: ["خافضة للفولطية (تيار عالٍ)", "رافعة للفولطية", "مستمرة", "لا محولة"], a: 0,
+    why: "اللحام يحتاج تياراً عالياً وفولطية منخفضة ⟵ محولة خافضة." }
+], { onDone: function (stars) { Phy.setLesson("ch7", "8", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

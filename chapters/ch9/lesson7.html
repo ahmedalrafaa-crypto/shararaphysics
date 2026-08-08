@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 7: الهاتف النقال</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch9">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل التاسع</a> / الدرس 7</span>
+  </div>
+
+  <div class="hero">
+    <h1>📱 الدرس 7: الهاتف النقال</h1>
+    <p>الجهاز الذي في جيبك الآن معجزة هندسية! دوائر إلكترونية معقّدة مكدّسة في مساحة صغيرة، تحوّل صوتك إلى موجات لاسلكية تسافر عبر الجو. لنتعرّف على مكوّناته.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">📶</span>
+    <span>حين تتكلّم في الهاتف، يتحوّل صوتك إلى إشارة كهربائية ثم إلى موجة لاسلكية يبعثها الهوائي إلى أقرب برج، ومنه تنطلق حول العالم في أجزاء من الثانية!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📱</span> ما هو الهاتف النقال؟</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما هو الهاتف النقال؟</summary>
+      <div class="ans">هو جهاز من الأجهزة التقنية المعقّدة بسبب تكدّس الدوائر الإلكترونية على مساحة صغيرة، وهو وسيلة اتصال لاسلكية.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> عدّد المكوّنات الأساسية بالهاتف النقال؟</summary>
+      <div class="ans">
+        <b>١.</b> دائرة إلكترونية تحتوي رقائق المعالج والذاكرة.<br>
+        <b>٢.</b> هوائي. &nbsp; <b>٣.</b> شاشات العرض. &nbsp; <b>٤.</b> لوحة مفاتيح.<br>
+        <b>٥.</b> لاقطات صوت. &nbsp; <b>٦.</b> السمّاعة. &nbsp; <b>٧.</b> البطارية.
+      </div>
+    </details>
+  </div>
+
+  <!-- ======== مخطط مكوّنات الهاتف ======== -->
+  <div class="sim">
+    <h3>🔧 مكوّنات الهاتف النقال — انقر أي مكوّن</h3>
+    <p class="sim-sub">انقر أي مكوّن من المكوّنات السبعة لتقرأ وظيفته، وسيُضاء موضعه على الهاتف.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start">
+      <canvas id="phone" width="230" height="400" style="flex-shrink:0;margin:auto"></canvas>
+      <div style="flex:1;min-width:220px">
+        <div class="formgrid" id="compGrid"></div>
+        <div class="controls" style="margin-top:10px"><span class="readout" id="compOut">👆 انقر أحد المكوّنات السبعة.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson6.html">⮕ الدرس السابق</a>
+    <a class="btn" href="lesson8.html">الدرس التالي: الأقمار الصناعية ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- مخطط مكوّنات الهاتف ---------- */
+(function () {
+  var comps = [
+    { em: "🧠", name: "الدائرة الإلكترونية", part: "board", ex: "دائرة إلكترونية تحتوي رقائق المعالج والذاكرة — عقل الهاتف الذي يعالج البيانات ويخزّنها." },
+    { em: "📡", name: "الهوائي", part: "ant", ex: "الهوائي — يرسل ويستقبل الموجات اللاسلكية بين الهاتف وبرج الاتصال." },
+    { em: "🖥️", name: "شاشة العرض", part: "screen", ex: "شاشة العرض — تعرض الصور والنصوص والقوائم للمستخدم." },
+    { em: "⌨️", name: "لوحة المفاتيح", part: "keys", ex: "لوحة المفاتيح — لإدخال الأرقام والأوامر (تكون لمسية على الشاشة في الهواتف الحديثة)." },
+    { em: "🎙️", name: "لاقطات الصوت", part: "mic", ex: "لاقطات الصوت (المايكروفون) — تحوّل صوتك إلى إشارة كهربائية للإرسال." },
+    { em: "🔊", name: "السمّاعة", part: "spk", ex: "السمّاعة — تحوّل الإشارة المستقبَلة إلى صوت تسمعه." },
+    { em: "🔋", name: "البطارية", part: "bat", ex: "البطارية — مصدر الطاقة الكهربائية الذي يشغّل الهاتف." }
+  ];
+  var grid = document.getElementById("compGrid"), out = document.getElementById("compOut");
+  var sel = null;
+  var cv = document.getElementById("phone"), ctx = cv.getContext("2d");
+
+  var parts = {
+    ant:   { x: 115, y: 24,  w: 60,  h: 14 },
+    spk:   { x: 90,  y: 44,  w: 50,  h: 8 },
+    screen:{ x: 30,  y: 60,  w: 170, h: 210 },
+    keys:  { x: 30,  y: 280, w: 170, h: 50 },
+    mic:   { x: 95,  y: 336, w: 40,  h: 10 },
+    board: { x: 30,  y: 60,  w: 170, h: 270 },
+    bat:   { x: 40,  y: 300, w: 150, h: 26 }
+  };
+
+  function drawPhone() {
+    ctx.clearRect(0, 0, 230, 400);
+    // جسم الهاتف
+    ctx.fillStyle = "#1e293b"; roundRect(12, 30, 206, 350, 26); ctx.fill();
+    ctx.fillStyle = "#334155"; roundRect(20, 40, 190, 330, 18); ctx.fill();
+    // الشاشة
+    ctx.fillStyle = "#0f172a"; roundRect(30, 60, 170, 210, 8); ctx.fill();
+    // منطقة المفاتيح
+    ctx.fillStyle = "#475569"; roundRect(30, 280, 170, 55, 10); ctx.fill();
+    // الهوائي
+    ctx.strokeStyle = "#94a3b8"; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(145, 30); ctx.lineTo(145, 12); ctx.stroke();
+    ctx.fillStyle = "#94a3b8"; ctx.beginPath(); ctx.arc(145, 10, 4, 0, Math.PI * 2); ctx.fill();
+    // السماعة
+    ctx.fillStyle = "#64748b"; roundRect(95, 46, 40, 6, 3); ctx.fill();
+    // المايك
+    ctx.fillStyle = "#64748b"; ctx.beginPath(); ctx.arc(115, 350, 4, 0, Math.PI * 2); ctx.fill();
+
+    // إبراز المكوّن المحدد
+    if (sel && parts[sel.part]) {
+      var p = parts[sel.part];
+      ctx.strokeStyle = "#fde047"; ctx.lineWidth = 3; ctx.setLineDash([5, 4]);
+      roundRect(p.x, p.y, p.w, p.h, 6); ctx.stroke(); ctx.setLineDash([]);
+      ctx.fillStyle = "rgba(253,224,71,0.18)"; ctx.fill();
+      ctx.font = "20px Cairo"; ctx.textAlign = "center"; ctx.fillStyle = "#fde047";
+      ctx.fillText(sel.em, p.x + p.w / 2, p.y + p.h / 2 + 7);
+    }
+  }
+  function roundRect(x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+  }
+
+  comps.forEach(function (c) {
+    var b = document.createElement("button");
+    b.className = "formcard";
+    b.innerHTML = '<span class="fe">' + c.em + '</span><b style="font-size:.82rem">' + c.name + '</b>';
+    b.onclick = function () {
+      grid.querySelectorAll(".formcard").forEach(function (x) { x.classList.remove("on"); });
+      b.classList.add("on"); sel = c;
+      out.innerHTML = "<b>" + c.em + " " + c.name + ":</b> " + c.ex;
+      drawPhone();
+    };
+    grid.appendChild(b);
+  });
+  drawPhone();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "الهاتف النقال هو:",
+    opts: ["جهاز تقني معقّد لتكدّس الدوائر الإلكترونية على مساحة صغيرة، ووسيلة اتصال لاسلكية", "جهاز اتصال سلكي بسيط", "جهاز إضاءة", "بطارية كبيرة فقط"], a: 0,
+    why: "الهاتف النقال: جهاز معقّد بتكدّس دوائره الإلكترونية، ووسيلة اتصال لاسلكية." },
+  { q: "المكوّن الذي يرسل ويستقبل الموجات اللاسلكية في الهاتف هو:",
+    opts: ["الهوائي", "البطارية", "السمّاعة", "الشاشة"], a: 0,
+    why: "الهوائي مسؤول عن إرسال واستقبال الموجات اللاسلكية." },
+  { q: "المكوّن الذي يحتوي رقائق المعالج والذاكرة هو:",
+    opts: ["الدائرة الإلكترونية", "لوحة المفاتيح", "السمّاعة", "المايكروفون"], a: 0,
+    why: "الدائرة الإلكترونية تحتوي رقائق المعالج والذاكرة." },
+  { q: "المكوّن الذي يحوّل صوتك إلى إشارة كهربائية للإرسال هو:",
+    opts: ["لاقطات الصوت (المايكروفون)", "السمّاعة", "الشاشة", "البطارية"], a: 0,
+    why: "لاقطات الصوت تلتقط صوتك وتحوّله إلى إشارة كهربائية." },
+  { q: "مصدر الطاقة الكهربائية الذي يشغّل الهاتف هو:",
+    opts: ["البطارية", "الهوائي", "الشاشة", "لوحة المفاتيح"], a: 0,
+    why: "البطارية هي مصدر الطاقة في الهاتف النقال." },
+  { q: "عدد المكوّنات الأساسية للهاتف النقال المذكورة هو:",
+    opts: ["سبعة مكوّنات", "ثلاثة مكوّنات", "عشرة مكوّنات", "مكوّنان"], a: 0,
+    why: "المكوّنات السبعة: الدائرة الإلكترونية، الهوائي، الشاشة، لوحة المفاتيح، لاقطات الصوت، السمّاعة، البطارية." }
+], { onDone: function (stars) { Phy.setLesson("ch9", "7", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

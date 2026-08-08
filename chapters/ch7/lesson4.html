@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: قانون المحولة ونسبة التحويل</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch7">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السابع</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>🧮 الدرس 4: قانون المحولة ونسبة التحويل</h1>
+    <p>معادلة واحدة تحكم المحولة كلها: <b>الفولطية تتناسب طردياً مع عدد اللفات</b>. عدد لفات أكثر ⟵ فولطية أعلى. تعال نتقنها ونعرف متى ترفع ومتى تخفض.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">📐</span>
+    <span>تريد فولطية أعلى؟ لفّ لفّات أكثر على الملف الثانوي. تريد فولطية أقل؟ قلّل لفّاته. بهذه البساطة تسيطر المحولة على الفولطية.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📜</span> قانون المحولة</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> وضّح كيف تعمل المحولة الكهربائية على تغيير مقدار الفولطية الخارجة؟</summary>
+      <div class="ans">بتغيّر عدد لفات الملف الثانوي، وكما يلي — فبما أن الفولطية V تتناسب طردياً مع عدد لفات الملف N:
+        <div class="bigout" style="margin-top:10px">
+          N₂ / N₁ = V₂ / V₁<br>
+          N₂ × V₁ = N₁ × V₂<br>
+          <span class="hl">V₂ = V₁ × ( N₂ / N₁ )</span>
+        </div>
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ماذا تُسمّى النسبة N₂ / N₁ ؟</summary>
+      <div class="ans">تُسمّى <b>نسبة التحويل</b>، وهي التي تحدّد نوع المحولة (رافعة أم خافضة).</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> متى تكون المحولة خافضة ورافعة للفولطية بالاعتماد على نسبة التحويل؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        إذا كانت نسبة التحويل أكبر من الواحد ( N₂/N₁ &gt; 1 ) فإن المحولة <b>رافعة</b> للفولطية.<br>
+        إذا كانت نسبة التحويل أقل من الواحد ( N₂/N₁ &lt; 1 ) فإن المحولة <b>خافضة</b> للفولطية.</div>
+    </details>
+  </div>
+
+  <!-- ======== حاسبة الفولطية ونوع المحولة ======== -->
+  <div class="sim">
+    <h3>🧪 حاسبة المحولة: احسب V₂ واعرف نوعها</h3>
+    <p class="sim-sub">اكتب فولطية الابتدائي وعدد لفات الملفين، وشاهد فولطية الثانوي ونسبة التحويل ونوع المحولة فوراً.</p>
+    <div class="mathtool">
+      <label style="font-weight:800">V₁ =</label>
+      <input type="number" id="v1" value="220" style="width:100px">
+      <label style="font-weight:800">N₁ =</label>
+      <input type="number" id="n1" value="800" style="width:100px">
+      <label style="font-weight:800">N₂ =</label>
+      <input type="number" id="n2" value="400" style="width:100px">
+    </div>
+    <div class="bigout" id="trOut"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✏️</span> أمثلة محلولة خطوة بخطوة</div>
+
+  <div class="example">
+    <div class="exq">مثال ١: محولة V₁ = 220V وعدد لفات ملفها الابتدائي N₁ = 800 والثانوي N₂ = 400. جد فولطية الثانوي V₂ ونوع المحولة.</div>
+    <div class="step"><b>الخطوة ١:</b> نكتب القانون:
+      <div class="math">N₂ / N₁ = V₂ / V₁</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نرتّب لإيجاد V₂:
+      <div class="math">V₂ = V₁ × ( N₂ / N₁ ) = 220 × ( 400 / 800 )</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نحسب:
+      <div class="math">V₂ = 220 × 0.5 = 110 V</div></div>
+    <div class="step"><b>النوع:</b> نسبة التحويل N₂/N₁ = 400/800 = 0.5 &lt; 1 ⟵ محولة <b>خافضة</b> للفولطية.</div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٢: محولة V₁ = 120V و N₁ = 200 لفة و N₂ = 600 لفة. جد V₂ ونوع المحولة.</div>
+    <div class="step"><b>الخطوة ١:</b> V₂ = V₁ × ( N₂ / N₁ )
+      <div class="math">V₂ = 120 × ( 600 / 200 )</div></div>
+    <div class="step"><b>الخطوة ٢:</b>
+      <div class="math">V₂ = 120 × 3 = 360 V</div></div>
+    <div class="step"><b>النوع:</b> N₂/N₁ = 3 &gt; 1 ⟵ محولة <b>رافعة</b> للفولطية.</div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٣ (من الملزمة): محولة رُبط ملفها الابتدائي بمصدر متناوب 240V، والجهاز (الحمل) على ثانويها يشتغل على 12V، وعدد لفات الابتدائي 500 لفة. ما نوع المحولة؟ واحسب عدد لفات الثانوي.</div>
+    <div class="givens">المعطيات: V₁ = 240V ، V₂ = 12V ، N₁ = 500 لفة ، N₂ = ؟</div>
+    <div class="step"><b>١) النوع:</b> V₁ (240) أكبر من V₂ (12) ⟵ محولة <b>خافضة</b>.</div>
+    <div class="step"><b>٢) عدد لفات الثانوي:</b>
+      <div class="math">V₂ / V₁ = N₂ / N₁ ⟹ 12 / 240 = N₂ / 500</div></div>
+    <div class="step"><b>نحلّ:</b>
+      <div class="math">N₂ = ( 500 × 12 ) / 240 = 25 لفة (turn)</div></div>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>الفولطية تتناسب طردياً مع عدد اللفات: <b>V₂ / V₁ = N₂ / N₁</b>.</li>
+      <li>نسبة التحويل N₂/N₁: أكبر من 1 ⟵ <b>رافعة</b>، أقل من 1 ⟵ <b>خافضة</b>.</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz4"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson3.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: علاقة القدرة والتيار ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- حاسبة المحولة ---------- */
+(function () {
+  var v1 = document.getElementById("v1"), n1 = document.getElementById("n1"), n2 = document.getElementById("n2");
+  var out = document.getElementById("trOut");
+  function calc() {
+    var V1 = parseFloat(v1.value), N1 = parseFloat(n1.value), N2 = parseFloat(n2.value);
+    if (!isFinite(V1) || !isFinite(N1) || !isFinite(N2) || N1 === 0) { out.innerHTML = "أدخل قيماً صحيحة (N₁ ≠ 0)"; return; }
+    var ratio = N2 / N1, V2 = V1 * ratio;
+    var type = ratio > 1 ? "محولة رافعة للفولطية ⬆" : (ratio < 1 ? "محولة خافضة للفولطية ⬇" : "لا ترفع ولا تخفض (نسبة = 1)");
+    out.innerHTML = "V₂ = V₁ × (N₂/N₁) = " + V1 + " × (" + N2 + "/" + N1 + ")<br>= <span class='hl'>" +
+      (Math.round(V2 * 1000) / 1000) + " V</span>" +
+      "<small>نسبة التحويل N₂/N₁ = " + (Math.round(ratio * 1000) / 1000) + " ⟵ " + type + "</small>";
+  }
+  [v1, n1, n2].forEach(function (el) { el.addEventListener("input", calc); });
+  calc();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz4", [
+  { q: "قانون المحولة الذي يربط الفولطية بعدد اللفات هو:",
+    opts: ["N₂/N₁ = V₂/V₁", "N₂/N₁ = V₁/V₂", "N₂ × N₁ = V₂ × V₁", "N₂ − N₁ = V₂ − V₁"], a: 0,
+    why: "الفولطية تتناسب طردياً مع عدد اللفات." },
+  { q: "لإيجاد فولطية الثانوي نستخدم:",
+    opts: ["V₂ = V₁ × (N₂/N₁)", "V₂ = V₁ × (N₁/N₂)", "V₂ = V₁ + N₂", "V₂ = N₂/V₁"], a: 0,
+    why: "من N₂/N₁ = V₂/V₁ نضرب طرفياً: V₂ = V₁ × N₂/N₁." },
+  { q: "النسبة N₂/N₁ تُسمّى:",
+    opts: ["نسبة التحويل", "الكفاءة", "القدرة", "نسبة الخسارة"], a: 0,
+    why: "نسبة التحويل هي التي تحدّد نوع المحولة." },
+  { q: "إذا كانت نسبة التحويل N₂/N₁ أكبر من الواحد فالمحولة:",
+    opts: ["رافعة للفولطية", "خافضة للفولطية", "لا تعمل", "تحوّل التيار إلى مستمر"], a: 0,
+    why: "N₂/N₁ > 1 ⟵ V₂ > V₁ ⟵ رافعة." },
+  { q: "إذا كانت نسبة التحويل N₂/N₁ أقل من الواحد فالمحولة:",
+    opts: ["خافضة للفولطية", "رافعة للفولطية", "مثالية دائماً", "متوقفة"], a: 0,
+    why: "N₂/N₁ < 1 ⟵ V₂ < V₁ ⟵ خافضة." },
+  { q: "محولة V₁ = 220V و N₁ = 800 و N₂ = 400 ، تكون V₂ =",
+    opts: ["110 V", "440 V", "220 V", "55 V"], a: 0,
+    why: "V₂ = 220 × (400/800) = 220 × 0.5 = 110V." },
+  { q: "محولة V₁ = 120V و N₁ = 200 و N₂ = 600 ، تكون V₂ =",
+    opts: ["360 V", "40 V", "120 V", "240 V"], a: 0,
+    why: "V₂ = 120 × (600/200) = 120 × 3 = 360V (رافعة)." },
+  { q: "محولة V₁ = 240V ، V₂ = 12V ، N₁ = 500 لفة ، فإن N₂ =",
+    opts: ["25 لفة", "10000 لفة", "50 لفة", "500 لفة"], a: 0,
+    why: "N₂ = (N₁ × V₂)/V₁ = (500 × 12)/240 = 25 لفة." }
+], { onDone: function (stars) { Phy.setLesson("ch7", "4", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

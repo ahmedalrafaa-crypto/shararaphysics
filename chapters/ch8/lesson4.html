@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: الطاقة النووية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch8">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثامن</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>⚛️ الدرس 4: الطاقة النووية</h1>
+    <p>حبّة صغيرة من اليورانيوم تختزن طاقة تعادل أطناناً من الفحم! عندما تنشطر نواة الذرة تنطلق حرارة هائلة... نستغلّها لغلي الماء وإدارة التوربين تماماً كالمحطة الحرارية.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">💥</span>
+    <span>نيوترون واحد يضرب نواة يورانيوم-235 فتنشطر وتطلق نيوترونات جديدة تضرب نوىً أخرى... تفاعل متسلسل يُطلق طاقة حرارية جبّارة داخل قلب المفاعل!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔬</span> ثالثاً: مصادر الطاقة النووية</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما هو الوقود المستعمل في المفاعلات النووية؟ <span class="wz">وزاري</span></summary>
+      <div class="ans"><b>اليورانيوم 235</b> (U-235).</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف يمكننا الحصول (إنتاج) على طاقة كهربائية من مصادر الطاقة النووية؟ وضّح ذلك <span class="wz">وزاري</span></summary>
+      <div class="ans">تُنتج محطات الطاقة النووية الطاقة الكهربائية بالأسلوب نفسه في المحطات الحرارية (البخارية)، ولكنها تستعمل منظومة تُسمّى بـ<b>المفاعل النووي</b> بدلاً من غرفة احتراق الوقود. ويُعرَّف المفاعل النووي على أنه مصدر إنتاج الطاقة الحرارية الهائلة جداً عن طريق <b>انشطار نوى ذرات عنصر اليورانيوم 235</b> الذي يُستعمل كوقود نووي للمفاعل، ويُستفاد من الحرارة الناتجة من الانشطار النووي لتحويل الماء إلى بخار، ويدور البخار التوربين الذي يدير مولدات الطاقة فتتولّد الكهرباء.</div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> مصطلحات نووية</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما المقصود بـ: ١. تخصيب اليورانيوم &nbsp; ٢. المفاعل النووي؟</summary>
+      <div class="ans">
+        <b>١. تخصيب اليورانيوم:</b> هي عملية فصل اليورانيوم نوع U-235 عن باقي الأنواع لأغراض عملية الانشطار النووي.<br>
+        <b>٢. المفاعل النووي:</b> هو منظومة من الأجهزة تُنتج طاقة حرارية هائلة جداً عن طريق الانشطار النووي لذرات العناصر الثقيلة مثل اليورانيوم U-235.
+      </div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة الانشطار النووي ======== -->
+  <div class="sim">
+    <h3>🎬 التفاعل المتسلسل داخل المفاعل</h3>
+    <p class="sim-sub">انقر «أطلق نيوتروناً» لتضرب نواة يورانيوم-235. راقب كيف تنشطر وتطلق نيوترونات جديدة تضرب نوىً أخرى، وترتفع الحرارة داخل القلب!</p>
+    <canvas id="fission" width="700" height="400"></canvas>
+    <div class="controls">
+      <button class="btn green" id="fireBtn">💥 أطلق نيوتروناً</button>
+      <button class="btn ghost" id="resetBtn">🔄 إعادة</button>
+    </div>
+    <div class="controls"><span class="readout" id="fissState">القلب هادئ — انقر لإطلاق نيوترون وبدء الانشطار.</span></div>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>الحرارة الناتجة من الانشطار تُستعمل لغلي الماء ← البخار يدير التوربين ← المولد ← كهرباء (المبدأ نفسه في المحطة الحرارية للدرس 2).</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson3.html">⮕ الدرس السابق</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: الطاقة المتجددة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة الانشطار المتسلسل ---------- */
+(function () {
+  var cv = document.getElementById("fission"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height;
+  var nuclei = [], neutrons = [], flashes = [], heat = 0, fired = 0;
+
+  function reset() {
+    nuclei = []; neutrons = []; flashes = []; heat = 0; fired = 0;
+    // شبكة نوى يورانيوم
+    for (var r = 0; r < 4; r++) for (var c = 0; c < 6; c++) {
+      nuclei.push({ x: 130 + c * 88, y: 90 + r * 70, split: false, R: 18 });
+    }
+    document.getElementById("fissState").textContent = "القلب هادئ — انقر لإطلاق نيوترون وبدء الانشطار.";
+  }
+  reset();
+  document.getElementById("resetBtn").onclick = reset;
+
+  document.getElementById("fireBtn").onclick = function () {
+    // أطلق نيوتروناً من الأسفل نحو أقرب نواة سليمة
+    var target = nuclei.find(function (n) { return !n.split; });
+    if (!target) return;
+    var sx = W / 2, sy = H - 20;
+    var ang = Math.atan2(target.y - sy, target.x - sx);
+    neutrons.push({ x: sx, y: sy, vx: Math.cos(ang) * 4, vy: Math.sin(ang) * 4 });
+    fired++;
+    document.getElementById("fissState").textContent = "نيوترون منطلق نحو نواة U-235...";
+  };
+
+  function tick() {
+    ctx.clearRect(0, 0, W, H);
+    // خلفية القلب مع توهّج حراري
+    var hg = Math.min(heat / 30, 1);
+    ctx.fillStyle = "rgba(249,115,22," + (0.06 + 0.22 * hg) + ")";
+    ctx.fillRect(0, 0, W, H);
+
+    // النوى
+    nuclei.forEach(function (n) {
+      if (n.split) return;
+      ctx.beginPath(); ctx.arc(n.x, n.y, n.R, 0, Math.PI * 2);
+      var g = ctx.createRadialGradient(n.x - 5, n.y - 5, 3, n.x, n.y, n.R);
+      g.addColorStop(0, "#4ade80"); g.addColorStop(1, "#15803d");
+      ctx.fillStyle = g; ctx.fill();
+      ctx.fillStyle = "#fff"; ctx.font = "bold 10px Cairo"; ctx.textAlign = "center";
+      ctx.fillText("U-235", n.x, n.y + 3);
+    });
+
+    // النيوترونات
+    neutrons.forEach(function (p) {
+      p.x += p.vx; p.y += p.vy;
+      ctx.beginPath(); ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
+      ctx.fillStyle = "#1d4ed8"; ctx.fill();
+      ctx.strokeStyle = "#93c5fd"; ctx.lineWidth = 1.5; ctx.stroke();
+    });
+
+    // اصطدام النيوترونات بالنوى
+    neutrons = neutrons.filter(function (p) {
+      var hitDone = false;
+      for (var i = 0; i < nuclei.length; i++) {
+        var n = nuclei[i];
+        if (n.split) continue;
+        var dx = p.x - n.x, dy = p.y - n.y;
+        if (dx * dx + dy * dy < (n.R + 5) * (n.R + 5)) {
+          n.split = true; heat += 6;
+          flashes.push({ x: n.x, y: n.y, life: 1 });
+          // إطلاق نيوترونين جديدين (تفاعل متسلسل)
+          for (var k = 0; k < 2; k++) {
+            var a = Math.random() * Math.PI * 2;
+            neutrons.push({ x: n.x, y: n.y, vx: Math.cos(a) * 3.4, vy: Math.sin(a) * 3.4 });
+          }
+          hitDone = true; break;
+        }
+      }
+      // احذف النيوترون إن خرج أو اصطدم
+      return !hitDone && p.x > -20 && p.x < W + 20 && p.y > -20 && p.y < H + 20;
+    });
+
+    // ومضات الانشطار
+    flashes = flashes.filter(function (f) {
+      f.life -= 0.04;
+      if (f.life <= 0) return false;
+      var g = ctx.createRadialGradient(f.x, f.y, 2, f.x, f.y, 40 * (1.2 - f.life));
+      g.addColorStop(0, "rgba(250,204,21," + f.life + ")");
+      g.addColorStop(1, "rgba(249,115,22,0)");
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(f.x, f.y, 40 * (1.2 - f.life), 0, Math.PI * 2); ctx.fill();
+      return true;
+    });
+
+    heat *= 0.995;
+    var split = nuclei.filter(function (n) { return n.split; }).length;
+
+    // مؤشّر الحرارة
+    ctx.fillStyle = "#c2410c"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "right";
+    ctx.fillText("🌡️ حرارة القلب: " + Math.round(Math.min(heat, 40) * 2.5) + "°  ·  نوى انشطرت: " + split + "/" + nuclei.length, W - 14, 28);
+
+    if (split === nuclei.length && nuclei.length) {
+      document.getElementById("fissState").textContent = "انشطرت كل النوى! انطلقت حرارة هائلة تُستعمل لغلي الماء ← بخار ← توربين ← مولد ← كهرباء. (اضغط إعادة)";
+    } else if (split > 0) {
+      document.getElementById("fissState").textContent = "تفاعل متسلسل: كل انشطار يطلق نيوترونين يضربان نوىً أخرى فترتفع الحرارة!";
+    }
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "الوقود المستعمل في المفاعلات النووية هو:",
+    opts: ["اليورانيوم 235", "الكادميوم", "الراديوم", "الثوريوم"], a: 0,
+    why: "الوقود النووي المستعمل هو اليورانيوم U-235." },
+  { q: "تنتج الطاقة الحرارية في المفاعل النووي عن طريق:",
+    opts: ["انشطار نوى ذرات اليورانيوم 235", "احتراق الفحم", "سقوط الماء", "دوران المروحة"], a: 0,
+    why: "الانشطار النووي لنوى U-235 يُطلق حرارة هائلة." },
+  { q: "المفاعل النووي في محطة الطاقة يحلّ محلّ:",
+    opts: ["غرفة احتراق الوقود في المحطة الحرارية", "المولد الكهربائي", "التوربين", "خطوط النقل"], a: 0,
+    why: "المحطة النووية كالحرارية، لكن المفاعل يحلّ محلّ غرفة الاحتراق كمصدر للحرارة." },
+  { q: "تخصيب اليورانيوم هو:",
+    opts: ["عملية فصل اليورانيوم نوع U-235 عن باقي الأنواع لأغراض الانشطار", "حرق اليورانيوم", "تبريد المفاعل", "خلط اليورانيوم بالماء"], a: 0,
+    why: "التخصيب = فصل U-235 عن باقي الأنواع لاستعماله في الانشطار." },
+  { q: "المفاعل النووي هو:",
+    opts: ["منظومة أجهزة تنتج طاقة حرارية هائلة عن طريق انشطار العناصر الثقيلة مثل U-235", "بطارية كيميائية", "خلية شمسية", "توربين رياح"], a: 0,
+    why: "تعريف المفاعل: منظومة تنتج حرارة هائلة بانشطار نوى العناصر الثقيلة." },
+  { q: "بعد إنتاج الحرارة في المفاعل، تُستعمل هذه الحرارة في:",
+    opts: ["تحويل الماء إلى بخار يدير التوربين والمولد", "تبريد اليورانيوم", "شحن البطاريات مباشرة", "إضاءة المفاعل"], a: 0,
+    why: "الحرارة ← بخار ← توربين ← مولد ← كهرباء." }
+], { onDone: function (stars) { Phy.setLesson("ch8", "4", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

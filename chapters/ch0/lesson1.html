@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 1: التدوين العلمي (الأعداد الأسية)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch0">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل التمهيدي</a> / الدرس 1</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔟 الدرس 1: التدوين العلمي</h1>
+    <p>كيف نكتب الأعداد الكبيرة جداً والصغيرة جداً بشكل مرتّب باستخدام قوى العدد 10؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🤯</span>
+    <span>شحنة الإلكترون = <span class="formula-inline">0.00000000000000000016</span> كولوم! هل تتخيل كتابة هذا في كل مسألة؟ الفيزيائيون اخترعوا طريقة ذكية تختصره إلى <span class="formula-inline">16×10⁻²⁰</span> — هذا هو <b>التدوين العلمي</b>.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">💡</span> الفكرة ببساطة</div>
+  <div class="card">
+    <div class="defbox">
+      بدل ما نكتب رقماً طويلاً مليئاً بالأصفار، نكتبه على شكل: <b class="term">رقم بسيط × 10 مرفوعة لأس</b>. والأس يخبرنا كم خانة نحرّك الفاصلة.
+    </div>
+    <div class="bigout">150000 = 15 × 10⁴<small>بدل ما نعدّ 4 أصفار كل مرة، نكتب 10⁴ وخلص 👍</small></div>
+    <div class="bigout">0.0006 = 6 × 10⁻⁴<small>العدد صغير جداً ← الأس سالب (الفاصلة تمشي لليسار)</small></div>
+  </div>
+
+  <div class="section-title"><span class="ico">📜</span> ما هو التدوين العلمي؟</div>
+  <div class="card">
+    <div class="defbox">
+      <b class="term">التدوين العلمي</b> هو كتابة أي عدد على الصورة <span class="formula-inline">a × 10ⁿ</span> حيث:
+      <ul style="padding-inline-start:22px;margin-top:8px">
+        <li><b>a</b> عدد طبيعي بدون فاصلة عشرية، وبدون أصفار زائدة في نهايته.</li>
+        <li><b>n</b> عدد صحيح (موجب أو سالب) يمثل عدد الخانات التي حرّكنا بها الفاصلة.</li>
+        <li><b>10</b> هو الأساس دائماً في الفيزياء.</li>
+      </ul>
+    </div>
+
+    <div class="notebox">
+      <b>القاعدة الذهبية — إلى أي جهة تتحرك الفاصلة؟</b>
+      <ul>
+        <li>🔺 <b>عدد كبير</b> (أكبر من 1): نحذف كل الأصفار في نهاية العدد فيبقى عدد طبيعي a، والأس يكون <b>موجباً</b> بعدد الأصفار المحذوفة.</li>
+        <li>🔻 <b>عدد صغير</b> (كسر عشري أصغر من 1): نحرّك الفاصلة إلى <b>اليمين</b> حتى تختفي تماماً فيتكوّن عدد طبيعي a من كل أرقامه المعنوية، والأس يكون <b>سالباً</b> بعدد الخطوات.</li>
+      </ul>
+    </div>
+
+    <div class="lawbox">
+      باختصار
+      <div class="formula">كبير ⟵ أس موجب &nbsp;|&nbsp; صغير ⟶ أس سالب</div>
+    </div>
+  </div>
+
+  <!-- ======== محوّل التدوين العلمي ======== -->
+  <div class="sim">
+    <h3>🧪 المحوّل: من عدد عادي إلى تدوين علمي</h3>
+    <p class="sim-sub">اكتب أي عدد (مثل 150000 أو 0.00045) وشاهد كيف يتحوّل خطوة بخطوة.</p>
+    <div class="mathtool">
+      <input type="text" id="inNum" value="0.00045" inputmode="decimal">
+      <span style="font-weight:800">👈 اكتب عددك هنا</span>
+    </div>
+    <div class="bigout" id="outSci"></div>
+  </div>
+
+  <!-- ======== الموسّع العكسي ======== -->
+  <div class="sim">
+    <h3>🔁 العكس: من تدوين علمي إلى عدد عادي</h3>
+    <p class="sim-sub">حرّك الأس وشاهد الفاصلة تتحرك: الأس الموجب يكبّر العدد (فاصلة لليمين)، والسالب يصغّره (فاصلة لليسار).</p>
+    <div class="mathtool">
+      <span style="font-weight:900;direction:ltr;font-size:1.1rem">3 × 10</span>
+      <span style="font-weight:900;direction:ltr;font-size:1.1rem" id="expLbl">⁻⁴</span>
+      <input type="range" id="expR" min="-9" max="9" value="-4" step="1" style="flex:1;min-width:160px">
+    </div>
+    <div class="bigout" id="outExp"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✏️</span> أمثلة محلولة خطوة بخطوة</div>
+
+  <div class="example">
+    <div class="exq">مثال ١: اكتب العدد <span class="formula-inline">96000</span> بالتدوين العلمي.</div>
+    <div class="givens">العدد كبير (أكبر من 1) ← نتوقع أساً موجباً.</div>
+    <div class="step"><b>الخطوة ١:</b> نحذف الأصفار الموجودة في نهاية العدد فيبقى العدد الطبيعي a:
+      <div class="math">96</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نعدّ كم صفراً حذفناه من نهاية العدد:
+      <div class="math">96 0 0 0  →  حذفنا 3 أصفار</div></div>
+    <div class="step"><b>الخطوة ٣:</b> العدد كبير ← الأس موجب = عدد الأصفار المحذوفة:
+      <div class="math">96000 = 96 × 10³</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٢: اكتب العدد <span class="formula-inline">0.00045</span> بالتدوين العلمي.</div>
+    <div class="givens">العدد صغير (أصغر من 1) ← نتوقع أساً سالباً.</div>
+    <div class="step"><b>الخطوة ١:</b> نحرّك الفاصلة يميناً حتى تختفي تماماً، فيتكوّن العدد الطبيعي a من كل الأرقام المعنوية:
+      <div class="math">0.00045  →  45</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نعدّ خطوات التحريك:
+      <div class="math">0.0 0 0 4 5  =  5 خطوات</div></div>
+    <div class="step"><b>الخطوة ٣:</b> العدد صغير ← الأس سالب:
+      <div class="math">0.00045 = 45 × 10⁻⁵</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٣ (العكس): اكتب العدد <span class="formula-inline">2×10⁶</span> بصورته العادية.</div>
+    <div class="givens">الأس موجب (+6) ← العدد كبير، نحرّك الفاصلة يميناً 6 خانات.</div>
+    <div class="step"><b>الخطوة ١:</b> نبدأ من 2. ونضيف أصفاراً بعدد الأس:
+      <div class="math">2 × 10⁶ = 2 000 000</div></div>
+    <div class="step"><b>الخطوة ٢:</b> النتيجة = مليونان.</div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٤ (العكس): اكتب العدد <span class="formula-inline">7×10⁻³</span> بصورته العادية.</div>
+    <div class="givens">الأس سالب (−3) ← العدد صغير، نحرّك الفاصلة يساراً 3 خانات.</div>
+    <div class="step"><b>الخطوة ١:</b> نبدأ من 7 ونحرّك الفاصلة 3 خانات لليسار (نضيف أصفاراً):
+      <div class="math">7 × 10⁻³ = 0.007</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson2.html">الدرس التالي: ضرب وقسمة القوى ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* أدوات مساعدة للأسس بالكتابة العلوية */
+var SUP = { "-": "⁻", "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹" };
+function sup(n) { return String(n).split("").map(function (c) { return SUP[c] || c; }).join(""); }
+
+/* ---------- المحوّل: عدد → تدوين علمي ---------- */
+(function () {
+  var inp = document.getElementById("inNum"), out = document.getElementById("outSci");
+  function render() {
+    var raw = inp.value.trim().replace("٫", ".");
+    var x = Number(raw);
+    if (raw === "" || isNaN(x)) { out.innerHTML = "✍️ اكتب عدداً صحيحاً..."; return; }
+    if (x === 0) { out.innerHTML = "<span class='hl'>0 × 10⁰</span>"; return; }
+    var neg = x < 0;
+    var s = raw.replace("-", "");
+    var parts = s.split(".");
+    var intPart = parts[0] || "0", fracPart = parts[1] || "";
+    var digits = intPart + fracPart;
+    var k = fracPart.length, n = -k;
+    var D = parseInt(digits, 10) || 0;
+    while (D !== 0 && D % 10 === 0) { D = D / 10; n = n + 1; }
+    var aStr = (neg ? "-" : "") + D;
+    out.innerHTML = "<span class='hl'>" + aStr + " × 10" + sup(n) + "</span>" +
+      "<small>" + (n >= 0 ? "عدد كبير ← الأس موجب (+" + n + ")" : "عدد صغير ← الأس سالب (" + n + ")") + "</small>";
+  }
+  inp.addEventListener("input", render);
+  render();
+})();
+
+/* ---------- الموسّع: تدوين علمي → عدد عادي ---------- */
+(function () {
+  var r = document.getElementById("expR"), lbl = document.getElementById("expLbl"), out = document.getElementById("outExp");
+  function render() {
+    var n = +r.value, val = 3 * Math.pow(10, n);
+    lbl.textContent = sup(n);
+    var pretty;
+    if (n >= 0) pretty = (3 + "").padEnd(1 + n, "0"); // 3 ثم أصفار
+    else pretty = "0." + "0".repeat(-n - 1) + "3";
+    out.innerHTML = "3 × 10" + sup(n) + " = <span class='hl'>" + pretty + "</span>" +
+      "<small>" + (n > 0 ? "الأس موجب ← الفاصلة تتحرك يميناً " + n + " خانة (العدد يكبر)"
+        : n < 0 ? "الأس سالب ← الفاصلة تتحرك يساراً " + (-n) + " خانة (العدد يصغر)"
+        : "الأس صفر ← 10⁰ = 1، فالعدد يبقى 3") + "</small>";
+  }
+  r.addEventListener("input", render);
+  render();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "العدد 250000 بالتدوين العلمي هو:",
+    opts: ["25 × 10⁴", "2.5 × 10⁵", "250 × 10³", "25 × 10⁵"], a: 0,
+    why: "نحذف كل الأصفار الزائدة في نهاية العدد فيبقى 25 (عدد طبيعي بدون فاصلة)، وعدد الأصفار المحذوفة (4) يصبح الأس." },
+  { q: "العدد 0.0006 بالتدوين العلمي هو:",
+    opts: ["6 × 10⁴", "6 × 10⁻⁴", "6 × 10⁻³", "0.6 × 10⁻³"], a: 1,
+    why: "نحرّك الفاصلة 4 خانات لليمين حتى نصل الرقم 6 — والعدد صغير فالأس سالب = −4." },
+  { q: "العدد 3 × 10³ يساوي بصورته العادية:",
+    opts: ["300", "3000", "30000", "0.003"], a: 1,
+    why: "أس موجب 3 ← نضيف 3 أصفار بعد الرقم 3 = 3000." },
+  { q: "العدد 5 × 10⁻² يساوي بصورته العادية:",
+    opts: ["500", "0.5", "0.05", "0.005"], a: 2,
+    why: "أس سالب 2 ← نحرّك الفاصلة خانتين لليسار = 0.05." },
+  { q: "العدد 45000 مكتوب بالتدوين العلمي الصحيح بالشكل:",
+    opts: ["45 × 10³", "4.5 × 10⁴", "450 × 10²", "45 × 10⁻³"], a: 0,
+    why: "الشرط أن يكون a عدداً طبيعياً بدون فاصلة عشرية وبدون أصفار زائدة في نهايته. نحذف الأصفار الثلاثة من 45000 فيبقى 45، والأس = 3." },
+  { q: "لكتابة عدد صغير جداً (أصغر من 1) بالتدوين العلمي، الأس يكون:",
+    opts: ["موجباً دائماً", "سالباً دائماً", "صفراً", "أحياناً موجب وأحياناً سالب"], a: 1,
+    why: "العدد الأصغر من 1 نحرّك فاصلته لليمين، فيكون الأس سالباً دائماً." }
+], { onDone: function (stars) { Phy.setLesson("ch0", "1", { stars: stars }); } });
+</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: تحويل البادئات والوحدات</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch0">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل التمهيدي</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>📏 الدرس 5: تحويل البادئات والوحدات</h1>
+    <p>سنتيمتر، مليمتر، مايكرو... كيف نحوّلها كلها إلى الوحدة الأساسية (المتر) باستخدام قوى العشرة؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">📐</span>
+    <span>القاعدة الأولى قبل تطبيق أي قانون فيزيائي: <b>وحّد الوحدات!</b> البعد بالمتر، الشحنة بالكولوم. مسافة 6cm ليست 6 في القانون، بل <span class="formula-inline">6×10⁻² m</span>.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">💡</span> الفكرة ببساطة</div>
+  <div class="card">
+    <div class="defbox">
+      كل بادئة (سنتي، مِلّي، مايكرو...) هي مجرّد <b class="term">اسم مختصر لقوة من قوى العشرة</b>. مثلاً «سنتي» تعني جزء من مئة = ×10⁻². فالتحويل = نستبدل البادئة بالقوة التي تقابلها.
+    </div>
+    <div class="bigout">1 متر = 100 سنتيمتر<small>لهذا 1 سم = جزء من مئة من المتر = 1 × 10⁻² m 📏</small></div>
+  </div>
+
+  <div class="section-title"><span class="ico">📜</span> جدول البادئات — احفظه!</div>
+  <div class="card">
+    <div class="tblwrap"><table class="nice">
+      <tr><th>البادئة</th><th>الرمز</th><th>للتحويل إلى الوحدة الأساسية نضرب في</th></tr>
+      <tr><td>كيلو (Kilo)</td><td>k</td><td>×10³</td></tr>
+      <tr><td>الوحدة الأساسية</td><td>m, C, g</td><td>×10⁰ = ×1</td></tr>
+      <tr><td>سنتي (Centi)</td><td>c</td><td>×10⁻²</td></tr>
+      <tr><td>مِلّي (Milli)</td><td>m</td><td>×10⁻³</td></tr>
+      <tr><td>مايكرو (Micro)</td><td>μ</td><td>×10⁻⁶</td></tr>
+      <tr><td>نانو (Nano)</td><td>n</td><td>×10⁻⁹</td></tr>
+      <tr><td>بيكو (Pico)</td><td>p</td><td>×10⁻¹²</td></tr>
+    </table></div>
+    <div class="notebox">
+      <b>القاعدة:</b>
+      <ul>
+        <li>من <b>جزء صغير → الوحدة الأساسية</b> (مثل cm → m): نضرب في القوة الموجودة في الجدول (أس سالب).</li>
+        <li>مثال: <span class="formula-inline">1 cm = 1×10⁻² m</span> · <span class="formula-inline">1 μC = 1×10⁻⁶ C</span></li>
+        <li>💡 نفس البادئات تنطبق على كل الوحدات: المتر، الكولوم، الغرام... (سنتيمتر، سنتي كولوم، سنتي غرام).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ======== محوّل الوحدات ======== -->
+  <div class="sim">
+    <h3>🧪 محوّل الوحدات إلى المتر</h3>
+    <p class="sim-sub">اكتب قيمة واختر بادئتها، وشاهد تحويلها إلى المتر بالتدوين العلمي.</p>
+    <div class="mathtool">
+      <input type="number" id="valIn" value="6" style="width:110px">
+      <select id="prefix" style="font-family:inherit;font-size:1.05rem;font-weight:800;border:2px solid #e9ebfa;border-radius:12px;padding:9px 10px;background:#f8f9ff">
+        <option value="3">كيلومتر km (×10³)</option>
+        <option value="-2" selected>سنتيمتر cm (×10⁻²)</option>
+        <option value="-3">مليمتر mm (×10⁻³)</option>
+        <option value="-6">مايكرومتر μm (×10⁻⁶)</option>
+        <option value="-9">نانومتر nm (×10⁻⁹)</option>
+      </select>
+      <span style="font-weight:800">⟵ إلى المتر</span>
+    </div>
+    <div class="bigout" id="outConv"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✏️</span> أمثلة محلولة خطوة بخطوة</div>
+
+  <div class="example">
+    <div class="exq">مثال ١: حوّل <span class="formula-inline">6 cm</span> إلى متر.</div>
+    <div class="step"><b>الخطوة ١:</b> من الجدول: سنتي = ×10⁻²
+      <div class="math">6 cm = 6 × 10⁻² m</div></div>
+    <div class="step"><b>الخطوة ٢:</b> وبالصورة العادية:
+      <div class="math">= 0.06 m</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٢: حوّل <span class="formula-inline">30 cm</span> إلى متر بالتدوين العلمي.</div>
+    <div class="step"><b>الخطوة ١:</b> نطبّق البادئة:
+      <div class="math">30 cm = 30 × 10⁻² m</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نبسّطها للتدوين العلمي الصحيح (نحذف العامل المشترك 10 من a):
+      <div class="math">30 × 10⁻² = 3 × 10⁻¹ m = 0.3 m</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٣: حوّل <span class="formula-inline">4 μC</span> إلى كولوم.</div>
+    <div class="step"><b>الخطوة ١:</b> مايكرو = ×10⁻⁶ (نفس البادئة تعمل مع الكولوم):
+      <div class="math">4 μC = 4 × 10⁻⁶ C</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٤: حوّل <span class="formula-inline">2 km</span> إلى متر.</div>
+    <div class="step"><b>الخطوة ١:</b> كيلو = ×10³:
+      <div class="math">2 km = 2 × 10³ m = 2000 m</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz5"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson4.html">⬅ الدرس السابق</a>
+    <a class="btn" href="exam.html">الاختبار النهائي 🏆</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var SUP = { "-": "⁻", "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹" };
+function sup(n) { return String(n).split("").map(function (c) { return SUP[c] || c; }).join(""); }
+
+/* ---------- محوّل الوحدات ---------- */
+(function () {
+  var valIn = document.getElementById("valIn"), prefix = document.getElementById("prefix"), out = document.getElementById("outConv");
+  function render() {
+    var v = Number(valIn.value), n = +prefix.value;
+    if (valIn.value.trim() === "" || isNaN(v)) { out.innerHTML = "✍️ اكتب قيمة..."; return; }
+    var meters = v * Math.pow(10, n);
+    // صورة عادية مقروءة
+    var plain = Number(meters.toPrecision(12)).toString();
+    out.innerHTML = v + " × 10" + sup(n) + " m = <span class='hl'>" + plain + " m</span>" +
+      "<small>طبّقنا البادئة: القيمة × 10" + sup(n) + "</small>";
+  }
+  valIn.addEventListener("input", render); prefix.addEventListener("change", render);
+  render();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz5", [
+  { q: "لتحويل السنتيمتر cm إلى متر نضرب في:",
+    opts: ["10⁻²", "10²", "10⁻³", "10⁻⁶"], a: 0,
+    why: "سنتي = ×10⁻². مثال: 5cm = 5×10⁻² m." },
+  { q: "6 cm بوحدة المتر تساوي:",
+    opts: ["6 × 10⁻² m", "6 × 10² m", "0.6 m", "60 m"], a: 0,
+    why: "6 × 10⁻² m = 0.06 m." },
+  { q: "لتحويل المايكروكولوم μC إلى كولوم نضرب في:",
+    opts: ["10⁻³", "10⁻⁶", "10⁻⁹", "10⁻¹²"], a: 1,
+    why: "مايكرو = ×10⁻⁶. مثال: 4μC = 4×10⁻⁶ C." },
+  { q: "2 km بوحدة المتر تساوي:",
+    opts: ["2000 m", "200 m", "0.002 m", "2 × 10⁻³ m"], a: 0,
+    why: "كيلو = ×10³ ← 2×10³ = 2000 m." },
+  { q: "لماذا نحوّل الوحدات قبل تطبيق القانون الفيزيائي؟",
+    opts: ["للزينة", "لتكون كل الوحدات أساسية وموحّدة فتصحّ النتيجة", "لتصغير الأرقام فقط", "لا داعي للتحويل"], a: 1,
+    why: "القوانين تعمل بالوحدات الأساسية (متر، كولوم...) — الخلط يعطي نتيجة خاطئة." },
+  { q: "مليمتر mm إلى متر: نضرب في:",
+    opts: ["10⁻³", "10⁻²", "10³", "10⁻⁶"], a: 0,
+    why: "مِلّي = ×10⁻³. مثال: 5mm = 5×10⁻³ m." }
+], { onDone: function (stars) { Phy.setLesson("ch0", "5", { stars: stars }); } });
+</script>
+</body>
+</html>

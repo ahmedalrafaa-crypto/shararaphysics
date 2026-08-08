@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: التيار الكهربائي والأمبير</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch3">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثالث</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>📏 الدرس 2: التيار الكهربائي والأمبير</h1>
+    <p>كيف نقيس «كمية الكهرباء» المارة في السلك؟ بعدّ الشحنات التي تعبر كل ثانية — وهذا بالضبط معنى الأمبير!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚦</span>
+    <span>تخيل شرطي مرور يقف عند مقطع من السلك ويعدّ الشحنات العابرة كل ثانية... كلما عبرت شحنات أكثر في الثانية كان <b>التيار أكبر</b>!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> تعريف التيار الكهربائي</div>
+  <div class="defbox">
+    <b class="term">التيار الكهربائي</b><b>:</b> هو مقدار الشحنات الكهربائية المتحركة خلال مقطع عرضي لموصل في وحدة الزمن ويقاس بالأمبير.
+  </div>
+
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> عرف التيار الكهربائي وذكر الصيغة الرياضية له مع ذكر وحدة القياس؟</summary>
+      <div class="ans">
+        <b class="term">التيار الكهربائي:</b> هو مقدار الشحنات الكهربائية المتحركة خلال مقطع عرضي لموصل في وحدة الزمن ويقاس بالأمبير.
+        <div class="math">التيار الكهربائي = الشحنة ÷ الزمن &nbsp;&nbsp; أو &nbsp;&nbsp; I = q / t</div>
+        <b>حيث ان:</b><br>
+        <b>I</b>: هو التيار الكهربائي ويقاس بوحدة الأمبير (A)<br>
+        <b>q</b>: هي الشحنة الكهربائية وتقاس بالكولوم (C)<br>
+        <b>t</b>: الزمن يقاس بالثانية (S)
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> عرف الامبير؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b class="term">الامبير:</b> هو تدفق واحد من الشحنات الكهربائية في مقطع الموصل خلال ثانية واحدة حيث:
+        <div class="math">الامبير = كولوم / ثانية &nbsp;&nbsp; أو &nbsp;&nbsp; Ampere = coulomb / Second</div>
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما المقصود بالعبارة الاتية: تيار كهربائي مقداره (4A) ينساب في سلك موصل؟</summary>
+      <div class="ans">معنى ذلك ان شحنات كهربائية مقدارها (4C) تعبر مقطعا في هذا السلك الموصل في زمن قدره ثانية واحدة.</div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>هناك اجزاء صغيرة المقدار هي <b>ملي امبير</b> و<b>مايكرو امبير</b> ويمكن تحويلها الى امبير كتالي:</li>
+      <li>ملي أمبير mA ← نضرب × 10⁻³ للتحويل إلى A</li>
+      <li>مايكرو أمبير μA ← نضرب × 10⁻⁶ للتحويل إلى A</li>
+    </ul>
+  </div>
+
+  <!-- ======== المحاكاة: عداد الشحنات ======== -->
+  <div class="sim">
+    <h3>🧪 عدّاد الشحنات: اصنع تيارك بنفسك!</h3>
+    <p class="sim-sub">حرّك المؤشرين وشاهد الشحنات تعبر المقطع الأحمر — الجهاز يحسب لك التيار I = q / t فوراً.</p>
+    <canvas id="ampSim" width="700" height="240"></canvas>
+    <div class="controls">
+      <label>الشحنة q: <input type="range" id="qRange" min="1" max="12" value="6" step="1"> <span class="readout" id="qVal">6 C</span></label>
+      <label>الزمن t: <input type="range" id="tRange" min="1" max="6" value="2" step="1"> <span class="readout" id="tVal">2 s</span></label>
+    </div>
+    <div class="controls"><span class="readout" id="ampOut">I = q / t = 6 ÷ 2 = 3 A</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✏️</span> أمثلة محلولة خطوة بخطوة</div>
+
+  <div class="example">
+    <div class="exq">مثال ١: يمر من مقطعا عرضيا من موصل شحنات كهربائية مقدارها (1.2C) في كل دقيقة احسب مقدار التيار المنساب خلال الموصل؟</div>
+    <div class="givens">المعطيات: q = 1.2 C — t = دقيقة واحدة = 60 s — المطلوب: I</div>
+    <div class="step"><b>الخطوة ١:</b> نحول الزمن إلى ثوانٍ: دقيقة واحدة = 60 ثانية.</div>
+    <div class="step"><b>الخطوة ٢:</b> نطبق القانون:
+      <div class="math">I = q / t = 1.2 / 60</div></div>
+    <div class="step"><b>الخطوة ٣:</b> النتيجة:
+      <div class="math">I = 0.02 A</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٢: اذا كان مقدار التيار المنساب في موصل (0.4A) احسب كمية الشحنة التي تعبر مقطعا عرضيا من موصل خلال: &nbsp; a – 2 sec &nbsp;&nbsp; b - 4 minutes</div>
+    <div class="givens">المعطيات: I = 0.4 A — المطلوب: q في الحالتين</div>
+    <div class="step"><b>الخطوة ١ (الفرع a):</b> من I = q/t نحصل على q = I × t:
+      <div class="math">q = 0.4 × 2 = 0.8 C</div></div>
+    <div class="step"><b>الخطوة ٢ (الفرع b):</b> نحول الدقائق إلى ثوانٍ: 4 دقائق = 4 × 60 ثانية:
+      <div class="math">q = 0.4 × 4 × 60 = 96 C</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">سؤال: اذا كان مقدار التيار الكهربائي المنساب في موصل يساوي (0.6A) احسب كمية الشحنة التي تعبر مقطعا من موصل خلال (120 ثانية)؟</div>
+    <div class="givens">المعطيات: I = 0.6 A — t = 120 s — المطلوب: q</div>
+    <div class="step"><b>الخطوة ١:</b> من I = q/t نحصل على q = I × t.</div>
+    <div class="step"><b>الخطوة ٢:</b> نعوض:
+      <div class="math">q = 0.6 × 120 = 72 C</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">سؤال: اذا كان مقدار التيار الكهربائي في موصل كهربائي هو (3A) فما هو الزمن الازم لعبور كمية من الشحنات الكهربائية مقدارها (9μC) خلال مقطعا عرضيا من ذلك الموصل؟</div>
+    <div class="givens">المعطيات: I = 3 A — q = 9 μC = 9×10⁻⁶ C — المطلوب: t</div>
+    <div class="step"><b>الخطوة ١:</b> نحول المايكرو كولوم: 9μC = 9×10⁻⁶ C.</div>
+    <div class="step"><b>الخطوة ٢:</b> من I = q/t نحصل على t = q / I:
+      <div class="math">t = (9×10⁻⁶) / 3</div></div>
+    <div class="step"><b>الخطوة ٣:</b> النتيجة:
+      <div class="math">t = 3×10⁻⁶ sec</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz2"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson1.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: أنواع التيار ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- عداد الشحنات ---------- */
+(function () {
+  var cv = document.getElementById("ampSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height, cy = H / 2;
+  var q = 6, t = 2;
+  var qR = document.getElementById("qRange"), tR = document.getElementById("tRange");
+  var qV = document.getElementById("qVal"), tV = document.getElementById("tVal");
+  var out = document.getElementById("ampOut");
+  var parts = [];
+
+  function refresh() {
+    q = +qR.value; t = +tR.value;
+    qV.textContent = q + " C";
+    tV.textContent = t + " s";
+    var I = q / t;
+    out.textContent = "I = q / t = " + q + " ÷ " + t + " = " + (Math.round(I * 100) / 100) + " A";
+  }
+  qR.oninput = refresh; tR.oninput = refresh; refresh();
+
+  function tick() {
+    ctx.clearRect(0, 0, W, H);
+
+    // السلك
+    ctx.fillStyle = "#efe3cf";
+    ctx.fillRect(40, cy - 34, W - 80, 68);
+    ctx.strokeStyle = "#9a7b4f"; ctx.lineWidth = 3;
+    ctx.strokeRect(40, cy - 34, W - 80, 68);
+
+    // المقطع العرضي
+    ctx.strokeStyle = "#e63946"; ctx.lineWidth = 4;
+    ctx.setLineDash([8, 6]);
+    ctx.beginPath(); ctx.moveTo(W / 2, cy - 42); ctx.lineTo(W / 2, cy + 42); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = "#e63946"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("مقطع عرضي", W / 2, cy - 52);
+
+    // معدل التوليد يتناسب مع I
+    var I = q / t;
+    if (Math.random() < I * 0.12) {
+      parts.push({ x: W - 50, y: cy - 22 + Math.random() * 44 });
+    }
+    for (var i = parts.length - 1; i >= 0; i--) {
+      var p = parts[i];
+      p.x -= 2 + I * 0.5;
+      if (p.x < 46) { parts.splice(i, 1); continue; }
+      ctx.beginPath(); ctx.arc(p.x, p.y, 6, 0, Math.PI * 2);
+      ctx.fillStyle = "#2f6fdb"; ctx.fill();
+      ctx.fillStyle = "#fff"; ctx.font = "bold 9px Cairo";
+      ctx.fillText("−", p.x, p.y + 3.5);
+    }
+
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 15px Cairo";
+    ctx.fillText("I = " + (Math.round(I * 100) / 100) + " A", W / 2, cy + 62);
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz2", [
+  { q: "التيار الكهربائي هو:",
+    opts: ["مقدار الشحنات الكهربائية المتحركة خلال مقطع عرضي لموصل في وحدة الزمن", "عدد الإلكترونات الساكنة", "فرق الجهد بين نقطتين", "مقاومة الموصل"], a: 0,
+    why: "التعريف الوزاري، ويقاس بالأمبير: I = q / t." },
+  { q: "الأمبير يساوي:",
+    opts: ["كولوم × ثانية", "كولوم / ثانية", "ثانية / كولوم", "فولت / ثانية"], a: 1,
+    why: "الأمبير = كولوم/ثانية: تدفق واحد كولوم خلال مقطع الموصل في ثانية واحدة." },
+  { q: "معنى العبارة: تيار كهربائي مقداره (4A) ينساب في سلك موصل:",
+    opts: ["شحنات مقدارها 4C تعبر مقطع السلك في ثانية واحدة", "شحنات مقدارها 1C تعبر في 4 ثوان", "جهد السلك 4 فولت", "مقاومة السلك 4 أوم"], a: 0,
+    why: "أي أن شحنات كهربائية مقدارها (4C) تعبر مقطعا في السلك خلال ثانية واحدة." },
+  { q: "للتحويل من ملي أمبير (mA) إلى أمبير نضرب في:",
+    opts: ["10⁻³", "10⁻⁶", "10³", "10⁶"], a: 0,
+    why: "ملي أمبير × 10⁻³ = أمبير، أما المايكرو أمبير فنضرب × 10⁻⁶." },
+  { q: "مرت شحنات مقدارها (1.2C) خلال مقطع موصل في كل دقيقة — مقدار التيار:",
+    opts: ["1.2 A", "0.02 A", "72 A", "0.2 A"], a: 1,
+    why: "I = q/t = 1.2 ÷ 60 = 0.02 A (مثال ١ في الملزمة)." },
+  { q: "تيار مقداره (0.4A) ينساب في موصل — الشحنة العابرة خلال ثانيتين:",
+    opts: ["0.2 C", "0.8 C", "2 C", "96 C"], a: 1,
+    why: "q = I × t = 0.4 × 2 = 0.8 C." },
+  { q: "تيار مقداره (0.6A) — كمية الشحنة العابرة خلال (120 ثانية):",
+    opts: ["200 C", "72 C", "0.005 C", "20 C"], a: 1,
+    why: "q = I × t = 0.6 × 120 = 72 C." },
+  { q: "تيار (3A) — الزمن اللازم لعبور شحنة (9μC):",
+    opts: ["3×10⁻⁶ s", "27 s", "3 s", "9×10⁻⁶ s"], a: 0,
+    why: "t = q/I = (9×10⁻⁶) ÷ 3 = 3×10⁻⁶ ثانية." }
+], { onDone: function (stars) { Phy.setLesson("ch3", "2", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

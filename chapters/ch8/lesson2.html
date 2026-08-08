@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: الطاقة الأحفورية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch8">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثامن</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>🛢️ الدرس 2: الطاقة الأحفورية</h1>
+    <p>النفط والفحم والغاز — كنوز دفنتها الأرض عبر ملايين السنين. نحرقها اليوم لنُضيء بيوتنا ونحرّك سياراتنا... لكن لماذا تُسمّى «أحفورية» و«غير متجددة»؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">⛽</span>
+    <span>كل لتر بنزين تضعه في السيارة كان يوماً بقايا كائنات حية دُفنت وتحوّلت تحت الضغط والحرارة عبر ملايين السنين. لهذا نستهلكها أسرع بكثير مما تتكوّن!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔎</span> أولاً: الطاقة الأحفورية</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما مميزات مصادر الطاقة الأحفورية؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١.</b> هي مصادر الطاقة غير المتجددة.<br>
+        <b>٢.</b> يشترك في تكوينها عنصرا الهيدروجين والكاربون أي المواد الهيدروكاربونية، بالإضافة إلى نسب مختلفة من الماء والكبريت والأوكسجين والنتروجين وأكاسيد الكاربون.<br>
+        <b>٣.</b> احتياطي العالم منها يتناقص بشكل كبير لأن معدل تكوينها أقل من معدل استهلاكها.<br>
+        <b>٤.</b> مثل الفحم الحجري والنفط والغاز الطبيعي.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> تُعتبر مصادر الطاقة الأحفورية مواد هيدروكربونية؟</summary>
+      <div class="ans">لأنها تتكوّن من عنصرَي الكاربون والهيدروجين، إضافةً إلى نسب مختلفة من الماء والكبريت والأوكسجين والنيتروجين.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> تُعدّ مصادر الطاقة الأحفورية من مصادر الطاقة غير المتجددة؟</summary>
+      <div class="ans">لأنها مواد مستهلَكة، ومعدل تكوّنها في الطبيعة أقل بكثير من معدل استهلاكها.</div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>من مصادر الطاقة غير المتجددة هي: <b>الفحم الحجري والنفط والغاز الطبيعي</b>. <span class="wz">وزاري</span></li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">🏭</span> استعمالات الوقود الأحفوري</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما الفائدة من استعمال الوقود الأحفوري؟ أو ما استعمالات الوقود الأحفوري؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١. توليد الكهرباء:</b> حيث تُستعمل الحرارة الناتجة من حرق الوقود في تسخين الماء لإنتاج البخار الذي يُستعمل في تدوير التوربينات الموصّلة للمولدات الكهربائية.<br>
+        <b>٢.</b> تشغيل وسائل النقل المختلفة.<br>
+        <b>٣.</b> يُستعمل كوقود مباشر لأغراض الطهي والتسخين.
+      </div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة المحطة الحرارية ======== -->
+  <div class="sim">
+    <h3>🎬 المحطة الحرارية: من الوقود إلى الكهرباء</h3>
+    <p class="sim-sub">شغّل الفرن وشاهد الرحلة: يحترق الوقود ← الحرارة تغلي الماء ← البخار يدفع التوربين ← التوربين يدير المولد ← تُولَّد الكهرباء وتضيء المدينة.</p>
+    <canvas id="plant" width="700" height="400"></canvas>
+    <div class="controls">
+      <button class="btn green" id="plantBtn">🔥 أشعل الفرن</button>
+    </div>
+    <div class="controls"><span class="readout" id="plantState">الفرن مطفأ — لا بخار ولا دوران ولا كهرباء.</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson1.html">⮕ الدرس السابق</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: الطاقة المائية ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة المحطة الحرارية ---------- */
+(function () {
+  var cv = document.getElementById("plant"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height, t = 0, on = false, spin = 0, glow = 0;
+  var btn = document.getElementById("plantBtn"), state = document.getElementById("plantState");
+
+  btn.onclick = function () {
+    on = !on;
+    btn.textContent = on ? "🧯 أطفئ الفرن" : "🔥 أشعل الفرن";
+    btn.classList.toggle("green", !on);
+    state.textContent = on
+      ? "يحترق الوقود ← تنطلق حرارة تغلي الماء ← البخار يدفع ريش التوربين فيدور ← يدير المولد ← تتولّد الكهرباء وتُضيء المدينة!"
+      : "الفرن مطفأ — لا بخار ولا دوران ولا كهرباء.";
+  };
+
+  function label(x, y, txt, col) {
+    ctx.fillStyle = col || "#475569"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText(txt, x, y);
+  }
+
+  function tick() {
+    t += 0.05;
+    var target = on ? 1 : 0;
+    spin += on ? 0.18 : 0.0;
+    glow += (target - glow) * 0.05;
+    ctx.clearRect(0, 0, W, H);
+
+    // 1) الفرن + الوقود
+    var fx = 90, fy = 250;
+    ctx.fillStyle = "#334155"; ctx.fillRect(fx - 45, fy - 40, 90, 90);
+    ctx.strokeStyle = "#1e293b"; ctx.lineWidth = 2; ctx.strokeRect(fx - 45, fy - 40, 90, 90);
+    // لهب
+    if (glow > 0.02) {
+      for (var i = 0; i < 7; i++) {
+        var fl = Math.abs(Math.sin(t * 3 + i));
+        ctx.beginPath();
+        ctx.fillStyle = i % 2 ? "rgba(249,115,22," + glow + ")" : "rgba(234,88,12," + glow + ")";
+        var bx = fx - 34 + i * 11;
+        ctx.moveTo(bx, fy + 42);
+        ctx.quadraticCurveTo(bx - 5, fy + 20 - fl * 18, bx, fy - 4 - fl * 20);
+        ctx.quadraticCurveTo(bx + 5, fy + 20 - fl * 18, bx + 8, fy + 42);
+        ctx.fill();
+      }
+    }
+    label(fx, fy + 70, "🔥 فرن حرق الوقود", "#c2410c");
+    label(fx, fy - 52, "وقود أحفوري", "#334155");
+
+    // 2) الغلاية + البخار
+    var bx2 = 250, by = 210;
+    ctx.fillStyle = glow > 0.4 ? "#fca5a5" : "#cbd5e1";
+    ctx.fillRect(bx2 - 34, by - 20, 68, 120);
+    ctx.strokeStyle = "#64748b"; ctx.lineWidth = 2; ctx.strokeRect(bx2 - 34, by - 20, 68, 120);
+    label(bx2, by + 118, "غلاية الماء", "#475569");
+    // بخار يصعد نحو التوربين
+    if (glow > 0.05) {
+      ctx.strokeStyle = "rgba(148,163,184," + (0.4 + 0.5 * glow) + ")"; ctx.lineWidth = 8; ctx.lineCap = "round";
+      for (var s = 0; s < 4; s++) {
+        var ph = (t * 1.2 + s * 0.7) % 1;
+        ctx.beginPath();
+        var sx = bx2 + 34, sy = by - 6;
+        ctx.moveTo(sx, sy);
+        ctx.lineTo(sx + 60 * ph + 20, sy - 6 * Math.sin(ph * 6));
+        ctx.stroke();
+      }
+      ctx.lineCap = "butt";
+      label((bx2 + 380) / 2 + 10, by - 30, "بخار", "#64748b");
+    }
+
+    // 3) التوربين (عجلة بريش تدور)
+    var tx = 400, ty = by;
+    ctx.save(); ctx.translate(tx, ty); ctx.rotate(spin);
+    for (var b = 0; b < 8; b++) {
+      ctx.rotate(Math.PI / 4);
+      ctx.fillStyle = "#0d9488";
+      ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(30, -8); ctx.lineTo(30, 8); ctx.closePath(); ctx.fill();
+    }
+    ctx.restore();
+    ctx.beginPath(); ctx.arc(tx, ty, 9, 0, Math.PI * 2); ctx.fillStyle = "#0f766e"; ctx.fill();
+    label(tx, ty + 66, "توربين", "#0f766e");
+
+    // عمود يربط التوربين بالمولد
+    ctx.strokeStyle = "#475569"; ctx.lineWidth = 6;
+    ctx.beginPath(); ctx.moveTo(tx + 30, ty); ctx.lineTo(520, ty); ctx.stroke();
+
+    // 4) المولد
+    var gx = 560, gy = by;
+    ctx.fillStyle = glow > 0.4 ? "#16a34a" : "#94a3b8";
+    ctx.beginPath(); ctx.arc(gx, gy, 34, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = "#334155"; ctx.lineWidth = 2; ctx.stroke();
+    ctx.fillStyle = "#fff"; ctx.font = "bold 22px Cairo"; ctx.textAlign = "center"; ctx.fillText("G", gx, gy + 8);
+    label(gx, gy + 66, "المولد الكهربائي", "#15803d");
+
+    // 5) خط الكهرباء + المدينة
+    ctx.strokeStyle = glow > 0.5 ? "#facc15" : "#cbd5e1"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(gx, gy - 34); ctx.lineTo(gx, 70); ctx.lineTo(150, 70); ctx.stroke();
+    // ومضات تيار
+    if (glow > 0.5) {
+      for (var c = 0; c < 5; c++) {
+        var f = ((t * 0.4 + c / 5) % 1);
+        var px = gx - f * (gx - 150), py = 70;
+        ctx.beginPath(); ctx.arc(px, py, 3.5, 0, Math.PI * 2); ctx.fillStyle = "#f59e0b"; ctx.fill();
+      }
+    }
+    // مبانٍ المدينة
+    var bxs = [95, 120, 145];
+    bxs.forEach(function (mx, i) {
+      var hgt = 34 + i * 8;
+      ctx.fillStyle = glow > 0.5 ? "#fde68a" : "#cbd5e1";
+      ctx.fillRect(mx, 90 - hgt + 34, 22, hgt);
+      ctx.strokeStyle = "#94a3b8"; ctx.strokeRect(mx, 90 - hgt + 34, 22, hgt);
+    });
+    label(120, 140, glow > 0.5 ? "💡 المدينة مضاءة" : "المدينة", glow > 0.5 ? "#b45309" : "#94a3b8");
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "مصادر الطاقة الأحفورية هي:",
+    opts: ["النفط والفحم الحجري والغاز الطبيعي", "الشمس والرياح", "الماء والمد", "اليورانيوم فقط"], a: 0,
+    why: "الأحفورية = النفط + الفحم الحجري + الغاز الطبيعي." },
+  { q: "تُسمّى مصادر الطاقة الأحفورية «مواد هيدروكربونية» لأنها تتكوّن من:",
+    opts: ["الكاربون والهيدروجين (مع نسب من الماء والكبريت والأوكسجين والنيتروجين)", "الحديد والنحاس", "الماء النقي فقط", "الأوكسجين فقط"], a: 0,
+    why: "هيدروكربونية = كاربون + هيدروجين، إضافة إلى نسب مختلفة من عناصر أخرى." },
+  { q: "تُعدّ الطاقة الأحفورية غير متجددة لأن:",
+    opts: ["معدل تكوّنها في الطبيعة أقل بكثير من معدل استهلاكها", "لا تحترق", "لا تنتج حرارة", "متوفّرة بلا حدود"], a: 0,
+    why: "تُستنفَد لأن تكوّنها بطيء جداً مقارنة باستهلاكها السريع." },
+  { q: "عند توليد الكهرباء من الوقود الأحفوري، تُستعمل الحرارة الناتجة من الحرق في:",
+    opts: ["تسخين الماء لإنتاج البخار الذي يدير التوربينات", "تبريد المولدات", "شحن البطاريات مباشرة", "تحلية مياه البحر"], a: 0,
+    why: "الحرارة ⟵ بخار ⟵ تدوير التوربين ⟵ المولد ⟵ كهرباء." },
+  { q: "من استعمالات الوقود الأحفوري:",
+    opts: ["توليد الكهرباء وتشغيل وسائل النقل والطهي والتسخين", "توليد طاقة المد", "تدوير طواحين الرياح", "الانشطار النووي"], a: 0,
+    why: "استعمالاته: توليد الكهرباء، النقل، ووقود مباشر للطهي والتسخين." },
+  { q: "احتياطي العالم من الوقود الأحفوري:",
+    opts: ["يتناقص بشكل كبير", "يزداد باستمرار", "ثابت لا يتغيّر", "يتجدد كل يوم"], a: 0,
+    why: "يتناقص لأن معدل تكوينه أقل من معدل استهلاكه." }
+], { onDone: function (stars) { Phy.setLesson("ch8", "2", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

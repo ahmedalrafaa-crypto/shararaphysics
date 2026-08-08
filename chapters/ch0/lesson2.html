@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: ضرب وقسمة قوى العشرة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch0">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل التمهيدي</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>✖️ الدرس 2: ضرب وقسمة قوى العشرة</h1>
+    <p>في مسائل الفيزياء تضرب وتقسم أعداداً أسية طوال الوقت — تعلّم القاعدة وستحسبها ذهنياً!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">⚡</span>
+    <span>في قانون كولوم تحسب <span class="formula-inline">9×10⁹ × 4×10⁻⁶ × 9×10⁻⁶ ÷ (0.06)²</span> ... كل هذا يعتمد على مهارة واحدة: <b>جمع وطرح الأسس</b>.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">💡</span> ليش نجمع الأسس؟ (بأبسط شكل)</div>
+  <div class="card">
+    <div class="defbox">
+      تذكّر معنى الأس: هو ببساطة <b class="term">عدد مرّات تكرار العدد 10 في الضرب</b>.
+      <div style="direction:ltr;text-align:center;font-weight:900;font-size:1.15rem;margin-top:8px">10³ = 10 × 10 × 10</div>
+      <div style="text-align:center;font-size:.9rem;margin-top:2px">(ثلاث عشرات مضروبة ببعض)</div>
+    </div>
+    <p style="font-weight:700;margin-top:4px">الحين شوف شنو يصير لمّا نضرب <span class="formula-inline">10³ × 10²</span> ونفتحها على طولها:</p>
+    <div class="bigout">(10×10×10) × (10×10) = 10×10×10×10×10 = 10⁵
+      <small>عدّينا كل العشرات مع بعض: 3 + 2 = 5 عشرات. فبدل ما نفتحها كل مرة، <b>نجمع الأسس وبس</b>! 😎</small></div>
+  </div>
+
+  <div class="section-title"><span class="ico">📜</span> القاعدتان — بأرقام حقيقية</div>
+  <div class="card">
+    <div class="lawbox">
+      ✖️ ضرب؟ اجمع الأسس
+      <div class="formula">10³ × 10² = 10⁵</div>
+      <div style="margin-top:8px;font-weight:800">لأن 3 + 2 = 5</div>
+    </div>
+    <div class="lawbox">
+      ➗ قسمة؟ اطرح الأسس
+      <div class="formula">10⁵ ÷ 10² = 10³</div>
+      <div style="margin-top:8px;font-weight:800">لأن 5 − 2 = 3</div>
+    </div>
+    <div class="defbox">
+      📌 <b class="term">القاعدة العامة</b> (نفس الفكرة بأي رقمين مهما كانا): عند الضرب نجمع <span class="formula-inline">10ᵃ × 10ᵇ = 10ᵃ⁺ᵇ</span> ، وعند القسمة نطرح <span class="formula-inline">10ᵃ ÷ 10ᵇ = 10ᵃ⁻ᵇ</span>.
+    </div>
+    <div class="notebox">
+      <b>انتبه للإشارات! (أهم نقطة)</b>
+      <ul>
+        <li>الجمع مع أرقام سالبة: <span class="formula-inline">10⁻⁶ × 10⁻⁶ = 10^(−6−6) = 10⁻¹²</span></li>
+        <li>الطرح يقلب إشارة الأس السفلي: <span class="formula-inline">10⁹ ÷ 10⁻⁴ = 10^(9−(−4)) = 10¹³</span></li>
+        <li>الأرقام العادية (المعاملات) تُضرب أو تُقسم بشكل منفصل عن القوى.</li>
+      </ul>
+    </div>
+    <div class="defbox">
+      💡 <b class="term">قاعدة إضافية مفيدة:</b> <span class="formula-inline">10⁰ = 1</span> دائماً، و <span class="formula-inline">1/10ⁿ = 10⁻ⁿ</span> (نقل القوة من المقام للبسط يقلب إشارة الأس).
+    </div>
+  </div>
+
+  <!-- ======== آلة الأسس ======== -->
+  <div class="sim">
+    <h3>🧪 آلة الأسس: اضرب أو اقسم القوى</h3>
+    <p class="sim-sub">اختر الأسّين والعملية، وشاهد كيف نجمع أو نطرح الأس خطوة بخطوة.</p>
+    <div class="mathtool">
+      <span style="font-weight:900;direction:ltr">10</span><span id="aLbl" style="font-weight:900;direction:ltr">³</span>
+      <select id="op" style="font-family:inherit;font-size:1.1rem;font-weight:800;border:2px solid #e9ebfa;border-radius:12px;padding:8px 10px;background:#f8f9ff">
+        <option value="mul">×  (ضرب)</option>
+        <option value="div">÷  (قسمة)</option>
+      </select>
+      <span style="font-weight:900;direction:ltr">10</span><span id="bLbl" style="font-weight:900;direction:ltr">⁻⁵</span>
+    </div>
+    <div class="mathtool" style="margin-top:10px">
+      <div class="slider-group">الأس الأول a = <span id="av">3</span>
+        <input type="range" id="aR" min="-9" max="9" value="3" step="1"></div>
+      <div class="slider-group">الأس الثاني b = <span id="bv">-5</span>
+        <input type="range" id="bR" min="-9" max="9" value="-5" step="1"></div>
+    </div>
+    <div class="bigout" id="outCalc"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✏️</span> أمثلة محلولة خطوة بخطوة</div>
+
+  <div class="example">
+    <div class="exq">مثال ١: احسب <span class="formula-inline">10⁵ × 10³</span></div>
+    <div class="step"><b>الخطوة ١:</b> عملية ضرب ← نجمع الأسّين:
+      <div class="math">5 + 3 = 8</div></div>
+    <div class="step"><b>الخطوة ٢:</b> النتيجة:
+      <div class="math">10⁵ × 10³ = 10⁸</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٢: احسب <span class="formula-inline">(4×10⁻⁶) × (9×10⁻⁶)</span> — كما في قانون كولوم!</div>
+    <div class="step"><b>الخطوة ١:</b> نضرب المعاملات (الأرقام العادية) معاً:
+      <div class="math">4 × 9 = 36</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نجمع أسس القوى:
+      <div class="math">10⁻⁶ × 10⁻⁶ = 10^(−6−6) = 10⁻¹²</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نجمع النتيجتين:
+      <div class="math">= 36 × 10⁻¹²</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٣: احسب <span class="formula-inline">36×10⁻¹² ÷ 36×10⁻⁴</span></div>
+    <div class="step"><b>الخطوة ١:</b> نقسم المعاملات:
+      <div class="math">36 ÷ 36 = 1</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نطرح الأسس (انتبه: طرح سالب):
+      <div class="math">10⁻¹² ÷ 10⁻⁴ = 10^(−12−(−4)) = 10^(−12+4) = 10⁻⁸</div></div>
+    <div class="step"><b>الخطوة ٣:</b> النتيجة:
+      <div class="math">= 1 × 10⁻⁸ = 10⁻⁸</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٤: احسب <span class="formula-inline">9×10⁹ × 36×10⁻¹² ÷ (36×10⁻⁴)</span> — خطوة كاملة من قانون كولوم!</div>
+    <div class="givens">نتعامل مع المعاملات معاً، والقوى معاً.</div>
+    <div class="step"><b>الخطوة ١:</b> المعاملات:
+      <div class="math">9 × 36 ÷ 36 = 9</div></div>
+    <div class="step"><b>الخطوة ٢:</b> القوى (نجمع ثم نطرح):
+      <div class="math">10⁹ × 10⁻¹² ÷ 10⁻⁴ = 10^(9−12+4) = 10¹</div></div>
+    <div class="step"><b>الخطوة ٣:</b> النتيجة النهائية:
+      <div class="math">9 × 10¹ = 90</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz2"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson1.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: الجذر التربيعي ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var SUP = { "-": "⁻", "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹" };
+function sup(n) { return String(n).split("").map(function (c) { return SUP[c] || c; }).join(""); }
+
+/* ---------- آلة الأسس ---------- */
+(function () {
+  var aR = document.getElementById("aR"), bR = document.getElementById("bR"), op = document.getElementById("op");
+  var out = document.getElementById("outCalc");
+  function render() {
+    var a = +aR.value, b = +bR.value, isMul = op.value === "mul";
+    document.getElementById("av").textContent = a;
+    document.getElementById("bv").textContent = b;
+    document.getElementById("aLbl").textContent = sup(a);
+    document.getElementById("bLbl").textContent = sup(b);
+    var res = isMul ? a + b : a - b;
+    var sign = isMul ? "×" : "÷";
+    var rule = isMul ? "(نجمع الأسس: " + a + " + (" + b + ") = " + res + ")"
+                     : "(نطرح الأسس: " + a + " − (" + b + ") = " + res + ")";
+    out.innerHTML = "10" + sup(a) + " " + sign + " 10" + sup(b) + " = <span class='hl'>10" + sup(res) + "</span>" +
+      "<small>" + rule + "</small>";
+  }
+  aR.addEventListener("input", render); bR.addEventListener("input", render); op.addEventListener("change", render);
+  render();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz2", [
+  { q: "10⁴ × 10³ يساوي:",
+    opts: ["10⁷", "10¹²", "10¹", "20⁷"], a: 0,
+    why: "عند الضرب نجمع الأسس: 4 + 3 = 7." },
+  { q: "10⁸ ÷ 10² يساوي:",
+    opts: ["10⁴", "10¹⁰", "10⁶", "10⁻⁶"], a: 2,
+    why: "عند القسمة نطرح الأسس: 8 − 2 = 6." },
+  { q: "10⁻⁶ × 10⁻⁶ يساوي:",
+    opts: ["10⁻¹²", "10¹²", "10⁻³⁶", "10⁰"], a: 0,
+    why: "نجمع الأسّين السالبين: (−6) + (−6) = −12." },
+  { q: "10⁹ ÷ 10⁻⁴ يساوي:",
+    opts: ["10⁵", "10¹³", "10⁻¹³", "10³⁶"], a: 1,
+    why: "طرح السالب يصبح جمعاً: 9 − (−4) = 9 + 4 = 13." },
+  { q: "(2×10³) × (3×10⁵) يساوي:",
+    opts: ["6 × 10⁸", "5 × 10⁸", "6 × 10¹⁵", "23 × 10⁸"], a: 0,
+    why: "نضرب المعاملات: 2×3=6، ونجمع الأسس: 3+5=8." },
+  { q: "قيمة 10⁰ تساوي:",
+    opts: ["0", "1", "10", "لا شيء"], a: 1,
+    why: "أي عدد (عدا الصفر) مرفوع للأس صفر يساوي 1." }
+], { onDone: function (stars) { Phy.setLesson("ch0", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

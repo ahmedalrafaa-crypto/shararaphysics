@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: المغناطيس الكهربائي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch6">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السادس</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>🧲 الدرس 4: المغناطيس الكهربائي</h1>
+    <p>مغناطيس ترفع به سيارة كاملة... ثم تضغط زراً فيسقطها! كيف يعمل هذا المغناطيس العجيب الذي يشتغل وينطفئ بأمرك؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🏗️</span>
+    <span>في ساحات السكراب رافعات ترفع أطناناً من الحديد بمغناطيس... سرّه ملف حول قلب حديدي: <b>تيار = مغناطيس، لا تيار = قطعة حديد عادية</b>!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📖</span> ما المغناطيس الكهربائي؟</div>
+  <div class="defbox">
+    <b class="term">المغناطيس الكهربائي</b><b>:</b> هو مغناطيس مؤقت يزول بزوال التيار الكهربائي المنساب في السلك. <span class="wz">وزاري</span>
+  </div>
+
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> مما يتركب المغناطيس الكهربائي ؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">يتركب من قلب من الحديد المطاوع (شكل ساق مستقيمة أو شكل حرف U) يلف حوله سلك موصل معزول وترتبط نهايتي السلك بمصدر للتيار الكهربائي.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف يكون اتجاه لف السلك في المغناطيس الكهربائي؟</summary>
+      <div class="ans">يكون في اتجاهين متعاكسين كما في المغناطيس الكهربائي شكل حرف U للحصول على قطبين مغناطيسيين أحدهما شمالي والآخر جنوبي.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> يكون اتجاه لف السلك في المغناطيس حرف U حول قلب الحديد باتجاهين متعاكسين ؟</summary>
+      <div class="ans">وذلك للحصول على قطبين مغناطيسيين أحدهما شمالي والآخر جنوبي.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> وضح آلية عمل المغناطيس الكهربائي؟</summary>
+      <div class="ans">عند إغلاق الدائرة الكهربائية يتولد ما يسمى بالمغناطيس الكهربائي وعند فتح الدائرة الكهربائية يتلاشى المجال المغناطيسي في قطعة الحديد المطاوع بسرعة.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> كيف يمكن احتفاظ المغناطيس الكهربائي بالمغناطيسية لفترة أطول بعد انقطاع التيار الكهربائي ؟</summary>
+      <div class="ans">نستعمل الفولاذ كقلب بدلا من الحديد المطاوع.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> على ماذا يعتمد مقدار المجال المغناطيسي للمغناطيس الكهربائي ؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١.</b> عدد لفات الملف لوحده تطول.<br>
+        <b>٢.</b> نوع مادة القلب.<br>
+        <b>٣.</b> مقدار التيار الكهربائي المنساب في الملف.
+      </div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة رافعة السكراب ======== -->
+  <div class="sim">
+    <h3>🎬 شغّل رافعة السكراب المغناطيسية</h3>
+    <p class="sim-sub">أغلق الدائرة لترفع قطع الحديد... ثم اقطع التيار وشاهد ماذا يحدث!</p>
+    <canvas id="craneSim" width="700" height="400"></canvas>
+    <div class="controls">
+      <button class="btn green" id="crBtn">🔒 أغلق الدائرة (شغّل المغناطيس)</button>
+      <label>التيار: <input type="range" id="crI" min="1" max="3" value="2" step="1" disabled> <span class="readout" id="crILabel">متوسط</span></label>
+    </div>
+    <div class="controls"><span class="readout" id="crState">رافعة بمغناطيس كهربائي فوق كومة قطع حديد (سكراب).</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">💡</span> فوائده ومميزاته</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما الفائدة العملية من المغناطيس الكهربائي؟</summary>
+      <div class="ans">
+        <b>١.</b> استعماله في رفع قطع الفولاذ والحديد السكراب في المصانع ونقلها الى اماكن اخرى.<br>
+        <b>٢.</b> في الآلات الكهربائية التي تعتمد في عملها على التأثير المغناطيسي للتيار الكهربائي (تمغنط وقتي) كما في الجرس الكهربائي وانواع اخرى معقدة في الاجهزة الالكترونية المختلفة.<br>
+        <b>٣.</b> يستعمله الجراحون لازالة شظايا الحديد من الجروح وشظايا الحديد النابتة في العين.<br>
+        <b>٤.</b> يستعمل في المولدات الكهربائية والمحركات الكهربائية ذات الانارة.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> بم يتميز المغناطيس الكهربائي عن المغناطيس الدائمي؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١.</b> يمكن إزالة مجاله المغناطيسي وذلك بقطع التيار عنه.<br>
+        <b>٢.</b> من الممكن عكس قطبي المغناطيس الكهربائي بعكس ربط قطبي البطارية الكهربائية ولا يمكن ذلك للمغناطيس الدائم.<br>
+        <b>٣.</b> يمكن تغير قوته المغناطيسية بتغير مقدار التيار المنساب خلال ملفه.<br>
+        <b>٤.</b> يمكنا من الحصول على مجال مغناطيسي يمكن السيطرة عليه.
+      </div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>المغناطيس الكهربائي <b>مؤقت</b> — يزول بزوال التيار. اما اذا اردنا الاحتفاظ بالمغناطيسية لفترة اطول نستعمل <b>الفولاذ</b> كقلب بدلاً من الحديد المطاوع.</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz4"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson3.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: الجرس والهاتف والمرحل ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة رافعة السكراب ---------- */
+(function () {
+  var cv = document.getElementById("craneSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height;
+  var on = false, I = 2, t = 0;
+  var btn = document.getElementById("crBtn");
+  var rI = document.getElementById("crI"), lI = document.getElementById("crILabel");
+  var state = document.getElementById("crState");
+
+  var mx = W / 2, myBase = 150; // موضع المغناطيس
+  var groundY = H - 40;
+
+  // قطع سكراب: تبدأ على الأرض
+  var scraps = [];
+  for (var i = 0; i < 8; i++) {
+    scraps.push({
+      x0: mx - 90 + i * 26 + (i % 3) * 6, y0: groundY - 10 - (i % 2) * 14,
+      x: 0, y: 0, lifted: false, vy: 0, rot: (i * 37 % 10) / 10 - 0.5
+    });
+  }
+  scraps.forEach(function (s) { s.x = s.x0; s.y = s.y0; });
+
+  btn.onclick = function () {
+    on = !on;
+    rI.disabled = !on;
+    btn.textContent = on ? "🔓 اقطع التيار" : "🔒 أغلق الدائرة (شغّل المغناطيس)";
+    btn.classList.toggle("green", !on);
+    if (on) {
+      state.textContent = "تولد مغناطيس كهربائي! القلب الحديدي المطاوع صار يجذب قطع السكراب.";
+    } else {
+      state.textContent = "انقطع التيار فتلاشى المجال بسرعة — سقطت القطع! (المغناطيس الكهربائي مؤقت)";
+      scraps.forEach(function (s) { if (s.lifted) { s.lifted = false; s.vy = 0; } });
+    }
+  };
+  rI.oninput = function () {
+    I = +rI.value;
+    lI.textContent = I === 1 ? "صغير" : I === 2 ? "متوسط" : "كبير";
+    state.textContent = "تغير التيار ⟸ تغيرت قوة المغناطيس! (يرفع " + (I * 2 + 2) + " قطع الآن)";
+  };
+
+  function tick() {
+    t += 0.016;
+    ctx.clearRect(0, 0, W, H);
+    ctx.textAlign = "center";
+
+    // الأرض
+    ctx.fillStyle = "#d9cdb8";
+    ctx.fillRect(0, groundY, W, H - groundY);
+
+    // ذراع الرافعة
+    ctx.strokeStyle = "#8d99ae"; ctx.lineWidth = 10;
+    ctx.beginPath(); ctx.moveTo(60, 30); ctx.lineTo(mx, 30); ctx.stroke();
+    ctx.lineWidth = 4;
+    ctx.beginPath(); ctx.moveTo(60, 30); ctx.lineTo(60, groundY); ctx.stroke();
+    // كيبل
+    ctx.strokeStyle = "#4a4a55"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(mx, 30); ctx.lineTo(mx, myBase - 34); ctx.stroke();
+
+    // المغناطيس الكهربائي (قرص + ملف)
+    ctx.fillStyle = on ? "#e11d48" : "#9aa5b1";
+    ctx.beginPath();
+    ctx.ellipse(mx, myBase, 76, 26, 0, Math.PI, 0);
+    ctx.fill();
+    ctx.fillRect(mx - 76, myBase - 26, 152, 22);
+    // لفات الملف
+    ctx.strokeStyle = "#b45309"; ctx.lineWidth = 3;
+    for (var c = -3; c <= 3; c++) {
+      ctx.beginPath(); ctx.moveTo(mx + c * 18 - 6, myBase - 26); ctx.lineTo(mx + c * 18 + 6, myBase - 4); ctx.stroke();
+    }
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("قلب حديد مطاوع + ملف معزول", mx, myBase - 36);
+
+    // مجال (أقواس)
+    if (on) {
+      for (var k = 1; k <= I + 1; k++) {
+        ctx.strokeStyle = "rgba(37,99,235," + (0.5 - k * 0.1) + ")";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(mx, myBase + 4, 30 + k * 26, 0.15 * Math.PI, 0.85 * Math.PI);
+        ctx.stroke();
+      }
+    }
+
+    // السكراب
+    var maxLift = I * 2 + 2; // عدد القطع المرفوعة حسب التيار
+    var liftedCount = 0;
+    scraps.forEach(function (s, idx) {
+      if (on && idx < maxLift) {
+        // ترتفع نحو المغناطيس
+        var tx = mx - 60 + (idx % 5) * 30, ty = myBase + 8 + Math.floor(idx / 5) * 16;
+        s.x += (tx - s.x) * 0.08;
+        s.y += (ty - s.y) * 0.08;
+        s.lifted = true;
+        liftedCount++;
+      } else if (!s.lifted) {
+        // سقوط بجاذبية إلى الأرض
+        if (s.y < s.y0) { s.vy += 0.5; s.y += s.vy; if (s.y >= s.y0) { s.y = s.y0; s.vy = 0; } }
+        else { s.x += (s.x0 - s.x) * 0.1; }
+      } else if (on && idx >= maxLift) {
+        // التيار قل — أسقط الزائدة
+        s.lifted = false; s.vy = 0;
+      }
+      ctx.save();
+      ctx.translate(s.x, s.y);
+      ctx.rotate(s.rot * 0.4);
+      ctx.fillStyle = "#6b7280";
+      ctx.fillRect(-11, -6, 22, 12);
+      ctx.strokeStyle = "#4b5563"; ctx.lineWidth = 1.5; ctx.strokeRect(-11, -6, 22, 12);
+      ctx.restore();
+    });
+
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 13px Cairo";
+    ctx.fillText("كومة سكراب (حديد وفولاذ)", mx, groundY + 26);
+    if (on) {
+      ctx.fillStyle = "#1d4ed8"; ctx.font = "bold 14px Cairo";
+      ctx.fillText("مغناطيس مؤقت: يرفع الآن " + liftedCount + " قطع — اقطع التيار لتسقط!", W / 2, H - 8);
+    }
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz4", [
+  { q: "المغناطيس الكهربائي هو مغناطيس:",
+    opts: ["مؤقت يزول بزوال التيار الكهربائي المنساب في السلك", "دائمي لا يزول", "طبيعي يوجد في الصخور", "يعمل بدون تيار"], a: 0,
+    why: "التعريف الوزاري — مؤقت يزول بزوال التيار." },
+  { q: "يتركب المغناطيس الكهربائي من:",
+    opts: ["قلب من الحديد المطاوع يلف حوله سلك موصل معزول مرتبط بمصدر تيار", "ساق فولاذ ممغنطة فقط", "سلك نحاسي بدون قلب", "مغناطيسين دائميين"], a: 0,
+    why: "سؤال وزاري: قلب حديد مطاوع (ساق او U) + سلك معزول + مصدر تيار." },
+  { q: "يكون اتجاه لف السلك في المغناطيس الكهربائي شكل U باتجاهين متعاكسين:",
+    opts: ["للحصول على قطبين مغناطيسيين أحدهما شمالي والآخر جنوبي", "لتقليل استهلاك السلك", "لمنع السخونة", "بلا سبب معين"], a: 0,
+    why: "علل: اللف المتعاكس يعطي قطبين N و S على طرفي حرف U." },
+  { q: "عند فتح الدائرة الكهربائية للمغناطيس الكهربائي:",
+    opts: ["يتلاشى المجال المغناطيسي في قطعة الحديد المطاوع بسرعة", "يبقى المجال ثابتاً", "ينعكس المجال", "يزداد المجال"], a: 0,
+    why: "آلية العمل: إغلاق الدائرة = مغناطيس، فتحها = يتلاشى المجال بسرعة." },
+  { q: "للاحتفاظ بالمغناطيسية لفترة أطول بعد انقطاع التيار نستعمل:",
+    opts: ["الفولاذ كقلب بدلا من الحديد المطاوع", "النحاس كقلب", "الخشب كقلب", "قلباً بلاستيكياً"], a: 0,
+    why: "الفولاذ يحتفظ بالمغناطيسية اطول من الحديد المطاوع." },
+  { q: "يعتمد مقدار المجال المغناطيسي للمغناطيس الكهربائي على:",
+    opts: ["عدد لفات الملف لوحدة الطول ونوع مادة القلب ومقدار التيار", "لون السلك وطوله فقط", "حجم البطارية الخارجي", "شكل المفتاح"], a: 0,
+    why: "سؤال وزاري — ثلاثة عوامل: اللفات، مادة القلب، التيار." },
+  { q: "من الفوائد العملية للمغناطيس الكهربائي:",
+    opts: ["رفع السكراب والجرس الكهربائي وإزالة شظايا الحديد من العين والمولدات", "طلاء المعادن", "تسخين المياه", "توليد الضوء مباشرة"], a: 0,
+    why: "الفوائد الأربع: السكراب، الآلات (الجرس)، الجراحة، المولدات والمحركات." },
+  { q: "يتميز المغناطيس الكهربائي عن الدائمي بأنه:",
+    opts: ["يمكن إزالة مجاله وعكس قطبيه وتغيير قوته والسيطرة عليه", "أقوى دائماً في كل الحالات", "لا يحتاج أي طاقة", "مجاله لا يتغير أبداً"], a: 0,
+    why: "المميزات الأربع الوزارية: إزالة المجال بقطع التيار، عكس القطبين بعكس البطارية، تغيير القوة بالتيار، السيطرة على المجال." },
+  { q: "يمكن عكس قطبي المغناطيس الكهربائي عن طريق:",
+    opts: ["عكس ربط قطبي البطارية الكهربائية", "قلب القلب الحديدي فقط", "تسخين الملف", "لا يمكن عكسهما"], a: 0,
+    why: "عكس البطارية = عكس التيار = عكس القطبين — ولا يمكن ذلك للمغناطيس الدائم." }
+], { onDone: function (stars) { Phy.setLesson("ch6", "4", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>

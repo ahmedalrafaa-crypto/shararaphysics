@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: طرائق شحن الأجسام</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الأول</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>🤝 الدرس 3: طرائق شحن الأجسام</h1>
+    <p>ثلاث طرق سحرية لشحن الأجسام: الدلك، التماس، والحث!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🎯</span>
+    <span>سؤال وزاري مضمون تقريباً: <b>ما هي طرائق شحن الاجسام بالكهربائية الساكنة؟</b> بعد هذا الدرس ستعرف الثلاثة وتفهم الفرق بينها بالمحاكاة!</span>
+  </div>
+
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما هي طرائق شحن الاجسام بالكهربائية الساكنة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">توجد ثلاث طرق لشحن المواد بالكهربائية الساكنة وهي كالتالي:<br>
+      <b>١.</b> الشحن بطريقة الدلك &nbsp; <b>٢.</b> الشحن بطريقة التماس &nbsp; <b>٣.</b> الشحن بطريقة الحث.</div>
+    </details>
+  </div>
+
+  <!-- ======== محاكاة الطرق الثلاث ======== -->
+  <div class="sim">
+    <h3>🧪 محاكاة طرائق الشحن الثلاث</h3>
+    <p class="sim-sub">اختر الطريقة ثم اضغط «الخطوة التالية» لمشاهدة انتقال الشحنات خطوة بخطوة.</p>
+    <div class="controls" style="margin-top:0;margin-bottom:12px">
+      <button class="btn small" id="mFric">١. الدلك 🧶</button>
+      <button class="btn small ghost" id="mCont">٢. التماس 🤝</button>
+      <button class="btn small ghost" id="mInd">٣. الحث 🧲</button>
+    </div>
+    <canvas id="chargeSim" width="700" height="330"></canvas>
+    <div class="controls">
+      <button class="btn green" id="stepBtn">▶️ الخطوة التالية</button>
+      <button class="btn ghost" id="rstBtn">🔄 إعادة</button>
+      <span class="readout" id="simMsg"></span>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">1️⃣</span> اولاً: الشحن بطريقة الدلك</div>
+  <div class="card">
+    <details class="qa">
+      <summary><span class="tag">نشاط</span> وضح بتجربة طريقة الشحن بالدلك؟</summary>
+      <div class="ans">ندلك بالوناً مطاطية بقطعة من الصوف ستظهر شحنة موجبة عليه (نتيجة لفقدان بعض من الكتروناتها) بينما تظهر شحنة سالبة على البالون (لأنه اكتسب تلك الالكترونات). نعلق البالون بالخيط ونقرب قطعة الصوف نلاحظ تجاذب البالون مع الصوف بسبب اختلاف شحناتهم.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> تكون شحنة الصوف موجبة عند دلكها بالبالون؟</summary>
+      <div class="ans">نتيجة لفقدان بعض من الكتروناتها.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> تكتسب البالونة شحنة سالبة؟</summary>
+      <div class="ans">لأنه اكتسب الالكترونات التي فقدتها قطعة الصوف.</div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">2️⃣</span> ثانياً: الشحن بطريقة التماس</div>
+  <div class="card">
+    <details class="qa">
+      <summary><span class="tag">نشاط</span> وضح بتجربة الشحن بالتماس؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">نعلق كرتين من نخاع البيلسان بواسطة خيطين من مادة عازلة ومن نقطة واحدة. نشحن إحدى الكرتين بملامستها لساق من الزجاج المدلوك بالحرير ثم نتركها تلامس الكره الأخرى (الغير مشحونة) نلاحظ ابتعاد الكرتين بعد فتره عن بعض مما يدل على أن الكرة الثانية (الغير مشحونة) قد اكتسبت الشحنة نفسها من شحنة الكرة الأولى بالتماس.</div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">3️⃣</span> ثالثاً: الشحن بطريقة الحث</div>
+  <div class="card">
+    <details class="qa">
+      <summary><span class="tag">نشاط</span> وضح مع الرسم كيفية شحن جسم موصل معزول متعادل كهربائيا بشحنة موجبة بطريقة الحث؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        <b>١.</b> نأخذ كرة معدنية معزولة و متعادلة كهربائية.<br>
+        <b>٢.</b> نقرب ساق من المطاط مشحون بشحنة سالبة (بعد أن تدلك بالصوف) من الكرة المتعادلة سوف تتجمع الشحنات الموجبة في جزء الكرة القريب من الجسم المشحون (شحنة مقيدة) وجزء الكرة البعيد عن الجسم المشحون تتجمع فيه الشحنة السالبة (شحنة طليقة).<br>
+        <b>٣.</b> نربط الكرة المعدنية بالأرض عبر سلك موصل أو مسكها باليد من جهة الشحنة الطليقة لغرض تفريغها مع بقاء الساق المشحونة قريبة من الكرة.<br>
+        <b>٤.</b> نقطع اتصال الكرة بالأرض ثم نبعد الساق المشحونة عن الكرة المعدنية لتبقى الشحنة الموجبة على الكرة فقط حيث أصبحت الكرة مشحونة بهذه الشحنة.
+      </div>
+    </details>
+    <div class="notebox">
+      <ul>
+        <li>عند شحن جسم بطريقة <b>الدلك أو الحث</b> فان نوع الشحنة المتولد <b>تخالف</b> شحنة الجسم الدالك/الشاحن.</li>
+        <li>عند شحن جسم بطريقة <b>التمــاس</b> فان نوع الشحنة المتولد <b>يطابق</b> شحنة الجسم الدالك.</li>
+      </ul>
+    </div>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> في طريقة الشحن بالحث ما نوع شحنة الجسم المشحون؟</summary>
+      <div class="ans">تكون مخالفة لشحنة الجسم الشاحن.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> لديك ساق من الزجاج مدلوك بالحرير ومشحون بشحنة موجبة ولديك كرة معدنية متعادلة كهربائيا ومعزولة. كيف يمكنك شحن هذه الكرة بشحنة موجبة مرة وبشحنة سالبة مرة أخرى باستخدام نفس الساق؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">يتم شحن الكرة بالشحنة المشابهة للساق (الموجبة) <b>بطريقة التماس</b> حيث تنتقل بعض الشحنات الموجبة من الساق الى سطح الكرة بالتماس فتقل بذلك شحنة الساق ويتم شحن الكرة بالشحنة المخالفة للساق (السالبة) <b>بطريقة الحث</b>. حيث ان سطح الكرة المقابل للساق تظهر عليه شحنة سالبة مقيدة وسطح الكرة من الجهة الثانية تظهر علية شحنة موجبة طليقة والشحنة الموجبة الطليقة تعادلت بسبب تسرب الالكترونات من الأرض الى الكرة.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ماذا يحصل لشحنة جسم مشحون شحنة سالبة عند ايصاله بالأرض؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">تتعادل شحنة الجسم المشحون بالشحنة الموجبة عند ايصاله بالأرض، وذلك لكون الأرض مستودع كبير للشحنات السالبة، فالجسم المشحون بالشحنة الموجبة تتسرب الإلكترونات من الأرض الى الجسم وتعادل شحنته.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">علل</span> تجهز سيارات الوقود بسلاسل معدنية في مؤخرتها تلامس الأرض؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">للتخلص من الشحنات الكهربائية الساكنة المتولدة من احتكاك الوقود بجدار الخزان والمتجمعة عند السطح الخارجي والتي قد تسبب كارثة عند حدوث تفريغ كهربائي.</div>
+    </details>
+    <div class="defbox"><b class="term">التفريغ الكهربائي:</b> هو عملية فقدان الجسم لشحناته الكهربائية.</div>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما تأثير الرطوبة في الهواء المحيط بالجسم المشحون بطريقة التماس؟</summary>
+      <div class="ans">تزيد من عملية فقدان شحنة الجسم الى الهواء المحيط حيث يصبح متعادل الشحنة مع الهواء (الشحنة الكلية = صفر).</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما المقصود بالشحنات الطليقة والشحنات المقيدة؟</summary>
+      <div class="ans">
+        <b>الشحنات الطليقة:</b> هي الشحنات الموجود على سطح مادة متعادلة الشحنة وتظهر عندما يقترب منها جسم اخر مشحون بشحنة مشابهة لشحنتها فتهرب تلك الشحنات الطليقة الى الطرف الاخر من سطح المادة لكي تتنافر مع شحنات الجسم المشابهه لها.<br>
+        <b>الشحنات المقيدة:</b> هي الشحنات الموجود على سطح مادة متعادلة وتظهر عندما يقترب منها جسم اخر مشحون بشحنة مخالفة لشحنتها فتتجاذب معها وتكون محصورة بين الشحنات الطليقة وشحنات الجسم الاخر المخالفة.
+      </div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz3"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson2.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson4.html">الدرس التالي: الكشاف الكهربائي ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة طرائق الشحن ---------- */
+(function () {
+  var cv = document.getElementById("chargeSim"), ctx = cv.getContext("2d");
+  var mode = "fric", step = 0, anim = 0;
+  var msgs = {
+    fric: [
+      "بالون متعادل + قطعة صوف متعادلة. اضغط ▶️",
+      "الدلك! 🧶 الإلكترونات تنتقل من الصوف إلى البالون",
+      "النتيجة: الصوف موجب (فقد إلكترونات) والبالون سالب (اكتسبها) — شحنة مخالفة!"
+    ],
+    cont: [
+      "كرة مشحونة سالبة + كرة متعادلة. اضغط ▶️",
+      "تماس! 🤝 بعض الإلكترونات تنتقل إلى الكرة المتعادلة",
+      "النتيجة: الكرتان سالبتان فتتنافران — الشحنة تطابق الجسم الشاحن!"
+    ],
+    ind: [
+      "ساق مطاط سالبة تقترب من كرة معدنية متعادلة. اضغط ▶️",
+      "حث! الموجبة تتجمع قرب الساق (مقيدة) والسالبة تبتعد (طليقة)",
+      "نربط الكرة بالأرض 🌍 فتتسرب الإلكترونات الطليقة إلى الأرض",
+      "نقطع الأرض ثم نبعد الساق: الكرة أصبحت موجبة — شحنة مخالفة للساق!"
+    ]
+  };
+  var btns = { fric: document.getElementById("mFric"), cont: document.getElementById("mCont"), ind: document.getElementById("mInd") };
+  function setMode(m) {
+    mode = m; step = 0; anim = 0;
+    for (var k in btns) btns[k].className = "btn small" + (k === m ? "" : " ghost");
+    document.getElementById("simMsg").textContent = msgs[m][0];
+  }
+  btns.fric.onclick = function () { setMode("fric"); };
+  btns.cont.onclick = function () { setMode("cont"); };
+  btns.ind.onclick = function () { setMode("ind"); };
+  document.getElementById("stepBtn").onclick = function () {
+    if (step < msgs[mode].length - 1) { step++; anim = 0; document.getElementById("simMsg").textContent = msgs[mode][step]; }
+  };
+  document.getElementById("rstBtn").onclick = function () { setMode(mode); };
+
+  function ball(x, y, r, col, label) {
+    ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fillStyle = col; ctx.fill();
+    ctx.strokeStyle = "#c8cdea"; ctx.lineWidth = 2; ctx.stroke();
+    if (label) { ctx.fillStyle = "#5c6178"; ctx.font = "13px Cairo"; ctx.textAlign = "center"; ctx.fillText(label, x, y + r + 20); }
+  }
+  function sign(x, y, s, col) {
+    ctx.fillStyle = col || (s === "+" ? "#ff6b6b" : "#4d96ff");
+    ctx.font = "bold 17px Cairo"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText(s, x, y); ctx.textBaseline = "alphabetic";
+  }
+
+  function draw() {
+    anim = Math.min(1, anim + 0.02);
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    var cy = 165;
+    if (mode === "fric") {
+      var wx = 210, bx = 470;
+      if (step === 1) { wx = 210 + 90 * anim; bx = 470 - 90 * anim; }
+      // الصوف
+      ctx.fillStyle = "#e8c39e";
+      ctx.beginPath(); ctx.arc(wx, cy, 55, 0, 7); ctx.fill();
+      ctx.strokeStyle = "#d1a06b"; ctx.stroke();
+      ctx.fillStyle = "#5c6178"; ctx.font = "13px Cairo"; ctx.textAlign = "center";
+      ctx.fillText("قطعة الصوف", wx, cy + 90);
+      // البالون
+      ctx.fillStyle = "#ff8fab";
+      ctx.beginPath(); ctx.ellipse(bx, cy, 48, 60, 0, 0, 7); ctx.fill();
+      ctx.fillText("البالون", bx, cy + 95);
+      if (step === 0) { sign(wx, cy, "0", "#5c6178"); sign(bx, cy, "0", "#5c6178"); }
+      if (step === 1) {
+        for (var i = 0; i < 3; i++) {
+          var p = Math.min(1, anim * 1.4 - i * 0.15);
+          if (p > 0) sign(wx + (bx - wx - 60) * p + 30, cy - 20 + i * 20, "−");
+        }
+        sign(wx - 20, cy, "+"); sign(bx + 15, cy - 10, "−");
+      }
+      if (step === 2) {
+        for (var j = 0; j < 4; j++) sign(wx - 30 + j * 20, cy - 8 + (j % 2) * 18, "+");
+        for (var k = 0; k < 4; k++) sign(bx - 25 + k * 17, cy - 10 + (k % 2) * 22, "−");
+        ctx.fillStyle = "#2ecc8f"; ctx.font = "bold 15px Cairo";
+        ctx.fillText("موجب ✚", wx, cy - 75); ctx.fillText("سالب −", bx, cy - 85);
+      }
+    }
+    if (mode === "cont") {
+      var x1 = 240, x2 = 460;
+      if (step === 1) { x1 = 240 + 60 * anim; x2 = 460 - 60 * anim; }
+      if (step === 2) { x1 = 300 - 80 * anim; x2 = 400 + 80 * anim; }
+      // خيطان
+      ctx.strokeStyle = "#b8bedd";
+      ctx.beginPath(); ctx.moveTo(350, 20); ctx.lineTo(x1, cy - 40); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(350, 20); ctx.lineTo(x2, cy - 40); ctx.stroke();
+      ball(x1, cy, 42, "#fff3b0", step === 0 ? "كرة مشحونة (−)" : "");
+      ball(x2, cy, 42, "#fff3b0", step === 0 ? "كرة متعادلة" : "");
+      if (step === 0) { for (var a = 0; a < 5; a++) sign(x1 - 22 + a * 11, cy + (a % 2 ? 12 : -10), "−"); sign(x2, cy, "0", "#5c6178"); }
+      if (step === 1) {
+        for (var b = 0; b < 3; b++) sign(x1 - 18 + b * 14, cy - 8, "−");
+        var pp = anim;
+        sign(x1 + (x2 - x1) * pp, cy + 10, "−"); sign(x1 + (x2 - x1) * Math.max(0, pp - .2), cy - 14, "−");
+      }
+      if (step === 2) {
+        for (var c = 0; c < 3; c++) { sign(x1 - 15 + c * 15, cy, "−"); sign(x2 - 15 + c * 15, cy, "−"); }
+        ctx.fillStyle = "#ff6b6b"; ctx.font = "bold 16px Cairo"; ctx.textAlign = "center";
+        ctx.fillText("تنافر! ↔", 350, cy - 70);
+      }
+    }
+    if (mode === "ind") {
+      var rodX = step === 0 ? 120 + 60 * anim : (step === 3 ? 180 - 140 * anim : 180);
+      var ballX = 430;
+      // الساق
+      ctx.save(); ctx.translate(rodX, cy - 10); ctx.rotate(-0.5);
+      ctx.fillStyle = "#4a4e69";
+      if (ctx.roundRect) { ctx.beginPath(); ctx.roundRect(-95, -13, 190, 26, 10); ctx.fill(); } else ctx.fillRect(-95, -13, 190, 26);
+      for (var s = -75; s <= 75; s += 30) sign(s, 1, "−", "#9ff0ff");
+      ctx.restore();
+      ctx.fillStyle = "#5c6178"; ctx.font = "13px Cairo"; ctx.textAlign = "center";
+      ctx.fillText("ساق مطاط سالبة", rodX, 60);
+      // الكرة المعدنية على حامل عازل
+      ctx.fillStyle = "#c9cbe0"; ctx.fillRect(ballX - 7, cy + 40, 14, 60);
+      ctx.fillStyle = "#8d6e63"; ctx.fillRect(ballX - 45, cy + 100, 90, 12);
+      ball(ballX, cy, 52, "#dfe3f5", "كرة معدنية معزولة");
+      if (step === 0) sign(ballX, cy, "0", "#5c6178");
+      if (step >= 1) {
+        // مقيدة موجبة قرب الساق (يسار الكرة — جهة الساق)
+        for (var m2 = 0; m2 < 3; m2++) sign(ballX - 38, cy - 22 + m2 * 22, "+");
+        if (step === 1) for (var n2 = 0; n2 < 3; n2++) sign(ballX + 38, cy - 22 + n2 * 22, "−");
+      }
+      if (step === 2) {
+        // سلك أرضي وإلكترونات تهرب
+        ctx.strokeStyle = "#2ecc8f"; ctx.lineWidth = 3;
+        ctx.beginPath(); ctx.moveTo(ballX + 48, cy + 18); ctx.lineTo(600, cy + 90); ctx.stroke();
+        ctx.lineWidth = 1;
+        ctx.fillStyle = "#2ecc8f"; ctx.font = "20px Cairo"; ctx.fillText("🌍", 615, cy + 100);
+        var q = anim;
+        sign(ballX + 48 + (600 - ballX - 48) * q, cy + 18 + 72 * q, "−");
+        sign(ballX + 48 + (600 - ballX - 48) * Math.max(0, q - .3), cy + 18 + 72 * Math.max(0, q - .3), "−");
+      }
+      if (step === 3) {
+        for (var m3 = 0; m3 < 4; m3++) sign(ballX - 30 + m3 * 20, cy - 8 + (m3 % 2) * 20, "+");
+        ctx.fillStyle = "#ff6b6b"; ctx.font = "bold 16px Cairo";
+        ctx.fillText("الكرة موجبة! ✚", ballX, cy - 75);
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  setMode("fric");
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz3", [
+  { q: "عدد طرائق شحن الأجسام بالكهربائية الساكنة:",
+    opts: ["طريقتان", "ثلاث طرائق: الدلك والتماس والحث", "أربع طرائق", "طريقة واحدة"], a: 1,
+    why: "سؤال وزاري: الدلك، التماس، الحث." },
+  { q: "عند شحن جسم بطريقة التماس فان نوع الشحنة المتولدة:",
+    opts: ["تخالف شحنة الجسم الشاحن", "تطابق شحنة الجسم الشاحن", "تكون سالبة دائماً", "تكون موجبة دائماً"], a: 1,
+    why: "التماس يطابق، أما الدلك والحث فيخالفان." },
+  { q: "في طريقة الشحن بالحث ما نوع شحنة الجسم المشحون؟",
+    opts: ["مخالفة لشحنة الجسم الشاحن", "مطابقة لشحنة الجسم الشاحن", "متعادلة", "موجبة دائماً"], a: 0,
+    why: "الحث يولّد شحنة مخالفة للجسم الشاحن." },
+  { q: "تجهز سيارات نقل الوقود بسلاسل معدنية في مؤخرتها تلامس الأرض:",
+    opts: ["للزينة", "للتخلص من الشحنات الساكنة المتولدة من احتكاك الوقود بجدار الخزان", "لتثبيت السيارة", "لجذب الشحنات من الأرض"], a: 1,
+    why: "الشحنات المتجمعة قد تسبب كارثة عند حدوث تفريغ كهربائي، فتُفرَّغ إلى الأرض." },
+  { q: "جسم مشحون بشحنة سالبة أوصلناه بالأرض، ماذا يحدث؟",
+    opts: ["تزداد شحنته", "تتسرب الإلكترونات إلى الأرض ويتعادل", "يصبح موجباً بشدة", "لا يتغير"], a: 1,
+    why: "الأرض مستودع كبير للشحنات: الإلكترونات الزائدة تتسرب إليها فيتعادل الجسم." },
+  { q: "التفريغ الكهربائي هو:",
+    opts: ["عملية اكتساب الجسم شحنات", "عملية فقدان الجسم لشحناته الكهربائية", "تحول الشحنة من موجبة لسالبة", "دوران الإلكترونات حول النواة"], a: 1,
+    why: "التفريغ الكهربائي = فقدان الجسم لشحناته الكهربائية." }
+], { onDone: function (stars) { Phy.setLesson("ch1", "3", { stars: stars }); } });
+</script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تحليل أدائي — أ. أحمد رافع</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../assets/logo-ar.png">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  /* أنماط خاصة بقسم التحليل — تستعمل متغيّرات المنصة نفسها للتناسق */
+  .an-summary { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; }
+  .an-ring {
+    --p: 0; width: 132px; height: 132px; border-radius: 50%; flex-shrink: 0;
+    background: conic-gradient(var(--ring-col, var(--violet)) calc(var(--p) * 1%), #e9ebfa 0);
+    display: grid; place-items: center; position: relative;
+  }
+  .an-ring::before { content: ""; position: absolute; inset: 12px; background: var(--card); border-radius: 50%; }
+  .an-ring b { position: relative; font-size: 1.9rem; font-weight: 900; color: var(--ink); line-height: 1; }
+  .an-ring span { position: relative; font-size: .72rem; color: var(--ink-soft); font-weight: 700; }
+  .an-tiles { display: flex; flex-wrap: wrap; gap: 12px; }
+  .an-tile { background: #f0f2ff; border-radius: 16px; padding: 12px 18px; flex: 1; min-width: 120px; }
+  .an-tile .n { font-size: 1.5rem; font-weight: 900; color: var(--violet-deep); }
+  .an-tile .k { font-size: .82rem; color: var(--ink-soft); font-weight: 700; }
+
+  .an-chart { display: grid; gap: 12px; margin-top: 6px; }
+  .an-bar { display: grid; grid-template-columns: 116px 1fr 46px; gap: 10px; align-items: center; }
+  .an-bar .lbl { font-weight: 800; font-size: .9rem; }
+  .an-bar .track { height: 16px; background: #e9ebfa; border-radius: 999px; overflow: hidden; }
+  .an-bar .fill { height: 100%; border-radius: 999px; transition: width .8s ease; }
+  .an-bar .val { font-weight: 800; font-size: .88rem; text-align: start; }
+  .f-green { background: linear-gradient(90deg, #2ecc8f, #00c2cb); }
+  .f-blue  { background: linear-gradient(90deg, #4d96ff, #6c5ce7); }
+  .f-yellow{ background: linear-gradient(90deg, #ffc93c, #ff9f43); }
+  .f-coral { background: linear-gradient(90deg, #ff6b6b, #ff8fab); }
+
+  .an-weak { border: 2px solid #eef0fb; border-radius: 18px; padding: 16px 18px; margin-bottom: 14px; background: #fbfcff; }
+  .an-weak-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+  .an-weak-head b { font-size: 1.05rem; }
+  .an-weak-head .unit { color: var(--ink-soft); font-size: .8rem; font-weight: 700; }
+  .an-level { font-size: .78rem; font-weight: 800; padding: 3px 12px; border-radius: 999px; color: #fff; }
+  .lv-exc { background: var(--green); }
+  .lv-good { background: var(--blue); }
+  .lv-review { background: #f0a500; }
+  .lv-weak { background: var(--coral); }
+  .an-diag { font-weight: 700; margin: 4px 0; }
+  .an-diag .tag { font-weight: 900; color: var(--coral); }
+  .an-plan { color: var(--ink-soft); font-size: .9rem; font-weight: 600; margin-bottom: 12px; }
+
+  .an-strong { display: flex; flex-wrap: wrap; gap: 10px; }
+  .an-strong .s {
+    background: #e8fbf3; border: 2px solid #b8f0d8; color: #159067;
+    border-radius: 14px; padding: 8px 14px; font-weight: 800; font-size: .88rem;
+  }
+  .an-empty { text-align: center; padding: 20px 10px; }
+  .an-empty .em { font-size: 3.4rem; display: block; margin-bottom: 8px; }
+  @media (max-width: 540px) {
+    .an-summary { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+    .an-bar { grid-template-columns: 92px 1fr 42px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="../index.html">الرئيسية</a> / تحليل أدائي</span>
+  </div>
+
+  <div class="hero">
+    <h1>📊 تحليل أدائي</h1>
+    <p>لا نكتفي بالدرجة! هنا نكتشف <b>سبب</b> كل خطأ ونوعه، ونرسم لك خطة معالجة عملية تنقلك من الضعف إلى الإتقان.</p>
+  </div>
+
+  <div id="anRoot"></div>
+
+  <div class="lesson-nav" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+    <a class="btn ghost" href="../index.html">🏠 الرئيسية</a>
+    <button class="btn" id="anShare">📤 شارك تقريرك</button>
+    <button class="btn small ghost" id="anReset" style="margin-inline-start:auto">🗑️ تصفير بيانات التحليل</button>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../js/core.js"></script>
+<script src="../js/report-card.js"></script>
+<script>
+(function () {
+  // بيانات الفصول لبناء روابط المعالجة والعناوين
+  var CH = {
+    ch0: { t: "الفصل التمهيدي: أساسيات الرياضيات", em: "🧮" },
+    ch1: { t: "الفصل الأول: الكهربائية الساكنة", em: "⚡" },
+    ch2: { t: "الفصل الثاني: المغناطيس", em: "🧲" },
+    ch3: { t: "الفصل الثالث: التيار الكهربائي", em: "🔌" },
+    ch4: { t: "الفصل الرابع: البطارية والقوة الدافعة", em: "🔋" },
+    ch5: { t: "الفصل الخامس: الطاقة والقدرة الكهربائية", em: "💡" },
+    ch6: { t: "الفصل السادس: الكهربائية والمغناطيسية", em: "🌀" },
+    ch7: { t: "الفصل السابع: المحولة الكهربائية", em: "🔌" },
+    ch8: { t: "الفصل الثامن: تكنولوجيا مصادر الطاقة", em: "🔆" },
+    ch9: { t: "الفصل التاسع: فيزياء الجو والاتصالات", em: "🛰️" }
+  };
+  var SKILL_ORDER = ["مفهوم", "حساب", "تطبيق قانون", "تذكّر"];
+  var root = document.getElementById("anRoot");
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function pct(c, t) { return t ? Math.round(100 * c / t) : 0; }
+  // تقويم مستوى الإتقان
+  function level(p) {
+    if (p >= 85) return { txt: "ممتاز", cls: "lv-exc", fill: "f-green" };
+    if (p >= 70) return { txt: "جيد", cls: "lv-good", fill: "f-blue" };
+    if (p >= 50) return { txt: "يحتاج مراجعة", cls: "lv-review", fill: "f-yellow" };
+    return { txt: "ضعيف", cls: "lv-weak", fill: "f-coral" };
+  }
+  function lessonLink(ch, node) {
+    if (node && /^lesson/.test(node)) return "../chapters/" + ch + "/" + node + ".html";
+    return "../chapters/" + ch + "/index.html";
+  }
+
+  var A = Phy.getAttempts();
+
+  /* ---------- الحالة الفارغة ---------- */
+  if (!A.length) {
+    root.innerHTML =
+      '<div class="card an-empty">' +
+        '<span class="em">🧭</span>' +
+        '<h2>لم تبدأ رحلتك بعد!</h2>' +
+        '<p style="color:var(--ink-soft);font-weight:600;margin:8px 0 18px">حين تحلّ اختبارات الدروس أو الامتحانات، سأجمع إجاباتك هنا وأحلّلها لأريك مواطن قوّتك وضعفك وخطة معالجتها.</p>' +
+        '<a class="btn" href="../index.html">🚀 ابدأ من خريطة الفصول</a>' +
+      '</div>';
+    wireReset();
+    wireShare();
+    return;
+  }
+
+  /* ---------- تجميع الإحصاءات ---------- */
+  var total = A.length, correct = 0;
+  var byUnit = {}, bySub = {}, bySkill = {};
+  var msList = [];
+  A.forEach(function (r) {
+    if (r.ok) correct++;
+    if (r.ms > 0 && r.ms < 180000) msList.push(r.ms);
+    var u = byUnit[r.ch] || (byUnit[r.ch] = { c: 0, t: 0 });
+    u.t++; if (r.ok) u.c++;
+    var sk = bySkill[r.skill] || (bySkill[r.skill] = { c: 0, t: 0 });
+    sk.t++; if (r.ok) sk.c++;
+    var key = r.ch + "|" + r.sub;
+    var s = bySub[key] || (bySub[key] = { c: 0, t: 0, ch: r.ch, node: r.node, sub: r.sub, atts: [] });
+    s.t++; if (r.ok) s.c++; s.node = r.node; s.atts.push(r);
+  });
+
+  // عتبة التسرّع: أقل بكثير من زمن الطالب المعتاد
+  msList.sort(function (a, b) { return a - b; });
+  var median = msList.length ? msList[Math.floor(msList.length / 2)] : 6000;
+  var rushT = Math.max(3500, Math.round(median * 0.45));
+
+  var overall = pct(correct, total);
+  var ringLv = level(overall);
+  var ringCol = overall >= 85 ? "var(--green)" : overall >= 70 ? "var(--blue)" : overall >= 50 ? "#f0a500" : "var(--coral)";
+
+  /* ---------- تشخيص نوع الخلل لموضوع فرعي ---------- */
+  function diagnose(s) {
+    var wrong = s.atts.filter(function (a) { return !a.ok; });
+    var rushedWrong = wrong.filter(function (a) { return a.ms > 0 && a.ms < rushT; }).length;
+    var wrongConcept = 0, wrongCalc = 0;
+    wrong.forEach(function (a) {
+      if (a.skill === "حساب" || a.skill === "تطبيق قانون") wrongCalc++;
+      else wrongConcept++; // مفهوم أو تذكّر
+    });
+    if (wrong.length && rushedWrong >= Math.max(1, wrong.length * 0.5)) {
+      return {
+        tag: "تسرّع وإهمال",
+        diag: "تخطئ في أسئلة تجيب عنها بسرعة عالية — أخطاء تسرّع لا نقص فهم.",
+        plan: "اقرأ كل سؤال مرّتين قبل الإجابة، وراجع الوحدات، ولا تنشغل بالزمن. أنت تعرف الإجابة، امنح نفسك ثانيتين إضافيتين فقط."
+      };
+    }
+    if (wrongConcept > wrongCalc) {
+      return {
+        tag: "خلل في الفهم المفاهيمي",
+        diag: "أخطاؤك في أسئلة المفاهيم أكثر من الحسابية — الأساس النظري يحتاج ترسيخاً.",
+        plan: "أعد قراءة شرح الدرس بتأنٍّ قبل حلّ الأسئلة، وركّز على «لماذا» لا «كم». افهم الفكرة أولاً ثم انتقل للتمارين."
+      };
+    }
+    if (wrongCalc > wrongConcept) {
+      return {
+        tag: "خلل في الدقة الحسابية",
+        diag: "فهمك سليم لكن تقع أخطاء رقمية أو في الوحدات عند الحساب.",
+        plan: "حلّ تمارين حساب إضافية على هذا الموضوع، وتحقّق من الوحدات في كل خطوة، واكتب الأرقام بترتيب. الدقة تأتي بالتكرار."
+      };
+    }
+    return {
+      tag: "فجوة معرفية محدّدة",
+      diag: "ضعف متكرّر في هذا الموضوع تحديداً يحتاج إعادة دراسة من جديد.",
+      plan: "عُد إلى هذا الدرس بالكامل: اقرأ الشرح، تابع الأمثلة المحلولة خطوة بخطوة، ثم أعد حلّ الاختبار. خطوة واحدة تكفي لسدّ الفجوة."
+    };
+  }
+
+  /* ---------- بناء الواجهة ---------- */
+  var html = "";
+
+  // بطاقة الملخّص
+  html +=
+    '<div class="card">' +
+      '<div class="an-summary">' +
+        '<div class="an-ring" style="--p:' + overall + ';--ring-col:' + ringCol + '"><b>' + overall + '%</b><span>الإتقان العام</span></div>' +
+        '<div style="flex:1">' +
+          '<h2 style="margin-bottom:6px">تقويمك العام: <span class="an-level ' + ringLv.cls + '">' + ringLv.txt + '</span></h2>' +
+          '<div class="an-tiles">' +
+            '<div class="an-tile"><div class="n">' + total + '</div><div class="k">سؤالاً حللته</div></div>' +
+            '<div class="an-tile"><div class="n">' + correct + '</div><div class="k">إجابة صحيحة</div></div>' +
+            '<div class="an-tile"><div class="n">' + Object.keys(byUnit).length + '</div><div class="k">فصلاً تدرّبت عليه</div></div>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+
+  // رسم بياني: الإتقان حسب نوع المهارة
+  html += '<div class="section-title"><span class="ico">🎯</span> الإتقان حسب نوع المهارة</div>';
+  html += '<div class="card"><div class="an-chart">';
+  var anySkill = false;
+  SKILL_ORDER.forEach(function (sk) {
+    if (!bySkill[sk]) return;
+    anySkill = true;
+    var p = pct(bySkill[sk].c, bySkill[sk].t);
+    html += bar(sk, p, bySkill[sk].t);
+  });
+  html += '</div><p style="color:var(--ink-soft);font-size:.85rem;font-weight:600;margin-top:12px">هل ضعفك في الفهم؟ في الحساب؟ أم في تطبيق القوانين؟ هذا الرسم يجيبك عبر كل الفصول.</p></div>';
+
+  // رسم بياني: الإتقان حسب الفصل
+  html += '<div class="section-title"><span class="ico">📚</span> الإتقان حسب الفصل</div>';
+  html += '<div class="card"><div class="an-chart">';
+  Object.keys(byUnit).sort().forEach(function (ch) {
+    var p = pct(byUnit[ch].c, byUnit[ch].t);
+    var name = (CH[ch] ? CH[ch].em + " " + shortCh(ch) : ch);
+    html += bar(name, p, byUnit[ch].t);
+  });
+  html += '</div></div>';
+
+  // مواطن الضعف
+  var subs = Object.keys(bySub).map(function (k) {
+    var s = bySub[k]; s.p = pct(s.c, s.t); return s;
+  });
+  var weak = subs.filter(function (s) { return s.t >= 2 && s.p < 70; })
+                 .sort(function (a, b) { return a.p - b.p; });
+
+  html += '<div class="section-title"><span class="ico">🔍</span> مواطن الضعف وخطة المعالجة</div>';
+  if (!weak.length) {
+    html += '<div class="card"><p style="font-weight:700">🎉 رائع! لا توجد مواطن ضعف واضحة — أداؤك متماسك في كل المواضيع التي تدرّبت عليها. واصل التدريب للحفاظ على مستواك.</p></div>';
+  } else {
+    html += '<div class="card">';
+    weak.forEach(function (s) {
+      var lv = level(s.p);
+      var d = diagnose(s);
+      html +=
+        '<div class="an-weak">' +
+          '<div class="an-weak-head">' +
+            '<b>' + esc(s.sub) + '</b>' +
+            '<span class="unit">' + (CH[s.ch] ? esc(CH[s.ch].em + " " + shortCh(s.ch)) : esc(s.ch)) + '</span>' +
+            '<span class="an-level ' + lv.cls + '" style="margin-inline-start:auto">' + lv.txt + ' · ' + s.p + '%</span>' +
+          '</div>' +
+          '<p class="an-diag">التشخيص: <span class="tag">' + d.tag + '</span> — ' + d.diag + '</p>' +
+          '<p class="an-plan">💡 خطة المعالجة: ' + d.plan + '</p>' +
+          '<a class="btn small" href="' + lessonLink(s.ch, s.node) + '">🚀 ابدأ المعالجة</a>' +
+        '</div>';
+    });
+    html += '</div>';
+  }
+
+  // مواطن القوة
+  var strong = subs.filter(function (s) { return s.t >= 2 && s.p >= 85; })
+                   .sort(function (a, b) { return b.p - a.p; }).slice(0, 3);
+  if (strong.length) {
+    html += '<div class="section-title"><span class="ico">💪</span> أقوى مواضيعك</div>';
+    html += '<div class="card"><div class="an-strong">';
+    strong.forEach(function (s) {
+      html += '<span class="s">✓ ' + esc(s.sub) + ' · ' + s.p + '%</span>';
+    });
+    html += '</div></div>';
+  }
+
+  root.innerHTML = html;
+  // تحريك أشرطة الرسم بعد الإدراج
+  requestAnimationFrame(function () {
+    root.querySelectorAll(".fill[data-w]").forEach(function (f) { f.style.width = f.dataset.w + "%"; });
+  });
+
+  function bar(label, p, n) {
+    var lv = level(p);
+    return '<div class="an-bar" title="' + n + ' سؤالاً">' +
+      '<span class="lbl">' + esc(label) + '</span>' +
+      '<div class="track"><div class="fill ' + lv.fill + '" data-w="' + p + '" style="width:0%"></div></div>' +
+      '<span class="val">' + p + '%</span>' +
+    '</div>';
+  }
+  function shortCh(ch) {
+    // «الفصل الأول: ...» → نأخذ ما بعد النقطتين إن وُجد للاختصار
+    var t = CH[ch] ? CH[ch].t : ch;
+    var i = t.indexOf(":");
+    return i > -1 ? t.slice(i + 1).trim() : t;
+  }
+  wireReset();
+  wireShare();
+
+  function wireReset() {
+    var btn = document.getElementById("anReset");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      if (confirm("هل تريد حذف بيانات التحليل؟ (لن يتأثّر تقدّمك ونجومك)")) {
+        Phy.clearAttempts();
+        location.reload();
+      }
+    });
+  }
+
+  function wireShare() {
+    var btn = document.getElementById("anShare");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var prevText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = "⏳ جارٍ التجهيز...";
+      shareReportCard(buildReportData())
+        .catch(function (err) {
+          console.error(err);
+          alert("تعذّرت مشاركة التقرير، حاول مجدداً.");
+        })
+        .then(function () {
+          btn.disabled = false;
+          btn.textContent = prevText;
+        });
+    });
+  }
+})();
+</script>
+<script src="../js/access-control.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: الجرس والهاتف والمرحل</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-ch6">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السادس</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔔 الدرس 5: الجرس والهاتف والمرحل</h1>
+    <p>ثلاثة أجهزة في حياتك اليومية يعمل قلبها بالمغناطيس الكهربائي — جرس بيتك، وهاتفك، ومفتاح تشغيل سيارتك!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">📞</span>
+    <span>حين تتكلم في الهاتف يتحول صوتك إلى <b>تيار كهربائي متغير</b>... يسافر في الأسلاك ثم يعود <b>صوتاً</b> عند سماعة صديقك — بفضل المغناطيس الكهربائي!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔔</span> أولاً: الجرس الكهربائي</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> عرف الجرس الكهربائي ؟ ومم يتركب (اجزاؤه) ؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        هو جهاز للتنبيه يستثمر المغناطيس الكهربائي في الية عمله. ويتكون من:<br>
+        <b>١.</b> مغناطيس كهربائي بشكل حرف (U).<br>
+        <b>٢.</b> حافظه من الحديد المطاوع.<br>
+        <b>٣.</b> مسمار محوري.<br>
+        <b>٤.</b> مطرقة.<br>
+        <b>٥.</b> ناقوس معدني.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> وضح الية عمل الجرس الكهربائي ؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">عند غلق المفتاح يعمل المغناطيس الكهربائي على جذب قطعة الحديد المطاوع فتتحرك المطرقة نحو الناقوس وتحدث صوتا وعندها تكون الدائرة الكهربائية مفتوحة لذا يفقد المغناطيس مغناطيسيته فتبتعد قطعة الحديد المطاوع عن المغناطيس الكهربائي عائدة إلى وضعها.</div>
+    </details>
+  </div>
+
+  <div class="notebox">
+    <ul>
+      <li>يعمل الجرس الكهربائي على <b>التيار المتناوب</b> ولا يعمل على التيار المستمر.</li>
+    </ul>
+  </div>
+
+  <!-- ======== محاكاة الجرس ======== -->
+  <div class="sim">
+    <h3>🎬 شغّل الجرس الكهربائي وشاهد آلية عمله</h3>
+    <p class="sim-sub">راقب الدورة: جذب المطرقة ⟵ طرق الناقوس ⟵ انفتاح الدائرة ⟵ عودة المطرقة ⟵ وهكذا بسرعة!</p>
+    <canvas id="bellSim" width="700" height="380"></canvas>
+    <div class="controls">
+      <button class="btn green" id="bellBtn">🔔 اضغط زر الجرس</button>
+    </div>
+    <div class="controls"><span class="readout" id="bellState">جرس كهربائي: مغناطيس U + حافظة حديد مطاوع + مطرقة + ناقوس.</span></div>
+  </div>
+
+  <div class="section-title"><span class="ico">📞</span> ثانياً: الهاتف</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما المقصود بالهاتف ؟</summary>
+      <div class="ans">هو أحد وسائل الاتصال السلكية عن بوعد والتي تستعمل لإرسال واستقبال الموجات الصوتية بين شخصين أو أكثر من خلال سلكين يمر فيهما تيار كهربائي متغير وفق ذبذبات صوت المتكلم.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما هي مكونات الهاتف ؟</summary>
+      <div class="ans">
+        <b>١.</b> <b class="term">لاقطة الصوت:</b> وهي جهاز يقوم بتحويل الطاقة الصوتية إلى طاقة كهربائية.<br>
+        <b>٢.</b> <b class="term">السماعة:</b> هي جهاز يقوم بتحويل الطاقة الكهربائية إلى طاقة صوتية مشابهة لصوت المتكلم في اللاقطة.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> وضح آلية عمل الهاتف؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">عند التكلم أمام لاقطة يتغير مقدار التيار في الدائرة الكهربائية بفعل نبضات من التضاغط والتخلخل و بشكل مشابه لتردد موجات صوت المتكلم (التردد نفسه) وهذا التغير بالتيار ينتقل خلال الأسلاك إلى سماعة الهاتف الآخر والذي يمر عبر المغناطيس الكهربائي الذي يجذب بدوره قرصا من الحديد المطاوع فيتذبذب مولدا موجات صوتية في الهواء مشابهة لصوت المتكلم.</div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">🔀</span> ثالثاً: المرحل الكهربائي</div>
+  <div class="card">
+    <details class="qa" open>
+      <summary><span class="tag">سؤال</span> ما المقصود بالمرحل الكهربائي؟ ذاكرا استعمالات المرحل الكهربائي؟ او ما الغرض منه ؟ او الفائدة العملية ؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">
+        عبارة عن مفتاح مغناطيسي يستعمل كأداة للتحكم في إغلاق وفتح الدائرة الكهربائية. وما الغرض منه:<br>
+        <b>١.</b> في السيارة يعمل المرحل بالتحكم في تشغيل دائرة التيار الكبير بواسطة تيار صغير عنده إدارة مفتاح تشغيل السيارة.<br>
+        <b>٢.</b> يعمل على فتح وإغلاق الدائرة الإلكترونية ذاتيآ.
+      </div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الفائدة العملية من وجود المرحل في السيارة؟ <span class="wz">وزاري</span></summary>
+      <div class="ans">للتحكم في تشغيل دائرة التيار الكبير (المحرك) عند بداية التشغيل بواسطة تيار صغير عنده إدارة مفتاح السيارة.</div>
+    </details>
+    <details class="qa">
+      <summary><span class="tag">سؤال</span> ما الفائدة العملية من وجود المرحل في الدوائر الإلكترونية؟</summary>
+      <div class="ans">يعمل على فتح وإغلاق الدائرة الإلكترونية ذاتيآ.</div>
+    </details>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz5"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson4.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: الحث الكهرومغناطيسي ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة الجرس الكهربائي ---------- */
+(function () {
+  var cv = document.getElementById("bellSim"), ctx = cv.getContext("2d");
+  var W = cv.width, H = cv.height;
+  var on = false, t = 0, phase = 0, hammer = 0, ring = 0;
+  var btn = document.getElementById("bellBtn");
+  var state = document.getElementById("bellState");
+
+  var mx = W / 2 - 90, my = H / 2; // المغناطيس
+  var bellX = W / 2 + 150, bellY = H / 2 - 40;
+
+  btn.onclick = function () {
+    on = !on;
+    btn.textContent = on ? "⏹️ ارفع يدك عن الزر" : "🔔 اضغط زر الجرس";
+    btn.classList.toggle("green", !on);
+    state.textContent = on
+      ? "المغناطيس يجذب الحافظة فتطرق المطرقة الناقوس — وتنفتح الدائرة فيعود... دورة سريعة = رنين متواصل!"
+      : "رفعنا اليد — توقف الجرس.";
+  };
+
+  function tick() {
+    t += 0.016;
+    ctx.clearRect(0, 0, W, H);
+    ctx.textAlign = "center";
+
+    // دورة المطرقة
+    if (on) {
+      phase += 0.14;
+      hammer = Math.abs(Math.sin(phase)); // 0..1 (1 = ملامسة الناقوس)
+      if (hammer > 0.95) ring = 1;
+    } else {
+      hammer *= 0.9;
+    }
+    ring *= 0.93;
+
+    // المغناطيس U
+    ctx.strokeStyle = on && hammer > 0.4 ? "#e11d48" : "#9aa5b1";
+    ctx.lineWidth = 22;
+    ctx.beginPath();
+    ctx.moveTo(mx - 40, my - 60);
+    ctx.lineTo(mx - 40, my + 40);
+    ctx.arc(mx, my + 40, 40, Math.PI, 0, true);
+    ctx.lineTo(mx + 40, my - 60);
+    ctx.stroke();
+    // لفات
+    ctx.strokeStyle = "#b45309"; ctx.lineWidth = 3;
+    for (var c = 0; c < 4; c++) {
+      ctx.beginPath(); ctx.moveTo(mx - 52, my - 48 + c * 14); ctx.lineTo(mx - 28, my - 42 + c * 14); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(mx + 28, my - 48 + c * 14); ctx.lineTo(mx + 52, my - 42 + c * 14); ctx.stroke();
+    }
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("مغناطيس كهربائي (U)", mx, my + 100);
+
+    // الحافظة والمطرقة (تتأرجح نحو الناقوس)
+    var armBaseX = mx + 95, armBaseY = my - 80;
+    var swing = hammer * 0.5; // زاوية
+    ctx.save();
+    ctx.translate(armBaseX, armBaseY);
+    ctx.rotate(swing);
+    // ذراع
+    ctx.strokeStyle = "#4a4a55"; ctx.lineWidth = 5;
+    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, 130); ctx.stroke();
+    // حافظة الحديد المطاوع (قرب المغناطيس)
+    ctx.fillStyle = "#8d99ae";
+    ctx.fillRect(-30, 55, 26, 40);
+    // المطرقة
+    ctx.fillStyle = "#2d3142";
+    ctx.beginPath(); ctx.arc(0, 138, 11, 0, Math.PI * 2); ctx.fill();
+    ctx.restore();
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 11px Cairo";
+    ctx.fillText("مسمار محوري", armBaseX + 6, armBaseY - 12);
+    ctx.beginPath(); ctx.arc(armBaseX, armBaseY, 5, 0, Math.PI * 2);
+    ctx.fillStyle = "#f43f5e"; ctx.fill();
+    ctx.fillText("حافظة حديد مطاوع + مطرقة", armBaseX + 10, my + 100);
+
+    // الناقوس
+    ctx.save();
+    ctx.translate(bellX, bellY + 30);
+    if (ring > 0.05) ctx.rotate(Math.sin(t * 40) * 0.03 * ring);
+    ctx.fillStyle = "#f0b429";
+    ctx.beginPath();
+    ctx.arc(0, 0, 52, Math.PI, 0);
+    ctx.lineTo(58, 12); ctx.lineTo(-58, 12);
+    ctx.closePath(); ctx.fill();
+    ctx.strokeStyle = "#c78a12"; ctx.lineWidth = 3; ctx.stroke();
+    ctx.restore();
+    ctx.fillStyle = "#2d3142"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("الناقوس المعدني", bellX, bellY + 66);
+
+    // موجات صوت
+    if (ring > 0.05) {
+      for (var w = 1; w <= 3; w++) {
+        ctx.strokeStyle = "rgba(244,63,94," + (ring * (0.6 - w * 0.15)) + ")";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(bellX, bellY, 60 + w * 22 + (t * 60 % 22), -0.6, 0.6);
+        ctx.stroke();
+      }
+      ctx.font = "bold 16px Cairo"; ctx.fillStyle = "rgba(190,18,60," + ring + ")";
+      ctx.fillText("رنّ! 🔊", bellX + 105, bellY - 20);
+    }
+
+    // نص الحالة
+    if (on) {
+      ctx.fillStyle = "#1d4ed8"; ctx.font = "bold 13px Cairo";
+      ctx.fillText(hammer > 0.5 ? "جذبٌ ⟵ طرق الناقوس (الدائرة تنفتح الآن!)" : "المطرقة تعود ⟵ الدائرة تنغلق من جديد", W / 2, H - 14);
+    }
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz5", [
+  { q: "الجرس الكهربائي هو جهاز للتنبيه يستثمر في آلية عمله:",
+    opts: ["المغناطيس الكهربائي", "المغناطيس الدائمي فقط", "الطاقة الشمسية", "الهواء المضغوط"], a: 0,
+    why: "تعريف وزاري: جهاز تنبيه يستثمر المغناطيس الكهربائي." },
+  { q: "من مكونات الجرس الكهربائي:",
+    opts: ["مغناطيس كهربائي شكل U وحافظة حديد مطاوع ومسمار محوري ومطرقة وناقوس", "بطارية وملف فقط", "سماعة ولاقطة", "مبادل وفرشتان"], a: 0,
+    why: "المكونات الخمسة الوزارية — احفظها بالترتيب!" },
+  { q: "في آلية عمل الجرس: عند غلق المفتاح يجذب المغناطيس قطعة الحديد المطاوع فتتحرك المطرقة نحو الناقوس وعندها:",
+    opts: ["تكون الدائرة مفتوحة فيفقد المغناطيس مغناطيسيته وتعود المطرقة", "تبقى الدائرة مغلقة للأبد", "ينعكس التيار تلقائياً", "يذوب المغناطيس"], a: 0,
+    why: "سر الرنين المتواصل: كل طرقة تفتح الدائرة فتعود المطرقة فتنغلق من جديد!" },
+  { q: "يعمل الجرس الكهربائي على:",
+    opts: ["التيار المتناوب ولا يعمل على التيار المستمر", "التيار المستمر فقط", "البطاريات الجافة فقط", "بدون أي تيار"], a: 0,
+    why: "ملاحظة الملزمة المهمة!" },
+  { q: "الهاتف هو أحد وسائل الاتصال السلكية تستعمل لإرسال واستقبال الموجات الصوتية من خلال سلكين يمر فيهما:",
+    opts: ["تيار كهربائي متغير وفق ذبذبات صوت المتكلم", "تيار ثابت لا يتغير", "ماء مضغوط", "ضوء ليزر"], a: 0,
+    why: "التيار المتغير يحمل «شكل» الصوت عبر الأسلاك." },
+  { q: "لاقطة الصوت في الهاتف جهاز يقوم بتحويل:",
+    opts: ["الطاقة الصوتية إلى طاقة كهربائية", "الطاقة الكهربائية إلى صوتية", "الضوء إلى صوت", "الحرارة إلى كهرباء"], a: 0,
+    why: "اللاقطة: صوت ⟵ كهرباء — والسماعة بالعكس: كهرباء ⟵ صوت." },
+  { q: "في آلية عمل الهاتف يمر التيار المتغير عبر المغناطيس الكهربائي في السماعة الذي يجذب:",
+    opts: ["قرصا من الحديد المطاوع فيتذبذب مولدا موجات صوتية مشابهة لصوت المتكلم", "إبرة مغناطيسية", "المطرقة والناقوس", "أسلاك النحاس"], a: 0,
+    why: "آلية وزارية: القرص يتذبذب حسب التيار فيولد صوتاً مشابهاً للمتكلم." },
+  { q: "المرحل الكهربائي عبارة عن:",
+    opts: ["مفتاح مغناطيسي يستعمل كأداة للتحكم في إغلاق وفتح الدائرة الكهربائية", "مقاومة كبيرة", "بطارية إضافية", "جرس صغير"], a: 0,
+    why: "تعريف وزاري — مفتاح مغناطيسي للتحكم." },
+  { q: "فائدة المرحل في السيارة:",
+    opts: ["التحكم في تشغيل دائرة التيار الكبير بواسطة تيار صغير عند إدارة مفتاح التشغيل", "شحن البطارية", "تبريد المحرك", "إنارة المصابيح فقط"], a: 0,
+    why: "سؤال وزاري: تيار صغير من المفتاح يشغل دائرة التيار الكبير للمحرك." },
+  { q: "فائدة المرحل في الدوائر الإلكترونية:",
+    opts: ["يعمل على فتح وإغلاق الدائرة الإلكترونية ذاتيا", "زيادة فولطية الدائرة", "تخزين الشحنات", "توليد الصوت"], a: 0,
+    why: "فتح وإغلاق ذاتي — أتمتة التحكم في الدوائر." }
+], { onDone: function (stars) { Phy.setLesson("ch6", "5", { stars: stars }); } });
+</script>
+<script src="../../js/access-control.js"></script>
+</body>
+</html>
