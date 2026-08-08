@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إدارة الأكواد — شرارة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/logo-ar.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+  </div>
+
+  <div id="pin-screen" class="pin-gate">
+    <h1>🔒 إدارة الأكواد</h1>
+    <p>أدخل رمز الحماية</p>
+    <input type="password" inputmode="numeric" id="pin-input" placeholder="••••••" autocomplete="off">
+    <button type="button" class="btn" id="pin-submit" style="width:100%">دخول</button>
+    <p class="admin-msg error" id="pin-msg"></p>
+  </div>
+
+  <div id="admin-screen" style="display:none">
+    <div class="hero">
+      <span class="chip">🔒 لوحة إدارة الأكواد</span>
+      <h1>توليد وتجديد أكواد التفعيل</h1>
+    </div>
+
+    <div class="card">
+      <h2>⚡ توليد كود جديد</h2>
+      <div class="admin-field">
+        <label>اسم الطالب (اختياري)</label>
+        <input type="text" id="gen-name" placeholder="مثلاً: أحمد محمد">
+      </div>
+      <div class="admin-field">
+        <label>طريقة الدفع</label>
+        <select id="gen-payment">
+          <option value="نقدي">نقدي</option>
+          <option value="تحويل">تحويل</option>
+        </select>
+      </div>
+      <div class="admin-btn-row">
+        <button type="button" class="btn" id="gen-monthly">شهري (5,000 د.ع)</button>
+        <button type="button" class="btn green" id="gen-yearly">سنوي (30,000 د.ع)</button>
+      </div>
+      <p class="admin-msg" id="gen-msg"></p>
+      <div class="code-result" id="gen-result">
+        <div class="meta">الكود الجديد</div>
+        <div class="big-code" id="gen-code"></div>
+        <div class="meta" id="gen-type-label"></div>
+        <div class="admin-btn-row">
+          <button type="button" class="btn ghost" id="gen-copy" style="background:#fff">📋 نسخ</button>
+          <a class="btn ghost" id="gen-whatsapp" style="background:#fff" target="_blank" rel="noopener noreferrer" href="#">📱 مشاركة عبر واتساب</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🔄 تجديد كود موجود</h2>
+      <div class="admin-field">
+        <label>كود التفعيل</label>
+        <input type="text" id="ren-code" placeholder="اكتب الكود هنا" style="text-transform:uppercase">
+      </div>
+      <div class="admin-btn-row">
+        <button type="button" class="btn" id="ren-monthly">تجديد شهري</button>
+        <button type="button" class="btn green" id="ren-yearly">تجديد سنوي</button>
+      </div>
+      <p class="admin-msg" id="ren-msg"></p>
+      <div class="code-result" id="ren-result">
+        <div class="meta">تم التجديد ✅</div>
+        <div class="big-code" id="ren-code-echo"></div>
+        <div class="meta" id="ren-expiry-label"></div>
+      </div>
+    </div>
+
+    <a href="#" class="admin-logout" id="logout-link">مسح رمز الحماية من هذا الجهاز</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع · 📞 07800155157</footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // نفس رابط الـ Web App المستخدم بـ js/access-control.js
+  var ACCESS_CONTROL_URL = "https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec";
+  var WHATSAPP_SHARE_NUMBER = ""; // فاضي عمداً: يفتح منتقي المحادثات بدل رقم ثابت
+  var PIN_KEY = "shararah_admin_pin";
+
+  var pinScreen = document.getElementById("pin-screen");
+  var adminScreen = document.getElementById("admin-screen");
+  var pinInput = document.getElementById("pin-input");
+  var pinMsg = document.getElementById("pin-msg");
+
+  function showAdmin() {
+    pinScreen.style.display = "none";
+    adminScreen.style.display = "block";
+  }
+
+  function getPin() {
+    return localStorage.getItem(PIN_KEY) || "";
+  }
+
+  // نداء JSONP عبر وسم <script> — نفس أسلوب js/access-control.js، لأن طلبات fetch
+  // المباشرة تنحظر بـ CORS بسبب تحويل داخلي بـ Apps Script بلا ترويسة CORS.
+  function callApi(params, onDone) {
+    var cbName = "shararahAdminCb" + Date.now() + Math.floor(Math.random() * 1000);
+    var script = document.createElement("script");
+    var done = false;
+    var timer = setTimeout(function () { finish(null, true); }, 12000);
+
+    function cleanup() {
+      clearTimeout(timer);
+      delete window[cbName];
+      if (script.parentNode) script.parentNode.removeChild(script);
+    }
+    function finish(data, isTimeoutOrError) {
+      if (done) return;
+      done = true;
+      cleanup();
+      onDone(isTimeoutOrError ? { result: "network_error" } : data);
+    }
+
+    window[cbName] = function (data) { finish(data, false); };
+    script.onerror = function () { finish(null, true); };
+
+    var qs = "callback=" + cbName;
+    for (var key in params) {
+      qs += "&" + encodeURIComponent(key) + "=" + encodeURIComponent(params[key]);
+    }
+    script.src = ACCESS_CONTROL_URL + "?" + qs;
+    document.body.appendChild(script);
+  }
+
+  // ---- شاشة الدخول بالـ PIN ----
+  function trySavedPin() {
+    var saved = getPin();
+    if (saved) showAdmin();
+  }
+
+  document.getElementById("pin-submit").addEventListener("click", function () {
+    var pin = (pinInput.value || "").trim();
+    if (!pin) { pinMsg.textContent = "أدخل رمز الحماية"; return; }
+    localStorage.setItem(PIN_KEY, pin);
+    pinMsg.textContent = "";
+    showAdmin();
+  });
+  pinInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") document.getElementById("pin-submit").click();
+  });
+
+  document.getElementById("logout-link").addEventListener("click", function (e) {
+    e.preventDefault();
+    localStorage.removeItem(PIN_KEY);
+    adminScreen.style.display = "none";
+    pinScreen.style.display = "block";
+    pinInput.value = "";
+  });
+
+  // رمز خاطئ يُكتشف فقط بعد محاولة فعلية على السيرفر — نرجّع لشاشة الدخول حينها.
+  function handleUnauthorized() {
+    localStorage.removeItem(PIN_KEY);
+    adminScreen.style.display = "none";
+    pinScreen.style.display = "block";
+    pinMsg.textContent = "رمز الحماية غير صحيح";
+  }
+
+  // ---- توليد كود جديد ----
+  function generate(type) {
+    var msg = document.getElementById("gen-msg");
+    var result = document.getElementById("gen-result");
+    result.classList.remove("shown");
+    msg.className = "admin-msg";
+    msg.textContent = "جارٍ التوليد...";
+
+    callApi({
+      action: "generateCode",
+      pin: getPin(),
+      studentName: document.getElementById("gen-name").value || "",
+      paymentMethod: document.getElementById("gen-payment").value,
+      type: type
+    }, function (data) {
+      if (data && data.result === "success") {
+        msg.textContent = "";
+        document.getElementById("gen-code").textContent = data.code;
+        document.getElementById("gen-type-label").textContent = type === "yearly" ? "اشتراك سنوي" : "اشتراك شهري";
+        var waText = encodeURIComponent("كود تفعيل شرارة: " + data.code + "\nصالح لمدة " + (type === "yearly" ? "سنة كاملة" : "شهر واحد") + " من أول استخدام.");
+        document.getElementById("gen-whatsapp").href = "https://wa.me/" + WHATSAPP_SHARE_NUMBER + "?text=" + waText;
+        result.classList.add("shown");
+      } else if (data && data.result === "unauthorized") {
+        handleUnauthorized();
+      } else {
+        msg.className = "admin-msg error";
+        msg.textContent = "صار خطأ، حاول مرة أخرى";
+      }
+    });
+  }
+  document.getElementById("gen-monthly").addEventListener("click", function () { generate("monthly"); });
+  document.getElementById("gen-yearly").addEventListener("click", function () { generate("yearly"); });
+
+  document.getElementById("gen-copy").addEventListener("click", function () {
+    var code = document.getElementById("gen-code").textContent;
+    if (code && navigator.clipboard) navigator.clipboard.writeText(code);
+  });
+
+  // ---- تجديد كود موجود ----
+  function renew(type) {
+    var code = (document.getElementById("ren-code").value || "").trim().toUpperCase();
+    var msg = document.getElementById("ren-msg");
+    var result = document.getElementById("ren-result");
+    result.classList.remove("shown");
+    if (!code) { msg.className = "admin-msg error"; msg.textContent = "أدخل الكود أولاً"; return; }
+    msg.className = "admin-msg";
+    msg.textContent = "جارٍ التجديد...";
+
+    callApi({ action: "renewCode", pin: getPin(), code: code, type: type }, function (data) {
+      if (data && data.result === "success") {
+        msg.textContent = "";
+        document.getElementById("ren-code-echo").textContent = data.code;
+        var expiryDate = data.expiresAt ? new Date(data.expiresAt).toLocaleDateString("ar-IQ") : "";
+        document.getElementById("ren-expiry-label").textContent = "ينتهي بتاريخ: " + expiryDate;
+        result.classList.add("shown");
+      } else if (data && data.result === "unauthorized") {
+        handleUnauthorized();
+      } else if (data && data.result === "not_found") {
+        msg.className = "admin-msg error";
+        msg.textContent = "ما لقيت هذا الكود بالسجل";
+      } else if (data && data.result === "not_activated") {
+        msg.className = "admin-msg error";
+        msg.textContent = "هذا الكود ما فعّله أي طالب بعد، لا حاجة لتجديده";
+      } else {
+        msg.className = "admin-msg error";
+        msg.textContent = "صار خطأ، حاول مرة أخرى";
+      }
+    });
+  }
+  document.getElementById("ren-monthly").addEventListener("click", function () { renew("monthly"); });
+  document.getElementById("ren-yearly").addEventListener("click", function () { renew("yearly"); });
+
+  trySavedPin();
+})();
+</script>
+</body>
+</html>

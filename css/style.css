@@ -480,6 +480,38 @@ table.nice td { background: #fff; border-bottom: 2px solid #f0f2ff; padding: 10p
 .plan-feats li::before { content: "✅"; flex-shrink: 0; }
 .plan-card .btn { width: 100%; margin-top: auto; }
 
+/* ---------- admin (توليد/تجديد الأكواد) ---------- */
+.admin-field { margin-bottom: 14px; }
+.admin-field label { display: block; font-weight: 800; font-size: .9rem; margin-bottom: 6px; }
+.admin-field input, .admin-field select {
+  width: 100%; box-sizing: border-box; font-family: inherit; font-size: 1rem; font-weight: 700;
+  padding: 12px 14px; border-radius: 12px; border: 2px solid #e9ebfa; background: #f8f9ff; color: var(--ink);
+}
+.admin-field input:focus, .admin-field select:focus { outline: none; border-color: var(--violet); }
+.admin-btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.admin-btn-row .btn { flex: 1; min-width: 140px; text-align: center; }
+.admin-msg { min-height: 20px; margin-top: 12px; font-weight: 700; font-size: .9rem; }
+.admin-msg.error { color: var(--coral); }
+.admin-msg.success { color: var(--green); }
+.pin-gate { max-width: 340px; margin: 60px auto; text-align: center; }
+.pin-gate input {
+  width: 100%; box-sizing: border-box; text-align: center; letter-spacing: 4px;
+  font-size: 1.4rem; font-weight: 900; padding: 14px; border-radius: 14px;
+  border: 2px solid #e9ebfa; margin: 16px 0; font-family: inherit;
+}
+.pin-gate input:focus { outline: none; border-color: var(--violet); }
+.code-result {
+  display: none; background: linear-gradient(135deg, var(--violet), var(--blue));
+  color: #fff; border-radius: 18px; padding: 22px; margin-top: 16px; text-align: center;
+}
+.code-result.shown { display: block; animation: pop .3s ease; }
+.code-result .big-code {
+  font-size: 2rem; font-weight: 900; letter-spacing: 3px; direction: ltr;
+  background: rgba(255,255,255,.15); border-radius: 12px; padding: 10px; margin: 10px 0;
+}
+.code-result .meta { font-size: .85rem; opacity: .9; margin-bottom: 4px; }
+.admin-logout { display: block; text-align: center; margin-top: 24px; color: var(--ink-soft); font-size: .82rem; }
+
 /* ---------- footer ---------- */
 footer.site {
   text-align: center; color: var(--ink-soft); font-size: .85rem;
