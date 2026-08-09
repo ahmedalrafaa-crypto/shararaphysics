@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 6: الطاقة المختزنة في المجال الكهربائي والقدرة — السادس الإعدادي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c1">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الأول</a> / الدرس 6</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔺 الدرس 6: الطاقة المختزنة والقدرة</h1>
+    <p>المتسعة لا تخزن الشحنة فقط، بل الطاقة. كم طاقةً تختزن؟ وأين تُخزَّن؟ وكيف تُطلقها كقدرة هائلة في لحظة؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">❤️</span>
+    <span>جهاز إنعاش القلب (Defibrillator) يعيد الحياة بصدمة كهربائية. سرّه متسعة تشحن ببطء من البطارية ثم تُفرّغ نحو <b>200 جول</b> في المريض خلال أقل من <b>خمسة أجزاء من الألف من الثانية</b>. البطارية عاجزة عن هذه القدرة الهائلة — لكن المتسعة تجعلها ممكنة. كيف؟ الجواب في مفهومَي <b>الطاقة</b> و<b>القدرة</b>.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔺</span> من أين تأتي صيغة الطاقة؟</div>
+  <div class="card">
+    <p>لشحن متسعة نبذل شغلاً لنقل الشحنة من صفيحة إلى أخرى ضد التنافر. لكن الجهد يزداد تدريجياً من صفر حتى ΔV مع تراكم الشحنة، فمتوسط الجهد أثناء الشحن هو <span class="formula-inline">½ΔV</span>. لذلك الطاقة المختزنة = الشحنة × متوسط الجهد = <span class="formula-inline">½QΔV</span>. هندسياً هي <b>مساحة المثلث</b> تحت خط <span class="formula-inline">Q = CΔV</span>.</p>
+  </div>
+  <div class="lawbox">
+    الطاقة المختزنة في المتسعة (ثلاث صيغ متكافئة)
+    <div class="formula">PE = ½ Q ΔV = ½ C ΔV² = Q² / 2C</div>
+  </div>
+  <p>تُقاس بالجول (J). وهذه الطاقة مختزنة فعلياً في <b>المجال الكهربائي</b> المحصور بين الصفيحتين — لذا يسمّى الدرس «الطاقة المختزنة في المجال الكهربائي».</p>
+
+  <div class="notebox">
+    <b>أيّ صيغة أستعمل؟</b> اختر الصيغة حسب المعطيات: عندك Q وΔV ⟵ استعمل ½QΔV؛ عندك C وΔV ⟵ استعمل ½CΔV²؛ عندك Q وC ⟵ استعمل Q²/2C. الثلاث تعطي النتيجة نفسها دائماً.
+  </div>
+
+  <div class="section-title"><span class="ico">⚡</span> القدرة: الطاقة في الزمن</div>
+  <div class="card">
+    <p>سرّ المتسعة ليس مقدار الطاقة فحسب، بل <b>سرعة</b> إطلاقها. القدرة هي معدّل نقل الطاقة:</p>
+  </div>
+  <div class="lawbox">
+    القدرة عند التفريغ
+    <div class="formula">P = PE / t</div>
+  </div>
+  <p>تُقاس بالواط (W). فلو أفرغت المتسعة طاقتها في زمن أقصر، ارتفعت القدرة كثيراً — وهذا ما يجعل المتسعة قادرة على قدرة لحظية عالية جداً تعجز عنها البطارية.</p>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> يمكن للمتسعة أن تجهّز قدرة كهربائية لحظية أكبر بكثير من البطارية التي شحنتها. <span class="wz">وزاري</span></summary>
+    <div class="ans">لأن المتسعة تختزن الطاقة أثناء شحنها البطيء ثم تُفرّغها في زمن قصير جداً t، والقدرة P=PE/t؛ فصغر الزمن يجعل القدرة كبيرة جداً — بينما البطارية تجهّز طاقتها ببطء فقدرتها اللحظية محدودة.</div>
+  </details>
+
+  <!-- ======== المحاكاة: الطاقة والقدرة ======== -->
+  <div class="sim">
+    <h3>🔺 مختبر الطاقة المختزنة والقدرة</h3>
+    <p class="sim-sub">غيّر C وV وراقب مساحة المثلث تحت خط Q=CV — تلك المساحة تمثّل الطاقة المختزنة PE. ثم غيّر زمن التفريغ t لتحسب القدرة الناتجة P.</p>
+    <canvas id="energySim" width="700" height="240"></canvas>
+    <div class="controls">
+      <div class="slider-group">السعة C (نانوفاراد): <b id="cVal">٢٠</b>
+        <input type="range" id="cR" min="1" max="50" step="1" value="20"></div>
+      <div class="slider-group">الجهد V (فولط): <b id="vVal">٥٠</b>
+        <input type="range" id="vR" min="1" max="100" step="1" value="50"></div>
+      <div class="slider-group">زمن التفريغ t (ملي ثانية): <b id="tVal">١٠٠</b>
+        <input type="range" id="tR" min="1" max="500" step="1" value="100"></div>
+    </div>
+    <div class="readout" id="energyReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">متسعة سعتها 100μF شُحنت إلى فرق جهد 200V. احسب: ١) الطاقة المختزنة فيها. ٢) القدرة المتوسطة إذا فُرّغت خلال 4ms (أي 4×10⁻³ s).</div>
+    <div class="givens">المعطيات: C = 100μF = 10⁻⁴ F — ΔV = 200V — t = 4×10⁻³ s</div>
+    <div class="step"><b>الخطوة ١:</b> الطاقة (نملك C وΔV فنستعمل ½CΔV²):
+      <div class="math">PE = ½CΔV² = ½ × 10⁻⁴ × (200)² = 2 J</div></div>
+    <div class="step"><b>الخطوة ٢:</b> القدرة عند التفريغ:
+      <div class="math">P = PE/t = 2 / (4×10⁻³) = 500 W</div>
+      💡 لاحظ القدرة الضخمة (500 واط) من متسعة صغيرة — لأن الزمن قصير جداً. هذا سرّ الفلاش وجهاز الإنعاش.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz6"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson5.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson7.html">الدرس التالي: دائرة RC ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة الطاقة والقدرة ---------- */
+(function () {
+  var cv = document.getElementById("energySim"), ctx = cv.getContext("2d");
+  var cR = document.getElementById("cR"), vR = document.getElementById("vR"), tR = document.getElementById("tR");
+  var cVal = document.getElementById("cVal"), vVal = document.getElementById("vVal"), tVal = document.getElementById("tVal");
+  var readout = document.getElementById("energyReadout");
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmtEnergy(nJ) { return nJ >= 1000 ? (nJ / 1000).toFixed(2) + " µJ" : nJ.toFixed(1) + " nJ"; }
+  function fmtPower(mW) { return mW >= 1 ? mW.toFixed(3) + " mW" : (mW * 1000).toFixed(1) + " µW"; }
+
+  function draw() {
+    var C = +cR.value, V = +vR.value, T = +tR.value;
+    cVal.textContent = arNum(C); vVal.textContent = arNum(V); tVal.textContent = arNum(T);
+    var Qmax = C * V; // نانوكولوم
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    var ox = 150, oy = 200, w = 420, h = 155;
+    var Vaxis = 100, Qaxis = 50 * 100;
+
+    ctx.strokeStyle = "#e7e0f2"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(ox + w, oy); ctx.moveTo(ox, oy); ctx.lineTo(ox, oy - h); ctx.stroke();
+    ctx.fillStyle = "#756b8a"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("الجهد V", ox + w - 20, oy + 18);
+    ctx.save(); ctx.translate(ox - 30, oy - h / 2); ctx.rotate(-Math.PI / 2); ctx.fillText("الشحنة Q", 0, 0); ctx.restore();
+
+    var px = ox + Math.min(1, V / Vaxis) * w;
+    var py = oy - Math.min(1, Qmax / Qaxis) * h;
+
+    // المثلث المظلّل = الطاقة
+    ctx.fillStyle = "rgba(67,56,202,0.25)";
+    ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(px, py); ctx.lineTo(px, oy); ctx.closePath(); ctx.fill();
+
+    // خط Q=CV
+    ctx.strokeStyle = "#4338ca"; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(px, py); ctx.stroke();
+
+    // خطوط الإسقاط
+    ctx.strokeStyle = "#8a7fa0"; ctx.setLineDash([3, 3]); ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(px, oy); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(ox, py); ctx.stroke();
+    ctx.setLineDash([]);
+
+    ctx.fillStyle = "#dc2626"; ctx.beginPath(); ctx.arc(px, py, 5, 0, 7); ctx.fill();
+    ctx.fillStyle = "#312a86"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("المساحة = ½QV = الطاقة PE", (ox + px) / 2 + 40, oy - h / 4);
+
+    var C_F = C * 1e-9, PE_J = 0.5 * C_F * V * V, PE_nJ = PE_J * 1e9;
+    var P_W = PE_J / (T / 1000), P_mW = P_W * 1000;
+    readout.innerHTML = "PE = ½CV² = " + fmtEnergy(PE_nJ) + " — القدرة P = PE/t = " + fmtPower(P_mW);
+  }
+  [cR, vR, tR].forEach(function (s) { s.addEventListener("input", draw); });
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz6", [
+  { q: "متسعة سعتها 4μF شُحنت إلى 100V. ما مقدار الطاقة المختزنة فيها؟",
+    opts: ["0.02 J", "0.2 J", "400 J", "2 J"], a: 0,
+    why: "PE = ½CV² = ½ × 4×10⁻⁶ × (100)² = 0.02 J." },
+  { q: "أيّ الصيغ التالية لا تصلح لحساب الطاقة المختزنة في متسعة؟",
+    opts: ["½QΔV", "½CΔV²", "Q²/2C", "½QC²"], a: 3,
+    why: "الصيغ الصحيحة الثلاث: ½QΔV و½CΔV² وQ²/2C. أما ½QC² فليست منها." },
+  { q: "عند مضاعفة فرق الجهد على متسعة (سعتها ثابتة)، فإن الطاقة المختزنة تصبح:",
+    opts: ["مثلين", "أربعة أمثال", "نصفاً", "لا تتغيّر"], a: 1,
+    why: "PE = ½CΔV²؛ الطاقة تتناسب مع مربّع الجهد، فمضاعفة ΔV تجعلها 4 أمثال." },
+  { q: "متسعة تختزن طاقة 10J تُفرّغها خلال 2ms. ما مقدار القدرة الناتجة؟",
+    opts: ["5000 W", "20 W", "0.02 W", "5 W"], a: 0,
+    why: "P = PE/t = 10 / (2×10⁻³) = 5000 W." },
+  { q: "علّل: تجهّز المتسعة قدرة لحظية أكبر بكثير من البطارية التي شحنتها.",
+    opts: ["لأنها تختزن شحنة أكبر", "لأنها تُفرّغ طاقتها في زمن قصير جداً فترتفع القدرة P=PE/t", "لأن جهدها أعلى", "لأنها لا تفقد طاقة"], a: 1,
+    why: "القدرة = الطاقة/الزمن؛ التفريغ في زمن ضئيل جداً يرفع القدرة اللحظية كثيراً." }
+], { onDone: function (stars) { Phy.setLesson("g6c1", "6", { stars: stars }); } });
+</script>
+</body>
+</html>

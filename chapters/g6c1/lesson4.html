@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: العوامل المؤثرة في سعة المتسعة — السادس الإعدادي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c1">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الأول</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>📐 الدرس 4: العوامل المؤثرة في سعة المتسعة</h1>
+    <p>عرفنا أن السعة صفة هندسية ثابتة — لكن ممَّ تتكوّن هذه الصفة؟ ثلاثة عوامل فقط تتحكم بها، وقانون واحد يجمعها.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🏭</span>
+    <span>لو كنت مهندساً في مصنع متسعات وطُلب منك تصميم متسعة بسعة عالية جداً في حجم صغير — أيّ «مقابض» تملك لتكبير السعة؟ الجواب ثلاثة فقط: كبّر <b>المساحة</b>، قرّب <b>الصفيحتين</b>، أو اختر <b>عازلاً</b> أقوى. هذا الدرس هو دفتر شروط أي متسعة في العالم.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📐</span> القانون الجامع للسعة</div>
+  <div class="lawbox">
+    سعة المتسعة ذات الصفيحتين المتوازيتين
+    <div class="formula">C = k ε₀ A / d</div>
+  </div>
+  <p>حيث <span class="formula-inline">ε₀ = 8.85×10⁻¹² F/m</span> سماحية الفراغ، و<b>A</b> المساحة المتقابلة للصفيحتين، و<b>d</b> البعد بينهما، و<b>k</b> ثابت عزل المادة بينهما. لاحظ: لا تظهر Q ولا ΔV في القانون إطلاقاً — تأكيدٌ جديد أن السعة صفة هندسية.</p>
+
+  <div class="section-title"><span class="ico">🎛️</span> ثلاثة عوامل هندسية</div>
+  <div class="card">
+    <ul style="padding-inline-start:20px;display:flex;flex-direction:column;gap:8px">
+      <li><b>المساحة السطحية المتقابلة A:</b> تتناسب معها السعة طردياً <span class="formula-inline">(C ∝ A)</span> — كبّر المساحة، تزداد السعة.</li>
+      <li><b>البعد بين الصفيحتين d:</b> تتناسب معه السعة عكسياً <span class="formula-inline">(C ∝ 1/d)</span> — قرّب الصفيحتين، تزداد السعة.</li>
+      <li><b>نوع الوسط العازل k:</b> يُضاعف السعة k مرة <span class="formula-inline">(C = kε₀A/d)</span> — العازل يُضعف المجال فيسمح بتخزين شحنة أكبر عند الجهد نفسه (درسناه في الدرس 3).</li>
+    </ul>
+  </div>
+
+  <div class="notebox">
+    <b>افهمها ولا تحفظها:</b> عُد إلى «التانكي». المساحة A مثل مساحة قاعدة الخزان (أوسع = يسع أكثر)، والبعد d مثل… كلما قرّبت الصفيحتين اشتدّ جذب الشحنات المتعاكسة عبر الفجوة فثبتت شحنة أكبر عند الجهد نفسه. لهذا المتسعات العملية تجعل d صغيراً جداً وA كبيرة جداً (لفّ الصفائح).
+  </div>
+
+  <!-- ======== المحاكاة: المتسعة المستوية ======== -->
+  <div class="sim">
+    <h3>🔋 مختبر المتسعة المستوية</h3>
+    <p class="sim-sub">غيّر مساحة اللوحين وتباعدهما ونوع العازل وجهد البطارية، وراقب أثر كل عامل على السعة والمجال والطاقة مباشرة.</p>
+    <canvas id="capSim" width="700" height="240"></canvas>
+    <div class="controls">
+      <div class="slider-group">المساحة A (سم²): <b id="areaVal">١٠٠</b>
+        <input type="range" id="areaR" min="10" max="400" step="10" value="100"></div>
+      <div class="slider-group">التباعد d (ملم): <b id="gapVal">٥</b>
+        <input type="range" id="gapR" min="1" max="20" step="1" value="5"></div>
+      <div class="slider-group">ثابت العزل κ: <b id="kVal">١</b>
+        <input type="range" id="kR" min="1" max="10" step="0.5" value="1"></div>
+      <div class="slider-group">الجهد V (فولط): <b id="voltVal">٢٠</b>
+        <input type="range" id="voltR" min="1" max="100" step="1" value="20"></div>
+    </div>
+    <div class="readout" id="capReadout" style="margin-top:14px"></div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> يُحدَّد مقدار أقصى فرق جهد كهربائي يمكن أن تعمل عنده المتسعة. <span class="wz">وزاري</span></summary>
+    <div class="ans">لأن استمرار زيادة فرق الجهد يزيد المجال الكهربائي بين الصفيحتين حتى يحصل عنده <b>الانهيار الكهربائي للعازل</b> نتيجة عبور شرارة كهربائية خلاله، فتتفرّغ المتسعة من كل شحنتها — وهذا يعني تلفها. (من أكثر تعاليل الفصل تكراراً بالوزاري!)</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">متسعة ذات صفيحتين متوازيتين، البعد بينهما 0.5cm وكل صفيحة مربعة طول ضلعها 10cm ويفصل بينهما الفراغ (ε₀=8.85×10⁻¹²). احسب: ١) سعتها. ٢) الشحنة المختزنة بعد تسليط فرق جهد 10V.</div>
+    <div class="givens">المعطيات: d = 0.5cm = 5×10⁻³ m — L = 0.1m — ΔV = 10V — k=1 (فراغ)</div>
+    <div class="step"><b>الخطوة ١:</b> المساحة المتقابلة:
+      <div class="math">A = L² = (0.1)² = 1×10⁻² m²</div></div>
+    <div class="step"><b>الخطوة ٢:</b> السعة:
+      <div class="math">C = ε₀A/d = 8.85×10⁻¹² × (10⁻²/5×10⁻³) = 17.7×10⁻¹² F = 17.7 pF</div></div>
+    <div class="step"><b>الخطوة ٣:</b> الشحنة:
+      <div class="math">Q = C×ΔV = 17.7×10⁻¹² × 10 = 177×10⁻¹² C</div>
+      💡 لا يمكن حساب الشحنة قبل معرفة السعة — رتّب خطواتك بحسب اعتماد كل مقدار على ما قبله.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz4"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson3.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: طرائق ربط المتسعات ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة المتسعة المستوية ---------- */
+(function () {
+  var cv = document.getElementById("capSim"), ctx = cv.getContext("2d");
+  var EPS0 = 8.854e-12;
+  var areaR = document.getElementById("areaR"), gapR = document.getElementById("gapR"),
+      kR = document.getElementById("kR"), voltR = document.getElementById("voltR");
+  var areaVal = document.getElementById("areaVal"), gapVal = document.getElementById("gapVal"),
+      kVal = document.getElementById("kVal"), voltVal = document.getElementById("voltVal");
+  var readout = document.getElementById("capReadout");
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmtCap(F) {
+    if (F >= 1e-9) return (F * 1e9).toFixed(2) + " nF";
+    return (F * 1e12).toFixed(1) + " pF";
+  }
+
+  function draw() {
+    var A = +areaR.value, d = +gapR.value, k = +kR.value, V = +voltR.value;
+    areaVal.textContent = arNum(A); gapVal.textContent = arNum(d);
+    kVal.textContent = arNum(k); voltVal.textContent = arNum(V);
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    var cx = 350, cy = 120;
+    var plateW = 40 + Math.sqrt(A) * 9;
+    var gapPx = 20 + d * 6;
+    var yTop = cy - gapPx / 2, yBot = cy + gapPx / 2;
+
+    if (k > 1) {
+      ctx.fillStyle = "rgba(67,56,202," + Math.min(0.35, 0.08 + k * 0.02) + ")";
+      ctx.fillRect(cx - plateW / 2, yTop, plateW, gapPx);
+    }
+
+    var nLines = Math.max(3, Math.min(11, Math.round(3 + V / 12)));
+    ctx.strokeStyle = "#4338ca"; ctx.fillStyle = "#4338ca"; ctx.lineWidth = 1.5;
+    for (var i = 0; i < nLines; i++) {
+      var x = cx - plateW / 2 + (plateW / (nLines - 1 || 1)) * i;
+      ctx.beginPath(); ctx.moveTo(x, yTop + 4); ctx.lineTo(x, yBot - 4); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x, yBot - 4); ctx.lineTo(x - 4, yBot - 12); ctx.lineTo(x + 4, yBot - 12); ctx.fill();
+    }
+
+    ctx.fillStyle = "#dc2626";
+    ctx.fillRect(cx - plateW / 2, yTop - 6, plateW, 6);
+    ctx.fillStyle = "#2563eb";
+    ctx.fillRect(cx - plateW / 2, yBot, plateW, 6);
+
+    var nCharges = Math.max(4, Math.min(20, Math.round(4 + plateW / 18)));
+    ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.fillStyle = "#dc2626";
+    for (var j = 0; j < nCharges; j++) ctx.fillText("+", cx - plateW / 2 + (plateW / (nCharges - 1 || 1)) * j, yTop - 10);
+    ctx.fillStyle = "#2563eb";
+    for (var j2 = 0; j2 < nCharges; j2++) ctx.fillText("−", cx - plateW / 2 + (plateW / (nCharges - 1 || 1)) * j2, yBot + 20);
+
+    ctx.strokeStyle = "#b9b6d9"; ctx.setLineDash([4, 4]);
+    ctx.beginPath(); ctx.moveTo(cx + plateW / 2 + 20, yTop); ctx.lineTo(cx + plateW / 2 + 20, yBot); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = "#5c6178"; ctx.font = "12px Cairo"; ctx.textAlign = "right";
+    ctx.fillText("d = " + d + " mm", cx + plateW / 2 + 60, cy + 4);
+
+    var A_m2 = A / 10000, d_m = d / 1000;
+    var C = (EPS0 * k * A_m2) / d_m;
+    var Q = C * V, E = V / d_m, U = 0.5 * C * V * V;
+    readout.innerHTML = "C = ε₀κA/d = " + fmtCap(C) + " — Q = CV = " + (Q * 1e9).toFixed(1) +
+      " nC — E = V/d = " + (E / 1000).toFixed(1) + " kV/m — الطاقة U = ½CV² = " + (U * 1e9).toFixed(1) + " nJ";
+  }
+  [areaR, gapR, kR, voltR].forEach(function (r) { r.addEventListener("input", draw); });
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz4", [
+  { q: "أيّ العلاقات صحيحة لسعة المتسعة ذات الصفيحتين المتوازيتين؟",
+    opts: ["C = kε₀A/d", "C = kε₀d/A", "C = ε₀Ad", "C = A/(kε₀d)"], a: 0,
+    why: "C = kε₀A/d — طردية مع المساحة A وثابت العزل k، عكسية مع البعد d." },
+  { q: "متسعة سعتها C قُرّبت صفيحتاها حتى صار البعد بينهما ⅓ ما كان. سعتها الجديدة تساوي:",
+    opts: ["C/9", "C/3", "3C", "9C"], a: 2,
+    why: "C تتناسب عكسياً مع البعد d؛ فإذا صار d ← d/3 تصبح السعة 3C." },
+  { q: "إذا ضاعفنا المساحة المتقابلة لصفيحتي متسعة وأبقينا كل شيء آخر ثابتاً، فإن السعة:",
+    opts: ["تتضاعف", "تصبح نصفاً", "لا تتغيّر", "تصبح ربعاً"], a: 0,
+    why: "C ∝ A؛ مضاعفة المساحة تضاعف السعة." },
+  { q: "علّل: يُحدَّد أقصى فرق جهد تعمل عنده المتسعة.",
+    opts: ["لأن السعة تتغيّر مع الجهد", "لتجنّب الانهيار الكهربائي للعازل وتفريغ المتسعة من شحنتها", "لأن البطارية تتلف", "لتصغير حجمها"], a: 1,
+    why: "زيادة الجهد تزيد المجال حتى يخترق شرارةٌ العازلَ فتتفرّغ المتسعة وتتلف." },
+  { q: "أيّ العوامل التالية لا يؤثّر في سعة متسعة معيّنة؟",
+    opts: ["المساحة A", "البعد d", "نوع العازل k", "فرق الجهد المسلَّط ΔV"], a: 3,
+    why: "السعة صفة هندسية تعتمد على A و d و k فقط؛ ΔV لا يظهر في القانون ولا يغيّر السعة." }
+], { onDone: function (stars) { Phy.setLesson("g6c1", "4", { stars: stars }); } });
+</script>
+</body>
+</html>

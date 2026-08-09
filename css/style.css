@@ -240,6 +240,45 @@ body::after {
 .chcard[data-ch="9"] { --cc: #02a4c5; --cc-soft: #e3f4f7; }
 .chcard.cc-coral { --cc: var(--coral); --cc-soft: #ffece9; }
 .chcard.cc-green { --cc: var(--green); --cc-soft: #e3faf1; }
+.chcard.cc-g6 { --cc: #4338ca; --cc-soft: #e5e3fa; }
+
+/* ---------- محوّل المرحلة الدراسية (تبويبات الصف) ---------- */
+.gradetabs {
+  display: flex; gap: 8px;
+  background: var(--card);
+  border-radius: 999px;
+  padding: 7px;
+  box-shadow: var(--shadow);
+  margin-bottom: 8px;
+}
+.gradetab {
+  flex: 1; border: none; cursor: pointer; font-family: inherit;
+  font-weight: 800; font-size: .98rem; color: var(--ink-soft);
+  background: transparent; border-radius: 999px;
+  padding: 12px 14px; min-height: 50px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  transition: color .2s, background .2s, box-shadow .2s;
+}
+.gradetab:hover { color: var(--violet-deep); }
+.gradetab.active {
+  background: linear-gradient(135deg, var(--violet), var(--blue));
+  color: #fff; box-shadow: 0 6px 16px rgba(108, 92, 231, .35);
+}
+.gradetab[data-grade="g6"].active {
+  background: linear-gradient(135deg, #4338ca, #6366f1);
+  box-shadow: 0 6px 16px rgba(67, 56, 202, .35);
+}
+.gradetab .tab-badge {
+  font-size: .66rem; font-weight: 800;
+  background: var(--yellow); color: var(--ink);
+  padding: 1px 9px; border-radius: 999px;
+}
+.gradetab.active .tab-badge { background: rgba(255,255,255,.28); color: #fff; }
+.gradepanel[hidden] { display: none; }
+.g6-note {
+  color: var(--ink-soft); font-size: .9rem; font-weight: 600;
+  margin-top: 16px; text-align: center;
+}
 
 /* ---------- Q&A accordion (علل style) ---------- */
 .qa {
@@ -688,6 +727,23 @@ footer.site::before {
 .theme-ch9 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(3, 105, 161, 0.30); }
 .theme-ch9 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(2, 132, 199, .35); }
 .theme-ch9 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(2, 132, 199, .45); }
+
+/* السادس الإعدادي (تجريبي) — نيلي/ذهبي، هوية مختلفة عن مراحل الثالث متوسط */
+.theme-g6c1 {
+  --violet: #4338ca;
+  --violet-deep: #3730a3;
+  --blue: #ca8a04;
+  --shadow: 0 10px 30px rgba(67, 56, 202, 0.10);
+  --shadow-lift: 0 16px 40px rgba(67, 56, 202, 0.18);
+}
+.theme-g6c1::before { background: radial-gradient(circle, #4338ca, transparent 70%); }
+.theme-g6c1::after { background: radial-gradient(circle, #ca8a04, transparent 70%); }
+.theme-g6c1 .hero::before { content: "🔷"; }
+.theme-g6c1 .path::before { border-inline-start-color: #dfdcf9; }
+.theme-g6c1 .node:not(.done):not(.exam) .dot { border-color: #dfdcf9; }
+.theme-g6c1 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(67, 56, 202, 0.30); }
+.theme-g6c1 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(67, 56, 202, .35); }
+.theme-g6c1 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(67, 56, 202, .45); }
 
 /* ====== مكوّنات الفصل الثامن (مصادر الطاقة) ====== */
 /* لوحة صور الطاقة */

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 7: دائرة RC — الشحن والتفريغ — السادس الإعدادي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c1">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الأول</a> / الدرس 7</span>
+  </div>
+
+  <div class="hero">
+    <h1>⚡ الدرس 7: دائرة RC — الشحن والتفريغ</h1>
+    <p>حتى الآن درسنا المتسعة ساكنة. الآن نضعها في دائرة حقيقية مع مقاومة وبطارية — كيف تُشحن مع الزمن؟ وكيف تُفرَّغ؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔌</span>
+    <span>لماذا يومض ضوء بعض الأجهزة ببطء بعد فصل الكهرباء بدل أن ينطفئ فوراً؟ ولماذا تُبقي إشارات المرور توقيتاً دقيقاً؟ خلف الكثير من هذه «المؤقتات» تقف <b>دائرة RC</b>: متسعة تُشحن وتُفرَّغ عبر مقاومة بمنحنى زمني يمكن التحكّم به بدقة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔌</span> دائرة RC: كيف تُشحن المتسعة؟</div>
+  <div class="card">
+    <p>دائرة تيار مستمر تحتوي متسعة فضلاً عن بطارية ومقاومة تسمى <b>دائرة RC</b>، وتيارها متغيّر مع الزمن — لا ثابتاً! لحظة غلق المفتاح تكون المتسعة فارغة (جهدها صفر) فيتحمّل كل جهد البطارية على المقاومة:</p>
+    <div class="formula-inline" style="display:block;text-align:center;margin:10px 0;font-size:1.15rem">I_max = ΔV_battery / R (أعظم قيمة لحظة الغلق)</div>
+    <p>ثم يتناقص التيار تدريجياً حتى الصفر عند اكتمال الشحن، حيث يتساوى جهد المتسعة مع جهد البطارية <span class="formula-inline">(ΔV_C = ΔV_battery)</span> ولا يبقى جهد على المقاومة — لذا تُعدّ <b>المتسعة المشحونة في دائرة التيار المستمر مفتاحاً مفتوحاً</b>.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">⏱️</span> الزمن الثابت τ = RC</div>
+  <div class="card">
+    <p>سرعة الشحن والتفريغ يحكمها <b>الزمن الثابت</b> <span class="formula-inline">τ = R×C</span> (بالثواني). بعد زمن τ واحد يبلغ الشحن نحو <b>63%</b> من أقصاه، وعند التفريغ يهبط إلى نحو <b>37%</b> من قيمته الأصلية. كلّما زادت R أو C، بطُؤَت العملية — وهذا ما يجعل دائرة RC مؤقّتاً يمكن ضبطه.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🔻</span> وكيف نفرّغها؟</div>
+  <div class="card">
+    <p>نصل صفيحتي المتسعة المشحونة ببعضهما بسلك موصل — <b>من دون بطارية</b> — فتتعادل شحنتاهما. ينساب تيار تفريغ لحظي معاكس لاتجاه تيار الشحن، ويتلاشى بسرعة عند زوال فرق الجهد بين الصفيحتين.</p>
+  </div>
+
+  <div class="defbox">
+    <b class="term">انتبه! فخّا سؤال الرسم الأشهر بالوزاري:</b> دائرة التفريغ <b>بلا بطارية</b> — مصدر الطاقة هو المتسعة المشحونة نفسها، ووجود بطارية في الرسم يُصفّر درجة السؤال. ودائماً سمِّ كل عنصر (متسعة، مفتاح، مصباح أو مقاومة، بطارية في الشحن فقط) — رسم صامت درجته ناقصة.
+  </div>
+
+  <!-- ======== المحاكاة: دائرة RC ======== -->
+  <div class="sim">
+    <h3>⚡ مختبر دائرة RC: الشحن والتفريغ</h3>
+    <p class="sim-sub">اختر الشحن أو التفريغ، وغيّر المقاومة R والسعة C، وشاهد المنحنى الأسّي، ولاحظ موقع الزمن الثابت τ=RC.</p>
+    <canvas id="rcSim" width="680" height="230"></canvas>
+    <div class="controls">
+      <button class="btn" id="chargeBtn">🔌 شحن</button>
+      <button class="btn ghost" id="dischargeBtn">🔻 تفريغ</button>
+    </div>
+    <div class="controls" style="margin-top:10px">
+      <div class="slider-group">المقاومة R (كيلو أوم): <b id="rVal">١٠</b>
+        <input type="range" id="rR" min="1" max="100" step="1" value="10"></div>
+      <div class="slider-group">السعة C (مايكروفاراد): <b id="cVal">١٠</b>
+        <input type="range" id="cR" min="1" max="100" step="1" value="10"></div>
+    </div>
+    <div class="readout" id="rcReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">دائرة شحن تحتوي بطارية ΔV=12V ومقاومة R=20Ω ومتسعة C=100μF ومفتاحاً. احسب: ١) أعظم تيار شحن لحظة غلق المفتاح. ٢) فرق الجهد بين صفيحتي المتسعة بعد اكتمال الشحن. ٣) الشحنة المختزنة.</div>
+    <div class="givens">المعطيات: ΔV=12V — R=20Ω — C=100μF</div>
+    <div class="step"><b>الخطوة ١:</b> أعظم تيار شحن (المتسعة فارغة، كل الجهد على R):
+      <div class="math">I = ΔV/R = 12/20 = 0.6 A</div></div>
+    <div class="step"><b>الخطوة ٢:</b> بعد اكتمال الشحن التيار صفر، فلا هبوط جهد على R:
+      <div class="math">ΔV_C = ΔV_battery = 12 V</div></div>
+    <div class="step"><b>الخطوة ٣:</b> الشحنة المختزنة:
+      <div class="math">Q = C×ΔV = 100×10⁻⁶ × 12 = 1200 μC</div>
+      💡 قوانين الشحنة والطاقة هي نفسها قوانين الدروس السابقة — المتسعة نفسها، فقط أضفنا زمناً ومقاومة.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz7"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson6.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson8.html">الدرس التالي: أنواع المتسعات والتطبيقات ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة دائرة RC ---------- */
+(function () {
+  var cv = document.getElementById("rcSim"), ctx = cv.getContext("2d");
+  var rR = document.getElementById("rR"), cR = document.getElementById("cR");
+  var rVal = document.getElementById("rVal"), cVal = document.getElementById("cVal");
+  var chargeBtn = document.getElementById("chargeBtn"), dischargeBtn = document.getElementById("dischargeBtn");
+  var readout = document.getElementById("rcReadout");
+  var mode = "charge", startTime = performance.now();
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function resetClock() { startTime = performance.now(); }
+  function updateModeUI() {
+    chargeBtn.className = mode === "charge" ? "btn" : "btn ghost";
+    dischargeBtn.className = mode === "discharge" ? "btn" : "btn ghost";
+  }
+  chargeBtn.addEventListener("click", function () { mode = "charge"; resetClock(); updateModeUI(); });
+  dischargeBtn.addEventListener("click", function () { mode = "discharge"; resetClock(); updateModeUI(); });
+  rR.addEventListener("input", function () { rVal.textContent = arNum(+rR.value); resetClock(); });
+  cR.addEventListener("input", function () { cVal.textContent = arNum(+cR.value); resetClock(); });
+  updateModeUI();
+
+  function draw() {
+    var R = +rR.value, C = +cR.value;
+    var tauMs = R * C, totalMs = tauMs * 5;
+    var elapsed = (performance.now() - startTime) % (totalMs + 400);
+    var t = Math.min(elapsed, totalMs);
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    var ox = 60, oy = 195, w = 560, h = 155;
+    ctx.strokeStyle = "#e7e0f2"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(ox + w, oy); ctx.moveTo(ox, oy); ctx.lineTo(ox, oy - h); ctx.stroke();
+    ctx.fillStyle = "#756b8a"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("الزمن t", ox + w - 20, oy + 18);
+    ctx.save(); ctx.translate(ox - 35, oy - h / 2); ctx.rotate(-Math.PI / 2); ctx.fillText("V/V₀", 0, 0); ctx.restore();
+
+    ctx.strokeStyle = "#e7e0f2"; ctx.beginPath();
+    for (var px = 0; px <= w; px++) {
+      var tt = (px / w) * totalMs;
+      var v = mode === "charge" ? 1 - Math.exp(-tt / tauMs) : Math.exp(-tt / tauMs);
+      var py = oy - v * h;
+      if (px === 0) ctx.moveTo(ox + px, py); else ctx.lineTo(ox + px, py);
+    }
+    ctx.stroke();
+
+    ctx.strokeStyle = "#4338ca"; ctx.lineWidth = 2.5; ctx.beginPath();
+    var steps = Math.max(1, Math.round((t / totalMs) * w));
+    for (var px2 = 0; px2 <= steps; px2++) {
+      var tt2 = (px2 / w) * totalMs;
+      var v2 = mode === "charge" ? 1 - Math.exp(-tt2 / tauMs) : Math.exp(-tt2 / tauMs);
+      var py2 = oy - v2 * h;
+      if (px2 === 0) ctx.moveTo(ox + px2, py2); else ctx.lineTo(ox + px2, py2);
+    }
+    ctx.stroke();
+
+    var vNow = mode === "charge" ? 1 - Math.exp(-t / tauMs) : Math.exp(-t / tauMs);
+    var cursorX = ox + (t / totalMs) * w, cursorY = oy - vNow * h;
+    ctx.fillStyle = "#dc2626"; ctx.beginPath(); ctx.arc(cursorX, cursorY, 5, 0, 7); ctx.fill();
+
+    var tauX = ox + Math.min(1, tauMs / totalMs) * w;
+    ctx.strokeStyle = "#ca8a04"; ctx.setLineDash([4, 4]);
+    ctx.beginPath(); ctx.moveTo(tauX, oy); ctx.lineTo(tauX, oy - h); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = "#92660a"; ctx.font = "bold 11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("τ", tauX, oy + 15);
+
+    readout.innerHTML = "τ = RC = " + tauMs.toFixed(1) + " ms — " +
+      (mode === "charge" ? "الشحن يبلغ ٦٣٪ من أقصاه بعد زمن τ واحد" : "التفريغ يهبط إلى ٣٧٪ من قيمته الأصلية بعد زمن τ واحد");
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz7", [
+  { q: "دائرة شحن: بطارية 24V ومقاومة 60Ω ومتسعة. ما مقدار أعظم تيار شحن لحظة غلق المفتاح؟",
+    opts: ["0.4 A", "1440 A", "2.5 A", "84 A"], a: 0,
+    why: "لحظة الغلق المتسعة فارغة فكل الجهد على المقاومة: I = ΔV/R = 24/60 = 0.4 A." },
+  { q: "بعد اكتمال شحن متسعة في دائرة RC، ما مقدار التيار في الدائرة؟",
+    opts: ["أعظم قيمة ΔV/R", "صفر", "نصف القيمة الأعظم", "يتذبذب باستمرار"], a: 1,
+    why: "عند اكتمال الشحن يتساوى جهد المتسعة مع جهد البطارية فلا يبقى جهد على المقاومة، فيكون التيار صفراً — المتسعة كمفتاح مفتوح." },
+  { q: "دائرة RC فيها R=2kΩ وC=50μF. ما مقدار الزمن الثابت τ؟",
+    opts: ["0.1 s", "100 s", "0.04 s", "40 s"], a: 0,
+    why: "τ = RC = 2000 × 50×10⁻⁶ = 0.1 s." },
+  { q: "عند رسم دائرة تفريغ المتسعة، ما الخطأ الأكثر شيوعاً الذي يُصفّر درجة السؤال؟",
+    opts: ["نسيان رسم المفتاح", "رسم بطارية في دائرة التفريغ", "نسيان تسمية المقاومة", "رسم المصباح بدل المقاومة"], a: 1,
+    why: "دائرة التفريغ لا تحتوي بطارية إطلاقاً — مصدر الطاقة هو المتسعة المشحونة نفسها." },
+  { q: "بعد زمن ثابت واحد τ من بدء الشحن، يبلغ جهد المتسعة نحو:",
+    opts: ["100% من أقصاه", "63% من أقصاه", "37% من أقصاه", "صفر"], a: 1,
+    why: "خاصية المنحنى الأسّي: بعد τ واحد يصل الشحن إلى نحو 63% من قيمته النهائية." }
+], { onDone: function (stars) { Phy.setLesson("g6c1", "7", { stars: stars }); } });
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفصل الأول: المتسعات — السادس الإعدادي (تجريبي)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c1">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="../../index.html">الرئيسية</a> / تجريبي: السادس الإعدادي</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔷 الفصل الأول: المتسعات</h1>
+    <p>فلاش الكاميرا يومض بضوء يخطف البصر خلال جزء من الألف من الثانية — والبطارية وحدها لا تقدر على هذه السرعة أبداً. من أين تأتي هذه الدفقة؟ في هذا الفصل تكتشف «الخزانات الكهربائية» التي تُخزّن الشحنة والطاقة.</p>
+    <span class="chip" id="chpct">0% مكتمل</span>
+  </div>
+
+  <div class="pbar" style="margin-bottom:24px"><div id="pb" style="width:0%"></div></div>
+
+  <div class="path" id="path">
+    <a class="node" href="lesson1.html" data-ls="1">
+      <span class="dot">🌐</span>
+      <span class="info"><b>الدرس 1: الموصل الكروي المنفرد المعزول</b>
+        <span class="sub">لماذا يفشل الموصل المنفرد في خزن الشحنة؟ V=kQ/r والانهيار الكهربائي للهواء + مختبر الكرة</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson2.html" data-ls="2">
+      <span class="dot">🔋</span>
+      <span class="info"><b>الدرس 2: المتسعة والصفيحتان المتوازيتان</b>
+        <span class="sub">تعريف المتسعة والسعة C=Q/ΔV — لماذا هي نسبة ثابتة؟ + مختبر مفهوم السعة</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson3.html" data-ls="3">
+      <span class="dot">🧊</span>
+      <span class="info"><b>الدرس 3: العازل الكهربائي</b>
+        <span class="sub">الاستقطاب وثابت العزل k، وحالتا الموصولة والمفصولة عن البطارية + مختبر العازل</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson4.html" data-ls="4">
+      <span class="dot">📐</span>
+      <span class="info"><b>الدرس 4: العوامل المؤثرة في سعة المتسعة</b>
+        <span class="sub">القانون الجامع C=kε₀A/d والعوامل الهندسية الثلاثة + مختبر المتسعة المستوية</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson5.html" data-ls="5">
+      <span class="dot">🔗</span>
+      <span class="info"><b>الدرس 5: طرائق ربط المتسعات</b>
+        <span class="sub">التوازي (نفس الجهد) والتوالي (نفس الشحنة) والسعة المكافئة + مختبر الربط</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson6.html" data-ls="6">
+      <span class="dot">🔺</span>
+      <span class="info"><b>الدرس 6: الطاقة المختزنة والقدرة</b>
+        <span class="sub">PE=½CV² وصيغها الثلاث، والقدرة P=PE/t + مختبر الطاقة والقدرة</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson7.html" data-ls="7">
+      <span class="dot">⚡</span>
+      <span class="info"><b>الدرس 7: دائرة RC — الشحن والتفريغ</b>
+        <span class="sub">التيار المتغيّر والزمن الثابت τ=RC وفخّ رسم دائرة التفريغ + مختبر RC</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson8.html" data-ls="8">
+      <span class="dot">🗂️</span>
+      <span class="info"><b>الدرس 8: أنواع المتسعات والتطبيقات العملية</b>
+        <span class="sub">الأنواع الثلاثة وتطبيقات من فلاش الكاميرا إلى شاشة موبايلك + معرض تفاعلي</span>
+        <span class="stars"></span></span>
+    </a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع · قسم تجريبي قيد التطوير</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  // فصل تجريبي بلا امتحان ختامي بعد — نسبة مستقلة عن Phy.chapterPercent (المصمَّمة لتحسب امتحاناً دائماً)
+  function g6Percent() {
+    var d = Phy.load(), ch = d.g6c1 || {}, done = 0;
+    if (ch.lessons) for (var k in ch.lessons) if (ch.lessons[k].done) done++;
+    return Math.round(100 * done / 8);
+  }
+  var pct = g6Percent();
+  document.getElementById("pb").style.width = pct + "%";
+  document.getElementById("chpct").textContent = pct + "% مكتمل";
+  document.querySelectorAll(".node").forEach(function (n) {
+    var ls = n.dataset.ls, info = Phy.getLesson("g6c1", ls);
+    if (info && (info.done || info.stars !== undefined)) {
+      n.classList.add("done");
+      var st = n.querySelector(".stars");
+      if (info.stars !== undefined && info.stars !== null)
+        st.textContent = Phy.starsStr(info.stars);
+      else st.textContent = "✓ مكتمل";
+    }
+  });
+})();
+</script>
+</body>
+</html>

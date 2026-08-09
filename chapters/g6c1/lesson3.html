@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: العازل الكهربائي — السادس الإعدادي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c1">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الأول</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>🧊 الدرس 3: العازل الكهربائي</h1>
+    <p>ماذا يحدث حين نُدخل مادة عازلة بين صفيحتي المتسعة؟ ولماذا يزيد ذلك من سعتها وفائدتها؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🧊</span>
+    <span>لو أخبرتك أن مجرّد وضع قطعة من البلاستيك أو الزجاج بين صفيحتي متسعة يمكن أن <b>يضاعف</b> قدرتها على خزن الشحنة عدة مرات — دون تغيير حجمها ولا جهد البطارية — لبدا الأمر سحراً. لكنه فيزياء بحتة اسمها <b>الاستقطاب</b>. تعال نفهم كيف.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔬</span> ما العازل الكهربائي؟</div>
+  <div class="defbox">
+    <b class="term">العازل الكهربائي (Dielectric):</b> مادة لا تحتوي على شحنات حرة تتحرك خلالها، تُوضع بين صفيحتي المتسعة. عند تعريضها للمجال الكهربائي <b>تستقطب</b> جزيئاتها: يظهر طرف موجب وآخر سالب لكل جزيء، فتنتظم الجزيئات بحيث تظهر شحنات سطحية على وجهي العازل معاكسة لشحنات الصفيحتين.
+  </div>
+  <p>لكل مادة عازلة رقم يميّزها اسمه <b>ثابت العزل الكهربائي k</b> (أو κ): نسبة سعة المتسعة والعازل بينها إلى سعتها والفراغ بينها. للفراغ k=1، وللهواء ≈1، وللورق نحو 3.7، وللماء نحو 80. وكلّما زاد k زادت السعة.</p>
+
+  <div class="section-title"><span class="ico">🧲</span> كيف يزيد العازل السعة؟</div>
+  <div class="card">
+    <p>الشحنات السطحية الناشئة على وجهي العازل تولّد مجالاً كهربائياً <b>معاكساً</b> للمجال الأصلي بين الصفيحتين، فيقلّ المجال المحصّل إلى <span class="formula-inline">E_k = E / k</span>. وبما أن المتسعة الموصولة بالبطارية جهدها ثابت، فإن نقصان «مقاومة» المجال يسمح للبطارية بضخّ شحنة إضافية على الصفيحتين، فتزداد السعة:</p>
+  </div>
+  <div class="lawbox">
+    أثر العازل في السعة
+    <div class="formula">C_k = k × C₀</div>
+  </div>
+  <p>حيث <span class="formula-inline">C₀</span> سعتها والفراغ (أو الهواء) بينها. أي أن العازل يُضاعف السعة <b>k</b> مرة.</p>
+
+  <div class="notebox">
+    <b>الحالتان اللتان يخلط بينهما الطلبة:</b><br>
+    <b>• موصولة بالبطارية:</b> فرق الجهد ΔV ثابت. إدخال العازل يزيد C، ومن Q=CΔV تزداد الشحنة Q (البطارية تضخّ شحنة إضافية).<br>
+    <b>• مفصولة عن البطارية:</b> الشحنة Q ثابتة (لا مصدر يغيّرها). إدخال العازل يزيد C، ومن ΔV=Q/C يقلّ فرق الجهد، ويقلّ المجال إلى E/k.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> إدخال عازل كهربائي بين صفيحتي المتسعة بدلاً من الهواء يزيد من فائدتها العملية. <span class="wz">وزاري</span></summary>
+    <div class="ans">لسببين: ١) يزيد سعة المتسعة بمقدار ثابت العزل (C_k=kC₀). ٢) يزيد قدرة تحمّل المتسعة لفروق الجهد العالية (يرفع جهد الانهيار)، لأن قوة العزل الكهربائي للمادة أكبر من قوة عزل الهواء، فضلاً عن إمكانية تقريب الصفيحتين دون تلامس.</div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="tag">سؤال</span> متسعة مشحونة ومفصولة عن البطارية، أُدخل بينها عازل. ماذا يحصل للمجال الكهربائي بين صفيحتيها؟ <span class="wz">وزاري</span></summary>
+    <div class="ans">يقلّ. العازل يستقطب فتظهر شحنات سطحية على وجهيه تولّد مجالاً معاكساً للمجال المؤثر، فيصبح المجال المحصّل E_k = E/k (بينما الشحنة Q تبقى ثابتة لأن المتسعة مفصولة).</div>
+  </details>
+
+  <!-- ======== المحاكاة: العازل الكهربائي ======== -->
+  <div class="sim">
+    <h3>🧊 مختبر العازل الكهربائي</h3>
+    <p class="sim-sub">بدّل بين بقاء المتسعة موصولة بالبطارية أو فصلها عنها، ثم غيّر ثابت العزل κ، وراقب أيّ كمية تبقى ثابتة وأيّها تتغيّر (الشحنة، الجهد، السعة).</p>
+    <canvas id="dielSim" width="700" height="240"></canvas>
+    <div class="controls">
+      <button class="btn" id="connBtn">🔌 موصولة بالبطارية</button>
+      <button class="btn ghost" id="discBtn">✂️ مفصولة عنها</button>
+    </div>
+    <div class="controls" style="margin-top:10px">
+      <div class="slider-group">ثابت العزل κ: <b id="kVal">١</b>
+        <input type="range" id="kR" min="1" max="8" step="0.5" value="1"></div>
+    </div>
+    <div class="readout" id="dielReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">متسعة سعتها والهواء بينها 4μF، مُلئ الحيّز بين صفيحتيها بمادة عازلة ثابت عزلها k=5. ١) ما سعتها الجديدة؟ ٢) إذا بقيت موصولة ببطارية 20V، كم تصبح شحنتها المختزنة؟</div>
+    <div class="givens">المعطيات: C₀ = 4μF — k = 5 — ΔV = 20V (موصولة ⟹ الجهد ثابت)</div>
+    <div class="step"><b>الخطوة ١:</b> السعة الجديدة:
+      <div class="math">C_k = k×C₀ = 5×4 = 20 μF</div></div>
+    <div class="step"><b>الخطوة ٢:</b> موصولة بالبطارية فالجهد ثابت 20V، والشحنة:
+      <div class="math">Q = C_k×ΔV = 20×20 = 400 μC</div>
+      💡 لو كانت <b>مفصولة</b> لبقيت Q ثابتة ونقص الجهد إلى ΔV/k بدلاً من ذلك — انتبه للحالة!</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz3"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson2.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson4.html">الدرس التالي: العوامل المؤثرة في السعة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة العازل الكهربائي ---------- */
+(function () {
+  var cv = document.getElementById("dielSim"), ctx = cv.getContext("2d");
+  var EPS0 = 8.854e-12, AREA = 0.01, GAP = 0.002, VBAT = 20;
+  var C0 = EPS0 * AREA / GAP;
+  var kR = document.getElementById("kR"), kVal = document.getElementById("kVal");
+  var connBtn = document.getElementById("connBtn"), discBtn = document.getElementById("discBtn");
+  var readout = document.getElementById("dielReadout");
+  var mode = "connected", qLocked = C0 * VBAT;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmtCap(F) { return F >= 1e-9 ? (F * 1e9).toFixed(2) + " nF" : (F * 1e12).toFixed(1) + " pF"; }
+  function updateUI() {
+    connBtn.className = mode === "connected" ? "btn" : "btn ghost";
+    discBtn.className = mode === "disconnected" ? "btn" : "btn ghost";
+  }
+  connBtn.addEventListener("click", function () { mode = "connected"; updateUI(); draw(); });
+  discBtn.addEventListener("click", function () {
+    // نثبّت الشحنة الحالية لحظة الفصل
+    var Cnow = EPS0 * (+kR.value) * AREA / GAP;
+    qLocked = Cnow * VBAT; // شحنة اللحظة الراهنة (بالجهد الحالي)
+    mode = "disconnected"; updateUI(); draw();
+  });
+  updateUI();
+
+  function draw() {
+    var kk = +kR.value; kVal.textContent = arNum(kk);
+    var C = EPS0 * kk * AREA / GAP;
+    var V = mode === "connected" ? VBAT : qLocked / C;
+    var Q = mode === "connected" ? C * VBAT : qLocked;
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    var cx = 330, cy = 120, plateW = 220, gapPx = 60;
+    var yTop = cy - gapPx / 2, yBot = cy + gapPx / 2;
+
+    // شريحة العازل
+    ctx.fillStyle = "rgba(67,56,202," + Math.min(0.4, 0.06 + kk * 0.04) + ")";
+    ctx.fillRect(cx - plateW / 2, yTop + 4, plateW, gapPx - 8);
+    ctx.strokeStyle = "#4338ca"; ctx.setLineDash([3, 3]); ctx.lineWidth = 1;
+    ctx.strokeRect(cx - plateW / 2, yTop + 4, plateW, gapPx - 8);
+    ctx.setLineDash([]);
+    ctx.fillStyle = "#312a86"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("κ = " + kk.toFixed(1), cx, cy + 4);
+
+    // خطوط المجال (طولها يتناسب مع V)
+    var arrowLen = 6 + (V / VBAT) * (gapPx / 2 - 10);
+    var nLines = 8;
+    ctx.strokeStyle = "#4338ca"; ctx.fillStyle = "#4338ca"; ctx.lineWidth = 1.5;
+    for (var i = 0; i < nLines; i++) {
+      var x = cx - plateW / 2 + 15 + ((plateW - 30) / (nLines - 1)) * i;
+      var y0 = cy - arrowLen / 2, y1 = cy + arrowLen / 2;
+      ctx.beginPath(); ctx.moveTo(x, y0); ctx.lineTo(x, y1); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x, y1); ctx.lineTo(x - 4, y1 - 8); ctx.lineTo(x + 4, y1 - 8); ctx.fill();
+    }
+
+    // اللوحان + الشحنات
+    ctx.fillStyle = "#dc2626"; ctx.fillRect(cx - plateW / 2, yTop - 6, plateW, 6);
+    ctx.fillStyle = "#2563eb"; ctx.fillRect(cx - plateW / 2, yBot, plateW, 6);
+    var nCharges = Math.max(4, Math.min(30, Math.round(4 + (Q / (C0 * VBAT)) * 14)));
+    ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.fillStyle = "#dc2626";
+    for (var a = 0; a < nCharges; a++) ctx.fillText("+", cx - plateW / 2 + (plateW / (nCharges - 1 || 1)) * a, yTop - 10);
+    ctx.fillStyle = "#2563eb";
+    for (var b = 0; b < nCharges; b++) ctx.fillText("−", cx - plateW / 2 + (plateW / (nCharges - 1 || 1)) * b, yBot + 20);
+
+    // البطارية أو إشارة الفصل
+    if (mode === "connected") {
+      ctx.strokeStyle = "#756b8a"; ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.moveTo(cx - plateW / 2 - 45, yTop - 3); ctx.lineTo(cx - plateW / 2 - 45, yBot + 3); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(cx - plateW / 2 - 45, yTop - 3); ctx.lineTo(cx - plateW / 2, yTop - 3); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(cx - plateW / 2 - 45, yBot + 3); ctx.lineTo(cx - plateW / 2, yBot + 3); ctx.stroke();
+      ctx.fillStyle = "#211a2e"; ctx.font = "bold 16px sans-serif";
+      ctx.fillText("+", cx - plateW / 2 - 45, yTop - 10);
+      ctx.fillText("−", cx - plateW / 2 - 45, yBot + 22);
+    } else {
+      ctx.fillStyle = "#a89cc0"; ctx.font = "12px Cairo"; ctx.textAlign = "center";
+      ctx.fillText("✂️ مفصولة (Q ثابتة)", cx - plateW / 2 - 45, cy + 4);
+    }
+
+    readout.innerHTML = "الوضع: " + (mode === "connected" ? "موصولة بالبطارية" : "مفصولة عن البطارية") +
+      " — C = " + fmtCap(C) + " — Q = " + (Q * 1e9).toFixed(2) + " nC" + (mode === "disconnected" ? " (ثابتة)" : "") +
+      " — V = " + V.toFixed(2) + " V" + (mode === "connected" ? " (ثابت)" : "");
+  }
+  kR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz3", [
+  { q: "متسعة سعتها والهواء بينها 6μF. أُدخل بينها عازل ثابت عزله k=4. ما سعتها الجديدة؟",
+    opts: ["24 μF", "1.5 μF", "10 μF", "6 μF"], a: 0,
+    why: "C_k = k×C₀ = 4×6 = 24 μF — العازل يضاعف السعة k مرة." },
+  { q: "علّل: إدخال عازل بدلاً من الهواء بين صفيحتي المتسعة يزيد من فائدتها العملية.",
+    opts: ["يزيد سعتها ويرفع جهد انهيارها فتتحمّل جهداً أعلى", "يقلّل حجمها فقط", "يجعلها موصلاً", "يمنع شحنها"], a: 0,
+    why: "العازل يضاعف السعة (C_k=kC₀) ويرفع جهد الانهيار لأن قوة عزله أكبر من الهواء." },
+  { q: "متسعة مشحونة ومفصولة عن البطارية أُدخل بين صفيحتيها عازل k=2. ماذا يحصل لفرق الجهد؟",
+    opts: ["يتضاعف", "يقلّ إلى النصف", "يبقى ثابتاً", "يصبح صفراً"], a: 1,
+    why: "مفصولة ⟹ Q ثابتة. العازل يزيد C مرتين، ومن ΔV=Q/C يقلّ الجهد إلى النصف." },
+  { q: "متسعة أُدخل بينها عازل وهي مفصولة عن البطارية. ماذا يحصل للمجال الكهربائي بين صفيحتيها؟",
+    opts: ["يزداد k مرة", "يقلّ إلى E/k", "يبقى ثابتاً", "ينعدم"], a: 1,
+    why: "الشحنات السطحية للعازل تولّد مجالاً معاكساً، فيقلّ المجال المحصّل إلى E_k = E/k." },
+  { q: "ماذا يمثّل ثابت العزل الكهربائي k لمادة ما؟",
+    opts: ["مقاومتها الكهربائية", "نسبة سعة المتسعة بوجود المادة إلى سعتها والفراغ بينها", "كثافتها", "جهد انهيارها"], a: 1,
+    why: "k = C_k / C₀، أي كم مرة تزيد المادة سعة المتسعة مقارنة بالفراغ." }
+], { onDone: function (stars) { Phy.setLesson("g6c1", "3", { stars: stars }); } });
+</script>
+</body>
+</html>

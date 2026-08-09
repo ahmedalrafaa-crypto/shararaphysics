@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: طرائق ربط المتسعات — السادس الإعدادي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c1">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الأول</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔗 الدرس 5: طرائق ربط المتسعات (توازٍ وتوالٍ)</h1>
+    <p>متسعة واحدة لا تكفي دائماً: أحياناً نريد سعة أكبر، وأحياناً جهد تشغيل أعلى. كيف نربط المتسعات لنحقق كلا الهدفين؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔋</span>
+    <span>عندك بطارية 12V ومتسعة مكتوب عليها «أقصى جهد 8V» — إن ربطتها مباشرة انهار عازلها وتلفت (تذكّر الدرس ٤!). وعندك مشروع يحتاج سعة 30μF ولا يتوفّر بالسوق إلا 10μF. الحل: <b>الربط</b> — على <b>التوالي</b> يتوزّع الجهد الكبير فلا تتحمّل الواحدة إلا جزءاً منه، أو على <b>التوازي</b> فتتجمع السعات وكأنها متسعة عملاقة واحدة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔀</span> ربط التوازي: فرق الجهد واحد للجميع</div>
+  <div class="card">
+    <p>يُربط الطرف الأول من كل متسعة بنقطة مشتركة والطرف الثاني بنقطة مشتركة أخرى، ثم تُربط النقطتان بقطبي البطارية. النتيجة: كل متسعة «ترى» الجهد نفسه <span class="formula-inline">ΔV₁=ΔV₂=ΔV</span>، بينما الشحنة الكلية هي مجموع شحنات المتسعات.</p>
+  </div>
+  <div class="lawbox">
+    السعة المكافئة — التوازي
+    <div class="formula">C_eq = C₁ + C₂ + C₃ + ⋯</div>
+  </div>
+  <div class="notebox">
+    <b>افهمها ولا تحفظها:</b> الصفائح المشتركة بسلك واحد تعمل كهربائياً كصفيحة واحدة كبيرة مساحتها مجموع المساحات. وبما أن <span class="formula-inline">C ∝ A</span>، فربط التوازي يكافئ زيادة المساحة السطحية — لذا تكون السعة المكافئة دائماً <b>أكبر من أكبر سعة في المجموعة</b>.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> ازدياد مقدار السعة المكافئة لمجموعة متسعات مربوطة على التوازي. <span class="wz">وزاري</span></summary>
+    <div class="ans">لأن ربط التوازي يكافئ زيادة المساحة السطحية المتقابلة (الصفائح الموصولة بالقطب نفسه تعمل عمل صفيحة واحدة كبيرة)، وبما أن السعة تتناسب طردياً مع المساحة فإن C_eq=C₁+C₂+⋯ تكون أكبر من أكبر سعة في المجموعة.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">➖</span> ربط التوالي: الشحنة واحدة للجميع</div>
+  <div class="card">
+    <p>تُربط المتسعات في سلسلة واحدة: نهاية الأولى ببداية الثانية وهكذا، ولا يتصل بالبطارية إلا طرفا السلسلة. الشحنة نفسها على كل السلسلة <span class="formula-inline">Q₁=Q₂=Q</span>، بينما فرق الجهد الكلي يتوزّع على المتسعات: <span class="formula-inline">ΔV_total = ΔV₁+ΔV₂+⋯</span></p>
+  </div>
+  <div class="lawbox">
+    السعة المكافئة — التوالي
+    <div class="formula">1/C_eq = 1/C₁ + 1/C₂ + ⋯</div>
+  </div>
+  <p style="margin:10px 0"><b>لمتسعتين فقط</b> — صيغة مختصرة سريعة (الضرب على الجمع): <span class="formula-inline">C_eq = C₁×C₂ / (C₁+C₂)</span></p>
+  <div class="notebox">
+    <b>افهمها ولا تحفظها:</b> الصفيحتان الخارجيتان فقط تتصلان بالبطارية، والبعد الفعلي بينهما هو مجموع الأبعاد الداخلية. وبما أن <span class="formula-inline">C ∝ 1/d</span>، فربط التوالي يكافئ زيادة البعد — لذا تكون السعة المكافئة دائماً <b>أصغر من أصغر سعة في المجموعة</b>.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> نقصان السعة المكافئة لمجموعة متسعات مربوطة على التوالي. <span class="wz">وزاري</span></summary>
+    <div class="ans">لأن ربط التوالي يكافئ زيادة البعد بين الصفيحتين الخارجيتين (البعد الفعلي هو مجموع الأبعاد)، وبما أن السعة تتناسب عكسياً مع البعد فإن السعة المكافئة تنقص وتكون أصغر من أصغر سعة في المجموعة.</div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="tag">سؤال</span> ما الفائدة العملية من ربط مجموعة من المتسعات على التوالي؟ <span class="wz">وزاري</span></summary>
+    <div class="ans">تقليل السعة المكافئة ليكون بالإمكان وضع فرق جهد أكبر على طرفي المجموعة، لأن فرق الجهد الكلي يتوزّع بين المتسعات فلا يقع على الواحدة إلا جزء منه — بخلاف متسعة منفردة قد لا تتحمّل هذا الجهد.</div>
+  </details>
+
+  <!-- ======== المحاكاة: التوالي والتوازي ======== -->
+  <div class="sim">
+    <h3>🔗 مختبر طرائق ربط المتسعات</h3>
+    <p class="sim-sub">بدّل بين ربط التوالي والتوازي، وغيّر C₁ وC₂، وراقب كيف تُحسب السعة المكافئة C_eq في كل حالة، وما المشترك بين المتسعات.</p>
+    <canvas id="spSim" width="700" height="230"></canvas>
+    <div class="controls">
+      <button class="btn" id="serBtn">➖ توالي</button>
+      <button class="btn ghost" id="parBtn">🔀 توازي</button>
+    </div>
+    <div class="controls" style="margin-top:10px">
+      <div class="slider-group">C₁ (مايكروفاراد): <b id="c1Val">٨</b>
+        <input type="range" id="c1R" min="1" max="20" step="1" value="8"></div>
+      <div class="slider-group">C₂ (مايكروفاراد): <b id="c2Val">١٢</b>
+        <input type="range" id="c2R" min="1" max="20" step="1" value="12"></div>
+    </div>
+    <div class="readout" id="spReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">⚠️</span> ثلاثة أفخاخ حسابية</div>
+  <div class="defbox">
+    <b>١)</b> قانون جمع المقلوبات هو للتوالي — عكس المقاومات تماماً كما ستدرس لاحقاً، فلا تخلط بينهما.<br>
+    <b>٢)</b> إذا حصلت على <span class="formula-inline">1/C_eq = 1/3</span> فالجواب <span class="formula-inline">C_eq = 3μF</span> وليس 1/3! اختم دائماً بقلب الكسر.<br>
+    <b>٣)</b> في التوالي لا تُجمع الشحنات (كلها واحدة)، وفي التوازي لا تُجمع الجهود (كلها واحدة). اسأل نفسك أولاً: «مَن المشترك في هذا الربط؟»
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> أمثلة محلولة</div>
+
+  <div class="example">
+    <div class="exq">مثال ١ (توازي): أربع متسعات (6μF, 12μF, 8μF, 4μF) مربوطة على التوازي، رُبطت المجموعة ببطارية 12V. احسب: ١) السعة المكافئة. ٢) الشحنة الكلية المختزنة.</div>
+    <div class="givens">المعطيات: توازٍ ⟹ ΔV=12V على كل متسعة</div>
+    <div class="step"><b>الخطوة ١:</b> السعة المكافئة (جمع مباشر):
+      <div class="math">C_eq = 4+8+12+6 = 30 μF</div></div>
+    <div class="step"><b>الخطوة ٢:</b> الشحنة الكلية:
+      <div class="math">Q_total = C_eq × ΔV = 30×12 = 360 μC</div>
+      💡 تحقّق: شحنة كل متسعة Q=CΔV تعطي (48,96,144,72)μC ومجموعها 360μC ✓</div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٢ (توالي): ثلاث متسعات (18μF, 9μF, 6μF) على التوالي، شُحنت بشحنة كلية 300μC. احسب: ١) السعة المكافئة. ٢) الجهد الكلي. ٣) جهد المتسعة (6μF).</div>
+    <div class="givens">المعطيات: توالٍ ⟹ Q₁=Q₂=Q₃=300μC (الشحنة نفسها للجميع)</div>
+    <div class="step"><b>الخطوة ١:</b> السعة المكافئة:
+      <div class="math">1/C_eq = 1/6+1/9+1/18 = (3+2+1)/18 = 1/3 ⟹ C_eq = 3 μF</div></div>
+    <div class="step"><b>الخطوة ٢:</b> الجهد الكلي:
+      <div class="math">ΔV_total = Q/C_eq = 300/3 = 100 V</div></div>
+    <div class="step"><b>الخطوة ٣:</b> جهد المتسعة 6μF:
+      <div class="math">ΔV = Q/C = 300/6 = 50 V</div>
+      💡 أصغر سعة أخذت أكبر جهد — لأن ΔV=Q/C والشحنة واحدة، فالعلاقة عكسية.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz5"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson4.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: الطاقة المختزنة والقدرة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة التوالي والتوازي ---------- */
+(function () {
+  var cv = document.getElementById("spSim"), ctx = cv.getContext("2d");
+  var serBtn = document.getElementById("serBtn"), parBtn = document.getElementById("parBtn");
+  var c1R = document.getElementById("c1R"), c2R = document.getElementById("c2R");
+  var c1Val = document.getElementById("c1Val"), c2Val = document.getElementById("c2Val");
+  var readout = document.getElementById("spReadout");
+  var mode = "series";
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function updateUI() {
+    serBtn.className = mode === "series" ? "btn" : "btn ghost";
+    parBtn.className = mode === "parallel" ? "btn" : "btn ghost";
+  }
+  serBtn.addEventListener("click", function () { mode = "series"; updateUI(); draw(); });
+  parBtn.addEventListener("click", function () { mode = "parallel"; updateUI(); draw(); });
+  updateUI();
+
+  function capSymbol(x, y, vertical) {
+    ctx.strokeStyle = "#211a2e"; ctx.lineWidth = 2.5;
+    if (vertical) {
+      ctx.beginPath(); ctx.moveTo(x - 14, y - 4); ctx.lineTo(x + 14, y - 4); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x - 14, y + 4); ctx.lineTo(x + 14, y + 4); ctx.stroke();
+    } else {
+      ctx.beginPath(); ctx.moveTo(x - 4, y - 14); ctx.lineTo(x - 4, y + 14); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x + 4, y - 14); ctx.lineTo(x + 4, y + 14); ctx.stroke();
+    }
+  }
+
+  function draw() {
+    var C1 = +c1R.value, C2 = +c2R.value;
+    c1Val.textContent = arNum(C1); c2Val.textContent = arNum(C2);
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.strokeStyle = "#756b8a"; ctx.lineWidth = 2; ctx.fillStyle = "#756b8a";
+    ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+
+    if (mode === "series") {
+      var y = 110, xL = 90, xR = 610, x1 = 280, x2 = 420;
+      ctx.beginPath(); ctx.moveTo(xL, y); ctx.lineTo(x1 - 20, y); ctx.stroke();
+      capSymbol(x1, y, false);
+      ctx.strokeStyle = "#756b8a";
+      ctx.beginPath(); ctx.moveTo(x1 + 20, y); ctx.lineTo(x2 - 20, y); ctx.stroke();
+      capSymbol(x2, y, false);
+      ctx.strokeStyle = "#756b8a";
+      ctx.beginPath(); ctx.moveTo(x2 + 20, y); ctx.lineTo(xR, y); ctx.stroke();
+      ctx.fillStyle = "#756b8a";
+      ctx.fillText("C₁ = " + arNum(C1) + " μF", x1, y - 30);
+      ctx.fillText("C₂ = " + arNum(C2) + " μF", x2, y - 30);
+      ctx.fillText("نفس الشحنة Q على كل متسعة", (xL + xR) / 2, y + 45);
+      ctx.beginPath(); ctx.moveTo(xL, y); ctx.lineTo(xL, y + 40); ctx.lineTo(xR, y + 40); ctx.lineTo(xR, y); ctx.stroke();
+      ctx.fillStyle = "#211a2e"; ctx.font = "bold 16px sans-serif";
+      ctx.fillText("+", xL, y + 60); ctx.fillText("−", xR, y + 60);
+    } else {
+      var yTop = 65, yBot = 150, pxL = 100, pxR = 600, xB1 = 260, xB2 = 440;
+      ctx.beginPath(); ctx.moveTo(pxL, yTop); ctx.lineTo(pxR, yTop); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(pxL, yBot); ctx.lineTo(pxR, yBot); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(xB1, yTop); ctx.lineTo(xB1, yTop + 26); ctx.stroke();
+      capSymbol(xB1, (yTop + yBot) / 2, true);
+      ctx.strokeStyle = "#756b8a";
+      ctx.beginPath(); ctx.moveTo(xB1, yBot - 26); ctx.lineTo(xB1, yBot); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(xB2, yTop); ctx.lineTo(xB2, yTop + 26); ctx.stroke();
+      capSymbol(xB2, (yTop + yBot) / 2, true);
+      ctx.strokeStyle = "#756b8a";
+      ctx.beginPath(); ctx.moveTo(xB2, yBot - 26); ctx.lineTo(xB2, yBot); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(pxL, yTop); ctx.lineTo(pxL, yBot); ctx.stroke();
+      ctx.fillStyle = "#756b8a";
+      ctx.fillText("C₁ = " + arNum(C1) + " μF", xB1, yTop - 12);
+      ctx.fillText("C₂ = " + arNum(C2) + " μF", xB2, yTop - 12);
+      ctx.fillText("نفس فرق الجهد ΔV على كل متسعة", (pxL + pxR) / 2, yBot + 35);
+      ctx.fillStyle = "#211a2e"; ctx.font = "bold 16px sans-serif";
+      ctx.fillText("+", pxL - 20, yTop + 5); ctx.fillText("−", pxL - 20, yBot + 5);
+    }
+
+    var ceq = mode === "parallel" ? (C1 + C2) : (C1 * C2) / (C1 + C2);
+    readout.innerHTML = (mode === "parallel"
+      ? "التوازي: C_eq = C₁ + C₂ = " + ceq.toFixed(2) + " μF (أكبر من أكبر سعة)"
+      : "التوالي: C_eq = C₁C₂/(C₁+C₂) = " + ceq.toFixed(2) + " μF (أصغر من أصغر سعة)");
+  }
+  c1R.addEventListener("input", draw); c2R.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz5", [
+  { q: "ثلاث متسعات (2μF, 3μF, 5μF) مربوطة على التوازي مع بطارية 6V. ما مقدار السعة المكافئة؟",
+    opts: ["10 μF", "1 μF", "0.97 μF", "30 μF"], a: 0,
+    why: "في التوازي: C_eq = 2+3+5 = 10 μF." },
+  { q: "متسعتان 4μF و12μF مربوطتان على التوالي. ما مقدار السعة المكافئة؟",
+    opts: ["16 μF", "3 μF", "8 μF", "48 μF"], a: 1,
+    why: "بصيغة الضرب على الجمع: C_eq = (4×12)/(4+12) = 48/16 = 3 μF." },
+  { q: "علّل: نقصان السعة المكافئة لمجموعة متسعات مربوطة على التوالي.",
+    opts: ["لأنها تكافئ زيادة البعد بين الصفيحتين", "لأنها تكافئ زيادة المساحة المتقابلة", "لأن الشحنة تقلّ", "لأن العازل يضعف"], a: 0,
+    why: "التوالي يكافئ زيادة البعد الفعلي، وC تتناسب عكسياً مع البعد فتنقص السعة المكافئة." },
+  { q: "متسعتان متماثلتان سعة كل منهما C. ما نسبة سعة توازيهما إلى سعة تواليهما؟",
+    opts: ["1", "2", "4", "½"], a: 2,
+    why: "توازٍ: C_eq=2C. توالٍ: C_eq=C/2. النسبة = 2C ÷ (C/2) = 4." },
+  { q: "ما الغرض العملي من ربط مجموعة من المتسعات على التوالي؟",
+    opts: ["زيادة السعة المكافئة", "تحمّل فرق جهد أكبر لا تتحمّله متسعة منفردة", "تقليل المقاومة", "زيادة التيار"], a: 1,
+    why: "التوالي يوزّع فرق الجهد الكلي بين المتسعات فلا تتحمّل الواحدة إلا جزءاً منه." }
+], { onDone: function (stars) { Phy.setLesson("g6c1", "5", { stars: stars }); } });
+</script>
+</body>
+</html>

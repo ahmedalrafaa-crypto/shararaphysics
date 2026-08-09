@@ -29,6 +29,13 @@
     </div>
   </div>
 
+  <div class="gradetabs" role="tablist" aria-label="اختر المرحلة الدراسية">
+    <button class="gradetab active" type="button" role="tab" aria-selected="true" aria-controls="panel-g3" data-grade="g3">الثالث المتوسط</button>
+    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g6" data-grade="g6">السادس الإعدادي <span class="tab-badge">تجريبي</span></button>
+  </div>
+
+  <div class="gradepanel" id="panel-g3" role="tabpanel">
+
   <div class="section-title"><span class="ico">🗺️</span> خريطة الفصول</div>
 
   <div class="chmap">
@@ -149,6 +156,20 @@
     <div class="badge" id="b-perfect"><span class="em">💎</span><b>علامة كاملة</b></div>
   </div>
 
+  </div><!-- /panel-g3 -->
+
+  <div class="gradepanel" id="panel-g6" role="tabpanel" hidden>
+    <div class="section-title"><span class="ico">🔷</span> فيزياء السادس الإعدادي <span class="tab-badge">تجريبي</span></div>
+    <a class="chcard cc-g6" href="chapters/g6c1/index.html" style="display:block">
+      <span class="em chico tool-icon">🔷</span>
+      <span class="chkicker tool-tag">قسم قيد التطوير — فصل واحد فقط بعد</span>
+      <h3>الفصل الأول: المتسعات (الفرع العلمي)</h3>
+      <p>بداية تجريبية لمنهج السادس الإعدادي: المتسعة المنفردة، ربط المتسعات توازياً وتوالياً، ودائرة RC — بمحاكاات تفاعلية وأسئلة وزارية.</p>
+      <p style="margin-top:8px"><b style="color:#4338ca">افتح الفصل ←</b></p>
+    </a>
+    <p class="g6-note">🚧 نضيف بقية فصول السادس الإعدادي تدريجياً. ابدأ بالفصل الأول الآن.</p>
+  </div><!-- /panel-g6 -->
+
   <footer class="site">إعداد الأستاذ أحمد رافع · 📞 07800155157</footer>
 </div>
 
@@ -214,6 +235,29 @@
   var perfect = (ch0.exam && ch0.exam.stars === 3) || (ch1.exam && ch1.exam.stars === 3) || (ch2.exam && ch2.exam.stars === 3) || (ch3.exam && ch3.exam.stars === 3) || (ch4.exam && ch4.exam.stars === 3) || (ch5.exam && ch5.exam.stars === 3) || (ch6.exam && ch6.exam.stars === 3) || (ch7.exam && ch7.exam.stars === 3) || (ch8.exam && ch8.exam.stars === 3) || (ch9.exam && ch9.exam.stars === 3);
   for (k in lessons) if (lessons[k].stars === 3) perfect = true;
   if (perfect) document.getElementById("b-perfect").classList.add("won");
+})();
+</script>
+<script>
+/* تبديل تبويبات المرحلة: الثالث المتوسط / السادس الإعدادي */
+(function () {
+  var tabs = document.querySelectorAll(".gradetab");
+  var panels = { g3: document.getElementById("panel-g3"), g6: document.getElementById("panel-g6") };
+  function select(grade) {
+    if (!panels[grade]) grade = "g3";
+    tabs.forEach(function (t) {
+      var on = t.getAttribute("data-grade") === grade;
+      t.classList.toggle("active", on);
+      t.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    for (var g in panels) if (panels[g]) panels[g].hidden = (g !== grade);
+    try { localStorage.setItem("sharara_grade", grade); } catch (e) {}
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener("click", function () { select(t.getAttribute("data-grade")); });
+  });
+  var saved = null;
+  try { saved = localStorage.getItem("sharara_grade"); } catch (e) {}
+  if (saved) select(saved);
 })();
 </script>
 </body>
