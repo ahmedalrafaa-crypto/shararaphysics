@@ -48,14 +48,20 @@
     <b class="term">انتبه! فخّا سؤال الرسم الأشهر بالوزاري:</b> دائرة التفريغ <b>بلا بطارية</b> — مصدر الطاقة هو المتسعة المشحونة نفسها، ووجود بطارية في الرسم يُصفّر درجة السؤال. ودائماً سمِّ كل عنصر (متسعة، مفتاح، مصباح أو مقاومة، بطارية في الشحن فقط) — رسم صامت درجته ناقصة.
   </div>
 
-  <!-- ======== المحاكاة: دائرة RC ======== -->
+  <div class="section-title"><span class="ico">🧪</span> نشاط الكتاب: شحن وتفريغ المتسعة</div>
+  <div class="card">
+    <p><b>أدوات النشاط</b> (كما في كتابك بالضبط): بطارية فولطية مناسبة، كلفانومتر حساس <b>G</b> صفره في وسط التدريجة، متسعة <b>C</b> ذات صفيحتين متوازيتين <b>A</b> و<b>B</b>، مفتاح مزدوج <b>K</b> له وضعان، مقاومة ثابتة <b>R</b>، ومصباحان متماثلان <b>L1</b> و<b>L2</b>.</p>
+    <p style="margin-top:8px">حين يكون <b>K عند الوضع 1</b>: يتصل قطب البطارية بالدائرة عبر R، فيميل مؤشر G ثم يعود إلى الصفر، ويومض <b>L1</b> للحظة ثم ينطفئ — هذه عملية <b>الشحن</b>. وحين ننقل <b>K إلى الوضع 2</b>: تتصل صفيحتا المتسعة ببعضهما بسلك موصل (بلا بطارية إطلاقاً)، فيميل مؤشر G بالاتجاه <b>المعاكس</b> ثم يعود للصفر، ويومض <b>L2</b> بدل L1 — هذه عملية <b>التفريغ</b>.</p>
+  </div>
+
+  <!-- ======== المحاكاة: تجربة شحن وتفريغ المتسعة ======== -->
   <div class="sim">
-    <h3>⚡ مختبر دائرة RC: الشحن والتفريغ</h3>
-    <p class="sim-sub">شاهد الدائرة الفعلية بمكوناتها: البطارية، المقاومة R، والمتسعة C. راقب الشحنات تتراكم على صفيحتي المتسعة والتيار يتحرك في الأسلاك ثم يخفت مع الزمن — ولاحظ كيف تختفي البطارية تماماً عند التفريغ (الفخّ الأشهر بالوزاري!).</p>
-    <canvas id="rcSim" width="680" height="260"></canvas>
+    <h3>⚡ مختبر النشاط: شحن وتفريغ المتسعة (G، K، C، R، L1، L2)</h3>
+    <p class="sim-sub">بدّل وضع المفتاح K وراقب مؤشر الكلفانومتر G يميل جهة ثم يعود للصفر، والمصباح المناسب (L1 للشحن أو L2 للتفريغ) يومض ثم يخفت — تماماً كما في تجربة الكتاب.</p>
+    <canvas id="rcSim" width="700" height="320"></canvas>
     <div class="controls">
-      <button class="btn" id="chargeBtn">🔌 شحن</button>
-      <button class="btn ghost" id="dischargeBtn">🔻 تفريغ</button>
+      <button class="btn" id="chargeBtn">🔌 K عند الوضع ١ (شحن)</button>
+      <button class="btn ghost" id="dischargeBtn">🔻 K عند الوضع ٢ (تفريغ)</button>
     </div>
     <div class="controls" style="margin-top:10px">
       <div class="slider-group">المقاومة R (كيلو أوم): <b id="rVal">١٠</b>
@@ -113,25 +119,29 @@
   cR.addEventListener("input", function () { cVal.textContent = arNum(+cR.value); resetClock(); });
   updateModeUI();
 
-  // هندسة الدائرة الثابتة (حلقة مستطيلة: بطارية/سلك على الفرع الأيسر، مقاومة على السلك العلوي، متسعة على الفرع الأيمن)
-  var Lx = 90, Rx = 590, Ty = 55, By = 215;
-  var battY = 118, battGap = 9;
-  var capMidY = 150, capGap = 16, plateW = 56;
-  var resCx = 330, resHalfW = 55;
+  // هندسة الدائرة الثابتة — تطابق مخطط الكتاب: فرع علوي (بطارية-R-L1) وفرع سفلي (L2)
+  // يلتقيان عند مفتاح K المزدوج، ثم كلفانومتر G، ثم المتسعة C بصفيحتيها A وB
+  var BUS_X = 55, TOP_Y = 70, DIS_Y = 195, BOTTOM_Y = 260;
+  var battCx = 100, resCx = 175, resHalfW = 42, lampChargeCx = 265, lampDischargeCx = 265;
+  var pivotX = 415, midY = 130, contact1 = { x: 335, y: TOP_Y }, contact2 = { x: 335, y: DIS_Y };
+  var gX = 500, gY = midY, gR = 32;
+  var plateX = 615, plateAY = midY, plateBY = 178, plateW = 58;
 
-  function pathLength() { return 2 * (Rx - Lx) + 2 * (By - Ty); }
-  // نقطة على محيط الحلقة عند كسر (0..1)، تبدأ من أسفل الفرع الأيسر وتدور في اتجاه واحد ثابت
-  function pointAt(frac) {
-    var per = pathLength();
-    var d = (((frac % 1) + 1) % 1) * per;
-    var segV = By - Ty, segH = Rx - Lx;
-    if (d < segV) return { x: Lx, y: By - d };
-    d -= segV;
-    if (d < segH) return { x: Lx + d, y: Ty };
-    d -= segH;
-    if (d < segV) return { x: Rx, y: Ty + d };
-    d -= segV;
-    return { x: Rx - d, y: By };
+  function drawWire(x1, y1, x2, y2) { ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); }
+
+  function drawLamp(cx, cy, on, glow) {
+    ctx.beginPath(); ctx.arc(cx, cy, 15, 0, Math.PI * 2);
+    ctx.fillStyle = on ? "rgba(251,191,36," + (0.35 + glow * 0.65).toFixed(2) + ")" : "#e2e4f3";
+    ctx.fill();
+    ctx.strokeStyle = on ? "#d97706" : "#c7cbe6"; ctx.lineWidth = 2; ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(cx - 9, cy - 9); ctx.lineTo(cx + 9, cy + 9);
+    ctx.moveTo(cx + 9, cy - 9); ctx.lineTo(cx - 9, cy + 9);
+    ctx.strokeStyle = on ? "#92400e" : "#a8adcf"; ctx.lineWidth = 1.6; ctx.stroke();
+    if (on && glow > 0.15) {
+      ctx.save(); ctx.shadowColor = "#fbbf24"; ctx.shadowBlur = 14 * glow;
+      ctx.beginPath(); ctx.arc(cx, cy, 15, 0, Math.PI * 2); ctx.stroke(); ctx.restore();
+    }
   }
 
   function draw() {
@@ -140,83 +150,106 @@
     var elapsed = performance.now() - startTime;
     var vFrac = mode === "charge" ? 1 - Math.exp(-elapsed / tauMs) : Math.exp(-elapsed / tauMs);
     var iFrac = Math.exp(-elapsed / tauMs);
+    var charging = mode === "charge";
 
     ctx.clearRect(0, 0, cv.width, cv.height);
 
-    // ---- الأسلاك (بفجوات لمكان البطارية والمقاومة والمتسعة) ----
+    // ---- الأسلاك الثابتة ----
     ctx.strokeStyle = "#4338ca"; ctx.lineWidth = 2.5; ctx.lineJoin = "round";
     ctx.beginPath();
-    if (mode === "charge") {
-      ctx.moveTo(Lx, By); ctx.lineTo(Lx, battY + battGap + 10);
-      ctx.moveTo(Lx, battY - battGap - 10); ctx.lineTo(Lx, Ty);
-    } else {
-      ctx.moveTo(Lx, By); ctx.lineTo(Lx, Ty);
-    }
-    ctx.moveTo(Lx, Ty); ctx.lineTo(resCx - resHalfW, Ty);
-    ctx.moveTo(resCx + resHalfW, Ty); ctx.lineTo(Rx, Ty);
-    ctx.moveTo(Rx, Ty); ctx.lineTo(Rx, capMidY - capGap / 2 - 10);
-    ctx.moveTo(Rx, capMidY + capGap / 2 + 10); ctx.lineTo(Rx, By);
-    ctx.moveTo(Rx, By); ctx.lineTo(Lx, By);
+    drawWire(BUS_X, TOP_Y, battCx - 16, TOP_Y);
+    drawWire(battCx + 16, TOP_Y, resCx - resHalfW, TOP_Y);
+    drawWire(resCx + resHalfW, TOP_Y, lampChargeCx - 15, TOP_Y);
+    drawWire(lampChargeCx + 15, TOP_Y, contact1.x, TOP_Y);
+    drawWire(BUS_X, DIS_Y, lampDischargeCx - 15, DIS_Y);
+    drawWire(lampDischargeCx + 15, DIS_Y, contact2.x, DIS_Y);
+    drawWire(BUS_X, TOP_Y, BUS_X, BOTTOM_Y);
+    drawWire(BUS_X, BOTTOM_Y, plateX, BOTTOM_Y);
+    drawWire(plateX, BOTTOM_Y, plateX, plateBY);
+    drawWire(pivotX, midY, gX - gR, midY);
+    drawWire(gX + gR, midY, plateX - plateW / 2, midY);
     ctx.stroke();
 
-    // ---- المقاومة R (زجزاج على السلك العلوي) ----
+    // ---- ذراع المفتاح K (يشير للوضع النشط) ----
+    var contact = charging ? contact1 : contact2;
+    ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 3;
+    ctx.beginPath(); drawWire(pivotX, midY, contact.x, contact.y); ctx.stroke();
+    [contact1, contact2].forEach(function (c, idx) {
+      ctx.beginPath(); ctx.arc(c.x, c.y, 4, 0, Math.PI * 2);
+      ctx.fillStyle = "#4338ca"; ctx.fill();
+      ctx.fillStyle = "#5c6178"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+      ctx.fillText(idx === 0 ? "١" : "٢", c.x, c.y + (idx === 0 ? -12 : 24));
+    });
+    ctx.beginPath(); ctx.arc(pivotX, midY, 4, 0, Math.PI * 2); ctx.fillStyle = "#dc2626"; ctx.fill();
+    ctx.fillStyle = "#4338ca"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("K", pivotX, midY + 22);
+
+    // ---- المقاومة R (زجزاج) ----
+    ctx.strokeStyle = "#4338ca"; ctx.lineWidth = 2.5;
     ctx.beginPath();
-    ctx.moveTo(resCx - resHalfW, Ty);
+    ctx.moveTo(resCx - resHalfW, TOP_Y);
     var zig = 6, seg = (resHalfW * 2) / zig;
-    for (var i = 0; i < zig; i++) {
-      ctx.lineTo(resCx - resHalfW + seg * (i + 1), Ty + (i % 2 === 0 ? -12 : 12));
-    }
-    ctx.lineTo(resCx + resHalfW, Ty);
+    for (var i = 0; i < zig; i++) ctx.lineTo(resCx - resHalfW + seg * (i + 1), TOP_Y + (i % 2 === 0 ? -10 : 10));
+    ctx.lineTo(resCx + resHalfW, TOP_Y);
     ctx.stroke();
-    ctx.fillStyle = "#4338ca"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
-    ctx.fillText("R", resCx, Ty - 22);
+    ctx.fillStyle = "#4338ca"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("R", resCx, TOP_Y - 20);
 
-    // ---- البطارية (فرع أيسر، تظهر في الشحن فقط) ----
-    if (mode === "charge") {
-      ctx.strokeStyle = "#0ea026"; ctx.lineWidth = 3;
-      ctx.beginPath(); ctx.moveTo(Lx - 16, battY - battGap); ctx.lineTo(Lx + 16, battY - battGap); ctx.stroke();
-      ctx.lineWidth = 6;
-      ctx.beginPath(); ctx.moveTo(Lx - 10, battY + battGap); ctx.lineTo(Lx + 10, battY + battGap); ctx.stroke();
-      ctx.fillStyle = "#0ea026"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "right";
-      ctx.fillText("بطارية", Lx - 24, battY + 4);
-    } else {
-      ctx.fillStyle = "#db7706"; ctx.font = "bold 11px Cairo"; ctx.textAlign = "right";
-      ctx.fillText("بلا بطارية — سلك موصل فقط", Lx + 155, battY + 4);
-    }
+    // ---- البطارية (ثابتة على فرع الشحن دائماً — القطع يحصل بالمفتاح K لا بإخفائها) ----
+    ctx.strokeStyle = "#0ea026"; ctx.lineWidth = 3;
+    ctx.beginPath(); drawWire(battCx - 12, TOP_Y - 12, battCx - 12, TOP_Y + 12); ctx.stroke();
+    ctx.lineWidth = 6;
+    ctx.beginPath(); drawWire(battCx + 6, TOP_Y - 7, battCx + 6, TOP_Y + 7); ctx.stroke();
+    ctx.fillStyle = "#0ea026"; ctx.font = "bold 11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("بطارية", battCx - 3, TOP_Y - 20);
 
-    // ---- المتسعة C (فرع أيمن) ----
+    // ---- المصباحان L1 (شحن) وL2 (تفريغ) ----
+    drawLamp(lampChargeCx, TOP_Y, charging, charging ? iFrac : 0);
+    ctx.fillStyle = "#5c6178"; ctx.font = "bold 11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("L1", lampChargeCx, TOP_Y - 24);
+    drawLamp(lampDischargeCx, DIS_Y, !charging, !charging ? iFrac : 0);
+    ctx.fillText("L2", lampDischargeCx, DIS_Y + 32);
+
+    // ---- الكلفانومتر G (مؤشر يميل حسب الاتجاه ويعود للصفر) ----
+    ctx.beginPath(); ctx.arc(gX, gY, gR, 0, Math.PI * 2);
+    ctx.fillStyle = "#fff"; ctx.fill();
+    ctx.strokeStyle = "#4338ca"; ctx.lineWidth = 2.5; ctx.stroke();
+    ctx.fillStyle = "#4338ca"; ctx.font = "bold 14px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("G", gX, gY + gR + 20);
+    ctx.font = "10px Cairo"; ctx.fillStyle = "#9aa0c0";
+    ctx.fillText("−", gX - gR + 8, gY + 4); ctx.fillText("+", gX + gR - 8, gY + 4);
+    var maxDeflect = 42 * Math.PI / 180;
+    var needleAngle = -Math.PI / 2 + (charging ? 1 : -1) * iFrac * maxDeflect;
+    ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.moveTo(gX, gY);
+    ctx.lineTo(gX + Math.cos(needleAngle) * (gR - 6), gY + Math.sin(needleAngle) * (gR - 6));
+    ctx.stroke();
+    ctx.beginPath(); ctx.arc(gX, gY, 3, 0, Math.PI * 2); ctx.fillStyle = "#dc2626"; ctx.fill();
+
+    // ---- المتسعة C (الصفيحتان A وB) ----
     ctx.strokeStyle = "#4338ca"; ctx.lineWidth = 3;
     ctx.beginPath();
-    ctx.moveTo(Rx - plateW / 2, capMidY - capGap / 2); ctx.lineTo(Rx + plateW / 2, capMidY - capGap / 2);
-    ctx.moveTo(Rx - plateW / 2, capMidY + capGap / 2); ctx.lineTo(Rx + plateW / 2, capMidY + capGap / 2);
+    drawWire(plateX - plateW / 2, plateAY, plateX + plateW / 2, plateAY);
+    drawWire(plateX - plateW / 2, plateBY, plateX + plateW / 2, plateBY);
     ctx.stroke();
-    ctx.fillStyle = "#4338ca"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "right";
-    ctx.fillText("C", Rx + plateW / 2 + 22, capMidY + 4);
+    ctx.fillStyle = "#4338ca"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "right";
+    ctx.fillText("A", plateX + plateW / 2 + 16, plateAY + 4);
+    ctx.fillText("B", plateX + plateW / 2 + 16, plateBY + 4);
+    ctx.textAlign = "left"; ctx.fillText("C", plateX - plateW / 2 - 16, (plateAY + plateBY) / 2 + 4);
 
-    // شحنات على الصفيحتين بحسب نسبة الشحن الحالية
     var nCharges = Math.round(vFrac * 5);
-    ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
     for (var k = 0; k < nCharges; k++) {
-      var cx0 = Rx - plateW / 2 + 10 + k * ((plateW - 20) / 4);
-      ctx.fillStyle = "#dc2626"; ctx.fillText("+", cx0, capMidY - capGap / 2 - 7);
-      ctx.fillStyle = "#1e3a8a"; ctx.fillText("−", cx0, capMidY + capGap / 2 + 16);
+      var cx0 = plateX - plateW / 2 + 10 + k * ((plateW - 20) / 4);
+      ctx.fillStyle = "#dc2626"; ctx.fillText("+", cx0, plateAY - 8);
+      ctx.fillStyle = "#1e3a8a"; ctx.fillText("−", cx0, plateBY + 16);
     }
 
-    // ---- التيار المتحرك في الحلقة (يخفت مع الزمن) ----
-    if (iFrac > 0.02) {
-      var dir = mode === "charge" ? 1 : -1;
-      var speed = elapsed / 900;
-      for (var m = 0; m < 2; m++) {
-        var p = pointAt(dir * speed + m * 0.5);
-        ctx.beginPath(); ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(220,38,38," + Math.min(1, iFrac + 0.15).toFixed(2) + ")";
-        ctx.fill();
-      }
-    }
-
-    readout.innerHTML = "τ = RC = " + tauMs.toFixed(1) + " ms — جهد المتسعة ≈ " + Math.round(vFrac * 100) + "٪ من أقصاه" +
-      (iFrac > 0.02 ? " — التيار ≈ " + Math.round(iFrac * 100) + "٪ من أعظم قيمته"
-        : " — التيار قارب الصفر (اكتمل " + (mode === "charge" ? "الشحن" : "التفريغ") + ")");
+    readout.innerHTML = "τ = RC = " + tauMs.toFixed(1) + " ms — مؤشر G مائل " +
+      Math.round(iFrac * 100) + "٪ نحو " + (charging ? "اليمين" : "اليسار") +
+      (iFrac > 0.02 ? " — " + (charging ? "L1" : "L2") + " مضيء بشدة " + Math.round(iFrac * 100) + "٪"
+        : " — عاد المؤشر للصفر والمصباح انطفأ (اكتمل " + (charging ? "الشحن" : "التفريغ") + ")");
 
     requestAnimationFrame(draw);
   }
