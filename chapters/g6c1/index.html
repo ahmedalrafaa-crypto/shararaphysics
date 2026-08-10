@@ -74,6 +74,12 @@
         <span class="sub">الأنواع الثلاثة وتطبيقات من فلاش الكاميرا إلى شاشة موبايلك + معرض تفاعلي</span>
         <span class="stars"></span></span>
     </a>
+    <a class="node qna" href="questions.html" data-ls="qna">
+      <span class="dot">🧮</span>
+      <span class="info"><b>أسئلة ومسائل نهاية الفصل</b>
+        <span class="sub">٤٢ سؤالاً من أسئلة الكتاب نفسها (اختياري + نظري + مسائل) محلولة بالكامل</span>
+        <span class="stars"></span></span>
+    </a>
   </div>
 
   <footer class="site">إعداد الأستاذ أحمد رافع · قسم تجريبي قيد التطوير</footer>
@@ -82,17 +88,18 @@
 <script src="../../js/core.js"></script>
 <script>
 (function () {
-  // فصل تجريبي بلا امتحان ختامي بعد — نسبة مستقلة عن Phy.chapterPercent (المصمَّمة لتحسب امتحاناً دائماً)
+  // فصل تجريبي — نسبة مستقلة عن Phy.chapterPercent (٨ دروس + أسئلة نهاية الفصل)
   function g6Percent() {
     var d = Phy.load(), ch = d.g6c1 || {}, done = 0;
     if (ch.lessons) for (var k in ch.lessons) if (ch.lessons[k].done) done++;
-    return Math.round(100 * done / 8);
+    if (ch.exam) done++;
+    return Math.round(100 * done / 9);
   }
   var pct = g6Percent();
   document.getElementById("pb").style.width = pct + "%";
   document.getElementById("chpct").textContent = pct + "% مكتمل";
   document.querySelectorAll(".node").forEach(function (n) {
-    var ls = n.dataset.ls, info = Phy.getLesson("g6c1", ls);
+    var ls = n.dataset.ls, info = ls === "qna" ? Phy.getExam("g6c1") : Phy.getLesson("g6c1", ls);
     if (info && (info.done || info.stars !== undefined)) {
       n.classList.add("done");
       var st = n.querySelector(".stars");

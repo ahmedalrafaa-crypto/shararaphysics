@@ -186,7 +186,9 @@ var Phy = (function () {
     questions.forEach(function (item, qi) {
       var div = document.createElement("div");
       div.className = "qitem";
-      var h = '<div class="qtext">' + (qi + 1) + ". " + item.q + "</div>" + '<div class="opts">';
+      var h = '<div class="qtext">' + (qi + 1) + ". " + item.q + "</div>";
+      if (item.figure) h += '<div class="qfig">' + item.figure + "</div>";
+      h += '<div class="opts">';
       item.opts.forEach(function (o, oi) {
         h += '<button class="qopt" data-q="' + qi + '" data-o="' + oi + '">' + o + "</button>";
       });
@@ -266,6 +268,24 @@ var Phy = (function () {
   }
 
   document.addEventListener("DOMContentLoaded", initExamples);
+
+  /* ---------- زر الإبلاغ عن خطأ (يُحقن تلقائياً أسفل كل صفحة قرب الفوتر) ---------- */
+  var WHATSAPP_NUMBER = "9647800155157";
+  function initReportError() {
+    if (document.getElementById("reportBtn")) return; // مضاف يدوياً بالصفحة نفسها (مكان أدق)
+    if (!/\/chapters\//.test(location.pathname)) return; // فقط الصفحات التدريسية (دروس/فصول/أسئلة الفيزياء)
+    var footer = document.querySelector("footer.site");
+    if (!footer) return;
+    var box = document.createElement("div");
+    box.className = "notebox";
+    box.innerHTML =
+      '<b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بهذه الصفحة، بلّغ الأستاذ أحمد فورًا وسيراجعها.' +
+      '<br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>';
+    footer.insertAdjacentElement("beforebegin", box);
+    var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+    document.getElementById("reportBtn").href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(waMsg);
+  }
+  document.addEventListener("DOMContentLoaded", initReportError);
 
   return {
     load: load, getLesson: getLesson, setLesson: setLesson,

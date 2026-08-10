@@ -173,6 +173,7 @@ body::after {
 .node .info .sub { color: var(--ink-soft); font-size: .85rem; }
 .node .stars { color: var(--yellow); font-size: .95rem; letter-spacing: 2px; }
 .node.exam .dot { border-color: var(--coral); background: #fff0f0; }
+.node.qna .dot { border-color: var(--teal); background: #e3fbfc; }
 
 /* ---------- chapter map (home) ---------- */
 .chmap { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
@@ -426,6 +427,8 @@ input[type="range"] { accent-color: var(--violet); width: 100%; }
   padding: 18px; margin-bottom: 16px;
 }
 .qitem .qtext { font-weight: 800; margin-bottom: 12px; }
+.qfig { background: #f8f9ff; border-radius: 12px; padding: 10px; margin-bottom: 12px; display: flex; justify-content: center; overflow-x: auto; }
+.qfig svg { max-width: 100%; height: auto; }
 .qitem .opts { display: grid; gap: 8px; }
 .qopt {
   text-align: start; font-family: inherit; font-size: .95rem; font-weight: 700;
@@ -740,7 +743,7 @@ footer.site::before {
 .theme-g6c1::after { background: radial-gradient(circle, #ca8a04, transparent 70%); }
 .theme-g6c1 .hero::before { content: "🔷"; }
 .theme-g6c1 .path::before { border-inline-start-color: #dfdcf9; }
-.theme-g6c1 .node:not(.done):not(.exam) .dot { border-color: #dfdcf9; }
+.theme-g6c1 .node:not(.done):not(.exam):not(.qna) .dot { border-color: #dfdcf9; }
 .theme-g6c1 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(67, 56, 202, 0.30); }
 .theme-g6c1 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(67, 56, 202, .35); }
 .theme-g6c1 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(67, 56, 202, .45); }
@@ -756,7 +759,7 @@ footer.site::before {
 .theme-g6c2::after { background: radial-gradient(circle, #1e3a8a, transparent 70%); }
 .theme-g6c2 .hero::before { content: "🧲"; }
 .theme-g6c2 .path::before { border-inline-start-color: #f6d2d2; }
-.theme-g6c2 .node:not(.done):not(.exam) .dot { border-color: #f6d2d2; }
+.theme-g6c2 .node:not(.done):not(.exam):not(.qna) .dot { border-color: #f6d2d2; }
 .theme-g6c2 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(185, 28, 28, 0.30); }
 .theme-g6c2 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(185, 28, 28, .35); }
 .theme-g6c2 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(185, 28, 28, .45); }

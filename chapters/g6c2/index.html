@@ -80,9 +80,15 @@
         <span class="sub">البطاقة الممغنطة، القيثارة الكهربائية، والطباخ الحثي</span>
         <span class="stars"></span></span>
     </span>
+    <a class="node qna" href="questions.html" data-ls="qna">
+      <span class="dot">🧮</span>
+      <span class="info"><b>أسئلة ومسائل نهاية الفصل</b>
+        <span class="sub">٤٨ سؤالاً من أسئلة الكتاب نفسها (اختياري + نظري + مسائل) محلولة بالكامل</span>
+        <span class="stars"></span></span>
+    </a>
   </div>
 
-  <p class="g6-note">🚧 بقية دروس هذا الفصل قيد الإعداد وستُنشر تباعاً.</p>
+  <p class="g6-note">🚧 بقية دروس هذا الفصل قيد الإعداد وستُنشر تباعاً — لكن أسئلة نهاية الفصل جاهزة كاملة أعلاه.</p>
 
   <footer class="site">إعداد الأستاذ أحمد رافع · قسم تجريبي قيد التطوير</footer>
 </div>
@@ -90,18 +96,19 @@
 <script src="../../js/core.js"></script>
 <script>
 (function () {
-  // فصل تجريبي بلا امتحان ختامي بعد — نسبة مستقلة عن Phy.chapterPercent (المصمَّمة لتحسب امتحاناً دائماً)
+  // فصل تجريبي — نسبة مستقلة عن Phy.chapterPercent (٩ دروس + أسئلة نهاية الفصل)
   var TOTAL = 9;
   function g6Percent() {
     var d = Phy.load(), ch = d.g6c2 || {}, done = 0;
     if (ch.lessons) for (var k in ch.lessons) if (ch.lessons[k].done) done++;
-    return Math.round(100 * done / TOTAL);
+    if (ch.exam) done++;
+    return Math.round(100 * done / (TOTAL + 1));
   }
   var pct = g6Percent();
   document.getElementById("pb").style.width = pct + "%";
   document.getElementById("chpct").textContent = pct + "% مكتمل";
   document.querySelectorAll(".node[href]").forEach(function (n) {
-    var ls = n.dataset.ls, info = Phy.getLesson("g6c2", ls);
+    var ls = n.dataset.ls, info = ls === "qna" ? Phy.getExam("g6c2") : Phy.getLesson("g6c2", ls);
     if (info && (info.done || info.stars !== undefined)) {
       n.classList.add("done");
       var st = n.querySelector(".stars");
