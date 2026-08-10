@@ -51,8 +51,8 @@
   <!-- ======== المحاكاة: دائرة RC ======== -->
   <div class="sim">
     <h3>⚡ مختبر دائرة RC: الشحن والتفريغ</h3>
-    <p class="sim-sub">اختر الشحن أو التفريغ، وغيّر المقاومة R والسعة C، وشاهد المنحنى الأسّي، ولاحظ موقع الزمن الثابت τ=RC.</p>
-    <canvas id="rcSim" width="680" height="230"></canvas>
+    <p class="sim-sub">شاهد الدائرة الفعلية بمكوناتها: البطارية، المقاومة R، والمتسعة C. راقب الشحنات تتراكم على صفيحتي المتسعة والتيار يتحرك في الأسلاك ثم يخفت مع الزمن — ولاحظ كيف تختفي البطارية تماماً عند التفريغ (الفخّ الأشهر بالوزاري!).</p>
+    <canvas id="rcSim" width="680" height="260"></canvas>
     <div class="controls">
       <button class="btn" id="chargeBtn">🔌 شحن</button>
       <button class="btn ghost" id="dischargeBtn">🔻 تفريغ</button>
@@ -113,51 +113,110 @@
   cR.addEventListener("input", function () { cVal.textContent = arNum(+cR.value); resetClock(); });
   updateModeUI();
 
+  // هندسة الدائرة الثابتة (حلقة مستطيلة: بطارية/سلك على الفرع الأيسر، مقاومة على السلك العلوي، متسعة على الفرع الأيمن)
+  var Lx = 90, Rx = 590, Ty = 55, By = 215;
+  var battY = 118, battGap = 9;
+  var capMidY = 150, capGap = 16, plateW = 56;
+  var resCx = 330, resHalfW = 55;
+
+  function pathLength() { return 2 * (Rx - Lx) + 2 * (By - Ty); }
+  // نقطة على محيط الحلقة عند كسر (0..1)، تبدأ من أسفل الفرع الأيسر وتدور في اتجاه واحد ثابت
+  function pointAt(frac) {
+    var per = pathLength();
+    var d = (((frac % 1) + 1) % 1) * per;
+    var segV = By - Ty, segH = Rx - Lx;
+    if (d < segV) return { x: Lx, y: By - d };
+    d -= segV;
+    if (d < segH) return { x: Lx + d, y: Ty };
+    d -= segH;
+    if (d < segV) return { x: Rx, y: Ty + d };
+    d -= segV;
+    return { x: Rx - d, y: By };
+  }
+
   function draw() {
     var R = +rR.value, C = +cR.value;
-    var tauMs = R * C, totalMs = tauMs * 5;
-    var elapsed = (performance.now() - startTime) % (totalMs + 400);
-    var t = Math.min(elapsed, totalMs);
+    var tauMs = R * C;
+    var elapsed = performance.now() - startTime;
+    var vFrac = mode === "charge" ? 1 - Math.exp(-elapsed / tauMs) : Math.exp(-elapsed / tauMs);
+    var iFrac = Math.exp(-elapsed / tauMs);
 
     ctx.clearRect(0, 0, cv.width, cv.height);
-    var ox = 60, oy = 195, w = 560, h = 155;
-    ctx.strokeStyle = "#e7e0f2"; ctx.lineWidth = 1;
-    ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(ox + w, oy); ctx.moveTo(ox, oy); ctx.lineTo(ox, oy - h); ctx.stroke();
-    ctx.fillStyle = "#756b8a"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
-    ctx.fillText("الزمن t", ox + w - 20, oy + 18);
-    ctx.save(); ctx.translate(ox - 35, oy - h / 2); ctx.rotate(-Math.PI / 2); ctx.fillText("V/V₀", 0, 0); ctx.restore();
 
-    ctx.strokeStyle = "#e7e0f2"; ctx.beginPath();
-    for (var px = 0; px <= w; px++) {
-      var tt = (px / w) * totalMs;
-      var v = mode === "charge" ? 1 - Math.exp(-tt / tauMs) : Math.exp(-tt / tauMs);
-      var py = oy - v * h;
-      if (px === 0) ctx.moveTo(ox + px, py); else ctx.lineTo(ox + px, py);
+    // ---- الأسلاك (بفجوات لمكان البطارية والمقاومة والمتسعة) ----
+    ctx.strokeStyle = "#4338ca"; ctx.lineWidth = 2.5; ctx.lineJoin = "round";
+    ctx.beginPath();
+    if (mode === "charge") {
+      ctx.moveTo(Lx, By); ctx.lineTo(Lx, battY + battGap + 10);
+      ctx.moveTo(Lx, battY - battGap - 10); ctx.lineTo(Lx, Ty);
+    } else {
+      ctx.moveTo(Lx, By); ctx.lineTo(Lx, Ty);
     }
+    ctx.moveTo(Lx, Ty); ctx.lineTo(resCx - resHalfW, Ty);
+    ctx.moveTo(resCx + resHalfW, Ty); ctx.lineTo(Rx, Ty);
+    ctx.moveTo(Rx, Ty); ctx.lineTo(Rx, capMidY - capGap / 2 - 10);
+    ctx.moveTo(Rx, capMidY + capGap / 2 + 10); ctx.lineTo(Rx, By);
+    ctx.moveTo(Rx, By); ctx.lineTo(Lx, By);
     ctx.stroke();
 
-    ctx.strokeStyle = "#4338ca"; ctx.lineWidth = 2.5; ctx.beginPath();
-    var steps = Math.max(1, Math.round((t / totalMs) * w));
-    for (var px2 = 0; px2 <= steps; px2++) {
-      var tt2 = (px2 / w) * totalMs;
-      var v2 = mode === "charge" ? 1 - Math.exp(-tt2 / tauMs) : Math.exp(-tt2 / tauMs);
-      var py2 = oy - v2 * h;
-      if (px2 === 0) ctx.moveTo(ox + px2, py2); else ctx.lineTo(ox + px2, py2);
+    // ---- المقاومة R (زجزاج على السلك العلوي) ----
+    ctx.beginPath();
+    ctx.moveTo(resCx - resHalfW, Ty);
+    var zig = 6, seg = (resHalfW * 2) / zig;
+    for (var i = 0; i < zig; i++) {
+      ctx.lineTo(resCx - resHalfW + seg * (i + 1), Ty + (i % 2 === 0 ? -12 : 12));
     }
+    ctx.lineTo(resCx + resHalfW, Ty);
     ctx.stroke();
+    ctx.fillStyle = "#4338ca"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("R", resCx, Ty - 22);
 
-    var vNow = mode === "charge" ? 1 - Math.exp(-t / tauMs) : Math.exp(-t / tauMs);
-    var cursorX = ox + (t / totalMs) * w, cursorY = oy - vNow * h;
-    ctx.fillStyle = "#dc2626"; ctx.beginPath(); ctx.arc(cursorX, cursorY, 5, 0, 7); ctx.fill();
+    // ---- البطارية (فرع أيسر، تظهر في الشحن فقط) ----
+    if (mode === "charge") {
+      ctx.strokeStyle = "#0ea026"; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.moveTo(Lx - 16, battY - battGap); ctx.lineTo(Lx + 16, battY - battGap); ctx.stroke();
+      ctx.lineWidth = 6;
+      ctx.beginPath(); ctx.moveTo(Lx - 10, battY + battGap); ctx.lineTo(Lx + 10, battY + battGap); ctx.stroke();
+      ctx.fillStyle = "#0ea026"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "right";
+      ctx.fillText("بطارية", Lx - 24, battY + 4);
+    } else {
+      ctx.fillStyle = "#db7706"; ctx.font = "bold 11px Cairo"; ctx.textAlign = "right";
+      ctx.fillText("بلا بطارية — سلك موصل فقط", Lx + 155, battY + 4);
+    }
 
-    var tauX = ox + Math.min(1, tauMs / totalMs) * w;
-    ctx.strokeStyle = "#ca8a04"; ctx.setLineDash([4, 4]);
-    ctx.beginPath(); ctx.moveTo(tauX, oy); ctx.lineTo(tauX, oy - h); ctx.stroke(); ctx.setLineDash([]);
-    ctx.fillStyle = "#92660a"; ctx.font = "bold 11px Cairo"; ctx.textAlign = "center";
-    ctx.fillText("τ", tauX, oy + 15);
+    // ---- المتسعة C (فرع أيمن) ----
+    ctx.strokeStyle = "#4338ca"; ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(Rx - plateW / 2, capMidY - capGap / 2); ctx.lineTo(Rx + plateW / 2, capMidY - capGap / 2);
+    ctx.moveTo(Rx - plateW / 2, capMidY + capGap / 2); ctx.lineTo(Rx + plateW / 2, capMidY + capGap / 2);
+    ctx.stroke();
+    ctx.fillStyle = "#4338ca"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "right";
+    ctx.fillText("C", Rx + plateW / 2 + 22, capMidY + 4);
 
-    readout.innerHTML = "τ = RC = " + tauMs.toFixed(1) + " ms — " +
-      (mode === "charge" ? "الشحن يبلغ ٦٣٪ من أقصاه بعد زمن τ واحد" : "التفريغ يهبط إلى ٣٧٪ من قيمته الأصلية بعد زمن τ واحد");
+    // شحنات على الصفيحتين بحسب نسبة الشحن الحالية
+    var nCharges = Math.round(vFrac * 5);
+    ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    for (var k = 0; k < nCharges; k++) {
+      var cx0 = Rx - plateW / 2 + 10 + k * ((plateW - 20) / 4);
+      ctx.fillStyle = "#dc2626"; ctx.fillText("+", cx0, capMidY - capGap / 2 - 7);
+      ctx.fillStyle = "#1e3a8a"; ctx.fillText("−", cx0, capMidY + capGap / 2 + 16);
+    }
+
+    // ---- التيار المتحرك في الحلقة (يخفت مع الزمن) ----
+    if (iFrac > 0.02) {
+      var dir = mode === "charge" ? 1 : -1;
+      var speed = elapsed / 900;
+      for (var m = 0; m < 2; m++) {
+        var p = pointAt(dir * speed + m * 0.5);
+        ctx.beginPath(); ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(220,38,38," + Math.min(1, iFrac + 0.15).toFixed(2) + ")";
+        ctx.fill();
+      }
+    }
+
+    readout.innerHTML = "τ = RC = " + tauMs.toFixed(1) + " ms — جهد المتسعة ≈ " + Math.round(vFrac * 100) + "٪ من أقصاه" +
+      (iFrac > 0.02 ? " — التيار ≈ " + Math.round(iFrac * 100) + "٪ من أعظم قيمته"
+        : " — التيار قارب الصفر (اكتمل " + (mode === "charge" ? "الشحن" : "التفريغ") + ")");
 
     requestAnimationFrame(draw);
   }

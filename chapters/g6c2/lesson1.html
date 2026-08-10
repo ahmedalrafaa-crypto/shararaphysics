@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 1: القوة على شحنة متحركة وقوة لورنتز — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c2">
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثاني</a> / الدرس 1</span>
+  </div>
+
+  <div class="hero">
+    <h1>⚛️ الدرس 1: القوة على شحنة متحركة وقوة لورنتز</h1>
+    <p>عرفتَ سابقاً قوة المجال الكهربائي على شحنة ساكنة. فماذا لو تحرّكت الشحنة داخل مجال مغناطيسي؟ من هذا السؤال تبدأ رحلة الحث الكهرومغناطيسي كلها.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">📺</span>
+    <span>في شاشات التلفاز والراسمات القديمة (CRT)، تنطلق إلكترونات بسرعة هائلة داخل أنبوب مفرّغ، ثم تنحرف يميناً ويساراً وأعلى وأسفل لترسم الصورة على الشاشة — <b>بلا أي لمسة يد</b>. من يوجّه هذه الإلكترونات؟ الجواب: قوة خفية تصنعها مجالات كهربائية ومغناطيسية معاً. هذه القوة اسمها <b>قوة لورنتز</b>، وهي بطل درسنا اليوم.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🧲</span> القوة المغناطيسية على شحنة متحركة</div>
+  <div class="card">
+    <p>الشحنة <b>الساكنة</b> لا تتأثر بالمجال المغناطيسي إطلاقاً مهما كان قوياً. لكن إذا <b>تحرّكت</b> شحنة <span class="formula-inline">q</span> بسرعة <span class="formula-inline">v</span> داخل مجال مغناطيسي كثافة فيضه <span class="formula-inline">B</span>، فإنها تتأثر بقوة مغناطيسية مقدارها:</p>
+  </div>
+  <div class="lawbox">
+    القوة المغناطيسية على شحنة متحركة
+    <div class="formula">F_b = q v B sin θ</div>
+  </div>
+  <p>حيث <span class="formula-inline">θ</span> هي الزاوية بين متجه السرعة <span class="formula-inline">v</span> ومتجه المجال <span class="formula-inline">B</span>، وتُقاس كثافة الفيض المغناطيسي <span class="formula-inline">B</span> بوحدة <b>التسلا (T)</b>.</p>
+
+  <div class="notebox">
+    <b>افهمها ولا تحفظها — حالتان حديّتان:</b>
+    <ul>
+      <li>إذا تحركت الشحنة <b>موازية</b> للمجال (<span class="formula-inline">θ=0°</span>)، فإن <span class="formula-inline">sin 0 = 0</span> ⟹ <b>لا قوة إطلاقاً</b> مهما كانت سرعتها.</li>
+      <li>إذا تحركت الشحنة <b>عمودية</b> على المجال (<span class="formula-inline">θ=90°</span>)، فإن <span class="formula-inline">sin 90 = 1</span> ⟹ القوة في <b>أعظم مقدار</b> لها: <span class="formula-inline">F_b = qvB</span>.</li>
+    </ul>
+  </div>
+
+  <p>واتجاه هذه القوة يُعيَّن بـ<b>قاعدة الكف اليمنى</b>: تُدار أصابع الكف من اتجاه <span class="formula-inline">v</span> نحو اتجاه <span class="formula-inline">B</span>، فيشير الإبهام إلى اتجاه القوة على الشحنة <b>الموجبة</b> (وتنعكس الاتجاه للشحنة السالبة). ولأن القوة دائماً عمودية على مستوي <span class="formula-inline">v</span> و<span class="formula-inline">B</span> معاً، فهي لا تُغيّر سرعة الشحنة أبداً — فقط تُغيّر اتجاهها، فترسم الشحنة مساراً <b>دائرياً</b> حين تكون حركتها عمودية على مجال منتظم.</p>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> شحنة تتحرك موازية لمجال مغناطيسي منتظم لا تتأثر بأي قوة مغناطيسية. <span class="wz">وزاري</span></summary>
+    <div class="ans">لأن القوة المغناطيسية F_b = qvBsinθ، وعندما تكون السرعة موازية للمجال فإن الزاوية بينهما θ=0°، وبما أن sin 0° = 0 فإن F_b = صفر، أي لا قوة تؤثر في الشحنة.</div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="tag">انتبه!</span> لماذا لا تُغيّر القوة المغناطيسية مقدار سرعة الشحنة؟</summary>
+    <div class="ans">لأن القوة المغناطيسية عمودية دائماً على متجه السرعة، وأي قوة عمودية على الحركة لا تبذل شغلاً عليها (W=Fd cos90°=0)، فلا تُغيّر طاقتها الحركية ولا مقدار سرعتها — تُغيّر اتجاهها فقط، فترسم مساراً منحنياً أو دائرياً.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">⚡</span> قوة لورنتز: حين يجتمع المجالان</div>
+  <div class="card">
+    <p>إذا وُجد مجال كهربائي <span class="formula-inline">E</span> ومجال مغناطيسي <span class="formula-inline">B</span> معاً في المنطقة نفسها، فإن محصّلة القوتين المؤثرتين في الشحنة المتحركة تُسمى <b>قوة لورنتز</b>:</p>
+  </div>
+  <div class="lawbox">
+    قوة لورنتز
+    <div class="formula">F_Lorentz = F_e + F_b</div>
+  </div>
+  <p>حيث <span class="formula-inline">F_e = qE</span> قوة المجال الكهربائي (باتجاه E للشحنة الموجبة)، و<span class="formula-inline">F_b = qvB sinθ</span> القوة المغناطيسية (عمودية على v و B معاً). القوتان مختلفتان في الاتجاه غالباً، فتُجمعان بقواعد المتجهات.</p>
+
+  <div class="section-title"><span class="ico">🔧</span> تطبيقات عملية على قوة لورنتز</div>
+  <div class="card">
+    <p><b>١) مرشِّح السرعة (Velocity Selector):</b> نُسلّط مجالاً كهربائياً E ومجالاً مغناطيسياً B متعامدين على مسار الشحنة، بحيث تدفعها القوة الكهربائية باتجاه والقوة المغناطيسية بالاتجاه المعاكس تماماً. عند التوازن:</p>
+    <div class="math" style="margin:8px 0;font-weight:800;direction:ltr;text-align:center">qE = qvB  ⟹  v = E/B</div>
+    <p>فلا تمرّ من الفتحة إلا الشحنات التي سرعتها تساوي بالضبط <span class="formula-inline">E/B</span> — مهما كانت شحنتها أو كتلتها! هذا المبدأ يُستعمل لاختيار حزمة إلكترونات بسرعة محددة قبل دخولها لجهاز آخر (كمطياف الكتلة).</p>
+    <p style="margin-top:10px"><b>٢) الراسمة الكاثودية (CRT):</b> في شاشات التلفاز والرادار القديمة، تُطلق «مدفع إلكترونات» حزمة مشحونة بسرعة ثابتة، ثم تنحرف الحزمة يميناً/يساراً وأعلى/أسفل بفعل قوة لورنتز الناتجة عن مجالات كهربائية متحكَّم بها، فترسم الصورة نقطة نقطة على الشاشة.</p>
+  </div>
+
+  <!-- ======== المحاكاة: الشحنة المتحركة في مجال مغناطيسي ======== -->
+  <div class="sim">
+    <h3>🧲 مختبر الشحنة المتحركة في مجال مغناطيسي</h3>
+    <p class="sim-sub">غيّر إشارة الشحنة والزاوية θ بين السرعة v والمجال B (المتّجه إلى داخل الصفحة ×)، وراقب مقدار القوة المغناطيسية واتجاهها.</p>
+    <canvas id="chargeSim" width="700" height="280"></canvas>
+    <div class="controls">
+      <div class="slider-group">إشارة الشحنة:
+        <select id="qSign" style="padding:8px;border-radius:10px;border:2px solid #e9ebfa;font-family:inherit;font-weight:700">
+          <option value="1">موجبة (+)</option>
+          <option value="-1">سالبة (−)</option>
+        </select></div>
+      <div class="slider-group">الزاوية θ بين v و B: <b id="thVal">٩٠°</b>
+        <input type="range" id="thR" min="0" max="180" step="5" value="90"></div>
+      <div class="slider-group">السرعة v (نسبي): <b id="vVal">٧</b>
+        <input type="range" id="vR" min="2" max="10" step="1" value="7"></div>
+    </div>
+    <div class="readout" id="chargeReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">شحنة q = 4×10⁻⁶ C تتحرك بسرعة v = 2×10⁵ m/s داخل مجال مغناطيسي منتظم B = 0.3 T، والزاوية بين السرعة والمجال 30°. احسب مقدار القوة المغناطيسية المؤثرة في الشحنة.</div>
+    <div class="givens">المعطيات: q = 4×10⁻⁶ C — v = 2×10⁵ m/s — B = 0.3 T — θ = 30° (sin30°=0.5)</div>
+    <div class="step"><b>الخطوة ١:</b> نكتب قانون القوة المغناطيسية:
+      <div class="math">F_b = q v B sinθ</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نعوّض القيم ونحسب:
+      <div class="math">F_b = 4×10⁻⁶ × 2×10⁵ × 0.3 × 0.5 = 0.12 N</div>
+      💡 لاحظ أننا لم نستعمل أعظم قيمة (qvB) لأن الزاوية ليست 90°، بل ضربنا في sin30°=0.5 فقط.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn ghost" href="index.html">الدرس التالي: قريباً 🔒</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة الشحنة المتحركة داخل مجال مغناطيسي ---------- */
+(function () {
+  var cv = document.getElementById("chargeSim"), ctx = cv.getContext("2d");
+  var qSign = document.getElementById("qSign"), thR = document.getElementById("thR"), vR = document.getElementById("vR");
+  var thVal = document.getElementById("thVal"), vVal = document.getElementById("vVal");
+  var readout = document.getElementById("chargeReadout");
+  var t = 0;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+
+  // نرسم المجال B داخلاً في الصفحة (×) على كامل الخلفية
+  function drawFieldGrid() {
+    ctx.fillStyle = "#94a3b8";
+    ctx.font = "bold 13px Cairo";
+    ctx.textAlign = "center";
+    for (var x = 40; x < cv.width; x += 55) {
+      for (var y = 30; y < cv.height - 20; y += 45) {
+        ctx.fillText("×", x, y);
+      }
+    }
+  }
+
+  function draw() {
+    t += 0.025;
+    var sign = +qSign.value, thDeg = +thR.value, vMag = +vR.value;
+    thVal.textContent = arNum(thDeg) + "°"; vVal.textContent = arNum(vMag);
+    var thRad = thDeg * Math.PI / 180;
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    drawFieldGrid();
+
+    var cx = 350, cy = 150;
+    var Bmag = 6; // ثابت تمثيلي لغرض الرسم
+
+    // متجه السرعة v عند الزاوية thDeg من محور أفقي (يمثّل اتجاه B المرجعي)
+    var vLen = 30 + vMag * 9;
+    var vx = Math.cos(thRad), vy = -Math.sin(thRad); // إحداثيات رياضية: y للأعلى
+
+    // القوة F = q * (v × B)، وB داخل الصفحة (-z). بإحداثيات رياضية: دوران v بمقدار 90° عكس عقارب الساعة يعطي اتجاه F لموجب q
+    var fx = -vy, fy = vx; // دوران 90° CCW
+    if (sign < 0) { fx = -fx; fy = -fy; }
+
+    var Fmag = Math.abs(sign) * vMag * Bmag * Math.sin(thRad);
+    var fLen = 20 + Fmag * 3.2;
+
+    // محول من إحداثيات رياضية (y للأعلى) إلى شاشة (y للأسفل)
+    function toScreen(mx, my) { return [cx + mx, cy - my]; }
+
+    // خط اتجاه B المرجعي (خفيف، أفقي) كدليل بصري
+    ctx.strokeStyle = "#c7cee0"; ctx.setLineDash([5, 4]); ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(cx - 150, cy); ctx.lineTo(cx + 150, cy); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // متجه السرعة v (أخضر)
+    var vTip = toScreen(vx * vLen, vy * vLen);
+    ctx.strokeStyle = "#059669"; ctx.fillStyle = "#059669"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(vTip[0], vTip[1]); ctx.stroke();
+    drawArrowHead(cx, cy, vTip[0], vTip[1], "#059669");
+    ctx.font = "bold 14px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("v", vTip[0] + (vx >= 0 ? 14 : -14), vTip[1] - (vy >= 0 ? 8 : -8));
+
+    // متجه القوة F (أحمر) — يُرسم فقط إن كانت له قيمة محسوسة
+    if (Fmag > 0.05) {
+      var fUnitLen = Math.sqrt(fx * fx + fy * fy) || 1;
+      var fux = fx / fUnitLen, fuy = fy / fUnitLen;
+      var fTip = toScreen(fux * fLen, fuy * fLen);
+      ctx.strokeStyle = "#dc2626"; ctx.fillStyle = "#dc2626"; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(fTip[0], fTip[1]); ctx.stroke();
+      drawArrowHead(cx, cy, fTip[0], fTip[1], "#dc2626");
+      ctx.fillText("F_b", fTip[0] + (fux >= 0 ? 18 : -18), fTip[1] - (fuy >= 0 ? 8 : -8));
+    }
+
+    // الشحنة في المركز
+    ctx.beginPath(); ctx.arc(cx, cy, 14, 0, Math.PI * 2);
+    ctx.fillStyle = sign > 0 ? "#fee2e2" : "#dbeafe";
+    ctx.fill();
+    ctx.strokeStyle = sign > 0 ? "#dc2626" : "#1e3a8a"; ctx.lineWidth = 2.5; ctx.stroke();
+    ctx.fillStyle = sign > 0 ? "#dc2626" : "#1e3a8a";
+    ctx.font = "bold 16px Cairo"; ctx.textAlign = "center";
+    ctx.fillText(sign > 0 ? "+" : "−", cx, cy + 6);
+
+    // نص توضيحي أعلى
+    ctx.fillStyle = "#334155"; ctx.font = "12px Cairo"; ctx.textAlign = "right";
+    ctx.fillText("B داخل الصفحة (×)", cv.width - 16, 22);
+
+    var noForce = thDeg === 0 || thDeg === 180;
+    readout.innerHTML = "F_b = |q|vB sinθ  —  θ=" + thDeg + "° ⟹ sinθ=" + Math.sin(thRad).toFixed(2) +
+      (noForce ? " — <b>لا قوة إطلاقاً! v موازية لـ B ✓</b>" :
+        (thDeg == 90 ? " — <b>القوة في أعظم مقدار لها ⭐</b>" : ""));
+
+    requestAnimationFrame(draw);
+  }
+
+  function drawArrowHead(x0, y0, x1, y1, color) {
+    var ang = Math.atan2(y1 - y0, x1 - x0);
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x1 - 10 * Math.cos(ang - 0.4), y1 - 10 * Math.sin(ang - 0.4));
+    ctx.lineTo(x1 - 10 * Math.cos(ang + 0.4), y1 - 10 * Math.sin(ang + 0.4));
+    ctx.closePath(); ctx.fill();
+  }
+
+  [qSign, thR, vR].forEach(function (s) { s.addEventListener("input", function () {}); });
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ما القانون الصحيح للقوة المغناطيسية المؤثرة في شحنة متحركة داخل مجال مغناطيسي منتظم؟",
+    opts: ["F_b = qvB", "F_b = qvB sinθ", "F_b = qv/B", "F_b = qBsinθ"], a: 1,
+    why: "القانون العام يتضمن الزاوية θ بين السرعة والمجال: F_b = qvB sinθ." },
+  { q: "علّل: شحنة تتحرك موازية لمجال مغناطيسي منتظم لا تتأثر بأي قوة مغناطيسية.",
+    opts: ["لأن الشحنة معدومة", "لأن θ=0° وsin0°=0 فتكون F_b=صفر", "لأن السرعة معدومة", "لأن المجال معدوم"], a: 1,
+    why: "F_b=qvBsinθ، وعندما تكون v موازية لـB فإن θ=0° وsin0°=0، فلا قوة تؤثر." },
+  { q: "شحنة q=5×10⁻⁶ C تتحرك بسرعة v=4×10⁴ m/s عمودياً على مجال B=0.2T. ما مقدار القوة المغناطيسية؟",
+    opts: ["0.04 N", "0.4 N", "4×10⁻² N", "0.04 N و 4×10⁻² N معاً (نفس القيمة)"], a: 3,
+    why: "بما أن θ=90° فإن sinθ=1، إذن F_b=qvB=5×10⁻⁶×4×10⁴×0.2=0.04N=4×10⁻²N (نفس العدد بصيغتين)." },
+  { q: "ما محصّلة القوتين الكهربائية والمغناطيسية المؤثرتين معاً في شحنة متحركة داخل مجالين متزامنين؟",
+    opts: ["قانون فاراداي", "قوة لورنتز", "قانون لينز", "القوة الدافعة الحركية"], a: 1,
+    why: "قوة لورنتز F_Lorentz = F_e + F_b هي محصّلة القوة الكهربائية والمغناطيسية معاً." },
+  { q: "في مرشّح السرعة، عند توازن القوتين الكهربائية والمغناطيسية، ما السرعة التي تمرّ من الفتحة؟",
+    opts: ["v = E×B", "v = E/B", "v = B/E", "v = qE"], a: 1,
+    why: "عند التوازن qE=qvB ⟹ v=E/B — لا تمرّ إلا الشحنات بهذه السرعة بالضبط." },
+  { q: "لماذا لا تُغيّر القوة المغناطيسية مقدار سرعة الشحنة المتحركة؟",
+    opts: ["لأنها قوة ضعيفة جداً", "لأنها عمودية دائماً على السرعة فلا تبذل شغلاً", "لأن الشحنة ثابتة", "لأن المجال ضعيف"], a: 1,
+    why: "القوة المغناطيسية عمودية دائماً على v، وأي قوة عمودية على الحركة لا تبذل شغلاً (W=Fdcos90°=0) فلا تُغيّر الطاقة الحركية." }
+], { onDone: function (stars) { Phy.setLesson("g6c2", "1", { stars: stars }); } });
+</script>
+</body>
+</html>

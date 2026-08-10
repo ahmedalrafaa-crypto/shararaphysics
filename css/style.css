@@ -745,6 +745,30 @@ footer.site::before {
 .theme-g6c1 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(67, 56, 202, .35); }
 .theme-g6c1 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(67, 56, 202, .45); }
 
+/* السادس الإعدادي — الفصل الثاني: الحث الكهرومغناطيسي — أحمر/أزرق (أقطاب N/S) */
+.theme-g6c2 {
+  --violet: #b91c1c;
+  --blue: #1e3a8a;
+  --shadow: 0 10px 30px rgba(185, 28, 28, 0.10);
+  --shadow-lift: 0 16px 40px rgba(185, 28, 28, 0.18);
+}
+.theme-g6c2::before { background: radial-gradient(circle, #b91c1c, transparent 70%); }
+.theme-g6c2::after { background: radial-gradient(circle, #1e3a8a, transparent 70%); }
+.theme-g6c2 .hero::before { content: "🧲"; }
+.theme-g6c2 .path::before { border-inline-start-color: #f6d2d2; }
+.theme-g6c2 .node:not(.done):not(.exam) .dot { border-color: #f6d2d2; }
+.theme-g6c2 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(185, 28, 28, 0.30); }
+.theme-g6c2 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(185, 28, 28, .35); }
+.theme-g6c2 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(185, 28, 28, .45); }
+
+/* عقدة درس لم يُنشر بعد — ضمن خريطة الفصل */
+.node.locked { opacity: .55; filter: grayscale(.35); pointer-events: none; }
+.node.locked .info::after {
+  content: "قريباً 🔒"; display: inline-block; margin-inline-start: 8px;
+  background: var(--ink); color: #fff; font-size: .68rem; font-weight: 800;
+  padding: 1px 9px; border-radius: 999px; vertical-align: middle;
+}
+
 /* ====== مكوّنات الفصل الثامن (مصادر الطاقة) ====== */
 /* لوحة صور الطاقة */
 .formgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 10px; margin: 10px 0; }
