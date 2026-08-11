@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: قانون فاراداي — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثاني</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔔 الدرس 4: قانون فاراداي</h1>
+    <p>تعلّمتَ في الدرس الماضي أن أي تغيّر في الفيض المغناطيسي يولّد قوة دافعة محتثة. لكن كم مقدارها بالضبط؟ قانون فاراداي يعطيك الجواب الرياضي الدقيق الذي يصلح لأي حالة حث — بلا استثناء.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🧲</span>
+    <span>جرّب هذا ذهنياً: لو أدخلتَ مغناطيساً <b>ببطء شديد</b> داخل ملف موصول بمصباح صغير، سيومض المصباح بخفوت بالكاد يُلاحَظ. لكن لو دفعتَ <b>نفس المغناطيس</b> داخل <b>نفس الملف</b> بسرعة أكبر بكثير… يتوهّج المصباح فجأة أقوى بكثير! لم يتغيّر المغناطيس ولا الملف — تغيّرت السرعة فقط. قانون فاراداي يفسّر بالضبط لماذا.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔔</span> نص القانون وصيغته</div>
+  <div class="card">
+    <p>ينصّ <b>قانون فاراداي</b> على أن مقدار القوة الدافعة المحتثة يتناسب طردياً مع <b>المعدّل الزمني</b> للتغيّر في الفيض المخترق للدائرة — لا مع مقدار التغيّر وحده. وإذا كانت الدائرة ملفاً عدد لفّاته <span class="formula-inline">N</span>:</p>
+  </div>
+  <div class="lawbox">
+    قانون فاراداي
+    <div class="formula">ε_ind = − N × (ΔΦ_B/Δt)</div>
+  </div>
+  <p>الإشارة السالبة تشير إلى أن القوة الدافعة المحتثة <b>تعارض دائماً</b> التغيّر الذي ولّدها — وهذا هو قانون لنز الذي ستدرسه بالتفصيل في الدرس القادم. لحساب <b>مقدار</b> القوة الدافعة فقط، يمكنك إهمال الإشارة والتعويض بالقيم المطلقة.</p>
+
+  <div class="section-title"><span class="ico">🔁</span> لماذا يظهر عدد اللفّات N؟</div>
+  <div class="card">
+    <p>ملف من <span class="formula-inline">N</span> لفة هو فعلياً <span class="formula-inline">N</span> حلقات موصولة على التوالي، كل واحدة منها تخترقها نفس التغيّر في الفيض فتولّد قوتها الدافعة الخاصة بها. وبما أنها متتالية، تُجمع قواها الدافعة تماماً كما تُجمع فولتية بطاريات موصولة على التوالي — فيكون المجموع <span class="formula-inline">N</span> ضعف قوة اللفة الواحدة.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> يُصنع المولّد الكهربائي من ملف بعدد لفّات كبير جداً، لا من لفة واحدة. <span class="wz">وزاري</span></summary>
+    <div class="ans">لأن القوة الدافعة المحتثة تتناسب طردياً مع عدد اللفات N (ε=NΔΦ/Δt). فزيادة عدد اللفات تزيد القوة الدافعة الناتجة عن نفس معدّل تغيّر الفيض، دون الحاجة لتحريك المغناطيس أسرع أو استعمال مجال أقوى.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">⏱️</span> حالة عملية: تغيّر كثافة الفيض B فقط</div>
+  <div class="card">
+    <p>أكثر حالة تطبيقية شيوعاً: تبقى مساحة الحلقة وزاويتها ثابتتين، ويتغيّر <b>B</b> فقط (بتقريب مغناطيس أو إبعاده). تُصبح الصيغة العملية:</p>
+  </div>
+  <div class="lawbox">
+    حالة تغيّر B فقط (A وθ ثابتتان، θ=0)
+    <div class="formula">ε_ind = N A (ΔB/Δt)</div>
+  </div>
+  <div class="notebox">
+    <b>💡 افهمها ولا تحفظها:</b>
+    <p style="margin-top:6px">القوة الدافعة المحتثة لا تهتم بـ"كم تغيّر الفيض" بمفرده، بل بـ"كم كان ذلك التغيّر <b>سريعاً</b>". نفس مقدار التغيّر ΔB خلال زمن أقصر (Δt أصغر) يعطي قوة دافعة أكبر — وهذا بالضبط سرّ المصباح الذي توهّج أكثر في تجربة الحركة السريعة أعلاه.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">تحقّق!</span> طبّق قانون فاراداي على الساق المنزلقة من الدرس الثاني — هل تصل لنفس القانون ε=vBℓ؟</summary>
+    <div class="ans">نعم بالضبط! الفيض المحصور بين الساق والطرف المغلق هو Φ=Bℓx (حيث x بُعد الساق عن الطرف المغلق). وبما أن x يتغيّر بمعدّل v=Δx/Δt، فإن: ΔΦ/Δt = Bℓ(Δx/Δt) = Bℓv. وبتطبيق قانون فاراداي على لفة واحدة (N=1): ε=NΔΦ/Δt=Bℓv — نفس قانون القوة الدافعة الحركية تماماً! قانون فاراداي هو الصورة الشاملة التي تختصر كل حالات الحث الخاصة في قانون واحد.</div>
+  </details>
+
+  <!-- ======== المحاكاة: ميل خط تغيّر الفيض ======== -->
+  <div class="sim">
+    <h3>⏱️ مختبر السرعة والقوة الدافعة</h3>
+    <p class="sim-sub">غيّر عدد لفّات الملف N، ومقدار تغيّر كثافة الفيض ΔB، والزمن المستغرق Δt، وراقب كيف يزداد ميل الخط (=المعدّل الزمني ΔB/Δt) والقوة الدافعة المحتثة كلما كان التغيّر أسرع.</p>
+    <canvas id="faradaySim" width="700" height="280"></canvas>
+    <div class="controls">
+      <div class="slider-group">عدد اللفّات N: <b id="nVal">٢٠</b>
+        <input type="range" id="nR" min="1" max="100" step="1" value="20"></div>
+      <div class="slider-group">تغيّر كثافة الفيض ΔB (تسلا): <b id="dbVal">٠.٥</b>
+        <input type="range" id="dbR" min="0.1" max="1" step="0.1" value="0.5"></div>
+      <div class="slider-group">الزمن المستغرق Δt (ثانية): <b id="dtVal">٠.٥</b>
+        <input type="range" id="dtR" min="0.1" max="2" step="0.1" value="0.5"></div>
+    </div>
+    <div class="readout" id="faradayReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">ملف من 50 لفة، مساحة اللفة 20cm²، تغيّرت كثافة الفيض من صفر إلى 0.8T خلال 0.4s (متجه المساحة يوازي المجال طوال الوقت). احسب: ① القوة الدافعة المحتثة ② التيار المحتث إذا كانت مقاومة الملف R=80Ω.</div>
+    <div class="givens">المعطيات: N = 50 — A = 20cm² = 20×10⁻⁴ m² — ΔB = 0.8T − 0.0T = 0.8T — Δt = 0.4s — R = 80Ω</div>
+    <div class="step"><b>الخطوة ١:</b> نطبّق صيغة تغيّر B فقط (بعد تحويل المساحة لمتر مربع):
+      <div class="math">ε = N A (ΔB/Δt) = 50 × 20×10⁻⁴ × (0.8/0.4) = 0.2 V</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نوجد التيار المحتث بقانون أوم:
+      <div class="math">I = ε/R = 0.2/80 = 2.5×10⁻³ A</div>
+      ⚠️ انتبه دائماً لتحويل المساحة من cm² إلى m² قبل التعويض (20cm² = 20×10⁻⁴ m²) — من أكثر أخطاء الأسئلة الوزارية شيوعاً.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn ghost" href="lesson5.html">الدرس التالي: قانون لنز 🔄</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة ميل خط تغيّر الفيض (علاقة ثابتة: تعيد الرسم عند التبديل فقط) ---------- */
+(function () {
+  var cv = document.getElementById("faradaySim"), ctx = cv.getContext("2d");
+  var nR = document.getElementById("nR"), dbR = document.getElementById("dbR"), dtR = document.getElementById("dtR");
+  var nVal = document.getElementById("nVal"), dbVal = document.getElementById("dbVal"), dtVal = document.getElementById("dtVal");
+  var readout = document.getElementById("faradayReadout");
+
+  var A_FIXED = 0.01; // م² (ثابتة لغرض المختبر)
+  var ox = 80, oy = 230, exX = 650, exY = 40, tMax = 2.2, bMax = 1.1;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function xs(t) { return ox + (t / tMax) * (exX - ox); }
+  function ys(b) { return oy - (b / bMax) * (oy - exY); }
+
+  function arrow(x0, y0, x1, y1, color) {
+    ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+    var ang = Math.atan2(y1 - y0, x1 - x0);
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x1 - 8 * Math.cos(ang - 0.45), y1 - 8 * Math.sin(ang - 0.45));
+    ctx.lineTo(x1 - 8 * Math.cos(ang + 0.45), y1 - 8 * Math.sin(ang + 0.45));
+    ctx.closePath(); ctx.fill();
+  }
+
+  function draw() {
+    var N = +nR.value, dB = +dbR.value, dt = +dtR.value;
+    nVal.textContent = arNum(N); dbVal.textContent = arNum(dB.toFixed(1)); dtVal.textContent = arNum(dt.toFixed(1));
+
+    var rate = dB / dt, eps = N * A_FIXED * rate;
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    ctx.fillStyle = "#334155"; ctx.font = "12px Cairo"; ctx.textAlign = "left";
+    ctx.fillText("المساحة A = 0.01 m² (ثابتة) — عدد اللفّات N=" + arNum(N), ox, 20);
+
+    arrow(ox, oy, exX, oy, "#334155");
+    arrow(ox, oy, ox, exY, "#334155");
+    ctx.fillStyle = "#334155"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("t (s)", exX - 15, oy + 24);
+    ctx.fillText("B (T)", ox, exY - 12);
+
+    var px = xs(dt), py = ys(dB);
+
+    ctx.strokeStyle = "#94a3b8"; ctx.setLineDash([5, 4]); ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(ox, py); ctx.lineTo(px, py); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(px, oy); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = "#64748b"; ctx.font = "12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("Δt=" + arNum(dt.toFixed(1)) + "s", (ox + px) / 2, py - 8 < exY ? exY + 14 : py - 8);
+    ctx.save(); ctx.translate(px + 16, (py + oy) / 2); ctx.rotate(-Math.PI / 2); ctx.fillText("ΔB=" + arNum(dB.toFixed(1)) + "T", 0, 0); ctx.restore();
+
+    ctx.strokeStyle = "#059669"; ctx.lineWidth = 4; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(px, py); ctx.stroke();
+    ctx.lineCap = "butt";
+    ctx.fillStyle = "#059669"; ctx.beginPath(); ctx.arc(px, py, 6, 0, Math.PI * 2); ctx.fill();
+
+    readout.innerHTML = "الميل = ΔB/Δt = " + arNum(rate.toFixed(2)) + " T/s &nbsp;|&nbsp; ε = N·A·(ΔB/Δt) = " + arNum(eps.toFixed(3)) + " V";
+  }
+
+  [nR, dbR, dtR].forEach(function (s) { s.addEventListener("input", draw); });
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ماذا ينص قانون فاراداي؟",
+    opts: ["القوة الدافعة المحتثة تتناسب طردياً مع الفيض المغناطيسي نفسه", "القوة الدافعة المحتثة تتناسب طردياً مع المعدّل الزمني لتغيّر الفيض", "التيار المحتث يتناسب عكسياً مع عدد لفّات الملف", "الفيض المغناطيسي يساوي صفراً دائماً داخل الملفات"], a: 1,
+    why: "قانون فاراداي: ε=−NΔΦ_B/Δt — القوة الدافعة تتناسب مع معدّل تغيّر الفيض عبر الزمن، لا مع الفيض نفسه." },
+  { q: "ما الصيغة الرياضية الصحيحة لقانون فاراداي لملف عدد لفّاته N؟",
+    opts: ["ε = N ΔΦ_B × Δt", "ε = −N (ΔΦ_B/Δt)", "ε = ΔΦ_B/(NΔt)", "ε = N/ΔΦ_B"], a: 1,
+    why: "الصيغة الصحيحة: ε=−N(ΔΦ_B/Δt)، والإشارة السالبة من قانون لنز." },
+  { q: "علل: يُصنع المولّد الكهربائي من ملف بعدد لفّات كبير جداً، لا من لفة واحدة.",
+    opts: ["لأن القوة الدافعة المحتثة تتناسب طردياً مع عدد اللفّات N", "لأن اللفة الواحدة لا تولّد أي قوة دافعة إطلاقاً", "لأن كثرة اللفّات تُلغي مقاومة الملف", "لا فائدة حقيقية من زيادة عدد اللفّات"], a: 0,
+    why: "كل لفة تضيف قوتها الدافعة الخاصة، وتُجمع اللفات على التوالي، فتتناسب ε طردياً مع N." },
+  { q: "ملف تغيّر الفيض المخترق له بنفس المقدار مرتين: مرة خلال 2 ثانية، ومرة خلال 0.5 ثانية فقط. متى تكون القوة الدافعة المحتثة أكبر؟",
+    opts: ["عندما يحصل التغيّر خلال 0.5 ثانية (تغيّر أسرع)", "عندما يحصل التغيّر خلال 2 ثانية (تغيّر أبطأ)", "القوة الدافعة نفسها في الحالتين", "لا علاقة بين الزمن والقوة الدافعة"], a: 0,
+    why: "ε تتناسب عكسياً مع Δt لنفس مقدار ΔΦ، فكلما كان التغيّر أسرع (Δt أصغر) كانت ε أكبر." },
+  { q: "ملف من 50 لفة مساحة اللفة 20cm²، تغيّرت كثافة الفيض من صفر إلى 0.8T خلال 0.4s (متجه المساحة يوازي المجال). ما مقدار القوة الدافعة المحتثة؟",
+    opts: ["0.2 V", "2 V", "0.02 V", "20 V"], a: 0,
+    why: "ε=NA(ΔB/Δt)=50×20×10⁻⁴×(0.8/0.4)=50×0.002×2=0.2V." },
+  { q: "ماذا تدل الإشارة السالبة في قانون فاراداي ε=−N(ΔΦ_B/Δt)؟",
+    opts: ["أن القوة الدافعة المحتثة سالبة دائماً فعلياً كعدد", "أن القوة الدافعة المحتثة تعارض دائماً التغيّر الذي ولّدها (قانون لنز)", "أن الفيض المغناطيسي سالب دائماً", "لا معنى فيزيائي لها، مجرد اصطلاح رياضي"], a: 1,
+    why: "الإشارة السالبة تعبّر عن قانون لنز: القوة الدافعة المحتثة تعارض التغيّر الذي أنتجها، وليست مجرد اصطلاح شكلي." }
+], { onDone: function (stars) { Phy.setLesson("g6c2", "4", { stars: stars }); } });
+</script>
+</body>
+</html>

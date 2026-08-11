@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: الفيض المغناطيسي — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثاني</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>🌀 الدرس 3: الفيض المغناطيسي</h1>
+    <p>في الدرس الماضي حسبنا القوة الدافعة المحتثة لحالة خاصة واحدة: ساق تنزلق. لكن ما الكمية العامة التي تتغيّر فعلياً في <b>كل</b> حالات الحث؟ الجواب اسمه <b>الفيض المغناطيسي</b> — وبفهمه ستفهم قانون فاراداي وقانون لنز اللذين ستدرسهما بعده مباشرة.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">☀️</span>
+    <span>لماذا تُركَّب ألواح الطاقة الشمسية بزاوية ميل محسوبة بدقة، لا أفقياً ولا عمودياً عشوائياً؟ لأن كمية <b>الضوء الفعلية</b> التي "تخترق" اللوح لا تعتمد على مساحته فقط، بل على زاوية ميله بالنسبة لأشعة الشمس أيضاً. نفس الفكرة بالضبط تحكم المغناطيسية: <b>الفيض المغناطيسي</b> هو مقياس لعدد خطوط المجال التي تخترق حلقة ما عمودياً — لا التي تمرّ بمحاذاتها فقط.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🌀</span> تعريف الفيض المغناطيسي</div>
+  <div class="card">
+    <p>تخيّل حلقة موصلة داخل مجال مغناطيسي. <b>الفيض المغناطيسي</b> <span class="formula-inline">Φ_B</span> يعتمد على ثلاثة عوامل: كثافة الفيض <span class="formula-inline">B</span>، مساحة الحلقة <span class="formula-inline">A</span>، والزاوية <span class="formula-inline">θ</span> بين <b>متجه المساحة</b> (الخط العمودي على مستوي الحلقة) ومتجه المجال:</p>
+  </div>
+  <div class="lawbox">
+    الفيض المغناطيسي
+    <div class="formula">Φ_B = B A cos θ</div>
+  </div>
+  <p>ووحدة الفيض في النظام الدولي هي <b>الويبر (Wb)</b>.</p>
+
+  <div class="notebox">
+    <b>افهمها ولا تحفظها — حالتان حديّتان:</b>
+    <ul>
+      <li>إذا واجه متجه المساحة المجال <b>مباشرة</b> (<span class="formula-inline">θ=0°</span>)، فإن <span class="formula-inline">cos 0° = 1</span> ⟹ الفيض في <b>أعظم مقدار</b> له: <span class="formula-inline">Φ = BA</span>.</li>
+      <li>إذا كان متجه المساحة <b>عمودياً</b> على المجال (<span class="formula-inline">θ=90°</span>، أي مستوى الحلقة يوازي المجال)، فإن <span class="formula-inline">cos 90° = 0</span> ⟹ <b>الفيض صفر</b> مهما كانت مساحة الحلقة أو قوة المجال.</li>
+    </ul>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">انتبه!</span> لا تخلط بين جيب الزاوية sinθ (الدرس الماضي) وجيب تمامها cosθ (هذا الدرس)</summary>
+    <div class="ans">في الدرس الأول استعملنا الجيب F_b=qvBsinθ لأن الزاوية θ هناك كانت بين متجه <b>السرعة</b> ومتجه المجال. أما هنا فالزاوية θ بين متجه <b>المساحة</b> (العمودي على الحلقة) ومتجه المجال، لذلك نستعمل جيب التمام cosθ. اقرأ السؤال جيداً لتعرف أي زاوية أُعطيت لك قبل اختيار الدالة المثلثية المناسبة.</div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> عندما يوازي مستوى حلقة موصلة خطوط مجال مغناطيسي منتظم، يكون الفيض المخترق لها صفراً. <span class="wz">وزاري</span></summary>
+    <div class="ans">لأن متجه المساحة (العمودي على مستوى الحلقة) يكون حينئذٍ عمودياً على المجال، أي θ=90°. وبما أن cos90°=0 فإن Φ_B=BAcos90°=صفر — بمعنى أن خطوط المجال "تنزلق" بمحاذاة سطح الحلقة دون أن تخترقه فعلياً.</div>
+  </details>
+
+  <!-- ======== المحاكاة: دوران الحلقة داخل المجال ======== -->
+  <div class="sim">
+    <h3>🌀 مختبر دوران الحلقة</h3>
+    <p class="sim-sub">أدر الحلقة (الخط السميك يمثّل حافتها من الجانب) وغيّر نصف قطرها وكثافة الفيض، وراقب كيف يتغيّر الفيض المخترق لها — أعظمياً عند θ=0° وصفراً عند θ=90°.</p>
+    <canvas id="fluxSim" width="700" height="280"></canvas>
+    <div class="controls">
+      <div class="slider-group">كثافة الفيض B (تسلا): <b id="bVal">٠.٥</b>
+        <input type="range" id="bR" min="0.2" max="1" step="0.1" value="0.5"></div>
+      <div class="slider-group">نصف قطر الحلقة r (م): <b id="rVal">٠.٢٠</b>
+        <input type="range" id="rR" min="0.1" max="0.5" step="0.05" value="0.2"></div>
+      <div class="slider-group">الزاوية θ بين متجه المساحة والمجال: <b id="thVal">٣٠°</b>
+        <input type="range" id="thR" min="0" max="90" step="5" value="30"></div>
+    </div>
+    <div class="readout" id="fluxReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🔑</span> ثلاث طرائق لتغيير الفيض</div>
+  <div class="card">
+    <p>بما أن <span class="formula-inline">Φ = BA cosθ</span>، فإن تغيير <b>أيٍّ</b> من عواملها الثلاثة يُغيّر الفيض، وأي تغيّر في الفيض يولّد قوة دافعة محتثة (كما ستؤكده معادلة فاراداي في الدرس القادم). هذه الطرائق الثلاث هي جذر كل ما تبقّى من هذا الفصل:</p>
+  </div>
+  <div class="notebox">
+    <b>🔑 الطرائق الثلاث:</b>
+    <ul>
+      <li><b>تغيير الزاوية θ:</b> بتدوير الحلقة داخل مجال ثابت — هذا هو مبدأ عمل كل مولّد كهربائي.</li>
+      <li><b>تغيير المساحة A:</b> بكبس الحلقة أو شدّها، فيتغيّر الفيض بمقدار <span class="formula-inline">ΔΦ = B·ΔA</span> — وهذا قريب من فكرة الساق المنزلقة بالدرس الماضي (فالمساحة المحصورة بين الساق والطرف المغلق تكبر مع حركتها).</li>
+      <li><b>تغيير كثافة الفيض B:</b> بتقريب مغناطيس أو إبعاده، أو بإدخال الحلقة في المجال وإخراجها — وهي الطريقة التي شاهدتها في تجربة فاراداي بالدرس الماضي (تحريك المغناطيس قرب الملف).</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">حلقة دائرية قطرها 0.4m داخل مجال مغناطيسي منتظم كثافته B=0.5T. جد الفيض المخترق لها: ① حين يوازي متجه مساحتها المجال تماماً، ② حين تدور الحلقة زاوية 45° عن وضعها الأول.</div>
+    <div class="givens">المعطيات: القطر = 0.4m ⟹ نصف القطر r = 0.2m — B = 0.5T (استعمل π≈3.14)</div>
+    <div class="step"><b>الخطوة ١:</b> نوجد مساحة الحلقة:
+      <div class="math">A = πr² = 3.14 × (0.2)² = 12.56×10⁻² m²</div></div>
+    <div class="step"><b>الخطوة ٢:</b> عند θ=0° (المتجه يوازي المجال):
+      <div class="math">Φ = BA = 0.5 × 12.56×10⁻² = 6.28×10⁻² Wb</div></div>
+    <div class="step"><b>الخطوة ٣:</b> عند θ=45°:
+      <div class="math">Φ = BA cos45° = 6.28×10⁻² × 0.707 = 4.44×10⁻² Wb</div>
+      💡 لاحظ أن الفيض قلّ بعد الدوران رغم أن B وA لم يتغيّرا — الزاوية وحدها غيّرته.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn ghost" href="lesson4.html">الدرس التالي: قانون فاراداي 🔔</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة دوران الحلقة داخل مجال مغناطيسي (فيض ثابت غير متحرك: تعيد الرسم عند التبديل فقط) ---------- */
+(function () {
+  var cv = document.getElementById("fluxSim"), ctx = cv.getContext("2d");
+  var bR = document.getElementById("bR"), rR = document.getElementById("rR"), thR = document.getElementById("thR");
+  var bVal = document.getElementById("bVal"), rVal = document.getElementById("rVal"), thVal = document.getElementById("thVal");
+  var readout = document.getElementById("fluxReadout");
+  var cx = 350, cy = 140;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+
+  function arrow(x0, y0, x1, y1, color) {
+    ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+    var ang = Math.atan2(y1 - y0, x1 - x0);
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x1 - 9 * Math.cos(ang - 0.45), y1 - 9 * Math.sin(ang - 0.45));
+    ctx.lineTo(x1 - 9 * Math.cos(ang + 0.45), y1 - 9 * Math.sin(ang + 0.45));
+    ctx.closePath(); ctx.fill();
+  }
+
+  function drawFieldArrows() {
+    var rows = [50, 95, 185, 230];
+    rows.forEach(function (y) {
+      for (var x = 70; x < 610; x += 95) arrow(x, y, x + 68, y, "#0284c7");
+    });
+    ctx.fillStyle = "#0284c7"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "right";
+    ctx.fillText("B", 645, 20);
+  }
+
+  function draw() {
+    var B = +bR.value, r = +rR.value, thDeg = +thR.value;
+    bVal.textContent = arNum(B.toFixed(1)); rVal.textContent = arNum(r.toFixed(2)); thVal.textContent = arNum(thDeg) + "°";
+    var thRad = thDeg * Math.PI / 180;
+    var A = Math.PI * r * r;
+    var cosTh = Math.cos(thRad);
+    var Phi = B * A * cosTh;
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    drawFieldArrows();
+
+    var Rv = 40 + r * 120;
+    // حافة الحلقة (تُرى من الجانب): عمودية عند θ=0 (تواجه المجال) وأفقية عند θ=90 (توازي المجال)
+    var edx = -Math.sin(thRad), edy = Math.cos(thRad);
+    var x1 = cx - Rv * edx, y1 = cy - Rv * edy, x2 = cx + Rv * edx, y2 = cy + Rv * edy;
+
+    ctx.lineCap = "round";
+    ctx.strokeStyle = thDeg <= 85 ? "#059669" : "#dc2626";
+    ctx.lineWidth = 12;
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    ctx.lineCap = "butt";
+
+    // متجه المساحة (عمودي على حافة الحلقة) — يوازي المجال عند θ=0
+    var ndx = Math.cos(thRad), ndy = -Math.sin(thRad);
+    arrow(cx, cy, cx + ndx * 60, cy + ndy * 60, "#dc2626");
+    ctx.fillStyle = "#dc2626"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("متجه المساحة", cx + ndx * 60, cy + ndy * 60 + (ndy <= 0 ? -10 : 20));
+
+    ctx.fillStyle = "#334155"; ctx.font = "12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("الحلقة (حافتها من الجانب)", cx, cy + Rv + 24 > 260 ? 258 : cy + Rv + 24);
+
+    readout.innerHTML = "A = πr² = " + arNum(A.toFixed(3)) + " m² &nbsp;|&nbsp; cosθ = " + arNum(cosTh.toFixed(2)) +
+      " &nbsp;|&nbsp; Φ = BAcosθ = " + arNum(Phi.toFixed(3)) + " Wb" +
+      (thDeg === 0 ? " — <b>أعظم فيض ⭐</b>" : (thDeg === 90 ? " — <b>الفيض صفر تماماً ✓</b>" : ""));
+  }
+
+  [bR, rR, thR].forEach(function (s) { s.addEventListener("input", draw); });
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ما الفيض المغناطيسي Φ_B فيزيائياً؟",
+    opts: ["قوة المجال المغناطيسي عند نقطة معينة", "مقياس لعدد خطوط المجال التي تخترق مساحة معينة عمودياً", "سرعة تغيّر المجال المغناطيسي", "الشحنة الكلية للمغناطيس"], a: 1,
+    why: "الفيض Φ_B=BAcosθ يقيس مقدار خطوط المجال المخترقة لمساحة الحلقة عمودياً، لا مجرد وجود المجال." },
+  { q: "ما وحدة قياس الفيض المغناطيسي في النظام الدولي؟",
+    opts: ["تسلا (T)", "أمبير (A)", "ويبر (Wb)", "فاراد (F)"], a: 2,
+    why: "وحدة الفيض المغناطيسي هي الويبر Wb، بينما التسلا T هي وحدة كثافة الفيض B." },
+  { q: "حلقة مساحتها 0.1 m² داخل مجال كثافته 0.4T، ومتجه مساحتها يوازي المجال تماماً (θ=0°). ما مقدار الفيض؟",
+    opts: ["0.04 Wb", "0.4 Wb", "4 Wb", "صفر"], a: 0,
+    why: "عند θ=0°: Φ=BA=0.4×0.1=0.04 Wb (لأن cos0°=1)." },
+  { q: "نفس الحلقة السابقة، لكن أُديرت حتى صار مستواها موازياً لخطوط المجال تماماً. ما مقدار الفيض الآن؟",
+    opts: ["0.04 Wb (لم يتغيّر)", "0.02 Wb", "صفر", "0.08 Wb"], a: 2,
+    why: "مستوى الحلقة موازٍ للمجال يعني متجه مساحتها عمودي عليه، أي θ=90°، وcos90°=0 ⟹ Φ=صفر." },
+  { q: "أيٌّ من التالي ليس من الطرائق الثلاث لتغيير الفيض المغناطيسي المخترق لحلقة؟",
+    opts: ["تغيير زاوية ميل الحلقة داخل المجال", "تغيير مساحة الحلقة", "تغيير كثافة الفيض المغناطيسي B", "تغيير درجة حرارة الحلقة"], a: 3,
+    why: "الطرائق الثلاث في Φ=BAcosθ هي: تغيير θ أو A أو B فقط. درجة الحرارة ليست عاملاً في القانون." },
+  { q: "علل: عندما يوازي مستوى حلقة موصلة خطوط مجال مغناطيسي منتظم، يكون الفيض المخترق لها صفراً.",
+    opts: ["لأن متجه مساحتها يصبح عمودياً على المجال (θ=90°) وcos90°=0", "لأن مساحة الحلقة تصبح صفراً فعلياً", "لأن المجال نفسه ينعدم عندها", "لأن الحلقة تفقد موصليتها"], a: 0,
+    why: "متجه المساحة عمودي دائماً على مستوى الحلقة، فإذا وازى المستوى المجالَ صار المتجه عمودياً عليه (θ=90°) فيصبح الفيض صفراً." }
+], { onDone: function (stars) { Phy.setLesson("g6c2", "3", { stars: stars }); } });
+</script>
+</body>
+</html>

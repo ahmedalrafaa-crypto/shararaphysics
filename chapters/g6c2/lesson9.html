@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 9: التطبيقات العملية — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثاني</a> / الدرس 9</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔧 الدرس 9: التطبيقات العملية</h1>
+    <p>وصلتَ لخاتمة فصل الحث الكهرومغناطيسي! بعد أن تعلّمتَ قوة لورنتز، والقوة الدافعة الحركية، والفيض، وقانونَي فاراداي ولنز، والحث الذاتي والمتبادل — حان وقت رؤية هذه القوانين مجتمعةً في ثلاثة أجهزة تستعملها فعلياً كل أسبوع.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔍</span>
+    <span>بطاقة بنكية، غيتار كهربائي، وموقد مطبخ — ثلاثة أشياء لا يبدو أن بينها أي صلة. لكن الثلاثة تعمل بالضبط بنفس المبدأ الذي درسته طوال هذا الفصل: <b>تغيّر الفيض المغناطيسي يولّد تياراً محتثاً</b>. فيزياء واحدة، ثلاثة تطبيقات مختلفة كلياً.</span>
+  </div>
+
+  <!-- ======== المحاكاة: التطبيقات الثلاثة ======== -->
+  <div class="sim">
+    <h3>🔧 استكشف التطبيقات الثلاثة</h3>
+    <p class="sim-sub">اختر تطبيقاً لترى مخططه المبسّط وتفسيره الفيزيائي.</p>
+    <canvas id="appSim" width="700" height="240"></canvas>
+    <div class="controls">
+      <div class="slider-group">التطبيق:
+        <select id="appSel" style="padding:8px;border-radius:10px;border:2px solid #e9ebfa;font-family:inherit;font-weight:700">
+          <option value="card">💳 البطاقة الممغنطة</option>
+          <option value="guitar">🎸 القيثار الكهربائي</option>
+          <option value="cooker">🍳 الطباخ الحثّي</option>
+        </select></div>
+    </div>
+    <div class="readout" id="appReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">💳</span> البطاقة الممغنطة</div>
+  <div class="card">
+    <p>عند تمرير البطاقة (شريطها الممغنط يخزّن معلوماتك كنقاط ممغنطة متتالية) أمام ملف سلكي داخل جهاز القراءة، يتغيّر الفيض المخترق للملف بسرعة بسبب حركة الشريط، فيُحتثّ فيه — <b>بقانون فاراداي</b> — تيار كهربائي يحمل نمط النقاط الممغنطة، يُضخَّم ثم يُحوَّل إلى نبضات فولطية تحمل معلوماتك.</p>
+    <p style="margin-top:8px">🔗 <b>المبدأ المستعمل:</b> قانون فاراداي (الدرس 4) — كلما مرّرت البطاقة أسرع، زاد معدّل تغيّر الفيض، وقويت النبضات المقروءة (ولهذا تفشل القراءة أحياناً إن مررتها ببطء شديد!).</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🎸</span> القيثار الكهربائي</div>
+  <div class="card">
+    <p>أوتاره معدنية فيرومغناطيسية (تتأثر بالمغناطيسية)، وتحتها ملفات ملفوفة حول مغناطيس دائم. اهتزاز الوتر بعد نقره يُغيّر باستمرار الفيض المخترق للملف، فيُحتثّ — بقانون فاراداي أيضاً — تيار متناوب بنفس تردد اهتزاز الوتر بالضبط، يُرسَل لمضخّم الصوت فتسمعه نغمة موسيقية.</p>
+    <p style="margin-top:8px">🔗 <b>المبدأ المستعمل:</b> قانون فاراداي + فكرة "تغيّر الفيض بتغيّر الموضع" (الدرس 3) — اهتزاز الوتر يغيّر موضعه النسبي من الملف تكراراً، فيتغيّر الفيض تبعاً له.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🍳</span> الطبّاخ الحثّي</div>
+  <div class="card">
+    <p>ملف تحت السطح الزجاجي يمرّ فيه تيار متناوب، فيبثّ مجالاً مغناطيسياً متغيّراً باستمرار. إذا كان الإناء فوقه معدنياً مغناطيسياً (كالحديد الزهر أو الفولاذ)، تولّدت في قاعدته <b>تيارات دوّامة</b> تُسخّنه مباشرة عبر مقاومته الكهربائية — بينما يبقى السطح الزجاجي نفسه بارداً نسبياً لأنه مادة عازلة لا تتأثر بالحث.</p>
+  </div>
+  <div class="notebox">
+    <b>💡 افهمها ولا تحفظها:</b>
+    <p style="margin-top:6px">🔗 <b>المبدأ المستعمل:</b> التيارات الدوّامة (الدرس 5) + قانون لنز (المقاومة الحرارية الناتجة عن معارضة التيار المحتث). ولهذا بالضبط <b>لا يعمل</b> الطباخ الحثّي مع أواني الألمنيوم أو الزجاج العادية — فهي غير مغناطيسية، فلا تتولّد فيها تيارات دوّامة قوية بما يكفي للتسخين.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> يعمل الطباخ الحثّي بكفاءة مع إناء الحديد الزهر، لكنه لا يسخّن إناء الألمنيوم بنفس الكفاءة.</summary>
+    <div class="ans">لأن التيارات الدوّامة المسؤولة عن التسخين تعتمد على مدى تفاعل المعدن مغناطيسياً مع المجال المتغيّر. الحديد الزهر مادة فيرومغناطيسية قوية التفاعل، فتتولّد فيه تيارات دوّامة كبيرة تُسخّنه بكفاءة. أما الألمنيوم فموصل جيد لكنه غير مغناطيسي (نفوذيته المغناطيسية منخفضة)، فتضعف التيارات الدوّامة المتولّدة فيه ويقلّ التسخين كثيراً.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🗺️</span> خريطة الفصل كاملاً</div>
+  <div class="card">
+    <p>راجع رحلتك عبر هذا الفصل بنظرة واحدة:</p>
+    <ul style="padding-inline-start:22px;margin-top:8px;line-height:1.9">
+      <li><b>1.</b> القوة على شحنة متحركة وقوة لورنتز — أساس كل شيء</li>
+      <li><b>2.</b> القوة الدافعة المحتثة الحركية — ε=vBℓ لساق منزلقة</li>
+      <li><b>3.</b> الفيض المغناطيسي — Φ=BAcosθ وطرائقه الثلاث لتغييره</li>
+      <li><b>4.</b> قانون فاراداي — ε=−N(ΔΦ/Δt): السرعة لا المقدار وحده</li>
+      <li><b>5.</b> قانون لنز — اتجاه المعارضة، وحفظ الطاقة، والتيارات الدوّامة</li>
+      <li><b>6.</b> الحث الذاتي — الملف يقاوم تغيّر تياره هو نفسه (L، وε=−LΔI/Δt)</li>
+      <li><b>7.</b> الحث المتبادل — ملفان بلا سلك (M=√(L₁L₂))</li>
+      <li><b>8.</b> المجالات الكهربائية المحتثة — قوة تدفع الشحنات بلا أي حركة</li>
+      <li><b>9.</b> التطبيقات — البطاقة والقيثار والطباخ الحثّي</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn ghost" href="questions.html">أسئلة نهاية الفصل 🧮</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة التطبيقات الثلاثة (اختيار: تعيد الرسم عند التبديل فقط) ---------- */
+(function () {
+  var cv = document.getElementById("appSim"), ctx = cv.getContext("2d");
+  var appSel = document.getElementById("appSel");
+  var readout = document.getElementById("appReadout");
+
+  function arrow(x0, y0, x1, y1, color) {
+    ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+    var ang = Math.atan2(y1 - y0, x1 - x0);
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x1 - 8 * Math.cos(ang - 0.45), y1 - 8 * Math.sin(ang - 0.45));
+    ctx.lineTo(x1 - 8 * Math.cos(ang + 0.45), y1 - 8 * Math.sin(ang + 0.45));
+    ctx.closePath(); ctx.fill();
+  }
+
+  function drawCoil(cx, cy, r) {
+    ctx.strokeStyle = "#B45309"; ctx.lineWidth = 5;
+    ctx.beginPath(); ctx.ellipse(cx, cy, r * 0.32, r, 0, 0, Math.PI * 2); ctx.stroke();
+  }
+
+  function draw() {
+    var app = appSel.value;
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.textAlign = "center";
+
+    if (app === "card") {
+      // بطاقة بشريط ممغنط تتحرك نحو ملف قارئ
+      ctx.fillStyle = "#e0e7ff"; ctx.strokeStyle = "#4338ca"; ctx.lineWidth = 2.5;
+      ctx.beginPath(); ctx.roundRect ? ctx.roundRect(120, 90, 160, 100, 10) : ctx.rect(120, 90, 160, 100);
+      ctx.fill(); ctx.stroke();
+      ctx.fillStyle = "#334155"; ctx.fillRect(120, 112, 160, 20);
+      ctx.fillStyle = "#fff"; ctx.font = "bold 11px Cairo"; ctx.fillText("الشريط الممغنط", 200, 126);
+
+      drawCoil(520, 140, 55);
+      ctx.fillStyle = "#B45309"; ctx.font = "bold 12px Cairo"; ctx.fillText("ملف القارئ", 520, 60);
+
+      arrow(300, 140, 440, 140, "#059669");
+      ctx.fillStyle = "#059669"; ctx.font = "bold 12px Cairo"; ctx.fillText("تمرير البطاقة", 370, 125);
+
+      ctx.fillStyle = "#334155"; ctx.font = "12px Cairo";
+      ctx.fillText("الفيض المتغيّر يحثّ نبضات تيار تحمل المعلومات (قانون فاراداي)", 350, 225);
+      readout.innerHTML = "💳 <b>البطاقة الممغنطة:</b> حركة الشريط أمام الملف تُغيّر الفيض بسرعة، فتُحتثّ نبضات تيار تُقرأ كبيانات.";
+    } else if (app === "guitar") {
+      // وتر مهتز فوق ملف يحيط بمغناطيس
+      ctx.strokeStyle = "#475569"; ctx.lineWidth = 2.5;
+      ctx.beginPath(); ctx.moveTo(90, 90); ctx.lineTo(610, 90); ctx.stroke();
+
+      ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 3;
+      ctx.beginPath();
+      for (var x = 90; x <= 610; x += 4) {
+        var y = 130 + Math.sin((x - 90) / 30) * 22;
+        if (x === 90) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+      ctx.fillStyle = "#dc2626"; ctx.font = "bold 12px Cairo"; ctx.fillText("الوتر المهتزّ", 350, 105);
+
+      ctx.fillStyle = "#1e3a8a"; ctx.fillRect(330, 175, 40, 24);
+      ctx.fillStyle = "#fff"; ctx.font = "bold 11px Cairo"; ctx.fillText("N/S", 350, 191);
+      drawCoil(350, 205, 26);
+
+      ctx.fillStyle = "#334155"; ctx.font = "12px Cairo";
+      ctx.fillText("اهتزاز الوتر يُغيّر الفيض بتردده، فيُحتثّ تيار متناوب بنفس التردد", 350, 225);
+      readout.innerHTML = "🎸 <b>القيثار الكهربائي:</b> اهتزاز الوتر فوق الملف يُغيّر الفيض بتردد الاهتزاز، فيُحتثّ تيار صوتي متناوب.";
+    } else {
+      // إناء فوق ملف حثي
+      ctx.fillStyle = "#94a3b8"; ctx.fillRect(260, 70, 180, 60);
+      ctx.fillStyle = "#334155"; ctx.font = "bold 12px Cairo"; ctx.fillText("إناء معدني", 350, 105);
+
+      ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(230, 140); ctx.lineTo(470, 140); ctx.stroke();
+      ctx.fillStyle = "#64748b"; ctx.font = "11px Cairo"; ctx.fillText("سطح زجاجي بارد", 350, 155);
+
+      drawCoil(350, 190, 30);
+      ctx.fillStyle = "#B45309"; ctx.font = "bold 11px Cairo"; ctx.fillText("ملف بتيار متناوب", 350, 232);
+
+      ctx.strokeStyle = "#ea580c"; ctx.lineWidth = 2;
+      [300, 350, 400].forEach(function (x) {
+        ctx.beginPath(); ctx.arc(x, 95, 12, 0, Math.PI * 1.5); ctx.stroke();
+      });
+      ctx.fillStyle = "#ea580c"; ctx.font = "bold 11px Cairo"; ctx.fillText("تيارات دوّامة تُسخّن القاعدة", 350, 60);
+
+      readout.innerHTML = "🍳 <b>الطباخ الحثّي:</b> المجال المتغيّر يولّد تيارات دوّامة في قاعدة الإناء المعدنية فتُسخّنها مباشرة، والزجاج يبقى بارداً.";
+    }
+  }
+
+  appSel.addEventListener("change", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ما القانون الذي يفسّر عمل قارئ البطاقة الممغنطة؟",
+    opts: ["قانون فاراداي (تغيّر الفيض المخترق للملف يحتثّ تياراً)", "قانون كولوم", "قانون نيوتن الأول", "قانون باسكال"], a: 0,
+    why: "حركة الشريط الممغنط أمام الملف تُغيّر الفيض بسرعة، فيُحتثّ تيار يحمل البيانات — تطبيق مباشر لقانون فاراداي." },
+  { q: "لماذا يُصنع وتر الغيتار الكهربائي من معدن فيرومغناطيسي تحديداً؟",
+    opts: ["ليكون خفيف الوزن فقط", "ليتأثر بالمجال المغناطيسي فيُغيّر الفيض عند اهتزازه، فيُحتثّ تيار في الملف تحته", "ليكون أرخص من الأوتار العادية", "ليمنع انقطاعه أثناء العزف"], a: 1,
+    why: "الوتر الفيرومغناطيسي يتفاعل مع المجال، فاهتزازه يُغيّر الفيض المخترق للملف تكراراً، فيُحتثّ تيار صوتي." },
+  { q: "لماذا لا يعمل الطباخ الحثّي بكفاءة مع إناء ألمنيوم عادي (ضعيف المغناطيسية)؟",
+    opts: ["لأن الألمنيوم لا يتفاعل مغناطيسياً بقوة، فتضعف التيارات الدوّامة المسخّنة فيه", "لأن الألمنيوم يذوب فوراً عند التسخين", "لأن الطباخ الحثّي لا يعمل مع أي معدن إطلاقاً", "لا علاقة لنوع المعدن بالتسخين الحثّي"], a: 0,
+    why: "التسخين الحثّي يعتمد على قوة التيارات الدوّامة، وهي أضعف بكثير في المعادن غير المغناطيسية كالألمنيوم." },
+  { q: "أي ظاهرة فيزيائية مشتركة بين البطاقة الممغنطة والقيثار الكهربائي؟",
+    opts: ["كلاهما يعتمد على تغيّر الفيض المغناطيسي المخترق لملف لتوليد قوة دافعة محتثة (قانون فاراداي)", "كلاهما لا علاقة له بالحث الكهرومغناطيسي إطلاقاً", "كلاهما يستهلك طاقة نووية", "كلاهما يعتمد على الحث المتبادل فقط دون فاراداي"], a: 0,
+    why: "كلاهما يولّد تياراً محتثاً بسبب تغيّر الفيض عبر الزمن — الأول بحركة الشريط، والثاني باهتزاز الوتر." },
+  { q: "ما الظاهرة الفيزيائية التي تُسخّن قاع الإناء في الطباخ الحثّي تحديداً؟",
+    opts: ["التيارات الدوّامة الناتجة عن تغيّر الفيض المغناطيسي داخل قاعدة الإناء المعدنية", "احتكاك الإناء بالسطح الزجاجي مباشرة", "تفاعل كيميائي بين الإناء والزجاج", "أشعة تحت حمراء يُصدرها الملف"], a: 0,
+    why: "المجال المتناوب يحتثّ تيارات دوّامة داخل قاعدة الإناء نفسها، فتُسخّنها عبر مقاومتها الكهربائية." },
+  { q: "ما القاسم المشترك بين كل تطبيقات هذا الفصل — من الساق المنزلقة حتى الطباخ الحثّي؟",
+    opts: ["تغيّر الفيض المغناطيسي عبر الزمن يولّد قوة دافعة محتثة، بصرف النظر عن سبب هذا التغيّر", "كلها تحتاج بطارية داخلية لتعمل", "كلها تستعمل بالضبط نفس نوع المعدن", "لا قاسم مشترك حقيقي بينها"], a: 0,
+    why: "هذا هو محور الفصل كله: أي تغيّر في الفيض — بحركة أو دوران أو تيار متغيّر — يولّد قوة دافعة محتثة." }
+], { onDone: function (stars) { Phy.setLesson("g6c2", "9", { stars: stars }); } });
+</script>
+</body>
+</html>

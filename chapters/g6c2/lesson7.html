@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 7: الحث المتبادل — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثاني</a> / الدرس 7</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔗 الدرس 7: الحث المتبادل</h1>
+    <p>تعلّمتَ في الدرس الماضي أن الملف يحثّ قوة دافعة على <b>نفسه</b>. لكن ماذا لو أثّر ملف في ملفٍ <b>آخر</b> مجاور له، دون أي سلك يصلهما؟ هذه ظاهرة <b>الحث المتبادل</b> — وهي المبدأ الذي يقوم عليه الشحن اللاسلكي والمحوّلات الكهربائية.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🧠</span>
+    <span>هل تصدّق أن طبيباً يستطيع "الوصول" لخلايا دماغك العصبية كهربائياً، دون أي جراحة ولا حتى إبرة واحدة؟ جهاز <b>التحفيز المغناطيسي عبر الجمجمة (TMS)</b> يفعل ذلك بالضبط: ملف يُمسك فوق رأس المريض، فيه تيار متغيّر بسرعة كبيرة، يولّد مجالاً مغناطيسياً متغيّراً يخترق الدماغ ويحتثّ فيه تياراً كهربائياً ينظّم نشاط الخلايا العصبية — يُستعمل فعلياً لعلاج بعض أعراض الاكتئاب دون أي جراحة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔗</span> ملفان بلا سلك يصلهما: كيف؟</div>
+  <div class="card">
+    <p>ضع ملفين متجاورين: <b>الابتدائي</b> (١) و<b>الثانوي</b> (٢). التيار المتغيّر في الابتدائي يولّد فيضاً متغيّراً يخترق الثانوي، فتتولّد فيه قوة دافعة محتثة — <b>دون أي اتصال سلكي بينهما</b>. هذه ظاهرة الحث المتبادل. والفيض المخترق للثانوي يتناسب مع تيار الابتدائي، فنُدخل ثابت التناسب <span class="formula-inline">M</span> (معامل الحث المتبادل):</p>
+  </div>
+  <div class="lawbox">
+    الحث المتبادل بين ملفين
+    <div class="formula">N₂ Φ_B(2) = M I₁</div>
+  </div>
+  <p>وبتطبيق قانون فاراداي على الملف الثانوي (بنفس منطق الحث الذاتي بالدرس الماضي)، نحصل على القوة الدافعة المحتثة فيه بسبب تيار الابتدائي المتغيّر:</p>
+  <div class="lawbox">
+    القوة الدافعة المحتثة في الثانوي
+    <div class="formula">ε_ind(2) = − M (ΔI₁/Δt)</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🎯</span> الاقتران المغناطيسي التام</div>
+  <div class="card">
+    <p>إذا كان الملفان ملفوفين حول حلقة مغلقة واحدة من الحديد المطاوع (كما في المحوّلة الكهربائية)، مرّ <b>كل</b> الفيض الناتج من الابتدائي عبر الثانوي أيضاً — تُسمّى هذه الحالة <b>اقتراناً مغناطيسياً تاماً</b>. عندها يُعطى معامل الحث المتبادل بدلالة معاملي الحث الذاتي للملفين:</p>
+  </div>
+  <div class="lawbox">
+    معامل الحث المتبادل عند الاقتران التام
+    <div class="formula">M = √(L₁ × L₂)</div>
+  </div>
+
+  <!-- ======== المحاكاة: ملفان متجاوران ======== -->
+  <div class="sim">
+    <h3>🔗 مختبر الحث المتبادل</h3>
+    <p class="sim-sub">غيّر محاثتي الملفين L₁ وL₂ (فيُحسب M تلقائياً عند الاقتران التام)، ومعدّل تغيّر تيار الابتدائي ΔI₁/Δt، وراقب القوة الدافعة المحتثة في الثانوي.</p>
+    <canvas id="mutualSim" width="700" height="260"></canvas>
+    <div class="controls">
+      <div class="slider-group">محاثة الابتدائي L₁ (هنري): <b id="l1Val">٠.٥</b>
+        <input type="range" id="l1R" min="0.1" max="2" step="0.1" value="0.5"></div>
+      <div class="slider-group">محاثة الثانوي L₂ (هنري): <b id="l2Val">٠.٥</b>
+        <input type="range" id="l2R" min="0.1" max="2" step="0.1" value="0.5"></div>
+      <div class="slider-group">معدّل تغيّر تيار الابتدائي ΔI₁/Δt (A/s): <b id="rateVal">٢٠٠</b>
+        <input type="range" id="rateR" min="10" max="500" step="10" value="200"></div>
+    </div>
+    <div class="readout" id="mutualReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="notebox">
+    <b>💡 افهمها ولا تحفظها:</b>
+    <p style="margin-top:6px">الحث المتبادل هو مبدأ عمل <b>المحوّلة الكهربائية</b> (Transformer) التي تُغيّر فولتية التيار المتناوب في شبكات الكهرباء، وهو أيضاً أساس <b>الشحن اللاسلكي</b> للهواتف: ملف في قاعدة الشحن وملف آخر داخل الهاتف، يتبادلان الطاقة بلا أي سلك بينهما.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">ملفان متجاوران حول حلقة مقفلة من الحديد المطاوع. رُبط الابتدائي ببطارية 100V ومفتاح على التوالي، فكان معامل حثه الذاتي 0.5H ومقاومته 20Ω. احسب: ① معدّل تغيّر تيار الابتدائي لحظة الغلق ② معامل الحث المتبادل إذا تولّدت في الثانوي 40V لحظة الغلق ③ التيار الثابت في الابتدائي ④ معامل الحث الذاتي للثانوي.</div>
+    <div class="givens">المعطيات: V=100V — L₁=0.5H — R=20Ω — ε₂ لحظة الغلق = 40V</div>
+    <div class="step"><b>الخطوة ١:</b> العلاقة العامة V=L(ΔI₁/Δt)+IR، ولحظة الغلق I=0:
+      <div class="math">100 = 0.5(ΔI₁/Δt)  ⟹  ΔI₁/Δt = 200 A/s</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نطبّق قانون الحث المتبادل:
+      <div class="math">ε_ind(2) = M(ΔI₁/Δt)  ⟹  40 = M × 200  ⟹  M = 0.2 H</div></div>
+    <div class="step"><b>الخطوة ٣:</b> بعد استقرار التيار (ΔI/Δt=0)، لا قوة دافعة ذاتية، فقانون أوم وحده يحكم:
+      <div class="math">I_ثابت = V/R = 100/20 = 5 A</div></div>
+    <div class="step"><b>الخطوة ٤:</b> من علاقة الاقتران التام:
+      <div class="math">M = √(L₁L₂)  ⟹  0.2 = √(0.5×L₂)  ⟹  0.04 = 0.5L₂  ⟹  L₂ = 0.08 H</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn ghost" href="lesson8.html">الدرس التالي: المجالات الكهربائية المحتثة 🌩️</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة ملفين متجاورين (علاقة ثابتة: تعيد الرسم عند التبديل فقط) ---------- */
+(function () {
+  var cv = document.getElementById("mutualSim"), ctx = cv.getContext("2d");
+  var l1R = document.getElementById("l1R"), l2R = document.getElementById("l2R"), rateR = document.getElementById("rateR");
+  var l1Val = document.getElementById("l1Val"), l2Val = document.getElementById("l2Val"), rateVal = document.getElementById("rateVal");
+  var readout = document.getElementById("mutualReadout");
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+
+  function arrow(x0, y0, x1, y1, color) {
+    ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+    var ang = Math.atan2(y1 - y0, x1 - x0);
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x1 - 9 * Math.cos(ang - 0.45), y1 - 9 * Math.sin(ang - 0.45));
+    ctx.lineTo(x1 - 9 * Math.cos(ang + 0.45), y1 - 9 * Math.sin(ang + 0.45));
+    ctx.closePath(); ctx.fill();
+  }
+
+  function draw() {
+    var L1 = +l1R.value, L2 = +l2R.value, rate = +rateR.value;
+    l1Val.textContent = arNum(L1.toFixed(1)); l2Val.textContent = arNum(L2.toFixed(1)); rateVal.textContent = arNum(rate);
+
+    var M = Math.sqrt(L1 * L2), eps2 = M * rate;
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    var c1x = 190, c2x = 510, cy = 130, R = 60;
+
+    // قلب حديدي رابط (مستطيل خافت خلف الملفين)
+    ctx.fillStyle = "#f1f5f9"; ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 1.5;
+    ctx.fillRect(c1x - 40, cy - 18, (c2x - c1x) + 80, 36);
+    ctx.strokeRect(c1x - 40, cy - 18, (c2x - c1x) + 80, 36);
+
+    // الملف الابتدائي (أحمر)
+    ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 6;
+    ctx.beginPath(); ctx.ellipse(c1x, cy, R * 0.34, R, 0, 0, Math.PI * 2); ctx.stroke();
+    ctx.fillStyle = "#dc2626"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("الابتدائي L₁", c1x, cy - R - 16);
+    ctx.fillText("ΔI₁/Δt=" + arNum(rate) + "A/s", c1x, cy + R + 26);
+
+    // الملف الثانوي (أزرق)
+    ctx.strokeStyle = "#1e3a8a"; ctx.lineWidth = 6;
+    ctx.beginPath(); ctx.ellipse(c2x, cy, R * 0.34, R, 0, 0, Math.PI * 2); ctx.stroke();
+    ctx.fillStyle = "#1e3a8a"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("الثانوي L₂", c2x, cy - R - 16);
+    ctx.fillText("ε₂=" + arNum(eps2.toFixed(1)) + "V", c2x, cy + R + 26);
+
+    // سهم الفيض المتنقّل بينهما
+    arrow(c1x + 40, cy, c2x - 40, cy, "#059669");
+    ctx.fillStyle = "#059669"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("Φ متغيّر", (c1x + c2x) / 2, cy - 10);
+
+    ctx.fillStyle = "#334155"; ctx.font = "bold 13px Cairo";
+    ctx.fillText("M = √(L₁L₂) = " + arNum(M.toFixed(3)) + " H", (c1x + c2x) / 2, 40);
+
+    readout.innerHTML = "M = √(L₁×L₂) = " + arNum(M.toFixed(3)) + " H &nbsp;|&nbsp; ε₂ = M×(ΔI₁/Δt) = " + arNum(eps2.toFixed(1)) + " V";
+  }
+
+  [l1R, l2R, rateR].forEach(function (s) { s.addEventListener("input", draw); });
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ما المقصود بالحث المتبادل؟",
+    opts: ["تولّد قوة دافعة محتثة في ملف بسبب تغيّر التيار في ملف آخر مجاور له، دون اتصال سلكي بينهما", "تولّد قوة دافعة محتثة في الملف بسبب تغيّر تياره هو نفسه", "مرور تيار مباشر بين ملفين متصلين بسلك واحد", "تنافر دائم بين ملفين متجاورين"], a: 0,
+    why: "الحث المتبادل: تيار متغيّر في ملف يحثّ قوة دافعة في ملف مجاور، دون أي اتصال سلكي بينهما." },
+  { q: "ما الصيغة الصحيحة للقوة الدافعة المحتثة في الملف الثانوي؟",
+    opts: ["ε₂ = −M(ΔI₁/Δt)", "ε₂ = −L(ΔI₂/Δt)", "ε₂ = M × I₁ × Δt", "ε₂ = M/I₁"], a: 0,
+    why: "ε_ind(2)=−M(ΔI₁/Δt) — القوة الدافعة بالثانوي تعتمد على معدّل تغيّر تيار الابتدائي، لا تياره نفسه." },
+  { q: "متى يحدث اقتران مغناطيسي تام بين ملفين؟",
+    opts: ["عندما يكونان بعيدين جداً عن بعضهما", "عندما يُلفّان حول حلقة مغلقة واحدة من الحديد المطاوع فيمرّ كل الفيض عبر كليهما", "عندما يكون تيار كل منهما ثابتاً بلا تغيّر", "لا يحدث اقتران تام أبداً في الواقع العملي"], a: 1,
+    why: "الاقتران التام يحدث عندما يُلفّ الملفان حول قلب حديدي مغلق واحد يوجّه كل الفيض عبرهما معاً، كما في المحوّلة." },
+  { q: "ما الصيغة الصحيحة لمعامل الحث المتبادل M عند الاقتران المغناطيسي التام؟",
+    opts: ["M = L₁ + L₂", "M = √(L₁ × L₂)", "M = L₁ × L₂", "M = L₁ / L₂"], a: 1,
+    why: "عند الاقتران التام: M=√(L₁×L₂)." },
+  { q: "ملفان اقترانهما تام، محاثتاهما 2H و8H. ما مقدار معامل الحث المتبادل بينهما؟",
+    opts: ["4 H", "16 H", "10 H", "1.6 H"], a: 0,
+    why: "M=√(L₁×L₂)=√(2×8)=√16=4H." },
+  { q: "أيّ الأجهزة التالية يعتمد مبدأ عمله على الحث المتبادل؟",
+    opts: ["المحوّلة الكهربائية (Transformer) وأجهزة الشحن اللاسلكي", "المقاومة الكهربائية العادية", "البطارية الجافة", "المتسعة الكهربائية"], a: 0,
+    why: "المحوّلات والشحن اللاسلكي يعتمدان على نقل طاقة بين ملفين عبر الحث المتبادل، دون اتصال سلكي مباشر." }
+], { onDone: function (stars) { Phy.setLesson("g6c2", "7", { stars: stars }); } });
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: قانون لنز — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثاني</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔄 الدرس 5: قانون لنز</h1>
+    <p>في الدرس الماضي حسبتَ <b>مقدار</b> القوة الدافعة المحتثة بقانون فاراداي. لكن بأي <b>اتجاه</b> ينساب التيار الناتج فعلياً؟ قانون لنز يُجيب — وإجابته بسيطة ومدهشة: <b>الطبيعة تقاوم كل تغيير تسبّبه</b>.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🧲</span>
+    <span>لماذا لا يسقط مغناطيس قوي بحرّية داخل أنبوب نحاسي رأسي — رغم أن النحاس ليس مغناطيسياً ولا يجذب المغناطيس أصلاً؟ بل يهبط ببطء شديد، كأنّ يداً خفية تُمسك به! هذه اليد الخفية هي <b>قانون لنز</b>: حركة المغناطيس تُحدث تيارات دوّامية في جدار الأنبوب، وهذه التيارات تُنشئ مجالها المغناطيسي الخاص الذي يُعارض سقوط المغناطيس.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔄</span> نص قانون لنز</div>
+  <div class="card">
+    <p>ينصّ <b>قانون لنز</b> على أن التيار المحتث يمتلك اتجاهاً بحيث يكون مجاله المغناطيسي المحتث <b>معاكساً</b> لتأثير التغيّر في الفيض الذي ولّده. بعبارة أخرى: الملف "يقاوم" أي محاولة لتغيير الفيض المخترق له.</p>
+    <p>لهذا نتيجتان عمليتان تحكمان كل أسئلة "حدّد اتجاه التيار المحتث":</p>
+    <ul style="padding-inline-start:22px;margin-top:8px">
+      <li><b>عند اقتراب مغناطيس من ملف</b> (الفيض يتزايد): يولّد الملف في وجهه المواجه للمغناطيس <b>نفس نوع القطب المواجه له</b> — فيتنافران، ويُعارض هذا التنافر استمرار الاقتراب.</li>
+      <li><b>عند ابتعاد مغناطيس عن ملف</b> (الفيض يتناقص): يولّد الملف في وجهه المواجه <b>القطب المعاكس</b> — فيتجاذبان، ويُعارض هذا التجاذب استمرار الابتعاد.</li>
+    </ul>
+  </div>
+
+  <!-- ======== المحاكاة: تحديد القطب المحتث والتيار ======== -->
+  <div class="sim">
+    <h3>🔄 مختبر تحديد القطب المحتث</h3>
+    <p class="sim-sub">اختر حركة المغناطيس والقطب المواجه للملف، وشاهد أيّ قطب يتولّد في الملف، واتجاه التيار المحتث، ونوع القوة الناتجة.</p>
+    <canvas id="lenzSim" width="700" height="300"></canvas>
+    <div class="controls">
+      <div class="slider-group">حركة المغناطيس:
+        <select id="motionSel" style="padding:8px;border-radius:10px;border:2px solid #e9ebfa;font-family:inherit;font-weight:700">
+          <option value="near">يقترب من الملف</option>
+          <option value="far">يبتعد عن الملف</option>
+        </select></div>
+      <div class="slider-group">القطب المواجه للملف:
+        <select id="poleSel" style="padding:8px;border-radius:10px;border:2px solid #e9ebfa;font-family:inherit;font-weight:700">
+          <option value="N">الشمالي N</option>
+          <option value="S">الجنوبي S</option>
+        </select></div>
+    </div>
+    <div class="readout" id="lenzReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">⚖️</span> لنز حارس الطاقة</div>
+  <div class="notebox">
+    <b>💡 افهمها ولا تحفظها:</b>
+    <p style="margin-top:6px">لماذا "يقاوم" التيار المحتث دائماً؟ لأنه لو <b>ساعد</b> التغيير بدل معارضته، لتسارع المغناطيس من تلقاء نفسه وحصلنا على طاقة كهربائية مجانية بلا أي شغل — وهذا مستحيل فيزيائياً. مقاومةُ لنز تعني أنك تبذل شغلاً لتحريك المغناطيس (تقريباً أو إبعاداً)، وهذا الشغل بالذات هو مصدر الطاقة الكهربائية المتولّدة. لذا يُعدّ قانون لنز تطبيقاً مباشراً لقانون حفظ الطاقة — تماماً كما رأيتَ مع الساق المنزلقة بالدرس الثاني.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> يُعدّ قانون لنز تطبيقاً لقانون حفظ الطاقة. <span class="wz">وزاري متكرر</span></summary>
+    <div class="ans">لأن التيار المحتث يعارض دائماً التغيّر الذي ولّده (تقريب المغناطيس أو إبعاده)، فيتطلّب ذلك إنجاز شغل ميكانيكي لتحريك المغناطيس نسبةً للملف. يتحوّل هذا الشغل إلى طاقة كهربائية (ثم حرارية في الحمل) — فلا طاقة تُخلق من العدم، وهذا نصّ مبدأ حفظ الطاقة.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🌀</span> تطبيق: التيارات الدوّامة</div>
+  <div class="card">
+    <p>ماذا لو كان الموصل صفيحة معدنية كاملة بدل ملف رفيع (كما في تجربة الأنبوب النحاسي بالأعلى)؟ يتغيّر الفيض عبرها فتنشأ فيها قوة دافعة محتثة، فينساب تيار محتث في مسارات دائرية مقفلة متمركزة داخلها — تُسمّى <b>التيارات الدوّامة</b> (تشبه دوّامات الماء).</p>
+    <p style="margin-top:8px">⚠️ <b>مضرّتها:</b> تُبدّد طاقة حرارياً في قلوب الحديد للملفّات والمحوّلات، لذا تُصنع من صفائح رقيقة معزولة بدل قطعة واحدة — لتقليل مسارات التيار والحرارة المهدورة.</p>
+    <p style="margin-top:8px">⭐ <b>فائدتها:</b> تُستثمر في كاشفات المعادن، وفي الكبح المغناطيسي (صفيحة تُسحب بين قطبي مغناطيس فتتولّد قوة تعرقل حركتها — كبح بلا احتكاك، بنفس مبدأ أنبوب المغناطيس بالأعلى تماماً).</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">ملف من 50 لفة، مساحة اللفة 20cm²، تغيّرت كثافة الفيض المغناطيسي من صفر إلى 0.8T خلال 0.4s. احسب القوة الدافعة المحتثة عندما: ① يوازي متجه مساحة اللفة متجه المجال تماماً. ② يصنع متجه المجال زاوية 30° مع مستوى اللفة (لا مع متجه مساحتها).</div>
+    <div class="givens">المعطيات: N = 50 — A = 20cm² = 20×10⁻⁴ m² — ΔB = 0.8T — Δt = 0.4s</div>
+    <div class="step"><b>الخطوة ١:</b> في الحالة الأولى، متجه المساحة يوازي المجال (θ=0°)، فنطبّق القانون مباشرة:
+      <div class="math">ε₁ = N A (ΔB/Δt) = 50 × 20×10⁻⁴ × (0.8/0.4) = 0.2 V</div></div>
+    <div class="step"><b>الخطوة ٢:</b> ⚠️ انتبه: الزاوية 30° معطاة مع <b>مستوى اللفة</b>، لا مع متجه مساحتها! وبما أن متجه المساحة عمودي دائماً على المستوى:
+      <div class="math">الزاوية مع متجه المساحة = 90° − 30° = 60°</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نضرب في جيب تمام هذه الزاوية الصحيحة:
+      <div class="math">ε₂ = ε₁ × cos60° = 0.2 × 0.5 = 0.1 V</div>
+      💡 هذا الفخّ (زاوية مع المستوى بدل متجه المساحة) من أكثر أخطاء الأسئلة الوزارية شيوعاً — راجع الدرس الثالث إذا التبس عليك الفرق.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn ghost" href="lesson6.html">الدرس التالي: الحث الذاتي 🔁</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة تحديد القطب المحتث والتيار (اختيار منفصل: تعيد الرسم عند التبديل فقط) ---------- */
+(function () {
+  var cv = document.getElementById("lenzSim"), ctx = cv.getContext("2d");
+  var motionSel = document.getElementById("motionSel"), poleSel = document.getElementById("poleSel");
+  var readout = document.getElementById("lenzReadout");
+  var cx = 350;
+
+  function arrow(x0, y0, x1, y1, color) {
+    ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+    var ang = Math.atan2(y1 - y0, x1 - x0);
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x1 - 9 * Math.cos(ang - 0.45), y1 - 9 * Math.sin(ang - 0.45));
+    ctx.lineTo(x1 - 9 * Math.cos(ang + 0.45), y1 - 9 * Math.sin(ang + 0.45));
+    ctx.closePath(); ctx.fill();
+  }
+  function poleColor(p) { return p === "N" ? "#dc2626" : "#1e3a8a"; }
+
+  function draw() {
+    var approaching = motionSel.value === "near";
+    var facingPole = poleSel.value;
+    var inducedPole = approaching ? facingPole : (facingPole === "N" ? "S" : "N");
+    var interaction = approaching ? "تنافر" : "تجاذب";
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    var cyCoil = 215, Rc = 78;
+    var magCY = approaching ? 115 : 60;
+    var barW = 42, barH = 28;
+    var bottomPole = facingPole, topPole = facingPole === "N" ? "S" : "N";
+
+    // جسم المغناطيس (قطبان)
+    ctx.fillStyle = poleColor(topPole);
+    ctx.fillRect(cx - barW / 2, magCY - barH, barW, barH);
+    ctx.fillStyle = poleColor(bottomPole);
+    ctx.fillRect(cx - barW / 2, magCY, barW, barH);
+    ctx.strokeStyle = "#334155"; ctx.lineWidth = 1.5;
+    ctx.strokeRect(cx - barW / 2, magCY - barH, barW, barH * 2);
+    ctx.fillStyle = "#fff"; ctx.font = "bold 15px Cairo"; ctx.textAlign = "center";
+    ctx.fillText(topPole, cx, magCY - barH / 2 + 5);
+    ctx.fillText(bottomPole, cx, magCY + barH / 2 + 5);
+
+    // سهم الحركة (أخضر) وسهم القوة المعارضة (برتقالي) — يمين ويسار المغناطيس
+    var nearY = magCY + barH + 6, farY = nearY + 34;
+    if (approaching) {
+      arrow(cx + 60, nearY, cx + 60, farY, "#059669");
+      arrow(cx - 60, farY, cx - 60, nearY, "#ea580c");
+    } else {
+      arrow(cx + 60, farY, cx + 60, nearY, "#059669");
+      arrow(cx - 60, nearY, cx - 60, farY, "#ea580c");
+    }
+    ctx.fillStyle = "#059669"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("حركة", cx + 60, (nearY + farY) / 2 - 10);
+    ctx.fillStyle = "#ea580c";
+    ctx.fillText("معارضة", cx - 60, (nearY + farY) / 2 - 10);
+
+    // الملف
+    ctx.strokeStyle = "#B45309"; ctx.lineWidth = 6;
+    ctx.beginPath(); ctx.ellipse(cx, cyCoil, Rc, Rc * 0.32, 0, 0, Math.PI * 2); ctx.stroke();
+
+    // القطب المحتث في وجه الملف المواجه للمغناطيس
+    ctx.fillStyle = poleColor(inducedPole);
+    ctx.font = "bold 24px Cairo"; ctx.textAlign = "center";
+    ctx.fillText(inducedPole, cx, cyCoil - 16);
+
+    // سهما التيار المحتث (يسار ويمين الملف)
+    var ccw = inducedPole === "N";
+    if (ccw) {
+      arrow(cx - Rc, cyCoil - 16, cx - Rc, cyCoil + 16, "#334155");
+      arrow(cx + Rc, cyCoil + 16, cx + Rc, cyCoil - 16, "#334155");
+    } else {
+      arrow(cx - Rc, cyCoil + 16, cx - Rc, cyCoil - 16, "#334155");
+      arrow(cx + Rc, cyCoil - 16, cx + Rc, cyCoil + 16, "#334155");
+    }
+    ctx.fillStyle = "#334155"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("التيار المحتث", cx, cyCoil + Rc * 0.32 + 22);
+
+    var motionTxt = approaching ? "يقترب من" : "يبتعد عن";
+    var fluxTxt = approaching ? "يتزايد" : "يتناقص";
+    readout.innerHTML = "المغناطيس <b>" + motionTxt + "</b> الملف بقطبه <b>" + facingPole + "</b> المواجه له ⟹ الفيض <b>" + fluxTxt +
+      "</b> ⟹ الملف يولّد قطباً <b>" + inducedPole + "</b> في وجهه المواجه ⟹ <b>" + interaction + "</b> بينهما (يعارض حركة المغناطيس) — تماماً كما ينصّ قانون لنز.";
+  }
+
+  [motionSel, poleSel].forEach(function (s) { s.addEventListener("change", draw); });
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ماذا ينصّ قانون لنز؟",
+    opts: ["التيار المحتث يتجه بحيث يُعارض التغيّر في الفيض الذي ولّده", "التيار المحتث يتجه دائماً مع التغيّر في الفيض ليُسرّعه", "التيار المحتث ليس له اتجاه محدّد", "قانون لنز يحدّد مقدار التيار لا اتجاهه"], a: 0,
+    why: "نصّ قانون لنز: المجال المحتث يعارض التغيّر الذي ولّده — الطبيعة تقاوم التغيير دائماً." },
+  { q: "مغناطيس يقترب من ملف موصل بقطبه الشمالي N المواجه له. أي قطب يتولّد في وجه الملف المواجه للمغناطيس؟",
+    opts: ["قطب شمالي N (ليتنافر مع المغناطيس ويعارض اقترابه)", "قطب جنوبي S (ليتجاذب مع المغناطيس)", "لا يتولّد أي قطب", "يعتمد على مادة الملف فقط"], a: 0,
+    why: "عند الاقتراب (الفيض يتزايد)، يولّد الملف قطباً مطابقاً للقطب المواجه فيتنافران، معارضاً استمرار الاقتراب." },
+  { q: "مغناطيس يبتعد عن ملف بقطبه الجنوبي S المواجه له. ما نوع القوة بين المغناطيس والملف؟",
+    opts: ["تنافر", "تجاذب (لأن الملف يولّد قطباً شمالياً N ليعارض الابتعاد)", "لا توجد أي قوة", "تعتمد على سرعة الابتعاد فقط"], a: 1,
+    why: "عند الابتعاد (الفيض يتناقص)، يولّد الملف القطب المعاكس (N) فيتجاذبان، معارضاً استمرار الابتعاد." },
+  { q: "علل: يُعدّ قانون لنز تطبيقاً لقانون حفظ الطاقة.",
+    opts: ["لأن التيار المحتث يعارض التغيّر الذي ولّده، فيتطلّب شغلاً ميكانيكياً يتحوّل لطاقة كهربائية — لا طاقة من العدم", "لأن قانون لنز لا علاقة له بالطاقة إطلاقاً", "لأن التيار المحتث يزيد الطاقة الكلية للنظام دون أي شغل خارجي", "لأن المغناطيس يفقد طاقته الداخلية تلقائياً"], a: 0,
+    why: "لو ساعد التيار المحتث التغيير بدل معارضته لحصلنا على طاقة مجانية، وهذا مستحيل — فمقاومته تعني لزوم شغل خارجي يتحول لطاقة كهربائية." },
+  { q: "ماذا تُسمّى التيارات المحتثة التي تنساب في مسارات دائرية مقفلة داخل صفيحة معدنية كاملة (لا ملف رفيع)؟",
+    opts: ["تيارات دوّامة (فوكو)", "تيارات مستمرة", "تيارات وزارية", "تيارات ساكنة"], a: 0,
+    why: "تُسمّى التيارات الدوّامة (تيارات فوكو)، وتشبه دوّامات الماء في مسارها الدائري المغلق داخل الكتلة الموصلة." },
+  { q: "ملف من 50 لفة مساحة اللفة 20cm²، تغيّرت كثافة الفيض من صفر إلى 0.8T خلال 0.4s. إذا صنع متجه المجال زاوية 30° مع مستوى اللفة (لا مع متجه مساحتها)، ما مقدار القوة الدافعة المحتثة؟",
+    opts: ["0.1 V", "0.2 V", "0.173 V", "0.4 V"], a: 0,
+    why: "الزاوية مع متجه المساحة = 90°−30°=60°. فـε=NA(ΔB/Δt)×cos60°=0.2×0.5=0.1V." }
+], { onDone: function (stars) { Phy.setLesson("g6c2", "5", { stars: stars }); } });
+</script>
+</body>
+</html>

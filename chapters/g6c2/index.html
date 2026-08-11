@@ -10,6 +10,14 @@
 <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body class="theme-g6c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
 <div class="wrap">
 
   <div class="topbar">
@@ -32,54 +40,54 @@
         <span class="sub">القوة الكهربائية والمغناطيسية على شحنة متحركة F_B=qvBsinθ، قوة لورنتز وتطبيقاتها + مختبر الشحنة المتحركة</span>
         <span class="stars"></span></span>
     </a>
-    <span class="node locked" data-ls="2">
+    <a class="node" href="lesson2.html" data-ls="2">
       <span class="dot">🛤️</span>
       <span class="info"><b>الدرس 2: القوة الدافعة المحتثة الحركية</b>
         <span class="sub">حركية الساق الموصلة، التيار المحتث، القوة المعرقلة، وحفظ الطاقة</span>
         <span class="stars"></span></span>
-    </span>
-    <span class="node locked" data-ls="3">
+    </a>
+    <a class="node" href="lesson3.html" data-ls="3">
       <span class="dot">🌀</span>
       <span class="info"><b>الدرس 3: الفيض المغناطيسي</b>
         <span class="sub">تعريف الفيض Φ_B، تغيّره مع الزمن، وتأثير الزاوية θ</span>
         <span class="stars"></span></span>
-    </span>
-    <span class="node locked" data-ls="4">
+    </a>
+    <a class="node" href="lesson4.html" data-ls="4">
       <span class="dot">🔔</span>
       <span class="info"><b>الدرس 4: قانون فاراداي</b>
         <span class="sub">صيغ وقوانين حساب القوة الدافعة الكهربائية المحتثة e_ind</span>
         <span class="stars"></span></span>
-    </span>
-    <span class="node locked" data-ls="5">
+    </a>
+    <a class="node" href="lesson5.html" data-ls="5">
       <span class="dot">🔄</span>
       <span class="info"><b>الدرس 5: قانون لينز</b>
         <span class="sub">تحديد اتجاه التيار المحتث، وعلاقة القانون بحفظ الطاقة</span>
         <span class="stars"></span></span>
-    </span>
-    <span class="node locked" data-ls="6">
+    </a>
+    <a class="node" href="lesson6.html" data-ls="6">
       <span class="dot">🔁</span>
       <span class="info"><b>الدرس 6: الحث الذاتي</b>
         <span class="sub">معامل الحث الذاتي L، زمن نمو وتلاشي التيار، والطاقة المختزنة في المحث</span>
         <span class="stars"></span></span>
-    </span>
-    <span class="node locked" data-ls="7">
+    </a>
+    <a class="node" href="lesson7.html" data-ls="7">
       <span class="dot">🔗</span>
       <span class="info"><b>الدرس 7: الحث المتبادل</b>
         <span class="sub">معامل الحث المتبادل M بين ملفين، وحالة الاقتران المغناطيسي التام</span>
         <span class="stars"></span></span>
-    </span>
-    <span class="node locked" data-ls="8">
+    </a>
+    <a class="node" href="lesson8.html" data-ls="8">
       <span class="dot">🌩️</span>
       <span class="info"><b>الدرس 8: المجالات الكهربائية المحتثة</b>
         <span class="sub">الفرق بين المجالات الكهربائية المستقرة وغير المستقرة</span>
         <span class="stars"></span></span>
-    </span>
-    <span class="node locked" data-ls="9">
+    </a>
+    <a class="node" href="lesson9.html" data-ls="9">
       <span class="dot">🔧</span>
       <span class="info"><b>الدرس 9: التطبيقات العملية</b>
         <span class="sub">البطاقة الممغنطة، القيثارة الكهربائية، والطباخ الحثي</span>
         <span class="stars"></span></span>
-    </span>
+    </a>
     <a class="node qna" href="questions.html" data-ls="qna">
       <span class="dot">🧮</span>
       <span class="info"><b>أسئلة ومسائل نهاية الفصل</b>
@@ -88,7 +96,7 @@
     </a>
   </div>
 
-  <p class="g6-note">🚧 بقية دروس هذا الفصل قيد الإعداد وستُنشر تباعاً — لكن أسئلة نهاية الفصل جاهزة كاملة أعلاه.</p>
+  <p class="g6-note">✅ الفصل مكتمل بدروسه التسعة وأسئلة نهاية الفصل — قسم تجريبي، إن لاحظت أي خطأ بلّغ الأستاذ أحمد عبر زر الإبلاغ بأي صفحة درس.</p>
 
   <footer class="site">إعداد الأستاذ أحمد رافع · قسم تجريبي قيد التطوير</footer>
 </div>

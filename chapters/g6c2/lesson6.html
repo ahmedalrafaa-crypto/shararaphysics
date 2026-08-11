@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 6: الحث الذاتي — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثاني</a> / الدرس 6</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔁 الدرس 6: الحث الذاتي</h1>
+    <p>في الدروس الماضية درستَ كيف يُحدث مغناطيس أو ملف آخر تياراً محتثاً. لكن ماذا لو كان الملف نفسه سبب حثّ قوة دافعة على نفسه؟ هذه ظاهرة <b>الحث الذاتي</b> — وهي بالضبط ما يمنع تيار أي ملف من التغيّر فجأة.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">⚡</span>
+    <span>لماذا تنطلق أحياناً شرارة صغيرة عند فصل قابس جهاز فيه محرك كهربائي (كمروحة) من الكهرباء، رغم أنك فصلته بهدوء تام؟ الملف الكهربائي بداخل المحرك "يقاوم" أي توقف مفاجئ لتياره، فيحاول الحفاظ عليه بقوة دافعة ذاتية قد تصل لمئات الفولتات <b>لحظياً</b> — كافية لتوليد شرارة تقفز عبر الهواء، رغم أن الجهاز يعمل بفولتية منزلية عادية لا تتجاوز 220V!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔁</span> المحاثة: ربط الفيض بالتيار</div>
+  <div class="card">
+    <p>لو انساب في ملفٍ تيار مستمر <span class="formula-inline">I</span>، ولّد فيضاً مغناطيسياً يخترق كل لفّة من لفّاته. وقد ثبت عملياً أن هذا الفيض <b>يتناسب طردياً مع التيار</b>: كلما كبر التيار كبر الفيض. فنُدخل ثابت التناسب <span class="formula-inline">L</span>:</p>
+  </div>
+  <div class="lawbox">
+    تعريف المحاثة (معامل الحث الذاتي)
+    <div class="formula">N Φ_B = L I</div>
+  </div>
+  <p><span class="formula-inline">L</span> هي <b>المحاثة</b> (معامل الحث الذاتي)، وهي صفة هندسية للملف لا تتغيّر بتغيّر التيار — تماماً كما أن السعة <span class="formula-inline">C</span> صفة للمتسعة لا تتغيّر بالشحنة. يتوقّف مقدارها على عدد اللفّات <span class="formula-inline">N</span>، وحجم الملف وشكله الهندسي، ونفوذية الوسط في جوفه (لذا يزداد <span class="formula-inline">L</span> كثيراً عند إدخال قلب من الحديد المطاوع).</p>
+
+  <div class="section-title"><span class="ico">⚡</span> القوة الدافعة الذاتية</div>
+  <div class="card">
+    <p>ما إن يتغيّر التيار في الملف حتى يتغيّر الفيض المخترق له، فتتولّد على طرفيه — بقانون فاراداي — قوة دافعة محتثة <b>ذاتية</b>. واتجاهها (بقانون لنز) يعارض التغيّر المسبِّب لها، أي يعارض تغيّر التيار في الملف نفسه.</p>
+  </div>
+
+  <div class="example">
+    <div class="exq">اشتقاق: كيف نصل من تعريف المحاثة إلى قانون القوة الدافعة الذاتية؟</div>
+    <div class="givens">الفكرة: نطبّق قانون فاراداي مباشرة على تعريف NΦ_B=LI.</div>
+    <div class="step"><b>الخطوة ١:</b> من التعريف، نأخذ معدّل التغيّر الزمني للطرفين:
+      <div class="math">N Φ_B = L I  ⟹  N (ΔΦ_B/Δt) = L (ΔI/Δt)</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نتذكّر قانون فاراداي:
+      <div class="math">ε_ind = −N (ΔΦ_B/Δt)</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نعوّض الطرف الأيمن من الخطوة الأولى:
+      <div class="math">ε_ind = −L (ΔI/Δt)</div>
+      💡 الإشارة السالبة هي لنز: القوة الدافعة تعاكس تغيّر التيار — تكبح نموّه عند الغلق، وتكبح تلاشيه عند الفتح (وهذا مصدر الشرارة في الهوك أعلاه).</div>
+  </div>
+
+  <div class="lawbox">
+    القوة الدافعة الذاتية
+    <div class="formula">ε_ind = − L (ΔI/Δt)</div>
+  </div>
+  <div class="notebox">
+    <b>افهمها ولا تحفظها — وحدة المحاثة:</b>
+    <p style="margin-top:6px">تُقاس <span class="formula-inline">L</span> بوحدة <b>الهنري (H)</b>. فالملف محاثته 1H إذا ولّد قوة دافعة ذاتية مقدارها 1V عند تغيّر تياره بمعدّل 1A/s. وغالباً تُقاس بالميلي هنري (mH) أو المايكرو هنري (µH) لصغر قيمتها العملية.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> لا يمكن أن يتغيّر التيار في ملف تغيّراً فجائياً (قفزة لحظية من الصفر لقيمته الكاملة). <span class="wz">وزاري</span></summary>
+    <div class="ans">لأن أي تغيّر في التيار يولّد قوة دافعة ذاتية محتثة تعارض ذلك التغيّر بالذات (قانون لنز). فلحظة غلق المفتاح تنمو هذه القوة المعارضة لتكبح نموّ التيار، فينمو تدريجياً بدل أن يقفز فجأة — ولحظة فتح المفتاح تعارض تلاشيه، فيتلاشى تدريجياً أيضاً (وقد تسبّب شرارة إن كان التلاشي سريعاً جداً).</div>
+  </details>
+
+  <!-- ======== المحاكاة: قطع التيار والشرارة ======== -->
+  <div class="sim">
+    <h3>⚡ مختبر قطع التيار والقوة الدافعة الذاتية</h3>
+    <p class="sim-sub">غيّر محاثة الملف L، والتيار الابتدائي I₀، وزمن القطع Δt — ولاحظ كيف يزداد ميل الخط (معدّل التلاشي) والقوة الدافعة الذاتية كلما كان القطع أسرع.</p>
+    <canvas id="selfIndSim" width="700" height="280"></canvas>
+    <div class="controls">
+      <div class="slider-group">محاثة الملف L (هنري): <b id="lVal">١.٠</b>
+        <input type="range" id="lR" min="0.1" max="2" step="0.1" value="1.0"></div>
+      <div class="slider-group">التيار الابتدائي I₀ (أمبير): <b id="i0Val">٥</b>
+        <input type="range" id="i0R" min="1" max="10" step="1" value="5"></div>
+      <div class="slider-group">زمن القطع Δt (ثانية): <b id="dtVal">٠.٠٢</b>
+        <input type="range" id="dtR" min="0.01" max="0.5" step="0.01" value="0.02"></div>
+    </div>
+    <div class="readout" id="selfIndReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🔋</span> الطاقة المختزنة في المحث</div>
+  <div class="card">
+    <p>كما تختزن المتسعة طاقة في مجالها الكهربائي، يختزن الملف — عند مرور تيار فيه — طاقة على شكل <b>طاقة مغناطيسية</b> في مجاله. وتتناسب هذه الطاقة طردياً مع <b>مربّع التيار</b>:</p>
+  </div>
+  <div class="lawbox">
+    الطاقة المختزنة في المحث
+    <div class="formula">PE = ½ L I²</div>
+  </div>
+  <div class="notebox">
+    <b>⚠️ انتبه — المحث لا يستهلك طاقة:</b>
+    <p style="margin-top:6px">المحث ملف مهمَل المقاومة، وهذا يعني أنه لا يتسبّب في ضياع طاقة (لا يحوّلها حرارة كالمقاومة)، بل <b>يختزنها</b> في مجاله المغناطيسي ثم يعيدها إلى الدائرة عند تلاشي التيار.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">ملف معامل حثه الذاتي 2.5mH وعدد لفّاته 500، ينساب فيه تيار مستمر 4A. احسب: ① الفيض المخترق للفة الواحدة ② الطاقة المختزنة في مجاله ③ معدّل القوة الدافعة المحتثة إذا انعكس اتجاه التيار خلال 0.25s.</div>
+    <div class="givens">المعطيات: L = 2.5mH = 2.5×10⁻³H — N = 500 — I = 4A</div>
+    <div class="step"><b>الخطوة ١:</b> من تعريف المحاثة:
+      <div class="math">N Φ_B = L I  ⟹  500 × Φ_B = 2.5×10⁻³ × 4  ⟹  Φ_B = 2×10⁻⁵ Wb</div></div>
+    <div class="step"><b>الخطوة ٢:</b> الطاقة المختزنة:
+      <div class="math">PE = ½ L I² = ½ × 2.5×10⁻³ × (4)² = 0.02 J</div></div>
+    <div class="step"><b>الخطوة ٣:</b> عند انعكاس التيار، يقفز من 4+A إلى 4−A، فمقدار التغيّر 8A وليس 4A:
+      <div class="math">ΔI = −4 − (+4) = −8A  ⟹  ε_ind = −L(ΔI/Δt) = −2.5×10⁻³×(−8/0.25) = 0.08 V</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn ghost" href="lesson7.html">الدرس التالي: الحث المتبادل 🔗</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة قطع التيار (علاقة ثابتة: تعيد الرسم عند التبديل فقط) ---------- */
+(function () {
+  var cv = document.getElementById("selfIndSim"), ctx = cv.getContext("2d");
+  var lR = document.getElementById("lR"), i0R = document.getElementById("i0R"), dtR = document.getElementById("dtR");
+  var lVal = document.getElementById("lVal"), i0Val = document.getElementById("i0Val"), dtVal = document.getElementById("dtVal");
+  var readout = document.getElementById("selfIndReadout");
+  var ox = 80, oy = 230, exX = 650, exY = 40, tMax = 0.55, iMax = 11;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function xs(t) { return ox + (t / tMax) * (exX - ox); }
+  function ys(i) { return oy - (i / iMax) * (oy - exY); }
+
+  function arrow(x0, y0, x1, y1, color) {
+    ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+    var ang = Math.atan2(y1 - y0, x1 - x0);
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x1 - 8 * Math.cos(ang - 0.45), y1 - 8 * Math.sin(ang - 0.45));
+    ctx.lineTo(x1 - 8 * Math.cos(ang + 0.45), y1 - 8 * Math.sin(ang + 0.45));
+    ctx.closePath(); ctx.fill();
+  }
+
+  function draw() {
+    var L = +lR.value, I0 = +i0R.value, dt = +dtR.value;
+    lVal.textContent = arNum(L.toFixed(1)); i0Val.textContent = arNum(I0); dtVal.textContent = arNum(dt.toFixed(2));
+
+    var rate = I0 / dt, eps = L * rate;
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    arrow(ox, oy, exX, oy, "#334155");
+    arrow(ox, oy, ox, exY, "#334155");
+    ctx.fillStyle = "#334155"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("t (s)", exX - 15, oy + 24);
+    ctx.fillText("I (A)", ox, exY - 12);
+
+    var p0x = xs(0), p0y = ys(I0), p1x = xs(dt), p1y = ys(0);
+
+    ctx.strokeStyle = "#94a3b8"; ctx.setLineDash([5, 4]); ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(ox, p0y); ctx.lineTo(p0x, p0y); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(p1x, oy); ctx.lineTo(p1x, p1y); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = "#64748b"; ctx.font = "12px Cairo"; ctx.textAlign = "left";
+    ctx.fillText("I₀=" + arNum(I0) + "A", ox + 6, p0y - 8);
+    ctx.textAlign = "center";
+    ctx.fillText("Δt=" + arNum(dt.toFixed(2)) + "s", p1x, oy + 40 > 260 ? 258 : oy + 20);
+
+    ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 4; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(p0x, p0y); ctx.lineTo(p1x, p1y); ctx.stroke();
+    ctx.lineCap = "butt";
+    ctx.fillStyle = "#dc2626"; ctx.beginPath(); ctx.arc(p0x, p0y, 6, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(p1x, p1y, 6, 0, Math.PI * 2); ctx.fill();
+
+    readout.innerHTML = "المعدّل = ΔI/Δt = " + arNum(rate.toFixed(1)) + " A/s &nbsp;|&nbsp; ε_ind = L×(ΔI/Δt) = " + arNum(eps.toFixed(1)) + " V" +
+      (eps > 100 ? " — <b>كافية لشرارة محسوسة! ⚡</b>" : "");
+  }
+
+  [lR, i0R, dtR].forEach(function (s) { s.addEventListener("input", draw); });
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ما تعريف معامل الحث الذاتي L لملف؟",
+    opts: ["النسبة بين الفيض المرتبط بالملف (NΦ_B) والتيار المسبّب له: NΦ_B=LI", "مقاومة الملف الكهربائية فقط", "عدد لفّات الملف فقط", "طول السلك المستعمل في لفّ الملف"], a: 0,
+    why: "المحاثة L ثابت تناسب بين NΦ_B والتيار I، أي NΦ_B=LI — صفة هندسية للملف لا تتغيّر بتغيّر التيار." },
+  { q: "ما وحدة قياس معامل الحث الذاتي L؟",
+    opts: ["الهنري (H)", "الفاراد (F)", "التسلا (T)", "الويبر (Wb)"], a: 0,
+    why: "وحدة المحاثة هي الهنري H، نسبةً للعالم جوزيف هنري." },
+  { q: "ماذا يحدث لتيار ملف لحظة غلق دائرته؟",
+    opts: ["يقفز فوراً لقيمته العظمى", "ينمو تدريجياً من الصفر بسبب معارضة الحث الذاتي لتغيّره", "يبقى صفراً دائماً", "يتذبذب بشكل عشوائي"], a: 1,
+    why: "القوة الدافعة الذاتية تعارض نموّ التيار (قانون لنز)، فينمو تدريجياً بدل أن يقفز فجأة." },
+  { q: "ملف معامل حثه الذاتي 2.5mH، ينساب فيه تيار مستمر 4A. ما مقدار الطاقة المختزنة في مجاله؟",
+    opts: ["0.02 J", "0.2 J", "2 J", "10 J"], a: 0,
+    why: "PE=½LI²=½×2.5×10⁻³×(4)²=½×2.5×10⁻³×16=0.02J." },
+  { q: "علل: لا يمكن أن يتغيّر التيار في ملف تغيّراً فجائياً (قفزة لحظية).",
+    opts: ["لأن القوة الدافعة الذاتية المحتثة تعارض أي تغيّر في التيار وتكبح سرعته", "لأن الملف عازل كهربائياً تماماً", "لأن التيار يحتاج مصدراً خارجياً جديداً في كل لحظة", "لا يوجد سبب فيزيائي، هذا افتراض نظري فقط"], a: 0,
+    why: "بقانون لنز، القوة الدافعة الذاتية تعاكس دائماً تغيّر التيار الذي ولّدها، فتكبح سرعة أي تغيّر مفاجئ." },
+  { q: "أيّ العبارتين صحيحة عن المحث المهمَل المقاومة؟",
+    opts: ["يستهلك الطاقة ويحوّلها حرارة كالمقاومة", "لا يستهلك الطاقة، بل يختزنها في مجاله المغناطيسي ثم يعيدها للدائرة", "يمنع مرور أي تيار نهائياً", "يزيد الطاقة الكلية للدائرة من العدم"], a: 1,
+    why: "المحث المهمَل المقاومة لا يبدّد طاقة حرارياً، بل يختزنها مغناطيسياً (PE=½LI²) ويعيدها عند تلاشي التيار." }
+], { onDone: function (stars) { Phy.setLesson("g6c2", "6", { stars: stars }); } });
+</script>
+</body>
+</html>

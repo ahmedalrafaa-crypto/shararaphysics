@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 8: المجالات الكهربائية المحتثة — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثاني</a> / الدرس 8</span>
+  </div>
+
+  <div class="hero">
+    <h1>🌩️ الدرس 8: المجالات الكهربائية المحتثة</h1>
+    <p>في كل درس سابق كانت هناك حركة: ساق تنزلق، مغناطيس يقترب، تيار يتغيّر. هذا درس مفاهيمي قصير لكنه عميق — يجيب عن سؤال قد لا تنتبه له: ما القوة التي تحرّك الشحنات أصلاً حين يكون <b>كل شيء ساكناً</b> تماماً؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🤔</span>
+    <span>تخيّل حلقة نحاسية <b>ساكنة تماماً</b> — لا تتحرك قيد أنملة — موضوعة داخل مجال مغناطيسي يتغيّر بمرور الزمن. ستُفاجأ: ينساب فيها تيار محتث فعلاً! لكن قانون قوة لورنتز الذي درسته بالدرس الأول ينصّ صراحة أن القوة المغناطيسية <span class="formula-inline">F=qvB</span> تحتاج شحنة <b>متحركة</b>. والحلقة هنا ساكنة كلياً، وسرعة شحناتها (النسبية للحلقة) صفر. فما القوة التي حرّكت الشحنات إذن؟</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🌩️</span> الجواب: مجال كهربائي جديد</div>
+  <div class="card">
+    <p>الجواب: <b>التغيّر في المجال المغناطيسي نفسه يولّد مجالاً كهربائياً</b> يدفع الشحنات — يُسمّى <b>المجال الكهربائي المحتث</b>. وهذا المجال موجود في تلك المنطقة من الفضاء بمجرّد تغيّر <span class="formula-inline">B</span> فيها، <b>سواء وُجدت حلقة موصلة أم لا</b> — الحلقة لا "تصنع" هذا المجال، بل تكشفه فقط بمرور تيار محتث فيها. واتجاه هذا المجال (وبالتالي التيار الناتج عنه) يُحدَّد بقانون لنز الذي درسته بالدرس الخامس.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">⚖️</span> مجالات مستقرة مقابل مجالات غير مستقرة</div>
+  <div class="card">
+    <p>هذا الاكتشاف يكشف أن هناك <b>نوعين</b> مختلفين جوهرياً من المجالات الكهربائية:</p>
+  </div>
+  <div class="notebox">
+    <b>🔒 مجالات كهربائية مستقرة (Electrostatic):</b>
+    <p style="margin-top:6px">تنشأ بوساطة <b>شحنات ساكنة</b> — وهي كل المجالات الكهربائية التي درستها في فصل المتسعات. خطوطها <b>تبدأ من شحنة موجبة وتنتهي بشحنة سالبة</b> — لها نقطة بداية ونهاية محددتان دائماً.</p>
+  </div>
+  <div class="notebox">
+    <b>🔄 مجالات كهربائية غير مستقرة (محتثة):</b>
+    <p style="margin-top:6px">تنشأ بوساطة <b>التغيّر في الفيض المغناطيسي</b> — لا بوساطة أي شحنة. لذا خطوطها <b>مغلقة</b> على نفسها (كحلقات مقفلة) — لا تبدأ من شحنة ولا تنتهي عندها إطلاقاً.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> خطوط المجال الكهربائي المحتث مغلقة دائماً، بعكس خطوط المجال الكهربائي المستقر. <span class="wz">وزاري</span></summary>
+    <div class="ans">لأن المجال الكهربائي المستقر ينشأ من شحنات كهربائية، فتبدأ خطوطه من الشحنة الموجبة وتنتهي بالسالبة حتماً. أما المجال المحتث فلا ينشأ من أي شحنة إطلاقاً، بل من التغيّر المستمر في الفيض المغناطيسي — فلا توجد نقطة بداية أو نهاية "تُلزم" الخطوط بالتوقف عندها، فتنغلق على نفسها بدلاً من ذلك.</div>
+  </details>
+
+  <!-- ======== المحاكاة: مقارنة نوعي المجال ======== -->
+  <div class="sim">
+    <h3>⚖️ مختبر مقارنة المجالين</h3>
+    <p class="sim-sub">بدّل بين نوعي المجال وشاهد الفرق في شكل الخطوط: متفرّقة من شحنة (مستقر) أم مغلقة بلا شحنة (محتث).</p>
+    <canvas id="fieldSim" width="700" height="280"></canvas>
+    <div class="controls">
+      <div class="slider-group">نوع المجال:
+        <select id="typeSel" style="padding:8px;border-radius:10px;border:2px solid #e9ebfa;font-family:inherit;font-weight:700">
+          <option value="static">مستقر (من شحنة ساكنة)</option>
+          <option value="induced">محتث (من تغيّر الفيض)</option>
+        </select></div>
+    </div>
+    <div class="readout" id="fieldReadout" style="margin-top:14px"></div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">انتبه!</span> هل يحتاج المجال الكهربائي المحتث إلى موصل ليتواجد؟</summary>
+    <div class="ans">لا. المجال الكهربائي المحتث ينشأ من تغيّر المجال المغناطيسي بحد ذاته، ويملأ تلك المنطقة من الفضاء بغضّ النظر عن وجود موصل من عدمه. الموصل (كحلقة نحاسية) لا يخلق هذا المجال، بل يسمح فقط برؤية أثره: مرور تيار محتث فيه. لو أزلت الحلقة، يبقى المجال الكهربائي المحتث موجوداً في الفضاء نفسه — لكن بلا شحنات حرّة تتحرك به لنرصد أثره مباشرة.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn ghost" href="lesson9.html">الدرس التالي: التطبيقات العملية 🔧</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة مقارنة نوعي المجال (اختيار: تعيد الرسم عند التبديل فقط) ---------- */
+(function () {
+  var cv = document.getElementById("fieldSim"), ctx = cv.getContext("2d");
+  var typeSel = document.getElementById("typeSel");
+  var readout = document.getElementById("fieldReadout");
+  var cx = 350, cy = 140;
+
+  function arrow(x0, y0, x1, y1, color) {
+    ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+    var ang = Math.atan2(y1 - y0, x1 - x0);
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x1 - 8 * Math.cos(ang - 0.45), y1 - 8 * Math.sin(ang - 0.45));
+    ctx.lineTo(x1 - 8 * Math.cos(ang + 0.45), y1 - 8 * Math.sin(ang + 0.45));
+    ctx.closePath(); ctx.fill();
+  }
+
+  function draw() {
+    var isStatic = typeSel.value === "static";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    if (isStatic) {
+      // خطوط متفرقة من شحنة موجبة في المركز
+      var N = 12;
+      for (var i = 0; i < N; i++) {
+        var ang = (i / N) * Math.PI * 2;
+        var x0 = cx + 26 * Math.cos(ang), y0 = cy + 26 * Math.sin(ang);
+        var x1 = cx + 110 * Math.cos(ang), y1 = cy + 110 * Math.sin(ang);
+        arrow(x0, y0, x1, y1, "#dc2626");
+      }
+      ctx.beginPath(); ctx.arc(cx, cy, 22, 0, Math.PI * 2);
+      ctx.fillStyle = "#fee2e2"; ctx.fill(); ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 3; ctx.stroke();
+      ctx.fillStyle = "#dc2626"; ctx.font = "bold 20px Cairo"; ctx.textAlign = "center";
+      ctx.fillText("+", cx, cy + 8);
+      ctx.fillStyle = "#334155"; ctx.font = "13px Cairo";
+      ctx.fillText("خطوط تبدأ من الشحنة (+) ولا تُغلق أبداً — تمتدّ للخارج", cx, 250);
+    } else {
+      // خطوط مغلقة (حلقات) بلا أي شحنة في المركز
+      var radii = [45, 75, 105];
+      radii.forEach(function (r, idx) {
+        ctx.strokeStyle = "#0284c7"; ctx.lineWidth = 3;
+        ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.stroke();
+        var tx = cx, ty = cy - r;
+        arrow(tx - 14, ty, tx + 14, ty, "#0284c7");
+      });
+      ctx.fillStyle = "#94a3b8"; ctx.font = "13px Cairo"; ctx.textAlign = "center";
+      ctx.fillText("(لا شحنة هنا)", cx, cy + 4);
+      ctx.fillStyle = "#334155"; ctx.font = "13px Cairo";
+      ctx.fillText("خطوط مغلقة على نفسها — بلا بداية ولا نهاية، مصدرها تغيّر B فقط", cx, 250);
+    }
+
+    readout.innerHTML = isStatic
+      ? "مجال <b>مستقر</b>: مصدره شحنة ساكنة (+) — الخطوط تتفرّق للخارج ولا تُغلق."
+      : "مجال <b>محتث (غير مستقر)</b>: مصدره تغيّر الفيض المغناطيسي — الخطوط حلقات مغلقة، لا شحنة في مركزها.";
+  }
+
+  typeSel.addEventListener("change", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ما القوة التي تدفع الشحنات لتتحرك في حلقة موصلة ساكنة تماماً موضوعة في مجال مغناطيسي متغيّر؟",
+    opts: ["قوة لورنتز الحركية (F=qvB) فقط", "مجال كهربائي محتث ينشأ بسبب تغيّر المجال المغناطيسي", "لا توجد أي قوة، ولن يمرّ أي تيار في الحلقة", "قوة الجاذبية الأرضية"], a: 1,
+    why: "بما أن الحلقة ساكنة (v=0) فلا قوة لورنتز حركية. التغيّر في B نفسه يولّد مجالاً كهربائياً محتثاً يدفع الشحنات." },
+  { q: "ما الفرق الجوهري بين خطوط المجال الكهربائي المستقر وخطوط المجال الكهربائي المحتث؟",
+    opts: ["لا فرق بينهما إطلاقاً", "خطوط المستقر تبدأ من شحنة موجبة وتنتهي بسالبة، بينما خطوط المحتث مغلقة بلا بداية أو نهاية", "خطوط المحتث تبدأ من شحنة موجبة فقط", "خطوط المستقر مغلقة دائماً على نفسها"], a: 1,
+    why: "المستقر ينشأ من شحنات (خطوط مفتوحة، +⟶−)، بينما المحتث ينشأ من تغيّر الفيض (خطوط مغلقة بلا شحنة)." },
+  { q: "ما الذي يُنشئ المجال الكهربائي غير المستقر (المحتث)؟",
+    opts: ["شحنات ساكنة فقط", "التغيّر في المجال المغناطيسي عبر الزمن", "التيار الكهربائي الثابت فقط", "درجة حرارة الموصل"], a: 1,
+    why: "المجال المحتث مصدره تغيّر B عبر الزمن، لا أي شحنة كهربائية." },
+  { q: "اتجاه المجال الكهربائي المحتث (وبالتالي التيار الناتج عنه) يُحدَّد بأي قانون؟",
+    opts: ["قانون كولوم", "قانون لنز", "قانون أوم", "قانون نيوتن الثاني للحركة"], a: 1,
+    why: "قانون لنز هو ما يحدّد اتجاه المجال المحتث والتيار الناتج عنه، بحيث يعارضان التغيّر المسبِّب لهما." },
+  { q: "علل: خطوط المجال الكهربائي المحتث مغلقة دائماً، بعكس خطوط المجال الكهربائي المستقر.",
+    opts: ["لأن المجال المحتث لا ينشأ من شحنات (لا نقطة بداية أو نهاية)، بل من تغيّر الفيض المغناطيسي المستمر", "لأن الشحنات في المجال المحتث سالبة دائماً", "لأنه خطأ مطبعي في الكتب المدرسية، ولا فرق حقيقي", "لأن المجال المحتث أضعف من المستقر دائماً"], a: 0,
+    why: "بلا شحنات تُنشئ المجال، لا توجد نقطة بداية أو نهاية تُلزم الخطوط بالتوقف، فتنغلق على نفسها." },
+  { q: "لو وضعتَ حلقة موصلة ساكنة داخل مجال مغناطيسي متغيّر، ثم أزلتَ الحلقة نفسها، هل يبقى المجال الكهربائي المحتث موجوداً في تلك المنطقة من الفضاء؟",
+    opts: ["لا، يختفي المجال المحتث فوراً بغياب الموصل", "نعم، لأن المجال المحتث ينشأ من تغيّر B نفسه بغضّ النظر عن وجود موصل — الموصل يكشفه فقط بمرور تيار فيه", "يعتمد على نوع المعدن المستعمل في الحلقة", "لا معنى للسؤال فيزيائياً"], a: 1,
+    why: "المجال المحتث خاصية للفضاء نفسه حيث يتغيّر B، لا خاصية للموصل — الموصل وسيلة كشف فقط، لا مصدر." }
+], { onDone: function (stars) { Phy.setLesson("g6c2", "8", { stars: stars }); } });
+</script>
+</body>
+</html>
