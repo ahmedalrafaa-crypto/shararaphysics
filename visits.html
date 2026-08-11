@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>زيارات الموقع — شرارة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/logo-ar.png">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .vis-recent { display: grid; gap: 8px; }
+  .vis-row {
+    display: grid; grid-template-columns: 1fr auto auto; gap: 10px; align-items: center;
+    padding: 10px 14px; border-radius: 12px; background: #f8f9ff; font-size: .88rem;
+  }
+  .vis-row .pg { font-weight: 800; color: var(--ink); overflow-wrap: anywhere; }
+  .vis-row .dt { color: var(--ink-soft); font-weight: 600; white-space: nowrap; }
+  .vis-empty { text-align: center; padding: 30px 10px; color: var(--ink-soft); font-weight: 700; }
+  @media (max-width: 540px) {
+    .vis-row { grid-template-columns: 1fr; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+  </div>
+
+  <div id="pin-screen" class="pin-gate">
+    <h1>🔒 زيارات الموقع</h1>
+    <p>أدخل رمز الحماية</p>
+    <input type="password" inputmode="numeric" id="pin-input" placeholder="••••••" autocomplete="off">
+    <button type="button" class="btn" id="pin-submit" style="width:100%">دخول</button>
+    <p class="admin-msg error" id="pin-msg"></p>
+  </div>
+
+  <div id="stats-screen" style="display:none">
+    <div class="hero">
+      <span class="chip">📊 لوحة الزيارات</span>
+      <h1>زيارات الموقع</h1>
+      <p>نظرة سريعة على حركة الزوار عبر صفحات الموقع.</p>
+    </div>
+
+    <div id="loadingMsg" class="card" style="text-align:center;font-weight:700">⏳ جارٍ تحميل البيانات...</div>
+    <div id="statsRoot" style="display:none"></div>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+      <a class="btn ghost" href="admin.html">🔒 إدارة الأكواد</a>
+      <button type="button" class="btn small ghost" id="refresh-btn" style="margin-inline-start:auto">🔄 تحديث</button>
+    </div>
+
+    <a href="#" class="admin-logout" id="logout-link">مسح رمز الحماية من هذا الجهاز</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع · 📞 07800155157</footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // نفس رابط الـ Web App المستخدم بـ admin.html وjs/access-control.js
+  var ACCESS_CONTROL_URL = "https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec";
+  var PIN_KEY = "shararah_admin_pin"; // نفس مفتاح admin.html، فلو دخلت هناك تدخل هنا تلقائياً
+
+  var pinScreen = document.getElementById("pin-screen");
+  var statsScreen = document.getElementById("stats-screen");
+  var pinInput = document.getElementById("pin-input");
+  var pinMsg = document.getElementById("pin-msg");
+  var loadingMsg = document.getElementById("loadingMsg");
+  var statsRoot = document.getElementById("statsRoot");
+
+  function getPin() {
+    return localStorage.getItem(PIN_KEY) || "";
+  }
+
+  // نداء JSONP عبر وسم <script> — نفس أسلوب admin.html، لأن طلبات fetch
+  // المباشرة تنحظر بـ CORS بسبب تحويل داخلي بـ Apps Script بلا ترويسة CORS.
+  function callApi(params, onDone) {
+    var cbName = "shararahVisitsCb" + Date.now() + Math.floor(Math.random() * 1000);
+    var script = document.createElement("script");
+    var done = false;
+    var timer = setTimeout(function () { finish(null, true); }, 12000);
+
+    function cleanup() {
+      clearTimeout(timer);
+      delete window[cbName];
+      if (script.parentNode) script.parentNode.removeChild(script);
+    }
+    function finish(data, isTimeoutOrError) {
+      if (done) return;
+      done = true;
+      cleanup();
+      onDone(isTimeoutOrError ? { result: "network_error" } : data);
+    }
+
+    window[cbName] = function (data) { finish(data, false); };
+    script.onerror = function () { finish(null, true); };
+
+    var qs = "callback=" + cbName;
+    for (var key in params) {
+      qs += "&" + encodeURIComponent(key) + "=" + encodeURIComponent(params[key]);
+    }
+    script.src = ACCESS_CONTROL_URL + "?" + qs;
+    document.body.appendChild(script);
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; });
+  }
+
+  // ---- شاشة الدخول بالـ PIN (مطابقة لـ admin.html) ----
+  function showStats() {
+    pinScreen.style.display = "none";
+    statsScreen.style.display = "block";
+    loadStats();
+  }
+
+  function handleUnauthorized() {
+    localStorage.removeItem(PIN_KEY);
+    statsScreen.style.display = "none";
+    pinScreen.style.display = "block";
+    pinMsg.textContent = "رمز الحماية غير صحيح";
+  }
+
+  document.getElementById("pin-submit").addEventListener("click", function () {
+    var pin = (pinInput.value || "").trim();
+    if (!pin) { pinMsg.textContent = "أدخل رمز الحماية"; return; }
+    localStorage.setItem(PIN_KEY, pin);
+    pinMsg.textContent = "";
+    showStats();
+  });
+  pinInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") document.getElementById("pin-submit").click();
+  });
+
+  document.getElementById("logout-link").addEventListener("click", function (e) {
+    e.preventDefault();
+    localStorage.removeItem(PIN_KEY);
+    statsScreen.style.display = "none";
+    pinScreen.style.display = "block";
+    pinInput.value = "";
+  });
+
+  // ---- بناء رسم بياني بسيط بنفس ستايل صفحة "تحليل أدائي" ----
+  function bar(label, count, max) {
+    var p = max ? Math.round(100 * count / max) : 0;
+    return '<div class="an-bar" title="' + count + ' زيارة">' +
+      '<span class="lbl">' + esc(label) + '</span>' +
+      '<div class="track"><div class="fill f-blue" data-w="' + p + '" style="width:0%"></div></div>' +
+      '<span class="val">' + count + '</span>' +
+    '</div>';
+  }
+
+  var WEEKDAY_AR = ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
+  function dayLabel(dateStr) {
+    var parts = dateStr.split("-");
+    var d = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+    return WEEKDAY_AR[d.getDay()];
+  }
+
+  function render(data) {
+    var html = "";
+
+    html += '<div class="card"><div class="an-tiles">' +
+      '<div class="an-tile"><div class="n">' + data.total + '</div><div class="k">إجمالي الزيارات</div></div>' +
+      '<div class="an-tile"><div class="n">' + data.today + '</div><div class="k">زيارات اليوم</div></div>' +
+      '<div class="an-tile"><div class="n">' + data.last7Days + '</div><div class="k">آخر 7 أيام</div></div>' +
+    '</div></div>';
+
+    html += '<div class="section-title"><span class="ico">📈</span> الزيارات آخر 7 أيام</div>';
+    html += '<div class="card"><div class="an-chart">';
+    var maxDaily = Math.max.apply(null, data.dailyCounts.map(function (d) { return d.count; }).concat([1]));
+    data.dailyCounts.forEach(function (d) { html += bar(dayLabel(d.date), d.count, maxDaily); });
+    html += '</div></div>';
+
+    html += '<div class="section-title"><span class="ico">🔥</span> الصفحات الأكثر زيارة</div>';
+    html += '<div class="card">';
+    if (!data.topPages.length) {
+      html += '<p class="vis-empty">لا توجد بيانات كافية بعد.</p>';
+    } else {
+      html += '<div class="an-chart">';
+      var maxPage = data.topPages[0].count;
+      data.topPages.forEach(function (p) { html += bar(p.page, p.count, maxPage); });
+      html += '</div>';
+    }
+    html += '</div>';
+
+    html += '<div class="section-title"><span class="ico">🕒</span> آخر الزيارات</div>';
+    html += '<div class="card">';
+    if (!data.recent.length) {
+      html += '<p class="vis-empty">لا توجد زيارات مسجَّلة بعد.</p>';
+    } else {
+      html += '<div class="vis-recent">';
+      data.recent.forEach(function (r) {
+        html += '<div class="vis-row"><span class="pg">' + esc(r.page || "—") + '</span><span class="dt">' + esc(r.date) + '</span><span class="dt">' + esc(r.time) + '</span></div>';
+      });
+      html += '</div>';
+    }
+    html += '</div>';
+
+    statsRoot.innerHTML = html;
+    statsRoot.style.display = "block";
+    loadingMsg.style.display = "none";
+    requestAnimationFrame(function () {
+      statsRoot.querySelectorAll(".fill[data-w]").forEach(function (f) { f.style.width = f.dataset.w + "%"; });
+    });
+  }
+
+  function loadStats() {
+    loadingMsg.style.display = "block";
+    loadingMsg.textContent = "⏳ جارٍ تحميل البيانات...";
+    statsRoot.style.display = "none";
+    callApi({ action: "getVisits", pin: getPin() }, function (data) {
+      if (data && data.result === "success") {
+        render(data);
+      } else if (data && data.result === "unauthorized") {
+        handleUnauthorized();
+      } else {
+        loadingMsg.textContent = "⚠️ تعذّر تحميل البيانات، تأكد من رفع نسخة جديدة من كود Apps Script ثم اضغط تحديث.";
+      }
+    });
+  }
+  document.getElementById("refresh-btn").addEventListener("click", loadStats);
+
+  function trySavedPin() {
+    if (getPin()) showStats();
+  }
+  trySavedPin();
+})();
+</script>
+</body>
+</html>
