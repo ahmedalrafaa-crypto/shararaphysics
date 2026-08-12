@@ -56,7 +56,8 @@
     <h3>🔧 مكوّنات الهاتف النقال — انقر أي مكوّن</h3>
     <p class="sim-sub">انقر أي مكوّن من المكوّنات السبعة لتقرأ وظيفته، وسيُضاء موضعه على الهاتف.</p>
     <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start">
-      <canvas id="phone" width="230" height="400" style="flex-shrink:0;margin:auto"></canvas>
+      <div class="sim-scroll"><canvas id="phone" width="230" height="400" style="flex-shrink:0;margin:auto"></canvas></div>
+      <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
       <div style="flex:1;min-width:220px">
         <div class="formgrid" id="compGrid"></div>
         <div class="controls" style="margin-top:10px"><span class="readout" id="compOut">👆 انقر أحد المكوّنات السبعة.</span></div>
@@ -153,7 +154,7 @@
 /* ---------- الاختبار ---------- */
 Phy.quiz("quiz1", [
   { q: "الهاتف النقال هو:",
-    opts: ["جهاز تقني معقّد لتكدّس الدوائر الإلكترونية على مساحة صغيرة، ووسيلة اتصال لاسلكية", "جهاز اتصال سلكي بسيط", "جهاز إضاءة", "بطارية كبيرة فقط"], a: 0,
+    opts: ["وسيلة اتصال لاسلكية بدوائر إلكترونية مكدّسة", "جهاز اتصال سلكي بسيط", "جهاز إضاءة", "بطارية كبيرة فقط"], a: 0,
     why: "الهاتف النقال: جهاز معقّد بتكدّس دوائره الإلكترونية، ووسيلة اتصال لاسلكية." },
   { q: "المكوّن الذي يرسل ويستقبل الموجات اللاسلكية في الهاتف هو:",
     opts: ["الهوائي", "البطارية", "السمّاعة", "الشاشة"], a: 0,

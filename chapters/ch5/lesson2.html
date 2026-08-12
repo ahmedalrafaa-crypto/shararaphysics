@@ -88,7 +88,8 @@
   <div class="sim">
     <h3>🎬 نفّذ النشاط الوزاري بنفسك</h3>
     <p class="sim-sub">أغلق المفتاح، اقرأ الأميتر والفولطميتر، ثم احسب P = I × V!</p>
-    <canvas id="actSim" width="700" height="380"></canvas>
+    <div class="sim-scroll"><canvas id="actSim" width="700" height="380"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
     <div class="controls">
       <button class="btn green" id="actBtn">🔒 أغلق المفتاح</button>
       <button class="btn" id="calcBtn" disabled>🧮 احسب القدرة P = IV</button>
@@ -255,7 +256,7 @@ Phy.quiz("quiz2", [
     opts: ["قانون اوم R = V/I فنعوض V = IR في P = IV", "قانون كولوم", "قانون الجذب العام", "قانون انعكاس الضوء"], a: 0,
     why: "P = IV و V = IR ⟸ P = (IR)I = I²R." },
   { q: "لإثبات ان P = V²/R نعوض في P = IV قيمة:",
-    opts: ["I = V/R فنحصل على P = V(V/R) = V²/R", "V = I/R", "R = IV", "I = R/V"], a: 0,
+    opts: ["I = V/R", "V = I/R", "R = IV", "I = R/V"], a: 0,
     why: "من قانون اوم I = V/R ثم P = V × V/R = V²/R." },
   { q: "الاجهزة الكهربائية في المنازل توصل مع بعضها:",
     opts: ["على التوازي", "على التوالي", "بشكل عشوائي", "دون اسلاك"], a: 0,

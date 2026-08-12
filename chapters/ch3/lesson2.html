@@ -77,7 +77,8 @@
   <div class="sim">
     <h3>🧪 عدّاد الشحنات: اصنع تيارك بنفسك!</h3>
     <p class="sim-sub">حرّك المؤشرين وشاهد الشحنات تعبر المقطع الأحمر — الجهاز يحسب لك التيار I = q / t فوراً.</p>
-    <canvas id="ampSim" width="700" height="240"></canvas>
+    <div class="sim-scroll"><canvas id="ampSim" width="700" height="240"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
     <div class="controls">
       <label>الشحنة q: <input type="range" id="qRange" min="1" max="12" value="6" step="1"> <span class="readout" id="qVal">6 C</span></label>
       <label>الزمن t: <input type="range" id="tRange" min="1" max="6" value="2" step="1"> <span class="readout" id="tVal">2 s</span></label>

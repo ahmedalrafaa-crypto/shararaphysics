@@ -62,7 +62,8 @@
   <div class="sim">
     <h3>🧪 ميزان المعادلة: جِد قيمة x التي تُوازن الطرفين</h3>
     <p class="sim-sub">المعادلة: <b style="direction:ltr;display:inline-block">2x + 3 = 11</b> — حرّك x حتى يتوازن الميزان تماماً (الطرف الأيسر = 11).</p>
-    <canvas id="scale" width="700" height="260"></canvas>
+    <div class="sim-scroll"><canvas id="scale" width="700" height="260"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
     <div class="controls">
       <div class="slider-group">قيمة x المجرّبة = <span id="xv">1</span>
         <input type="range" id="xR" min="0" max="8" value="1" step="1"></div>
@@ -131,7 +132,7 @@
   var xR = document.getElementById("xR"), out = document.getElementById("scaleOut");
   var angle = 0;
 
-  function draw() {
+  function render() {
     var x = +xR.value, left = 2 * x + 3, right = 11;
     document.getElementById("xv").textContent = x;
     var diff = left - right;                       // موجب = الأيسر أثقل
@@ -181,10 +182,13 @@
       ctx.fillText(txt, sx, sy);
       ctx.restore();
     }
-    requestAnimationFrame(draw);
   }
-  draw();
-  xR.addEventListener("input", function () {});
+
+  // الحركة تعتمد على requestAnimationFrame، لكن تحريك المزلق يعيد الرسم فوراً
+  // حتى لو كان rAF مخنوقاً (وضع توفير الطاقة أو تبويب في الخلفية).
+  function loop() { render(); requestAnimationFrame(loop); }
+  xR.addEventListener("input", render);
+  loop();
 })();
 
 /* ---------- الاختبار ---------- */

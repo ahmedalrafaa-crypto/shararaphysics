@@ -75,7 +75,8 @@
       <button class="btn small ghost" data-cfg="neg">شحنة سالبة</button>
       <button class="btn small ghost" data-cfg="plates">لوحان متوازيان</button>
     </div>
-    <canvas id="fieldSim" width="700" height="330"></canvas>
+    <div class="sim-scroll"><canvas id="fieldSim" width="700" height="330"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
     <div class="controls"><span class="readout" id="fieldMsg" style="flex:1"></span></div>
   </div>
 
@@ -243,7 +244,7 @@
 /* ---------- الاختبار ---------- */
 Phy.quiz("quiz7", [
   { q: "المجال الكهربائي هو:",
-    opts: ["قوة بين شحنتين", "الحيز الذي يظهر فيه تأثير القوة الكهربائية على الشحنات الاختبارية الداخلة فيه", "خطوط مرئية حول الشحنة", "شحنة كبيرة"], a: 1,
+    opts: ["قوة بين شحنتين", "الحيز الذي تظهر فيه القوة الكهربائية", "خطوط مرئية حول الشحنة", "شحنة كبيرة"], a: 1,
     why: "تعريف وزاري — احفظه حرفياً!" },
   { q: "قانون مقدار المجال الكهربائي:",
     opts: ["E = F × q", "E = q / F", "E = F / q", "E = K·q₁q₂/r²"], a: 2,

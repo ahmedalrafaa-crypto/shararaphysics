@@ -70,7 +70,8 @@
   <div class="sim">
     <h3>🎬 شغّل خلية وقود الهيدروجين</h3>
     <p class="sim-sub">افتح صمام الهيدروجين وراقب: هيدروجين + أوكسجين من الجو ⟵ ماء + طاقة كهربائية!</p>
-    <canvas id="fuelSim" width="700" height="380"></canvas>
+    <div class="sim-scroll"><canvas id="fuelSim" width="700" height="380"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
     <div class="controls">
       <button class="btn green" id="fuelBtn">🔛 افتح صمام الوقود</button>
       <label>عدد الشرائح: <input type="range" id="cellRange" min="1" max="6" value="1" step="1"> <span class="readout" id="cellLabel">1 شريحة = 1 V</span></label>
