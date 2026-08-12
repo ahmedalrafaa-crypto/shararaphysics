@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /visits.html
+Disallow: /report-demo.html
+
+Sitemap: https://shararaphysics.netlify.app/sitemap.xml
