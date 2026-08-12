@@ -32,14 +32,15 @@
 
   <div class="hook">
     <span class="em">🔍</span>
-    <span>بطاقة بنكية، غيتار كهربائي، وموقد مطبخ — ثلاثة أشياء لا يبدو أن بينها أي صلة. لكن الثلاثة تعمل بالضبط بنفس المبدأ الذي درسته طوال هذا الفصل: <b>تغيّر الفيض المغناطيسي يولّد تياراً محتثاً</b>. فيزياء واحدة، ثلاثة تطبيقات مختلفة كلياً.</span>
+    <span>بطاقة بنكية، قيثار كهربائي، وموقد مطبخ — ثلاثة أشياء لا يبدو أن بينها أي صلة. لكن الثلاثة تعمل بالضبط بنفس المبدأ الذي درسته طوال هذا الفصل: <b>تغيّر الفيض المغناطيسي يولّد تياراً محتثاً</b>. فيزياء واحدة، ثلاثة تطبيقات مختلفة كلياً.</span>
   </div>
 
   <!-- ======== المحاكاة: التطبيقات الثلاثة ======== -->
   <div class="sim">
     <h3>🔧 استكشف التطبيقات الثلاثة</h3>
     <p class="sim-sub">اختر تطبيقاً لترى مخططه المبسّط وتفسيره الفيزيائي.</p>
-    <canvas id="appSim" width="700" height="240"></canvas>
+    <div class="sim-scroll"><canvas id="appSim" width="700" height="240"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
     <div class="controls">
       <div class="slider-group">التطبيق:
         <select id="appSel" style="padding:8px;border-radius:10px;border:2px solid #e9ebfa;font-family:inherit;font-weight:700">
@@ -123,9 +124,15 @@
     ctx.closePath(); ctx.fill();
   }
 
-  function drawCoil(cx, cy, r) {
+  /* axis: "h" محور الملف أفقي (يُرى الملف بيضاوياً طولياً)،
+     "v" محور الملف شاقولي — وهي الحالة الصحيحة لملف الطباخ الحثّي (يواجه الإناء فوقه)
+     ولملف لاقط القيثار (يواجه الوتر فوقه). */
+  function drawCoil(cx, cy, r, axis) {
     ctx.strokeStyle = "#B45309"; ctx.lineWidth = 5;
-    ctx.beginPath(); ctx.ellipse(cx, cy, r * 0.32, r, 0, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath();
+    if (axis === "v") ctx.ellipse(cx, cy, r, r * 0.32, 0, 0, Math.PI * 2);
+    else ctx.ellipse(cx, cy, r * 0.32, r, 0, 0, Math.PI * 2);
+    ctx.stroke();
   }
 
   function draw() {
@@ -164,9 +171,10 @@
       ctx.stroke();
       ctx.fillStyle = "#dc2626"; ctx.font = "bold 12px Cairo"; ctx.fillText("الوتر المهتزّ", 350, 105);
 
-      ctx.fillStyle = "#1e3a8a"; ctx.fillRect(330, 175, 40, 24);
-      ctx.fillStyle = "#fff"; ctx.font = "bold 11px Cairo"; ctx.fillText("N/S", 350, 191);
-      drawCoil(350, 205, 26);
+      ctx.fillStyle = "#1e3a8a"; ctx.fillRect(336, 170, 28, 34);
+      ctx.fillStyle = "#fff"; ctx.font = "bold 11px Cairo";
+      ctx.fillText("N", 350, 182); ctx.fillText("S", 350, 200);
+      drawCoil(350, 194, 42, "v");
 
       ctx.fillStyle = "#334155"; ctx.font = "12px Cairo";
       ctx.fillText("اهتزاز الوتر يُغيّر الفيض بتردده، فيُحتثّ تيار متناوب بنفس التردد", 350, 225);
@@ -179,8 +187,8 @@
       ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(230, 140); ctx.lineTo(470, 140); ctx.stroke();
       ctx.fillStyle = "#64748b"; ctx.font = "11px Cairo"; ctx.fillText("سطح زجاجي بارد", 350, 155);
 
-      drawCoil(350, 190, 30);
-      ctx.fillStyle = "#B45309"; ctx.font = "bold 11px Cairo"; ctx.fillText("ملف بتيار متناوب", 350, 232);
+      drawCoil(350, 190, 55, "v");
+      ctx.fillStyle = "#B45309"; ctx.font = "bold 11px Cairo"; ctx.fillText("ملف بتيار متناوب", 350, 225);
 
       ctx.strokeStyle = "#ea580c"; ctx.lineWidth = 2;
       [300, 350, 400].forEach(function (x) {
@@ -201,7 +209,7 @@ Phy.quiz("quiz1", [
   { q: "ما القانون الذي يفسّر عمل قارئ البطاقة الممغنطة؟",
     opts: ["قانون فاراداي (تغيّر الفيض المخترق للملف يحتثّ تياراً)", "قانون كولوم", "قانون نيوتن الأول", "قانون باسكال"], a: 0,
     why: "حركة الشريط الممغنط أمام الملف تُغيّر الفيض بسرعة، فيُحتثّ تيار يحمل البيانات — تطبيق مباشر لقانون فاراداي." },
-  { q: "لماذا يُصنع وتر الغيتار الكهربائي من معدن فيرومغناطيسي تحديداً؟",
+  { q: "لماذا يُصنع وتر القيثار الكهربائي من معدن فيرومغناطيسي تحديداً؟",
     opts: ["ليكون خفيف الوزن فقط", "ليتأثر بالمجال المغناطيسي فيُغيّر الفيض عند اهتزازه، فيُحتثّ تيار في الملف تحته", "ليكون أرخص من الأوتار العادية", "ليمنع انقطاعه أثناء العزف"], a: 1,
     why: "الوتر الفيرومغناطيسي يتفاعل مع المجال، فاهتزازه يُغيّر الفيض المخترق للملف تكراراً، فيُحتثّ تيار صوتي." },
   { q: "لماذا لا يعمل الطباخ الحثّي بكفاءة مع إناء ألمنيوم عادي (ضعيف المغناطيسية)؟",

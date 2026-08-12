@@ -370,6 +370,12 @@ math msqrt { padding-inline: 1px; }
   width: 100%; border-radius: 16px; background: #f8f9ff;
   border: 2px solid #e9ebfa; display: block; touch-action: none;
 }
+/* غلاف تمرير أفقي للمحاكاة: يمنع تصغير الرسم لدرجة تُخفي تسمياته على الهاتف.
+   الصفحات التي لا تستعمله تبقى كما هي تماماً. */
+.sim .sim-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 16px; }
+.sim .sim-scroll canvas { min-width: 620px; }
+.sim .sim-hint { display: none; color: var(--ink-soft); font-size: .78rem; margin-top: 6px; }
+@media (max-width: 700px) { .sim .sim-scroll ~ .sim-hint { display: block; } }
 .sim .controls { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; align-items: center; }
 .sim .readout {
   background: #f0f2ff; border-radius: 12px; padding: 8px 14px;
@@ -751,6 +757,7 @@ footer.site::before {
 /* السادس الإعدادي — الفصل الثاني: الحث الكهرومغناطيسي — أحمر/أزرق (أقطاب N/S) */
 .theme-g6c2 {
   --violet: #b91c1c;
+  --violet-deep: #991b1b;
   --blue: #1e3a8a;
   --shadow: 0 10px 30px rgba(185, 28, 28, 0.10);
   --shadow-lift: 0 16px 40px rgba(185, 28, 28, 0.18);

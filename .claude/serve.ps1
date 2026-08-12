@@ -15,10 +15,12 @@ while ($listener.IsListening) {
     $bytes = [System.IO.File]::ReadAllBytes($file)
     $ext = [System.IO.Path]::GetExtension($file).ToLower()
     if ($mime.ContainsKey($ext)) { $ctx.Response.ContentType = $mime[$ext] }
+    $ctx.Response.ContentLength64 = $bytes.Length
     $ctx.Response.OutputStream.Write($bytes, 0, $bytes.Length)
   } else {
     $ctx.Response.StatusCode = 404
     $msg = [System.Text.Encoding]::UTF8.GetBytes("404")
+    $ctx.Response.ContentLength64 = $msg.Length
     $ctx.Response.OutputStream.Write($msg, 0, $msg.Length)
   }
   $ctx.Response.Close()

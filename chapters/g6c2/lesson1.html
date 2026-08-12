@@ -86,8 +86,9 @@
   <!-- ======== المحاكاة: الشحنة المتحركة في مجال مغناطيسي ======== -->
   <div class="sim">
     <h3>🧲 مختبر الشحنة المتحركة في مجال مغناطيسي</h3>
-    <p class="sim-sub">غيّر إشارة الشحنة والزاوية θ بين السرعة v والمجال B (المتّجه إلى داخل الصفحة ×)، وراقب مقدار القوة المغناطيسية واتجاهها.</p>
-    <canvas id="chargeSim" width="700" height="280"></canvas>
+    <p class="sim-sub">المجال B أفقي داخل مستوي الشاشة. غيّر إشارة الشحنة والزاوية θ بين السرعة v والمجال B، وراقب مقدار القوة المغناطيسية واتجاهها — وهي دائماً عمودية على المستوي: خارجة من الشاشة ⊙ أو داخلة فيها ⊗.</p>
+    <div class="sim-scroll"><canvas id="chargeSim" width="700" height="280"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
     <div class="controls">
       <div class="slider-group">إشارة الشحنة:
         <select id="qSign" style="padding:8px;border-radius:10px;border:2px solid #e9ebfa;font-family:inherit;font-weight:700">
@@ -132,91 +133,104 @@
   var qSign = document.getElementById("qSign"), thR = document.getElementById("thR"), vR = document.getElementById("vR");
   var thVal = document.getElementById("thVal"), vVal = document.getElementById("vVal");
   var readout = document.getElementById("chargeReadout");
-  var t = 0;
 
   function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
 
-  // نرسم المجال B داخلاً في الصفحة (×) على كامل الخلفية
-  function drawFieldGrid() {
-    ctx.fillStyle = "#94a3b8";
-    ctx.font = "bold 13px Cairo";
-    ctx.textAlign = "center";
-    for (var x = 40; x < cv.width; x += 55) {
-      for (var y = 30; y < cv.height - 20; y += 45) {
-        ctx.fillText("×", x, y);
+  /* المجال B أفقي داخل مستوي الشاشة (نحو اليمين، +x).
+     السرعة v أيضاً داخل المستوي بزاوية θ عن B.
+     إذن F = q(v×B) عمودية على المستوي دائماً: خارجة (⊙) أو داخلة (⊗)،
+     ومقدارها |q|vB sinθ — فينعدم عند θ=0° و180° ويعظم عند θ=90°. */
+  function drawFieldArrows() {
+    for (var y = 34; y < cv.height - 20; y += 52) {
+      for (var x = 30; x < cv.width - 90; x += 108) {
+        arrow(x, y, x + 78, y, "#bfdbfe");
       }
     }
+    ctx.fillStyle = "#2563eb"; ctx.font = "bold 15px Cairo"; ctx.textAlign = "right";
+    ctx.fillText("B (أفقي داخل مستوي الشاشة)", cv.width - 16, 22);
   }
 
-  function draw() {
-    t += 0.025;
+  function arrow(x0, y0, x1, y1, color, w) {
+    ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = w || 3;
+    ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+    drawArrowHead(x0, y0, x1, y1, color);
+  }
+
+  function render() {
     var sign = +qSign.value, thDeg = +thR.value, vMag = +vR.value;
     thVal.textContent = arNum(thDeg) + "°"; vVal.textContent = arNum(vMag);
     var thRad = thDeg * Math.PI / 180;
 
     ctx.clearRect(0, 0, cv.width, cv.height);
-    drawFieldGrid();
+    drawFieldArrows();
 
-    var cx = 350, cy = 150;
+    var cx = 330, cy = 155;
     var Bmag = 6; // ثابت تمثيلي لغرض الرسم
 
-    // متجه السرعة v عند الزاوية thDeg من محور أفقي (يمثّل اتجاه B المرجعي)
-    var vLen = 30 + vMag * 9;
-    var vx = Math.cos(thRad), vy = -Math.sin(thRad); // إحداثيات رياضية: y للأعلى
+    var Fmag = vMag * Bmag * Math.sin(thRad);
+    // F = q(v×B): مع B نحو +x وv داخل المستوي، تكون F على محور z فقط.
+    // للشحنة الموجبة وθ بين 0° و180° (أي v مائلة للأعلى) تكون F داخلة في الشاشة.
+    var intoScreen = sign > 0;
 
-    // القوة F = q * (v × B)، وB داخل الصفحة (-z). بإحداثيات رياضية: دوران v بمقدار 90° عكس عقارب الساعة يعطي اتجاه F لموجب q
-    var fx = -vy, fy = vx; // دوران 90° CCW
-    if (sign < 0) { fx = -fx; fy = -fy; }
+    // متجه السرعة v (أخضر) — بإحداثيات رياضية: y للأعلى
+    var vLen = 34 + vMag * 9;
+    var vx = Math.cos(thRad), vy = -Math.sin(thRad);
+    var vTipX = cx + vx * vLen, vTipY = cy + vy * vLen;
 
-    var Fmag = Math.abs(sign) * vMag * Bmag * Math.sin(thRad);
-    var fLen = 20 + Fmag * 3.2;
-
-    // محول من إحداثيات رياضية (y للأعلى) إلى شاشة (y للأسفل)
-    function toScreen(mx, my) { return [cx + mx, cy - my]; }
-
-    // خط اتجاه B المرجعي (خفيف، أفقي) كدليل بصري
-    ctx.strokeStyle = "#c7cee0"; ctx.setLineDash([5, 4]); ctx.lineWidth = 1.5;
-    ctx.beginPath(); ctx.moveTo(cx - 150, cy); ctx.lineTo(cx + 150, cy); ctx.stroke();
-    ctx.setLineDash([]);
-
-    // متجه السرعة v (أخضر)
-    var vTip = toScreen(vx * vLen, vy * vLen);
-    ctx.strokeStyle = "#059669"; ctx.fillStyle = "#059669"; ctx.lineWidth = 3;
-    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(vTip[0], vTip[1]); ctx.stroke();
-    drawArrowHead(cx, cy, vTip[0], vTip[1], "#059669");
-    ctx.font = "bold 14px Cairo"; ctx.textAlign = "center";
-    ctx.fillText("v", vTip[0] + (vx >= 0 ? 14 : -14), vTip[1] - (vy >= 0 ? 8 : -8));
-
-    // متجه القوة F (أحمر) — يُرسم فقط إن كانت له قيمة محسوسة
-    if (Fmag > 0.05) {
-      var fUnitLen = Math.sqrt(fx * fx + fy * fy) || 1;
-      var fux = fx / fUnitLen, fuy = fy / fUnitLen;
-      var fTip = toScreen(fux * fLen, fuy * fLen);
-      ctx.strokeStyle = "#dc2626"; ctx.fillStyle = "#dc2626"; ctx.lineWidth = 3;
-      ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(fTip[0], fTip[1]); ctx.stroke();
-      drawArrowHead(cx, cy, fTip[0], fTip[1], "#dc2626");
-      ctx.fillText("F_b", fTip[0] + (fux >= 0 ? 18 : -18), fTip[1] - (fuy >= 0 ? 8 : -8));
+    // قوس الزاوية θ بين B (اليمين) وv
+    if (thDeg > 0) {
+      ctx.strokeStyle = "#94a3b8"; ctx.lineWidth = 1.5; ctx.setLineDash([4, 3]);
+      ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx + 120, cy); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.beginPath(); ctx.arc(cx, cy, 40, -thRad, 0); ctx.stroke();
+      ctx.fillStyle = "#64748b"; ctx.font = "bold 14px Cairo"; ctx.textAlign = "center";
+      ctx.fillText("θ", cx + 56 * Math.cos(thRad / 2), cy - 56 * Math.sin(thRad / 2) + 5);
     }
 
+    arrow(cx, cy, vTipX, vTipY, "#059669");
+    ctx.fillStyle = "#059669"; ctx.font = "bold 16px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("v", vTipX + (vx >= 0 ? 16 : -16), vTipY - (vy >= 0 ? 10 : -12));
+
     // الشحنة في المركز
-    ctx.beginPath(); ctx.arc(cx, cy, 14, 0, Math.PI * 2);
+    ctx.beginPath(); ctx.arc(cx, cy, 15, 0, Math.PI * 2);
     ctx.fillStyle = sign > 0 ? "#fee2e2" : "#dbeafe";
     ctx.fill();
     ctx.strokeStyle = sign > 0 ? "#dc2626" : "#1e3a8a"; ctx.lineWidth = 2.5; ctx.stroke();
     ctx.fillStyle = sign > 0 ? "#dc2626" : "#1e3a8a";
-    ctx.font = "bold 16px Cairo"; ctx.textAlign = "center";
-    ctx.fillText(sign > 0 ? "+" : "−", cx, cy + 6);
+    ctx.font = "bold 18px Cairo"; ctx.textAlign = "center";
+    ctx.fillText(sign > 0 ? "+" : "−", cx, cy + 7);
 
-    // نص توضيحي أعلى
-    ctx.fillStyle = "#334155"; ctx.font = "12px Cairo"; ctx.textAlign = "right";
-    ctx.fillText("B داخل الصفحة (×)", cv.width - 16, 22);
+    // القوة F: رمز عمودي على المستوي، حجمه يتبع مقدارها
+    var fx = 560, fy = 150;
+    ctx.textAlign = "center"; ctx.font = "bold 15px Cairo";
+    if (Fmag > 0.05) {
+      var rad = 14 + Fmag * 0.45; // Fmag الأعظم = 60 ⟹ نصف قطر ≈ 41
+      ctx.beginPath(); ctx.arc(fx, fy, rad, 0, Math.PI * 2);
+      ctx.fillStyle = "#fef2f2"; ctx.fill();
+      ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 3; ctx.stroke();
+      ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 3;
+      if (intoScreen) { // ⊗
+        var d = rad * 0.62;
+        ctx.beginPath();
+        ctx.moveTo(fx - d, fy - d); ctx.lineTo(fx + d, fy + d);
+        ctx.moveTo(fx + d, fy - d); ctx.lineTo(fx - d, fy + d);
+        ctx.stroke();
+      } else { // ⊙
+        ctx.beginPath(); ctx.arc(fx, fy, rad * 0.28, 0, Math.PI * 2);
+        ctx.fillStyle = "#dc2626"; ctx.fill();
+      }
+      ctx.fillStyle = "#dc2626";
+      ctx.fillText("F_b " + (intoScreen ? "داخلة في الشاشة ⊗" : "خارجة من الشاشة ⊙"), fx, fy + rad + 22);
+    } else {
+      ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.arc(fx, fy, 18, 0, Math.PI * 2); ctx.stroke();
+      ctx.fillStyle = "#64748b"; ctx.fillText("F_b = صفر", fx, fy + 42);
+    }
 
     var noForce = thDeg === 0 || thDeg === 180;
     readout.innerHTML = "F_b = |q|vB sinθ  —  θ=" + thDeg + "° ⟹ sinθ=" + Math.sin(thRad).toFixed(2) +
       (noForce ? " — <b>لا قوة إطلاقاً! v موازية لـ B ✓</b>" :
         (thDeg == 90 ? " — <b>القوة في أعظم مقدار لها ⭐</b>" : ""));
-
-    requestAnimationFrame(draw);
   }
 
   function drawArrowHead(x0, y0, x1, y1, color) {
@@ -229,8 +243,8 @@
     ctx.closePath(); ctx.fill();
   }
 
-  [qSign, thR, vR].forEach(function (s) { s.addEventListener("input", function () {}); });
-  draw();
+  [qSign, thR, vR].forEach(function (s) { s.addEventListener("input", render); });
+  render();
 })();
 
 /* ---------- الاختبار ---------- */
@@ -242,8 +256,8 @@ Phy.quiz("quiz1", [
     opts: ["لأن الشحنة معدومة", "لأن θ=0° وsin0°=0 فتكون F_b=صفر", "لأن السرعة معدومة", "لأن المجال معدوم"], a: 1,
     why: "F_b=qvBsinθ، وعندما تكون v موازية لـB فإن θ=0° وsin0°=0، فلا قوة تؤثر." },
   { q: "شحنة q=5×10⁻⁶ C تتحرك بسرعة v=4×10⁴ m/s عمودياً على مجال B=0.2T. ما مقدار القوة المغناطيسية؟",
-    opts: ["0.04 N", "0.4 N", "4×10⁻² N", "0.04 N و 4×10⁻² N معاً (نفس القيمة)"], a: 3,
-    why: "بما أن θ=90° فإن sinθ=1، إذن F_b=qvB=5×10⁻⁶×4×10⁴×0.2=0.04N=4×10⁻²N (نفس العدد بصيغتين)." },
+    opts: ["4×10⁻² N", "4×10⁻¹ N", "2×10⁻² N", "4×10⁻³ N"], a: 0,
+    why: "بما أن θ=90° فإن sinθ=1، إذن F_b=qvB=5×10⁻⁶×4×10⁴×0.2=0.04N=4×10⁻² N." },
   { q: "ما محصّلة القوتين الكهربائية والمغناطيسية المؤثرتين معاً في شحنة متحركة داخل مجالين متزامنين؟",
     opts: ["قانون فاراداي", "قوة لورنتز", "قانون لينز", "القوة الدافعة الحركية"], a: 1,
     why: "قوة لورنتز F_Lorentz = F_e + F_b هي محصّلة القوة الكهربائية والمغناطيسية معاً." },

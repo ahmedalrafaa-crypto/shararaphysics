@@ -145,9 +145,12 @@ var Phy = (function () {
 
   // سياق الصفحة من المسار: أي فصل وأي درس/اختبار (يعمل تلقائياً بلا تعديل الاختبارات)
   function pageContext() {
-    var m = (location.pathname || "").match(/ch([0-9]+)\/(lesson[0-9]+|exam)/i);
+    // يشمل فصول الثالث متوسط (chN) وفصول السادس العلمي (g6cN)،
+    // وصفحة أسئلة نهاية الفصل تُعامل معاملة الاختبار (exam).
+    var m = (location.pathname || "").match(/\/(ch[0-9]+|g6c[0-9]+)\/(lesson[0-9]+|exam|questions)/i);
     if (!m) return { ch: null, node: null };
-    return { ch: "ch" + m[1], node: m[2].toLowerCase() };
+    var node = m[2].toLowerCase();
+    return { ch: m[1].toLowerCase(), node: node === "questions" ? "exam" : node };
   }
   // عنوان الموضوع الفرعي من ترويسة الصفحة، بعد تنظيف الرموز التعبيرية
   function pageTopic() {
