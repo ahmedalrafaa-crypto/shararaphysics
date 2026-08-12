@@ -69,7 +69,8 @@
   <div class="sim">
     <h3>🌐 مختبر الموصل الكروي المنفرد</h3>
     <p class="sim-sub">غيّر نصف قطر الكرة r وشحنتها Q، وراقب كيف يرتفع الجهد V والمجال E عند السطح — ولاحظ متى يحدث الانهيار الكهربائي في الهواء المحيط.</p>
-    <canvas id="sphereSim" width="700" height="240"></canvas>
+    <div class="sim-scroll"><canvas id="sphereSim" width="700" height="240"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
     <div class="controls">
       <div class="slider-group">نصف القطر r (سم): <b id="rVal">٥</b>
         <input type="range" id="rR" min="1" max="20" step="1" value="5"></div>
@@ -114,7 +115,7 @@
 
   function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
 
-  function draw() {
+  function render() {
     t += 0.02;
     var rCm = +rR.value, qNc = +qR.value;
     rVal.textContent = arNum(rCm); qVal.textContent = arNum(qNc);
@@ -179,10 +180,13 @@
     readout.innerHTML = "V = kQ/r = " + V.toFixed(0) + " V — E = V/r = " + E.toExponential(2) + " V/m — " +
       (breakdown ? "<b>⚡ انهيار: المجال تجاوز 3×10⁶ V/m — الشحنة تهرب خلال الهواء!</b>" : "أقل من عتبة انهيار الهواء (3×10⁶ V/m) ✓");
 
-    requestAnimationFrame(draw);
   }
-  [rR, qR].forEach(function (s) { s.addEventListener("input", function () {}); });
-  draw();
+
+  // الشرارة والشحنات المتحركة تعتمد على requestAnimationFrame، لكن تغيير المزالق
+  // يعيد الرسم فوراً حتى لو كان rAF مخنوقاً (وضع توفير الطاقة أو تبويب في الخلفية).
+  function loop() { render(); requestAnimationFrame(loop); }
+  [rR, qR].forEach(function (s) { s.addEventListener("input", render); });
+  loop();
 })();
 
 /* ---------- الاختبار ---------- */

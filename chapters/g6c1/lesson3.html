@@ -71,7 +71,8 @@
   <div class="sim">
     <h3>🧊 مختبر العازل الكهربائي</h3>
     <p class="sim-sub">بدّل بين بقاء المتسعة موصولة بالبطارية أو فصلها عنها، ثم غيّر ثابت العزل κ، وراقب أيّ كمية تبقى ثابتة وأيّها تتغيّر (الشحنة، الجهد، السعة).</p>
-    <canvas id="dielSim" width="700" height="240"></canvas>
+    <div class="sim-scroll"><canvas id="dielSim" width="700" height="240"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
     <div class="controls">
       <button class="btn" id="connBtn">🔌 موصولة بالبطارية</button>
       <button class="btn ghost" id="discBtn">✂️ مفصولة عنها</button>
@@ -125,9 +126,11 @@
   }
   connBtn.addEventListener("click", function () { mode = "connected"; updateUI(); draw(); });
   discBtn.addEventListener("click", function () {
-    // نثبّت الشحنة الحالية لحظة الفصل
-    var Cnow = EPS0 * (+kR.value) * AREA / GAP;
-    qLocked = Cnow * VBAT; // شحنة اللحظة الراهنة (بالجهد الحالي)
+    // نثبّت الشحنة لحظة الفصل فقط — الضغط وهي مفصولة أصلاً لا يعيد شحنها
+    if (mode === "connected") {
+      var Cnow = EPS0 * (+kR.value) * AREA / GAP;
+      qLocked = Cnow * VBAT; // شحنة اللحظة الراهنة (بجهد البطارية)
+    }
     mode = "disconnected"; updateUI(); draw();
   });
   updateUI();
