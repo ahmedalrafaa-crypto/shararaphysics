@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: ربط التوالي R-L-C — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثالث</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>📐 الدرس 5: ربط التوالي R-L-C</h1>
+    <p>درستَ كل عنصر منفرداً: المقاومة بطور واحد، المحث متقدّم 90°، المتسعة متأخرة 90°. لكن أي دائرة حقيقية (محرك، محوّلة، مكبّر صوت) تحوي الثلاثة معاً! كيف نجمعها بدائرة واحدة؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">📐</span>
+    <span>لا يمكن جمع V_R وV_L وV_C جبرياً كأنها أعداد عادية — لأنها لا تبلغ ذروتها بنفس اللحظة! الحل: نعاملها كمتجهات لها طول واتجاه (زاوية طورها)، ونجمعها متجهياً كما تجمع القوى بالميكانيك. النتيجة مثلث قائم الزاوية أنيق يلخّص الدائرة كلها برقمين فقط: الممانعة Z وزاوية الطور Φ.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📊</span> مخطط الفولطيات: الجمع المتجهي</div>
+  <div class="card">
+    <p>نربط R وL وC على التوالي فيمرّ فيها <b>نفس التيار</b> بالضبط. لكن فولطياتها ليست بطور واحد: <span class="formula-inline">V_R</span> بطور التيار (مرجع)، <span class="formula-inline">V_L</span> يتقدّمه 90°، و<span class="formula-inline">V_C</span> يتأخر عنه 90° — أي V_L وV_C على محور واحد متعاكسَي الاتجاه. نجمعهما جبرياً أولاً (V_L−V_C) ثم نجمع الناتج متجهياً مع V_R:</p>
+  </div>
+  <div class="lawbox">
+    الفولطية الكلية وزاوية الطور (مخطط الفولطيات)
+    <div class="formula">(V_T)² = (V_R)² + (V_L − V_C)²  ،  tan Φ = (V_L − V_C)/V_R</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🔺</span> الممانعة Z: معارضة الدائرة كلها</div>
+  <div class="card">
+    <p>بقسمة كل فولطية على التيار المشترك <span class="formula-inline">I</span> (أي R=V_R/I، X_L=V_L/I، X_C=V_C/I) نحصل على مثلث مماثل تماماً لكن بدلالة المعارضات لا الفولطيات. المعارضة الكلية تُسمّى <b>الممانعة</b> Z:</p>
+  </div>
+  <div class="lawbox">
+    الممانعة الكلية وزاوية الطور
+    <div class="formula">Z = V_T/I  ،  Z² = R² + (X_L − X_C)²  ،  tan Φ = (X_L − X_C)/R</div>
+  </div>
+
+  <div class="cols2" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0">
+    <div class="defbox" style="margin:0">
+      <b class="term">📈 دائرة حثّية</b>
+      <p style="margin-top:4px">إذا كان X_L &gt; X_C ⟹ Φ موجبة، والفولطية الكلية تتقدّم على التيار.</p>
+    </div>
+    <div class="defbox" style="margin:0">
+      <b class="term">📉 دائرة سعوية</b>
+      <p style="margin-top:4px">إذا كان X_C &gt; X_L ⟹ Φ سالبة، والفولطية الكلية تتأخر عن التيار.</p>
+    </div>
+  </div>
+
+  <!-- ======== المحاكاة: مثلث الممانعة ======== -->
+  <div class="sim">
+    <h3>📐 مختبر الدائرة المتوالية R-L-C: مثلث الممانعة</h3>
+    <p class="sim-sub">غيّر R وL وC وراقب مثلث الممانعة يتغيّر شكلاً واتجاهاً (يتمدد لأعلى إذا كانت الدائرة حثّية، ولأسفل إذا كانت سعوية). التردد ثابت f=50Hz.</p>
+    <div class="sim-scroll"><canvas id="zSim" width="700" height="300"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">المقاومة R (أوم): <b id="rVal">٢٠</b>
+        <input type="range" id="rR" min="2" max="100" step="1" value="20"></div>
+      <div class="slider-group">معامل الحث L (ملي هنري): <b id="lVal">١٠٠</b>
+        <input type="range" id="lR" min="10" max="500" step="5" value="100"></div>
+      <div class="slider-group">السعة C (مايكروفاراد): <b id="cVal">٥٠</b>
+        <input type="range" id="cR" min="1" max="100" step="1" value="50"></div>
+    </div>
+    <div class="readout" id="zReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">دائرة تيار متناوب متوالية الربط تحتوي مقاومة ومحثاً ومتسعة، مقاومتها R=40Ω، ورادة المحث X_L=120Ω، ورادة المتسعة X_C=90Ω، والفولطية الموضوعة V_T=240V بتردد f=500/π Hz. (سؤال وزاري، الدور الثالث 2022) أوجد: ① معامل الحث الذاتي للملف وسعة المتسعة. ② الممانعة الكلية وتيار الدائرة وزاوية فرق الطور.</div>
+    <div class="givens">المعطيات: R=40Ω — X_L=120Ω — X_C=90Ω — V_T=240V — f=500/π Hz</div>
+    <div class="step"><b>الخطوة ١:</b> من قانون X_L نوجد L:
+      <div class="math">X_L=2πfL ⟹ 120 = 2π×(500/π)×L = 1000L ⟹ L = 0.12 H</div>
+      ومن قانون X_C نوجد C:
+      <div class="math">X_C=1/(2πfC) ⟹ 90 = 1/(1000C) ⟹ C ≈ 11.1 μF</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نوجد الممانعة الكلية:
+      <div class="math">Z = √(R² + (X_L−X_C)²) = √(40² + 30²) = √2500 = 50 Ω</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نوجد التيار وزاوية الطور:
+      <div class="math">I = V_T/Z = 240/50 = 4.8 A</div>
+      <div class="math">tan Φ = (X_L−X_C)/R = 30/40 = 0.75 ⟹ Φ = 37° (حثّية، لأن X_L&gt;X_C)</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz5"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson4.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: عامل القدرة ⚖️</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة مثلث الممانعة ---------- */
+(function () {
+  var cv = document.getElementById("zSim"), ctx = cv.getContext("2d");
+  var rR = document.getElementById("rR"), lR = document.getElementById("lR"), cR = document.getElementById("cR");
+  var rVal = document.getElementById("rVal"), lVal = document.getElementById("lVal"), cVal = document.getElementById("cVal");
+  var readout = document.getElementById("zReadout");
+  var f = 50, Vm = 10;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n) { return arNum(Math.abs(n) < 1 ? n.toFixed(3) : n.toFixed(2)); }
+
+  var ox = 190, oy = 230, budget = 190;
+
+  function draw() {
+    var R = +rR.value, L = (+lR.value) / 1000, C = (+cR.value) * 1e-6;
+    rVal.textContent = arNum(+rR.value); lVal.textContent = arNum(+lR.value); cVal.textContent = arNum(+cR.value);
+    var XL = 2 * Math.PI * f * L, XC = 1 / (2 * Math.PI * f * C);
+    var diff = XL - XC;
+    var Z = Math.sqrt(R * R + diff * diff);
+    var phi = Math.atan2(diff, R) * 180 / Math.PI;
+    var pxPerUnit = budget / Z;
+    var Rpx = R * pxPerUnit, Dpx = diff * pxPerUnit;
+    var sign = diff >= 0 ? -1 : 1; // شاشة: لأعلى=سالب y
+
+    ctx.direction = "ltr";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    // محاور مرجعية
+    ctx.strokeStyle = "#e2e8f0"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(30, oy); ctx.lineTo(670, oy); ctx.stroke();
+
+    var tipX = ox + Rpx, tipY = oy + sign * Math.abs(Dpx);
+
+    // خطوط مساعدة متقطعة (تكمل المستطيل)
+    ctx.strokeStyle = "#e2e8f0"; ctx.setLineDash([3, 3]); ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(tipX, oy); ctx.lineTo(tipX, tipY); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // ضلع R (أفقي، أحمر)
+    ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(tipX, oy); ctx.stroke();
+    ctx.fillStyle = "#dc2626"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("R", (ox + tipX) / 2, oy + 20);
+
+    // ضلع X_L−X_C (شاقولي، كهرماني)
+    ctx.strokeStyle = "#d97706"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(tipX, oy); ctx.lineTo(tipX, tipY); ctx.stroke();
+    ctx.fillStyle = "#d97706"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "left";
+    ctx.fillText("X_L−X_C", tipX + 8, (oy + tipY) / 2);
+
+    // الممانعة Z (وتر، بنفسجي)
+    ctx.strokeStyle = "#a21caf"; ctx.lineWidth = 3.4;
+    ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(tipX, tipY); ctx.stroke();
+    ctx.fillStyle = "#a21caf"; ctx.font = "bold 14px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("Z", (ox + tipX) / 2 - (sign > 0 ? -14 : 14), (oy + tipY) / 2 - 6);
+
+    // قوس الزاوية Φ (من محور R عند الزاوية 0 إلى اتجاه Z)
+    var phiCanvas = Math.atan2(tipY - oy, tipX - ox);
+    ctx.strokeStyle = "#059669"; ctx.lineWidth = 1.6;
+    ctx.beginPath(); ctx.arc(ox, oy, 26, 0, phiCanvas, phiCanvas < 0);
+    ctx.stroke();
+    ctx.fillStyle = "#059669"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("Φ", ox + 40, oy + sign * 14);
+
+    // نقطة الأصل
+    ctx.beginPath(); ctx.arc(ox, oy, 3.5, 0, Math.PI * 2); ctx.fillStyle = "#334155"; ctx.fill();
+
+    var kind = Math.abs(diff) < Math.max(0.04 * Z, 1.5) ? "أومية صرفة تقريباً (قريبة من حالة الرنين! راجع الدرس السابع)" : (diff > 0 ? "حثّية (X_L > X_C)" : "سعوية (X_C > X_L)");
+
+    var I = Vm / Z, VR = I * R, VL = I * XL, VC = I * XC, VT = I * Z;
+    readout.innerHTML = "X_L=" + fmt(XL) + "Ω، X_C=" + fmt(XC) + "Ω، Z=" + fmt(Z) + "Ω، Φ=" + fmt(phi) + "° — الدائرة " + kind +
+      "<br>عند V_m=10V ثابتة: I=" + fmt(I) + "A &nbsp;|&nbsp; V_R=" + fmt(VR) + "V، V_L=" + fmt(VL) + "V، V_C=" + fmt(VC) + "V، V_T=" + fmt(VT) + "V";
+  }
+  [rR, lR, cR].forEach(function (s) { s.addEventListener("input", draw); });
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz5", [
+  { q: "لماذا لا نجمع V_R وV_L وV_C جبرياً (بجمع عادي) لإيجاد V_T؟",
+    opts: ["لأنها لا تبلغ ذروتها بنفس اللحظة (بينها فروق طور)، فيجب جمعها متجهياً", "لأن الجمع الجبري ممنوع رياضياً بالفيزياء", "لأنها بوحدات مختلفة", "لا سبب حقيقي، الجمع الجبري صحيح أيضاً"], a: 0,
+    why: "V_R بطور I، وV_L متقدّمة 90°، وV_C متأخرة 90° — فروق طور بينها تمنع جمعها كأعداد عادية، ويجب جمعها متجهياً." },
+  { q: "دائرة متوالية R-L-C فيها R=6Ω، X_L=12Ω، X_C=4Ω. ما مقدار الممانعة Z؟",
+    opts: ["10 Ω", "14 Ω", "8 Ω", "20 Ω"], a: 0,
+    why: "Z = √(R² + (X_L−X_C)²) = √(6² + 8²) = √(36+64) = √100 = 10 Ω." },
+  { q: "بنفس الدائرة أعلاه (R=6Ω, X_L−X_C=8Ω)، الدائرة:",
+    opts: ["حثّية، لأن X_L>X_C", "سعوية، لأن X_C>X_L", "أومية صرفة", "لا يمكن تحديد نوعها"], a: 0,
+    why: "بما أن X_L=12Ω أكبر من X_C=4Ω، فالدائرة حثّية وزاوية Φ موجبة." },
+  { q: "ما شرط اعتبار الدائرة المتوالية R-L-C 'سعوية'؟",
+    opts: ["X_C > X_L (فتكون Φ سالبة، والفولطية الكلية تتأخر عن التيار)", "X_L > X_C دائماً", "R أكبر من Z", "C أكبر من L بالقيمة العددية"], a: 0,
+    why: "الدائرة سعوية إذا كانت رادة السعة أكبر من رادة الحث (X_C>X_L)، فتصبح Φ سالبة وتتأخر الفولطية الكلية عن التيار." },
+  { q: "دائرة متوالية Z=25Ω وR=20Ω. ما مقدار (X_L−X_C) بهذه الدائرة؟",
+    opts: ["15 Ω", "5 Ω", "45 Ω", "invalid"], a: 0,
+    why: "من Z²=R²+(X_L−X_C)²: 625=400+(X_L−X_C)² ⟹ (X_L−X_C)²=225 ⟹ (X_L−X_C)=15Ω." },
+  { q: "دائرة متوالية بفولطية كلية V_T=240V وتيار I=4.8A. ما مقدار الممانعة الكلية Z؟",
+    opts: ["50 Ω", "45.7 Ω", "1152 Ω", "0.02 Ω"], a: 0,
+    why: "Z = V_T/I = 240/4.8 = 50 Ω." }
+], { onDone: function (stars) { Phy.setLesson("g6c3", "5", { stars: stars }); } });
+</script>
+</body>
+</html>

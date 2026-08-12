@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 6: عامل القدرة والقدرة المستهلكة — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثالث</a> / الدرس 6</span>
+  </div>
+
+  <div class="hero">
+    <h1>⚖️ الدرس 6: عامل القدرة والقدرة المستهلكة</h1>
+    <p>بالدرس الماضي أوجدنا الممانعة Z وزاوية الطور Φ لدائرة R-L-C. الآن نسأل السؤال العملي: من كل القدرة اللي "تدفع" الشركة ثمنها، كم منها يُستهلك فعلاً؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">⚖️</span>
+    <span>لماذا تحاسب شركات الكهرباء المصانع الكبيرة على "عامل القدرة" لا على التيار فقط؟ لأن دائرة فيها محركات (محثّات كبيرة) تسحب تياراً كبيراً من الشبكة، لكن جزءاً منه فقط يتحوّل لعمل فعلي — والباقي يتردد ذهاباً وإياباً بلا فائدة. عامل القدرة هو المقياس الدقيق لهذه الكفاءة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔋</span> القدرة الحقيقية والقدرة الظاهرية</div>
+  <div class="card">
+    <p>القدرة <b>الحقيقية</b> (المستهلَكة فعلاً، تتحول حرارة أو عملاً) تُستنزف بالمقاومة فقط. أما حاصل ضرب المقدارين المؤثرين الكليين للتيار والفولطية (بلا اعتبار لفرق الطور) فيُسمّى القدرة <b>الظاهرية</b>، وتُقاس بوحدة مختلفة (فولت-أمبير V·A لا واط):</p>
+  </div>
+  <div class="lawbox">
+    القدرة الحقيقية والظاهرية
+    <div class="formula">P_real = I V_T cos Φ  (واط W)   ،   P_app = I V_T  (فولت-أمبير V·A)</div>
+  </div>
+  <div class="lawbox">
+    عامل القدرة
+    <div class="formula">pf = P_real/P_app = cos Φ = R/Z</div>
+  </div>
+  <div class="defbox">
+    <b class="term">الحالات الحدّية:</b> بمقاومة صرفة: Φ=0 ⟹ pf=cos0°=1 (كل القدرة الظاهرية تُستهلك فعلاً). بمحث صرف أو متسعة صرفة: Φ=90° ⟹ pf=cos90°=0 (لا استهلاك إطلاقاً، كل الطاقة تُختزن وتُعاد). والدائرة الحقيقية R-L-C تقع بينهما دائماً: 0 &lt; pf &lt; 1.
+  </div>
+
+  <!-- ======== المحاكاة: منحني القدرة اللحظية بفرق طور عام ======== -->
+  <div class="sim">
+    <h3>⚖️ مختبر عامل القدرة: القدرة اللحظية بفرق طور عام</h3>
+    <p class="sim-sub">نفس دائرة الدرس السابق (R-L-C توالياً، f=50Hz ثابت). لاحظ الفرق عن الدرس 2: منحني القدرة هنا يهبط <b>جزئياً تحت الصفر</b> (الجزء الملوّن الفاتح) — هذا الجزء هو الطاقة التي يعيدها المحث/المتسعة للمصدر. خط P_av المتقطع هو المتوسط الحقيقي المستهلك.</p>
+    <div class="sim-scroll"><canvas id="pfSim" width="700" height="300"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">المقاومة R (أوم): <b id="rVal">٢٠</b>
+        <input type="range" id="rR" min="2" max="100" step="1" value="20"></div>
+      <div class="slider-group">معامل الحث L (ملي هنري): <b id="lVal">١٠٠</b>
+        <input type="range" id="lR" min="10" max="500" step="5" value="100"></div>
+      <div class="slider-group">السعة C (مايكروفاراد): <b id="cVal">٥٠</b>
+        <input type="range" id="cR" min="1" max="100" step="1" value="50"></div>
+    </div>
+    <div class="readout" id="pfReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">رُبط ملف (محث بمقاومة داخلية) بين قطبي مصدر فولطية متناوبة فرق جهده V_T=100V، فكانت زاوية فرق الطور بين الفولطية الكلية والتيار Φ=37°، ومقدار التيار I=5A. (سؤال وزاري، الدور الثاني 2021 — cos37°=0.8) أوجد: ① مقاومة الملف R. ② تردد المصدر f، إذا كان معامل حث الملف L=1/(10π) H.</div>
+    <div class="givens">المعطيات: V_T=100V — I=5A — Φ=37° (cos37°=0.8) — L=1/(10π) H</div>
+    <div class="step"><b>الخطوة ١:</b> نوجد الممانعة أولاً:
+      <div class="math">Z = V_T/I = 100/5 = 20 Ω</div></div>
+    <div class="step"><b>الخطوة ٢:</b> من عامل القدرة نوجد R:
+      <div class="math">pf = cos Φ = R/Z ⟹ 0.8 = R/20 ⟹ R = 16 Ω</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نوجد X_L من مثلث الممانعة، ثم f:
+      <div class="math">Z² = R² + X_L² ⟹ 400 = 256 + X_L² ⟹ X_L = 12 Ω</div>
+      <div class="math">X_L = 2πfL ⟹ 12 = 2πf × 1/(10π) = f/5 ⟹ f = 60 Hz</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz6"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson5.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson7.html">الدرس التالي: دائرة الرنين 📻</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة منحني القدرة اللحظية ---------- */
+(function () {
+  var cv = document.getElementById("pfSim"), ctx = cv.getContext("2d");
+  var rR = document.getElementById("rR"), lR = document.getElementById("lR"), cR = document.getElementById("cR");
+  var rVal = document.getElementById("rVal"), lVal = document.getElementById("lVal"), cVal = document.getElementById("cVal");
+  var readout = document.getElementById("pfReadout");
+  var f = 50, Vm = 10;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n) { return arNum(Math.abs(n) < 1 ? n.toFixed(4) : n.toFixed(3)); }
+
+  var x0 = 40, x1 = 660, pxPerRad = (x1 - x0) / (4 * Math.PI);
+  var baseline = 150, budget = 110;
+
+  function draw() {
+    var R = +rR.value, L = (+lR.value) / 1000, C = (+cR.value) * 1e-6;
+    rVal.textContent = arNum(+rR.value); lVal.textContent = arNum(+lR.value); cVal.textContent = arNum(+cR.value);
+    var XL = 2 * Math.PI * f * L, XC = 1 / (2 * Math.PI * f * C);
+    var Z = Math.sqrt(R * R + (XL - XC) * (XL - XC));
+    var phi = Math.atan2(XL - XC, R);
+    var Im = Vm / Z;
+    var Pav = Im * Vm / 2 * Math.cos(phi);
+    var pf = Math.cos(phi);
+    ctx.direction = "ltr";
+
+    // تمريرة أولى: أعظم قيمة مطلقة للقدرة لغرض التحجيم التلقائي
+    var maxAbsP = 0.0001, n = x1 - x0;
+    for (var i = 0; i <= n; i++) {
+      var th = i / pxPerRad;
+      var p = Vm * Math.sin(th) * Im * Math.sin(th - phi);
+      if (Math.abs(p) > maxAbsP) maxAbsP = Math.abs(p);
+    }
+    var pxPerW = budget / maxAbsP;
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(x0, baseline); ctx.lineTo(x1, baseline); ctx.stroke();
+    ctx.fillStyle = "#94a3b8"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
+    for (var k = 1; k <= 4; k++) {
+      var gx = x0 + k * Math.PI * pxPerRad;
+      ctx.strokeStyle = "#f1f5f9";
+      ctx.beginPath(); ctx.moveTo(gx, 25); ctx.lineTo(gx, 275); ctx.stroke();
+      ctx.fillStyle = "#94a3b8"; ctx.fillText(k + "π", gx, 288);
+    }
+
+    // منحني القدرة اللحظية p(θ)
+    ctx.strokeStyle = "#d97706"; ctx.lineWidth = 2.4;
+    ctx.beginPath();
+    for (var x = x0; x <= x1; x++) {
+      var th2 = (x - x0) / pxPerRad;
+      var p2 = Vm * Math.sin(th2) * Im * Math.sin(th2 - phi);
+      var y = baseline - p2 * pxPerW;
+      if (x === x0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+
+    // تظليل الجزء السالب (طاقة مرتجعة)
+    ctx.fillStyle = "rgba(217,119,6,0.12)";
+    ctx.beginPath();
+    var started = false;
+    for (var x3 = x0; x3 <= x1; x3++) {
+      var th3 = (x3 - x0) / pxPerRad;
+      var p3 = Vm * Math.sin(th3) * Im * Math.sin(th3 - phi);
+      if (p3 < 0) {
+        var y3 = baseline - p3 * pxPerW;
+        if (!started) { ctx.moveTo(x3, baseline); started = true; }
+        ctx.lineTo(x3, y3);
+      } else if (started) { ctx.lineTo(x3, baseline); started = false; }
+    }
+    if (started) ctx.lineTo(x1, baseline);
+    ctx.fill();
+
+    // خط المتوسط P_av
+    ctx.strokeStyle = "#92400e"; ctx.setLineDash([5, 4]); ctx.lineWidth = 1.4;
+    ctx.beginPath(); ctx.moveTo(x0, baseline - Pav * pxPerW); ctx.lineTo(x1, baseline - Pav * pxPerW); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = "#92400e"; ctx.textAlign = "left"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("P_av", x1 + 4, baseline - Pav * pxPerW + 4);
+
+    readout.innerHTML = "Z=" + fmt(Z) + "Ω، Φ=" + fmt(phi * 180 / Math.PI) + "° &nbsp;|&nbsp; pf=cosΦ=R/Z=" + fmt(pf) +
+      " &nbsp;|&nbsp; P_app=I·V_T=" + fmt(Im * Vm) + "W &nbsp;|&nbsp; P_real=P_app×pf=" + fmt(Pav) + "W";
+  }
+  [rR, lR, cR].forEach(function (s) { s.addEventListener("input", draw); });
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz6", [
+  { q: "ما الفرق بين القدرة الحقيقية P_real والقدرة الظاهرية P_app؟",
+    opts: ["P_real هي المستهلكة فعلاً بالمقاومة (P_real=I V_T cosΦ)، وP_app=I V_T بلا اعتبار لفرق الطور", "لا فرق، متساويتان دائماً بكل دائرة", "P_app أكبر من P_real دائماً بمقدار ثابت 90 واط", "P_real تقاس بـV·A وP_app تقاس بـW"], a: 0,
+    why: "القدرة الحقيقية تراعي زاوية الطور (تُضرب بـcosΦ) لأنها المستهلكة فعلاً بالمقاومة، بينما الظاهرية هي حاصل ضرب I×V_T مباشرة بلا اعتبار للطور." },
+  { q: "ما قانون عامل القدرة pf؟",
+    opts: ["pf = cos Φ = R/Z", "pf = sin Φ = X/Z", "pf = Z/R", "pf = tan Φ"], a: 0,
+    why: "عامل القدرة هو نسبة القدرة الحقيقية للظاهرية، ويساوي cosΦ = R/Z." },
+  { q: "دائرة مقاومتها R=30Ω وممانعتها Z=50Ω. ما عامل القدرة؟",
+    opts: ["0.6", "0.3", "1.67", "50"], a: 0,
+    why: "pf = R/Z = 30/50 = 0.6." },
+  { q: "بمقاومة صرفة (R فقط، بلا محث أو متسعة)، ما مقدار عامل القدرة؟",
+    opts: ["1 (كل القدرة الظاهرية تُستهلك فعلاً)", "0", "0.5", "يعتمد على قيمة R"], a: 0,
+    why: "بمقاومة صرفة Φ=0°، وpf=cos0°=1 — أعلى عامل قدرة ممكن." },
+  { q: "بمحث صرف أو متسعة صرفة (بلا مقاومة)، ما مقدار عامل القدرة ولماذا؟",
+    opts: ["0، لأن Φ=90° وcos90°=0", "1، تماماً مثل المقاومة", "0.5 دائماً بكل الحالات", "يعتمد على قيمة L أو C فقط"], a: 0,
+    why: "بمحث أو متسعة صرفة Φ=90°، وcos90°=0، أي لا استهلاك حقيقي للقدرة إطلاقاً رغم مرور تيار." },
+  { q: "ملف رُبط بمصدر V_T=100V فمرّ به تيار I=5A بزاوية طور Φ=37° (cos37°=0.8). ما مقاومة الملف R؟",
+    opts: ["16 Ω", "20 Ω", "12.5 Ω", "80 Ω"], a: 0,
+    why: "Z=V_T/I=100/5=20Ω، ثم من pf=cosΦ=R/Z: R=Z×cosΦ=20×0.8=16Ω." }
+], { onDone: function (stars) { Phy.setLesson("g6c3", "6", { stars: stars }); } });
+</script>
+</body>
+</html>

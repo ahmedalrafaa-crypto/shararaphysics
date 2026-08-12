@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 7: دائرة الرنين بربط التوالي — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثالث</a> / الدرس 7</span>
+  </div>
+
+  <div class="hero">
+    <h1>📻 الدرس 7: دائرة الرنين بربط التوالي</h1>
+    <p>بالدرس الخامس رأينا أن الممانعة Z تتغيّر بتغيّر R وL وC. لكن هل توجد حالة خاصة تصبح فيها Z أصغر ما يمكن؟ نعم — تُسمّى الرنين، وهي بالضبط ما يشغّل كل جهاز استقبال لاسلكي حولك.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">📻</span>
+    <span>حين تدير قرص "الدوزان" براديو قديم، أنت فعلياً تغيّر سعة متسعة متغيّرة بدائرة رنين. عند سعة معيّنة يصير التردد الرنيني f_r=1/2π√(LC) مساوياً تردد محطة واحدة، فتُضخَّم إشارتها آلاف المرات بينما تبقى بقية المحطات مهملة ضعيفة. تغيير المحطة = تغيير C = إزاحة قمة الرنين لتردد جديد.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔄</span> الاهتزاز الكهرومغناطيسي: أرجوحة الطاقة</div>
+  <div class="card">
+    <p>اشحن متسعة ثم صِلها بمحث صرف: تبدأ المتسعة بالتفريغ خلال المحث فيتولّد مجال مغناطيسي يختزن الطاقة، ثم يتلاشى المجال فيعيد شحن المتسعة بقطبية معاكسة، وهكذا. تتأرجح الطاقة بين <b>مجال المتسعة الكهربائي</b> <span class="formula-inline">(PE=½Q²/C)</span> و<b>مجال المحث المغناطيسي</b> <span class="formula-inline">(PE=½LI²)</span> بتردد جيبي — تماماً كتأرجح البندول بين طاقتي الوضع والحركة.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🎯</span> شرط الرنين</div>
+  <div class="notebox">
+    <b>⭐ القاعدة الذهبية: شرط الرنين</b>
+    <p style="margin-top:6px">عند الرنين تكون X_L=X_C، فتُلغي إحداهما الأخرى وتصبح الممانعة أصغر ما يمكن (Z=R)، فيبلغ التيار أعظم مقدار له، وتكون Φ=0 وعامل القدرة يساوي 1 بالضبط.</p>
+  </div>
+  <div class="lawbox">
+    التردد الرنيني (من شرط ωL=1/ωC)
+    <div class="formula">ω_r = 1/√(LC)  ،  f_r = 1/(2π√(LC))</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> يمكن أن تكون زاوية فرق الطور Φ=0 بدائرة تيار متناوب متوالية الربط تحتوي مقاومة ومحثاً ومتسعة. <span class="wz">وزاري الدور الثاني ٢٠٢٠</span></summary>
+    <div class="ans">يحدث ذلك بحالة الرنين، عندما يساوي تردد المصدر التردد الرنيني للدائرة، فتتساوى الرادتان X_L=X_C ويُلغي أحدهما الآخر، فتصبح الممانعة Z=R (مقاومة صرفة فعلياً). وعندها tan Φ=(X_L−X_C)/R=0 ⟹ Φ=0.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">📶</span> عامل النوعية: حِدّة الرنين</div>
+  <div class="card">
+    <p>ما مدى "حِدّة" قمة الرنين؟ نقيسها بـ<b>عامل النوعية</b> Q_f: نسبة التردد الرنيني إلى نطاق التردد Δf (عرض القمة عند نصف القدرة العظمى). كلما صغرت المقاومة R زاد Q_f وصارت قمة الرنين أحدّ وأدقّ — انتقائية أعلى لتردد واحد (بالضبط ما يحتاجه الراديو لالتقاط محطة واحدة من الفوضى).</p>
+  </div>
+  <div class="lawbox">
+    عامل النوعية
+    <div class="formula">Q_f = f_r/Δf = (1/R) √(L/C)</div>
+  </div>
+
+  <!-- ======== المحاكاة: منحني الرنين ======== -->
+  <div class="sim">
+    <h3>📶 مختبر رنين دائرة RLC المتوالية</h3>
+    <p class="sim-sub">غيّر R وL وC وراقب قمة الرنين تتحرّك (تتغيّر f_r) وتتغيّر حدّةً (يتغيّر Q_f). الخط الأخضر الأفقي المتقطع هو مستوى نصف القدرة (I_max/√2)، والمسافة بين تقاطعَيه مع المنحني هي Δf.</p>
+    <div class="sim-scroll"><canvas id="resSim" width="680" height="230"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">المقاومة R (أوم): <b id="rVal">١٠</b>
+        <input type="range" id="rR" min="2" max="100" step="1" value="10"></div>
+      <div class="slider-group">المحاثة L (ملي هنري): <b id="lVal">١٠٠</b>
+        <input type="range" id="lR" min="10" max="500" step="10" value="100"></div>
+      <div class="slider-group">السعة C (مايكروفاراد): <b id="cVal">١٠</b>
+        <input type="range" id="cR" min="1" max="100" step="1" value="10"></div>
+    </div>
+    <div class="readout" id="resReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">دائرة تيار متناوب متوالية الربط تحتوي مقاومة R=3Ω ومعامل حث ذاتي L=0.04H ومتسعة سعتها C=25μF، وُضعت فولطية متناوبة V_T=75V والدائرة في حالة رنين. (سؤال وزاري، الدور الثالث 2019) احسب: ① التيار المنساب. ② الفولطية عبر المحث وعبر المتسعة. ③ عامل النوعية.</div>
+    <div class="givens">المعطيات: R=3Ω — L=0.04H — C=25μF — V_T=75V (حالة رنين)</div>
+    <div class="step"><b>الخطوة ١:</b> نوجد التردد الزاوي الرنيني:
+      <div class="math">ω_r = 1/√(LC) = 1/√(0.04×25×10⁻⁶) = 1/√(10⁻⁶) = 1000 rad/s</div>
+      وعند الرنين Z=R=3Ω، فالتيار:
+      <div class="math">I = V_T/Z = 75/3 = 25 A</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نوجد X_L=X_C عند الرنين، ثم الفولطيتين:
+      <div class="math">X_L = ω_r L = 1000×0.04 = 40 Ω  (= X_C أيضاً)</div>
+      <div class="math">V_L = I×X_L = 25×40 = 1000 V  ،  V_C = I×X_C = 1000 V (متساويتان ومتعاكستان بالطور)</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نوجد عامل النوعية:
+      <div class="math">Q_f = (1/R)√(L/C) = (1/3)√(0.04/25×10⁻⁶) = (1/3)×40 ≈ 13.33</div>
+      💡 جرّب هذي القيم بالضبط بالمحاكاة فوق (R=3، L=40، C=25) — راح تلاحظ f_r≈159.2Hz وQ_f≈13.3 مطابقين لحسابنا هنا (فقط I_max بالمحاكاة يختلف لأنها تستعمل مصدراً ثابتاً V=10V لا 75V).</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz7"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson6.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson8.html">الدرس التالي: ربط التوازي RLC 🔀</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة منحني الرنين ---------- */
+(function () {
+  var cv = document.getElementById("resSim"), ctx = cv.getContext("2d");
+  var rR = document.getElementById("rR"), lR = document.getElementById("lR"), cR = document.getElementById("cR");
+  var rVal = document.getElementById("rVal"), lVal = document.getElementById("lVal"), cVal = document.getElementById("cVal");
+  var readout = document.getElementById("resReadout");
+  var Vm = 10;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n) { return arNum(n.toFixed(2)); }
+
+  function currentAt(f, R, L, C, V) {
+    var w = 2 * Math.PI * f;
+    var xl = w * L, xc = 1 / (w * C);
+    var z = Math.sqrt(R * R + (xl - xc) * (xl - xc));
+    return V / z;
+  }
+
+  var ox = 60, oy = 190, w = 580, h = 150;
+
+  function draw() {
+    var R = +rR.value, L = (+lR.value) / 1000, C = (+cR.value) * 1e-6;
+    rVal.textContent = arNum(+rR.value); lVal.textContent = arNum(+lR.value); cVal.textContent = arNum(+cR.value);
+    ctx.direction = "ltr";
+
+    var fr = 1 / (2 * Math.PI * Math.sqrt(L * C));
+    var fMin = fr / 4, fMax = fr * 4;
+    var Imax = Vm / R;
+
+    var pts = [];
+    for (var px = 0; px <= w; px++) {
+      var f = fMin + (fMax - fMin) * (px / w);
+      pts.push(currentAt(f, R, L, C, Vm));
+    }
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.strokeStyle = "#e7e0f2"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(ox + w, oy); ctx.moveTo(ox, oy); ctx.lineTo(ox, oy - h); ctx.stroke();
+    ctx.fillStyle = "#756b8a"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("التردد f (هرتز)", ox + w - 50, oy + 18);
+    ctx.save(); ctx.translate(ox - 42, oy - h / 2); ctx.rotate(-Math.PI / 2); ctx.fillText("التيار I (أمبير)", 0, 0); ctx.restore();
+
+    // خط نصف القدرة (ثابت دائماً عند الكسر 1/√2 من الارتفاع الكلي)
+    var halfY = oy - (1 / Math.SQRT2) * h;
+    ctx.strokeStyle = "#16a34a"; ctx.setLineDash([4, 3]); ctx.lineWidth = 1.3;
+    ctx.beginPath(); ctx.moveTo(ox, halfY); ctx.lineTo(ox + w, halfY); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = "#16a34a"; ctx.font = "11px Cairo"; ctx.textAlign = "left";
+    ctx.fillText("I_max/√2", ox + w + 4, halfY + 4);
+
+    // منحني الرنين
+    ctx.strokeStyle = "#7c3aed"; ctx.lineWidth = 2.5; ctx.beginPath();
+    for (var i = 0; i <= w; i++) {
+      var py = oy - (pts[i] / Imax) * h;
+      i === 0 ? ctx.moveTo(ox + i, py) : ctx.lineTo(ox + i, py);
+    }
+    ctx.stroke();
+
+    // خط الرنين العمودي عند f_r
+    var frX = ox + ((fr - fMin) / (fMax - fMin)) * w;
+    ctx.strokeStyle = "#f59e0b"; ctx.setLineDash([4, 4]);
+    ctx.beginPath(); ctx.moveTo(frX, oy); ctx.lineTo(frX, oy - h); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = "#dc2626";
+    ctx.beginPath(); ctx.arc(frX, oy - h, 5, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#b45309"; ctx.font = "bold 11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("fᵣ", frX, oy + 15);
+
+    // البحث عن نقطتي نصف القدرة (Δf)
+    var half = Imax / Math.SQRT2;
+    var frPx = Math.round(((fr - fMin) / (fMax - fMin)) * w);
+    frPx = Math.max(0, Math.min(w, frPx));
+    var leftPx = -1, rightPx = -1;
+    for (var a = frPx; a >= 0; a--) { if (pts[a] < half) { leftPx = a; break; } }
+    for (var b = frPx; b <= w; b++) { if (pts[b] < half) { rightPx = b; break; } }
+
+    var deltaFText, QcrossText;
+    if (leftPx >= 0 && rightPx >= 0) {
+      [leftPx, rightPx].forEach(function (px2) {
+        ctx.strokeStyle = "#16a34a"; ctx.setLineDash([3, 3]); ctx.lineWidth = 1.2;
+        ctx.beginPath(); ctx.moveTo(ox + px2, oy); ctx.lineTo(ox + px2, halfY); ctx.stroke(); ctx.setLineDash([]);
+      });
+      var fLeft = fMin + (fMax - fMin) * (leftPx / w), fRight = fMin + (fMax - fMin) * (rightPx / w);
+      var deltaF = fRight - fLeft, Qcross = fr / deltaF;
+      deltaFText = fmt(deltaF) + " Hz"; QcrossText = fmt(Qcross);
+    } else {
+      deltaFText = "أعرض من النطاق المعروض (Q منخفض جداً)"; QcrossText = "—";
+    }
+
+    var Qformula = (1 / R) * Math.sqrt(L / C);
+    readout.innerHTML = "f_r = 1/(2π√LC) = " + fmt(fr) + " Hz &nbsp;|&nbsp; I_max = V_m/R = " + fmt(Imax) + " A &nbsp;|&nbsp; Q_f (بالقانون) = " + fmt(Qformula) +
+      "<br>Δf (من الرسم) = " + deltaFText + " &nbsp;|&nbsp; Q_f = f_r/Δf (تحقّق) = " + QcrossText;
+  }
+  [rR, lR, cR].forEach(function (s) { s.addEventListener("input", draw); });
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz7", [
+  { q: "ما شرط حدوث الرنين بدائرة RLC متوالية؟",
+    opts: ["X_L = X_C", "R = Z", "X_L = R", "X_C = 0 دائماً"], a: 0,
+    why: "الرنين يحدث عندما تتساوى الرادتان X_L و X_C فتلغي إحداهما الأخرى." },
+  { q: "عند الرنين، ما مقدار الممانعة الكلية Z؟",
+    opts: ["Z = R (أصغر ما يمكن)", "Z = 0", "Z = X_L + X_C", "Z تساوي لانهاية"], a: 0,
+    why: "عند الرنين X_L=X_C فتلغي إحداهما الأخرى في Z²=R²+(X_L−X_C)²، فتصبح Z=R بالضبط — أصغر قيمة ممكنة للممانعة." },
+  { q: "ما قانون التردد الرنيني f_r؟",
+    opts: ["f_r = 1/(2π√(LC))", "f_r = 2π√(LC)", "f_r = 1/(2πLC)", "f_r = √(L/C)"], a: 0,
+    why: "من شرط الرنين ωL=1/ωC نستخرج ω_r=1/√(LC)، وf_r=ω_r/2π=1/(2π√(LC))." },
+  { q: "دائرة رنين محثها L=2H ومتسعتها C=0.5μF. جد التردد الزاوي الرنيني ω_r.",
+    opts: ["1000 rad/s", "500 rad/s", "2000 rad/s", "0.001 rad/s"], a: 0,
+    why: "ω_r = 1/√(LC) = 1/√(2×0.5×10⁻⁶) = 1/√(10⁻⁶) = 1000 rad/s." },
+  { q: "ماذا يعني عامل نوعية Q_f مرتفع؟",
+    opts: ["قمة رنين حادة وضيقة (انتقائية عالية لتردد واحد)، غالباً بمقاومة R صغيرة", "قمة رنين عريضة وغير دقيقة", "لا علاقة له بحدّة القمة إطلاقاً", "يعني تيار الرنين صغير جداً"], a: 0,
+    why: "Q_f=(1/R)√(L/C) — كلما صغرت R كبر Q_f وصارت قمة الرنين أحدّ (نطاق Δf أضيق)، وهذا ما يمنح الراديو انتقائية عالية لمحطة واحدة." },
+  { q: "علّل: يمكن أن تكون زاوية فرق الطور Φ=0 بدائرة RLC متوالية الربط.",
+    opts: ["عند حالة الرنين (X_L=X_C) تُلغي الرادتان بعضهما فتصبح Z=R فقط، وtanΦ=(X_L−X_C)/R=0", "لأن R تساوي دائماً صفراً بكل الدوائر", "لأن المصدر بالضرورة تيار مستمر", "هذا لا يحدث أبداً بدائرة RLC متوالية"], a: 0,
+    why: "بحالة الرنين تتساوى X_L وX_C فيصبح البسط بقانون الزاوية صفراً، وبالتالي Φ=0 وعامل القدرة=1." }
+], { onDone: function (stars) { Phy.setLesson("g6c3", "7", { stars: stars }); } });
+</script>
+</body>
+</html>

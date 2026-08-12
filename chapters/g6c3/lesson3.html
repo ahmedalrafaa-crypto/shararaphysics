@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: دائرة تحتوي محث صرف L — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثالث</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>🧲 الدرس 3: دائرة تحتوي محث صرف L</h1>
+    <p>بالدرس الماضي كان الحمل مقاومة صرفة فقط، فسار التيار والفولطية بطور واحد. لكن ماذا لو كان الحمل ملفاً (محثاً)؟ ستكتشف أن المحث يعارض التيار المتناوب بطريقة مختلفة تماماً — بلا أي تبديد للطاقة.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">💡</span>
+    <span>مصباح الفلورسنت القديم يحتاج تياراً محدوداً وإلا احترق. لماذا يضع المهندسون <b>ملفاً (خانقاً)</b> على التوالي معه بدل مقاومة عادية؟ لأن المقاومة تحدّ التيار لكنها تبدّد طاقة كبيرة حرارةً (هدر وحرّ)، أما رادة المحث فتحدّ التيار <b>دون أن تبدّد أي طاقة</b> — فيعمل المصباح بكفاءة أعلى بكثير. هذا بالضبط ما ستفهمه بهذا الدرس.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">⏱️</span> الفولطية تتقدّم على التيار بـ90°</div>
+  <div class="card">
+    <p>في دائرة حملها <b>محث صرف</b> (ملف مهمل المقاومة)، تُبيّن التجربة أن الفولطية عبر المحث <b>تتقدّم على التيار</b> بزاوية فرق طور <span class="formula-inline">Φ = 90°</span>:</p>
+  </div>
+  <div class="lawbox">
+    الفولطية والتيار بمحث صرف (الفولطية متقدّمة 90°)
+    <div class="formula">V_L = V_m sin(ωt + 90°)  ،  I_L = I_m sin(ωt)</div>
+  </div>
+  <div class="card">
+    <p>تُسمّى معارضة المحث للتيار المتغيّر <b>رادة الحث</b> X_L، تُقاس بالأوم مثل المقاومة تماماً، لكنها — بعكس المقاومة — لا تبدّد أي طاقة حرارةً:</p>
+  </div>
+  <div class="lawbox">
+    رادة الحث
+    <div class="formula">X_L = ωL = 2πf L</div>
+  </div>
+  <div class="defbox">
+    <b class="term">سلوك المحث بالترددات:</b> رادة الحث X_L تتناسب طردياً مع التردد f ومع معامل الحث L. عند الترددات <b>العالية جداً</b> يعمل المحث كمقاومة كبيرة جداً تكاد تخنق التيار تماماً (لهذا يُسمّى "خانقاً"). وعند التردد <b>الواطئ جداً</b> (وصولاً لتيار مستمر، f=0) تصبح X_L=0 — يعمل المحث كسلك عادي (قصر).
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">سؤال محلول</span> ما مميزات منحني القدرة المتوسطة في دائرة تيار متناوب تحتوي محث صرف فقط؟ <span class="wz">وزاري الدور الثاني ٢٠٢٠</span></summary>
+    <div class="ans">منحني القدرة اللحظية يحوي أجزاءً موجبة وأخرى سالبة متساوية بالمساحة تماماً، فمجموعها خلال دورة كاملة يساوي صفراً — أي أن القدرة المتوسطة تساوي صفراً. فالمحث الصرف لا يبدّد أي طاقة، بل يختزنها في مجاله المغناطيسي خلال ربع دورة ثم يعيدها بالكامل للمصدر بالربع التالي.</div>
+  </details>
+
+  <!-- ======== المحاكاة: دائرة المحث الصرف ======== -->
+  <div class="sim">
+    <h3>🧲 مختبر المحث الصرف: X_L والطور</h3>
+    <p class="sim-sub">لاحظ أن قمة الفولطية (أحمر) تسبق قمة التيار (أزرق متقطع) دائماً — تقدّم 90° ثابت مهما تغيّر الشكل. غيّر التردد f ومعامل الحث L وراقب كيف يتغيّر ارتفاع منحني التيار (الفولطية V_m=10V ثابتة).</p>
+    <div class="sim-scroll"><canvas id="lSim" width="700" height="260"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">التردد f (هرتز): <b id="fVal">٥٠</b>
+        <input type="range" id="fR" min="10" max="500" step="5" value="50"></div>
+      <div class="slider-group">معامل الحث L (ملي هنري): <b id="lVal">١٠٠</b>
+        <input type="range" id="lR" min="10" max="500" step="5" value="100"></div>
+    </div>
+    <div class="readout" id="lReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">محث صرف معامل حثه L = 50/π mH، رُبط بمصدر متناوب فولطيته المؤثرة V_eff=20V. احسب رادة الحث والتيار المؤثر عند: ① f=10Hz. ② f=1MHz (مليون هرتز).</div>
+    <div class="givens">المعطيات: L = 50/π mH = (50/π)×10⁻³ H — V_eff = 20 V</div>
+    <div class="step"><b>الخطوة ١ (عند f=10Hz):</b>
+      <div class="math">X_L = 2πfL = 2π × 10 × (50/π)×10⁻³ = 1 Ω</div>
+      <div class="math">I_eff = V_eff/X_L = 20/1 = 20 A</div></div>
+    <div class="step"><b>الخطوة ٢ (عند f=1MHz=10⁶Hz):</b>
+      <div class="math">X_L = 2π × 10⁶ × (50/π)×10⁻³ = 10⁵ Ω</div>
+      <div class="math">I_eff = 20/10⁵ = 2×10⁻⁴ A</div>
+      💡 لاحظ: رفع التردد مئة ألف ضعف رفع الرادة بنفس النسبة تماماً وكاد يخنق التيار بالكامل — هذا بالضبط سبب تسمية المحث بـ"الخانق" بالترددات العالية.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz3"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson2.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson4.html">الدرس التالي: دائرة المتسعة الصرفة 🔷</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة دائرة المحث الصرف ---------- */
+(function () {
+  var cv = document.getElementById("lSim"), ctx = cv.getContext("2d");
+  var fR = document.getElementById("fR"), lR = document.getElementById("lR");
+  var fVal = document.getElementById("fVal"), lVal = document.getElementById("lVal");
+  var readout = document.getElementById("lReadout");
+  var Vm = 10;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n) { return arNum(n < 1 ? n.toFixed(4) : n.toFixed(2)); }
+
+  var x0 = 40, x1 = 660, pxPerRad = (x1 - x0) / (4 * Math.PI);
+  var baseline = 130, ampV = 90, ampI = 68;
+  var phaseShift = Math.PI / 2; // الفولطية تتقدّم 90°
+
+  function draw() {
+    var f = +fR.value, L_mH = +lR.value, L = L_mH / 1000;
+    fVal.textContent = arNum(f); lVal.textContent = arNum(L_mH);
+    var XL = 2 * Math.PI * f * L;
+    var Im = Vm / XL;
+    ctx.direction = "ltr";
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(x0, baseline); ctx.lineTo(x1, baseline); ctx.stroke();
+    ctx.fillStyle = "#94a3b8"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
+    for (var k = 1; k <= 4; k++) {
+      var gx = x0 + k * Math.PI * pxPerRad;
+      ctx.strokeStyle = "#f1f5f9";
+      ctx.beginPath(); ctx.moveTo(gx, 20); ctx.lineTo(gx, 240); ctx.stroke();
+      ctx.fillStyle = "#94a3b8"; ctx.fillText(k + "π", gx, 252);
+    }
+
+    // منحني الفولطية V (أحمر، متقدّم 90°)
+    ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 2.4;
+    ctx.beginPath();
+    for (var x = x0; x <= x1; x++) {
+      var th = (x - x0) / pxPerRad, y = baseline - ampV * Math.sin(th + phaseShift);
+      if (x === x0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    // منحني التيار I (أزرق متقطع)
+    ctx.strokeStyle = "#2563eb"; ctx.setLineDash([6, 4]); ctx.lineWidth = 2.2;
+    ctx.beginPath();
+    for (var x2 = x0; x2 <= x1; x2++) {
+      var th2 = (x2 - x0) / pxPerRad, y2 = baseline - ampI * Math.sin(th2);
+      if (x2 === x0) ctx.moveTo(x2, y2); else ctx.lineTo(x2, y2);
+    }
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.textAlign = "left"; ctx.font = "bold 12px Cairo";
+    ctx.fillStyle = "#dc2626"; ctx.fillText("V (متقدّمة)", x1 + 4, baseline - ampV + 4);
+    ctx.fillStyle = "#2563eb"; ctx.fillText("I", x1 + 4, baseline - ampI + 18);
+
+    var msg;
+    if (XL > 300) msg = "🔵 رادة عالية جداً: المحث يكاد يخنق التيار تماماً (تصرّف الخانق بالترددات العالية).";
+    else if (XL < 8) msg = "🟢 رادة منخفضة جداً: المحث يقترب من تصرّف السلك العادي (قصر) — كما يحدث تماماً عند f قريب من الصفر.";
+    else msg = "🟣 رادة متوسطة: التيار محدود جزئياً بلا أي تبديد للطاقة.";
+
+    readout.innerHTML = "X_L = 2πfL = " + fmt(XL) + " Ω &nbsp;|&nbsp; I_m = V_m/X_L = " + fmt(Im) + " A &nbsp;|&nbsp; Φ = 90° (V متقدّمة)<br>" + msg;
+  }
+  fR.addEventListener("input", draw);
+  lR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz3", [
+  { q: "بدائرة تحتوي محث صرف L فقط، أيّهما يتقدّم على الآخر؟",
+    opts: ["الفولطية تتقدّم التيار بزاوية 90°", "التيار يتقدّم الفولطية بزاوية 90°", "كلاهما بطور واحد", "الفرق بينهما 45° فقط"], a: 0,
+    why: "بمحث صرف: V_L = V_m sin(ωt+90°)، أي الفولطية تسبق التيار بربع دورة (90°)." },
+  { q: "ما قانون رادة الحث X_L؟",
+    opts: ["X_L = 2πfL", "X_L = 1/(2πfL)", "X_L = 2πf/L", "X_L = L/f"], a: 0,
+    why: "رادة الحث X_L = ωL = 2πfL — تتناسب طردياً مع التردد ومعامل الحث." },
+  { q: "محث معامل حثه L=0.2H بدائرة ترددها 50Hz. جد رادة الحث (خذ π≈3.14).",
+    opts: ["62.8 Ω", "31.4 Ω", "125.6 Ω", "6.28 Ω"], a: 0,
+    why: "X_L = 2πfL = 2×3.14×50×0.2 = 62.8 Ω." },
+  { q: "ماذا يحدث لرادة الحث X_L عند تردد مرتفع جداً؟",
+    opts: ["تصبح كبيرة جداً وتكاد تخنق التيار (تصرّف الخانق)", "تصبح صفراً", "تبقى ثابتة بغضّ النظر عن التردد", "تصبح سالبة"], a: 0,
+    why: "بما أن X_L=2πfL تتناسب طردياً مع f، فارتفاع التردد كثيراً يرفع X_L كثيراً فيكاد يمنع مرور التيار." },
+  { q: "عند تيار مستمر (f=0)، ما مقدار رادة الحث X_L؟",
+    opts: ["صفر — يعمل المحث كسلك عادي (قصر)", "لانهاية — يمنع أي تيار كلياً", "تساوي L نفسها بالأوم", "غير معرّفة رياضياً"], a: 0,
+    why: "X_L=2πfL، وعند f=0 تصبح X_L=0 مهما كانت قيمة L — أي معارضة معدومة للتيار المستمر." },
+  { q: "لماذا يستعمل مهندسو الإنارة محثاً (خانقاً) لا مقاومة عادية للحدّ من تيار مصباح الفلورسنت؟",
+    opts: ["لأن المحث أرخص ثمناً فقط", "لأن رادة المحث تحدّ التيار دون أي تبديد للطاقة حرارةً (قدرته المتوسطة=صفر)، بعكس المقاومة التي تبدّد حرارة وتهدر طاقة", "لأن المحث يعمل فقط مع التيار المستمر", "لا يوجد فرق حقيقي بين الاثنين"], a: 1,
+    why: "المقاومة تحدّ التيار لكنها تبدّد جزءاً كبيراً من الطاقة حرارةً (هدر)، بينما المحث يحدّ التيار بلا أي تبديد للطاقة (P_av=0) — كفاءة أعلى بكثير." }
+], { onDone: function (stars) { Phy.setLesson("g6c3", "3", { stars: stars }); } });
+</script>
+</body>
+</html>

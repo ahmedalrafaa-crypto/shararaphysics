@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: دائرة تحتوي متسعة ذات سعة صرف C — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثالث</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔷 الدرس 4: دائرة تحتوي متسعة ذات سعة صرف C</h1>
+    <p>عرفتَ بالدرس الماضي أن المحث يؤخّر التيار عن الفولطية 90°. الآن نضع متسعة بدل المحث — وستكتشف أن الحال ينعكس تماماً!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔊</span>
+    <span>سمّاعة الصوت بجهازك تفصل الجهير عن الصفير بنفس فيزياء هذا الدرس: المتسعة (رادتها تصغر بالترددات العالية) تمرّر الأصوات الحادّة للسمّاعة الصغيرة، بينما المحث (من الدرس الماضي) يمرّر الجهير للسمّاعة الكبيرة. وأشهر تطبيق آخر: المتسعة تمرّر التيار المتناوب وتحجب المستمر تماماً — سرّ "مكثّف الربط" بمكبّرات الصوت.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">⏱️</span> التيار يتقدّم على الفولطية بـ90°</div>
+  <div class="card">
+    <p>في دائرة حملها <b>متسعة ذات سعة صرف</b>، ينعكس الحال عن المحث تماماً: <b>التيار يتقدّم على الفولطية</b> بزاوية فرق طور <span class="formula-inline">Φ = 90°</span>:</p>
+  </div>
+  <div class="lawbox">
+    الفولطية والتيار بمتسعة صرفة (التيار متقدّم 90°)
+    <div class="formula">V_C = V_m sin(ωt)  ،  I_C = I_m sin(ωt + 90°)</div>
+  </div>
+  <div class="card">
+    <p>تُسمّى معارضة المتسعة للتيار المتناوب <b>رادة السعة</b> X_C، وتُقاس بالأوم، ولا تبدّد أي طاقة حرارةً كذلك:</p>
+  </div>
+  <div class="lawbox">
+    رادة السعة
+    <div class="formula">X_C = 1/(ωC) = 1/(2πf C)</div>
+  </div>
+  <div class="defbox">
+    <b class="term">سلوك المتسعة بالترددات:</b> رادة السعة X_C تتناسب <b>عكسياً</b> مع التردد f والسعة C. عند <b>f=0</b> (تيار مستمر) تصبح X_C=∞ — تعمل المتسعة كمفتاح مفتوح فتحجب المرور تماماً (تماماً كما درست بدائرة التيار المستمر). وعند الترددات <b>العالية جداً</b> تصغر X_C كثيراً فتمرّر التيار بسهولة تامة.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> وصلتَ مصباحاً على التوالي مع متسعة كبيرة بمصدر متناوب فأضاء، وبمصدر مستمر بالفولطية نفسها فانطفأ تماماً. لماذا؟</summary>
+    <div class="ans">لأن رادة المتسعة X_C=1/(2πfC) تعتمد على التردد. مع المتناوب (f=50Hz) تكون الرادة محدودة فيمرّ تيار يكفي لإضاءة المصباح. أمّا مع المستمر (f=0) فتصبح X_C لانهاية — تعمل المتسعة كمفتاح مفتوح فلا يمرّ أي تيار ولا يضيء المصباح. المتسعة "تمرّر" المتناوب و"تقطع" المستمر تماماً.</div>
+  </details>
+
+  <!-- ======== المحاكاة: دائرة المتسعة الصرفة ======== -->
+  <div class="sim">
+    <h3>🔷 مختبر المتسعة الصرفة: X_C والطور</h3>
+    <p class="sim-sub">لاحظ أن قمة التيار (أزرق متقطع) تسبق قمة الفولطية (أحمر) هذه المرة — عكس المحث تماماً. غيّر التردد f والسعة C وراقب كيف تتغيّر الرادة والتيار (الفولطية V_m=10V ثابتة).</p>
+    <div class="sim-scroll"><canvas id="cSim" width="700" height="260"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">التردد f (هرتز): <b id="fVal">٥٠</b>
+        <input type="range" id="fR" min="10" max="500" step="5" value="50"></div>
+      <div class="slider-group">السعة C (مايكروفاراد): <b id="cVal">٥٠</b>
+        <input type="range" id="cR" min="1" max="100" step="1" value="50"></div>
+    </div>
+    <div class="readout" id="cReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">متسعة سعتها C=100μF، رُبطت بمصدر متناوب فولطيته المؤثرة V_eff=10V. احسب رادة السعة والتيار المؤثر عند: ① f=50Hz. ② f=5000Hz.</div>
+    <div class="givens">المعطيات: C=100μF=100×10⁻⁶F — V_eff=10V</div>
+    <div class="step"><b>الخطوة ١ (عند f=50Hz):</b>
+      <div class="math">X_C = 1/(2πfC) = 1/(2π×50×100×10⁻⁶) ≈ 31.83 Ω</div>
+      <div class="math">I_eff = V_eff/X_C = 10/31.83 ≈ 0.314 A</div></div>
+    <div class="step"><b>الخطوة ٢ (عند f=5000Hz):</b>
+      <div class="math">X_C = 1/(2π×5000×100×10⁻⁶) ≈ 0.318 Ω</div>
+      <div class="math">I_eff = 10/0.318 ≈ 31.4 A</div>
+      💡 لاحظ: رفع التردد مئة ضعف خفّض الرادة مئة ضعف ورفع التيار مئة ضعف — عكس تماماً ما رأيناه بالمحث بالدرس الماضي.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz4"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson3.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: ربط التوالي RLC 📐</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة دائرة المتسعة الصرفة ---------- */
+(function () {
+  var cv = document.getElementById("cSim"), ctx = cv.getContext("2d");
+  var fR = document.getElementById("fR"), cR = document.getElementById("cR");
+  var fVal = document.getElementById("fVal"), cVal = document.getElementById("cVal");
+  var readout = document.getElementById("cReadout");
+  var Vm = 10;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n) { return arNum(n < 1 ? n.toFixed(4) : n.toFixed(2)); }
+
+  var x0 = 40, x1 = 660, pxPerRad = (x1 - x0) / (4 * Math.PI);
+  var baseline = 130, ampV = 90, ampI = 68;
+  var phaseShift = Math.PI / 2; // التيار يتقدّم 90°
+
+  function draw() {
+    var f = +fR.value, C_uF = +cR.value, C = C_uF * 1e-6;
+    fVal.textContent = arNum(f); cVal.textContent = arNum(C_uF);
+    var XC = 1 / (2 * Math.PI * f * C);
+    var Im = Vm / XC;
+    ctx.direction = "ltr";
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(x0, baseline); ctx.lineTo(x1, baseline); ctx.stroke();
+    ctx.fillStyle = "#94a3b8"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
+    for (var k = 1; k <= 4; k++) {
+      var gx = x0 + k * Math.PI * pxPerRad;
+      ctx.strokeStyle = "#f1f5f9";
+      ctx.beginPath(); ctx.moveTo(gx, 20); ctx.lineTo(gx, 240); ctx.stroke();
+      ctx.fillStyle = "#94a3b8"; ctx.fillText(k + "π", gx, 252);
+    }
+
+    // منحني الفولطية V (أحمر، مرجعي بلا تقدّم)
+    ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 2.4;
+    ctx.beginPath();
+    for (var x = x0; x <= x1; x++) {
+      var th = (x - x0) / pxPerRad, y = baseline - ampV * Math.sin(th);
+      if (x === x0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    // منحني التيار I (أزرق متقطع، متقدّم 90°)
+    ctx.strokeStyle = "#2563eb"; ctx.setLineDash([6, 4]); ctx.lineWidth = 2.2;
+    ctx.beginPath();
+    for (var x2 = x0; x2 <= x1; x2++) {
+      var th2 = (x2 - x0) / pxPerRad, y2 = baseline - ampI * Math.sin(th2 + phaseShift);
+      if (x2 === x0) ctx.moveTo(x2, y2); else ctx.lineTo(x2, y2);
+    }
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.textAlign = "left"; ctx.font = "bold 12px Cairo";
+    ctx.fillStyle = "#dc2626"; ctx.fillText("V", x1 + 4, baseline - ampV + 4);
+    ctx.fillStyle = "#2563eb"; ctx.fillText("I (متقدّم)", x1 + 4, baseline - ampI + 18);
+
+    var msg;
+    if (XC > 300) msg = "🔵 رادة عالية جداً: المتسعة تكاد تحجب التيار تماماً (تصرّف قريب من مفتوح — كما يحدث عند f قريب من الصفر).";
+    else if (XC < 8) msg = "🟢 رادة منخفضة جداً: المتسعة تمرّر التيار بسهولة تامة (تصرّف قريب من قصر بالترددات العالية جداً).";
+    else msg = "🟣 رادة متوسطة: التيار يمرّ جزئياً بلا أي تبديد للطاقة.";
+
+    readout.innerHTML = "X_C = 1/(2πfC) = " + fmt(XC) + " Ω &nbsp;|&nbsp; I_m = V_m/X_C = " + fmt(Im) + " A &nbsp;|&nbsp; Φ = 90° (I متقدّم)<br>" + msg;
+  }
+  fR.addEventListener("input", draw);
+  cR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz4", [
+  { q: "بدائرة تحتوي متسعة ذات سعة صرفة C فقط، أيّهما يتقدّم على الآخر؟",
+    opts: ["التيار يتقدّم الفولطية بزاوية 90°", "الفولطية تتقدّم التيار بزاوية 90°", "كلاهما بطور واحد", "الفرق بينهما 45° فقط"], a: 0,
+    why: "بمتسعة صرفة: I_C = I_m sin(ωt+90°)، أي التيار يسبق الفولطية بربع دورة (90°) — عكس المحث تماماً." },
+  { q: "ما قانون رادة السعة X_C؟",
+    opts: ["X_C = 1/(2πfC)", "X_C = 2πfC", "X_C = 2πf/C", "X_C = C/f"], a: 0,
+    why: "رادة السعة X_C = 1/(ωC) = 1/(2πfC) — تتناسب عكسياً مع التردد والسعة." },
+  { q: "عند تيار مستمر (f=0)، ما مقدار رادة السعة X_C؟",
+    opts: ["لانهاية — تعمل المتسعة كمفتاح مفتوح وتحجب المرور", "صفر — تعمل المتسعة كسلك عادي", "تساوي C نفسها بالأوم", "غير معرّفة رياضياً"], a: 0,
+    why: "X_C=1/(2πfC)، وعند f=0 يصبح المقام صفراً فتؤول X_C إلى لانهاية — أي معارضة كاملة (مفتاح مفتوح) للتيار المستمر." },
+  { q: "ماذا يحدث لرادة السعة X_C عند تردد مرتفع جداً؟",
+    opts: ["تصبح صغيرة جداً وتمرّر التيار بسهولة تامة", "تصبح كبيرة جداً وتخنق التيار", "تبقى ثابتة بغضّ النظر عن التردد", "تصبح سالبة"], a: 0,
+    why: "بما أن X_C تتناسب عكسياً مع f، فارتفاع التردد كثيراً يخفّض X_C كثيراً فيمرّ التيار بسهولة أكبر." },
+  { q: "متسعة سعتها C=100μF بمصدر تردده 50Hz. ما مقدار رادة السعة تقريباً؟ (خذ π≈3.14)",
+    opts: ["≈ 31.8 Ω", "≈ 318 Ω", "≈ 3.18 Ω", "≈ 0.318 Ω"], a: 0,
+    why: "X_C = 1/(2π×50×100×10⁻⁶) = 1/(0.0314) ≈ 31.8 Ω." },
+  { q: "لماذا تُستعمل متسعة (مكثّف ربط) قبل مكبّر الصوت لتمرير إشارة الصوت المتناوبة وحجب فولطية التغذية المستمرة؟",
+    opts: ["لأن المتسعة تحجب أي تيار متناوب أياً كان", "لأن رادة المتسعة X_C=1/(2πfC) كبيرة جداً (~لانهاية) مع الفولطية المستمرة (f=0) فتحجبها، بينما محدودة مع إشارة الصوت المتناوبة فتمرّرها", "لأن المتسعة تكبّر الصوت بنفسها", "لا علاقة للتردد بعمل هذه الدائرة"], a: 1,
+    why: "المتسعة تحجب المركّبة المستمرة (f=0 ⟹ X_C=∞) وتمرّر المركّبة المتناوبة (f>0 ⟹ X_C محدودة) — هذا بالضبط مبدأ مكثّف الربط." }
+], { onDone: function (stars) { Phy.setLesson("g6c3", "4", { stars: stars }); } });
+</script>
+</body>
+</html>

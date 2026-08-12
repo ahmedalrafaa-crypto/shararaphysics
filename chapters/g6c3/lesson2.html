@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: دائرة تحتوي مقاومة صرفة R — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثالث</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>💡 الدرس 2: دائرة تيار متناوب تحتوي مقاومة صرفة R</h1>
+    <p>عرفتَ بالدرس الماضي أن للفولطية والتيار متجهَي طور قد يختلفان بزاوية Φ. فما قيمة هذه الزاوية إذا كان حِمل الدائرة بالكامل مقاومة صرفة — مصباحاً أو سخّاناً؟ ستكتشف أنها أبسط حالة ممكنة.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">💡</span>
+    <span>مصباح بيتك المتصل بالتيار المتناوب يومض فعلياً <b>100 مرة بالثانية</b>! لأن القدرة اللحظية بمقاومة صرفة تبلغ ذروتها مرتين كل دورة كهربائية (عند +V_m و−V_m). لكن شبكية عينك أبطأ من أن تلاحظ الفرق، فتراه ثابت الإضاءة تماماً.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">⏱️</span> فرق الطور بمقاومة صرفة: Φ = 0</div>
+  <div class="card">
+    <p>إذا كان حِمل الدائرة <b>مقاومة صرفة</b> R فقط (مقاومة مثالية، بلا محث أو متسعة)، فإن الفولطية عبرها والتيار خلالها يبلغان ذروتيهما ويصفران بنفس اللحظة — أي <b>بطور واحد</b>:</p>
+  </div>
+  <div class="lawbox">
+    الفولطية والتيار بمقاومة صرفة (بطور واحد، Φ=0)
+    <div class="formula">V_R = V_m sin(ωt)  ،  I_R = I_m sin(ωt) = (V_m/R) sin(ωt)</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🔥</span> القدرة اللحظية والمتوسطة</div>
+  <div class="card">
+    <p>القدرة اللحظية <span class="formula-inline">P = I_R × V_R</span>. وبما أن التيار والفولطية بطور واحد (يتشاركان نفس الإشارة كل لحظة)، فإن حاصل ضربهما <b>موجب دائماً</b> — منحنى القدرة لا يهبط تحت الصفر إطلاقاً، بعكس منحنيَي V وI نفسيهما اللذين يتناوبان بين الموجب والسالب. تتراوح القدرة بين الصفر والذروة <span class="formula-inline">I_m V_m</span>، فيكون متوسطها نصف الذروة بالضبط:</p>
+  </div>
+  <div class="lawbox">
+    القدرة المتوسطة بمقاومة صرفة
+    <div class="formula">P_av = I_m V_m / 2 = I_eff V_eff = I²_eff R</div>
+  </div>
+
+  <!-- ======== المحاكاة: دائرة المقاومة الصرفة ======== -->
+  <div class="sim">
+    <h3>💡 مختبر المقاومة الصرفة: الفولطية والتيار والقدرة</h3>
+    <p class="sim-sub">اللوحة العلوية: الفولطية V (أحمر) والتيار I (أزرق متقطع) متطابقان بالطور تماماً. اللوحة السفلية: القدرة اللحظية p(t) — لاحظ أنها لا تهبط تحت الصفر أبداً، وتبلغ ذروتها مرتين كل دورة (خط P_av المتقطع هو متوسطها). غيّر R وراقب كيف يتغيّر التيار والقدرة (الفولطية V_m=10V ثابتة).</p>
+    <div class="sim-scroll"><canvas id="rSim" width="700" height="300"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">المقاومة R (أوم): <b id="rVal">٢٠</b>
+        <input type="range" id="rR" min="2" max="100" step="1" value="20"></div>
+    </div>
+    <div class="readout" id="rReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">دائرة تيار متناوب تحتوي مقاومة صرفة R=50Ω، مربوطة بمصدر فولطيته العظمى V_m=100V. أوجد: ① التيار الأعظم I_m. ② القدرة المتوسطة المستهلكة P_av. ③ القدرة العظمى اللحظية.</div>
+    <div class="givens">المعطيات: R=50Ω — V_m=100V</div>
+    <div class="step"><b>الخطوة ١:</b> بقانون أوم للذروة:
+      <div class="math">I_m = V_m/R = 100/50 = 2 A</div></div>
+    <div class="step"><b>الخطوة ٢:</b> القدرة المتوسطة:
+      <div class="math">P_av = I_m V_m/2 = 2×100/2 = 100 W</div></div>
+    <div class="step"><b>الخطوة ٣:</b> القدرة العظمى اللحظية (تحدث لحظياً عند كل ذروة، مرتين بالدورة):
+      <div class="math">P_max = I_m V_m = 2×100 = 200 W  (أي ضعف المتوسط بالضبط)</div></div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> يقول زميلك: "بما أن متوسط التيار المتناوب الجيبي يساوي صفراً خلال دورة كاملة، فهو لا يعطي أي قدرة ولا يسخّن شيئاً." أين الخطأ بكلامه؟</summary>
+    <div class="ans">خلط زميلك بين متوسط <b>التيار</b> ومتوسط <b>القدرة</b>. صحيح أن متوسط التيار الجيبي صفر، لكن القدرة تتناسب مع <b>مربّع</b> التيار (P=I²R)، ومربّع أي عدد — سالباً كان أم موجباً — نتيجته موجبة دائماً. لذا فالقدرة موجبة بكل لحظة ومتوسطها لا يساوي صفراً بل ½ I_m² R، ولهذا تسخن المدفأة ويضيء المصباح فعلياً رغم انعكاس التيار مئة مرة بالثانية.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz2"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson1.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: دائرة المحث الصرف 🧲</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة دائرة المقاومة الصرفة ---------- */
+(function () {
+  var cv = document.getElementById("rSim"), ctx = cv.getContext("2d");
+  var rR = document.getElementById("rR"), rVal = document.getElementById("rVal");
+  var readout = document.getElementById("rReadout");
+  var Vm = 10;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n) { return arNum(n.toFixed(3)); }
+
+  var x0 = 40, x1 = 680, pxPerRad = (x1 - x0) / (4 * Math.PI);
+  var baseTop = 95, ampV = 55, ampI = 40;
+  var baseBot = 270, ampP = 85;
+
+  function draw() {
+    var R = +rR.value;
+    rVal.textContent = arNum(R);
+    var Im = Vm / R, Pav = Im * Vm / 2, Pmax = Im * Vm;
+    ctx.direction = "ltr";
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    // محاور
+    ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(x0, baseTop); ctx.lineTo(x1, baseTop); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(x0, baseBot); ctx.lineTo(x1, baseBot); ctx.stroke();
+    ctx.fillStyle = "#94a3b8"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
+    for (var k = 1; k <= 4; k++) {
+      var gx = x0 + k * Math.PI * pxPerRad;
+      ctx.strokeStyle = "#f1f5f9";
+      ctx.beginPath(); ctx.moveTo(gx, 25); ctx.lineTo(gx, 285); ctx.stroke();
+      ctx.fillStyle = "#94a3b8"; ctx.fillText(k + "π", gx, 296);
+    }
+
+    // منحني V (أحمر صلب)
+    ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 2.4;
+    ctx.beginPath();
+    for (var x = x0; x <= x1; x++) {
+      var th = (x - x0) / pxPerRad, y = baseTop - ampV * Math.sin(th);
+      if (x === x0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    // منحني I (أزرق متقطع، نفس الطور)
+    ctx.strokeStyle = "#2563eb"; ctx.setLineDash([6, 4]); ctx.lineWidth = 2.2;
+    ctx.beginPath();
+    for (var x2 = x0; x2 <= x1; x2++) {
+      var th2 = (x2 - x0) / pxPerRad, y2 = baseTop - ampI * Math.sin(th2);
+      if (x2 === x0) ctx.moveTo(x2, y2); else ctx.lineTo(x2, y2);
+    }
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.textAlign = "left"; ctx.font = "bold 12px Cairo";
+    ctx.fillStyle = "#dc2626"; ctx.fillText("V", x1 + 4, baseTop - ampV);
+    ctx.fillStyle = "#2563eb"; ctx.fillText("I", x1 + 4, baseTop - ampI + 12);
+
+    // منحني القدرة (كهرماني، دائماً موجب)
+    ctx.strokeStyle = "#d97706"; ctx.lineWidth = 2.4;
+    ctx.beginPath();
+    for (var x3 = x0; x3 <= x1; x3++) {
+      var th3 = (x3 - x0) / pxPerRad;
+      var pNorm = (1 - Math.cos(2 * th3)) / 2; // sin²(θ) بصيغة نصف الزاوية
+      var y3 = baseBot - ampP * pNorm;
+      if (x3 === x0) ctx.moveTo(x3, y3); else ctx.lineTo(x3, y3);
+    }
+    ctx.stroke();
+    // خط المتوسط P_av
+    ctx.strokeStyle = "#92400e"; ctx.setLineDash([5, 4]); ctx.lineWidth = 1.4;
+    ctx.beginPath(); ctx.moveTo(x0, baseBot - ampP / 2); ctx.lineTo(x1, baseBot - ampP / 2); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = "#d97706"; ctx.textAlign = "left"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("p(t)", x1 + 4, baseBot - ampP + 8);
+    ctx.fillStyle = "#92400e"; ctx.font = "11px Cairo";
+    ctx.fillText("P_av", x1 + 4, baseBot - ampP / 2 + 4);
+
+    readout.innerHTML = "I_m = V_m/R = " + fmt(Im) + " A &nbsp;|&nbsp; P_av = I_m·V_m/2 = " + fmt(Pav) +
+      " W &nbsp;|&nbsp; P_max = I_m·V_m = " + fmt(Pmax) + " W (V_m=10V ثابتة)";
+  }
+  rR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz2", [
+  { q: "بدائرة تحتوي مقاومة صرفة R فقط، ما فرق الطور Φ بين الفولطية والتيار؟",
+    opts: ["0°", "90°", "180°", "45°"], a: 0,
+    why: "بمقاومة صرفة، الفولطية والتيار يبلغان الذروة معاً ويصفران معاً — أي بطور واحد، Φ=0." },
+  { q: "لماذا لا تنخفض القدرة اللحظية بمقاومة صرفة تحت الصفر أبداً؟",
+    opts: ["لأن V وI موجبتان دائماً بحكم تعريفهما", "لأن P=V×I، وV وI متطابقتان بالإشارة كل لحظة (بطور واحد)، فحاصل ضربهما موجب دائماً", "لأن المقاومة تمنع القدرة السالبة بقانون خاص بها", "القدرة فعلاً تنخفض تحت الصفر أحياناً بمقاومة صرفة"], a: 1,
+    why: "بما أن V وI بطور واحد، فهما يتشاركان نفس الإشارة بكل لحظة (موجبتين معاً أو سالبتين معاً)، وحاصل ضرب عددين بنفس الإشارة نتيجته موجبة دائماً." },
+  { q: "دائرة مقاومة صرفة R=50Ω مربوطة بمصدر V_m=100V. ما مقدار التيار الأعظم I_m؟",
+    opts: ["2 A", "0.5 A", "5 A", "50 A"], a: 0,
+    why: "I_m = V_m/R = 100/50 = 2 A." },
+  { q: "بنفس الدائرة أعلاه (R=50Ω, V_m=100V, I_m=2A)، ما القدرة المتوسطة P_av؟",
+    opts: ["100 W", "200 W", "50 W", "141 W"], a: 0,
+    why: "P_av = I_m×V_m/2 = 2×100/2 = 100 W." },
+  { q: "كم مرة تبلغ القدرة اللحظية ذروتها خلال دورة واحدة كاملة للفولطية؟",
+    opts: ["مرة واحدة", "مرتان", "أربع مرات", "لا تبلغ ذروة أبداً"], a: 1,
+    why: "القدرة تتناسب مع sin²(ωt) اللي ترددها ضعف تردد V وI، فتبلغ ذروتها مرتين كل دورة — ولهذا يومض المصباح المتصل بالمتناوب 100 مرة بالثانية عند f=50Hz." },
+  { q: "يقول زميلك: بما أن متوسط التيار المتناوب الجيبي صفر، فهو لا يعطي أي قدرة. أين الخطأ؟",
+    opts: ["كلامه صحيح تماماً، لا توجد قدرة", "خلط بين متوسط التيار ومتوسط القدرة؛ القدرة تتناسب مع I² فهي موجبة دائماً ومتوسطها ½I_m²R لا صفر", "التيار المتناوب لا يسخّن أي شيء فعلاً", "القدرة تساوي التيار مباشرة بلا أي تربيع"], a: 1,
+    why: "متوسط التيار فعلاً صفر، لكن القدرة P=I²R تعتمد على مربع التيار، ومربع أي عدد موجب دائماً — فمتوسط القدرة ½I_m²R وليس صفراً." }
+], { onDone: function (stars) { Phy.setLesson("g6c3", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

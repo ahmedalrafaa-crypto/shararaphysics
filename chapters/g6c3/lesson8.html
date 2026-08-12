@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 8: ربط التوازي R-L-C — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثالث</a> / الدرس 8</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔀 الدرس 8: ربط التوازي R-L-C</h1>
+    <p>كل الدروس السابقة كانت عن الربط التوالي. الآن نقلب المنطق بالكامل: نربط R وL وC على التوازي بدل التوالي — وهذا آخر درس بالفصل!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔀</span>
+    <span>بالتوالي كان التيار مشتركاً والفولطيات تختلف. بالتوازي ينعكس المنطق تماماً: الفولطية V نفسها عبر الجميع، لكن كل فرع (R وL وC) يسحب تياره الخاص بزاوية طور مختلفة عن باقي الفروع — تماماً كما تسحب كل أجهزة بيتك تياراتها المختلفة من نفس فولطية 220V المشتركة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔌</span> الفولطية المشتركة وتيارات الفروع</div>
+  <div class="card">
+    <p>عند ربط R وL وC على <b>التوازي</b>، الفولطية نفسها عبر الجميع <span class="formula-inline">(V_R=V_L=V_C=V)</span>، لكن التيارات تختلف طوراً: <span class="formula-inline">I_R</span> بطور الفولطية (مرجع)، <span class="formula-inline">I_C</span> يتقدّمها 90° (يقود)، و<span class="formula-inline">I_L</span> يتأخر عنها 90° (يتخلّف). لذا نجمع <b>التيارات</b> متجهياً لإيجاد التيار الرئيس I_T:</p>
+  </div>
+  <div class="lawbox">
+    تيارات الفروع
+    <div class="formula">I_R = V/R  ،  I_L = V/X_L  ،  I_C = V/X_C</div>
+  </div>
+  <div class="lawbox">
+    التيار الرئيس وزاويته
+    <div class="formula">I_T² = I_R² + (I_C − I_L)²  ،  tan Φ = (I_C − I_L)/I_R</div>
+  </div>
+
+  <div class="defbox">
+    <b class="term">⚠️ انتبه — الاتجاه ينعكس عن التوالي!</b>
+    <p style="margin-top:4px">بالتوالي (الدرس 5): X_L&gt;X_C ⟹ حثّية. لكن بالتوازي هنا: <b>I_L&gt;I_C ⟹ حثّية</b> (عكس اتجاه المقارنة تماماً، لأن التيار في الفرع الأصغر رادةً هو الأكبر مقداراً — علاقة عكسية I=V/X). هذي أشهر نقطة لخبطة بين الطالبين بهذا الموضوع، فانتبه لها بالاختبار.</p>
+  </div>
+
+  <!-- ======== المحاكاة: مخطط أطوار التيارات ======== -->
+  <div class="sim">
+    <h3>🔀 مختبر الدائرة المتوازية: مخطط أطوار التيارات</h3>
+    <p class="sim-sub">غيّر R وL وC وراقب مثلث التيارات: I_C يتّجه لأعلى (متقدّم)، وI_L لأسفل (متأخر)، وI_T هو المحصّلة. التردد ثابت f=50Hz، والفولطية V_m=10V ثابتة.</p>
+    <div class="sim-scroll"><canvas id="iSim" width="700" height="300"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">المقاومة R (أوم): <b id="rVal">٢٠</b>
+        <input type="range" id="rR" min="2" max="100" step="1" value="20"></div>
+      <div class="slider-group">معامل الحث L (ملي هنري): <b id="lVal">١٠٠</b>
+        <input type="range" id="lR" min="10" max="500" step="5" value="100"></div>
+      <div class="slider-group">السعة C (مايكروفاراد): <b id="cVal">٥٠</b>
+        <input type="range" id="cR" min="1" max="100" step="1" value="50"></div>
+    </div>
+    <div class="readout" id="iReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">دائرة تيار متناوب متوازية الربط تحتوي مقاومة صرفة ومحثاً ومتسعة، فرق الجهد بين طرفيها 240V، وكان التيار في فرع المتسعة I_C=8A، وفرع المحث I_L=12A، وفرع المقاومة I_R=3A. (سؤال وزاري، تمهيدي 2017) جد: ① التيار الرئيس. ② الممانعة الكلية. ③ زاوية فرق الطور. (tan53°=4/3)</div>
+    <div class="givens">المعطيات: V=240V — I_C=8A — I_L=12A — I_R=3A</div>
+    <div class="step"><b>الخطوة ١:</b> نوجد التيار الرئيس بالجمع المتجهي:
+      <div class="math">I_T = √(I_R² + (I_C−I_L)²) = √(3² + (8−12)²) = √(9+16) = √25 = 5 A</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نوجد الممانعة الكلية:
+      <div class="math">Z = V/I_T = 240/5 = 48 Ω</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نوجد زاوية فرق الطور:
+      <div class="math">tan Φ = (I_C−I_L)/I_R = (8−12)/3 = −4/3 ⟹ Φ = −53°</div>
+      بما أن I_L أكبر من I_C، فالدائرة حثّية الخواص (رغم أن Φ سالبة هنا — عكس قاعدة التوالي تماماً كما نبّهنا أعلاه).</div>
+  </div>
+
+  <div class="defbox">
+    <b class="term">📋 استراتيجية حل أي مسألة RLC (ملخّص الفصل كله):</b>
+    <p style="margin-top:4px">① احسب X_L=2πfL وX_C=1/(2πfC) عند التردد f المعطى. ② بالتوالي: اجمع R وX_L−X_C متجهياً لإيجاد Z وΦ. بالتوازي: احسب تيار كل فرع (I=V/X) ثم اجمعها متجهياً لإيجاد I_T وΦ. ③ استخرج ما يُطلب: القدرة الحقيقية (I×V×cosΦ)، عامل القدرة (cosΦ=R/Z)، أو تحقّق من حالة الرنين (X_L=X_C).</p>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz8"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson7.html">➡ الدرس السابق</a>
+    <a class="btn" href="questions.html">أسئلة نهاية الفصل 🧮</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة مخطط أطوار التيارات ---------- */
+(function () {
+  var cv = document.getElementById("iSim"), ctx = cv.getContext("2d");
+  var rR = document.getElementById("rR"), lR = document.getElementById("lR"), cR = document.getElementById("cR");
+  var rVal = document.getElementById("rVal"), lVal = document.getElementById("lVal"), cVal = document.getElementById("cVal");
+  var readout = document.getElementById("iReadout");
+  var f = 50, Vm = 10;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n) { return arNum(Math.abs(n) < 1 ? n.toFixed(3) : n.toFixed(2)); }
+
+  var ox = 190, oy = 230, budget = 190;
+
+  function draw() {
+    var R = +rR.value, L = (+lR.value) / 1000, C = (+cR.value) * 1e-6;
+    rVal.textContent = arNum(+rR.value); lVal.textContent = arNum(+lR.value); cVal.textContent = arNum(+cR.value);
+    var XL = 2 * Math.PI * f * L, XC = 1 / (2 * Math.PI * f * C);
+    var IR = Vm / R, IL = Vm / XL, IC = Vm / XC;
+    var net = IC - IL;
+    var IT = Math.sqrt(IR * IR + net * net);
+    var phi = Math.atan2(net, IR) * 180 / Math.PI;
+    var pxPerUnit = budget / IT;
+    var Rpx = IR * pxPerUnit, Dpx = net * pxPerUnit;
+    var sign = net >= 0 ? -1 : 1; // شاشة: لأعلى=سالب y (net موجب = يتّجه لأعلى)
+
+    ctx.direction = "ltr";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    ctx.strokeStyle = "#e2e8f0"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(30, oy); ctx.lineTo(670, oy); ctx.stroke();
+
+    var tipX = ox + Rpx, tipY = oy + sign * Math.abs(Dpx);
+
+    ctx.strokeStyle = "#e2e8f0"; ctx.setLineDash([3, 3]); ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(tipX, oy); ctx.lineTo(tipX, tipY); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // ضلع I_R (أفقي، أحمر)
+    ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(tipX, oy); ctx.stroke();
+    ctx.fillStyle = "#dc2626"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("I_R", (ox + tipX) / 2, oy + 20);
+
+    // ضلع I_C−I_L (شاقولي، كهرماني)
+    ctx.strokeStyle = "#d97706"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(tipX, oy); ctx.lineTo(tipX, tipY); ctx.stroke();
+    ctx.fillStyle = "#d97706"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "left";
+    ctx.fillText("I_C−I_L", tipX + 8, (oy + tipY) / 2);
+
+    // التيار الرئيس I_T (وتر، بنفسجي)
+    ctx.strokeStyle = "#a21caf"; ctx.lineWidth = 3.4;
+    ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(tipX, tipY); ctx.stroke();
+    ctx.fillStyle = "#a21caf"; ctx.font = "bold 14px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("I_T", (ox + tipX) / 2 - (sign > 0 ? -14 : 14), (oy + tipY) / 2 - 6);
+
+    // قوس الزاوية Φ
+    var phiCanvas = Math.atan2(tipY - oy, tipX - ox);
+    ctx.strokeStyle = "#059669"; ctx.lineWidth = 1.6;
+    ctx.beginPath(); ctx.arc(ox, oy, 26, 0, phiCanvas, phiCanvas < 0);
+    ctx.stroke();
+    ctx.fillStyle = "#059669"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("Φ", ox + 40, oy + sign * 14);
+
+    ctx.beginPath(); ctx.arc(ox, oy, 3.5, 0, Math.PI * 2); ctx.fillStyle = "#334155"; ctx.fill();
+
+    var kind = Math.abs(net) < Math.max(0.04 * IT, 0.15) ? "أومية صرفة تقريباً (قريبة من حالة الرنين!)" : (net > 0 ? "سعوية (I_C > I_L)" : "حثّية (I_L > I_C)");
+
+    readout.innerHTML = "I_R=" + fmt(IR) + "A، I_L=" + fmt(IL) + "A، I_C=" + fmt(IC) + "A &nbsp;|&nbsp; I_T=" + fmt(IT) + "A، Φ=" + fmt(phi) + "° — الدائرة " + kind +
+      "<br>الممانعة الكلية Z = V_m/I_T = " + fmt(Vm / IT) + " Ω";
+  }
+  [rR, lR, cR].forEach(function (s) { s.addEventListener("input", draw); });
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz8", [
+  { q: "بربط التوازي RLC، أي كمية تكون نفسها عبر كل العناصر؟",
+    opts: ["الفولطية V", "التيار الكلي I_T", "المقاومة R فقط", "لا شيء مشترك بينها"], a: 0,
+    why: "بالتوازي، الفولطية نفسها عبر كل الفروع V_R=V_L=V_C=V، بعكس التوالي حيث التيار هو المشترك." },
+  { q: "ما قانون التيار الرئيس I_T بربط التوازي؟",
+    opts: ["I_T² = I_R² + (I_C−I_L)²", "I_T = I_R + I_L + I_C", "I_T² = I_R² + I_L² + I_C²", "I_T = I_R × I_L × I_C"], a: 0,
+    why: "نجمع تيارات الفروع متجهياً: I_R مرجع، و(I_C−I_L) هو المحصّلة الشاقولية، فـI_T هو وتر المثلث الناتج." },
+  { q: "دائرة توازي: I_R=3A، I_C=8A، I_L=12A. جد I_T.",
+    opts: ["5 A", "23 A", "17 A", "1 A"], a: 0,
+    why: "I_T = √(I_R² + (I_C−I_L)²) = √(3² + (8−12)²) = √(9+16) = √25 = 5 A." },
+  { q: "بنفس الدائرة أعلاه (I_L=12A أكبر من I_C=8A)، ما خواص الدائرة؟",
+    opts: ["حثّية، لأن تيار فرع المحث أكبر من تيار فرع المتسعة", "سعوية، لأن I_L أكبر", "أومية صرفة", "لا يمكن تحديد ذلك من التيارات"], a: 0,
+    why: "بالتوازي: I_L>I_C ⟹ الدائرة حثّية الخواص (عكس اتجاه المقارنة بالتوالي تماماً)." },
+  { q: "بدائرة توالية، الحكم على نوع الدائرة يعتمد على مقارنة X_L بـX_C مباشرة. بدائرة توازي، على أي كمية تعتمد المقارنة بدلاً من ذلك؟",
+    opts: ["مقارنة تيار فرع المحث I_L بتيار فرع المتسعة I_C (باتجاه معاكس تماماً لقاعدة التوالي)", "نفس مقارنة X_L وX_C بالضبط وبنفس الاتجاه", "مقارنة R بـZ فقط", "لا توجد أي طريقة للتفريق بينهما بالتوازي"], a: 0,
+    why: "بالتوازي، I=V/X علاقة عكسية، فالفرع ذو الرادة الأصغر يسحب التيار الأكبر — لذا ينعكس اتجاه المقارنة عن التوالي." },
+  { q: "دائرة توازي فرق جهدها 240V، وتياراتها I_R=3A، I_C=8A، I_L=12A (فـI_T=5A). ما الممانعة الكلية Z؟",
+    opts: ["48 Ω", "80 Ω", "28.8 Ω", "1200 Ω"], a: 0,
+    why: "Z = V/I_T = 240/5 = 48 Ω." }
+], { onDone: function (stars) { Phy.setLesson("g6c3", "8", { stars: stars }); } });
+</script>
+</body>
+</html>
