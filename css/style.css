@@ -243,6 +243,17 @@ body::after {
 .chcard.cc-green { --cc: var(--green); --cc-soft: #e3faf1; }
 .chcard.cc-g6 { --cc: #4338ca; --cc-soft: #e5e3fa; }
 
+/* ---------- شبكة مربعات لتصفح الفصول (مستعملة حالياً بلوحة السادس الإعدادي) ---------- */
+.chmap--square { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.chcard.tile {
+  aspect-ratio: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  gap: 6px; padding: 16px 10px;
+}
+.chcard.tile .chico { margin-bottom: 4px; }
+.chcard.tile h3 { font-size: .95rem; line-height: 1.3; }
+.chcard.tile .chkicker { font-size: .68rem; margin-bottom: 0; }
+
 /* ---------- محوّل المرحلة الدراسية (تبويبات الصف) ---------- */
 .gradetabs {
   display: flex; gap: 8px;
@@ -787,6 +798,23 @@ footer.site::before {
 .theme-g6c3 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(162, 28, 175, 0.30); }
 .theme-g6c3 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(162, 28, 175, .35); }
 .theme-g6c3 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(162, 28, 175, .45); }
+
+/* السادس الإعدادي — الفصل السادس: الفيزياء الحديثة — أخضر مزرقّ (كمّي/علمي) وكهرماني (توهج الجسم الأسود) */
+.theme-g6c6 {
+  --violet: #0f766e;
+  --violet-deep: #115e59;
+  --blue: #d97706;
+  --shadow: 0 10px 30px rgba(15, 118, 110, 0.10);
+  --shadow-lift: 0 16px 40px rgba(15, 118, 110, 0.18);
+}
+.theme-g6c6::before { background: radial-gradient(circle, #0f766e, transparent 70%); }
+.theme-g6c6::after { background: radial-gradient(circle, #d97706, transparent 70%); }
+.theme-g6c6 .hero::before { content: "🔬"; }
+.theme-g6c6 .path::before { border-inline-start-color: #cdeae6; }
+.theme-g6c6 .node:not(.done):not(.exam):not(.qna) .dot { border-color: #cdeae6; }
+.theme-g6c6 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(15, 118, 110, 0.30); }
+.theme-g6c6 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(15, 118, 110, .35); }
+.theme-g6c6 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(15, 118, 110, .45); }
 
 /* عقدة درس لم يُنشر بعد — ضمن خريطة الفصل */
 .node.locked { opacity: .55; filter: grayscale(.35); pointer-events: none; }

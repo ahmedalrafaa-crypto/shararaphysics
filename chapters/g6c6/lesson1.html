@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 1: مقدمة وإشعاع الجسم الأسود — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c6">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السادس</a> / الدرس 1</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔥 الدرس 1: مقدمة وإشعاع الجسم الأسود</h1>
+    <p>قضيب حديد بارد لا يُشع ضوءاً مرئياً، لكن سخّنه فيتوهج أحمر داكناً، وزد التسخين فيتحوّل إلى أصفر ثم أبيض ساطع. لماذا يتغيّر لون التوهج بالضبط هذا التغيّر؟ سؤال بسيط كهذا كسر الفيزياء الكلاسيكية بالكامل قبل أكثر من قرن، وولّد فرعاً جديداً كلياً: ميكانيكا الكم.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🌌</span>
+    <span>نهاية القرن التاسع عشر، بدت الفيزياء الكلاسيكية (نيوتن وماكسويل) شبه مكتملة — تفسّر حركة الكواكب والضوء والكهرباء والمغناطيسية بدقة مذهلة. لكن مسألة صغيرة ظلّت عالقة: لماذا يتغيّر لون أي جسم ساخن بطريقة محددة جداً مع درجة حرارته، ولا تنجح معادلات الفيزياء الكلاسيكية بتفسيرها؟ الإجابة قلبت الفيزياء رأساً على عقب خلال ٣٠ سنة فقط.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">⚫</span> مفهوم الجسم الأسود</div>
+  <div class="card">
+    <p><b>الجسم الأسود المثالي</b> جسم افتراضي يمتص كل الإشعاع الكهرومغناطيسي الساقط عليه بجميع الأطوال الموجية، دون أن يعكس أو ينفذ منه أي شيء (لهذا يبدو أسود تماماً إن كان بارداً — لا يعكس ضوءاً لتراه عيناك). ثم يُعيد إشعاع هذه الطاقة بطيف مستمر يتعلّق <b>بدرجة حرارته المطلقة فقط</b> — لا بنوع مادته أو شكله.</p>
+  </div>
+  <div class="defbox">
+    <b class="term">تقريب عملي للجسم الأسود:</b> فتحة صغيرة بجدار تجويف مغلق (كفرن). أي إشعاع يدخل من الفتحة ينعكس داخلياً مراراً حتى يُمتص بالكامل تقريباً قبل أن يخرج ثانية — فتتصرف الفتحة كجسم أسود شبه مثالي. النجوم (ومنها الشمس) تقارِب أيضاً سلوك الجسم الأسود، ولهذا يستطيع الفلكيون تقدير درجة حرارة سطح أي نجم من لون ضوئه فقط!</div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> يُعدّ الجسم الأسود المثالي أفضل ماص وأفضل مُشع للإشعاع الحراري في آنٍ واحد. <span class="wz">وزاري</span></summary>
+    <div class="ans">لأنه يمتص كل الإشعاع الساقط عليه بجميع الأطوال الموجية دون عكس أو نفاذ (أفضل ماص). وبحكم الاتزان الحراري (كل ما يُمتص يجب أن يُعاد إشعاعه كي لا ترتفع حرارته إلى ما لا نهاية)، فإن الجسم الذي يمتص كل الإشعاع الساقط هو بالضرورة نفسه أفضل جسم يعيد إشعاعه — أي أفضل مُشع أيضاً.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🌡️</span> قانونا ستيفان-بولتزمان وإزاحة فِن</div>
+  <div class="card">
+    <p>يصف قانونان تجريبيان طيف إشعاع الجسم الأسود:</p>
+  </div>
+  <div class="defbox">
+    <b class="term">قانون ستيفان-بولتزمان:</b> المعدل الزمني للطاقة المشعّة من وحدة مساحة الجسم الأسود (شدة الإشعاع I) يتناسب طردياً مع <b>الأس الرابع</b> لدرجة حرارته المطلقة — أي يعتمد على درجة الحرارة فقط، لا نوع المادة.
+  </div>
+  <div class="defbox">
+    <b class="term">قانون الإزاحة لِفِن:</b> الطول الموجي عند ذروة التوزيع الطيفي λ_m يتناسب <b>عكسياً</b> مع درجة الحرارة المطلقة — كلما سخُن الجسم أكثر، اتجهت ذروة إشعاعه نحو الأطوال الموجية الأقصر (الأزرق). هذا بالضبط سبب تحوّل توهج الحديد من أحمر إلى أبيض مزرقّ كلما سخّنته أكثر.
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="lawbox" style="margin:0">ستيفان-بولتزمان
+      <div class="formula">I = σT⁴</div>
+      <p style="margin-top:6px;font-size:.82rem">σ = 5.67×10⁻⁸ W/m²K⁴</p></div>
+    <div class="lawbox" style="margin:0">إزاحة فِن
+      <div class="formula">λ_m T = 2.898×10⁻³ m·K</div></div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> على ماذا ينصّ قانون ستيفان-بولتزمان؟ وعلامَ يعتمد المعدل الزمني للطاقة التي يُشعّها الجسم الأسود من وحدة مساحته؟ <span class="wz">الدور الثالث 2019 · الدور الثالث 2023</span></summary>
+    <div class="ans">ينصّ قانون ستيفان-بولتزمان على أن شدة الإشعاع I (المعدل الزمني للطاقة المُشعّة من وحدة مساحة الجسم الأسود) تتناسب طردياً مع الأس الرابع لدرجة حرارته المطلقة: I=σT⁴. إذن تعتمد شدة الإشعاع على <b>درجة الحرارة المطلقة للجسم فقط</b>، ولا تعتمد على نوع مادة الجسم.</div>
+  </details>
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> ما المقصود بـ: قانون الإزاحة لِفِن (Wien)؟ <span class="wz">التمهيدي 2021 · الدور الأول 2024 · الدور الأول 2021</span></summary>
+    <div class="ans">قانون ينصّ على أن حاصل ضرب الطول الموجي المقابل لذروة توزيع الطاقة الإشعاعية للجسم الأسود λ_m في درجة حرارته المطلقة T يساوي مقداراً ثابتاً: λ_mT = 2.898×10⁻³ m·K. أي أنه كلما ارتفعت درجة حرارة الجسم، «انزاحت» ذروة إشعاعه نحو أطوال موجية أقصر.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول — ورد وزارياً</div>
+  <div class="example">
+    <div class="exq">جد الطول الموجي المقابل لذروة الإشعاع المنبعث من جسم الإنسان إذا كانت درجة حرارة جلده 35°C.</div>
+    <div class="givens">المعطيات: T=35°C — قانون فِن: λ_mT=2.898×10⁻³ m·K</div>
+    <div class="step"><b>الخطوة ١:</b> نحوّل الحرارة إلى كلفن:
+      <div class="math">T = 35 + 273 = 308 K</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نطبّق قانون فِن:
+      <div class="math">λ_m = 2.898×10⁻³ / T = 2.898×10⁻³ / 308 ≈ 9.41×10⁻⁶ m</div>
+      💡 هذا الطول يقع في مدى الأشعة تحت الحمراء — وهذا بالضبط ما تلتقطه كاميرات التصوير الحراري لجسم الإنسان في الظلام!</div>
+  </div>
+
+  <div class="section-title"><span class="ico">📉</span> الكارثة فوق البنفسجية</div>
+  <div class="card">
+    <p>هذان القانونان يصفان الطيف وصفاً جيداً، لكن يبقى سؤال أعمق: <b>ما شكل المنحنى نفسه؟</b> عند رسم شدة الإشعاع مقابل الطول الموجي، يبدأ المنحني من الصفر عند الأطوال الموجية القصيرة جداً، يرتفع إلى قمة عند λ_m، ثم يهبط تدريجياً. النموذج الموجي الكلاسيكي لماكسويل (بافتراض أن ذرّات الجسم المهتزّة يمكن أن تمتصّ وتُشعّ الطاقة بأي مقدار مستمر) فشل فشلاً ذريعاً في تفسير <b>شكل</b> هذا المنحنى عند الأطوال الموجية القصيرة: توقّعت معادلاته طاقة <b>لا نهائية</b> هناك — وهو ما يخالف التجربة كلياً (المنحني الحقيقي يهبط، لا يرتفع).</p>
+  </div>
+  <div class="notebox">
+    <b>⚡ الكارثة فوق البنفسجية (Ultraviolet Catastrophe)</b>
+    <p style="margin-top:6px">سُمّي هذا الفشل الصارخ بهذا الاسم لأن التناقض بين التنبؤ الكلاسيكي والتجربة كان الأوضح عند الأطوال الموجية القصيرة القريبة من فوق البنفسجي وما بعدها. كان هذا أحد أكبر الألغاز العالقة بالفيزياء عام ١٩٠٠.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> لماذا فشلت المحاولات العديدة لتفسير الطيف الكهرومغناطيسي المنبعث من الجسم الأسود كدالة للطول الموجي عند درجة حرارة معينة وفقاً لقوانين الفيزياء الكلاسيكية؟ <span class="wz">الدور الثاني 2023</span></summary>
+    <div class="ans">لأن الفيزياء الكلاسيكية افترضت أن ذرّات الجسم الأسود المهتزّة تمتصّ وتُشعّ الطاقة الكهرومغناطيسية <b>بكميات مستمرة</b> (أي أن أي مقدار طاقة ممكن)، وهذا الافتراض توقّع طاقة غير منتهية عند الأطوال الموجية القصيرة (فوق البنفسجية) — وهو ما يخالف التجربة كلياً. ولم يُحلّ الإشكال إلا بفرضية بلانك: أن الطاقة تُصدَر وتُمتصّ في حزم منفصلة (كمّات) طاقة كلٍّ منها E=hf، لا بمقادير مستمرة.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">💡</span> فرضية بلانك: وِلادة فكرة الكمّ</div>
+  <div class="card">
+    <p>عام ١٩٠٠، طرح الفيزيائي الألماني <b>ماكس بلانك</b> فرضية جريئة تخالف الفيزياء الكلاسيكية تماماً: الطاقة الإشعاعية لذرات الجسم المهتزة لا تُصدر ولا تُمتص بشكل متصل، بل على شكل <b>حزم منفصلة</b> (كمّات، مفردها كمّ — quantum) فقط. طاقة الكمّ الواحد تتناسب طردياً مع تردد الإشعاع نفسه.</p>
+  </div>
+  <div class="lawbox">
+    فرضية بلانك: طاقة الكمّ الإشعاعي (الفوتون)
+    <div class="formula">E = hf</div>
+  </div>
+  <div class="notebox">
+    <b>⭐ القاعدة الذهبية: ثابت بلانك</b>
+    <p style="margin-top:6px"><span class="formula-inline">h = 6.63 × 10⁻³⁴ J.s</span> — أحد أهم الثوابت الأساسية بالكون، ويظهر بكل معادلات هذا الفصل تقريباً. صِغَره الشديد هو بالضبط سبب أن تأثيرات الكم غير محسوسة إطلاقاً بحياتنا اليومية (أجسام كبيرة)، لكنها تهيمن كلياً على عالم الذرات والإلكترونات.</p>
+  </div>
+  <div class="card">
+    <p>فرضية الكم فسّرت منحني الإشعاع الحقيقي تماماً بلا أي كارثة: عند الأطوال الموجية القصيرة (الترددات العالية)، طاقة الكمّ الواحد <span class="formula-inline">hf</span> تصبح كبيرة جداً، فيصعب على ذرّة أن "تجمع" هذا القدر دفعة واحدة، فتقلّ احتمالية إصدار هذه الترددات العالية عملياً — فيهبط المنحني بدلاً من الارتفاع إلى ما لا نهاية. كانت هذه أول لحظة تاريخية "وُلد" فيها مبدأ تكميم الطاقة (Quantization)، والذي أصبح لاحقاً حجر الأساس لتفسير أينشتاين للظاهرة الكهروضوئية بالدرس القادم مباشرة.</p>
+  </div>
+
+  <!-- ======== المحاكاة: منحني إشعاع الجسم الأسود ======== -->
+  <div class="sim">
+    <h3>🌡️ مختبر منحني إشعاع الجسم الأسود</h3>
+    <p class="sim-sub">غيّر درجة الحرارة T وراقب: (١) انزياح قمة المنحني البنفسجي (الحقيقي) نحو أطوال موجية أقصر (قانون فِن)، (٢) الخط الأحمر المتقطع — تنبؤ الفيزياء الكلاسيكية قبل بلانك — يتصاعد بلا حدود عند الأطوال القصيرة (الكارثة فوق البنفسجية). لا تحتاج حفظ صيغة هذا المنحني الرياضية المعقدة، فقط فهم الفكرة والشكل العام.</p>
+    <div class="sim-scroll"><canvas id="bbSim" width="700" height="300"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">درجة الحرارة T (كلفن): <b id="tVal">٥٨٠٠</b>
+        <input type="range" id="tR" min="3000" max="12000" step="100" value="5800"></div>
+    </div>
+    <div class="readout" id="bbReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول: طاقة الفوتون</div>
+  <div class="example">
+    <div class="exq">مصباح يصدر ضوءاً أصفر طوله الموجي λ=590nm. أوجد: ① تردد هذا الضوء f. ② طاقة الكمّ الضوئي الواحد (الفوتون) بالجول وبالإلكترون فولت.</div>
+    <div class="givens">المعطيات: λ=590nm=590×10⁻⁹m — h=6.63×10⁻³⁴J.s — c=3×10⁸m/s — 1eV=1.6×10⁻¹⁹J</div>
+    <div class="step"><b>الخطوة ١:</b> نوجد التردد من العلاقة c=fλ:
+      <div class="math">f = c/λ = (3×10⁸)/(590×10⁻⁹) ≈ 5.08×10¹⁴ Hz</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نوجد طاقة الكمّ بالجول:
+      <div class="math">E = hf = 6.63×10⁻³⁴ × 5.08×10¹⁴ ≈ 3.37×10⁻¹⁹ J</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نحوّلها إلى إلكترون فولت:
+      <div class="math">E = (3.37×10⁻¹⁹)/(1.6×10⁻¹⁹) ≈ 2.11 eV</div>
+      💡 لاحظ صغر هذه الطاقة بوحدة الجول — لهذا يُفضَّل فيزيائيو الكم استعمال وحدة الإلكترون فولت (eV) بدلاً منها. سنستعمل هذه العلاقة نفسها (E=hf=hc/λ) كثيراً بالدرس القادم.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson2.html">الدرس التالي: الظاهرة الكهروضوئية 💥</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة منحني إشعاع الجسم الأسود ---------- */
+(function () {
+  var cv = document.getElementById("bbSim"), ctx = cv.getContext("2d");
+  var tR = document.getElementById("tR"), tVal = document.getElementById("tVal");
+  var readout = document.getElementById("bbReadout");
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n, d) { return arNum(n.toFixed(d === undefined ? 0 : d)); }
+
+  var h = 6.63e-34, c = 3e8, k = 1.38e-23;
+  function planck(lamM, T) {
+    var x = (h * c) / (lamM * k * T);
+    return (2 * Math.PI * h * c * c) / (Math.pow(lamM, 5) * (Math.exp(x) - 1));
+  }
+  function rayleighJeans(lamM, T) {
+    return (2 * Math.PI * c * k * T) / Math.pow(lamM, 4);
+  }
+
+  var ox = 62, oy = 260, cw = 600, ch = 190, topY = oy - ch;
+  var lamMinNm = 50, lamMaxNm = 2000;
+  var LOGMIN = -6, LOGMAX = 5, LOGRANGE = LOGMAX - LOGMIN;
+
+  function ratioToY(ratio) {
+    var lg = ratio > 0 && isFinite(ratio) ? Math.log10(ratio) : LOGMIN;
+    lg = Math.max(LOGMIN, Math.min(LOGMAX, lg));
+    return oy - ((lg - LOGMIN) / LOGRANGE) * ch;
+  }
+
+  function draw() {
+    var T = +tR.value;
+    tVal.textContent = arNum(T);
+    ctx.direction = "ltr";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    var N = cw, planckVals = [], maxV = 1e-300, maxIdx = 0;
+    for (var i = 0; i <= N; i++) {
+      var lamNm = lamMinNm + (lamMaxNm - lamMinNm) * (i / N);
+      var v = planck(lamNm * 1e-9, T);
+      planckVals.push(v);
+      if (v > maxV) { maxV = v; maxIdx = i; }
+    }
+
+    var visX0 = ox + ((380 - lamMinNm) / (lamMaxNm - lamMinNm)) * cw;
+    var visX1 = ox + ((700 - lamMinNm) / (lamMaxNm - lamMinNm)) * cw;
+    var grad = ctx.createLinearGradient(visX0, 0, visX1, 0);
+    grad.addColorStop(0, "#8b5cf6"); grad.addColorStop(0.3, "#3b82f6");
+    grad.addColorStop(0.55, "#22c55e"); grad.addColorStop(0.8, "#eab308");
+    grad.addColorStop(1, "#ef4444");
+    ctx.fillStyle = grad; ctx.globalAlpha = 0.14;
+    ctx.fillRect(visX0, topY, visX1 - visX0, ch);
+    ctx.globalAlpha = 1;
+
+    ctx.strokeStyle = "#d8d2ea"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(ox + cw, oy); ctx.moveTo(ox, oy); ctx.lineTo(ox, topY); ctx.stroke();
+    ctx.fillStyle = "#94a3b8"; ctx.font = "10px Cairo"; ctx.textAlign = "center";
+    for (var g = 500; g < lamMaxNm; g += 500) {
+      var gx = ox + ((g - lamMinNm) / (lamMaxNm - lamMinNm)) * cw;
+      ctx.strokeStyle = "#f1f5f9"; ctx.beginPath(); ctx.moveTo(gx, oy); ctx.lineTo(gx, topY); ctx.stroke();
+      ctx.fillStyle = "#94a3b8"; ctx.fillText(arNum(g), gx, oy + 14);
+    }
+    ctx.fillStyle = "#756b8a"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("الطول الموجي λ (نانومتر)", ox + cw - 90, oy + 30);
+    ctx.save(); ctx.translate(ox - 46, oy - ch / 2); ctx.rotate(-Math.PI / 2); ctx.fillText("شدة الإشعاع (مقياس نسبي)", 0, 0); ctx.restore();
+
+    ctx.strokeStyle = "#dc2626"; ctx.setLineDash([4, 3]); ctx.lineWidth = 2.2;
+    ctx.beginPath();
+    for (var j = 0; j <= N; j++) {
+      var lamNm2 = lamMinNm + (lamMaxNm - lamMinNm) * (j / N);
+      var vRJ = rayleighJeans(lamNm2 * 1e-9, T);
+      var py = ratioToY(vRJ / maxV);
+      j === 0 ? ctx.moveTo(ox + j, py) : ctx.lineTo(ox + j, py);
+    }
+    ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = "#dc2626"; ctx.font = "bold 11px Cairo"; ctx.textAlign = "left";
+    ctx.fillText("↑ تنبؤ الفيزياء الكلاسيكية (قبل بلانك)", ox + 6, topY + 14);
+
+    ctx.strokeStyle = "#7c3aed"; ctx.lineWidth = 3; ctx.beginPath();
+    for (var p = 0; p <= N; p++) {
+      var py2 = ratioToY(planckVals[p] / maxV);
+      p === 0 ? ctx.moveTo(ox + p, py2) : ctx.lineTo(ox + p, py2);
+    }
+    ctx.stroke();
+
+    var peakLamNm = lamMinNm + (lamMaxNm - lamMinNm) * (maxIdx / N);
+    var peakX = ox + maxIdx, peakY = ratioToY(1);
+    ctx.strokeStyle = "#16a34a"; ctx.setLineDash([3, 3]); ctx.lineWidth = 1.3;
+    ctx.beginPath(); ctx.moveTo(peakX, oy); ctx.lineTo(peakX, peakY); ctx.stroke(); ctx.setLineDash([]);
+    ctx.beginPath(); ctx.arc(peakX, peakY, 5, 0, Math.PI * 2); ctx.fillStyle = "#7c3aed"; ctx.fill();
+    ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.5; ctx.stroke();
+    ctx.fillStyle = "#15803d"; ctx.font = "bold 11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("λ_max", peakX, peakY - 10);
+
+    var wienCheckNm = (2.898e-3 / T) * 1e9;
+    var ref = T <= 3600 ? "🔥 قريب من فتيل مصباح متوهج" : T <= 7000 ? "☀️ قريب من سطح الشمس (~٥٨٠٠ك)" : "⭐ نجم أزرق ساخن جداً";
+    readout.innerHTML = "T = " + fmt(T) + " كلفن &nbsp;(" + ref + ")&nbsp;|&nbsp; ذروة الإشعاع λ_max ≈ " + fmt(peakLamNm) + " نانومتر (قانون فِن يعطي " + fmt(wienCheckNm) + " نانومتر — تطابق تام)" +
+      "<br>البنفسجي: منحني بلانك الحقيقي (مطابق للتجربة) &nbsp;|&nbsp; الأحمر المتقطع: التنبؤ الكلاسيكي — يبقى أعلى من الواقع دائماً وتزداد الفجوة كارثياً كلما قصر λ.";
+  }
+  tR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ما تعريف الجسم الأسود المثالي؟",
+    opts: ["جسم يمتص كل الإشعاع الساقط عليه بجميع الأطوال الموجية دون عكس أو نفاذ", "جسم لونه أسود دائماً حتى وهو ساخن", "جسم يعكس كل الإشعاع الساقط عليه", "جسم لا يتأثر بالحرارة إطلاقاً"], a: 0,
+    why: "الجسم الأسود المثالي يمتص الإشعاع الساقط عليه بالكامل، بجميع الأطوال الموجية، بلا أي عكس أو نفاذ." },
+  { q: "وفق قانون ستيفان-بولتزمان، شدة إشعاع الجسم الأسود I تتناسب طردياً مع:",
+    opts: ["الأس الرابع لدرجة الحرارة المطلقة T⁴", "درجة الحرارة المطلقة T مباشرة", "مقلوب درجة الحرارة 1/T", "نوع مادة الجسم فقط"], a: 0,
+    why: "I = σT⁴ — شدة الإشعاع تتناسب طردياً مع الأس الرابع لدرجة الحرارة المطلقة، بغض النظر عن نوع المادة." },
+  { q: "جسم أسود درجة حرارته 400K. جد الطول الموجي المقابل لذروة إشعاعه تقريباً (قانون فِن: λ_mT=2.898×10⁻³).",
+    opts: ["≈7.25×10⁻⁶ m", "≈2.898×10⁻³ m", "≈1.159 m", "≈4×10⁻⁶ m"], a: 0,
+    why: "λ_m = 2.898×10⁻³/400 ≈ 7.25×10⁻⁶ m." },
+  { q: "ماذا حدث لمنحني إشعاع الجسم الأسود عند الأطوال الموجية القصيرة جداً حسب تنبؤ الفيزياء الكلاسيكية (قبل بلانك)؟",
+    opts: ["تصاعدت شدة الإشعاع إلى ما لا نهاية (الكارثة فوق البنفسجية)", "بقيت الشدة صفراً دائماً", "طابق التنبؤ التجربة تماماً", "هبطت الشدة تدريجياً كما يحدث فعلاً"], a: 0,
+    why: "النموذج الكلاسيكي تنبأ بازدياد الشدة إلى ما لا نهاية عند الأطوال الموجية القصيرة، بعكس المشاهدة التجريبية — سُمي هذا الفشل الكارثة فوق البنفسجية." },
+  { q: "ما نص فرضية بلانك الأساسية لحل مشكلة إشعاع الجسم الأسود؟",
+    opts: ["الطاقة الإشعاعية تُصدر وتُمتص على شكل حزم منفصلة (كمّات) لا بشكل متصل", "الطاقة الإشعاعية ثابتة مهما تغيّر ترددها", "الضوء موجة كهرومغناطيسية متصلة فقط بلا أي طبيعة أخرى", "درجة حرارة الجسم لا تؤثر على طيف إشعاعه"], a: 0,
+    why: "فرضية بلانك: الطاقة تُصدر أو تُمتص بحزم منفصلة (كمّات) طاقة كل منها E=hf، لا بشكل متصل كما افترضت الفيزياء الكلاسيكية." },
+  { q: "كمّ إشعاعي (فوتون) تردده f=6×10¹⁴ Hz. جد طاقته تقريباً (h=6.63×10⁻³⁴J.s).",
+    opts: ["≈3.98×10⁻¹⁹ J", "≈6.63×10⁻³⁴ J", "≈1.1×10⁻⁴⁸ J", "≈3.98×10⁻¹⁵ J"], a: 0,
+    why: "E = hf = 6.63×10⁻³⁴ × 6×10¹⁴ ≈ 3.98×10⁻¹⁹ J." }
+], { onDone: function (stars) { Phy.setLesson("g6c6", "1", { stars: stars }); } });
+</script>
+</body>
+</html>

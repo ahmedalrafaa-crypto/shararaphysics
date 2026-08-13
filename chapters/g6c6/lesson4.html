@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: مبدأ اللادقة لهايزنبرغ — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c6">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السادس</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>🌫️ الدرس 4: مبدأ اللادقة (اللاتحديد) لهايزنبرغ</h1>
+    <p>إلى أي حدّ يمكننا معرفة "أين" جسيم صغير كالإلكترون و"إلى أين يتجه" في اللحظة نفسها؟ الجواب الذي قدّمه هايزنبرغ عام ١٩٢٧ صدم الفيزياء: ليس الأمر قصوراً بدقة أجهزتنا — بل قانون أساسي بالطبيعة نفسها، نتيجة مباشرة لما تعلّمته بالدرس السابق عن الطبيعة الموجية للجسيمات ودالة الموجة الاحتمالية.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔬</span>
+    <span>تخيّل مجهراً خيالياً فائق الدقة تريد به تحديد موقع إلكترون بدقة متناهية. لرؤيته بدقة تحتاج ضوءاً بطول موجي قصير جداً — أي فوتونات عالية الطاقة والزخم. لكن حين يصطدم هذا الفوتون بالإلكترون ليصوّره، فإنه يدفعه بقوة ويغيّر زخمه بمقدار لا يمكن التنبؤ به! كلما حسّنت دقة تحديد الموضع، اضطربت معرفتك بالزخم أكثر. هذه ليست مشكلة تقنية يمكن حلّها بجهاز أفضل مستقبلاً — إنها خاصية جوهرية بطبيعة المادة نفسها.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🌊</span> أصل اللادقة: نتيجة حتمية للثنائية الموجة-جسيم</div>
+  <div class="card">
+    <p>بما أن كل جسيم (كالإلكترون) له طبيعة موجية (فرضية دي برولي، الدرس السابق)، والموجة بطبيعتها الرياضية <b>ممتدة</b> بالفضاء لا نقطة محددة، فمن المستحيل مبدئياً حصر "موضعها" بدقة تامة مطلقة في اللحظة ذاتها التي نعرف بها "طول موجتها" (المرتبط بالزخم عبر λ=h/p) بدقة تامة أيضاً. هذا تناقض أساسي بطبيعة الموجات نفسها — لا قصوراً بأدواتنا مهما تطوّرت.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">📐</span> نص المبدأ والعلاقة الرياضية</div>
+  <div class="card">
+    <p>عام ١٩٢٧، صاغ الفيزيائي الألماني <b>فيرنر هايزنبرغ</b> مبدأً أساسياً: من المستحيل قياس <b>موضع</b> جسيم <i>و</i> <b>زخمه</b> بدقة تامة في آنٍ واحد. حاصل ضرب اللادقة بتحديد الموضع <span class="formula-inline">Δx</span> واللادقة بتحديد الزخم <span class="formula-inline">Δp</span> لا يقلّ أبداً عن مقدار من رتبة ثابت بلانك.</p>
+  </div>
+  <div class="lawbox">
+    مبدأ اللادقة (اللاتحديد) لهايزنبرغ
+    <div class="formula">Δx · Δp ≥ h/4π</div>
+  </div>
+  <div class="notebox">
+    <b>⭐ القاعدة الذهبية: علاقة عكسية بين اللادقتين</b>
+    <p style="margin-top:6px">كلما صغّرت اللادقة بأحد المقدارين (ضيّقت Δx مثلاً بحصر الجسيم بمنطقة أدق)، وجب أن تكبر اللادقة بالآخر (Δp) تلقائياً، بحيث يبقى حاصل ضربهما محقِّقاً للشرط أعلاه دائماً. وبما أن <span class="formula-inline">p=mv</span>، يمكن كتابتها أيضاً: <span class="formula-inline">Δx · mΔv ≥ h/4π</span> (بافتراض كتلة m ثابتة معروفة بدقة).</p>
+  </div>
+  <div class="defbox">
+    <b class="term">حالة خاصة مهمة: Δx=0</b> إذا قيس موضع الجسيم بدقة تامة (Δx=0)، يبقى الطرف الأيمن للمتراجحة ثابتاً (h/4π) بينما حاصل الضرب بالطرف الأيسر يحوي صفراً × Δp — وهذا لا يتحقق إلا إذا كان Δp يؤول إلى <b>ما لا نهاية</b>. أي: لا توجد أي دقة إطلاقاً لمعرفة الزخم عندئذٍ.
+  </div>
+  <div class="card">
+    <p>توجد صيغة مرافقة مشهورة، تربط اللادقة بالطاقة ΔE واللادقة بالزمن Δt بعلاقة مماثلة: <span class="formula-inline">ΔE · Δt ≥ h/4π</span> — وتعني أنه كلما قصرت مدة قياس طاقة نظام ما (Δt صغيرة)، كبرت اللادقة بقيمة تلك الطاقة (ΔE) بالضرورة.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">سؤال وزاري</span> ما المقصود بـ: مبدأ اللادقة لهايزنبرك؟ <span class="wz">التمهيدي 2018 · الدور الثالث 2019</span></summary>
+    <div class="ans">مبدأ ينصّ على استحالة تحديد موضع الجسيم وزخمه (أو طاقته وزمن قياسها) بدقة تامة في الوقت نفسه؛ إذ يتحقق دوماً أن حاصل ضرب مقداري اللادقة بالكمّيتين المترافقتين لا يقلّ عن h/4π. فكلما ازدادت دقة إحدى الكمّيتين، تناقصت بالضرورة دقة الأخرى.</div>
+  </details>
+  <details class="qa">
+    <summary><span class="tag">علل</span> عدم التحديد بمبدأ هايزنبرغ ليس ناتجاً عن قصور تقني بدقة أجهزة القياس، بل هو خاصية أساسية بالطبيعة نفسها.</summary>
+    <div class="ans">لأنه ناتج مباشرة عن الطبيعة الموجية للجسيمات (فرضية دي برولي)؛ فالموجة بطبيعتها الرياضية ممتدة بالفضاء ولا يمكن حصرها بنقطة واحدة محددة بدقة تامة مع تحديد طول موجتها (المرتبط بالزخم) بدقة تامة أيضاً في آنٍ واحد. هذا تناقض جوهري بطبيعة الموجات ذاتها، مستقل تماماً عن جودة أي جهاز قياس مهما تطوّر مستقبلاً.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🎾</span> لماذا لا نلاحظه بالأجسام الكبيرة؟</div>
+  <div class="card">
+    <p>تماماً كطول موجة دي برولي، صِغر h الشديد يجعل اللادقة الدنيا المفروضة بمبدأ هايزنبرغ <b>مهملة تماماً</b> للأجسام الكبيرة (كرة، سيارة)، بينما تصبح كبيرة وملموسة فيزيائياً بعالم الجسيمات دون الذرية — لهذا يظهر تأثير هايزنبرغ بوضوح فقط بعالم الإلكترونات والذرات، لا بحياتنا اليومية.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> لا يظهر تأثير مبدأ اللادقة بشكل محسوس على حركة الأجسام الكبيرة بحياتنا اليومية كالسيارة أو الكرة. <span class="wz">وزاري</span></summary>
+    <div class="ans">لأن اللادقة الدنيا بالموضع والزخم مقيّدة بثابت بلانك h الصغير جداً، وبما أن Δp=mΔv، فكلما كبرت كتلة الجسم m (كالسيارة) صغرت اللادقة الناتجة بسرعته Δv بشكل كبير جداً لنفس اللادقة بالزخم — فتصبح مهملة تماماً وغير محسوسة عملياً، بعكس الإلكترون الذي تجعل كتلته الصغيرة جداً هذه اللادقة كبيرة وملموسة فيزيائياً.</div>
+  </details>
+
+  <!-- ======== المحاكاة: صندوق الحصر ومنحني احتمالية السرعة ======== -->
+  <div class="sim">
+    <h3>🌫️ مختبر اللادقة: صندوق الحصر</h3>
+    <p class="sim-sub">ضيّق الصندوق (قلّل Δx) وراقب كيف يتّسع منحني احتمالية السرعة الأزرق (تكبر Δv) — والعكس صحيح تماماً: وسّع الصندوق فيتضيق المنحني. هذه العلاقة العكسية بينهما هي بالضبط جوهر مبدأ هايزنبرغ.</p>
+    <div class="sim-scroll"><canvas id="hzSim" width="700" height="300"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">عرض منطقة الحصر Δx (نانومتر): <b id="xVal">٠.١٠</b>
+        <input type="range" id="xR" min="0.02" max="2" step="0.02" value="0.1"></div>
+    </div>
+    <div class="readout" id="hzReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">قارن أدنى لادقة ممكنة بالسرعة (Δv_min) لكل من: ① إلكترون محصور بمنطقة عرضها Δx=1×10⁻¹⁰m (بحجم الذرة تقريباً). ② كرة صغيرة كتلتها m=0.02kg محصورة (افتراضاً) بالمنطقة نفسها Δx=1×10⁻¹⁰m.</div>
+    <div class="givens">المعطيات: Δx=1×10⁻¹⁰m — m_e=9.11×10⁻³¹kg — m_كرة=0.02kg — h=6.63×10⁻³⁴J.s</div>
+    <div class="step"><b>الخطوة ١:</b> من شرط الحد الأدنى Δx·mΔv=h/4π، نستخرج Δv_min=h/(4πmΔx). للإلكترون:
+      <div class="math">Δv_min = (6.63×10⁻³⁴)/(4π × 9.11×10⁻³¹ × 1×10⁻¹⁰) ≈ 5.8×10⁵ m/s</div>
+      لادقة ضخمة فعلياً — قريبة من رتبة سرعات الإلكترونات نفسها! لا يمكن إهمالها إطلاقاً.</div>
+    <div class="step"><b>الخطوة ٢:</b> نكرر الحساب لنفس الحصر لكن بكتلة الكرة:
+      <div class="math">Δv_min = (6.63×10⁻³⁴)/(4π × 0.02 × 1×10⁻¹⁰) ≈ 2.6×10⁻²³ m/s</div>
+      💡 لادقة مهملة تماماً بلا أي معنى عملي — أصغر من أن يرصدها أي جهاز قياس موجود أو متخيَّل. هذا بالضبط الفارق بين عالم الكم وعالمنا اليومي: نفس القانون، لكن الكتلة الكبيرة تجعل أثره غير محسوس كلياً.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz4"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson3.html">➡ الدرس السابق</a>
+    <a class="btn" href="index.html">🎉 أكملت دروس الفصل السادس!</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة صندوق الحصر ومنحني احتمالية السرعة ---------- */
+(function () {
+  var cv = document.getElementById("hzSim"), ctx = cv.getContext("2d");
+  var xR = document.getElementById("xR"), xVal = document.getElementById("xVal");
+  var readout = document.getElementById("hzReadout");
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  var SUP = { "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹" };
+  function supExp(e) {
+    var neg = e < 0; e = Math.abs(e);
+    var s = String(e).split("").map(function (d) { return SUP[d]; }).join("");
+    return (neg ? "⁻" : "") + s;
+  }
+  function fmtSci(n) {
+    var exp = Math.floor(Math.log10(Math.abs(n)));
+    var mant = n / Math.pow(10, exp);
+    return arNum(mant.toFixed(2)) + "×10" + supExp(exp);
+  }
+  function fmt(n, d) { return arNum(n.toFixed(d === undefined ? 2 : d)); }
+
+  var h = 6.63e-34, me = 9.11e-31, PI = Math.PI;
+  var boxCX = 350, boxY0 = 55, boxY1 = 130, pxPerNm = 220;
+  var gOx = 350, gOy = 255, gCw = 600, gCh = 88;
+
+  function draw() {
+    var dxNm = +xR.value;
+    xVal.textContent = arNum(dxNm.toFixed(2));
+    var dxM = dxNm * 1e-9;
+    var dvMin = h / (4 * PI * me * dxM);
+
+    ctx.direction = "ltr";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    /* ---- صندوق الحصر ---- */
+    var boxW = Math.max(6, dxNm * pxPerNm);
+    var bx0 = boxCX - boxW / 2, bx1 = boxCX + boxW / 2;
+    ctx.fillStyle = "rgba(124,58,237,0.07)"; ctx.fillRect(bx0, boxY0, boxW, boxY1 - boxY0);
+    ctx.strokeStyle = "#8b7fd6"; ctx.lineWidth = 2.2;
+    ctx.strokeRect(bx0, boxY0, boxW, boxY1 - boxY0);
+
+    for (var i = 0; i < 16; i++) {
+      var px = bx0 + Math.random() * boxW;
+      var py = boxY0 + 8 + Math.random() * (boxY1 - boxY0 - 16);
+      ctx.beginPath(); ctx.arc(px, py, 2.6, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(124,58,237,0.55)"; ctx.fill();
+    }
+
+    ctx.fillStyle = "#6d28d9"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("Δx = " + fmt(dxNm, 2) + " nm — أين الإلكترون؟ 🤷", boxCX, boxY0 - 10);
+
+    ctx.strokeStyle = "#94a3b8"; ctx.lineWidth = 1.2;
+    ctx.beginPath(); ctx.moveTo(bx0, boxY1 + 14); ctx.lineTo(bx1, boxY1 + 14); ctx.stroke();
+    [bx0, bx1].forEach(function (xx) {
+      ctx.beginPath(); ctx.moveTo(xx, boxY1 + 10); ctx.lineTo(xx, boxY1 + 18); ctx.stroke();
+    });
+
+    /* ---- منحني احتمالية السرعة (جرسي) ---- */
+    ctx.strokeStyle = "#d8d2ea"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(gOx - gCw / 2, gOy); ctx.lineTo(gOx + gCw / 2, gOy); ctx.stroke();
+    ctx.fillStyle = "#756b8a"; ctx.font = "10.5px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("٠", gOx, gOy + 16);
+    ctx.fillText("السرعة المحتملة v حول القيمة المتوقعة", gOx, gOy + 34);
+
+    var sigmaPx = Math.max(10, Math.min(260, 26 / Math.max(dxNm, 0.02)));
+    ctx.beginPath();
+    for (var gx = -gCw / 2; gx <= gCw / 2; gx += 2) {
+      var yy = gCh * Math.exp(-(gx * gx) / (2 * sigmaPx * sigmaPx));
+      var py2 = gOy - yy;
+      gx === -gCw / 2 ? ctx.moveTo(gOx + gx, py2) : ctx.lineTo(gOx + gx, py2);
+    }
+    ctx.strokeStyle = "#0ea5e9"; ctx.lineWidth = 2.4; ctx.stroke();
+    ctx.lineTo(gOx + gCw / 2, gOy); ctx.lineTo(gOx - gCw / 2, gOy); ctx.closePath();
+    ctx.fillStyle = "rgba(14,165,233,0.10)"; ctx.fill();
+
+    readout.innerHTML = "Δx = " + fmt(dxNm, 2) + " nm &nbsp;|&nbsp; أدنى لادقة بالسرعة (لإلكترون): Δv_min = h/(4πmΔx) ≈ " + fmtSci(dvMin) + " م/ث" +
+      "<br>كلما ضيّقت الصندوق (قلّصت Δx) اتّسع المنحني الأزرق أكثر (تزداد Δv)، والعكس صحيح — هذا جوهر مبدأ هايزنبرغ.";
+  }
+  xR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz4", [
+  { q: "من صاحب مبدأ اللادقة (اللاتحديد) في ميكانيكا الكم؟",
+    opts: ["فيرنر هايزنبرغ", "لويس دي برولي", "ماكس بلانك", "ألبرت أينشتاين"], a: 0,
+    why: "صاغ الفيزيائي الألماني فيرنر هايزنبرغ هذا المبدأ عام 1927." },
+  { q: "ما الصيغة الرياضية الصحيحة لمبدأ هايزنبرغ للادقة؟",
+    opts: ["Δx · Δp ≥ h/4π", "Δx + Δp ≥ h", "Δx / Δp ≥ 4π/h", "Δx · Δp = h بالضبط دائماً"], a: 0,
+    why: "حاصل ضرب اللادقة بالموضع Δx واللادقة بالزخم Δp لا يقل أبداً عن h/4π." },
+  { q: "(سؤال وزاري — التمهيدي 2019) افترض أنه قيس موضع جسيم بدقة تامة، أي أن Δx=0. فإن أقل دقة لزخم هذا الجسيم بهذا الاتجاه تساوي:",
+    opts: ["ما لا نهاية", "صفر", "h/4π", "h/2π"], a: 0,
+    why: "من Δx·Δp≥h/4π، إذا كان Δx=0 فلا بد أن يكون Δp غير منتهٍ ليبقى حاصل الضرب محقّقاً للمتراجحة — أي انعدام الدقة كلياً بمعرفة الزخم." },
+  { q: "مبدأ اللادقة نتيجة حتمية مباشرة لأي فكرة فيزيائية سابقة بهذا الفصل؟",
+    opts: ["الطبيعة الموجية للجسيمات (فرضية دي برولي)", "فرضية بلانك عن إشعاع الجسم الأسود فقط", "قانون حفظ الطاقة العام", "الظاهرة الكهروضوئية فقط"], a: 0,
+    why: "بما أن كل جسيم له طبيعة موجية (دي برولي)، والموجة ممتدة بالفضاء لا نقطة محددة، يستحيل حصر موضعها وزخمها بدقة تامة معاً — هذا أصل مبدأ اللادقة." },
+  { q: "إلكترون محصور بمنطقة عرضها Δx=2×10⁻¹⁰m. جد أدنى لادقة ممكنة بزخمه Δp تقريباً.",
+    opts: ["≈2.64×10⁻²⁵ kg·m/s", "≈6.63×10⁻³⁴ kg·m/s", "≈1.33×10⁻²⁴ kg·m/s", "≈5.28×10⁻³⁵ kg·m/s"], a: 0,
+    why: "Δp_min = h/(4πΔx) = (6.63×10⁻³⁴)/(4π×2×10⁻¹⁰) ≈ 2.64×10⁻²⁵ kg·m/s." },
+  { q: "لماذا لا نلاحظ تأثير مبدأ اللادقة أثناء مراقبتنا حركة كرة قدم؟",
+    opts: ["كتلتها كبيرة جداً، فتكون اللادقة الدنيا بسرعتها Δv مهملة تماماً وغير محسوسة", "لأن الكرة لا تملك زخماً خطياً إطلاقاً", "لأن مبدأ اللادقة يخص الفوتونات فقط لا الأجسام المادية", "لأن الكرة ساكنة دائماً أثناء المراقبة"], a: 0,
+    why: "بما أن Δp=mΔv، فكلما كبرت الكتلة m صغرت اللادقة الناتجة بالسرعة Δv بشدة لنفس اللادقة بالزخم، فتصبح مهملة عملياً." },
+  { q: "مبدأ اللادقة لهايزنبرغ يعني استحالة معرفة أي زوج من الكميات التاليتين بدقة تامة في آنٍ واحد؟",
+    opts: ["الموضع والزخم معاً", "الكتلة والشحنة معاً", "التردد واللون معاً", "درجة الحرارة والزمن معاً"], a: 0,
+    why: "مبدأ اللادقة يربط تحديداً بين اللادقة بالموضع (Δx) واللادقة بالزخم (Δp) — لا يمكن معرفة كليهما بدقة تامة بنفس اللحظة." }
+], { onDone: function (stars) { Phy.setLesson("g6c6", "4", { stars: stars }); } });
+</script>
+</body>
+</html>
