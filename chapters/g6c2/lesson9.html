@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الدرس 9: التطبيقات العملية — السادس العلمي</title>
+<title>الدرس 9: المولّدات والمحرّكات الكهربائية — السادس العلمي</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="../../assets/logo-ar.png">
@@ -26,80 +26,123 @@
   </div>
 
   <div class="hero">
-    <h1>🔧 الدرس 9: التطبيقات العملية</h1>
-    <p>وصلتَ لخاتمة فصل الحث الكهرومغناطيسي! بعد أن تعلّمتَ قوة لورنتز، والقوة الدافعة الحركية، والفيض، وقانونَي فاراداي ولنز، والحث الذاتي والمتبادل — حان وقت رؤية هذه القوانين مجتمعةً في ثلاثة أجهزة تستعملها فعلياً كل أسبوع.</p>
+    <h1>⚡ الدرس 9: المولّدات والمحرّكات الكهربائية</h1>
+    <p>المولّد يحوّل الحركة إلى كهرباء، والمحرّك يحوّل الكهرباء إلى حركة — آلتان بالأجزاء نفسها لكن بعملٍ معكوس. من قانون فاراداي الذي أتقنته بالدروس السابقة نشتقّ قلبهما: ε = NBAω sin(ωt).</p>
   </div>
 
   <div class="hook">
-    <span class="em">🔍</span>
-    <span>بطاقة بنكية، قيثار كهربائي، وموقد مطبخ — ثلاثة أشياء لا يبدو أن بينها أي صلة. لكن الثلاثة تعمل بالضبط بنفس المبدأ الذي درسته طوال هذا الفصل: <b>تغيّر الفيض المغناطيسي يولّد تياراً محتثاً</b>. فيزياء واحدة، ثلاثة تطبيقات مختلفة كلياً.</span>
+    <span class="em">🔌</span>
+    <span>كل كيلوواط كهرباء يصل بيتك وُلد في <b>مولّد</b>: توربين يدور (بالماء أو البخار أو الرياح) فيُدير ملفاً داخل مجال مغناطيسي. وكل مروحة وغسّالة وسيارة كهربائية تعمل بـ<b>محرّك</b>: يأخذ الكهرباء فيصنع منها حركة. المدهش أن الآلتين متطابقتان بالتركيب — الفرق فقط باتجاه تحويل الطاقة. وكلتاهما تقومان على ما تعرفه تماماً: ملفٌ يدور فيتغيّر الفيض المخترق له، فتتولّد قوة دافعة.</span>
   </div>
 
-  <!-- ======== المحاكاة: التطبيقات الثلاثة ======== -->
-  <div class="sim">
-    <h3>🔧 استكشف التطبيقات الثلاثة</h3>
-    <p class="sim-sub">اختر تطبيقاً لترى مخططه المبسّط وتفسيره الفيزيائي.</p>
-    <div class="sim-scroll"><canvas id="appSim" width="700" height="240"></canvas></div>
-    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
-    <div class="controls">
-      <div class="slider-group">التطبيق:
-        <select id="appSel" style="padding:8px;border-radius:10px;border:2px solid #e9ebfa;font-family:inherit;font-weight:700">
-          <option value="card">💳 البطاقة الممغنطة</option>
-          <option value="guitar">🎸 القيثار الكهربائي</option>
-          <option value="cooker">🍳 الطباخ الحثّي</option>
-        </select></div>
-    </div>
-    <div class="readout" id="appReadout" style="margin-top:14px"></div>
-  </div>
-
-  <div class="section-title"><span class="ico">💳</span> البطاقة الممغنطة</div>
+  <div class="section-title"><span class="ico">🔄</span> المولّد المتناوب: كيف يصير الجهد جيبياً؟</div>
   <div class="card">
-    <p>عند تمرير البطاقة (شريطها الممغنط يخزّن معلوماتك كنقاط ممغنطة متتالية) أمام ملف سلكي داخل جهاز القراءة، يتغيّر الفيض المخترق للملف بسرعة بسبب حركة الشريط، فيُحتثّ فيه — <b>بقانون فاراداي</b> — تيار كهربائي يحمل نمط النقاط الممغنطة، يُضخَّم ثم يُحوَّل إلى نبضات فولطية تحمل معلوماتك.</p>
-    <p style="margin-top:8px">🔗 <b>المبدأ المستعمل:</b> قانون فاراداي (الدرس 4) — كلما مرّرت البطاقة أسرع، زاد معدّل تغيّر الفيض، وقويت النبضات المقروءة (ولهذا تفشل القراءة أحياناً إن مررتها ببطء شديد!).</p>
+    <p>في مولّد التيار المتناوب (ac) يدور ملف عدد لفّاته N بسرعة زاوية منتظمة ω داخل مجال منتظم B، ويُربط طرفاه بحلقتَي زلق معدنيتين تتصل بهما الدائرة الخارجية عبر فرشتين من الكاربون. بدوران الملف تتغيّر الزاوية θ=ωt فيتغيّر الفيض جيبياً:</p>
+  </div>
+  <div class="example">
+    <div class="ex-head"></div>
+    <div class="exq">كيف نصل من الفيض الجيبي إلى قانون قوة المولّد الدافعة؟</div>
+    <div class="step"><b>الخطوة ١:</b> الفيض جيبي:
+      <div class="math">Φ = BA cos(ωt)</div></div>
+    <div class="step"><b>الخطوة ٢:</b> معدّل تغيّره (لأن مشتقة cos(ωt) هي −ω sin(ωt)):
+      <div class="math">ΔΦ/Δt = −BAω sin(ωt)</div></div>
+    <div class="step"><b>الخطوة ٣:</b> بقانون فاراداي:
+      <div class="math">ε = −N·ΔΦ/Δt = N B A ω sin(ωt)</div>
+      💡 القوة الدافعة جيبية: تبدأ صفراً، تبلغ ذروتها بعد ربع دورة، ثم تنعكس — تماماً كتيار الكهرباء بالبيت.</div>
+  </div>
+  <div class="lawbox">
+    القوة الدافعة اللحظية للمولّد (ω=2πf)
+    <div class="formula">ε = ε_max sin(ωt)  ،  ε_max = N B A ω</div>
   </div>
 
-  <div class="section-title"><span class="ico">🎸</span> القيثار الكهربائي</div>
+  <div class="section-title"><span class="ico">📈</span> الذروة والتيار: أعظم مقدار</div>
   <div class="card">
-    <p>أوتاره معدنية فيرومغناطيسية (تتأثر بالمغناطيسية)، وتحتها ملفات ملفوفة حول مغناطيس دائم. اهتزاز الوتر بعد نقره يُغيّر باستمرار الفيض المخترق للملف، فيُحتثّ — بقانون فاراداي أيضاً — تيار متناوب بنفس تردد اهتزاز الوتر بالضبط، يُرسَل لمضخّم الصوت فتسمعه نغمة موسيقية.</p>
-    <p style="margin-top:8px">🔗 <b>المبدأ المستعمل:</b> قانون فاراداي + فكرة "تغيّر الفيض بتغيّر الموضع" (الدرس 3) — اهتزاز الوتر يغيّر موضعه النسبي من الملف تكراراً، فيتغيّر الفيض تبعاً له.</p>
+    <p>تحدث الذروة ε_max عند ωt=90° (بعد ربع دورة) لأن sin90°=1. وإذا رُبط المولّد بدائرة مقاومتها R، فالتيار الخارج متناوب جيبي أيضاً I=I_max sin(ωt).</p>
   </div>
-
-  <div class="section-title"><span class="ico">🍳</span> الطبّاخ الحثّي</div>
-  <div class="card">
-    <p>ملف تحت السطح الزجاجي يمرّ فيه تيار متناوب، فيبثّ مجالاً مغناطيسياً متغيّراً باستمرار. إذا كان الإناء فوقه معدنياً مغناطيسياً (كالحديد الزهر أو الفولاذ)، تولّدت في قاعدته <b>تيارات دوّامة</b> تُسخّنه مباشرة عبر مقاومته الكهربائية — بينما يبقى السطح الزجاجي نفسه بارداً نسبياً لأنه مادة عازلة لا تتأثر بالحث.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="lawbox" style="margin:0">أعظم قوة دافعة
+      <div class="formula">ε_max = N B A ω</div></div>
+    <div class="lawbox" style="margin:0">أعظم تيار محتث
+      <div class="formula">I_max = N B A ω / R</div></div>
   </div>
-  <div class="notebox">
-    <b>💡 افهمها ولا تحفظها:</b>
-    <p style="margin-top:6px">🔗 <b>المبدأ المستعمل:</b> التيارات الدوّامة (الدرس 5) + قانون لنز (المقاومة الحرارية الناتجة عن معارضة التيار المحتث). ولهذا بالضبط <b>لا يعمل</b> الطباخ الحثّي مع أواني الألمنيوم أو الزجاج العادية — فهي غير مغناطيسية، فلا تتولّد فيها تيارات دوّامة قوية بما يكفي للتسخين.</p>
+  <div class="defbox">
+    <b class="term">تذكّر:</b> A=πr² — فتغيير <b>قطر</b> الملف يغيّر ε_max بمربّع النسبة (تناسب مربّعي)، بينما N وω تناسب طردي بسيط.
   </div>
 
   <details class="qa">
-    <summary><span class="tag">علل</span> يعمل الطباخ الحثّي بكفاءة مع إناء الحديد الزهر، لكنه لا يسخّن إناء الألمنيوم بنفس الكفاءة.</summary>
-    <div class="ans">لأن التيارات الدوّامة المسؤولة عن التسخين تعتمد على مدى تفاعل المعدن مغناطيسياً مع المجال المتغيّر. الحديد الزهر مادة فيرومغناطيسية قوية التفاعل، فتتولّد فيه تيارات دوّامة كبيرة تُسخّنه بكفاءة. أما الألمنيوم فموصل جيد لكنه غير مغناطيسي (نفوذيته المغناطيسية منخفضة)، فتضعف التيارات الدوّامة المتولّدة فيه ويقلّ التسخين كثيراً.</div>
+    <summary><span class="tag">برهان وزاري</span> أثبت أن القوة الدافعة المحتثة على طرفي ملف مساحة لفته A وعدد لفّاته N، يدور بسرعة زاوية ω داخل مجال منتظم B، تُعطى بالعلاقة ε=NBAω sin(ωt). <span class="wz">الدور الثاني 2021</span></summary>
+    <div class="ans">الفيض المخترق للملف عند الزاوية θ=ωt: Φ=BAcos(ωt). معدّل التغيّر الزمني للفيض: ΔΦ/Δt=BA×[−ωsin(ωt)]=−BAωsin(ωt). وبقانون فاراداي لملف عدد لفّاته N: ε=−N·ΔΦ/Δt=−N[−BAωsin(ωt)]=NBAω sin(ωt) — وهي دالة جيبية، وهو المطلوب إثباته. ∎</div>
   </details>
 
-  <div class="section-title"><span class="ico">🗺️</span> خريطة الفصل كاملاً</div>
+  <div class="section-title"><span class="ico">🔺</span> المولّد ثلاثي الطور</div>
   <div class="card">
-    <p>راجع رحلتك عبر هذا الفصل بنظرة واحدة:</p>
-    <ul style="padding-inline-start:22px;margin-top:8px;line-height:1.9">
-      <li><b>1.</b> القوة على شحنة متحركة وقوة لورنتز — أساس كل شيء</li>
-      <li><b>2.</b> القوة الدافعة المحتثة الحركية — ε=vBℓ لساق منزلقة</li>
-      <li><b>3.</b> الفيض المغناطيسي — Φ=BAcosθ وطرائقه الثلاث لتغييره</li>
-      <li><b>4.</b> قانون فاراداي — ε=−N(ΔΦ/Δt): السرعة لا المقدار وحده</li>
-      <li><b>5.</b> قانون لنز — اتجاه المعارضة، وحفظ الطاقة، والتيارات الدوّامة</li>
-      <li><b>6.</b> الحث الذاتي — الملف يقاوم تغيّر تياره هو نفسه (L، وε=−LΔI/Δt)</li>
-      <li><b>7.</b> الحث المتبادل — ملفان بلا سلك (M=√(L₁L₂))</li>
-      <li><b>8.</b> المجالات الكهربائية المحتثة — قوة تدفع الشحنات بلا أي حركة</li>
-      <li><b>9.</b> التطبيقات — البطاقة والقيثار والطباخ الحثّي</li>
-    </ul>
+    <p>بدل ملف واحد، يُلفّ حول النواة ثلاثة ملفات تفصل بينها زوايا متساوية قياس كلٍّ منها 120°، وتُربط أطرافها بسلك يُسمّى <b>السلك المتعادل</b>. فينقل هذا المولّد التيار بثلاثة خطوط، ويجهّز تياراً أكبر مقداراً من مولّد الطور الواحد — لذا يُستعمل بنقل الكهرباء وتشغيل المحرّكات الصناعية الكبيرة.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">〰️</span> مولّد التيار المستمر: حيلة المبادل</div>
+  <div class="card">
+    <p>لجعل التيار الخارج باتجاه واحد ثابت، نستبدل حلقتَي الزلق بـ<b>حلقة مبادل</b> واحدة من نصفين معزولين كهربائياً. فكلما همّت القطبية بالانعكاس، يعكس المبادل التوصيل فيبقى الاتجاه واحداً. الناتج <b>تيار نبضي</b> (باتجاه واحد لكن متذبذب المقدار)، ومقداره المتوسط:</p>
+  </div>
+  <div class="lawbox">
+    متوسط تيار المولّد المستمر
+    <div class="formula">I_average = 0.636 × I_max</div>
+  </div>
+  <div class="card">
+    <p>ولجعل الخرج أقرب إلى تيار النضيدة (ثابت المقدار تقريباً)، نزيد عدد الملفّات حول النواة تحصر بينها زوايا متساوية، فتتراكب نبضاتها وتنعّم الخرج.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🔃</span> المحرّك الكهربائي والقوة الدافعة المضادّة</div>
+  <div class="card">
+    <p>المحرّك عكس المولّد: يحوّل الطاقة الكهربائية إلى ميكانيكية. نزوّد ملفاً بمجال مغناطيسي بتيار من مصدر فولطية، فتؤثّر القوى المغناطيسية عليه بعزم مزدوج يُديره. لكن ما إن يبدأ الملف بالدوران حتى يعمل <b>كمولّد</b> بالوقت نفسه! فدورانه يغيّر الفيض المخترق له، فيتولّد على طرفيه قوة دافعة محتثة تعاكس المصدر (بقانون لنز) تُسمّى <b>القوة الدافعة المضادّة</b> ε_back.</p>
+  </div>
+  <div class="lawbox">
+    القوة الدافعة المضادّة والتيار بالمحرّك
+    <div class="formula">I = (V_applied − ε_back) / R</div>
+  </div>
+  <div class="notebox">
+    <b>💡 افهمها ولا تحفظها</b>
+    <p style="margin-top:6px">الفرق بين الفولطية المسلّطة والقوة الدافعة المضادّة هو ما يحدّد التيار. لذا حين تُشغّل محرّكاً (مروحة أو غسّالة) يسحب تياراً <b>عالياً لحظة البدء</b> (لأن ε_back=0 والملف ساكن)، ثم يقلّ التيار كلما تسارع الملف وكبرت ε_back. لهذا تخفت الأضواء لحظة تشغيل المكيّف!</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> ترتفع درجة حرارة محرّك كهربائي بشدة ويحترق ملفه إذا مُنع من الدوران (انحشر) وبقيت الفولطية مسلَّطة عليه.</summary>
+    <div class="ans">لأن القوة الدافعة المضادّة ε_back تتولّد فقط بدوران الملف، فإن مُنع من الدوران تصبح ε_back=0، فيصبح التيار I=(V_applied−0)/R=V_applied/R في أعظم مقدار له بلا أي كابح — تيار كبير جداً يُسخّن الملف بشدة عبر مقاومته حتى يحترق.</div>
+  </details>
+
+  <!-- ======== المحاكاة: المولّد المتناوب الحيّة ======== -->
+  <div class="sim">
+    <h3>🔄 مختبر المولّد الكهربائي المتناوب</h3>
+    <p class="sim-sub">ملف يدور داخل مجال مغناطيسي منتظم يولّد قوة دافعة كهربائية جيبية — راقب دوران الملف (يسار) يرسم المنحني الجيبي حيّاً (يمين) لحظة بلحظة، ولاحظ تبدّل لوني طرفَي الملف مع انعكاس قطبية التيار.</p>
+    <div class="sim-scroll"><canvas id="genSim" width="700" height="260"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">عدد اللفّات N: <b id="nVal">١٠٠</b>
+        <input type="range" id="nR" min="10" max="500" step="10" value="100"></div>
+      <div class="slider-group">المجال B (تسلا): <b id="bVal">٠.٥</b>
+        <input type="range" id="bR" min="0.1" max="2" step="0.1" value="0.5"></div>
+      <div class="slider-group">مساحة الملف (سم²): <b id="aVal">٥٠</b>
+        <input type="range" id="aR" min="10" max="200" step="10" value="50"></div>
+      <div class="slider-group">تردد الدوران f (هرتز): <b id="fVal">٢</b>
+        <input type="range" id="fR" min="1" max="10" step="1" value="2"></div>
+    </div>
+    <div class="readout" id="genReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">مولّد ملفه 200 لفة، مساحة اللفة 0.01 m²، كثافة الفيض 0.5T، يدور بسرعة زاوية 100 rad/s. جد ذروة القوة الدافعة ε_max.</div>
+    <div class="givens">المعطيات: N=200 — A=0.01 m² — B=0.5T — ω=100 rad/s</div>
+    <div class="step"><b>الخطوة الوحيدة:</b> نعوّض مباشرة بقانون الذروة:
+      <div class="math">ε_max = N B A ω = 200 × 0.5 × 0.01 × 100 = 100 V</div>
+      💡 جرّب هذي القيم بالضبط بالمحاكاة فوق (N=200 خارج مدى السلايدر الأعلى إلى 500 فهو متاح، B=0.5، والمساحة 100 سم²... لاحظ فقط أن وحدة المساحة بالمحاكاة سم² لا م²، فحوّل 0.01m²=100cm² لمقارنة صحيحة) وتحقّق أن القراءة تقارب 100V عند f المكافئ لـω=100rad/s (أي f=ω/2π≈15.9Hz، خارج مدى السلايدر — النتيجة هنا حسابية بحتة).</div>
   </div>
 
   <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
-  <div id="quiz1"></div>
+  <div id="quiz9"></div>
 
   <div class="lesson-nav">
-    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
-    <a class="btn ghost" href="questions.html">أسئلة نهاية الفصل 🧮</a>
+    <a class="btn ghost" href="lesson8.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson10.html">الدرس التالي: التطبيقات العملية 🔧</a>
   </div>
 
   <footer class="site">إعداد الأستاذ أحمد رافع</footer>
@@ -107,123 +150,101 @@
 
 <script src="../../js/core.js"></script>
 <script>
-/* ---------- محاكاة التطبيقات الثلاثة (اختيار: تعيد الرسم عند التبديل فقط) ---------- */
+/* ---------- محاكاة المولّد المتناوب (حيّة، rAF) ---------- */
 (function () {
-  var cv = document.getElementById("appSim"), ctx = cv.getContext("2d");
-  var appSel = document.getElementById("appSel");
-  var readout = document.getElementById("appReadout");
+  var cv = document.getElementById("genSim"), ctx = cv.getContext("2d");
+  var nR = document.getElementById("nR"), nVal = document.getElementById("nVal");
+  var bR = document.getElementById("bR"), bVal = document.getElementById("bVal");
+  var aR = document.getElementById("aR"), aVal = document.getElementById("aVal");
+  var fR = document.getElementById("fR"), fVal = document.getElementById("fVal");
+  var readout = document.getElementById("genReadout");
 
-  function arrow(x0, y0, x1, y1, color) {
-    ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = 2.5;
-    ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
-    var ang = Math.atan2(y1 - y0, x1 - x0);
-    ctx.beginPath();
-    ctx.moveTo(x1, y1);
-    ctx.lineTo(x1 - 8 * Math.cos(ang - 0.45), y1 - 8 * Math.sin(ang - 0.45));
-    ctx.lineTo(x1 - 8 * Math.cos(ang + 0.45), y1 - 8 * Math.sin(ang + 0.45));
-    ctx.closePath(); ctx.fill();
-  }
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n, d) { return arNum(n.toFixed(d === undefined ? 2 : d)); }
 
-  /* axis: "h" محور الملف أفقي (يُرى الملف بيضاوياً طولياً)،
-     "v" محور الملف شاقولي — وهي الحالة الصحيحة لملف الطباخ الحثّي (يواجه الإناء فوقه)
-     ولملف لاقط القيثار (يواجه الوتر فوقه). */
-  function drawCoil(cx, cy, r, axis) {
-    ctx.strokeStyle = "#B45309"; ctx.lineWidth = 5;
-    ctx.beginPath();
-    if (axis === "v") ctx.ellipse(cx, cy, r, r * 0.32, 0, 0, Math.PI * 2);
-    else ctx.ellipse(cx, cy, r * 0.32, r, 0, 0, Math.PI * 2);
-    ctx.stroke();
-  }
+  var t0 = performance.now();
+  var cx = 145, cy = 130, R = 55;
+  var ox = 320, oy = 130, w = 330, h = 78;
 
-  function draw() {
-    var app = appSel.value;
+  function draw(now) {
+    now = now || performance.now();
+    var N = +nR.value, B = +bR.value, aCm2 = +aR.value, f = +fR.value;
+    nVal.textContent = arNum(N); bVal.textContent = arNum(B.toFixed(1));
+    aVal.textContent = arNum(aCm2); fVal.textContent = arNum(f);
+    var A = aCm2 / 10000;
+    var omega = 2 * Math.PI * f;
+    var emax = N * B * A * omega;
+    var t = (now - t0) / 1000;
+    var theta = (omega * t) % (2 * Math.PI);
+    var emf = emax * Math.sin(omega * t);
+
+    ctx.direction = "ltr";
     ctx.clearRect(0, 0, cv.width, cv.height);
-    ctx.textAlign = "center";
 
-    if (app === "card") {
-      // بطاقة بشريط ممغنط تتحرك نحو ملف قارئ
-      ctx.fillStyle = "#e0e7ff"; ctx.strokeStyle = "#4338ca"; ctx.lineWidth = 2.5;
-      ctx.beginPath(); ctx.roundRect ? ctx.roundRect(120, 90, 160, 100, 10) : ctx.rect(120, 90, 160, 100);
-      ctx.fill(); ctx.stroke();
-      ctx.fillStyle = "#334155"; ctx.fillRect(120, 112, 160, 20);
-      ctx.fillStyle = "#fff"; ctx.font = "bold 11px Cairo"; ctx.fillText("الشريط الممغنط", 200, 126);
-
-      drawCoil(520, 140, 55);
-      ctx.fillStyle = "#B45309"; ctx.font = "bold 12px Cairo"; ctx.fillText("ملف القارئ", 520, 60);
-
-      arrow(300, 140, 440, 140, "#059669");
-      ctx.fillStyle = "#059669"; ctx.font = "bold 12px Cairo"; ctx.fillText("تمرير البطاقة", 370, 125);
-
-      ctx.fillStyle = "#334155"; ctx.font = "12px Cairo";
-      ctx.fillText("الفيض المتغيّر يحثّ نبضات تيار تحمل المعلومات (قانون فاراداي)", 350, 225);
-      readout.innerHTML = "💳 <b>البطاقة الممغنطة:</b> حركة الشريط أمام الملف تُغيّر الفيض بسرعة، فتُحتثّ نبضات تيار تُقرأ كبيانات.";
-    } else if (app === "guitar") {
-      // وتر مهتز فوق ملف يحيط بمغناطيس
-      ctx.strokeStyle = "#475569"; ctx.lineWidth = 2.5;
-      ctx.beginPath(); ctx.moveTo(90, 90); ctx.lineTo(610, 90); ctx.stroke();
-
-      ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 3;
-      ctx.beginPath();
-      for (var x = 90; x <= 610; x += 4) {
-        var y = 130 + Math.sin((x - 90) / 30) * 22;
-        if (x === 90) ctx.moveTo(x, y); else ctx.lineTo(x, y);
-      }
-      ctx.stroke();
-      ctx.fillStyle = "#dc2626"; ctx.font = "bold 12px Cairo"; ctx.fillText("الوتر المهتزّ", 350, 105);
-
-      ctx.fillStyle = "#1e3a8a"; ctx.fillRect(336, 170, 28, 34);
-      ctx.fillStyle = "#fff"; ctx.font = "bold 11px Cairo";
-      ctx.fillText("N", 350, 182); ctx.fillText("S", 350, 200);
-      drawCoil(350, 194, 42, "v");
-
-      ctx.fillStyle = "#334155"; ctx.font = "12px Cairo";
-      ctx.fillText("اهتزاز الوتر يُغيّر الفيض بتردده، فيُحتثّ تيار متناوب بنفس التردد", 350, 225);
-      readout.innerHTML = "🎸 <b>القيثار الكهربائي:</b> اهتزاز الوتر فوق الملف يُغيّر الفيض بتردد الاهتزاز، فيُحتثّ تيار صوتي متناوب.";
-    } else {
-      // إناء فوق ملف حثي
-      ctx.fillStyle = "#94a3b8"; ctx.fillRect(260, 70, 180, 60);
-      ctx.fillStyle = "#334155"; ctx.font = "bold 12px Cairo"; ctx.fillText("إناء معدني", 350, 105);
-
-      ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(230, 140); ctx.lineTo(470, 140); ctx.stroke();
-      ctx.fillStyle = "#64748b"; ctx.font = "11px Cairo"; ctx.fillText("سطح زجاجي بارد", 350, 155);
-
-      drawCoil(350, 190, 55, "v");
-      ctx.fillStyle = "#B45309"; ctx.font = "bold 11px Cairo"; ctx.fillText("ملف بتيار متناوب", 350, 225);
-
-      ctx.strokeStyle = "#ea580c"; ctx.lineWidth = 2;
-      [300, 350, 400].forEach(function (x) {
-        ctx.beginPath(); ctx.arc(x, 95, 12, 0, Math.PI * 1.5); ctx.stroke();
-      });
-      ctx.fillStyle = "#ea580c"; ctx.font = "bold 11px Cairo"; ctx.fillText("تيارات دوّامة تُسخّن القاعدة", 350, 60);
-
-      readout.innerHTML = "🍳 <b>الطباخ الحثّي:</b> المجال المتغيّر يولّد تيارات دوّامة في قاعدة الإناء المعدنية فتُسخّنها مباشرة، والزجاج يبقى بارداً.";
+    /* ---- لوحة الملف الدوّار ---- */
+    ctx.fillStyle = "#dc2626"; ctx.font = "bold 20px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("N", cx - R - 32, cy + 7);
+    ctx.fillStyle = "#1e3a8a"; ctx.fillText("S", cx + R + 32, cy + 7);
+    ctx.strokeStyle = "#c8cdea"; ctx.lineWidth = 1;
+    for (var i = -2; i <= 2; i++) {
+      ctx.beginPath(); ctx.moveTo(cx - R - 18, cy + i * 20); ctx.lineTo(cx + R + 18, cy + i * 20); ctx.stroke();
     }
-  }
+    var half = R * Math.cos(theta);
+    ctx.strokeStyle = "#7c3aed"; ctx.lineWidth = 6; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(cx - half, cy); ctx.lineTo(cx + half, cy); ctx.stroke();
+    ctx.fillStyle = emf >= 0 ? "#dc2626" : "#2563eb";
+    ctx.beginPath(); ctx.arc(cx - half, cy, 6, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = emf >= 0 ? "#2563eb" : "#dc2626";
+    ctx.beginPath(); ctx.arc(cx + half, cy, 6, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#756b8a"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("مسقط الملف الدوّار (منظر جانبي)", cx, cy + 90);
 
-  appSel.addEventListener("change", draw);
-  draw();
+    ctx.strokeStyle = "#e2e8f0"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(272, 20); ctx.lineTo(272, 240); ctx.stroke();
+
+    /* ---- لوحة منحني الجهد الحيّ ---- */
+    ctx.strokeStyle = "#e7e0f2"; ctx.lineWidth = 1; ctx.beginPath();
+    ctx.moveTo(ox, oy); ctx.lineTo(ox + w, oy); ctx.moveTo(ox, oy - h); ctx.lineTo(ox, oy + h); ctx.stroke();
+    var periodPx = w / 2;
+    ctx.strokeStyle = "#7c3aed"; ctx.lineWidth = 2.4; ctx.beginPath();
+    for (var px = 0; px <= w; px++) {
+      var tt = t - (w - px) / periodPx / Math.max(f, 0.5);
+      var py = oy - Math.sin(omega * tt) * h;
+      px === 0 ? ctx.moveTo(ox + px, py) : ctx.lineTo(ox + px, py);
+    }
+    ctx.stroke();
+    ctx.fillStyle = "#dc2626";
+    ctx.beginPath(); ctx.arc(ox + w, oy - (emf / (emax || 1)) * h, 5, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#756b8a"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("القوة الدافعة الكهربائية ε(t)", ox + w / 2, oy + h + 22);
+
+    readout.innerHTML = "ε = NBAω sin(ωt) — القيمة العظمى ε_max = NBAω = " + fmt(emax) + " فولط (ω=2πf=" + fmt(omega, 1) + " rad/s)";
+
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
 })();
 
 /* ---------- الاختبار ---------- */
-Phy.quiz("quiz1", [
-  { q: "ما القانون الذي يفسّر عمل قارئ البطاقة الممغنطة؟",
-    opts: ["قانون فاراداي (تغيّر الفيض المخترق للملف يحتثّ تياراً)", "قانون كولوم", "قانون نيوتن الأول", "قانون باسكال"], a: 0,
-    why: "حركة الشريط الممغنط أمام الملف تُغيّر الفيض بسرعة، فيُحتثّ تيار يحمل البيانات — تطبيق مباشر لقانون فاراداي." },
-  { q: "لماذا يُصنع وتر القيثار الكهربائي من معدن فيرومغناطيسي تحديداً؟",
-    opts: ["ليكون خفيف الوزن فقط", "ليتأثر بالمجال المغناطيسي فيُغيّر الفيض عند اهتزازه، فيُحتثّ تيار في الملف تحته", "ليكون أرخص من الأوتار العادية", "ليمنع انقطاعه أثناء العزف"], a: 1,
-    why: "الوتر الفيرومغناطيسي يتفاعل مع المجال، فاهتزازه يُغيّر الفيض المخترق للملف تكراراً، فيُحتثّ تيار صوتي." },
-  { q: "لماذا لا يعمل الطباخ الحثّي بكفاءة مع إناء ألمنيوم عادي (ضعيف المغناطيسية)؟",
-    opts: ["لأن الألمنيوم لا يتفاعل مغناطيسياً بقوة، فتضعف التيارات الدوّامة المسخّنة فيه", "لأن الألمنيوم يذوب فوراً عند التسخين", "لأن الطباخ الحثّي لا يعمل مع أي معدن إطلاقاً", "لا علاقة لنوع المعدن بالتسخين الحثّي"], a: 0,
-    why: "التسخين الحثّي يعتمد على قوة التيارات الدوّامة، وهي أضعف بكثير في المعادن غير المغناطيسية كالألمنيوم." },
-  { q: "أي ظاهرة فيزيائية مشتركة بين البطاقة الممغنطة والقيثار الكهربائي؟",
-    opts: ["كلاهما يعتمد على تغيّر الفيض المغناطيسي المخترق لملف لتوليد قوة دافعة محتثة (قانون فاراداي)", "كلاهما لا علاقة له بالحث الكهرومغناطيسي إطلاقاً", "كلاهما يستهلك طاقة نووية", "كلاهما يعتمد على الحث المتبادل فقط دون فاراداي"], a: 0,
-    why: "كلاهما يولّد تياراً محتثاً بسبب تغيّر الفيض عبر الزمن — الأول بحركة الشريط، والثاني باهتزاز الوتر." },
-  { q: "ما الظاهرة الفيزيائية التي تُسخّن قاع الإناء في الطباخ الحثّي تحديداً؟",
-    opts: ["التيارات الدوّامة الناتجة عن تغيّر الفيض المغناطيسي داخل قاعدة الإناء المعدنية", "احتكاك الإناء بالسطح الزجاجي مباشرة", "تفاعل كيميائي بين الإناء والزجاج", "أشعة تحت حمراء يُصدرها الملف"], a: 0,
-    why: "المجال المتناوب يحتثّ تيارات دوّامة داخل قاعدة الإناء نفسها، فتُسخّنها عبر مقاومتها الكهربائية." },
-  { q: "ما القاسم المشترك بين كل تطبيقات هذا الفصل — من الساق المنزلقة حتى الطباخ الحثّي؟",
-    opts: ["تغيّر الفيض المغناطيسي عبر الزمن يولّد قوة دافعة محتثة، بصرف النظر عن سبب هذا التغيّر", "كلها تحتاج بطارية داخلية لتعمل", "كلها تستعمل بالضبط نفس نوع المعدن", "لا قاسم مشترك حقيقي بينها"], a: 0,
-    why: "هذا هو محور الفصل كله: أي تغيّر في الفيض — بحركة أو دوران أو تيار متغيّر — يولّد قوة دافعة محتثة." }
+Phy.quiz("quiz9", [
+  { q: "ما قانون القوة الدافعة اللحظية لمولّد التيار المتناوب؟",
+    opts: ["ε = NBAω sin(ωt)", "ε = NBA cos(ωt)", "ε = NBAω", "ε = NBω/A"], a: 0,
+    why: "بتطبيق قانون فاراداي على فيض جيبي Φ=BAcos(ωt)، نحصل على ε=NBAω sin(ωt)." },
+  { q: "متى تبلغ القوة الدافعة المحتثة بالمولّد ذروتها ε_max؟",
+    opts: ["عند ωt=90° (بعد ربع دورة)", "عند ωt=0° (بداية الدوران)", "عند ωt=180° (نصف دورة)", "لا تبلغ ذروة أبداً"], a: 0,
+    why: "sin(ωt) يبلغ أعظم قيمة له (=1) عند ωt=90°، فتبلغ ε ذروتها ε_max حينها." },
+  { q: "(سؤال وزاري، الدور الثالث 2019) في مولّد يعطي ذروة ε_max، إذا زيد عدد اللفّات لثلاثة أمثالها، وقُلّل قطر الملف للثلث، وضُوعف التردد الدوراني، فإن الذروة الجديدة تساوي:",
+    opts: ["⅔ ε_max", "¼ ε_max", "3/2 ε_max", "3 ε_max"], a: 0,
+    why: "ε_max=NBAω=NB(πr²)(2πf). التغييرات: N→3N، r→r/3 فـA→A/9، وf→2f فـω→2ω. الجديدة = 3×(1/9)×2 × القديمة = 6/9 = ⅔ ε_max." },
+  { q: "ما وظيفة حلقة المبادل بمولّد التيار المستمر؟",
+    opts: ["عكس التوصيل كلما همّت القطبية بالانعكاس، فيبقى اتجاه التيار الخارج ثابتاً", "زيادة سرعة دوران الملف", "تحويل التيار المستمر إلى متناوب", "منع أي تيار من الخروج من المولّد"], a: 0,
+    why: "المبادل (نصفا حلقة معزولان) يعكس التوصيل بالخارجي في كل نصف دورة، فيبقى اتجاه التيار الخارج ثابتاً (تيار نبضي أحادي الاتجاه)." },
+  { q: "لماذا يسحب المحرّك الكهربائي تياراً عالياً لحظة بدء تشغيله، ثم يقلّ التيار تدريجياً؟",
+    opts: ["لأن القوة الدافعة المضادّة ε_back تساوي صفراً عند السكون وتكبر مع تسارع الملف، فيقلّ الفرق (V−ε_back) المحدِّد للتيار", "لأن مقاومة الملف تزداد فجأة عند البدء", "لأن الفولطية المسلّطة تتناقص تدريجياً بعد التشغيل", "لا علاقة فيزيائية حقيقية بهذه الظاهرة"], a: 0,
+    why: "عند السكون ε_back=0 فيكون التيار I=V/R في أعظمه؛ وكلما تسارع الملف كبرت ε_back فقلّ الفرق (V−ε_back) وبالتالي التيار." },
+  { q: "ما الفائدة العملية للمولّد ثلاثي الطور مقارنة بمولّد الطور الواحد؟",
+    opts: ["يجهّز تياراً أكبر مقداراً، مناسباً لنقل الكهرباء وتشغيل المحرّكات الصناعية الكبيرة", "أصغر حجماً من مولّد الطور الواحد دائماً", "لا يحتاج مغناطيساً إطلاقاً", "يعمل فقط بالتيار المستمر لا المتناوب"], a: 0,
+    why: "ثلاثة ملفات متباعدة 120° تجهّز تياراً أكبر مقداراً بثلاثة خطوط نقل، ولهذا يُستعمل بشبكات نقل الكهرباء والمحرّكات الصناعية الكبيرة." }
 ], { onDone: function (stars) { Phy.setLesson("g6c2", "9", { stars: stars }); } });
 </script>
 </body>

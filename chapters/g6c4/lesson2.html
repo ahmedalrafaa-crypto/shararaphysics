@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: الإرسال والاستقبال — الرنين والهوائي والكشف — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c4">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الرابع</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>📶 الدرس 2: الإرسال والاستقبال — الرنين والهوائي والكشف</h1>
+    <p>عرفتَ بالدرس الماضي أن الشحنة المتذبذبة تُشِعّ موجة كهرومغناطيسية. لكن كيف تجعل الشحنات تتذبذب بالضبط بالتردد الذي تريده، وكيف تُطلقها للفضاء؟ وكيف يلتقطها جهازك من بين آلاف الموجات المتزاحمة حولك الآن؟</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🎛️</span>
+    <span>حين تدير قرص "الدوزان" براديو، أنت فعلياً تغيّر سعة متسعة متغيرة بدائرة اهتزاز. عند سعة معيّنة يصير التردد الرنيني لدائرتك مساوياً تردد محطة واحدة، فتُضخَّم إشارتها بينما تبقى بقية المحطات مهملة — بالضبط نفس فكرة الرنين اللي تعلّمتها بفصل التيار المتناوب، لكن هنا تُستعمَل لاختيار موجة من الفضاء لا لتضخيم تيار بدائرة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔁</span> دائرة الاهتزاز الكهرومغناطيسي (الرنين)</div>
+  <div class="card">
+    <p>قلب جهاز الإرسال أو الاستقبال دائرة بسيطة: ملف L ومتسعة متغيّرة السعة C موصولان معاً. تتذبذب الشحنة بينهما بتردد رنيني محدد — نفس علاقة الرنين بالضبط اللي اشتققتها بفصل التيار المتناوب. بتغيير C (تدوير قرص الدوزان) نختار التردد المطلوب إرساله أو استقباله من بين كل الموجات المتاحة.</p>
+  </div>
+  <div class="lawbox">
+    التردد الرنيني لدائرة الاهتزاز · وطول الموجة المقابل
+    <div class="formula">f_r = 1 / (2π√(LC))  ،  λ = c/f  ،  c = 3×10⁸ m/s</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">ضُبطت دائرة موالفة بجهاز راديو محطة إذاعية إذ كانت قيمة المحاثة 6.4 µH وقيمة السعة 1.9 pF. جد: ① التردد الذي يلتقطه الجهاز. ② طول موجته.</div>
+    <div class="givens">المعطيات: L=6.4 µH=6.4×10⁻⁶ H — C=1.9 pF=1.9×10⁻¹² F</div>
+    <div class="step"><b>الخطوة ١:</b> نعوّض بقانون التردد الرنيني:
+      <div class="math">f_r = 1/(2π√(6.4×10⁻⁶ × 1.9×10⁻¹²)) ≈ 45.64×10⁶ Hz = 45.64 MHz</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نوجد طول الموجة المقابل:
+      <div class="math">λ = c/f_r = (3×10⁸)/(45.64×10⁶) ≈ 6.57 m</div>
+      💡 جرّب هذي القيم بالضبط بالمحاكاة تحت (L=6.4، C=1.9) وتحقّق من تطابق القراءة.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">📡</span> الهوائي</div>
+  <div class="card">
+    <p>الهوائي سلكان معدنيان يبثّان الطاقة (أو يستقبلانها) على شكل موجات. لكل تردد طول هوائي أنسب: أفضل طول يساوي <b>نصف طول الموجة</b>، أو <b>ربعها</b> فقط إذا أُرِّض الهوائي (وُصل طرفه بالأرض، فتُكمِّل الأرض نصف الطول الناقص كهربائياً).</p>
+  </div>
+  <div class="lawbox">
+    طول الهوائي المناسب لتردد معيّن
+    <div class="formula">ℓ = λ/2  (غير مؤرَّض)   ،   ℓ = λ/4  (مؤرَّض)</div>
+  </div>
+
+  <div class="example">
+    <div class="exq">يُراد استعمال هوائي نصف موجة لإرسال إشارة تردّدها 200 MHz. احسب طول الهوائي المناسب.</div>
+    <div class="givens">المعطيات: f=200 MHz=200×10⁶ Hz</div>
+    <div class="step"><b>الخطوة ١:</b> نوجد طول الموجة:
+      <div class="math">λ = c/f = (3×10⁸)/(200×10⁶) = 1.5 m</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نصف طول الموجة:
+      <div class="math">ℓ = λ/2 = 1.5/2 = 0.75 m = 75 cm</div>
+      💡 ولو أُرِّض الهوائي لكفى ربع الموجة فقط: ℓ=λ/4=37.5cm — أنسب عملياً لأنه أقصر.</div>
+  </div>
+
+  <!-- ======== المحاكاة: الموالفة (LC → f_r → λ → طول الهوائي) ======== -->
+  <div class="sim">
+    <h3>🎛️ مختبر الموالفة: من L وC إلى طول الهوائي</h3>
+    <p class="sim-sub">غيّر L وC وراقب التردد الرنيني وطول الموجة وطول الهوائي المناسب يتغيّرون معاً — هذا بالضبط ما يحدث كل مرة تُدوِّر فيها قرص الدوزان.</p>
+    <div class="sim-scroll"><canvas id="tuneSim" width="700" height="230"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">المحاثة L (مايكروهنري): <b id="lVal">٦.٤</b>
+        <input type="range" id="lR" min="1" max="20" step="0.1" value="6.4"></div>
+      <div class="slider-group">السعة C (بيكوفاراد): <b id="cVal">١.٩</b>
+        <input type="range" id="cR" min="1" max="20" step="0.1" value="1.9"></div>
+    </div>
+    <div class="readout" id="tuneReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">📤</span> دائرتا الإرسال والتسلم</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="card" style="margin:0">
+      <b>📤 دائرة الإرسال</b>
+      <p style="margin-top:6px">تتكوّن من: <b>دائرة اهتزاز</b> (ملف + متسعة متغيرة) تولّد الموجات بالتردد المطلوب، و<b>هوائي</b> يشعّها إلى الفضاء.</p>
+    </div>
+    <div class="card" style="margin:0">
+      <b>📥 دائرة التسلم</b>
+      <p style="margin-top:6px">تتكوّن من: <b>هوائي</b> يلتقط الموجات فيتولّد فيه تيار محتث، و<b>دائرة اهتزاز</b> تُوالَف على تردد المحطة المطلوبة بالرنين.</p>
+    </div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> اذكر الأجزاء الأساسية لجهاز إرسال الموجات الكهرومغناطيسية. <span class="wz">التمهيدي 2024</span></summary>
+    <div class="ans">① دائرة الاهتزاز الكهرومغناطيسي: تحتوي ملفاً ومتسعة متغيرة السعة، وتولّد موجات الإشارة الكهربائية، ويُتحكَّم بترددها بتغيير سعة المتسعة. ② الهوائي: سلك معدني حرّ (أو موصل بالأرض) يُشِعّ الموجات الكهرومغناطيسية إلى الفضاء.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🔍</span> الكشف: كيف يلتقط الهوائي المعلومة؟</div>
+  <div class="card">
+    <p><b>الكشف</b> هو استخلاص المعلومة من الموجة الملتقطة، ويكون بإحدى طريقتين:</p>
+  </div>
+  <div class="defbox">
+    <b class="term">الكشف بوساطة المجال الكهربائي (هوائي مستقيم):</b> المجال الكهربائي E للموجة القادمة يكون موازياً لطول الهوائي المستقيم (ثنائي القطب)، فيدفع الإلكترونات الحرة بالمعدن للتذبذب صعوداً ونزولاً بطول السلك بتردد الموجة نفسه، فيتولّد فرق جهد متردد يُضخَّم ويُعالَج.
+  </div>
+  <div class="defbox">
+    <b class="term">الكشف بوساطة المجال المغناطيسي (هوائي حلقي):</b> المجال المغناطيسي المتغيّر B للموجة القادمة يخترق مساحة الهوائي الحلقي، فبقانون فاراداي (تتذكره من فصل الحث الكهرومغناطيسي: ε=−N ΔΦ/Δt) يُحتث بالحلقة تيار متردد يحمل المعلومة نفسها.
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz2"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson1.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: التضمين 📻</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة الموالفة ---------- */
+(function () {
+  var cv = document.getElementById("tuneSim"), ctx = cv.getContext("2d");
+  var lR = document.getElementById("lR"), lVal = document.getElementById("lVal");
+  var cR = document.getElementById("cR"), cVal = document.getElementById("cVal");
+  var readout = document.getElementById("tuneReadout");
+  var c_light = 3e8;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n, d) { return arNum(n.toFixed(d === undefined ? 2 : d)); }
+
+  function draw() {
+    var L_uH = +lR.value, C_pF = +cR.value;
+    lVal.textContent = arNum(L_uH.toFixed(1)); cVal.textContent = arNum(C_pF.toFixed(1));
+    var L = L_uH * 1e-6, C = C_pF * 1e-12;
+    var fr = 1 / (2 * Math.PI * Math.sqrt(L * C));
+    var lambda = c_light / fr;
+    var halfL = lambda / 2, quarterL = lambda / 4;
+
+    ctx.direction = "ltr";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    /* ---- رسم دائرة الاهتزاز LC (تخطيطي) ---- */
+    var ox = 90, oy = 115;
+    ctx.strokeStyle = "#334155"; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.moveTo(ox, oy - 55); ctx.lineTo(ox + 70, oy - 55);
+    // ملف (زگزاگ حلقي مبسّط)
+    for (var i = 0; i < 5; i++) {
+      ctx.moveTo(ox + 70 + i * 12, oy - 55);
+      ctx.arc(ox + 76 + i * 12, oy - 55, 6, Math.PI, 0, true);
+    }
+    ctx.moveTo(ox + 130, oy - 55); ctx.lineTo(ox + 190, oy - 55);
+    ctx.stroke();
+    ctx.fillStyle = "#0369a1"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("L", ox + 100, oy - 70);
+
+    ctx.beginPath();
+    ctx.moveTo(ox, oy - 55); ctx.lineTo(ox, oy + 55);
+    ctx.moveTo(ox + 190, oy - 55); ctx.lineTo(ox + 190, oy + 55);
+    ctx.moveTo(ox, oy + 55); ctx.lineTo(ox + 78, oy + 55);
+    ctx.moveTo(ox + 112, oy + 55); ctx.lineTo(ox + 190, oy + 55);
+    ctx.stroke();
+    // متسعة متغيرة (لوحان + سهم)
+    ctx.beginPath(); ctx.moveTo(ox + 80, oy + 40); ctx.lineTo(ox + 80, oy + 70); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ox + 110, oy + 40); ctx.lineTo(ox + 110, oy + 70); ctx.stroke();
+    ctx.strokeStyle = "#ea580c"; ctx.beginPath(); ctx.moveTo(ox + 70, oy + 75); ctx.lineTo(ox + 120, oy + 35); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ox + 120, oy + 35); ctx.lineTo(ox + 113, oy + 39); ctx.lineTo(ox + 120, oy + 44); ctx.closePath(); ctx.fillStyle = "#ea580c"; ctx.fill();
+    ctx.fillStyle = "#ea580c"; ctx.font = "bold 13px Cairo"; ctx.fillText("C", ox + 95, oy + 90);
+
+    /* ---- هوائي (تخطيطي) ---- */
+    var ax = 420, ay = 115;
+    ctx.strokeStyle = "#334155"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(ax, ay - 70); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(ax, ay + 70); ctx.stroke();
+    ctx.fillStyle = "#334155"; ctx.beginPath(); ctx.arc(ax, ay, 4, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#334155"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("هوائي نصف موجة", ax, ay - 85);
+    ctx.font = "11px Cairo";
+    ctx.fillText("ℓ = " + fmt(halfL) + " m", ax, ay + 95);
+
+    // موجة منطلقة من الدائرة نحو الهوائي (زخرفة بصرية)
+    ctx.strokeStyle = "#0369a1"; ctx.lineWidth = 1.6; ctx.setLineDash([5, 4]);
+    ctx.beginPath();
+    for (var x = ox + 200; x <= ax - 30; x++) {
+      var y = oy + Math.sin((x - ox - 200) / 9) * 14;
+      x === ox + 200 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.stroke(); ctx.setLineDash([]);
+
+    readout.innerHTML = "f_r = 1/(2π√LC) = " + fmt(fr / 1e6) + " MHz &nbsp;|&nbsp; λ = c/f_r = " + fmt(lambda) + " m" +
+      "<br>طول الهوائي غير المؤرَّض ℓ=λ/2 = " + fmt(halfL) + " m &nbsp;|&nbsp; طول الهوائي المؤرَّض ℓ=λ/4 = " + fmt(quarterL) + " m";
+  }
+  [lR, cR].forEach(function (s) { s.addEventListener("input", draw); });
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz2", [
+  { q: "بأي علاقة يُحسب التردد الرنيني لدائرة الاهتزاز (L وC)؟",
+    opts: ["f_r = 1/(2π√(LC))", "f_r = 2π√(LC)", "f_r = LC", "f_r = 1/(LC)"], a: 0,
+    why: "نفس علاقة الرنين بدائرة RLC المتوالية من فصل التيار المتناوب: f_r=1/(2π√(LC))." },
+  { q: "كيف نختار التردد المطلوب إرساله أو استقباله عملياً بدائرة الاهتزاز؟",
+    opts: ["بتغيير سعة المتسعة المتغيرة C (تدوير قرص الدوزان)", "بتغيير طول الهوائي فقط كل مرة", "لا يمكن اختيار تردد معيّن إطلاقاً", "بتغيير لون السلك الموصل"], a: 0,
+    why: "تغيير C يغيّر التردد الرنيني f_r=1/(2π√LC))، فنُوالف الدائرة على تردد المحطة المطلوبة." },
+  { q: "ما أفضل طول لهوائي غير مؤرَّض بالنسبة لطول الموجة λ المرسلة أو المستقبَلة؟",
+    opts: ["نصف طول الموجة (ℓ=λ/2)", "طول الموجة كاملاً (ℓ=λ)", "ضعف طول الموجة (ℓ=2λ)", "عُشر طول الموجة (ℓ=λ/10)"], a: 0,
+    why: "أفضل طول لهوائي غير مؤرَّض يساوي نصف طول الموجة ℓ=λ/2؛ ولو أُرِّض لكفى ربعها ℓ=λ/4." },
+  { q: "دائرة موالفة محاثتها 2mH وسعتها 8pF. ما تردّدها الرنيني تقريباً؟",
+    opts: ["≈1.26×10⁶ Hz", "≈2.5×10⁶ Hz", "≈0.5×10⁶ Hz", "≈16×10⁶ Hz"], a: 0,
+    why: "f_r=1/(2π√(2×10⁻³×8×10⁻¹²))=1/(2π√(1.6×10⁻¹⁴))≈1.26×10⁶ Hz." },
+  { q: "كيف يكتشف الهوائي الحلقي المعلومة المحمولة على موجة كهرومغناطيسية واردة؟",
+    opts: ["بقانون فاراداي: المجال المغناطيسي المتغيّر للموجة يخترق مساحة الحلقة فيُحتث فيها تيار متردد", "بجذب الشحنات الساكنة بالهواء المحيط فقط", "لا علاقة له بأي قانون فيزيائي معروف", "بتسخين الحلقة مباشرة بالموجة الواردة"], a: 0,
+    why: "المجال المغناطيسي المتغيّر B للموجة يخترق مساحة الحلقة، فبقانون فاراداي (ε=−NΔΦ/Δt) يُحتث تيار متردد يحمل المعلومة." },
+  { q: "ما الفرق الجوهري بين دائرتَي الإرسال والتسلم من حيث المكوّنات؟",
+    opts: ["كلتاهما تحتويان دائرة اهتزاز (L وC) وهوائياً، لكن الإرسال يولّد الموجة ويشعّها، بينما التسلم يلتقطها ويُوالِف عليها", "دائرة الإرسال لا تحتاج هوائياً إطلاقاً", "دائرة التسلم لا تحتاج دائرة اهتزاز إطلاقاً", "لا فرق حقيقي بينهما بتاتاً"], a: 0,
+    why: "كلتا الدائرتين تحتويان دائرة اهتزاز وهوائياً؛ لكن الإرسال يُنشئ الموجة بدائرة الاهتزاز ويشعّها بالهوائي، بينما التسلم يلتقط الموجة بالهوائي ويُوالِف دائرة اهتزازه على ترددها بالرنين." }
+], { onDone: function (stars) { Phy.setLesson("g6c4", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

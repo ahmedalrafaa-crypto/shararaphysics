@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: تطبيقات الموجات الكهرومغناطيسية — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c4">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الرابع</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>🛰️ الدرس 5: تطبيقات الموجات الكهرومغناطيسية</h1>
+    <p>وصلتَ لخاتمة فصل الموجات الكهرومغناطيسية! بعد أن تعلّمتَ نظريتها وتوليدها وإرسالها وتضمينها وطرائق انتشارها، حان وقت رؤية ثمرة كل ذلك: جهاز غيّر مجرى حرب عالمية، وعينٌ صناعية تراقب كوكبنا كاملاً من الفضاء.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">✈️</span>
+    <span>في الحرب العالمية الثانية، بنت بريطانيا سلسلة محطات رادار على سواحلها. كانت ترسل موجات راديوية فترتدّ عن الطائرات المعادية القادمة، فيكشف زمن الارتداد بُعدها واتجاهها قبل أن تُرى بالعين. هذا الإنذار المبكر مكّن حفنة قليلة من الطائرات المدافعة من الوصول بالوقت المناسب، فرجّح كفّة "معركة بريطانيا". فكرة فيزيائية بسيطة — قياس زمن ذهاب موجة وإيابها — قلبت موازين حرب.</span>
+  </div>
+
+  <!-- ======== المحاكاة: الرادار والاستشعار عن بُعد ======== -->
+  <div class="sim">
+    <h3>🛰️ استكشف التطبيقين</h3>
+    <p class="sim-sub">اختر تطبيقاً لترى مخططه المبسّط وتفسيره الفيزيائي.</p>
+    <div class="sim-scroll"><canvas id="appSim" width="700" height="240"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">التطبيق:
+        <select id="appSel" style="padding:8px;border-radius:10px;border:2px solid #e9ebfa;font-family:inherit;font-weight:700">
+          <option value="radar">📡 الرادار</option>
+          <option value="remote">🛰️ الاستشعار عن بُعد</option>
+        </select></div>
+    </div>
+    <div class="readout" id="appReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">📡</span> الرادار (RADAR)</div>
+  <div class="card">
+    <p>اختصار Radio Detection And Ranging، ويعني الكشف وتحديد البُعد بوساطة الموجات الراديوية. يرسل الرادار موجات راديوية باتجاه الهدف فتنعكس عنه، ويدلّ <b>الزمن</b> الذي تستغرقه ذهاباً وإياباً على بُعده (مداه)، فضلاً عن الاتجاه الذي تعود منه على موقعه.</p>
+  </div>
+  <div class="lawbox">
+    بُعد الهدف من زمن الذهاب والإياب (رحلة كاملة بسرعة الضوء c)
+    <div class="formula">d = c × t / 2</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">أرسل رادار نبضة راديوية استغرقت 200 μs لترتدّ عن طائرة وتعود إليه. جد بُعد الطائرة عن الرادار.</div>
+    <div class="givens">المعطيات: t=200 μs=200×10⁻⁶ s (زمن الذهاب والإياب معاً) — c=3×10⁸ m/s</div>
+    <div class="step"><b>الخطوة ١:</b> المسافة الكلية المقطوعة (ذهاباً وإياباً):
+      <div class="math">d_كلي = c × t = 3×10⁸ × 200×10⁻⁶ = 60000 m = 60 km</div></div>
+    <div class="step"><b>الخطوة ٢:</b> بُعد الطائرة الفعلي (نصف المسافة الكلية، لأن الموجة قطعت المسافة مرتين):
+      <div class="math">d = d_كلي/2 = 60/2 = 30 km</div>
+      💡 هذا بالضبط سرّ الرادار: قياس زمن قصير جداً (بالميكروثانية) يكفي لحساب مسافات كبيرة، لأن سرعة الضوء هائلة.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🛰️</span> التحسّس النائي (الاستشعار عن بُعد)</div>
+  <div class="card">
+    <p>الحصول على معلومات عن سطح الأرض دون احتكاك مباشر بها، باستعمال موجات كهرومغناطيسية تلتقطها أجهزة على الطائرات أو الأقمار الصناعية. نوعان حسب مصدر الطاقة:</p>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="card" style="margin:0">
+      <b>🟢 صور نشطة</b>
+      <p style="margin-top:6px;font-size:.92rem">القمر نفسه مصدر الإشعاع — يرسل موجة ويحلّل ما يرتدّ عنها (كالرادار تماماً لكن للرصد لا الكشف الحربي).</p>
+    </div>
+    <div class="card" style="margin:0">
+      <b>🔵 صور غير نشطة</b>
+      <p style="margin-top:6px;font-size:.92rem">تعتمد على الإشعاع الصادر أو المنعكس أصلاً من الهدف نفسه (كضوء الشمس المنعكس عن الأرض)، دون أن يُصدر القمر أي موجة.</p>
+    </div>
+  </div>
+  <div class="defbox">
+    <b class="term">الاستعمالات:</b> المساحة والجيولوجيا والزراعة (رصد صحة المحاصيل عبر الأشعة تحت الحمراء المنعكسة عن النبات، والتنبؤ بالجفاف قبل أن تراه العين) والأرصاد الجوية والتطبيقات العسكرية.
+  </div>
+
+  <div class="section-title"><span class="ico">🗺️</span> خريطة الفصل كاملاً</div>
+  <div class="card">
+    <p>راجع رحلتك عبر هذا الفصل بنظرة واحدة:</p>
+    <ul style="padding-inline-start:22px;margin-top:8px;line-height:1.9">
+      <li><b>1.</b> النظرية الكهرومغناطيسية وخصائص الموجة — حقائق ماكسويل الأربع، والموجة المستعرضة E⊥B</li>
+      <li><b>2.</b> الإرسال والاستقبال — دائرة الرنين f_r=1/2π√(LC)، والهوائي ℓ=λ/2 أو λ/4، والكشف بالمجال الكهربائي أو المغناطيسي</li>
+      <li><b>3.</b> التضمين — AM (سعة) وFM (تردد) وPM (طور)</li>
+      <li><b>4.</b> مدى الموجات الراديوية وانتشارها — VLF إلى VHF، وأرضية/سماوية/فضائية</li>
+      <li><b>5.</b> التطبيقات — الرادار (d=ct/2) والاستشعار عن بُعد</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz5"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson4.html">➡ الدرس السابق</a>
+    <a class="btn" href="questions.html">أسئلة نهاية الفصل 🧮</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة الرادار والاستشعار عن بُعد (اختيار: تعيد الرسم عند التبديل فقط) ---------- */
+(function () {
+  var cv = document.getElementById("appSim"), ctx = cv.getContext("2d");
+  var appSel = document.getElementById("appSel");
+  var readout = document.getElementById("appReadout");
+
+  function draw() {
+    var app = appSel.value;
+    ctx.direction = "ltr";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.textAlign = "center";
+
+    if (app === "radar") {
+      // محطة رادار
+      ctx.strokeStyle = "#334155"; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.moveTo(120, 190); ctx.lineTo(120, 130); ctx.stroke();
+      ctx.save(); ctx.translate(120, 120); ctx.rotate(-0.3);
+      ctx.strokeStyle = "#0369a1"; ctx.lineWidth = 4;
+      ctx.beginPath(); ctx.ellipse(0, 0, 26, 10, 0, 0, Math.PI * 2); ctx.stroke();
+      ctx.restore();
+      ctx.fillStyle = "#334155"; ctx.font = "bold 12px Cairo"; ctx.fillText("محطة الرادار", 120, 210);
+
+      // نبضة ذاهبة
+      ctx.strokeStyle = "#ea580c"; ctx.lineWidth = 2.4; ctx.setLineDash([8, 5]);
+      ctx.beginPath(); ctx.moveTo(150, 115); ctx.lineTo(430, 90); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = "#ea580c"; ctx.font = "11px Cairo"; ctx.fillText("موجة ذاهبة", 290, 90);
+
+      // طائرة هدف
+      ctx.font = "28px Cairo"; ctx.fillText("✈️", 460, 95);
+
+      // نبضة عائدة
+      ctx.strokeStyle = "#16a34a"; ctx.lineWidth = 2.4; ctx.setLineDash([8, 5]);
+      ctx.beginPath(); ctx.moveTo(430, 105); ctx.lineTo(160, 130); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = "#16a34a"; ctx.font = "11px Cairo"; ctx.fillText("موجة مرتدّة", 290, 148);
+
+      ctx.fillStyle = "#334155"; ctx.font = "12px Cairo";
+      ctx.fillText("زمن الذهاب والإياب t يحدّد البُعد d=ct/2، واتجاه العودة يحدّد الموقع", 350, 210);
+      readout.innerHTML = "📡 <b>الرادار:</b> يرسل موجة راديوية فترتدّ عن الهدف، وزمن رحلتها الكاملة يكشف بُعده d=ct/2.";
+    } else {
+      // قمر صناعي يرصد الأرض
+      ctx.font = "26px Cairo"; ctx.fillText("🛰️", 350, 55);
+      ctx.strokeStyle = "#0369a1"; ctx.lineWidth = 2; ctx.setLineDash([6, 4]);
+      ctx.beginPath(); ctx.moveTo(335, 70); ctx.lineTo(230, 170); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(365, 70); ctx.lineTo(470, 170); ctx.stroke();
+      ctx.setLineDash([]);
+
+      ctx.fillStyle = "#a7d8b8";
+      ctx.beginPath(); ctx.ellipse(350, 195, 220, 26, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#166534"; ctx.font = "bold 12px Cairo"; ctx.fillText("سطح الأرض", 350, 200);
+
+      ctx.fillStyle = "#334155"; ctx.font = "12px Cairo";
+      ctx.fillText("يلتقط القمر موجات صادرة أو منعكسة من السطح لرصده دون احتكاك مباشر", 350, 230);
+      readout.innerHTML = "🛰️ <b>الاستشعار عن بُعد:</b> رصد سطح الأرض بموجات كهرومغناطيسية من الفضاء — نشط (القمر يُصدر الموجة) أو غير نشط (يعتمد على إشعاع الهدف نفسه).";
+    }
+  }
+
+  appSel.addEventListener("change", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz5", [
+  { q: "ماذا يعني اختصار RADAR؟",
+    opts: ["Radio Detection And Ranging — الكشف وتحديد البُعد بوساطة الموجات الراديوية", "Rapid Data Transfer — نقل بيانات سريع", "Radio Amplitude Distance Reading", "لا يحمل الاختصار أي معنى فيزيائي محدد"], a: 0,
+    why: "RADAR اختصار Radio Detection And Ranging: الكشف وتحديد البُعد بوساطة الموجات الراديوية." },
+  { q: "كيف يحدّد الرادار بُعد الهدف عملياً؟",
+    opts: ["من الزمن الذي تستغرقه الموجة ذهاباً وإياباً بين الرادار والهدف (d=ct/2)", "من لون الموجة المرتدّة فقط", "من درجة حرارة الهدف المرصود", "من وزن الهدف المقاس مباشرة"], a: 0,
+    why: "يرسل الرادار موجة فترتدّ عن الهدف، والزمن الكلي للرحلة ذهاباً وإياباً يحدد البُعد بالعلاقة d=ct/2." },
+  { q: "رادار أرسل نبضة استغرقت 400 μs لترتدّ عن سفينة وتعود. جد بُعد السفينة (c=3×10⁸ m/s).",
+    opts: ["60 km", "120 km", "30 km", "240 km"], a: 0,
+    why: "d = ct/2 = (3×10⁸ × 400×10⁻⁶)/2 = 120000/2 = 60000 m = 60 km." },
+  { q: "ما الفرق بين الصور النشطة وغير النشطة بالاستشعار عن بُعد؟",
+    opts: ["النشطة: القمر نفسه مصدر الإشعاع (يرسل الموجة ويحلّل ارتدادها)؛ غير النشطة: تعتمد على إشعاع صادر أو منعكس من الهدف نفسه دون أن يُصدر القمر شيئاً", "لا فرق حقيقي بين النوعين إطلاقاً", "النشطة تُستعمل بالليل فقط، وغير النشطة بالنهار فقط", "النشطة تحتاج طائرة، وغير النشطة تحتاج قمراً صناعياً حصراً"], a: 0,
+    why: "بالصور النشطة يُصدر القمر موجته الخاصة ويحلّل الارتداد (كالرادار)؛ بغير النشطة يعتمد فقط على إشعاع الهدف نفسه (كضوء الشمس المنعكس)." },
+  { q: "لماذا كان الرادار حاسماً بالإنذار المبكر عن الطائرات المعادية بالحرب العالمية الثانية؟",
+    opts: ["لأنه يكشف بُعد واتجاه الطائرات القادمة بموجات راديوية قبل أن تُرى بالعين المجرّدة", "لأنه كان يُسقط الطائرات مباشرة بالموجات الراديوية", "لأنه يصنع سحابة تُخفي القوات الصديقة عن العدو", "لا علاقة حقيقية للرادار بهذا الحدث التاريخي"], a: 0,
+    why: "يكشف الرادار بُعد الهدف واتجاهه من زمن ارتداد الموجة، فيُنذر بقدوم الطائرات المعادية قبل رؤيتها بالعين — وهذا بالضبط ما منح بريطانيا وقتاً حاسماً للاستعداد." },
+  { q: "أي المجالات التالية تستفيد عملياً من الاستشعار عن بُعد؟",
+    opts: ["المساحة، الجيولوجيا، الزراعة (رصد صحة المحاصيل)، الأرصاد الجوية، والتطبيقات العسكرية", "الطب النفسي فقط دون غيره", "صناعة النسيج المحلية فقط", "لا يوجد له أي استعمال عملي حقيقي حتى الآن"], a: 0,
+    why: "الاستشعار عن بُعد يُستعمل بالمساحة والجيولوجيا والزراعة (رصد صحة المحاصيل عبر الأشعة تحت الحمراء) والأرصاد الجوية والتطبيقات العسكرية." }
+], { onDone: function (stars) { Phy.setLesson("g6c4", "5", { stars: stars }); } });
+</script>
+</body>
+</html>
