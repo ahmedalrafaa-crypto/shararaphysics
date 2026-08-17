@@ -45,6 +45,59 @@
     </div>
   </div>
 
+  <section class="courses-promo" aria-labelledby="courses-promo-title">
+    <svg class="courses-promo-bg" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <defs>
+        <pattern id="pcbTrace" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M0 12 H10 V28 H24 V16 H40 M24 28 V40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="12" r="1.6" fill="currentColor"/>
+          <circle cx="10" cy="28" r="1.6" fill="currentColor"/>
+          <circle cx="24" cy="28" r="1.6" fill="currentColor"/>
+          <circle cx="24" cy="16" r="1.6" fill="currentColor"/>
+        </pattern>
+      </defs>
+      <rect width="200" height="200" fill="url(#pcbTrace)"/>
+    </svg>
+    <div class="courses-promo-inner">
+      <span class="courses-promo-badge">جديد</span>
+      <h3 id="courses-promo-title">دورات الأستاذ أحمد رافع الإلكترونية</h3>
+      <p class="courses-promo-sub">شرح مسجّل، خطوة بخطوة، تكدر ترجعله وقت ما تريد</p>
+      <div class="courses-promo-pills">
+        <span class="courses-promo-pill">شرح مسجّل</span>
+        <span class="courses-promo-pill">أسئلة وزارية محلولة</span>
+        <span class="courses-promo-pill">متابعة مع الأستاذ</span>
+      </div>
+      <button type="button" class="btn ghost courses-promo-cta" id="coursesPromoOpenBtn" aria-haspopup="dialog" aria-controls="coursesPromoDialog">ابدأ الدورة الآن</button>
+    </div>
+  </section>
+
+  <dialog class="courses-promo-dialog" id="coursesPromoDialog" aria-labelledby="courses-promo-dialog-title">
+    <form class="courses-promo-form" id="coursesPromoForm" novalidate>
+      <div class="courses-promo-dialog-head">
+        <h3 id="courses-promo-dialog-title">سجّل بياناتك</h3>
+        <button type="button" class="courses-promo-close" id="coursesPromoCloseBtn" aria-label="إغلاق">✕</button>
+      </div>
+      <div class="courses-promo-field">
+        <label for="cp-name">الاسم الثلاثي</label>
+        <input type="text" id="cp-name" name="name" required autocomplete="name" placeholder="مثال: أحمد علي حسين">
+      </div>
+      <div class="courses-promo-field">
+        <label for="cp-phone">رقم الموبايل</label>
+        <input type="tel" id="cp-phone" name="phone" required autocomplete="tel" placeholder="07xxxxxxxxx">
+      </div>
+      <div class="courses-promo-field">
+        <label for="cp-grade">الصف الدراسي</label>
+        <select id="cp-grade" name="grade" required>
+          <option value="" disabled selected>اختر صفك</option>
+          <option value="الثالث متوسط">الثالث متوسط</option>
+          <option value="السادس الإعدادي">السادس الإعدادي</option>
+        </select>
+      </div>
+      <p class="courses-promo-error" id="cp-error" role="alert" hidden></p>
+      <button type="submit" class="btn ghost courses-promo-submit">تواصل عبر واتساب</button>
+    </form>
+  </dialog>
+
   <div class="gradetabs" role="tablist" aria-label="اختر المرحلة الدراسية">
     <button class="gradetab active" type="button" role="tab" aria-selected="true" aria-controls="panel-g3" data-grade="g3">الثالث المتوسط</button>
     <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g6" data-grade="g6">السادس الإعدادي <span class="tab-badge">تجريبي</span></button>
@@ -185,12 +238,17 @@
       <a class="chcard tile" href="chapters/g6c2/index.html" style="--cc:#b91c1c;--cc-soft:#fbe3e3">
         <span class="em chico tool-icon">🧲</span>
         <h3>الفصل الثاني<br>الحث الكهرومغناطيسي</h3>
-        <span class="chkicker">٩ دروس</span>
+        <span class="chkicker">١٠ دروس</span>
       </a>
       <a class="chcard tile" href="chapters/g6c3/index.html" style="--cc:#a21caf;--cc-soft:#f8e3f9">
         <span class="em chico tool-icon">🌊</span>
         <h3>الفصل الثالث<br>التيار المتناوب</h3>
         <span class="chkicker">٨ دروس</span>
+      </a>
+      <a class="chcard tile" href="chapters/g6c4/index.html" style="--cc:#0369a1;--cc-soft:#dcedf9">
+        <span class="em chico tool-icon">📡</span>
+        <h3>الفصل الرابع<br>الموجات الكهرومغناطيسية</h3>
+        <span class="chkicker">٥ دروس</span>
       </a>
       <a class="chcard tile" href="chapters/g6c6/index.html" style="--cc:#0f766e;--cc-soft:#e0f2ee">
         <span class="em chico tool-icon">🔬</span>
@@ -204,7 +262,7 @@
   <div class="section-title"><span class="ico">📖</span> عن المنصة</div>
   <p>منصة فيزياء الثالث متوسط هي موقع تفاعلي أعدّه الأستاذ أحمد رافع لطلاب الصف الثالث متوسط في العراق، مبني بالكامل على المنهج الوزاري 2027. يشرح الموقع كل فصول الفيزياء من الكهربائية الساكنة والمغناطيس والتيار الكهربائي، إلى البطارية والطاقة والقدرة الكهربائية والمحولة الكهربائية وتكنولوجيا مصادر الطاقة، بأسلوب سهل وخطوة بخطوة مع أمثلة محلولة ومحاكاات تفاعلية واختبارات بنجوم وجوائز بدل الشرح التقليدي الممل.</p>
   <p>يضم الموقع أيضاً أداة <b>التوقعات الوزارية</b>، المبنية على تحليل إحصائي لأكثر من 600 سؤال وزاري من دورات سابقة، تساعدك تتوقع أسئلة الامتحان وتتدرب عليها بحلول مفصّلة. وأداة <b>تحليل الأداء</b> اللي تجمع نتائجك من كل الاختبارات، تشخّص سبب كل خطأ، وترسم لك خطة مذاكرة واضحة بدل ما تضيع وقتك بالعشوائية.</p>
-  <p>كما يوفر الموقع محتوى تجريبياً لطلاب <b>السادس الإعدادي</b> الفرع العلمي، يغطي فصول المتسعات والحث الكهرومغناطيسي والتيار المتناوب والفيزياء الحديثة بنفس الأسلوب التفاعلي. الهدف من المنصة هو مساعدتك تفهم الفيزياء فعلاً، مو تحفظها بس، وتوصل لأعلى درجة بالامتحان الوزاري.</p>
+  <p>كما يوفر الموقع محتوى تجريبياً لطلاب <b>السادس الإعدادي</b> الفرع العلمي، يغطي فصول المتسعات والحث الكهرومغناطيسي والتيار المتناوب والموجات الكهرومغناطيسية والفيزياء الحديثة بنفس الأسلوب التفاعلي. الهدف من المنصة هو مساعدتك تفهم الفيزياء فعلاً، مو تحفظها بس، وتوصل لأعلى درجة بالامتحان الوزاري.</p>
 
   <footer class="site">إعداد الأستاذ أحمد رافع · 📞 07800155157</footer>
 </div>
@@ -294,6 +352,60 @@
   var saved = null;
   try { saved = localStorage.getItem("sharara_grade"); } catch (e) {}
   if (saved) select(saved);
+})();
+</script>
+<script>
+/* نموذج التسجيل بالدورات الإلكترونية: يبني رسالة واتساب من بيانات الطالب */
+(function () {
+  var WHATSAPP_NUMBER = "9647800155157";
+  var dialog = document.getElementById("coursesPromoDialog");
+  var openBtn = document.getElementById("coursesPromoOpenBtn");
+  var closeBtn = document.getElementById("coursesPromoCloseBtn");
+  var form = document.getElementById("coursesPromoForm");
+  if (!dialog || !openBtn || !form) return;
+  var errorEl = document.getElementById("cp-error");
+  var phonePattern = /^07[0-9]{9}$/;
+
+  function openDialog() {
+    if (typeof dialog.showModal === "function") dialog.showModal();
+    else dialog.setAttribute("open", "");
+  }
+  function closeDialog() {
+    if (typeof dialog.close === "function") dialog.close();
+    else dialog.removeAttribute("open");
+  }
+  openBtn.addEventListener("click", openDialog);
+  closeBtn.addEventListener("click", closeDialog);
+  dialog.addEventListener("click", function (e) {
+    if (e.target === dialog) closeDialog(); // نقر على الخلفية خارج البطاقة
+  });
+
+  function showError(msg) {
+    errorEl.textContent = msg;
+    errorEl.hidden = false;
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("cp-name").value.trim();
+    var phone = document.getElementById("cp-phone").value.trim();
+    var grade = document.getElementById("cp-grade").value;
+    if (!name || !phone || !grade) {
+      showError("لطفاً عبّي كل الحقول قبل الإرسال.");
+      return;
+    }
+    if (name.split(/\s+/).length < 3) {
+      showError("لطفاً اكتب الاسم الثلاثي كامل (مثال: أحمد علي حسين).");
+      return;
+    }
+    if (!phonePattern.test(phone)) {
+      showError("رقم الموبايل لازم يكون 11 رقم ويبدأ بـ 07.");
+      return;
+    }
+    errorEl.hidden = true;
+    var msg = "مرحباً، أريد أسجل بالدورة الإلكترونية.\nالاسم: " + name + "\nرقم الموبايل: " + phone + "\nالصف: " + grade;
+    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+    closeDialog();
+  });
 })();
 </script>
 </body>

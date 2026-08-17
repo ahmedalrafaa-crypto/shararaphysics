@@ -816,6 +816,23 @@ footer.site::before {
 .theme-g6c6 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(15, 118, 110, .35); }
 .theme-g6c6 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(15, 118, 110, .45); }
 
+/* السادس الإعدادي — الفصل الرابع: الموجات الكهرومغناطيسية — أزرق سماوي (الأثير/الفضاء) وبرتقالي (إشارة الهوائي) */
+.theme-g6c4 {
+  --violet: #0369a1;
+  --violet-deep: #075985;
+  --blue: #ea580c;
+  --shadow: 0 10px 30px rgba(3, 105, 161, 0.10);
+  --shadow-lift: 0 16px 40px rgba(3, 105, 161, 0.18);
+}
+.theme-g6c4::before { background: radial-gradient(circle, #0369a1, transparent 70%); }
+.theme-g6c4::after { background: radial-gradient(circle, #ea580c, transparent 70%); }
+.theme-g6c4 .hero::before { content: "📡"; }
+.theme-g6c4 .path::before { border-inline-start-color: #cbe6f7; }
+.theme-g6c4 .node:not(.done):not(.exam):not(.qna) .dot { border-color: #cbe6f7; }
+.theme-g6c4 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(3, 105, 161, 0.30); }
+.theme-g6c4 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(3, 105, 161, .35); }
+.theme-g6c4 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(3, 105, 161, .45); }
+
 /* عقدة درس لم يُنشر بعد — ضمن خريطة الفصل */
 .node.locked { opacity: .55; filter: grayscale(.35); pointer-events: none; }
 .node.locked .info::after {
@@ -887,3 +904,90 @@ footer.site::before {
 }
 .bigout .hl { color: var(--violet-deep); }
 .bigout small { display: block; direction: rtl; font-size: .8rem; font-weight: 700; color: var(--ink-soft); margin-top: 4px; }
+
+/* ====== قسم الدورات الإلكترونية (الواجهة الرئيسية) ====== */
+.courses-promo {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--ink) 0%, var(--violet-deep) 100%);
+  box-shadow: 0 0 0 1px rgba(77, 150, 255, .22), 0 18px 44px rgba(77, 150, 255, .20);
+  padding: 34px 26px;
+  margin-bottom: 30px;
+  transition: transform .2s, box-shadow .2s;
+}
+.courses-promo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1px rgba(77, 150, 255, .38), 0 22px 54px rgba(77, 150, 255, .34);
+}
+.courses-promo-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  color: var(--blue); opacity: .14; z-index: 0; pointer-events: none;
+}
+.courses-promo-inner { position: relative; z-index: 1; text-align: center; }
+.courses-promo-badge {
+  display: inline-block; background: #1d6fbf; color: #fff;
+  font-size: .74rem; font-weight: 800; padding: 3px 14px;
+  border-radius: 999px; margin-bottom: 16px;
+}
+.courses-promo-inner h3 { color: #fff; font-size: 1.3rem; font-weight: 900; margin-bottom: 8px; }
+.courses-promo-sub { color: rgba(255, 255, 255, .9); font-weight: 600; font-size: .95rem; margin-bottom: 18px; }
+.courses-promo-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 6px; }
+.courses-promo-pill {
+  background: rgba(255, 255, 255, .14); border: 1px solid rgba(255, 255, 255, .28);
+  color: #fff; font-size: .8rem; font-weight: 700;
+  padding: 6px 15px; border-radius: 999px;
+}
+.courses-promo-cta { display: block; width: 100%; margin-top: 20px; }
+@media (min-width: 621px) {
+  .courses-promo-cta { display: inline-block; width: auto; min-width: 240px; }
+}
+@keyframes coursesPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, .35); }
+  50% { box-shadow: 0 0 0 7px rgba(255, 255, 255, 0); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .courses-promo-badge { animation: coursesPulse 2.8s ease-in-out infinite; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .courses-promo, .courses-promo *, .courses-promo-dialog, .courses-promo-dialog * {
+    animation: none !important; transition: none !important;
+  }
+}
+
+/* ---------- نافذة تسجيل بيانات الدورة (تُفتح من زر "ابدأ الدورة الآن") ---------- */
+.courses-promo-dialog {
+  position: fixed; inset: 0; margin: auto;
+  border: none; border-radius: var(--radius); padding: 0; background: transparent;
+  width: min(420px, calc(100vw - 40px)); max-height: calc(100vh - 40px); overflow: visible;
+}
+.courses-promo-dialog::backdrop { background: rgba(15, 15, 30, .6); }
+.courses-promo-dialog-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
+.courses-promo-dialog-head h3 { color: #fff; font-size: 1.15rem; font-weight: 900; margin: 0; }
+.courses-promo-close {
+  flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; border: none;
+  background: rgba(255, 255, 255, .14); color: #fff; font-size: 1rem; line-height: 1;
+  cursor: pointer; display: grid; place-items: center;
+}
+.courses-promo-close:hover { background: rgba(255, 255, 255, .26); }
+.courses-promo-form {
+  display: grid; gap: 14px; text-align: start;
+  background: linear-gradient(135deg, var(--ink) 0%, var(--violet-deep) 100%);
+  border-radius: var(--radius); box-shadow: var(--shadow-lift);
+  padding: 26px 22px; max-height: 85vh; overflow-y: auto;
+}
+.courses-promo-field label {
+  display: block; color: rgba(255, 255, 255, .9);
+  font-weight: 800; font-size: .85rem; margin-bottom: 6px;
+}
+.courses-promo-field input, .courses-promo-field select {
+  width: 100%; box-sizing: border-box; font-family: inherit; font-size: 1rem; font-weight: 700;
+  padding: 12px 14px; border-radius: 12px; border: 2px solid rgba(255, 255, 255, .25);
+  background: rgba(255, 255, 255, .95); color: var(--ink);
+}
+.courses-promo-field input:focus, .courses-promo-field select:focus { outline: none; border-color: #fff; }
+.courses-promo-error {
+  color: #ffd7d7; background: rgba(220, 38, 38, .25); border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 10px; padding: 8px 12px; font-size: .85rem; font-weight: 700; margin: 0;
+}
+.courses-promo-submit { width: 100%; }
