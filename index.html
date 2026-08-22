@@ -35,13 +35,18 @@
     <a class="btn small" href="subscribe.html">💳 الاشتراك</a>
   </div>
 
+  <div class="gradetabs" role="tablist" aria-label="اختر المرحلة الدراسية">
+    <button class="gradetab active" type="button" role="tab" aria-selected="true" aria-controls="panel-g3" data-grade="g3">الثالث المتوسط</button>
+    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g6" data-grade="g6">السادس الإعدادي <span class="tab-badge">تجريبي</span></button>
+  </div>
+
   <div class="hero with-photo">
     <img class="hero-photo" src="assets/teacher.jpg" alt="الأستاذ أحمد رافع" onerror="this.style.display='none'">
     <div>
-      <span class="chip">📚 الصف الثالث المتوسط — المنهج الوزاري 2027</span>
+      <span class="chip" id="hero-chip">📚 الصف الثالث المتوسط — المنهج الوزاري 2027</span>
       <h1>أهلاً بك في رحلة الفيزياء! 🚀</h1>
       <p>ملزمة الأستاذ <b>أحمد رافع</b> صارت موقعاً تفاعلياً: تجارب ممتعة، أمثلة محلولة خطوة بخطوة، واختبارات بنجوم وجوائز.</p>
-      <a class="btn ghost hero-cta" href="chapters/ch0/index.html">ابدأ رحلتك الآن ⚡</a>
+      <a class="btn ghost hero-cta" id="hero-cta" href="chapters/ch0/index.html">ابدأ رحلتك الآن ⚡</a>
     </div>
   </div>
 
@@ -97,11 +102,6 @@
       <button type="submit" class="btn ghost courses-promo-submit">تواصل عبر واتساب</button>
     </form>
   </dialog>
-
-  <div class="gradetabs" role="tablist" aria-label="اختر المرحلة الدراسية">
-    <button class="gradetab active" type="button" role="tab" aria-selected="true" aria-controls="panel-g3" data-grade="g3">الثالث المتوسط</button>
-    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g6" data-grade="g6">السادس الإعدادي <span class="tab-badge">تجريبي</span></button>
-  </div>
 
   <div class="gradepanel" id="panel-g3" role="tabpanel">
 
@@ -336,6 +336,12 @@
 (function () {
   var tabs = document.querySelectorAll(".gradetab");
   var panels = { g3: document.getElementById("panel-g3"), g6: document.getElementById("panel-g6") };
+  var heroChip = document.getElementById("hero-chip");
+  var heroCta = document.getElementById("hero-cta");
+  var heroContent = {
+    g3: { chip: "📚 الصف الثالث المتوسط — المنهج الوزاري 2027", href: "chapters/ch0/index.html" },
+    g6: { chip: "📚 الصف السادس الإعدادي — الفرع العلمي", href: "chapters/g6c1/index.html" }
+  };
   function select(grade) {
     if (!panels[grade]) grade = "g3";
     tabs.forEach(function (t) {
@@ -344,6 +350,8 @@
       t.setAttribute("aria-selected", on ? "true" : "false");
     });
     for (var g in panels) if (panels[g]) panels[g].hidden = (g !== grade);
+    if (heroChip) heroChip.textContent = heroContent[grade].chip;
+    if (heroCta) heroCta.href = heroContent[grade].href;
     try { localStorage.setItem("sharara_grade", grade); } catch (e) {}
   }
   tabs.forEach(function (t) {
