@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 6: مدخل إلى مفهوم ميكانيك الكم ودالة الموجة — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c6">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السادس</a> / الدرس 6</span>
+  </div>
+
+  <div class="hero">
+    <h1>🎲 الدرس 6: مدخل إلى مفهوم ميكانيك الكم ودالة الموجة</h1>
+    <p>إذا كان الإلكترون موجة (الدرس السابق)، فأين "موضعه" بالضبط؟ الموجة بطبيعتها ممتدة بالفراغ لا نقطة محددة. الجواب يتطلب تخلّياً عن الحتمية الكلاسيكية بالكامل، والانتقال إلى وصفٍ احتمالي جديد كلياً للطبيعة.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🎲</span>
+    <span>بميكانيك نيوتن، إن عرفتَ موضع وسرعة كرة الآن، تقدر تتنبأ بموضعها بأي لحظة مستقبلية بدقة تامة. لكن بعالم الإلكترون، لا يوجد "موضع محدد" أصلاً قبل القياس — فقط احتمالات. هذا ليس قصوراً بمعرفتنا، بل خاصية أساسية بالطبيعة نفسها عند هذا المقياس.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🎲</span> دالة الموجة وميكانيك الكم: عالمٌ احتمالي</div>
+  <div class="card">
+    <p>بما أن الجسيمات المجهرية لها طبيعة موجية، لا يمكن وصف حركتها وصفاً حتمياً دقيقاً (موضع وسرعة محدّدين تماماً كما بميكانيك نيوتن)، بل وصفاً <b>احتمالياً</b>. يصف <b>ميكانيك الكم</b> حالة الجسيم بـ<b>دالة الموجة ψ</b> (بسي) — دالة رياضية لا تمثّل كمّية فيزيائية مباشرة قابلة للقياس، لكن مربّع مقدارها له معنى فيزيائي مهم جداً.</p>
+  </div>
+  <div class="notebox">
+    <b>⭐ القاعدة الذهبية: تفسير بورن الاحتمالي (1927)</b>
+    <p style="margin-top:6px"><b>كثافة الاحتمال</b> <span class="formula-inline">|ψ|²</span> لجسيم بموضع وزمان معيّنين تتناسب طردياً مع <b>احتمالية العثور على الجسيم</b> بتلك المنطقة من الفراغ عند تلك اللحظة. حيث تكون |ψ|² كبيرة، يكبر احتمال وجود الجسيم هناك؛ وحيث تكون صغيرة (أو صفراً) يقلّ احتمال وجوده (أو ينعدم).</p>
+  </div>
+  <div class="defbox">
+    <b class="term">مثال توضيحي — ذرة الهيدروجين:</b> النموذج الكلاسيكي (بور) يصوّر الإلكترون يدور بمدار دائري نصف قطره ثابت تماماً (0.0529nm). أما الوصف الكمّي الحديث فيستبدل هذا المدار الحاد بـ<b>«سحابة احتمال»</b>: منطقة ضبابية حول النواة تمثّل توزيع |ψ|²، كثافتها أعلى ما يمكن قرب نصف قطر بور الكلاسيكي — لكن للإلكترون احتمال (ضئيل) للتواجد بمناطق أخرى أيضاً.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">سؤال وزاري</span> علامَ تدل قيمة كبيرة لـ|ψ|² لجسيم بمكان وزمان معيّنين؟ <span class="wz">الدور الأول 2019</span></summary>
+    <div class="ans">تدلّ القيمة الكبيرة لـ|ψ|² على أن احتمالية العثور على الجسيم في ذلك المكان وتلك اللحظة كبيرة (مرتفعة) — أي أن كثافة الاحتمال تتناسب طردياً مع مقدار |ψ|².</div>
+  </details>
+
+  <!-- ======== مخطط: بور مقابل الوصف الكمي ======== -->
+  <div class="sim">
+    <h3>⚛️ مقارنة: مدار بور مقابل سحابة الاحتمال</h3>
+    <p class="sim-sub">النموذج الكلاسيكي (يساراً) يصف موضع الإلكترون بمدار حاد محدد؛ الوصف الكمي الحديث (يميناً) يستبدله بسحابة احتمال |ψ|² ضبابية، أعلى كثافة قرب نصف قطر بور نفسه.</p>
+    <div class="sim-scroll"><canvas id="cloudSim" width="700" height="230"></canvas></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz6"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson5.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson7.html">الدرس التالي: مبدأ اللادقة لهايزنبرغ 🌫️</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- مخطط ثابت: بور مقابل سحابة الاحتمال ---------- */
+(function () {
+  var cv = document.getElementById("cloudSim"), ctx = cv.getContext("2d");
+  ctx.direction = "ltr";
+
+  function nucleus(x, y) {
+    ctx.beginPath(); ctx.arc(x, y, 6, 0, Math.PI * 2); ctx.fillStyle = "#dc2626"; ctx.fill();
+  }
+
+  // يسار: نموذج بور
+  var cx1 = 175, cy1 = 120, r1 = 75;
+  ctx.strokeStyle = "#0369a1"; ctx.lineWidth = 2; ctx.setLineDash([5, 4]);
+  ctx.beginPath(); ctx.arc(cx1, cy1, r1, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]);
+  nucleus(cx1, cy1);
+  var ang = -0.6;
+  var ex1 = cx1 + r1 * Math.cos(ang), ey1 = cy1 + r1 * Math.sin(ang);
+  ctx.beginPath(); ctx.arc(ex1, ey1, 5, 0, Math.PI * 2); ctx.fillStyle = "#0ea5e9"; ctx.fill();
+  ctx.fillStyle = "#334155"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+  ctx.fillText("نموذج بور (كلاسيكي)", cx1, 25);
+  ctx.font = "11px Cairo";
+  ctx.fillText("مدار دائري بنصف قطر ثابت تماماً", cx1, 220);
+
+  // يمين: سحابة الاحتمال
+  var cx2 = 500, cy2 = 120, r2 = 75;
+  for (var i = 0; i < 260; i++) {
+    var rr = Math.abs(gaussianRand()) * r2 * 0.55 + r2 * 0.35;
+    var th = Math.random() * Math.PI * 2;
+    var px = cx2 + rr * Math.cos(th), py = cy2 + rr * Math.sin(th);
+    var d = Math.abs(rr - r2);
+    var alpha = Math.max(0.08, 1 - d / (r2 * 0.7));
+    ctx.beginPath(); ctx.arc(px, py, 2, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(124,58,237," + alpha.toFixed(2) + ")"; ctx.fill();
+  }
+  nucleus(cx2, cy2);
+  ctx.fillStyle = "#334155"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+  ctx.fillText("الوصف الكمّي (سحابة |ψ|²)", cx2, 25);
+  ctx.font = "11px Cairo";
+  ctx.fillText("احتمال أعلى قرب نصف قطر بور، لا حدّ قاطع", cx2, 220);
+
+  function gaussianRand() {
+    var u = 0, v = 0;
+    while (u === 0) u = Math.random();
+    while (v === 0) v = Math.random();
+    return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+  }
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz6", [
+  { q: "بماذا يصف ميكانيك الكم حالة الجسيم المجهري (كالإلكترون)؟",
+    opts: ["بدالة الموجة ψ، وهي دالة رياضية تصف حالته احتمالياً لا حتمياً", "بموضع وسرعة محددين تماماً بأي لحظة كما بميكانيك نيوتن", "بشحنته الكهربائية فقط دون أي وصف آخر", "لا يوجد أي وصف رياضي ممكن لحالة الجسيم المجهري"], a: 0,
+    why: "بما أن الجسيمات المجهرية موجية الطبيعة، تُوصف حالتها بدالة الموجة ψ وصفاً احتمالياً، لا حتمياً دقيقاً كالميكانيك الكلاسيكي." },
+  { q: "دالة الموجة ψ لجسيم، ماذا يمثّل مربّع مقدارها |ψ|² عند نقطة وزمان معيّنين (تفسير بورن)؟",
+    opts: ["كثافة احتمال العثور على الجسيم في تلك المنطقة وتلك اللحظة", "الطاقة الحركية للجسيم مباشرة", "زخم الجسيم مباشرة", "شحنة الجسيم الكهربائية"], a: 0,
+    why: "وفق تفسير بورن، |ψ|² يمثّل كثافة الاحتمال: كلما كبرت قيمتها بمنطقة ما، كبر احتمال العثور على الجسيم هناك." },
+  { q: "بالوصف الكمّي الحديث لذرة الهيدروجين (بعكس نموذج بور الكلاسيكي)، كيف يوصف موضع الإلكترون؟",
+    opts: ["بسحابة احتمال |ψ|² حول النواة، لا بمدار دائري محدد الشكل", "بمدار دائري ثابت نصف قطره محدد بدقة تامة دائماً", "بنقطة ساكنة تماماً داخل النواة", "لا يوجد أي وصف علمي لموضعه إطلاقاً"], a: 0,
+    why: "الوصف الكمي يستبدل مدار بور الحاد بسحابة احتمال ضبابية |ψ|²، أعلى كثافة قرب نصف قطر بور لكن مع احتمال (ضئيل) بمناطق أخرى." },
+  { q: "ما الفرق الجوهري بين الوصف الكلاسيكي (نيوتن) والوصف الكمّي لحركة جسيم؟",
+    opts: ["الكلاسيكي حتمي (موضع وسرعة محددان تماماً)، بينما الكمّي احتمالي (يصف فقط احتمالية وجود الجسيم بمنطقة ما)", "لا فرق جوهري بينهما، فكلاهما حتمي تماماً بنفس الدرجة", "الكمّي حتمي والكلاسيكي احتمالي — عكس الترتيب المعروف", "الفرق يقتصر على وحدات القياس المستعملة فقط لا أكثر"], a: 0,
+    why: "الميكانيك الكلاسيكي يصف الحركة وصفاً حتمياً دقيقاً؛ بينما ميكانيك الكم يصفها احتمالياً عبر دالة الموجة ψ وكثافة الاحتمال |ψ|²، انعكاساً للطبيعة الموجية للجسيمات المجهرية." }
+], { onDone: function (stars) { Phy.setLesson("g6c6", "6", { stars: stars }); } });
+</script>
+</body>
+</html>

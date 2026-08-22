@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>البحث في الدروس — فيزياء أ. أحمد رافع</title>
+<meta name="description" content="ابحث بكل دروس فيزياء الثالث متوسط والسادس الإعدادي دفعة وحدة: المفاهيم والقوانين والملاحظات والجداول والأسئلة، مع تمييز المحتوى الوزاري.">
+<link rel="canonical" href="https://shararaphysics.netlify.app/search/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../assets/logo-ar.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/search.css">
+</head>
+<body>
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">· <a href="../index.html">الرئيسية</a> · البحث</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔍 البحث في الدروس</h1>
+    <p>دوّر بكل دروس الثالث متوسط والسادس الإعدادي دفعة وحدة — مفاهيم وقوانين وملاحظات وجداول وأسئلة — واضغط أي نتيجة تودي مباشرة لدرسها.</p>
+  </div>
+
+  <div class="searchbar">
+    <input type="search" id="searchInput" placeholder="اكتب أي كلمة... مثلاً: قانون أوم" autocomplete="off">
+  </div>
+  <p id="searchCount"></p>
+  <div id="searchResults"></div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../js/lessons-data.js"></script>
+<script src="../js/lessons-data-g6.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/access-control.js"></script>
+</body>
+</html>

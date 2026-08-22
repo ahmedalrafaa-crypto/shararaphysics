@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 10: تحويلات لورنتز — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c6">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السادس</a> / الدرس 10</span>
+  </div>
+
+  <div class="hero">
+    <h1>🌀 الدرس 10: تحويلات لورنتز</h1>
+    <p>إذا كانت سرعة الضوء ثابتة لكل مراقب مهما تحرّك (الدرس السابق)، فكيف نربط رياضياً موضع وزمن حدثٍ ما كما يقيسهما مراقبان مختلفان يتحرك أحدهما بالنسبة للآخر؟ الجواب: معادلات جديدة كلياً حلّت محلّ حسابات نيوتن الكلاسيكية.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🌀</span>
+    <span>تحويلات غاليليو الكلاسيكية بسيطة وبديهية: لو تحركتَ بسرعة v بالنسبة لي، فإن موقعك وزمنك يُحسبان بجمع أو طرح بسيط. لكنها تفترض ضمنياً أن الزمن مطلق ثابت للجميع — وهذا بالضبط ما تناقضه فرضية آينشتاين الثانية. الحل: معادلات جديدة تتضمّن مقداراً واحداً محورياً يظهر بكل حساب نسبي تقريباً.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🌀</span> تحويلات لورنتز وعامل لورنتز</div>
+  <div class="card">
+    <p><b>تحويلات لورنتز</b> معادلات رياضية تربط إحداثيات الحدث (الموقع والزمن) بين إطارين مرجعيين عطاليين يتحرك أحدهما بالنسبة للآخر بسرعة نسبية v — وهي المعادلات التي حلّت محلّ تحويلات غاليليو الكلاسيكية لتتوافق مع فرضيتَي آينشتاين. ويظهر بصميمها مقدار محوري:</p>
+  </div>
+  <div class="lawbox">
+    عامل لورنتز
+    <div class="formula">γ = 1 / √(1 − v²/c²)</div>
+  </div>
+  <div class="notebox">
+    <b>⭐ كيف يتصرف γ؟</b>
+    <p style="margin-top:6px">عند سرعات صغيرة مقارنة بسرعة الضوء (v≪c) يكون γ≈1 فلا تظهر أي تأثيرات نسبية محسوسة — عالمنا اليومي بأكمله هنا. أما عند اقتراب v من c فإن γ يتزايد بسرعة هائلة ويؤول إلى ما لا نهاية — ولهذا يستحيل على أي جسم له كتلة أن يبلغ سرعة الضوء فعلياً.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">سؤال وزاري</span> ما المقصود بتحويلات لورنتز؟ <span class="wz">التمهيدي 2022</span></summary>
+    <div class="ans">مجموعة من المعادلات الرياضية التي تربط إحداثيات الحدث (الموقع والزمن) كما يقيسها مراقب بإطار مرجعي عطالي، بإحداثيات الحدث نفسه كما يقيسها مراقب آخر بإطار عطالي يتحرك بالنسبة للأول بسرعة نسبية v — وتحلّ محلّ تحويلات غاليليو الكلاسيكية لتتوافق مع ثبات سرعة الضوء.</div>
+  </details>
+  <details class="qa">
+    <summary><span class="tag">سؤال وزاري</span> ما الفرق الأساسي بين تحويلات غاليليو والتحويلات النسبية (لورنتز)؟ <span class="wz">2013 · 2016 (داخل وخارج القطر) · 2017 (خارج القطر) · التطبيقي 2019</span></summary>
+    <div class="ans">الفرق الأساسي هو المقدار γ (عامل لورنتز) وتأثيره: تحويلات غاليليو الكلاسيكية لا تتضمّنه إطلاقاً (تفترض زمناً وطولاً وكتلة مطلقة ثابتة لكل المراقبين)، بينما تحويلات لورنتز النسبية تُدخل γ فيؤثر مباشرة على زخم الجسم وطوله وكتلته والزمن المقاس له كلما اقتربت سرعته من سرعة الضوء.</div>
+  </details>
+
+  <!-- ======== المحاكاة: عامل لورنتز وتأثيراته ======== -->
+  <div class="sim">
+    <h3>🚀 مختبر النسبية: عامل لورنتز وتأثيراته</h3>
+    <p class="sim-sub">حرّك انطلاق المركبة (كنسبة من سرعة الضوء) وراقب كيف يكبر عامل لورنتز γ، فيتقلّص طولها الظاهر لمراقبٍ ساكن وتزداد كتلتها المقاسة — التفاصيل الكاملة بالدرس القادم.</p>
+    <div class="sim-scroll"><canvas id="relSim" width="700" height="300"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">انطلاق المركبة (v/c): <b id="vVal">٠.٦٠</b>
+        <input type="range" id="vR" min="0" max="0.99" step="0.01" value="0.6"></div>
+    </div>
+    <div class="readout" id="relReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz10"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson9.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson11.html">الدرس التالي: نتائج النسبية الخاصة 📊</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة عامل لورنتز وتأثيراته ---------- */
+(function () {
+  var cv = document.getElementById("relSim"), ctx = cv.getContext("2d");
+  var vR = document.getElementById("vR"), vVal = document.getElementById("vVal");
+  var readout = document.getElementById("relReadout");
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n, d) { return arNum(n.toFixed(d === undefined ? 2 : d)); }
+
+  var barX0 = 70, barW = 560, y1 = 95, y2 = 190, barH = 34;
+
+  function draw() {
+    var v = +vR.value;
+    vVal.textContent = fmt(v, 2);
+    var gamma = 1 / Math.sqrt(1 - v * v);
+
+    ctx.direction = "ltr";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.textAlign = "center";
+
+    /* عنوان γ كبير */
+    ctx.fillStyle = "#0f766e"; ctx.font = "bold 22px Cairo";
+    ctx.fillText("γ = " + fmt(gamma, 2), 350, 35);
+    ctx.fillStyle = "#64748b"; ctx.font = "11px Cairo";
+    ctx.fillText("γ = 1/√(1−v²/c²)", 350, 54);
+
+    /* الشريط المرجعي (طول السكون) */
+    ctx.strokeStyle = "#94a3b8"; ctx.lineWidth = 2; ctx.setLineDash([6, 4]);
+    ctx.strokeRect(barX0, y1, barW, barH);
+    ctx.setLineDash([]);
+    ctx.fillStyle = "#334155"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "start";
+    ctx.fillText("طول السكون L₀ = 10 m — كما يقيسه راكب المركبة نفسه", barX0, y1 - 10);
+
+    /* الشريط المتقلّص (الطول المُقاس من الأرض) */
+    var L = 10 / gamma;
+    var Lpx = Math.max(4, barW / gamma);
+    ctx.fillStyle = "rgba(124,58,237,0.18)"; ctx.fillRect(barX0, y2, Lpx, barH);
+    ctx.strokeStyle = "#7c3aed"; ctx.lineWidth = 2.4; ctx.strokeRect(barX0, y2, Lpx, barH);
+    ctx.fillStyle = "#5b21b6"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "start";
+    ctx.fillText("الطول المُقاس L = L₀/γ ≈ " + fmt(L, 2) + " m — من مراقب ساكن على الأرض", barX0, y2 - 10);
+
+    ctx.font = "26px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("🚀", barX0 + Lpx + 18, y2 + barH / 2 + 9);
+
+    var m = 1 * gamma;
+    readout.innerHTML = "عند v = " + fmt(v, 2) + "c → γ ≈ " + fmt(gamma, 2) +
+      "<br>قضيبٌ طوله 10m بالسكون يُقاس هنا ≈" + fmt(L, 2) + "m متحركاً (تقلّص الطول)، وكتلة 1kg بالسكون تُقاس ≈" + fmt(m, 2) + "kg متحركة (ازدياد الكتلة)." +
+      "<br>وكلما اقترب γ من قيمٍ أكبر، بدا الزمن على متن المركبة أبطأ من منظور المراقب الساكن على الأرض (تمدّد الزمن).";
+  }
+  vR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz10", [
+  { q: "(سؤال وزاري — التمهيدي 2022) ما المقصود بتحويلات لورنتز؟",
+    opts: ["معادلات تربط إحداثيات الحدث (الموقع والزمن) بين إطارين عطاليين يتحرك أحدهما بالنسبة للآخر", "معادلات تحسب سرعة الضوء فقط بإطار واحد ساكن", "قانون يربط بين الشحنة والتيار الكهربائي", "معادلات تصف حركة الكواكب حول الشمس فقط"], a: 0,
+    why: "تحويلات لورنتز تربط إحداثيات الحدث (x,y,z,t) كما يقيسها مراقب بإطار عطالي، بإحداثياته نفسها كما يقيسها مراقب آخر بإطار عطالي متحرك بالنسبة للأول — وتحلّ محلّ تحويلات غاليليو الكلاسيكية." },
+  { q: "ما الصيغة الرياضية الصحيحة لعامل لورنتز γ؟",
+    opts: ["γ = 1/√(1 − v²/c²)", "γ = √(1 − v²/c²)", "γ = v²/c²", "γ = 1 − v/c"], a: 0,
+    why: "γ = 1/√(1−v²/c²) — يساوي 1 عند السكون، ويؤول إلى ما لا نهاية كلما اقتربت v من c." },
+  { q: "(سؤال وزاري — 2016/2017 خارج القطر · التطبيقي 2019) ما الفرق الأساسي بين تحويلات غاليليو والتحويلات النسبية (لورنتز)؟",
+    opts: ["المقدار γ (عامل لورنتز) الذي يؤثر بالزخم والطول والكتلة والزمن المقاس عند السرعات القريبة من c", "غاليليو تخص المادة فقط ولورنتز تخص الضوء فقط", "لا فرق حقيقي بينهما بأي سرعة كانت", "لورنتز أقدم زمنياً من غاليليو بقرون"], a: 0,
+    why: "تحويلات غاليليو لا تتضمّن γ إطلاقاً (تفترض زمناً وطولاً وكتلة مطلقة)، بينما تحويلات لورنتز تُدخله فيؤثر على هذه المقادير عند السرعات القريبة من سرعة الضوء." },
+  { q: "عند أي سرعة يكون عامل لورنتز γ مساوياً تقريباً للواحد (١) بلا أي تأثيرات نسبية محسوسة؟",
+    opts: ["عند السرعات الصغيرة جداً مقارنة بسرعة الضوء (v≪c) — عالمنا اليومي بأكمله", "فقط عند v=c بالضبط", "فقط عند v=0.9c فأكثر", "γ لا يساوي الواحد أبداً بأي سرعة كانت"], a: 0,
+    why: "عند v≪c يكون v²/c² مهملاً جداً، فيؤول γ إلى 1 تقريباً — ولهذا لا نلاحظ أي تأثيرات نسبية بحياتنا اليومية." }
+], { onDone: function (stars) { Phy.setLesson("g6c6", "10", { stars: stars }); } });
+</script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: أشباه الموصلات المطعّمة — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c7">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السابع</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>🧪 الدرس 4: أشباه الموصلات المطعّمة</h1>
+    <p>توصيلية شبه الموصل النقي ضعيفة جداً وغير قابلة للتحكم بدقة — أعداد الإلكترونات والفجوات فيه تتحدد بالحرارة فقط، بالتساوي دوماً. الحل الهندسي العبقري: إضافة كمية دقيقة جداً ومضبوطة من عنصر آخر إلى البلورة، لنكسر هذا التوازن عمداً ونتحكم بنوع حامل الشحنة الغالب وكميته. هذه العملية تُسمى <b>التطعيم</b>.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">⚗️</span>
+    <span>بإضافة ذرة شائبة واحدة فقط لكل نحو 10⁸ (مئة مليون) ذرة سيليكون، يمكن رفع توصيلية البلورة آلاف المرات، والتحكم بنوع حامل الشحنة السائد فيها بدقة تامة. هذا بالضبط ما يجعل شبه الموصل "قابلاً للهندسة" — على عكس الموصل والعازل الثابتين.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">⚗️</span> التطعيم: لماذا ولماذا نوعان فقط؟</div>
+  <div class="card">
+    <p><b>التطعيم</b> (Doping) هو إضافة كمية صغيرة ومضبوطة من عنصر "شائبة" إلى بلورة شبه موصل نقي (سيليكون غالباً)، بهدف زيادة عدد حاملات الشحنة الحرة من نوع واحد محدد (إما إلكترونات أو فجوات) بشكل كبير ومتحكَّم به. يعتمد نوع التطعيم على عدد إلكترونات تكافؤ الشائبة المُضافة مقارنةً بالسيليكون (٤ إلكترونات تكافؤ):</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> علّل: إذا كان التأثير الحراري في شبه الموصل النقي يزيد قابليته على التوصيل، فلماذا نلجأ إلى تطعيمه بشوائب خماسية أو ثلاثية التكافؤ؟ <span class="wz">الدور الثاني 2021</span></summary>
+    <div class="ans">لأنه لا يمكن السيطرة على قابلية التوصيل الكهربائي لمادة شبه الموصل النقي بطريقة التأثير الحراري. أما التطعيم فيتيح طريقة عملية أفضل للتحكم في التوصيلية وزيادتها بنسبة كبيرة (وبمعدّل مسيطَر عليه) نتيجة ازدياد حاملات الشحنة بصورة محدّدة.</div>
+  </details>
+
+  <div class="formgrid" id="dopeToggle" style="grid-template-columns:1fr 1fr">
+    <button class="formcard on" data-type="n"><span class="fe">🔵</span>النوع n (خماسي التكافؤ)</button>
+    <button class="formcard" data-type="p"><span class="fe">🔴</span>النوع p (ثلاثي التكافؤ)</button>
+  </div>
+
+  <div class="sim">
+    <h3 id="dopeTitle">🔵 شبه موصل النوع n</h3>
+    <p class="sim-sub" id="dopeSub"></p>
+    <div class="sim-scroll"><canvas id="dopeSim" width="700" height="230"></canvas></div>
+    <div class="readout" id="dopeReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div id="nBlock">
+    <div class="defbox">
+      <b class="term">النوع n (Donor / مانح):</b> نطعّم السيليكون بعنصر <b>خماسي التكافؤ</b> (٥ إلكترونات تكافؤ، كالزرنيخ As أو الفوسفور P). تكوّن ٤ من إلكتروناته الخمسة روابط تساهمية طبيعية مع ٤ ذرات سيليكون مجاورة، بينما يبقى <b>الإلكترون الخامس زائداً</b> — مرتبط بذرة الشائبة بضعف شديد فقط، فيتحرر بسهولة فائقة ليصبح إلكتروناً حراً حتى بحرارة الغرفة العادية. تُسمى ذرة الشائبة هنا <b>ذرة مانحة</b> لأنها "تمنح" إلكتروناً حراً إضافياً للبلورة، من دون أن تترك فجوة مقابلة له.
+    </div>
+  </div>
+  <div id="pBlock" style="display:none">
+    <div class="defbox">
+      <b class="term">النوع p (Acceptor / مستقبِل):</b> نطعّم السيليكون بعنصر <b>ثلاثي التكافؤ</b> (٣ إلكترونات تكافؤ فقط، كالبورون B أو الغاليوم Ga). يكوّن إلكتروناته الثلاثة روابط تساهمية طبيعية مع ٣ ذرات سيليكون مجاورة فقط، بينما تبقى الرابطة الرابعة <b>ناقصة إلكتروناً</b> — أي فجوة جاهزة منذ البداية، بلا حاجة لأي طاقة حرارية لتوليدها! تُسمى ذرة الشائبة هنا <b>ذرة مستقبِلة</b> لأنها جاهزة "لاستقبال" إلكترون من رابطة مجاورة لتملأ هذه الفجوة.
+    </div>
+  </div>
+
+  <div class="tblwrap">
+    <table class="nice">
+      <thead><tr><th>الخاصية</th><th>النوع n</th><th>النوع p</th></tr></thead>
+      <tbody>
+        <tr><td>عنصر التطعيم</td><td>خماسي التكافؤ (As, P, Sb)</td><td>ثلاثي التكافؤ (B, Ga, In)</td></tr>
+        <tr><td>نوع ذرة الشائبة</td><td>مانحة (Donor)</td><td>مستقبِلة (Acceptor)</td></tr>
+        <tr><td>حاملات الشحنة الأغلبية</td><td>إلكترونات حرة (سالبة)</td><td>فجوات (موجبة)</td></tr>
+        <tr><td>حاملات الشحنة الأقلية</td><td>فجوات (قليلة جداً، حرارية المنشأ)</td><td>إلكترونات حرة (قليلة جداً، حرارية المنشأ)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="notebox">
+    <b>⚖️ نقطة دقيقة مهمة جداً</b>
+    <p style="margin-top:6px">رغم أن النوع n يحوي فائضاً من الإلكترونات الحرة والنوع p يحوي فائضاً من الفجوات، تبقى كل قطعة مطعّمة (n أو p) <b>متعادلة كهربائياً تماماً</b> ككل! فذرة الشائبة نفسها (سواء مانحة أو مستقبِلة) ذرة متعادلة الشحنة أصلاً — لم "نُضِف" أي شحنة صافية للبلورة، بل غيّرنا فقط توزيع الإلكترونات والفجوات المتاحة للحركة الحرة داخلها.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> تبقى قطعة السيليكون المطعّمة بالنوع n متعادلة كهربائياً، رغم احتوائها فائضاً كبيراً من الإلكترونات الحرة.</summary>
+    <div class="ans">لأن ذرة الشائبة المانحة (خماسية التكافؤ) نفسها متعادلة الشحنة قبل التطعيم وبعده — عدد بروتونات نواتها يساوي عدد إلكتروناتها دوماً. تحرر الإلكترون الخامس الزائد لا "يخلق" شحنة سالبة صافية، بل يجعل هذا الإلكترون حراً بالحركة فقط، بينما تبقى ذرة الشائبة (بعد فقدها هذا الإلكترون) أيوناً موجباً ثابتاً مكانه ضمن البلورة — فيتوازن الصافي الكلي للشحنة عند الصفر.</div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> علّل: الأيون الموجب المتولّد عند إضافة شائبة من نوع المانح لا يُعدّ من حاملات الشحنة. <span class="wz">الدور الثاني 2019 · الدور الأول 2021</span></summary>
+    <div class="ans">لأن الأيون الموجب (الذرّة المانحة بعد أن منحت إلكترونها) يرتبط بالهيكل البلوري ارتباطاً وثيقاً وثابتاً في موقعه، فلا يستطيع الحركة، ومن ثمّ لا يشارك في عملية التوصيل الكهربائي — لذا لا يُعدّ من حاملات الشحنة.</div>
+  </details>
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> هل يمكن أن توجد فجوات في بلورة السيليكون نوع n؟ ولماذا؟ <span class="wz">التمهيدي 2022</span></summary>
+    <div class="ans">نعم توجد فجوات، لكنها قليلة وتُعدّ من حاملات الشحنة الأقلية. والسبب أنها تتولّد نتيجة التأثير الحراري (كسر بعض الأواصر التساهمية بالحرارة)، لا من عملية التطعيم — إذ التطعيم بخماسية التكافؤ يزيد الإلكترونات (الأغلبية) فقط.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">📶</span> المستوى المانح والمستوى القابل — وأثرهما على مستوى فيرمي</div>
+  <div class="card">
+    <p>تذكّر من الدرس الماضي: <b>مستوى فيرمي</b> يقع في منتصف الفجوة الطاقية بالضبط بشبه الموصل النقي. لكن عند التطعيم، تضيف ذرات الشائبة مستوى طاقة جديداً داخل الفجوة المحظورة نفسها، فينزاح مستوى فيرمي من مكانه:</p>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="defbox" style="margin:0"><b class="term">المستوى المانح (Donor Level) — النوع n:</b> مستوى طاقة جديد يقع ضمن الفجوة المحظورة، <b>تحت حزمة التوصيل مباشرة</b>. يرتفع مستوى فيرمي نحو الأعلى ويقترب من حزمة التوصيل.</div>
+    <div class="defbox" style="margin:0"><b class="term">المستوى القابل (Acceptor Level) — النوع p:</b> مستوى طاقة جديد يقع ضمن الفجوة المحظورة، <b>فوق حزمة التكافؤ مباشرة</b>. ينخفض مستوى فيرمي نحو الأسفل ويقترب من حزمة التكافؤ.</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> ما المقصود بالمستوى المانح؟ وكيف يتولّد؟ <span class="wz">التمهيدي 2019 · الدور الثاني 2017</span></summary>
+    <div class="ans">المستوى المانح: مستوى طاقة جديد يقع ضمن ثغرة الطاقة المحظورة وتحت حزمة التوصيل مباشرة. يتولّد عند تطعيم شبه الموصل النقي بشوائب خماسية التكافؤ (الذرّات المانحة)، وهو المستوى الذي تشغله الإلكترونات (الخامسة) التي حرّرتها الذرّات المانحة قبل انتقالها إلى حزمة التوصيل.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: الثنائي pn 🔗</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة التطعيم n/p ---------- */
+(function () {
+  var cv = document.getElementById("dopeSim"), ctx = cv.getContext("2d");
+  var toggle = document.getElementById("dopeToggle");
+  var title = document.getElementById("dopeTitle"), sub = document.getElementById("dopeSub");
+  var readout = document.getElementById("dopeReadout");
+  var nBlock = document.getElementById("nBlock"), pBlock = document.getElementById("pBlock");
+  var type = "n";
+
+  var cx = 350, cy = 115, R = 85;
+  var neighborAngles = [45, 135, 225, 315]; // أربع ذرات مجاورة حول ذرة الشائبة المركزية
+
+  function draw() {
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.textAlign = "center"; ctx.textBaseline = "middle";
+
+    var pts = neighborAngles.map(function (deg) {
+      var rad = deg * Math.PI / 180;
+      return { x: cx + R * Math.cos(rad), y: cy + R * Math.sin(rad) };
+    });
+
+    // الروابط الأربع
+    pts.forEach(function (p, i) {
+      var missing = (type === "p" && i === 3); // رابطة رابعة ناقصة بالنوع p
+      ctx.strokeStyle = missing ? "#fca5a5" : "#334155";
+      ctx.lineWidth = 3;
+      if (missing) ctx.setLineDash([5, 5]); else ctx.setLineDash([]);
+      ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(p.x, p.y); ctx.stroke();
+    });
+    ctx.setLineDash([]);
+
+    // ذرات السيليكون المجاورة
+    pts.forEach(function (p) {
+      ctx.beginPath(); ctx.arc(p.x, p.y, 20, 0, Math.PI * 2);
+      ctx.fillStyle = "#475569"; ctx.fill();
+      ctx.fillStyle = "#fff"; ctx.font = "bold 12px Cairo"; ctx.fillText("Si", p.x, p.y);
+    });
+
+    // ذرة الشائبة المركزية
+    ctx.beginPath(); ctx.arc(cx, cy, 26, 0, Math.PI * 2);
+    ctx.fillStyle = type === "n" ? "#1d4ed8" : "#b91c1c"; ctx.fill();
+    ctx.strokeStyle = "#fff"; ctx.lineWidth = 2; ctx.stroke();
+    ctx.fillStyle = "#fff"; ctx.font = "bold 13px Cairo";
+    ctx.fillText(type === "n" ? "As" : "B", cx, cy);
+
+    if (type === "n") {
+      // إلكترون خامس حر ينجرف بعيداً بمدار متقطع
+      ctx.strokeStyle = "#93c5fd"; ctx.setLineDash([2, 4]); ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.arc(cx, cy, 55, 0.2, 1.4); ctx.stroke();
+      ctx.setLineDash([]);
+      var ex = cx + 60, ey = cy - 45;
+      ctx.beginPath(); ctx.arc(ex, ey, 8, 0, Math.PI * 2);
+      ctx.fillStyle = "#2563eb"; ctx.fill(); ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.5; ctx.stroke();
+      ctx.fillStyle = "#1d4ed8"; ctx.font = "bold 11px Cairo";
+      ctx.fillText("e⁻ حر (الإلكترون الخامس الزائد)", cx + 20, cy - 70);
+    } else {
+      var midx = (cx + pts[3].x) / 2, midy = (cy + pts[3].y) / 2;
+      ctx.beginPath(); ctx.arc(midx, midy, 9, 0, Math.PI * 2);
+      ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 2.5; ctx.stroke();
+      ctx.fillStyle = "#dc2626"; ctx.font = "bold 10px Cairo"; ctx.fillText("+", midx, midy + 1);
+      ctx.fillStyle = "#b91c1c"; ctx.font = "bold 11px Cairo";
+      ctx.fillText("فجوة (رابطة ناقصة إلكتروناً)", cx - 10, cy + 90);
+    }
+  }
+
+  function setType(t) {
+    type = t;
+    toggle.querySelectorAll(".formcard").forEach(function (b) { b.classList.toggle("on", b.dataset.type === t); });
+    nBlock.style.display = t === "n" ? "" : "none";
+    pBlock.style.display = t === "p" ? "" : "none";
+    if (t === "n") {
+      title.textContent = "🔵 شبه موصل النوع n";
+      sub.textContent = "ذرة الزرنيخ (As) الخماسية التكافؤ تكوّن ٤ روابط سليمة مع جاراتها من السيليكون، ويتحرر إلكترونها الخامس بسهولة كإلكترون حر.";
+      readout.innerHTML = "حامل الشحنة الأغلبية هنا: <b>إلكترونات حرة (−)</b>. ذرة الشائبة نفسها متعادلة، لكنها بعد فقدان إلكترونها الخامس تصبح <b>أيوناً موجباً ثابتاً</b> ضمن البلورة (لا يتحرك).";
+    } else {
+      title.textContent = "🔴 شبه موصل النوع p";
+      sub.textContent = "ذرة البورون (B) الثلاثية التكافؤ تكوّن ٣ روابط سليمة فقط؛ الرابطة الرابعة تبقى ناقصة — فجوة جاهزة منذ اللحظة الأولى.";
+      readout.innerHTML = "حامل الشحنة الأغلبية هنا: <b>فجوات (+)</b>. ذرة الشائبة نفسها متعادلة، لكنها بعد استقبال إلكترون لملء الفجوة تصبح <b>أيوناً سالباً ثابتاً</b> ضمن البلورة (لا يتحرك).";
+    }
+    draw();
+  }
+
+  toggle.addEventListener("click", function (e) {
+    var b = e.target.closest(".formcard");
+    if (b) setType(b.dataset.type);
+  });
+  setType("n");
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ماذا نسمي عملية إضافة كمية صغيرة ومضبوطة من عنصر شائبة إلى بلورة شبه موصل نقي؟",
+    opts: ["التبريد", "التطعيم (Doping)", "التبخير", "الانصهار"], a: 1,
+    why: "التطعيم هو الاسم العلمي لإضافة شوائب متحكَّم بها لتغيير توصيلية شبه الموصل ونوع حامل الشحنة الغالب فيه." },
+  { q: "لتكوين شبه موصل من النوع n، أي عنصر يجب أن نطعّم به السيليكون؟",
+    opts: ["عنصر ثلاثي التكافؤ (٣ إلكترونات تكافؤ) كالبورون", "عنصر رباعي التكافؤ نفسه كالسيليكون تماماً", "أي غاز خامل بلا إلكترونات تكافؤ إطلاقاً", "عنصر خماسي التكافؤ (٥ إلكترونات تكافؤ) كالزرنيخ أو الفوسفور"], a: 3,
+    why: "الشائبة الخماسية التكافؤ تمنح إلكتروناً خامساً زائداً بعد تكوين ٤ روابط، فينتج فائض إلكترونات حرة — النوع n." },
+  { q: "لماذا تُسمى ذرة الشائبة الثلاثية التكافؤ (كالبورون) «ذرة مستقبِلة»؟",
+    opts: ["لأنها جاهزة لاستقبال إلكترون من رابطة مجاورة يملأ فجوتها الناقصة", "لأنها تمنح إلكتروناً إضافياً للبلورة", "لأنها تستقبل فوتونات الضوء فقط دون أي دور كهربائي", "لأنها تطرد كل الإلكترونات المجاورة لها"], a: 0,
+    why: "الشائبة الثلاثية التكافؤ تترك رابطة ناقصة إلكتروناً (فجوة)، جاهزة «لاستقبال» أي إلكترون مجاور يقفز إليها — لذا تُسمى مستقبِلة." },
+  { q: "ما حاملات الشحنة الأغلبية في شبه موصل من النوع p؟",
+    opts: ["الإلكترونات الحرة فقط", "البروتونات الحرة المتحركة", "الفجوات (حاملات موجبة)", "النيوترونات الحرة المتحركة"], a: 2,
+    why: "في النوع p، التطعيم بعنصر ثلاثي التكافؤ يولّد فائضاً كبيراً من الفجوات — فهي حاملات الشحنة الأغلبية." },
+  { q: "قطعة سيليكون مطعّمة بالنوع n. أي عبارة صحيحة بخصوص شحنتها الكلية؟",
+    opts: ["سالبة الشحنة الصافية بمقدار كبير", "متعادلة كهربائياً تماماً، رغم فائض الإلكترونات الحرة فيها", "موجبة الشحنة الصافية بمقدار كبير", "لا يمكن تحديد شحنتها الكلية إطلاقاً"], a: 1,
+    why: "التطعيم لا يضيف أي شحنة صافية؛ ذرة الشائبة متعادلة أصلاً، فيبقى صافي شحنة البلورة كلها صفراً، رغم تغيّر توزيع حاملات الشحنة الحرة." },
+  { q: "ما الفرق الجوهري بين حاملات الشحنة الأقلية في النوع n وحاملات الشحنة الأغلبية فيه؟",
+    opts: ["لا فرق إطلاقاً بينهما بأي شيء", "الأقلية أكبر عدداً من الأغلبية دوماً بالنوع n", "الأغلبية فجوات، والأقلية إلكترونات بالنوع n", "الأقلية (فجوات قليلة جداً) منشؤها حراري بحت، بينما الأغلبية (إلكترونات) منشؤها بالأساس التطعيم المتعمَّد"], a: 3,
+    why: "الإلكترونات الحرة (الأغلبية بالنوع n) مصدرها الأساسي التطعيم المتعمَّد بالشائبة المانحة، بينما الفجوات القليلة جداً (الأقلية) تنتج فقط من كسر حراري عرضي لروابط تساهمية، تماماً كما بالبلورة النقية." },
+  { q: "أين يقع المستوى القابل (Acceptor Level) بالضبط داخل الفجوة الطاقية المحظورة، وماذا يحدث لمستوى فيرمي عند تولّده؟",
+    opts: ["تحت حزمة التوصيل مباشرة، ويرتفع فيرمي للأعلى", "في منتصف الفجوة تماماً، ويبقى فيرمي ثابتاً", "فوق حزمة التكافؤ مباشرة، وينخفض فيرمي نحو الأسفل", "خارج الفجوة الطاقية كلياً، بلا أي أثر على فيرمي"], a: 2,
+    why: "المستوى القابل يتولّد عند التطعيم بشوائب ثلاثية التكافؤ (النوع p)، ويقع فوق حزمة التكافؤ مباشرة، فينخفض مستوى فيرمي نحو الأسفل ويقترب من حزمة التكافؤ." }
+], { onDone: function (stars) { Phy.setLesson("g6c7", "4", { stars: stars }); } });
+</script>
+</body>
+</html>

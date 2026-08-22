@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 6: مُحزّز الحيود — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c5">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الخامس</a> / الدرس 6</span>
+  </div>
+
+  <div class="hero">
+    <h1>💿 الدرس 6: مُحزّز الحيود</h1>
+    <p>كيف نفكّك ضوء النجوم إلى ألوانه لنعرف ممّ صُنعت؟ حين يتكرر الشق الواحد آلاف المرات، تتحوّل ظاهرة الحيود من عرضٍ جانبي إلى أداة قياس علمية دقيقة.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">📊</span> محزز الحيود: من ظاهرة إلى أداة قياس</div>
+  <div class="card">
+    <p><b class="term">محزز الحيود</b>: أداة لدراسة الأطياف وتحليل مصادر الضوء وقياس الطول الموجي، تتألف من عدد كبير من الحزوز المتوازية متساوية الفواصل (تتراوح بين 1000 و10000 حزّ لكل سنتمتر): الفواصل بين الحزوز شفافة (تعمل عمل شقوق منفصلة)، والحزّ نفسه منطقة مظلمة.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="lawbox" style="margin:0">ثابت المحزز (المسافة بين حزّين متتاليين)<div class="formula">d = W/N</div><p style="margin-top:6px;font-size:.82rem">W: عرض المحزز، N: عدد الحزوز</p></div>
+    <div class="lawbox" style="margin:0">شرط الهُدب المضيئة للمحزز<div class="formula">d sinθ = mλ</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">ضوء ليزر هيليوم-نيون λ=632.8nm يسقط عمودياً على محزز حيود يحوي السنتمتر منه 6000 خط. جد زاويتَي الحيود للمرتبتين الأولى والثانية (sin21.3°=0.3796، sin49°=0.7592).</div>
+    <div class="step"><b>ثابت المحزز:</b> d = W/N = 1cm/6000 = 1.667×10⁻⁴ cm</div>
+    <div class="step"><b>المرتبة الأولى (m=1):</b> sinθ₁ = λ/d = 632.8×10⁻⁷/1.667×10⁻⁴ = 0.3796 ⟹ <b>θ₁ = 21.3°</b></div>
+    <div class="step"><b>المرتبة الثانية (m=2):</b> sinθ₂ = 2λ/d = 0.7592 ⟹ <b>θ₂ = 49°</b>
+      💡 لاحظ: sinθ₂ = 2×sinθ₁ دوماً بالمحزز (الزوايا لا تتضاعف، لكن جيوبها تتضاعف) — هذه الفكرة وحدها حلّت وزاري 2020د1.</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> فائدة محزز الحيود، وهل الهدب المركزي بالضوء الأبيض طيف مستمر؟ <span class="wz">د2 2020 · تمهيدي 2020</span></summary>
+    <div class="ans">① فائدته: دراسة الأطياف وتحليل مصادر الضوء وقياس الطول الموجي (بجهاز المطياف). ② العبارة (الهدب المركزي طيف مستمر بالضوء الأبيض) <b>خاطئة</b> — الصحيح: الهدب المركزي <b>أبيض</b> (كل الألوان تصله بفرق مسار صفر)، والأطياف المستمرة تظهر بالمراتب الجانبية. (لو سقط ضوء أخضر لظهر الهدب المركزي أخضر.)</div>
+  </details>
+
+  <!-- ======== المحاكاة: محزز الحيود ======== -->
+  <div class="sim">
+    <h3>🌈 مختبر محزز الحيود</h3>
+    <p class="sim-sub">غيّر تباعد خطوط المحزز والطول الموجي، وراقب القمم المضيئة الرئيسة تصبح أحدّ وأضيق كلما قلّ التباعد (زاد عدد الخطوط لكل سنتمتر).</p>
+    <div class="sim-scroll"><canvas id="gratingSim" width="600" height="200"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">تباعد خطوط المحزز d (مايكرومتر): <b id="dgVal">٤</b>
+        <input type="range" id="dgR" min="5" max="100" step="5" value="40"></div>
+      <div class="slider-group">الطول الموجي λ (نانومتر): <b id="lamgVal">٥٥٠</b>
+        <input type="range" id="lamgR" min="400" max="700" step="10" value="550"></div>
+    </div>
+    <div class="readout" id="gratingReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson7.html">الدرس التالي: استقطاب الضوء 🕶️</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة محزز الحيود ---------- */
+(function () {
+  var cv = document.getElementById("gratingSim"), ctx = cv.getContext("2d");
+  var dgR = document.getElementById("dgR"), lamgR = document.getElementById("lamgR");
+  var dgVal = document.getElementById("dgVal"), lamgVal = document.getElementById("lamgVal");
+  var readout = document.getElementById("gratingReadout");
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n, d) { return arNum(n.toFixed(d === undefined ? 0 : d)); }
+
+  function gratingI(thetaDeg, d, lam, nSlits) {
+    nSlits = nSlits || 6;
+    var theta = thetaDeg * Math.PI / 180;
+    var delta = Math.PI * d * Math.sin(theta) / lam;
+    if (Math.abs(Math.sin(delta)) < 1e-6) return 1;
+    var r = Math.sin(nSlits * delta) / (nSlits * Math.sin(delta));
+    return r * r;
+  }
+
+  function draw() {
+    var dUm = +dgR.value, lam = +lamgR.value;
+    dgVal.textContent = fmt(dUm / 10, 1); lamgVal.textContent = arNum(lam);
+    var d = dUm / 10 * 1000; // نانومتر
+    ctx.direction = "ltr";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    var ox = 20, w = 560, baseY = 160, maxH = 130;
+
+    ctx.strokeStyle = "#7c3aed"; ctx.fillStyle = "rgba(124,58,237,0.15)"; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(ox, baseY);
+    for (var x = 0; x <= w; x++) {
+      var thetaDeg = (x - w / 2) / (w / 2) * 25;
+      var I = gratingI(thetaDeg, d, lam);
+      var y = baseY - I * maxH;
+      ctx.lineTo(ox + x, y);
+    }
+    ctx.lineTo(ox + w, baseY); ctx.closePath();
+    ctx.fill(); ctx.stroke();
+
+    ctx.strokeStyle = "#c8cdea"; ctx.beginPath(); ctx.moveTo(ox, baseY); ctx.lineTo(ox + w, baseY); ctx.stroke();
+    ctx.fillStyle = "#756b8a"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("الزاوية θ ⟵", ox + w / 2, baseY + 22);
+
+    readout.innerHTML = "d sinθ = mλ (قمم مضيئة رئيسة) — كلما قلّ d ازداد تباعد القمم الرئيسة وحدّتها";
+  }
+  dgR.addEventListener("input", draw);
+  lamgR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ثابت المحزز d يُحسب من العلاقة:",
+    opts: ["d = N/W", "d = W×N", "d = λ/N", "d = W/N (عرض المحزز÷عدد الحزوز)"], a: 3,
+    why: "ثابت المحزز = عرض المحزز الكلي مقسوماً على عدد حزوزه." },
+  { q: "محزز حيود عرضه 2 cm وعدد حزوزه 8000. ما ثابت المحزز d؟",
+    opts: ["4×10³ cm", "2.5×10⁴ cm", "1.6×10⁴ cm", "2.5×10⁻⁴ cm"], a: 3,
+    why: "d = W/N = 2/8000 = 2.5×10⁻⁴ cm." },
+  { q: "الخاصية المميزة لطيف المتولد بوساطة محزز الحيود:",
+    opts: ["انتشار الخطوط المضيئة وضبابيتها", "انعدام الخطوط المضيئة كلياً", "الخطوط المضيئة واضحة المعالم (حادة ودقيقة)", "انعدام الخطوط المظلمة كلياً"], a: 2,
+    why: "كثرة شقوق المحزز تجعل هدبه حادة ودقيقة المعالم — وهذا سرّ دقته كأداة قياس. (سؤال الكتاب س١/١١)" },
+  { q: "ضوء أبيض على محزز 2000 line/cm. زاوية حيود المرتبة الأولى للأحمر (λ=640nm) إذا كان sin7.5°=0.128؟",
+    opts: ["15°", "7.5°", "3.75°", "21.3°"], a: 1,
+    why: "d=1/2000=5×10⁻⁴cm. sinθ=mλ/d=(640×10⁻⁷)/(5×10⁻⁴)=0.128 ⟹ θ=7.5°. (د2 2018 — مسألة الكتاب س٢)" },
+  { q: "محزز 5000 line/cm، وزاوية حيود المرتبة الثانية للأحمر 30°. جد λ.",
+    opts: ["250 nm", "1000 nm", "125 nm", "500 nm"], a: 3,
+    why: "d=1/5000=2×10⁻⁴cm. λ=d sinθ/m=(2×10⁻⁴×0.5)/2=5×10⁻⁵cm=500nm. (تمهيدي 2019؛ ونظيره د1 2019 بمحزز 10000 line وزاوية مرتبة أولى 30° يعطي نفس الجواب 500nm)" },
+  { q: "ليزر هيليوم-نيون تردده 6×10¹³ Hz يسقط على محزز 1000 line/cm. جد زاوية حيود المرتبة الأولى.",
+    opts: ["45°", "60°", "30°", "15°"], a: 2,
+    why: "λ=c/f=3×10⁸/6×10¹³=5×10⁻⁶m. d=1cm/1000=10⁻⁵m. sinθ=λ/d=0.5 ⟹ θ=30°. (د1 2024 ومثله د3 2020)" },
+  { q: "ليزر هيليوم-نيون على محزز حيود، وزاوية المرتبة الثانية المضيئة 30°. جد زاوية المرتبة الرابعة.",
+    opts: ["60°", "90°", "45°", "لا توجد مرتبة رابعة"], a: 1,
+    why: "d sin30°=2λ ⟹ λ/d=0.25. للمرتبة الرابعة: sinθ₄=4×0.25=1 ⟹ θ₄=90° (تقع عند حافة النمط تماماً). (د1 2020)" }
+], { onDone: function (stars) { Phy.setLesson("g6c5", "6", { stars: stars }); } });
+</script>
+</body>
+</html>

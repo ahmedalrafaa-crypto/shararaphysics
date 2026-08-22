@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: تأثير كومبتن — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c8">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثامن</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔬 الدرس 5: تأثير كومبتن</h1>
+    <p>سلّط كومبتن حزمة أشعة سينية طول موجتها معلوم λ على هدف من الكرافيت النقي. توقّع أي فيزيائي كلاسيكي أن يخرج الضوء المستطار بنفس الطول الموجي بالضبط. لكن ما لاحظه كومبتن كان مختلفاً تماماً: الضوء المستطار خرج بطول موجي أطول قليلاً — وكأن الفوتون "اصطدم" بشيء وفقد جزءاً من طاقته، تماماً كما تفعل الكرة عند اصطدامها بكرة أخرى.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">💥</span>
+    <span>هذا الدرس دليل حاسم آخر (بعد الظاهرة الكهروضوئية بالفصل السادس) على أن الضوء يسلك أحياناً سلوك الجسيمات لا الموجات فقط.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🎱</span> ماذا لاحظ كومبتن؟</div>
+  <div class="card">
+    <p>عند سقوط حزمة من الأشعة السينية (فوتونات) طولها الموجي λ على هدف من الكرافيت النقي، فإن الأشعة تستطار بزوايا مختلفة، وأن الأشعة المستطارة ذات طول موجي λ′ <b>أطول بقليل</b> من الطول الموجي λ لحزمة الأشعة الساقطة. مقدار هذا التغيير (λ′−λ) <b>يزداد بزيادة زاوية الاستطارة θ</b>، مع انبعاث إلكترون حر من الجانب الآخر للهدف.</p>
+  </div>
+  <div class="notebox">
+    <b>💡 التفسير:</b>
+    <p style="margin-top:6px">فسّر كومبتن ذلك بأن الفوتون الساقط يتصادم مع إلكترون حر من إلكترونات ذرّات الهدف، فاقداً مقداراً من طاقته لصالح الإلكترون (الذي يكتسب طاقة حركية تمكّنه من الإفلات). هذا يعني أن <b>الفوتون يسلك سلوك الجسيمات</b>. وافترض كومبتن أن التصادم <b>مرن (elastic)</b>، يخضع لقانونَي حفظ الزخم وحفظ الطاقة معاً — تماماً كتصادم كرتي بلياردو.</p>
+  </div>
+
+  <div class="lawbox">
+    علاقة كومبتن: الزيادة بالطول الموجي تعتمد على زاوية الاستطارة θ فقط
+    <div class="formula">λ′ − λ = (h / mₑc)(1 − cos θ)</div>
+    <p style="margin-top:6px;font-size:.82rem">mₑ=9.11×10⁻³¹kg كتلة الإلكترون. الكمّية h/mₑc تُسمى <b>طول موجة كومبتن</b> وتساوي 0.24×10⁻¹¹m — قيمة ثابتة تحفظها.</p>
+  </div>
+
+  <!-- ======== محاكاة: زاوية الاستطارة والزيادة الموجية ======== -->
+  <div class="sim">
+    <h3>📐 مختبر: زاوية الاستطارة θ ومقدار الزيادة Δλ</h3>
+    <p class="sim-sub">حرّك مزلاج زاوية الاستطارة θ وراقب مقدار الزيادة بالطول الموجي Δλ=λ′−λ.</p>
+    <canvas id="comptonSim" width="640" height="200"></canvas>
+    <div class="controls">
+      <div class="slider-group">زاوية الاستطارة θ: <b id="thVal">٦٠°</b>
+        <input type="range" id="thR" min="0" max="180" step="5" value="60"></div>
+    </div>
+    <div class="readout" id="comptonReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول — ورد وزارياً</div>
+  <div class="example">
+    <div class="exq">ما مقدار الزيادة الحاصلة في طول موجة الفوتون المستطار (بتأثير كومبتن) إذا استطار بزاوية 60°؟</div>
+    <div class="givens">المعطيات: θ=60° — mₑ=9.11×10⁻³¹kg — c=3×10⁸m/s — h=6.63×10⁻³⁴J.s</div>
+    <div class="step"><b>الخطوة ١:</b> نطبّق علاقة كومبتن:
+      <div class="math">Δλ = (h/mₑc)(1 − cos60°) = [6.63×10⁻³⁴ / (9.11×10⁻³¹ × 3×10⁸)] × (1 − 0.5)</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نحسب:
+      <div class="math">Δλ = 0.24×10⁻¹¹ × 0.5 ≈ 1.2×10⁻¹² m = 1.2×10⁻³ nm</div>
+      💡 لاحظ صغر هذه الزيادة جداً — لهذا لا يُلاحَظ تأثير كومبتن إلا بأشعة قصيرة الطول الموجي جداً كالأشعة السينية، لا بالضوء المرئي (حيث تكون Δλ نسبة ضئيلة جداً من λ الأصلي فلا تُلاحَظ عملياً).</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري متكرر</span> علّل: يُعدّ تأثير كومبتن أحد الأدلة المهمة التي تؤكّد السلوك الدقائقي (الجسيمي) للأشعة الكهرومغناطيسية. <span class="wz">تمهيدي 2021 · الدور الأول 2019 · الدور الثالث 2019</span></summary>
+    <div class="ans">لأن تفسير الزيادة الحاصلة في الطول الموجي لفوتونات الأشعة السينية المستطارة بوساطة الإلكترونات الحرة لا يمكن تفسيره إلا بافتراض أن الفوتون يسلك سلوك الجسيمات ويتصادم تصادماً مرناً مع الإلكترون الحر خاضعاً لقانونَي حفظ الزخم وحفظ الطاقة — وهذا سلوك دقائقي بحت لا تفسّره النظرية الموجية الكلاسيكية للضوء.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: الليزر — التسمية والخصائص وآلية العمل 🔴</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة تأثير كومبتن ---------- */
+(function () {
+  var cv = document.getElementById("comptonSim"), ctx = cv.getContext("2d");
+  var thR = document.getElementById("thR"), thVal = document.getElementById("thVal");
+  var readout = document.getElementById("comptonReadout");
+  var COMPTON_WL = 0.24e-11; // meters
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+
+  function draw() {
+    var th = +thR.value;
+    thVal.textContent = arNum(th) + "°";
+    var rad = th * Math.PI / 180;
+    var dLam = COMPTON_WL * (1 - Math.cos(rad));
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.direction = "ltr";
+    var cx = 220, cy = 120;
+    ctx.beginPath(); ctx.arc(cx, cy, 6, 0, Math.PI * 2); ctx.fillStyle = "#334155"; ctx.fill();
+    ctx.fillStyle = "#334155"; ctx.font = "11px Cairo"; ctx.textAlign = "center"; ctx.fillText("الهدف", cx, cy + 25);
+
+    ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 2.2;
+    ctx.beginPath(); ctx.moveTo(40, cy); ctx.lineTo(cx - 5, cy); ctx.stroke();
+    ctx.fillStyle = "#991b1b"; ctx.textAlign = "center"; ctx.fillText("فوتون ساقط λ", 130, cy - 10);
+
+    var len = 220;
+    var ex = cx + len * Math.cos(rad), ey = cy - len * Math.sin(rad);
+    ctx.strokeStyle = "#7c3aed"; ctx.lineWidth = 2.2;
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(ex, ey); ctx.stroke();
+    ctx.fillStyle = "#5b21b6"; ctx.fillText("فوتون مستطار λ′", (cx + ex) / 2 + 40, (cy + ey) / 2 - 10);
+
+    ctx.strokeStyle = "#94a3b8"; ctx.setLineDash([3, 3]);
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx + 60, cy); ctx.stroke(); ctx.setLineDash([]);
+    ctx.beginPath(); ctx.arc(cx, cy, 30, -rad, 0, rad > 0); ctx.strokeStyle = "#334155"; ctx.lineWidth = 1.2; ctx.stroke();
+    ctx.fillStyle = "#334155"; ctx.fillText("θ", cx + 38, cy - 6);
+
+    var eex = cx + 130 * Math.cos(rad + Math.PI * 0.55), eey = cy + 130 * Math.sin(-(rad + Math.PI * 0.55)) * -1;
+    ctx.strokeStyle = "#059669"; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx - 90, cy + 70); ctx.stroke();
+    ctx.fillStyle = "#065f46"; ctx.fillText("إلكترون حر", cx - 110, cy + 90);
+
+    readout.innerHTML = "θ = " + arNum(th) + "° &nbsp;→&nbsp; Δλ = (h/mₑc)(1−cos" + arNum(th) + "°) ≈ " + dLam.toExponential(2) + " m" +
+      (th === 0 ? " (لا استطارة فعلية = لا تصادم = لا تغيّر بالطول الموجي)" : th === 180 ? " (أقصى زيادة ممكنة — الفوتون ارتدّ للخلف تماماً)" : "");
+  }
+  thR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "في تجربة كومبتن، ماذا لاحظ بخصوص الطول الموجي للأشعة السينية المستطارة عن هدف الكرافيت؟",
+    opts: ["أقصر من الطول الموجي الساقط دائماً", "يساوي الطول الموجي الساقط تماماً دون أي تغيّر", "يعتمد فقط على شدة الحزمة الساقطة لا على أي شيء آخر", "أطول بقليل من الطول الموجي الساقط، ويزداد الفرق مع زاوية الاستطارة"], a: 3,
+    why: "الطول الموجي المستطار λ′ أطول من الساقط λ، وفرقهما (λ′−λ) يزداد كلما كبرت زاوية الاستطارة θ." },
+  { q: "بأي نوع من التصادم فسّر كومبتن تفاعل الفوتون مع الإلكترون الحر؟",
+    opts: ["تصادم غير مرن تفنى فيه الطاقة الحركية بالكامل", "تصادم مرن، يخضع لحفظ الزخم وحفظ الطاقة معاً", "لا يوجد أي تصادم؛ الفوتون يمرّ دون أي تأثير", "تصادم كهرومغناطيسي بحت لا علاقة له بالميكانيك"], a: 1,
+    why: "افترض كومبتن تصادماً مرناً بين الفوتون والإلكترون الحر، خاضعاً لقانونَي حفظ الزخم وحفظ الطاقة — تماماً كتصادم جسيمين ميكانيكيين." },
+  { q: "ما القيمة العددية لطول موجة كومبتن h/(mₑc)؟",
+    opts: ["6.63×10⁻³⁴ m", "9.11×10⁻³¹ m", "0.24×10⁻¹¹ m", "3×10⁸ m"], a: 2,
+    why: "h/(mₑc) = (6.63×10⁻³⁴)/(9.11×10⁻³¹×3×10⁸) ≈ 0.24×10⁻¹¹ m — قيمة ثابتة تُستعمل مباشرة بعلاقة كومبتن." },
+  { q: "فوتون استطار بزاوية 180° (ارتدّ للخلف تماماً) بتأثير كومبتن. ما مقدار الزيادة في طوله الموجي؟",
+    opts: ["صفر تماماً", "0.24×10⁻¹¹ m", "0.48×10⁻¹¹ m", "لا نهاية"], a: 2,
+    why: "عند θ=180°: cos180°=−1، فإن Δλ=(h/mₑc)(1−(−1))=2×0.24×10⁻¹¹=0.48×10⁻¹¹m — أقصى زيادة ممكنة." },
+  { q: "لماذا يُعدّ تأثير كومبتن دليلاً على أن الفوتون يحمل زخماً خطياً كالجسيمات المادية؟",
+    opts: ["لأن الفوتون عديم الكتلة فلا يمكن أن يملك أي زخم إطلاقاً", "لأن تفسير الزيادة بالطول الموجي يتطلّب تطبيق قانون حفظ الزخم بين الفوتون والإلكترون، وهذا يستلزم أن يملك الفوتون زخماً محدداً قابلاً للتبادل", "لأن تأثير كومبتن لا علاقة له بمفهوم الزخم أصلاً", "لأن الإلكترون هو فقط من يملك زخماً بهذا التفاعل، لا الفوتون"], a: 1,
+    why: "تفسير كومبتن للظاهرة يعتمد أساساً على معادلة حفظ الزخم بين فوتون وإلكترون، وهذا يفترض ضمناً أن للفوتون زخماً محدداً (p=h/λ) يتبادله مع الإلكترون أثناء التصادم." }
+], { onDone: function (stars) { Phy.setLesson("g6c8", "5", { stars: stars }); } });
+</script>
+</body>
+</html>

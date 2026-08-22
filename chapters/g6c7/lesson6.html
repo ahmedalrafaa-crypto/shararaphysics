@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 6: فولطية الانحياز للثنائي pn — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c7">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السابع</a> / الدرس 6</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔀 الدرس 6: فولطية الانحياز للثنائي pn</h1>
+    <p>وصلة pn وحدها (بلا بطارية) في حالة توازن ساكن. لكن اربطها ببطارية خارجية بقطبية معيّنة، وستفتح الوصلة للتيار بسهولة تامة؛ اعكس القطبية، وستُغلقها كلياً تقريباً. هذا السلوك "أحادي الاتجاه" هو ما يجعل الثنائي أهم عنصر تحكّم بالإلكترونيات كلها.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔋</span>
+    <span><b>الانحياز</b> (Biasing) يعني ببساطة: توصيل الثنائي بمصدر جهد خارجي (بطارية). النتيجة تعتمد كلياً على قطبية هذا التوصيل — وجهان لعملة واحدة، بنتيجتين متعاكستين تماماً.</span>
+  </div>
+
+  <!-- ======== المحاكاة: الانحياز الأمامي والعكسي ======== -->
+  <div class="sim">
+    <h3>🔋 مختبر: انحياز الثنائي</h3>
+    <p class="sim-sub">حرّك المزلاج لتغيير فولطية البطارية المطبقة V (سالبة=انحياز عكسي، موجبة=انحياز أمامي). راقب عرض منطقة الاستنزاف والتيار المار ونقطة التشغيل على منحني الخواص.</p>
+    <div class="sim-scroll"><canvas id="biasSim" width="700" height="330"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً إن لزم</p>
+    <div class="controls">
+      <div class="slider-group">الفولطية المطبقة V: <b id="vVal">٠.٠٠ V</b>
+        <input type="range" id="vR" min="-5" max="2" step="0.05" value="0"></div>
+    </div>
+    <div class="readout" id="biasReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> الانحياز الأمامي (Forward Bias)</div>
+  <div class="card">
+    <p>نوصل القطب الموجب للبطارية بجهة p، والقطب السالب بجهة n. المجال الخارجي الناتج <b>يعاكس</b> المجال الداخلي بمنطقة الاستنزاف، فيدفع الفجوات والإلكترونات نحو الوصلة، مما <b>يُضيّق</b> منطقة الاستنزاف تدريجياً. بمجرد أن تتجاوز الفولطية المطبقة جهد الحاجز (~0.7V للسيليكون)، تنهار منطقة الاستنزاف عملياً، ويتدفق تيار كبير بسهولة تامة عبر الثنائي — <b>مقاومة منخفضة جداً</b>.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🚫</span> الانحياز العكسي (Reverse Bias)</div>
+  <div class="card">
+    <p>نعكس التوصيل: القطب الموجب لجهة n، والسالب لجهة p. المجال الخارجي الآن <b>يعزز</b> المجال الداخلي، فيسحب حاملات الشحنة الأغلبية بعيداً عن الوصلة، مما <b>يوسّع</b> منطقة الاستنزاف. يكاد التيار ينعدم تماماً (يمر فقط <b>تيار تسرب عكسي</b> ضئيل جداً، ناتج عن حاملات الأقلية الحرارية المنشأ) — <b>مقاومة عالية جداً</b>. عند تجاوز فولطية عكسية حرجة تُسمى <b>جهد الانهيار</b>، ينهار الثنائي ويتدفق تيار عكسي كبير فجأة (سنستثمر هذا السلوك بالدرس القادم مع ثنائي زينر).</p>
+  </div>
+
+  <div class="tblwrap">
+    <table class="nice">
+      <thead><tr><th>الخاصية</th><th>الانحياز الأمامي</th><th>الانحياز العكسي</th></tr></thead>
+      <tbody>
+        <tr><td>توصيل البطارية</td><td>+ لجهة p، − لجهة n</td><td>+ لجهة n، − لجهة p</td></tr>
+        <tr><td>عرض منطقة الاستنزاف</td><td>يضيق تدريجياً</td><td>يتّسع تدريجياً</td></tr>
+        <tr><td>المقاومة الفعلية</td><td>منخفضة جداً (بعد تجاوز ~0.7V)</td><td>عالية جداً</td></tr>
+        <tr><td>التيار</td><td>كبير، يزداد بسرعة مع V</td><td>شبه معدوم (تيار تسرب ضئيل فقط)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">دائرة فيها بطارية 6V موصولة على التوالي مع ثنائي سيليكون (منحاز أمامياً، جهد عتبته V₀=0.7V) ومقاومة R=470Ω. جد التيار المار بالدائرة.</div>
+    <div class="givens">المعطيات: EMF=6V — V₀=0.7V — R=470Ω</div>
+    <div class="step"><b>الخطوة ١:</b> بعد تجاوز العتبة، يُنمذَج الثنائي المنحاز أمامياً بمصدر هبوط جهد ثابت تقريباً V₀. نطبّق قانون فولط على الدارة:
+      <div class="math">EMF = V₀ + IR</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نحل لإيجاد التيار:
+      <div class="math">I = (EMF − V₀) / R = (6 − 0.7) / 470 = 5.3 / 470 ≈ 0.0113 A ≈ 11.3 mA</div>
+      💡 لاحظ أن هبوط الجهد على الثنائي نفسه يبقى ثابتاً تقريباً عند 0.7V بغض النظر عن قيمة التيار (طالما موصولاً أمامياً)؛ كل الفولطية "الزائدة" عن هذه العتبة تهبط على المقاومة R وحدها.</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> يكاد التيار ينعدم في الثنائي المنحاز عكسياً، رغم وجود حاملات شحنة (أقلية) فيه فعلاً.</summary>
+    <div class="ans">لأن الانحياز العكسي يوسّع منطقة الاستنزاف ويسحب حاملات الشحنة الأغلبية (الكثيرة جداً) بعيداً عن الوصلة تماماً، فلا تسهم في أي تيار. أما حاملات الأقلية (قليلة جداً أصلاً، منشؤها حراري بحت) فهي الوحيدة القادرة على عبور الوصلة بهذا الاتجاه، فينتج عنها تيار تسرب عكسي ضئيل جداً فقط — لا معدوم تماماً، لكنه مهمَل عملياً مقارنة بتيار الانحياز الأمامي.</div>
+  </details>
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> علّل: انسياب تيار كبير في دائرة الثنائي البلوري pn عندما تزداد فولطية الانحياز بالاتجاه الأمامي. <span class="wz">الدور الثاني 2018</span></summary>
+    <div class="ans">لأن اتجاه المجال الكهربائي المسلّط (بالانحياز الأمامي) يكون معاكساً لاتجاه مجال حاجز الجهد وأكبر منه، فتضيق منطقة الاستنزاف ويقلّ حاجز الجهد، وتقلّ مقاومة الملتقى، فتتمكّن حوامل الأغلبية من التغلّب على حاجز الجهد وعبور الملتقى، فينساب تيار كبير.</div>
+  </details>
+  <details class="qa">
+    <summary><span class="tag">صح أو خطأ · وزاري</span> «يزداد مقدار حاجز الجهد في الثنائي البلوري عندما يكون محيّزاً بالاتجاه الأمامي». <span class="wz">الدور الثالث 2019</span></summary>
+    <div class="ans"><b>خطأ.</b> التصحيح: يقلّ مقدار حاجز الجهد في الثنائي البلوري عندما يكون محيّزاً بالاتجاه الأمامي (ويزداد في الانحياز العكسي).</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson7.html">الدرس التالي: بعض أنواع الثنائيات 💡</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة الانحياز الأمامي والعكسي ---------- */
+(function () {
+  var cv = document.getElementById("biasSim"), ctx = cv.getContext("2d");
+  var vR = document.getElementById("vR"), vVal = document.getElementById("vVal");
+  var readout = document.getElementById("biasReadout");
+  var V0 = 0.7;
+
+  function fmt(n, d) { return n.toFixed(d === undefined ? 2 : d).replace(/[0-9]/g, function (x) { return "٠١٢٣٤٥٦٧٨٩"[x]; }); }
+
+  // نموذج توضيحي مبسّط للتيار (ليس معادلة شوكلي الدقيقة) لأغراض الشرح البصري فقط
+  function currentModel(V) {
+    if (V >= V0) return 0.4 + 8 * Math.pow(V - V0, 1.6);
+    if (V >= 0) return (V / V0) * 0.15;
+    return -0.15; // تيار تسرب عكسي صغير جداً، مُبالَغ به بصرياً كي يظهر بالرسم
+  }
+
+  function draw() {
+    var V = +vR.value;
+    vVal.textContent = fmt(V) + " V";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.textAlign = "center";
+
+    var forward = V >= 0;
+    var frac = forward ? Math.min(1, V / V0) : Math.min(1, -V / 5);
+    var depW = forward ? 55 * (1 - 0.85 * frac) : 55 * (1 + 1.6 * frac);
+
+    // ------- رسم البلورة والانحياز (الجزء العلوي) -------
+    var midX = 350, top = 15, h = 130;
+    ctx.fillStyle = "#fee2e2"; ctx.fillRect(60, top, midX - 60, h);
+    ctx.fillStyle = "#dbeafe"; ctx.fillRect(midX, top, 640 - midX, h);
+    ctx.fillStyle = "rgba(180,83,9,.15)"; ctx.fillRect(midX - depW, top, 2 * depW, h);
+    ctx.strokeStyle = "#334155"; ctx.lineWidth = 2; ctx.strokeRect(60, top, 580, h);
+
+    ctx.font = "bold 12px Cairo";
+    ctx.fillStyle = "#7f1d1d"; ctx.fillText("p", 160, top + h / 2);
+    ctx.fillStyle = "#1e3a8a"; ctx.fillText("n", 540, top + h / 2);
+
+    // البطارية والأسلاك
+    var by = top + h + 34;
+    ctx.strokeStyle = "#334155"; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(60, top + h); ctx.lineTo(60, by); ctx.lineTo(640, by); ctx.lineTo(640, top + h); ctx.stroke();
+    var bx = 350;
+    ctx.beginPath();
+    ctx.moveTo(bx - 18, by); ctx.lineTo(bx - 18, by - 16);
+    ctx.moveTo(bx, by); ctx.lineTo(bx, by - 24);
+    ctx.lineWidth = 3; ctx.strokeStyle = "#334155"; ctx.stroke();
+
+    ctx.font = "bold 11px Cairo"; ctx.fillStyle = "#334155";
+    var leftLabel = forward ? "+" : "−", rightLabel = forward ? "−" : "+";
+    ctx.fillText(leftLabel, bx - 30, by - 6);
+    ctx.fillText(rightLabel, bx + 14, by - 6);
+
+    // جزيئات تيار متحركة عند التوصيل الأمامي الفعّال
+    if (forward && V > V0 * 0.55) {
+      var t = Date.now() / 300;
+      for (var i = 0; i < 6; i++) {
+        var pos = (t + i / 6) % 1;
+        var px = 640 - pos * 580;
+        ctx.beginPath(); ctx.arc(px, by, 4, 0, Math.PI * 2);
+        ctx.fillStyle = "#16a34a"; ctx.fill();
+      }
+    }
+
+    // ------- منحني الخواص (الجزء السفلي) -------
+    var gx = 100, gy = 300, gw = 480, gh = 110, gTop = gy - gh;
+    ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(gx, gTop); ctx.lineTo(gx, gy); ctx.lineTo(gx + gw, gy); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(gx, gy - gh / 2); ctx.lineTo(gx + gw, gy - gh / 2); ctx.strokeStyle = "#e2e8f0"; ctx.stroke();
+    ctx.fillStyle = "#94a3b8"; ctx.font = "10px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("الفولطية V (عكسي ← 0 → أمامي)", gx + gw / 2, gy + 18);
+    ctx.save(); ctx.translate(gx - 20, gy - gh / 2); ctx.rotate(-Math.PI / 2); ctx.fillText("التيار I", 0, 0); ctx.restore();
+
+    function toX(v) { return gx + ((v + 5) / 7) * gw; }
+    function toY(i) { return (gy - gh / 2) - i * 9; }
+
+    ctx.strokeStyle = "#b45309"; ctx.lineWidth = 2.5; ctx.beginPath();
+    for (var vv = -5; vv <= 2; vv += 0.05) {
+      var ii = currentModel(vv);
+      var xx = toX(vv), yy = toY(ii);
+      vv === -5 ? ctx.moveTo(xx, yy) : ctx.lineTo(xx, yy);
+    }
+    ctx.stroke();
+
+    var iNow = currentModel(V);
+    var opX = toX(V), opY = toY(iNow);
+    ctx.beginPath(); ctx.arc(opX, opY, 5.5, 0, Math.PI * 2);
+    ctx.fillStyle = "#dc2626"; ctx.fill(); ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.5; ctx.stroke();
+
+    var zeroX = toX(0);
+    ctx.strokeStyle = "#94a3b8"; ctx.setLineDash([3, 3]); ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(zeroX, gTop); ctx.lineTo(zeroX, gy); ctx.stroke(); ctx.setLineDash([]);
+
+    var msg = !forward
+      ? "انحياز عكسي: منطقة الاستنزاف اتّسعت، والتيار شبه معدوم (تيار تسرب ضئيل فقط) — مقاومة عالية جداً."
+      : V < V0
+      ? "انحياز أمامي دون العتبة بعد (V < 0.7V): منطقة الاستنزاف تضيق، لكن التيار ما يزال ضئيلاً جداً."
+      : "انحياز أمامي فوق العتبة (V > 0.7V): منطقة الاستنزاف تلاشت تقريباً، والتيار يتدفق بقوة — مقاومة منخفضة جداً.";
+    readout.innerHTML = msg;
+  }
+
+  vR.addEventListener("input", draw);
+  draw();
+  setInterval(function () { if (+vR.value >= V0 * 0.55) draw(); }, 200);
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "لتوصيل ثنائي pn توصيلاً أمامياً (Forward Bias)، كيف يجب ربط أقطاب البطارية؟",
+    opts: ["القطب الموجب لجهة n، والقطب السالب لجهة p", "القطب الموجب لجهة p، والقطب السالب لجهة n", "كلا القطبين لجهة p فقط", "لا فرق إطلاقاً؛ أي توصيل يُعطي نفس النتيجة"], a: 1,
+    why: "الانحياز الأمامي يتطلب ربط الموجب بجهة p والسالب بجهة n، بحيث يعاكس المجال الخارجي المجال الداخلي بمنطقة الاستنزاف." },
+  { q: "ماذا يحدث لعرض منطقة الاستنزاف عند الانحياز العكسي؟",
+    opts: ["تضيق (تصغر) تدريجياً حتى تختفي كلياً", "تبقى ثابتة تماماً بلا أي تغيّر", "تختفي فوراً بأي فولطية عكسية مهما صغرت", "تتّسع (تكبر) تدريجياً مع زيادة الفولطية العكسية"], a: 3,
+    why: "الانحياز العكسي يسحب حاملات الشحنة الأغلبية بعيداً عن الوصلة، فتتّسع منطقة الاستنزاف تدريجياً مع زيادة الفولطية العكسية." },
+  { q: "دائرة فيها بطارية 3V وثنائي سيليكون منحاز أمامياً (V₀=0.7V) ومقاومة R=100Ω على التوالي. جد التيار المار.",
+    opts: ["≈23 mA", "≈30 mA", "≈7 mA", "≈100 mA"], a: 0,
+    why: "I=(EMF−V₀)/R=(3−0.7)/100=2.3/100=0.023A≈23mA." },
+  { q: "لماذا يظل التيار في الانحياز العكسي ضئيلاً جداً (تيار تسرب فقط) بدل أن ينعدم تماماً؟",
+    opts: ["لأن البطارية نفسها معطوبة دوماً بهذا التوصيل", "لأن حاملات الشحنة الأغلبية تعبر الوصلة بحرية تامة رغم الانحياز العكسي", "بسبب حاملات الشحنة الأقلية (حرارية المنشأ) القادرة على عبور الوصلة رغم اتساع منطقة الاستنزاف", "لأن منطقة الاستنزاف تختفي تماماً بالانحياز العكسي"], a: 2,
+    why: "حاملات الأقلية القليلة (نشأت حرارياً، لا بالتطعيم) هي وحدها القادرة على العبور مهما كان اتجاه الانحياز، فتنتج تيار تسرب عكسي صغيراً لكن غير معدوم تماماً." },
+  { q: "بمنحني خواص الثنائي (I مقابل V)، ماذا يحدث بعد تجاوز الفولطية العكسية «جهد الانهيار»؟",
+    opts: ["يبقى التيار صفراً تماماً مهما زادت الفولطية العكسية", "يتحول الثنائي تلقائياً لعازل تام دائم", "يتوقف الثنائي عن التوصيل بأي اتجاه إلى الأبد", "ينهار الثنائي ويتدفق فجأة تيار عكسي كبير جداً"], a: 3,
+    why: "عند فولطية عكسية كافية (جهد الانهيار)، ينهار الثنائي ويسمح بمرور تيار عكسي كبير فجأة — سلوك تستثمره ثنائيات زينر بالدرس القادم." },
+  { q: "لماذا يبقى هبوط الجهد على الثنائي المنحاز أمامياً ثابتاً تقريباً (≈0.7V للسيليكون) مهما زاد التيار المار؟",
+    opts: ["لأن التيار في هذه الحالة يساوي صفراً دوماً", "لأن جهد الحاجز خاصية شبه ثابتة للمادة نفسها بعد تجاوز العتبة، وأي زيادة بفولطية المصدر تهبط أساساً على بقية عناصر الدارة (كالمقاومة)", "لأن الثنائي يتحول لعازل تام فور تجاوز 0.7V", "لأن هذا سلوك عشوائي بلا أي تفسير فيزيائي"], a: 1,
+    why: "بعد تجاوز جهد الحاجز، يبقى هبوط الجهد على الثنائي قريباً من هذه القيمة المميِّزة للمادة، وتظهر أي زيادة إضافية بفولطية المصدر كهبوط جهد على بقية عناصر الدارة (كالمقاومة R في المثال المحلول)." }
+], { onDone: function (stars) { Phy.setLesson("g6c7", "6", { stars: stars }); } });
+</script>
+</body>
+</html>

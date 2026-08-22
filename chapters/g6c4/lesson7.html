@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 7: التضمين — AM وFM وPM — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c4">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الرابع</a> / الدرس 7</span>
+  </div>
+
+  <div class="hero">
+    <h1>📻 الدرس 7: التضمين — AM وFM وPM</h1>
+    <p>صوتك تردده منخفض جداً (بضع مئات الهرتز). لو أرسلناه مباشرة لاحتجنا هوائياً بطول كيلومترات، ولانتشر بضعف شديد. الحل: نُحمِّله على موجة عالية التردد تسافر بكفاءة — هذه العملية تُسمّى التضمين.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🎙️</span>
+    <span>فكّر بالأمر كسيارة بريد: صوتك (المعلومة) لا يقدر يقطع مسافات طويلة بنفسه، فتحمّله على "شاحنة" سريعة (الموجة الحاملة عالية التردد) توصله لوجهته. بالمحطة النهائية (جهاز الاستقبال) تُفرَّغ الشاحنة من حمولتها فيعود صوتك كما كان. السؤال: كيف بالضبط "نحمّل" الصوت على الموجة الحاملة؟ ثلاث طرائق ممكنة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📦</span> التضمين: تحميل المعلومة على الموجة الحاملة</div>
+  <div class="card">
+    <p><b>التضمين</b> هو تحميل إشارة المعلومات (صوت أو صورة) ذات التردد الواطئ على <b>الموجة الحاملة</b> ذات التردد العالي. وفي <b>التضمين التماثلي</b> (analog) نغيّر إحدى خصائص الموجة الحاملة وفق إشارة المعلومة، فتنشأ ثلاثة أنواع:</p>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+    <div class="card" style="margin:0">
+      <b>📻 التضمين السعوي AM</b>
+      <p style="margin-top:6px;font-size:.92rem">نغيّر <b>سعة</b> الموجة الحاملة كدالة خطية وفق تردد إشارة المعلومة، مع ثبوت تردّدها.</p>
+    </div>
+    <div class="card" style="margin:0">
+      <b>📶 التضمين الترددي FM</b>
+      <p style="margin-top:6px;font-size:.92rem">نغيّر <b>تردد</b> الموجة الحاملة وفق سعة إشارة المعلومة، مع ثبوت سعتها.</p>
+    </div>
+    <div class="card" style="margin:0">
+      <b>🌀 التضمين الطوري PM</b>
+      <p style="margin-top:6px;font-size:.92rem">نغيّر <b>طور</b> الموجة الحاملة وفق سعة إشارة المعلومة.</p>
+    </div>
+  </div>
+  <div class="defbox">
+    <b class="term">انتبه:</b> يوجد أيضاً <b>التضمين الرقمي</b> (digital) الذي يحوّل المعلومة إلى نبضات، ويقلّل تأثير التشويش الخارجي فيرفع دقّة الإرسال والتسلم — وهو أساس الاتصالات الحديثة (الإنترنت، الجوال).
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> ما المقصود بالتضمين السعوي؟ <span class="wz">الدور الأول 2024</span></summary>
+    <div class="ans">هو نوع من التضمين التماثلي نغيّر فيه سعة (مقدار) الموجة الحاملة ذات التردد العالي كدالة خطية وفق تردد الإشارة (المعلومة) المحمولة، مع بقاء تردد الموجة الحاملة ثابتاً.</div>
+  </details>
+
+  <!-- ======== المحاكاة: AM مقابل FM ======== -->
+  <div class="sim">
+    <h3>📡 مختبر التضمين: AM مقابل FM</h3>
+    <p class="sim-sub">راقب إشارة المعلومة (وسط) تُضمَّن على الموجة الحاملة (أعلى) لتنتج الموجة المرسلة (أسفل، مميّزة). بـAM يتغيّر "غلاف" الموجة (سعتها) تبعاً للإشارة؛ بـFM تتغيّر كثافة تذبذبها (ترددها) تبعاً لها، وتبقى سعتها ثابتة.</p>
+    <div class="sim-scroll"><canvas id="modSim" width="700" height="290"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">نوع التضمين:
+        <select id="modType" style="padding:8px;border-radius:10px;border:2px solid #e9ebfa;font-family:inherit;font-weight:700">
+          <option value="am">📻 تضمين سعوي AM</option>
+          <option value="fm">📶 تضمين ترددي FM</option>
+        </select></div>
+      <div class="slider-group">تردد إشارة المعلومة: <b id="mfVal">٢</b>
+        <input type="range" id="mfR" min="1" max="5" step="1" value="2"></div>
+      <div class="slider-group">شدّة التضمين: <b id="idxVal">٦٠</b>
+        <input type="range" id="idxR" min="20" max="90" step="5" value="60"></div>
+    </div>
+    <div class="readout" id="modReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="defbox">
+    <b class="term">هل تعلم؟</b> راديو FM أنقى صوتاً من AM لأن المعلومة فيه محمولة بالتردد لا بالسعة، والتشويش الجوي (كالبرق) يغيّر السعة لا التردد — فلا يكاد يؤثّر بـFM بينما يشوّش AM بوضوح.
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz7"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson6.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson8.html">الدرس التالي: مدى الموجات الراديوية 📶</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة AM مقابل FM (اختيار/سحب: تعيد الرسم عند الإدخال فقط) ---------- */
+(function () {
+  var cv = document.getElementById("modSim"), ctx = cv.getContext("2d");
+  var modType = document.getElementById("modType");
+  var mfR = document.getElementById("mfR"), mfVal = document.getElementById("mfVal");
+  var idxR = document.getElementById("idxR"), idxVal = document.getElementById("idxVal");
+  var readout = document.getElementById("modReadout");
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+
+  var x0 = 40, x1 = 660;
+  var carrierY = 55, msgY = 145, outY = 240;
+  var carrierFreqPx = 0.55; // rad/px بصري
+
+  function lane(y, label, color) {
+    ctx.strokeStyle = "#e2e8f0"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(x0 - 5, y); ctx.lineTo(x1 + 5, y); ctx.stroke();
+    ctx.fillStyle = color; ctx.font = "bold 12px Cairo"; ctx.textAlign = "left";
+    ctx.fillText(label, x0, y - 34);
+  }
+
+  function draw() {
+    var type = modType.value;
+    var mf = +mfR.value, idx = +idxR.value / 100;
+    mfVal.textContent = arNum(mf); idxVal.textContent = arNum(Math.round(idx * 100));
+    var msgFreqPx = mf * 0.045;
+
+    ctx.direction = "ltr";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    lane(carrierY, "الموجة الحاملة (ثابتة السعة والتردد)", "#0369a1");
+    lane(msgY, "إشارة المعلومة (منخفضة التردد)", "#16a34a");
+    ctx.strokeStyle = "#f1c9a8"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(x0 - 5, outY); ctx.lineTo(x1 + 5, outY); ctx.stroke();
+    ctx.fillStyle = "#ea580c"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "left";
+    ctx.fillText(type === "am" ? "الموجة المضمَّنة (AM — سعتها تتبع الإشارة)" : "الموجة المضمَّنة (FM — ترددها يتبع الإشارة)", x0, outY - 34);
+
+    // الحاملة
+    ctx.strokeStyle = "#0369a1"; ctx.lineWidth = 1.8;
+    ctx.beginPath();
+    for (var x = x0; x <= x1; x++) {
+      var y = carrierY - Math.sin((x - x0) * carrierFreqPx) * 22;
+      x === x0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+
+    // إشارة المعلومة
+    ctx.strokeStyle = "#16a34a"; ctx.lineWidth = 2.2;
+    ctx.beginPath();
+    for (var x2 = x0; x2 <= x1; x2++) {
+      var y2 = msgY - Math.sin((x2 - x0) * msgFreqPx) * 26;
+      x2 === x0 ? ctx.moveTo(x2, y2) : ctx.lineTo(x2, y2);
+    }
+    ctx.stroke();
+
+    // الموجة المضمّنة
+    ctx.strokeStyle = "#ea580c"; ctx.lineWidth = 2.4;
+    ctx.beginPath();
+    if (type === "am") {
+      for (var x3 = x0; x3 <= x1; x3++) {
+        var msg = Math.sin((x3 - x0) * msgFreqPx);
+        var env = (1 + idx * msg) * 22;
+        var y3 = outY - Math.sin((x3 - x0) * carrierFreqPx) * env;
+        x3 === x0 ? ctx.moveTo(x3, y3) : ctx.lineTo(x3, y3);
+      }
+      ctx.stroke();
+      // غلاف الموجة (توضيحي)
+      ctx.strokeStyle = "#fbbf24"; ctx.setLineDash([3, 3]); ctx.lineWidth = 1.2;
+      ctx.beginPath();
+      for (var xa = x0; xa <= x1; xa++) {
+        var envA = (1 + idx * Math.sin((xa - x0) * msgFreqPx)) * 22;
+        xa === x0 ? ctx.moveTo(xa, outY - envA) : ctx.lineTo(xa, outY - envA);
+      }
+      ctx.stroke();
+      ctx.beginPath();
+      for (var xb = x0; xb <= x1; xb++) {
+        var envB = (1 + idx * Math.sin((xb - x0) * msgFreqPx)) * 22;
+        xb === x0 ? ctx.moveTo(xb, outY + envB) : ctx.lineTo(xb, outY + envB);
+      }
+      ctx.stroke(); ctx.setLineDash([]);
+    } else {
+      var beta = idx * 4.5;
+      for (var x4 = x0; x4 <= x1; x4++) {
+        var phase = (x4 - x0) * carrierFreqPx + beta * Math.sin((x4 - x0) * msgFreqPx);
+        var y4 = outY - Math.sin(phase) * 22;
+        x4 === x0 ? ctx.moveTo(x4, y4) : ctx.lineTo(x4, y4);
+      }
+      ctx.stroke();
+    }
+
+    readout.innerHTML = type === "am"
+      ? "AM: سعة الموجة المرسلة (الخط المتقطع الأصفر هو غلافها) تتبع شكل إشارة المعلومة تماماً، بينما تردّدها ثابت لا يتغيّر."
+      : "FM: تردّد الموجة المرسلة (كثافة تذبذبها) يتبع شكل إشارة المعلومة — كثافة أعلى عند قمة الإشارة وأقل عند قاعها — بينما سعتها ثابتة لا تتغيّر.";
+  }
+  [mfR, idxR].forEach(function (s) { s.addEventListener("input", draw); });
+  modType.addEventListener("change", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz7", [
+  { q: "لماذا لا نُرسل إشارة الصوت مباشرة كما هي عبر الهواء بدل تضمينها على موجة حاملة؟",
+    opts: ["لأن ترددها منخفض جداً، فتحتاج هوائياً طويلاً جداً (كيلومترات) وتنتشر بضعف شديد", "لأن الصوت لا يمكن تحويله لإشارة كهربائية إطلاقاً", "لأن الأذن البشرية لا تسمع الترددات العالية فقط", "لا يوجد سبب فيزيائي حقيقي لذلك"], a: 0,
+    why: "تردد الصوت منخفض جداً (مئات الهرتز)، فيحتاج هوائياً بطول غير عملي (كيلومترات) وينتشر بكفاءة ضعيفة جداً — لذا نُحمِّله على موجة حاملة عالية التردد." },
+  { q: "ما الذي يتغيّر بالتضمين السعوي AM، وماذا يبقى ثابتاً؟",
+    opts: ["تتغيّر سعة الموجة الحاملة وفق إشارة المعلومة، ويبقى ترددها ثابتاً", "يتغيّر تردد الموجة الحاملة، وتبقى سعتها ثابتة", "يتغيّران معاً بنفس الوقت دائماً", "لا يتغيّر أي منهما، بل يتغيّر الطور فقط"], a: 0,
+    why: "AM = Amplitude Modulation: نغيّر سعة (مقدار) الموجة الحاملة كدالة خطية وفق تردد إشارة المعلومة، مع ثبوت تردّدها." },
+  { q: "ما الذي يتغيّر بالتضمين الترددي FM؟",
+    opts: ["تردد الموجة الحاملة يتغيّر وفق سعة إشارة المعلومة، مع ثبوت سعة الحاملة", "سعة الموجة الحاملة فقط، مع ثبوت ترددها", "طور الموجة الحاملة فقط", "لا شيء يتغيّر إطلاقاً بـFM"], a: 0,
+    why: "FM = Frequency Modulation: نغيّر تردد الموجة الحاملة وفق سعة إشارة المعلومة، مع ثبوت سعتها." },
+  { q: "لماذا يكون صوت راديو FM عادة أنقى وأقل تشويشاً من AM (خصوصاً أثناء العواصف الرعدية)؟",
+    opts: ["لأن المعلومة بـFM محمولة بالتردد، والتشويش الجوي (كالبرق) يغيّر السعة أساساً لا التردد", "لأن محطات FM أقوى إرسالاً من AM دائماً بلا استثناء", "لأن الأذن البشرية تفضّل الترددات المستعملة بـFM فقط", "لا فرق حقيقي بين نقاوة الاثنين إطلاقاً"], a: 0,
+    why: "تشويش كالبرق يؤثر أساساً بسعة الموجة الملتقطة؛ بما أن معلومة AM محمولة بالسعة فتتأثر بوضوح، بينما معلومة FM محمولة بالتردد فلا يكاد التشويش يؤثر بها." },
+  { q: "ما التضمين الطوري PM؟",
+    opts: ["تغيير طور الموجة الحاملة وفق سعة إشارة المعلومة", "تغيير سعة الموجة الحاملة فقط", "تغيير تردد الموجة الحاملة فقط", "إلغاء الموجة الحاملة كلياً واستبدالها بالإشارة مباشرة"], a: 0,
+    why: "PM = Phase Modulation: نغيّر طور الموجة الحاملة وفق سعة إشارة المعلومة." },
+  { q: "ما ميزة التضمين الرقمي (Digital) مقارنة بالتضمين التماثلي (Analog)؟",
+    opts: ["يحوّل المعلومة إلى نبضات، فيقلّل تأثير التشويش الخارجي ويرفع دقّة الإرسال والتسلم", "لا يحتاج أي موجة حاملة إطلاقاً", "أبطأ دائماً من التضمين التماثلي", "يعمل فقط مع الصوت لا الصورة أو البيانات"], a: 0,
+    why: "التضمين الرقمي يحوّل المعلومة لنبضات منفصلة، وهذا يقلّل تأثير التشويش الخارجي مقارنة بالإشارة التماثلية المستمرة، فترتفع دقّة الإرسال والتسلم." }
+], { onDone: function (stars) { Phy.setLesson("g6c4", "7", { stars: stars }); } });
+</script>
+</body>
+</html>

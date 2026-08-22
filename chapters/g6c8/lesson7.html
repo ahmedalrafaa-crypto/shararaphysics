@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 7: التوزيع المعكوس ومكونات الليزر ومنظوماته — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c8">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثامن</a> / الدرس 7</span>
+  </div>
+
+  <div class="hero">
+    <h1>⚙️ الدرس 7: التوزيع المعكوس ومكونات الليزر ومنظوماته</h1>
+    <p>بالحالة الطبيعية، تفضّل الذرّات دائماً الاستقرار بأدنى طاقة ممكنة — فتجد أغلبها بالمستوى الأرضي دوماً. لتوليد الليزر يجب "خداع" الطبيعة وقلب هذا التوزيع رأساً على عقب: نجعل عدد الذرّات المتهيّجة أكبر من عدد الذرّات المستقرّة! هذا الدرس يشرح كيف يتحقّق هذا القلب غير الطبيعي، وما الأجهزة اللازمة له.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">📐</span>
+    <span>بالدرس السابق تعرّفت على الانبعاث المحفَّز. لكن لكي يهيمن هذا الانبعاث ويُنتج تضخيماً حقيقياً، يجب توفّر شرط رياضي دقيق تصفه معادلة بولتزمان.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📊</span> قانون بولتزمان والتوزيع الطبيعي</div>
+  <div class="card">
+    <p>في نظام باتزان حراري (ذرّات أو جزيئات أو أيونات)، تكون معظم الذرّات بالمستويات الواطئة للطاقة، ونسبة قليلة فقط متهيّجة بالمستويات العليا — أي أن عدد الذرّات (التوزيع/الاستيطان Population) بالمستوى الأرضي N₁ أكبر من عددها بالمستوى الأعلى N₂ دائماً: N₁ &gt; N₂.</p>
+  </div>
+  <div class="lawbox">
+    قانون بولتزمان
+    <div class="formula">N₂/N₁ = exp[−(E₂ − E₁)/kT]</div>
+    <p style="margin-top:6px;font-size:.82rem">k ثابت بولتزمان، T درجة الحرارة بالكلفن، N₂/N₁ نسبة تركيز الذرّات بالمستويين.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🔄</span> التوزيع المعكوس (Population Inversion)</div>
+  <div class="defbox">
+    إذا كان النظام الذرّي <b>غير متّزن حرارياً</b>، فقد يصبح عدد الذرّات بالمستويات العليا أكبر مما بالمستويات الواطئة (N₂ &gt; N₁) — عكس التوزيع الطبيعي تماماً. تُسمى هذه الحالة <b>التوزيع المعكوس</b>، وهي التي تزيد احتمالية الانبعاث المحفَّز — <b>أساس توليد الليزر بأكمله</b>. تتحقق بوجود شدة ضخّ كافية ومستوى طاقة ذي عمر زمني أطول نسبياً، يُسمى <b>المستوى شبه المستقر (Metastable State)</b>.
+  </div>
+
+  <!-- ======== محاكاة: حاسبة بولتزمان ======== -->
+  <div class="sim">
+    <h3>🌡️ مختبر: نسبة بولتزمان N₂/N₁</h3>
+    <p class="sim-sub">حرّك مزلاج نسبة (E₂−E₁) إلى kT وراقب نسبة N₂/N₁ الناتجة. لاحظ: لا تتجاوز هذه النسبة الواحد الصحيح أبداً بالتوازن الحراري الطبيعي — التوزيع المعكوس (N₂/N₁&gt;1) يتطلّب حالة غير متّزنة حرارياً لا يصفها هذا القانون.</p>
+    <canvas id="boltzSim" width="600" height="150"></canvas>
+    <div class="controls">
+      <div class="slider-group">(E₂−E₁)/kT: <b id="ratioVal">١.٠٠</b>
+        <input type="range" id="ratioR" min="0.1" max="5" step="0.1" value="1"></div>
+    </div>
+    <div class="readout" id="boltzReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول — ورد وزارياً</div>
+  <div class="example">
+    <div class="exq">إذا كان فرق الطاقة بين المستويين يساوي kT عند درجة حرارة الغرفة (أي E₂−E₁=kT)، احسب N₂ بدلالة N₁.</div>
+    <div class="givens">المعطيات: E₂−E₁ = kT</div>
+    <div class="step"><b>الخطوة ١:</b> نعوّض بقانون بولتزمان:
+      <div class="math">N₂/N₁ = exp[−(E₂−E₁)/kT] = exp[−kT/kT] = exp(−1)</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نحسب:
+      <div class="math">N₂ = 0.37 N₁</div>
+      💡 أي N₂ &lt; N₁ دائماً بهذه الحالة — لا يتحقق التوزيع المعكوس (الذي يتطلّب N₂&gt;N₁) بالاتزان الحراري الطبيعي مهما كانت درجة الحرارة؛ لهذا نحتاج آلية ضخّ خارجية فعلية (لا مجرد تسخين).</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> هل يتحقّق التوزيع المعكوس عندما تكون الطاقة الحرارية kT مساوية لطاقة الفوتون الساقط؟ وضّح رياضياً. <span class="wz">الدور الأول 2017</span></summary>
+    <div class="ans">لا، لا يتحقّق. فبوضع kT=hf=E₂−E₁ بقانون بولتزمان نحصل على N₂/N₁=exp(−1)=0.37، أي N₂=0.37N₁&lt;N₁، ولا يتحقّق شرط التوزيع المعكوس (N₂&gt;N₁).</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🔧</span> مكونات جهاز الليزر الثلاثة</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="defbox" style="margin:0"><b class="term">١) الوسط الفعال (Active Medium):</b> ذرّات أو جزيئات أو أيونات المادة (غازية أو سائلة أو صلبة)، التي يمكن أن يحصل فيها التوزيع المعكوس عند تجهيزها بشدة كافية.</div>
+    <div class="defbox" style="margin:0"><b class="term">٢) المرنان (Resonator):</b> مرآتان متقابلتان — إحداهما عاكسة كلياً تقريباً، والأخرى عاكسة جزئياً (تسمح بنفاذ شعاع الليزر للخارج). الانعكاسات المتكررة داخل المرنان تُضخِّم الانبعاث المحفَّز.</div>
+  </div>
+  <div class="defbox">
+    <b class="term">٣) تقنية الضخّ (Pumping):</b> تجهّز الطاقة اللازمة لنقل ذرّات الوسط الفعال من الاستقرار إلى التهيّج، لتحقيق التوزيع المعكوس. ثلاثة أنواع:
+    <p style="margin-top:6px"><b>الضخ الضوئي</b> (مصابيح ومضية قوية، كليزر الياقوت) · <b>الضخ الكهربائي</b> (تفريغ كهربائي بالغاز، الأشيع بالليزرات الغازية، يُستعمل أيضاً بليزر أشباه الموصلات) · <b>الضخ الكيميائي</b> (تفاعل كيميائي مباشر يوفّر الطاقة، بلا حاجة مصدر خارجي).</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🪜</span> منظومات مستويات الليزر: ثلاثية أم رباعية؟</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="defbox" style="margin:0"><b class="term">المنظومة ثلاثية المستوى:</b> E₁ (أرضي)، E₂ (شبه مستقر)، E₃ (تهيّج، عمره القصير ~10⁻⁸s). تنتقل الذرّات إلى E₃ ثم تهبط سريعاً إلى E₂ الأطول عمراً (~10⁻⁶s)، فيتجمّع فيه فائض عن E₁ — تحقّق التوزيع المعكوس. <b>تتطلّب طاقة ضخّ عالية.</b></div>
+    <div class="defbox" style="margin:0"><b class="term">المنظومة رباعية المستوى:</b> E₁ إلى E₄. تُضخّ الذرّات من E₁ إلى E₄، فتهبط سريعاً لـE₃ (شبه مستقر). يتحقّق التوزيع المعكوس بين E₃ وE₂ (شبه فارغ لأن الذرّات تهبط منه سريعاً لـE₁). <b>تتطلّب طاقة ضخّ أقل.</b></div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري متكرر حرفياً</span> أيّهما أفضل لتوليد الليزر: منظومة المستويات الثلاثة أم الأربعة؟ ولماذا؟ <span class="wz">الدور الأول 2023-2024 · الدور الثاني 2019</span></summary>
+    <div class="ans">منظومة المستويات <b>الأربعة أفضل</b>؛ لأنها تتطلّب طاقة ضخّ أقل لتحقيق التوزيع المعكوس مقارنةً بمنظومة المستويات الثلاثة، إذ يكون المستوى E₂ فيها شبه فارغ من الذرّات أصلاً (بسبب الهبوط السريع منه)، فلا حاجة لضخّ عدد كبير من الذرّات لتحقيق الفائض بـE₃.</div>
+  </details>
+  <details class="qa">
+    <summary><span class="tag">اختيار وزاري</span> تكون قدرة الضخّ عالية عندما تعمل منظومة الليزر بنظام: <span class="wz">تمهيدي 2018 · الدور الثاني 2018</span></summary>
+    <div class="ans"><b>ثلاثة مستويات</b> — لأنها تتطلّب طاقة ضخّ أعلى من منظومة الأربعة مستويات لتحقيق التوزيع المعكوس.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson8.html">الدرس التالي: أنواع الليزر وتطبيقاته 🎯</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة نسبة بولتزمان ---------- */
+(function () {
+  var cv = document.getElementById("boltzSim"), ctx = cv.getContext("2d");
+  var ratioR = document.getElementById("ratioR"), ratioVal = document.getElementById("ratioVal");
+  var readout = document.getElementById("boltzReadout");
+
+  function draw() {
+    var x = +ratioR.value;
+    ratioVal.textContent = x.toFixed(2).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; });
+    var ratio = Math.exp(-x);
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    var ox = 60, oy = 110, w = 480, h = 80;
+    ctx.strokeStyle = "#e2e8f0"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(ox + w, oy); ctx.stroke();
+
+    // شريط N1 ثابت
+    ctx.fillStyle = "#0369a1"; ctx.fillRect(ox, oy - h, 60, h);
+    ctx.fillStyle = "#334155"; ctx.font = "12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("N₁", ox + 30, oy + 18);
+
+    // شريط N2 بنسبة ratio من ارتفاع N1
+    var barH = ratio * h;
+    ctx.fillStyle = "#dc2626"; ctx.fillRect(ox + 120, oy - barH, 60, barH);
+    ctx.fillText("N₂", ox + 150, oy + 18);
+
+    ctx.fillStyle = "#334155"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "right";
+    ctx.fillText("N₂/N₁ = exp(−" + x.toFixed(2) + ") ≈ " + ratio.toFixed(3), ox + w, oy - h - 10);
+
+    readout.innerHTML = "(E₂−E₁)/kT = " + x.toFixed(2) + " &nbsp;→&nbsp; N₂/N₁ ≈ " + ratio.toFixed(3) +
+      " &nbsp;(دائماً أقل من 1 بالتوازن الحراري الطبيعي — التوزيع المعكوس مستحيل بهذه الحالة، ويحتاج ضخّاً فعلياً خارجياً)";
+  }
+  ratioR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "بالتوازن الحراري الطبيعي (بلا ضخّ خارجي)، أي العلاقتين صحيحة بين تركيز الذرّات بالمستويين؟",
+    opts: ["N₂ = N₁ دائماً", "N₂ > N₁ دائماً", "N₁ > N₂ دائماً", "لا توجد أي علاقة ثابتة بينهما"], a: 2,
+    why: "بالتوازن الحراري، تفضّل الذرّات المستوى الأرضي الواطئ الطاقة، فيكون N₁ أكبر من N₂ دائماً وفق قانون بولتزمان." },
+  { q: "ما المقصود بـ«التوزيع المعكوس» (Population Inversion)؟",
+    opts: ["أن يصبح عدد الذرّات بالمستوى الأعلى أكبر من عددها بالمستوى الأدنى (N₂>N₁)، عكس التوازن الحراري الطبيعي", "أن تفقد كل الذرّات طاقتها كلياً وتصل للصفر المطلق", "أن يتساوى عدد الذرّات بكل المستويات تماماً", "أن تنعكس شحنة الذرّة من سالبة إلى موجبة"], a: 0,
+    why: "التوزيع المعكوس: N₂>N₁، أي فائض ذرّات متهيّجة عن الذرّات المستقرّة — أساس توليد الليزر." },
+  { q: "ما اسم المستوى ذي العمر الزمني الأطول نسبياً الذي يسمح بتجمّع الذرّات فيه لتحقيق التوزيع المعكوس؟",
+    opts: ["المستوى الأرضي", "المستوى شبه المستقر (Metastable State)", "المستوى الصفري", "المستوى الحر"], a: 1,
+    why: "المستوى شبه المستقر عمره الزمني أطول نسبياً (~10⁻⁶s)، فتتجمّع فيه الذرّات قبل أن تهبط، محقّقة التوزيع المعكوس." },
+  { q: "ما مكونات جهاز الليزر الرئيسة الثلاثة؟",
+    opts: ["الكاثود، والأنود، والمرنان فقط", "مرآتان عاكستان كلياً فقط بلا أي وسط", "مصدر ليزر جاهز فقط بلا أي مكونات أخرى", "الوسط الفعال، والمرنان (مرآتان)، وتقنية الضخّ"], a: 3,
+    why: "تشترك أجهزة الليزر كافة بثلاثة مكونات: الوسط الفعال، المرنان (مرآتان)، وتقنية الضخّ." },
+  { q: "لماذا تُفضَّل منظومة الليزر رباعية المستوى على ثلاثية المستوى في أغلب التطبيقات العملية؟",
+    opts: ["لأنها أبسط تصميماً وتحتوي مستويين فقط لا أربعة", "لأنها تتطلّب طاقة ضخّ أقل لتحقيق التوزيع المعكوس (المستوى الأدنى للانتقال اللازر شبه فارغ أصلاً)", "لأنها لا تحتاج أي مرآة عاكسة جزئياً إطلاقاً", "لأن طاقة ضخّها أعلى، فتُنتج ليزراً أقوى دوماً"], a: 1,
+    why: "المستوى الأدنى للانتقال الليزري (E₂) شبه فارغ أصلاً بالمنظومة الرباعية (هبوط سريع منه)، فتحقيق فائض بـE₃ يحتاج طاقة ضخّ أقل من المنظومة الثلاثية." },
+  { q: "ما الفرق بين تقنية الضخّ الكهربائي والضخّ الكيميائي؟",
+    opts: ["لا فرق بينهما؛ نفس الآلية تماماً", "الكيميائي وحده يُستعمل بالليزرات الغازية", "الكهربائي وحده لا يحتاج أي مصدر طاقة خارجي", "الكهربائي يعتمد على التفريغ الكهربائي للغاز؛ الكيميائي يعتمد على تفاعل كيميائي داخلي بلا حاجة مصدر قدرة خارجي"], a: 3,
+    why: "الضخّ الكهربائي يستعمل تفريغاً كهربائياً بالغاز (يحتاج مصدر جهد خارجي)؛ الضخّ الكيميائي يستمد الطاقة من تفاعل كيميائي بين مكونات الوسط الفعال نفسه، بلا حاجة مصدر خارجي." }
+], { onDone: function (stars) { Phy.setLesson("g6c8", "7", { stars: stars }); } });
+</script>
+</body>
+</html>

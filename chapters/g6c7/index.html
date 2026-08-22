@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفصل السابع: إلكترونيات الحالة الصلبة — السادس العلمي</title>
+<meta name="description" content="شرح فصل إلكترونيات الحالة الصلبة للسادس الإعدادي العلمي: مستويات الطاقة وحزم الطاقة، الموصلات والعوازل وأشباه الموصلات، أشباه الموصلات النقية والمطعّمة، الثنائي pn وانحيازه وأنواعه، والترانزستور.">
+<link rel="canonical" href="https://shararaphysics.netlify.app/chapters/g6c7/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="الفصل السابع: إلكترونيات الحالة الصلبة — السادس العلمي">
+<meta property="og:description" content="شرح فصل إلكترونيات الحالة الصلبة للسادس الإعدادي العلمي: حزم الطاقة، أشباه الموصلات النقية والمطعّمة، الثنائي pn وانحيازه وأنواعه، والترانزستور.">
+<meta property="og:image" content="https://shararaphysics.netlify.app/assets/logo-ar.png">
+<meta property="og:url" content="https://shararaphysics.netlify.app/chapters/g6c7/">
+<meta property="og:locale" content="ar_IQ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c7">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="../../index.html">الرئيسية</a> / السادس العلمي</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔌 الفصل السابع: إلكترونيات الحالة الصلبة</h1>
+    <p>الموبايل بيدك، الحاسوب، حتى جهاز التحكم بالتلفاز — كلها تعمل بفضل مكوّن واحد صغير جداً يقل حجمه عن حبة الرمل: الترانزستور. مليارات منه تتكدّس داخل معالج واحد. في هذا الفصل تكتشف سرّ هذه الثورة: كيف تتحوّل بلورة سيليكون عادية إلى "دماغ" كل جهاز إلكتروني حولك.</p>
+    <span class="chip" id="chpct">0% مكتمل</span>
+  </div>
+
+  <div class="pbar" style="margin-bottom:24px"><div id="pb" style="width:0%"></div></div>
+
+  <div class="path" id="path">
+    <a class="node" href="lesson1.html" data-ls="1">
+      <span class="dot">⚛️</span>
+      <span class="info"><b>الدرس 1: مقدمة ومستويات الطاقة في الذرة</b>
+        <span class="sub">من الصمام المفرغ إلى الترانزستور + مستويات الطاقة المكمّمة وانشطارها عند تقارب الذرات</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson2.html" data-ls="2">
+      <span class="dot">🧱</span>
+      <span class="info"><b>الدرس 2: حزم الطاقة والموصلات والعوازل وأشباه الموصلات</b>
+        <span class="sub">حزمتا التكافؤ والتوصيل والفجوة الطاقية Eg + تصنيف المواد الثلاثة بحسب حجم الفجوة</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson3.html" data-ls="3">
+      <span class="dot">💎</span>
+      <span class="info"><b>الدرس 3: أشباه الموصلات النقية</b>
+        <span class="sub">الرابطة التساهمية والتوليد الحراري لزوج إلكترون-فجوة + لماذا يزداد التوصيل بالحرارة</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson4.html" data-ls="4">
+      <span class="dot">🧪</span>
+      <span class="info"><b>الدرس 4: أشباه الموصلات المطعّمة</b>
+        <span class="sub">التطعيم بشوائب خماسية (النوع n) وثلاثية (النوع p) التكافؤ + المانح والمستقبِل</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson5.html" data-ls="5">
+      <span class="dot">🔗</span>
+      <span class="info"><b>الدرس 5: الثنائي pn</b>
+        <span class="sub">تكوّن منطقة الاستنزاف بالانتشار وإعادة الاتحاد + جهد الحاجز عند التوازن</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson6.html" data-ls="6">
+      <span class="dot">🔀</span>
+      <span class="info"><b>الدرس 6: فولطية الانحياز للثنائي pn</b>
+        <span class="sub">الانحياز الأمامي والعكسي، منحني الخواص، ومسائل محلولة على دارات الثنائي</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson7.html" data-ls="7">
+      <span class="dot">💡</span>
+      <span class="info"><b>الدرس 7: بعض أنواع الثنائيات</b>
+        <span class="sub">الثنائي المقوّم، الثنائي الباعث للضوء LED، الثنائي المتحسّس للضوء، وثنائي الخلية الشمسية</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node" href="lesson8.html" data-ls="8">
+      <span class="dot">🎛️</span>
+      <span class="info"><b>الدرس 8: الترانزستور</b>
+        <span class="sub">بنية NPN وPNP، قانون التيارات I_E=I_B+I_C، معامل التكبير β، والتطبيقات</span>
+        <span class="stars"></span></span>
+    </a>
+    <a class="node qna" href="questions.html" data-ls="qna">
+      <span class="dot">🧮</span>
+      <span class="info"><b>أسئلة ومسائل نهاية الفصل</b>
+        <span class="sub">أسئلة شاملة على دروس الفصل الثمانية كلها، مفاهيمية وحسابية</span></span>
+    </a>
+  </div>
+
+  <p class="g6-note">✅ الفصل مكتمل بدروسه الثمانية وأسئلة نهاية الفصل — إن لاحظت أي خطأ بلّغ الأستاذ أحمد عبر زر الإبلاغ بأي صفحة درس.</p>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  // نسبة مستقلة عن Phy.chapterPercent (٨ دروس + أسئلة نهاية الفصل)
+  var TOTAL = 8;
+  function g6Percent() {
+    var d = Phy.load(), ch = d.g6c7 || {}, done = 0;
+    if (ch.lessons) for (var k in ch.lessons) if (ch.lessons[k].done) done++;
+    if (ch.exam) done++;
+    return Math.round(100 * done / (TOTAL + 1));
+  }
+  var pct = g6Percent();
+  document.getElementById("pb").style.width = pct + "%";
+  document.getElementById("chpct").textContent = pct + "% مكتمل";
+  document.querySelectorAll(".node[href]").forEach(function (n) {
+    var ls = n.dataset.ls, info = ls === "qna" ? Phy.getExam("g6c7") : Phy.getLesson("g6c7", ls);
+    if (info && (info.done || info.stars !== undefined)) {
+      n.classList.add("done");
+      var st = n.querySelector(".stars");
+      if (info.stars !== undefined && info.stars !== null)
+        st.textContent = Phy.starsStr(info.stars);
+      else st.textContent = "✓ مكتمل";
+    }
+  });
+})();
+</script>
+</body>
+</html>

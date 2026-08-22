@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: طاقة الربط النووية — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c9">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل التاسع</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>⚖️ الدرس 2: طاقة الربط النووية</h1>
+    <p>زِن نواة أي عنصر بدقّة، ثم زِن بروتوناتها ونيوتروناتها منفردة، واجمع الكتلتين — ستجد أن كتلة النواة <b>أقل</b> دائماً! أين ذهبت الكتلة المفقودة؟ الجواب أهم معادلة بالفيزياء الحديثة: أينشتاين E=mc².</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">💡</span>
+    <span>هذا "النقص الكتلي" هو بالضبط الطاقة التي تُبقي النواة متماسكة (القوة النووية القوية من الدرس السابق لها ثمن طاقي، ندفعه هنا). فهمه هو مفتاح كل الفصل القادم: من الانحلال الإشعاعي إلى الانشطار والاندماج.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📉</span> النقص الكتلي</div>
+  <div class="card">
+    <p>كتلة النواة <b>لا تساوي</b> مجموع كتل مكوّناتها (البروتونات والنيوترونات) منفصلة — بل تكون دائماً <b>أقل</b>. هذا الفرق يُسمّى <b>النقص الكتلي</b> (Mass Defect) ويُرمز له بـΔm. عملياً، من الأنسب استعمال كتل الذرّات الكاملة (لا النوى المجرّدة) لأن هذه هي القيم المتوفرة بالجداول:</p>
+  </div>
+  <div class="lawbox">
+    النقص الكتلي (بكتل الذرّات)
+    <div class="formula">Δm = Z·M_H + N·mₙ − M</div>
+    <p style="margin-top:6px;font-size:.82rem">حيث M_H كتلة ذرّة الهيدروجين، mₙ كتلة النيوترون، M كتلة الذرّة المعنية.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">💥</span> طاقة الربط النووية</div>
+  <div class="card">
+    <p><b>طاقة الربط النووية</b> (Eb) هي الطاقة المتحررة عند اجتماع بروتونات ونيوترونات منفصلة لتشكيل نواة معيّنة — أو بصورة معادلة، هي الطاقة اللازمة لتفكيك تلك النواة إلى مكوّناتها منفصلة تماماً. النقص الكتلي يكافئ هذه الطاقة تماماً وفق علاقة أينشتاين:</p>
+  </div>
+  <div class="lawbox">
+    طاقة الربط النووية
+    <div class="formula">Eb = Δm·c² = (Z·M_H + N·mₙ − M)·c²</div>
+    <p style="margin-top:6px;font-size:.82rem">بما أن الكتل الذرّية تُقاس بوحدة الكتلة الذرّية (u)، فطاقة الربط تُقاس بـMeV باستعمال: c²=931 MeV/u.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> ما المقصود بطاقة الربط النووية؟ <span class="wz">تمهيدي 2020</span></summary>
+    <div class="ans">هي الطاقة المتحررة عند جمع أعداد مناسبة من البروتونات والنيوترونات لتشكيل نواة معيّنة، أو هي الطاقة اللازمة لتفكيك النواة إلى مكوّناتها من البروتونات والنيوترونات.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">جد طاقة الربط النووية لنواة النيتروجين (¹⁴₇N) بوحدة MeV، ثم معدل طاقة الربط لكل نيوكليون. الكتل الذرّية: N=14.003074u، H=1.007825u، النيوترون=1.008665u.</div>
+    <div class="givens">المعطيات: Z=7 — A=14 → N=A−Z=7</div>
+    <div class="step"><b>الخطوة ١:</b> نطبّق القانون:
+      <div class="math">Eb = [7×1.007825 + 7×1.008665 − 14.003074] × 931</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نحسب الحد داخل القوس أولاً:
+      <div class="math">= [7.054775 + 7.060655 − 14.003074] × 931 = 0.112356 × 931 ≈ 104.6 MeV</div></div>
+    <div class="step"><b>الخطوة ٣:</b> معدل الربط لكل نيوكليون:
+      <div class="math">Eb' = Eb/A = 104.6/14 ≈ 7.47 MeV/nucleon</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">📊</span> معدل طاقة الربط ولماذا النوى المتوسطة الأكثر استقراراً</div>
+  <div class="card">
+    <p>حاصل قسمة Eb على العدد الكتلي A يُسمّى <b>معدل طاقة الربط لكل نيوكليون</b> (Eb'=Eb/A) — كلما كبرت هذه القيمة، كانت نيوكليونات النواة أشدّ ارتباطاً ببعضها (أكثر استقراراً). عند رسم Eb' مقابل A لكل العناصر المعروفة، يظهر منحنى مميّز: قيمة Eb' منخفضة نسبياً عند النوى الخفيفة جداً والثقيلة جداً، وتبلغ <b>ذروتها عند النوى المتوسطة</b> (كنواة الحديد ⁵⁶Fe) — أي أن النوى المتوسطة هي <b>الأكثر استقراراً</b> بين كل العناصر.</p>
+  </div>
+
+  <!-- ======== المحاكاة: منحنى الاستقرار النووي ======== -->
+  <div class="sim">
+    <h3>📊 مختبر: منحنى معدل طاقة الربط</h3>
+    <p class="sim-sub">اسحب المؤشر على المحور الأفقي (العدد الكتلي A) وراقب موقعك على منحنى الاستقرار — النوى المتوسطة قرب الحديد هي الأعلى بمعدل طاقة الربط لكل نيوكليون.</p>
+    <div class="sim-scroll"><canvas id="curveSim" width="700" height="260"></canvas></div>
+    <div class="controls">
+      <div class="slider-group">العدد الكتلي التقريبي A: <b id="aVal">٥٦</b>
+        <input type="range" id="aR" min="2" max="240" step="1" value="56"></div>
+    </div>
+    <div class="readout" id="curveReadout" style="margin-top:14px"></div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> تكون قيم معدل طاقة الربط النووية لكل نيوكليون: <span class="wz">الدور الثالث 2018</span></summary>
+    <div class="ans">أكبر لنوى العناصر <b>المتوسطة</b> — مثل نواة الحديد ⁵⁶Fe، وهذا يجعلها الأكثر استقراراً بين كل نوى العناصر.</div>
+  </details>
+
+  <div class="notebox">
+    <b>🔮 لماذا هذا مهم لبقية الفصل؟</b>
+    <p style="margin-top:6px">أي نواة (خفيفة جداً أو ثقيلة جداً) تستطيع أن "تتحرك" نحو منطقة النوى المتوسطة الأكثر استقراراً تُحرّر طاقة أثناء ذلك. النوى الثقيلة جداً تنشطر إلى نوى متوسطة (الانشطار)، والنوى الخفيفة جداً تندمج لتكوين نوى أثقل قليلاً (الاندماج) — وفي كلتا الحالتين تتحرر طاقة هائلة. هذا بالضبط ما ستدرسه لاحقاً بهذا الفصل.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: انحلال ألفا 🟠</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة منحنى الاستقرار ---------- */
+(function () {
+  var cv = document.getElementById("curveSim"), ctx = cv.getContext("2d");
+  var aR = document.getElementById("aR"), aVal = document.getElementById("aVal");
+  var readout = document.getElementById("curveReadout");
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+
+  // منحنى توضيحي مبسّط (ليس بيانات دقيقة) يحاكي الشكل العام الحقيقي لمنحنى Eb'(A)
+  function ebPrime(A) {
+    if (A < 20) return 8.0 * (A / 20) * (1 - 0.05 * Math.sin(A * 0.9));
+    var peak = 8.79, peakA = 56;
+    var fall = Math.exp(-Math.pow((A - peakA) / 170, 2));
+    var rise = 1 - Math.exp(-(A - 4) / 14);
+    return Math.max(1, peak * fall * rise);
+  }
+
+  var ox = 70, oy = 210, w = 560, h = 170;
+
+  function draw() {
+    var A = +aR.value;
+    aVal.textContent = arNum(A);
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(ox, oy - h); ctx.lineTo(ox, oy); ctx.lineTo(ox + w, oy); ctx.stroke();
+    ctx.fillStyle = "#94a3b8"; ctx.font = "10px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("العدد الكتلي A", ox + w / 2, oy + 20);
+    ctx.save(); ctx.translate(ox - 45, oy - h / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText("Eb' (MeV/نيوكليون)", 0, 0); ctx.restore();
+
+    function toX(a) { return ox + (a / 240) * w; }
+    function toY(e) { return oy - (e / 9) * h; }
+
+    ctx.strokeStyle = "#15803d"; ctx.lineWidth = 2.5; ctx.beginPath();
+    for (var a = 2; a <= 240; a += 2) {
+      var e = ebPrime(a);
+      a === 2 ? ctx.moveTo(toX(a), toY(e)) : ctx.lineTo(toX(a), toY(e));
+    }
+    ctx.stroke();
+
+    // علامة الحديد Fe-56 (ذروة الاستقرار)
+    ctx.fillStyle = "#b45309"; ctx.beginPath(); ctx.arc(toX(56), toY(ebPrime(56)), 4, 0, Math.PI * 2); ctx.fill();
+    ctx.font = "10px Cairo"; ctx.textAlign = "center"; ctx.fillText("⁵⁶Fe (الأكثر استقراراً)", toX(56), toY(ebPrime(56)) - 12);
+
+    // نقطة التشغيل الحالية
+    var curE = ebPrime(A);
+    ctx.beginPath(); ctx.arc(toX(A), toY(curE), 6, 0, Math.PI * 2);
+    ctx.fillStyle = "#dc2626"; ctx.fill(); ctx.strokeStyle = "#fff"; ctx.lineWidth = 2; ctx.stroke();
+
+    var region = A < 20 ? "نواة خفيفة جداً" : A < 40 ? "منطقة انتقالية خفيفة" : A < 100 ? "نواة متوسطة (منطقة الأعلى استقراراً)" : A < 160 ? "منطقة انتقالية ثقيلة" : "نواة ثقيلة جداً";
+    readout.innerHTML = "A≈" + arNum(A) + " (" + region + ") &nbsp;→&nbsp; Eb'≈" + curE.toFixed(2) + " MeV/نيوكليون. <br><small>منحنى توضيحي للشكل العام، وليس بيانات دقيقة لكل عنصر.</small>";
+  }
+  aR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "لماذا تكون كتلة النواة دائماً أقل من مجموع كتل بروتوناتها ونيوتروناتها منفصلة؟",
+    opts: ["لأن جزءاً من الكتلة يتحوّل إلى طاقة الربط النووية التي تماسك النواة (Eb=Δmc²)", "لأن النواة تفقد بعض بروتوناتها عند تكوّنها", "بسبب خطأ قياس دائم في كل الأجهزة المستعملة", "لأن النيوترونات عديمة الكتلة أصلاً داخل النواة"], a: 0,
+    why: "النقص الكتلي Δm يكافئ طاقة الربط النووية المتحررة عند تكوّن النواة، وفق علاقة أينشتاين Eb=Δmc²." },
+  { q: "ما المقصود بمعدل طاقة الربط النووية لكل نيوكليون Eb'؟",
+    opts: ["مجموع كتل كل النيوكليونات بالنواة", "حاصل قسمة طاقة الربط الكلية Eb على العدد الكتلي A", "حاصل ضرب Eb في العدد الذري Z", "الفرق بين كتلة النواة وكتلة الذرّة"], a: 1,
+    why: "Eb'=Eb/A — يقيس متوسط طاقة الربط لكل نيوكليون واحد بالنواة، ويُستعمل لمقارنة استقرار النوى المختلفة." },
+  { q: "أي نوى العناصر تمتلك أكبر قيمة لمعدل طاقة الربط النووية Eb'، وبالتالي الأكثر استقراراً؟",
+    opts: ["النوى الخفيفة جداً فقط", "النوى الثقيلة جداً فقط", "كل النوى بنفس القيمة تماماً بلا استثناء", "النوى المتوسطة (كنواة الحديد ⁵⁶Fe)"], a: 3,
+    why: "منحنى Eb' مقابل A يبلغ ذروته عند النوى المتوسطة، وأشهرها نواة الحديد ⁵⁶Fe — لذا فهي الأكثر استقراراً." },
+  { q: "نواة كتلتها الذرّية M، عدد بروتوناتها Z، عدد نيوتروناتها N. ما الصيغة الصحيحة للنقص الكتلي Δm (بكتل الذرّات)؟",
+    opts: ["Δm = M − Z·M_H − N·mₙ", "Δm = Z·M_H + N·mₙ − M", "Δm = Z·M_H − N·mₙ + M", "Δm = Z + N − M"], a: 1,
+    why: "النقص الكتلي = مجموع كتل المكوّنات منفصلة (Z ذرّات هيدروجين + N نيوترونات) ناقص كتلة الذرّة الكاملة الفعلية M." },
+  { q: "طاقة الربط النووية لنواة معيّنة Eb=120 MeV وعددها الكتلي A=20. جد معدل طاقة الربط لكل نيوكليون.",
+    opts: ["600 MeV/nucleon", "6 MeV/nucleon", "0.167 MeV/nucleon", "2400 MeV/nucleon"], a: 1,
+    why: "Eb'=Eb/A=120/20=6 MeV/nucleon." },
+  { q: "لماذا يمكن لكل من الانشطار (نوى ثقيلة) والاندماج (نوى خفيفة) أن يحرّرا طاقة هائلة، رغم أنهما عمليتان متعاكستان تماماً؟",
+    opts: ["لأن كلتيهما تنقلان النوى المتفاعلة نحو منطقة النوى المتوسطة الأعلى استقراراً (أعلى Eb')، فيتحرر فرق الطاقة أثناء ذلك", "لأن الانشطار يزيد الكتلة والاندماج ينقصها بنفس المقدار دائماً", "لأنهما في الحقيقة نفس العملية الفيزيائية بمسمّيين مختلفين فقط", "لأن كلتيهما لا تغيّران نوع النوى المتفاعلة إطلاقاً"], a: 0,
+    why: "النوى الثقيلة جداً (منخفضة Eb') تنشطر لتقترب من منطقة الذروة، والنوى الخفيفة جداً (منخفضة Eb' أيضاً) تندمج لتقترب من نفس المنطقة — وكلتاهما تحرّران الفرق كطاقة." }
+], { onDone: function (stars) { Phy.setLesson("g6c9", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

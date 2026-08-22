@@ -174,6 +174,7 @@ body::after {
 .node .stars { color: var(--yellow); font-size: .95rem; letter-spacing: 2px; }
 .node.exam .dot { border-color: var(--coral); background: #fff0f0; }
 .node.qna .dot { border-color: var(--teal); background: #e3fbfc; }
+.node.review .dot { border-color: var(--blue); background: #eef4ff; }
 
 /* ---------- chapter map (home) ---------- */
 .chmap { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
@@ -748,7 +749,7 @@ footer.site::before {
 .theme-ch9 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(2, 132, 199, .35); }
 .theme-ch9 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(2, 132, 199, .45); }
 
-/* السادس الإعدادي (تجريبي) — نيلي/ذهبي، هوية مختلفة عن مراحل الثالث متوسط */
+/* السادس الإعدادي — نيلي/ذهبي، هوية مختلفة عن مراحل الثالث متوسط */
 .theme-g6c1 {
   --violet: #4338ca;
   --violet-deep: #3730a3;
@@ -832,6 +833,74 @@ footer.site::before {
 .theme-g6c4 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(3, 105, 161, 0.30); }
 .theme-g6c4 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(3, 105, 161, .35); }
 .theme-g6c4 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(3, 105, 161, .45); }
+
+/* السادس الإعدادي — الفصل الخامس: البصريات الفيزيائية — بنفسجي (طيف الضوء) ووردي (تداخل/استقطاب) */
+.theme-g6c5 {
+  --violet: #7c3aed;
+  --violet-deep: #6d28d9;
+  --blue: #db2777;
+  --shadow: 0 10px 30px rgba(124, 58, 237, 0.10);
+  --shadow-lift: 0 16px 40px rgba(124, 58, 237, 0.18);
+}
+.theme-g6c5::before { background: radial-gradient(circle, #7c3aed, transparent 70%); }
+.theme-g6c5::after { background: radial-gradient(circle, #db2777, transparent 70%); }
+.theme-g6c5 .hero::before { content: "🌈"; }
+.theme-g6c5 .path::before { border-inline-start-color: #e5d9fb; }
+.theme-g6c5 .node:not(.done):not(.exam):not(.qna) .dot { border-color: #e5d9fb; }
+.theme-g6c5 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(124, 58, 237, 0.30); }
+.theme-g6c5 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(124, 58, 237, .35); }
+.theme-g6c5 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(124, 58, 237, .45); }
+
+/* السادس الإعدادي — الفصل السابع: إلكترونيات الحالة الصلبة — كهرماني (تيار/طاقة) ورمادي غرافيتي (الرقاقة والدارة) */
+.theme-g6c7 {
+  --violet: #b45309;
+  --violet-deep: #92400e;
+  --blue: #334155;
+  --shadow: 0 10px 30px rgba(180, 83, 9, 0.10);
+  --shadow-lift: 0 16px 40px rgba(180, 83, 9, 0.18);
+}
+.theme-g6c7::before { background: radial-gradient(circle, #b45309, transparent 70%); }
+.theme-g6c7::after { background: radial-gradient(circle, #334155, transparent 70%); }
+.theme-g6c7 .hero::before { content: "🔌"; }
+.theme-g6c7 .path::before { border-inline-start-color: #f6e3c8; }
+.theme-g6c7 .node:not(.done):not(.exam):not(.qna) .dot { border-color: #f6e3c8; }
+.theme-g6c7 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(180, 83, 9, 0.30); }
+.theme-g6c7 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(180, 83, 9, .35); }
+.theme-g6c7 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(180, 83, 9, .45); }
+
+/* السادس الإعدادي — الفصل الثامن: الأطياف الذرية والليزر — قرمزي (شعاع الليزر الأحمر) وبنفسجي نيلي (طيفي/كمّي) */
+.theme-g6c8 {
+  --violet: #be123c;
+  --violet-deep: #9f1239;
+  --blue: #4f46e5;
+  --shadow: 0 10px 30px rgba(190, 18, 60, 0.10);
+  --shadow-lift: 0 16px 40px rgba(190, 18, 60, 0.18);
+}
+.theme-g6c8::before { background: radial-gradient(circle, #be123c, transparent 70%); }
+.theme-g6c8::after { background: radial-gradient(circle, #4f46e5, transparent 70%); }
+.theme-g6c8 .hero::before { content: "⚛️"; }
+.theme-g6c8 .path::before { border-inline-start-color: #fbd5df; }
+.theme-g6c8 .node:not(.done):not(.exam):not(.qna) .dot { border-color: #fbd5df; }
+.theme-g6c8 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(190, 18, 60, 0.30); }
+.theme-g6c8 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(190, 18, 60, .35); }
+.theme-g6c8 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(190, 18, 60, .45); }
+
+/* السادس الإعدادي — الفصل التاسع: الفيزياء النووية — أخضر نووي (توهّج الإشعاع) وأسود رمادي غرافيتي (تحذير) */
+.theme-g6c9 {
+  --violet: #15803d;
+  --violet-deep: #14532d;
+  --blue: #292524;
+  --shadow: 0 10px 30px rgba(21, 128, 61, 0.10);
+  --shadow-lift: 0 16px 40px rgba(21, 128, 61, 0.18);
+}
+.theme-g6c9::before { background: radial-gradient(circle, #15803d, transparent 70%); }
+.theme-g6c9::after { background: radial-gradient(circle, #292524, transparent 70%); }
+.theme-g6c9 .hero::before { content: "☢️"; }
+.theme-g6c9 .path::before { border-inline-start-color: #bbf0cc; }
+.theme-g6c9 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #bbf0cc; }
+.theme-g6c9 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(21, 128, 61, 0.30); }
+.theme-g6c9 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(21, 128, 61, .35); }
+.theme-g6c9 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(21, 128, 61, .45); }
 
 /* عقدة درس لم يُنشر بعد — ضمن خريطة الفصل */
 .node.locked { opacity: .55; filter: grayscale(.35); pointer-events: none; }

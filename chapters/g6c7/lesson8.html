@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 8: الترانزستور — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c7">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السابع</a> / الدرس 8</span>
+  </div>
+
+  <div class="hero">
+    <h1>🎛️ الدرس 8: الترانزستور</h1>
+    <p>وصلة pn واحدة أعطتنا الثنائي: عنصر يسمح أو يمنع مرور التيار. فماذا لو دمجنا <b>وصلتين</b> pn متتاليتين بترتيب خاص داخل بلورة واحدة؟ نحصل على أهم اختراع إلكتروني بالتاريخ الحديث: <b>الترانزستور</b> — نبيطة تستطيع تكبير إشارة ضعيفة جداً، أو العمل كمفتاح فائق السرعة. مليارات منه تعمل الآن داخل أي معالج حاسوب.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🏁</span>
+    <span>هذا آخر درس بالفصل — وهو أيضاً القمة التي بُنيت عليها كل الدروس السابقة: مستويات الطاقة، الحزم، أشباه الموصلات النقية والمطعّمة، ووصلة pn وانحيازها، كلها تتضافر هنا لتُفسّر كيف يعمل العنصر الذي بُني عليه العصر الرقمي بأكمله.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🧱</span> البنية: ثلاث مناطق، طرفان من نوع وواحد من آخر</div>
+  <div class="card">
+    <p>الترانزستور ثنائي القطبية (BJT) بلورة واحدة مقسّمة إلى ثلاث مناطق متتالية، تُشكّل وصلتي pn متلاصقتين بترتيبين ممكنين:</p>
+  </div>
+  <div class="defbox">
+    <b class="term">الأطراف الثلاثة:</b>
+    <p style="margin-top:6px">• <b>الباعث (Emitter, E):</b> المنطقة الطرفية الأولى، مطعّمة تطعيماً كثيفاً — "يبعث" حاملات الشحنة الأغلبية بغزارة نحو القاعدة.<br>
+    • <b>القاعدة (Base, B):</b> المنطقة الوسطى، رقيقة جداً ومطعّمة تطعيماً خفيفاً جداً — تسمح لمعظم الحاملات القادمة من الباعث بعبورها دون إعادة اتحاد تُذكر.<br>
+    • <b>المجمع (Collector, C):</b> المنطقة الطرفية الثانية، الأكبر مساحة عادة — "يجمع" الحاملات العابرة من الباعث خلال القاعدة.</p>
+  </div>
+
+  <div class="formgrid" id="typeToggle" style="grid-template-columns:1fr 1fr">
+    <button class="formcard on" data-t="npn"><span class="fe">🔵🔴🔵</span>NPN</button>
+    <button class="formcard" data-t="pnp"><span class="fe">🔴🔵🔴</span>PNP</button>
+  </div>
+  <div class="card" id="typeDesc" style="margin-top:10px"></div>
+
+  <div class="section-title"><span class="ico">⚙️</span> فكرة التكبير: تيار قاعدة صغير يتحكّم بتيار مجمع كبير</div>
+  <div class="card">
+    <p>في وضع التشغيل الطبيعي (وصلة الباعث-القاعدة منحازة أمامياً، ووصلة القاعدة-المجمع منحازة عكسياً): يحقن الباعث كماً كبيراً من حاملات الشحنة نحو القاعدة الرقيقة جداً. بما أن القاعدة رقيقة ومطعّمة خفيفاً، لا تعيد اتحاد إلا نسبة ضئيلة جداً من هذه الحاملات (فتُشكّل تياراً صغيراً جداً يخرج من طرف القاعدة I_B)، بينما تعبر الغالبية العظمى مباشرة إلى المجمع (I_C كبير). النتيجة: <b>تغيّر صغير جداً</b> بتيار القاعدة الضئيل أصلاً ينتج عنه <b>تغيّر كبير جداً</b> بتيار المجمع — هذا بالضبط مبدأ <b>التكبير</b> (Amplification).</p>
+  </div>
+  <div class="lawbox">
+    قانون التيارات بالترانزستور (تحفظ الشحنة عند العقدة)
+    <div class="formula">I_E = I_B + I_C</div>
+  </div>
+  <div class="notebox">
+    <b>💡 لنُبسّط الفكرة أولاً بنسبة تقريبية:</b>
+    <p style="margin-top:6px">إذا كان تيار القاعدة I_B مثلاً 1% فقط من تيار الباعث I_E، فإن تيار المجمع I_C يكون تقريباً 99% من I_E — أي أن نسبة (تيار المجمع ÷ تيار القاعدة) تكون كبيرة جداً (بعشرات أو مئات المرات). هذه بالضبط الفكرة التي تُصاغ رسمياً بمفهوم <b>ربح التيار</b> في الفقرة التالية.</p>
+  </div>
+
+  <!-- ======== المحاكاة: تكبير التيار ======== -->
+  <div class="sim">
+    <h3>📈 مختبر: تكبير التيار بالترانزستور</h3>
+    <p class="sim-sub">حرّك مزلاج تيار القاعدة I_B وراقب تيار المجمع I_C وتيار الباعث I_E يتغيّران تبعاً له (بنسبة تكبير تقريبية ثابتة قدرها 100 لهذا المثال التوضيحي). لاحظ سماكة الأسهم تعكس مقدار كل تيار.</p>
+    <div class="sim-scroll"><canvas id="ampSim" width="700" height="230"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً إن لزم</p>
+    <div class="controls">
+      <div class="slider-group">تيار القاعدة I_B (μA): <b id="ibVal">١٠</b>
+        <input type="range" id="ibR" min="1" max="50" step="1" value="10"></div>
+    </div>
+    <div class="readout" id="ampReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">📐</span> الترانزستور مضخِّماً: القاعدة المشتركة والباعث المشترك</div>
+  <div class="card">
+    <p>الترانزستور يُستعمل غالباً <b>مضخّماً</b> (Amplifier) بأحد وضعين رئيسيين، لكل منهما تعريفه الخاص لربح التيار. <b>ملاحظة مهمة:</b> يستعمل المنهج الرمز نفسه <b>α</b> لربح التيار بكلا الوضعين، لكن بتعريف مختلف — انتبه للسياق دائماً:</p>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="defbox" style="margin:0"><b class="term">القاعدة المشتركة (Common Base):</b>
+      <div class="formula" style="margin-top:6px">α = I_C / I_E</div>
+      قيمته دائماً <b>أقل من الواحد</b> (لأن I_C&lt;I_E)، والإشارة الخارجة <b>بالطور نفسه</b> للداخلة (فرق طور = صفر).</div>
+    <div class="defbox" style="margin:0"><b class="term">الباعث المشترك (Common Emitter):</b>
+      <div class="formula" style="margin-top:6px">α = I_C / I_B</div>
+      قيمته <b>كبيرة (عالية)</b> عادة، والإشارة الخارجة <b>معاكسة بالطور</b> للداخلة (فرق طور = 180°).</div>
+  </div>
+  <div class="lawbox">
+    ربح الفولطية والقدرة (لمضخّم القاعدة المشتركة)
+    <div class="formula">A_v = V_out / V_in</div>
+    <div class="formula" style="margin-top:6px">G = α × A_v</div>
+    <p style="margin-top:6px;font-size:.82rem">حيث V_in=I_E·R_in وV_out=I_C·R_out (R_in وR_out مقاومتا دخول وخروج دائرة المضخّم).</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول — ورد وزارياً حرفياً</div>
+  <div class="example">
+    <div class="exq">في دائرة ترانزستور كمضخّم ذي القاعدة المشتركة، إذا كان تيار الباعث I_E=3mA وتيار المجمع I_C=2.94mA ومقاومة الدخول R_in=500Ω ومقاومة الخروج R_out=400kΩ، احسب: ① ربح التيار α ② ربح الفولطية A_v.</div>
+    <div class="givens">المعطيات: I_E=3mA — I_C=2.94mA — R_in=500Ω — R_out=400kΩ=400000Ω</div>
+    <div class="step"><b>الخطوة ١:</b> ربح التيار:
+      <div class="math">α = I_C/I_E = 2.94×10⁻³ / 3×10⁻³ = 0.98</div>
+      (أقل من الواحد كما هو متوقّع بالقاعدة المشتركة)</div>
+    <div class="step"><b>الخطوة ٢:</b> فولطية الدخول والخروج:
+      <div class="math">V_in = I_E×R_in = 3×10⁻³ × 500 = 1.5 V</div>
+      <div class="math">V_out = I_C×R_out = 2.94×10⁻³ × 400000 = 1176 V</div></div>
+    <div class="step"><b>الخطوة ٣:</b> ربح الفولطية:
+      <div class="math">A_v = V_out/V_in = 1176/1.5 = 784</div>
+      💡 لاحظ كيف تنتج مقاومة الخروج الكبيرة جداً (400kΩ) ربح فولطية هائلاً (784 مرة) رغم أن ربح التيار نفسه أقل من الواحد — سرّ التكبير هنا بفرق المقاومتين، لا بربح التيار.</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> ما الفرق بين الباعث والجامع (المجمع) في الترانزستور من حيث طريقة الانحياز ونسبة الشوائب؟ <span class="wz">الدور الثاني 2018</span></summary>
+    <div class="ans"><b>الباعث:</b> يُحيَّز انحيازاً أمامياً، ويُطعَّم بنسبة عالية من الشوائب.<br><b>المجمع:</b> يُحيَّز انحيازاً عكسياً، ويُطعَّم بنسبة متوسطة من الشوائب.</div>
+  </details>
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> علّل: ممانعة ملتقى (المجمع-قاعدة) في الترانزستور عالية، بينما ممانعة ملتقى (الباعث-قاعدة) واطئة. <span class="wz">الدور الأول 2017 · الدور الأول 2018</span></summary>
+    <div class="ans">لأن ملتقى (الباعث-قاعدة) محيّز بالاتجاه الأمامي فتقلّ منطقة استنزافه ومقاومته → ممانعته واطئة. أما ملتقى (المجمع-قاعدة) فمحيّز بالاتجاه العكسي فتتّسع منطقة استنزافه وتزداد مقاومته → ممانعته عالية.</div>
+  </details>
+  <details class="qa">
+    <summary><span class="tag">صح أو خطأ · وزاري</span> «تيار الباعث I_E في دائرة الترانزستور يكون دائماً أكبر من تيار القاعدة وأكبر من تيار المجمع». <span class="wz">التمهيدي 2019 · الدور الثالث 2018</span></summary>
+    <div class="ans">العبارة <b>صحيحة</b>. لأن I_E=I_C+I_B، فتيار الباعث هو الأكبر دائماً بين التيارات الثلاثة.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🌍</span> التطبيقات: من التكبير إلى نبضة رقمية</div>
+  <div class="card">
+    <p>وظيفتان رئيسيتان للترانزستور تُبنى عليهما كل الإلكترونيات الحديثة تقريباً:</p>
+    <p>• <b>التكبير (Amplification):</b> تحويل إشارة ضعيفة جداً (كصوت ملتقط بميكروفون) إلى إشارة أقوى بكثير قادرة على تشغيل سمّاعة — أساس كل مضخّم صوت.</p>
+    <p>• <b>المفتاح الإلكتروني (Switching):</b> بتيار قاعدة كافٍ، "يفتح" الترانزستور تماماً (تشبّع) فيمرّر أقصى تيار ممكن؛ بلا تيار قاعدة، "يُغلَق" تماماً (قطع) فيمنع أي تيار. هذان الوضعان (تشغيل/إيقاف) هما بالضبط الأساس الذي تُبنى عليه البوابات المنطقية الرقمية (0 و1) بكل معالج ورقاقة ذاكرة حولك.</p>
+  </div>
+  <div class="notebox">
+    <b>🔁 من غرفة كاملة إلى ظفر إصبع</b>
+    <p style="margin-top:6px">تذكّر بداية هذا الفصل: أول حاسوب إلكتروني كان بحجم غرفة، يعمل بآلاف الصمامات المفرغة الهشّة. اليوم، معالج واحد بحجم ظفر إصبعك يحوي أكثر من عشرة مليارات ترانزستور، كل واحد منها أصغر من فيروس — وكلها تعمل بنفس المبدأ البسيط الذي درسته للتو: باعث، وقاعدة رقيقة، ومجمع.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> يجب أن تكون منطقة القاعدة بالترانزستور رقيقة جداً ومطعّمة تطعيماً خفيفاً جداً.</summary>
+    <div class="ans">لأن وظيفة القاعدة أن "تمرّر" معظم حاملات الشحنة القادمة من الباعث إلى المجمع، لا أن تعيد اتحادها. لو كانت القاعدة سميكة أو مطعّمة تطعيماً كثيفاً، لأعادت اتحاد نسبة كبيرة من هذه الحاملات داخلها، فيكبر تيار القاعدة I_B على حساب تيار المجمع I_C، وينخفض معامل التكبير β كثيراً — عكس الهدف المطلوب من الترانزستور.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="questions.html">أسئلة ومسائل نهاية الفصل 🧮</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- تبديل NPN / PNP ---------- */
+(function () {
+  var toggle = document.getElementById("typeToggle");
+  var desc = document.getElementById("typeDesc");
+  var texts = {
+    npn: "ترانزستور <b>NPN</b>: منطقتا الباعث والمجمع من النوع n، والقاعدة الرقيقة الوسطى من النوع p. الأكثر شيوعاً بالتطبيقات العملية. حاملات الشحنة الأساسية العابرة: إلكترونات.",
+    pnp: "ترانزستور <b>PNP</b>: منطقتا الباعث والمجمع من النوع p، والقاعدة الرقيقة الوسطى من النوع n. يعمل بنفس المبدأ تماماً لكن بعكس قطبية التوصيل والتيار. حاملات الشحنة الأساسية العابرة: فجوات."
+  };
+  function set(t) {
+    toggle.querySelectorAll(".formcard").forEach(function (b) { b.classList.toggle("on", b.dataset.t === t); });
+    desc.innerHTML = texts[t];
+  }
+  toggle.addEventListener("click", function (e) {
+    var b = e.target.closest(".formcard");
+    if (b) set(b.dataset.t);
+  });
+  set("npn");
+})();
+
+/* ---------- محاكاة تكبير التيار ---------- */
+(function () {
+  var cv = document.getElementById("ampSim"), ctx = cv.getContext("2d");
+  var ibR = document.getElementById("ibR"), ibVal = document.getElementById("ibVal");
+  var readout = document.getElementById("ampReadout");
+  var BETA = 100;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+
+  function drawArrow(x1, y1, x2, y2, width, color, label) {
+    ctx.strokeStyle = color; ctx.lineWidth = width; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    var ang = Math.atan2(y2 - y1, x2 - x1);
+    var ah = 6 + width * 0.6;
+    ctx.beginPath();
+    ctx.moveTo(x2, y2);
+    ctx.lineTo(x2 - ah * Math.cos(ang - 0.4), y2 - ah * Math.sin(ang - 0.4));
+    ctx.lineTo(x2 - ah * Math.cos(ang + 0.4), y2 - ah * Math.sin(ang + 0.4));
+    ctx.closePath(); ctx.fillStyle = color; ctx.fill();
+    if (label) {
+      ctx.fillStyle = color; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+      ctx.fillText(label, (x1 + x2) / 2, Math.min(y1, y2) - 10);
+    }
+  }
+
+  function draw() {
+    var IB = +ibR.value; // μA
+    var IC = BETA * IB;  // μA
+    var IE = IB + IC;    // μA
+    ibVal.textContent = arNum(IB);
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.textAlign = "center";
+
+    // كتلة الترانزستور: E - B - C
+    var by = 115;
+    ctx.fillStyle = "#1d4ed8"; ctx.fillRect(90, by - 35, 80, 70);
+    ctx.fillStyle = "#b45309"; ctx.fillRect(190, by - 45, 40, 90);
+    ctx.fillStyle = "#1d4ed8"; ctx.fillRect(250, by - 35, 80, 70);
+    ctx.fillStyle = "#fff"; ctx.font = "bold 13px Cairo";
+    ctx.fillText("N", 130, by + 5);
+    ctx.fillText("P", 210, by + 5);
+    ctx.fillText("N", 290, by + 5);
+    ctx.fillStyle = "#334155"; ctx.font = "bold 11px Cairo";
+    ctx.fillText("الباعث E", 130, by + 65);
+    ctx.fillText("القاعدة B", 210, by - 65);
+    ctx.fillText("المجمع C", 290, by + 65);
+
+    var maxW = 16;
+    var wIB = 2 + Math.min(maxW, (IB / 50) * maxW);
+    var wIC = 2 + Math.min(maxW, (IC / (BETA * 50)) * maxW);
+    var wIE = 2 + Math.min(maxW, (IE / (BETA * 50 + 50)) * maxW);
+
+    drawArrow(210, by - 90, 210, by - 47, wIB, "#16a34a", "I_B");
+    drawArrow(330, by + 20, 400, by + 20, wIC, "#dc2626", "I_C");
+    drawArrow(90, by + 20, 20, by + 20, wIE, "#7c3aed", "I_E");
+
+    ctx.textAlign = "right"; ctx.font = "bold 12px Cairo"; ctx.fillStyle = "#334155";
+    ctx.fillText("I_B ≈ " + arNum(IB) + " μA", 630, 200);
+    ctx.fillText("I_C ≈ 100×I_B ≈ " + arNum(IC) + " μA", 630, 218);
+
+    readout.innerHTML = "I_B=" + arNum(IB) + "μA &nbsp;→&nbsp; I_C≈100×I_B=" + arNum(IC) + "μA (" + (IC / 1000).toFixed(2).replace(/[0-9]/g, function(d){return "٠١٢٣٤٥٦٧٨٩"[d];}) + "mA) &nbsp;→&nbsp; I_E=I_B+I_C=" + arNum(IE) + "μA";
+  }
+  ibR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ما الأطراف الثلاثة للترانزستور ثنائي القطبية (BJT)؟",
+    opts: ["الأنود والكاثود والقاعدة", "الباعث والقاعدة والمجمع", "الموجب والسالب والمحايد", "المصدر والبوابة والمصرف"], a: 1,
+    why: "أطراف الترانزستور الثلاثة هي: الباعث (Emitter)، القاعدة (Base)، والمجمع (Collector)." },
+  { q: "لماذا يجب أن تكون منطقة القاعدة رقيقة جداً ومطعّمة تطعيماً خفيفاً؟",
+    opts: ["لأنها لا تحتاج أي تطعيم إطلاقاً، فهي منطقة نقية بحتة", "لتعيد اتحاد كل حاملات الشحنة القادمة من الباعث بالكامل", "لتمنع أي تيار من العبور خلالها نهائياً بأي ظرف", "لتسمح لمعظم حاملات الشحنة القادمة من الباعث بعبورها إلى المجمع دون إعادة اتحاد تُذكر"], a: 3,
+    why: "رقّة القاعدة وتطعيمها الخفيف يقلّلان إعادة الاتحاد بداخلها، فتعبر أغلب حاملات الشحنة إلى المجمع، وهذا أساس عمل الترانزستور كمكبّر فعّال." },
+  { q: "ما العلاقة الصحيحة بين تيارات الترانزستور الثلاثة؟",
+    opts: ["I_B = I_E + I_C", "I_C = I_E + I_B", "I_E = I_B + I_C", "لا توجد أي علاقة ثابتة بينها"], a: 2,
+    why: "تيار الباعث يساوي مجموع تياري القاعدة والمجمع، بحكم حفظ الشحنة عند عقد الترانزستور." },
+  { q: "في مضخّم قاعدة مشتركة: I_E=2mA وI_C=1.9mA وR_in=200Ω وR_out=100kΩ. جد ربح التيار α تقريباً.",
+    opts: ["≈0.95", "≈1.05", "≈2", "≈500"], a: 0,
+    why: "α=I_C/I_E=1.9/2=0.95 — أقل من الواحد كما هو متوقّع بمضخّم القاعدة المشتركة." },
+  { q: "بأي وضعية انحياز يعمل الترانزستور عادة عند استعماله كمكبّر (Amplifier)؟",
+    opts: ["كلتا الوصلتين منحازتان عكسياً معاً", "كلتا الوصلتين منحازتان أمامياً معاً", "بلا أي انحياز على الإطلاق بأي طرف", "وصلة الباعث-القاعدة منحازة أمامياً، ووصلة القاعدة-المجمع منحازة عكسياً"], a: 3,
+    why: "هذا الترتيب (أمامي عند الباعث-القاعدة، عكسي عند القاعدة-المجمع) هو وضع التشغيل النشط الذي يحقن حاملات الشحنة من الباعث ويجمعها المجمع بفعالية، مولّداً التكبير." },
+  { q: "ما الفرق بين فرق الطور في مضخّم القاعدة المشتركة ومضخّم الباعث المشترك؟",
+    opts: ["القاعدة المشتركة: فرق طور صفر (بنفس الطور). الباعث المشترك: فرق طور 180° (معاكس بالطور)", "كلاهما بفرق طور صفر دائماً", "كلاهما بفرق طور 180° دائماً", "لا يوجد أي فرق طور في أي منهما بأي حال"], a: 0,
+    why: "بمضخّم القاعدة المشتركة تخرج الإشارة بنفس طور الدخول (0°)، بينما بمضخّم الباعث المشترك تخرج معاكسة الطور (180°)." },
+  { q: "ما وجه الشبه الأساسي بين الترانزستور كـ«مفتاح إلكتروني» والبوابات المنطقية الرقمية (0 و1) بالمعالجات؟",
+    opts: ["الترانزستور لا يمكن أن يعمل كمفتاح إطلاقاً، بل كمكبّر فقط", "البوابات المنطقية لا تستعمل ترانزستورات إطلاقاً بتصميمها", "لا توجد أي علاقة بينهما؛ تشابه لفظي فقط", "حالتا التشغيل التام (تشبّع) والإيقاف التام (قطع) بالترانزستور تقابلان مباشرة الحالتين الرقميتين 1 و0"], a: 3,
+    why: "بتيار قاعدة كافٍ يعمل الترانزستور بوضع التشبّع (تيار أقصى ≈ 1 رقمياً)، وبلا تيار قاعدة يعمل بوضع القطع (تيار معدوم ≈ 0 رقمياً) — أساس كل البوابات المنطقية الرقمية." }
+], { onDone: function (stars) { Phy.setLesson("g6c7", "8", { stars: stars }); } });
+</script>
+</body>
+</html>

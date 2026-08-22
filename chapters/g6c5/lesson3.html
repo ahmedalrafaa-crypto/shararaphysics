@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: تجربة شقي يونك — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c5">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الخامس</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>🌊 الدرس 3: تجربة شقي يونك</h1>
+    <p>عام 1801 وقف طبيب موسوعي أمام الجمعية الملكية ليقول ما يشبه الهرطقة يومها: نيوتن أخطأ، الضوء ليس جسيمات بل موجات. أشهر تجربة في تاريخ البصريات — وهي التي أثبتت أن الضوء موجة.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">💡</span> تجربة شقي يونك: الضوء موجة</div>
+  <div class="card">
+    <p>عام <b>1801</b> أثبت العالِم <b>يونك</b> الطبيعة الموجية للضوء. أضاء شقاً ضيقاً بضوء أحادي اللون، فسقط على حاجز فيه شقان ضيقان متماثلان (S₁، S₂) يبعدان بُعدين متساويين عن الشق الأول — فصارا <b>مصدرين متشاكهين</b> (فرق الطور بينهما ثابت لأنهما من موجة أصلية واحدة). وعلى شاشة بعيدة ظهرت مناطق مضيئة ومعتمة بالتعاقب سُمّيت <b class="term">الهُدب</b>.</p>
+    <p>بما أن البعد بين الشقين d صغير جداً مقارنة ببعد الشاشة L، فإن فرق المسار البصري لأي نقطة على الشاشة = d sinθ:</p>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="lawbox" style="margin:0">هُدب مضيئة (بناء)<div class="formula">d sinθ = mλ</div></div>
+    <div class="lawbox" style="margin:0">هُدب معتمة (إتلاف)<div class="formula">d sinθ = (m+½)λ</div></div>
+  </div>
+  <div class="card">
+    <p>ولأن زاوية الحيود θ صغيرة (tanθ ≅ sinθ)، فموقع الهدب y ≅ L sinθ، ومنه:</p>
+  </div>
+  <div class="lawbox">
+    فاصلة الهُدب (البعد بين مركزي هدبين متتاليين من النوع نفسه)
+    <div class="formula">Δy = λL/d</div>
+  </div>
+  <div class="notebox">
+    <b>تذكّر (وزاري متكرر):</b> تزداد فاصلة الهدب Δy: ① بازدياد بعد الشاشة L (طردية) ② بنقصان البعد بين الشقين d (عكسية) ③ بازدياد الطول الموجي λ (طردية). والهداب المركزي بالضوء الأبيض <b>أبيض</b> (فرق المسار = صفر لكل الألوان)، وعلى جانبيه أطياف يتدرّج كلٌّ منها من البنفسجي (الأقرب للمركز) إلى الأحمر.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> سبب ظهور هُدب مضيئة وهُدب مظلمة بتجربة شقي يونك. <span class="wz">د2 2017 · د2 2020 · د1 2021 · د2 2022 · د2 2023</span></summary>
+    <div class="ans">حيود وتداخل موجات الضوء معاً: تحيد الموجات عند مرورها بالشقين الضيقين (فيصيران مصدرين متشاكهين)، ثم تتداخل الموجتان المنبعثتان: بناءً حيث فرق المسار أعداد صحيحة من λ (هدب مضيء)، وإتلافاً حيث أعداد فردية من أنصافها (هدب مظلم). ملاحظة: عبارة «حيود موجات الضوء فقط» الشائعة بصيغة صح/خطأ (2020د2) خاطئة — الصحيح: حيود وتداخل معاً.</div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري — الأكثر تكراراً</span> لو أُجريت تجربة يونك تحت سطح الماء، كيف يتأثر طراز التداخل؟ <span class="wz">2017د1 · 2018ت · 2019د3 · 2021ت · 2021د2تك · 2022ت</span></summary>
+    <div class="ans">يقلّ الطول الموجي داخل الماء (λ_n = λ/n، ومعامل انكسار الماء n أكبر من 1)، وبما أن فاصلة الهدب Δy = λ_nL/d تتناسب طردياً مع الطول الموجي، فإن <b>فاصلة الهدب تقلّ وتتقارب الهدب من بعضها</b> (يبقى الترتيب نفسه لكن النمط ينكمش).</div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> أثبت أن فاصلة الهدب تُعطى بالعلاقة Δy = λL/d. <span class="wz">د1 2022</span></summary>
+    <div class="ans">موقع الهدب المضيء ذي المرتبة m: y_m = (λL/d)m، وموقع التالي: y_(m+1) = (λL/d)(m+1). وفاصلة الهدب: Δy = y_(m+1) − y_m = (λL/d)(m+1) − (λL/d)m = (λL/d)(m+1−m) ⟹ Δy = λL/d.</div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> كيف تتغيّر فاصلة الهدب بتغيّر L، d، λ كلٍّ على حدة؟ <span class="wz">د2 2018 · تمهيدي 2020 · د1 2021 · تمهيدي 2022</span></summary>
+    <div class="ans">من Δy = λL/d: ① تزداد الفاصلة بازدياد L (تناسب طردي) ② تقلّ بازدياد d (تناسب عكسي) ③ تزداد بازدياد λ (تناسب طردي).</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🔑</span> مسائل يونك: قالب واحد يحلّها كلّها</div>
+  <div class="notebox">
+    كل مسائل يونك الوزارية تدور على قانونين: موقع هدب <b>y_m = (λL/d)m</b> وفاصلة الهدب <b>Δy = λL/d</b>. اقرأ السؤال وحدّد: هل المعطى بُعد هدب ذي مرتبة (y_m) أم بُعد بين هدبين متتاليين (Δy)؟ ثم اعزل المجهول. وانتبه للوحدات: mm ⟵ 10⁻³ m، وnm ⟵ 10⁻⁹ m.
+  </div>
+  <div class="example">
+    <div class="exq">البعد بين شقي يونك 0.2 mm وبعد الشاشة عنهما 1 m، وبعد الهدب الثالث المضيء عن المركزي 9.49 mm. احسب طول موجة الضوء. <span style="font-size:.8rem;color:var(--ink-soft)">(ورد وزارياً حرفياً — تمهيدي 2020)</span></div>
+    <div class="step"><b>القانون:</b> y_m = (λL/d)m ⟹ λ = y_m·d/(mL)</div>
+    <div class="step"><b>التعويض:</b> λ = (9.49×10⁻³ × 0.2×10⁻³)/(3×1) = 633×10⁻⁹ m = <b>633 nm</b> (ضوء ليزر الهيليوم-نيون الأحمر الشهير).
+      💡 نظير وزاري (الدور الثالث 2023): d=4×10⁻⁴m، L=2m، y₃=6mm ⟹ λ = 400 nm.</div>
+  </div>
+  <div class="example">
+    <div class="exq">شاشة على بُعد 4.5 m من حاجز ذي شقين تباعدهما 0.1 mm، وكانت الفاصلة بين الهداب المركزي والهدب ذي المرتبة m=2 تساوي 4.5 cm. احسب λ، وكم تصبح فاصلة الهدب عند استخدام ضوء 625 nm؟ <span style="font-size:.8rem;color:var(--ink-soft)">(د2 2020 ومثله د1 2023)</span></div>
+    <div class="step"><b>الخطوة 1:</b> المعطى هنا موقع هدب ذي مرتبة: y₂=(λL/d)×2 ⟹ λ = y₂d/(2L) = (4.5×10⁻²×0.1×10⁻³)/(2×4.5) = 5×10⁻⁷ m = <b>500 nm</b>.</div>
+    <div class="step"><b>الخطوة 2:</b> عند λ′=625nm: Δy′ = λ′L/d = (625×10⁻⁹×4.5)/(0.1×10⁻³) ≈ <b>2.81 cm</b>.
+      💡 الفاصلة كبرت لأن الطول الموجي أكبر — تتناسب معه طردياً.</div>
+  </div>
+
+  <!-- ======== المحاكاة: تجربة يونك ======== -->
+  <div class="sim">
+    <h3>🌈 مختبر تجربة يونك لشقّي التداخل</h3>
+    <p class="sim-sub">غيّر تباعد الشقين d وبعد الشاشة L والطول الموجي λ، وراقب أهداب التداخل على الشاشة تتغيّر مع فاصلة الهدب Δy = λL/d.</p>
+    <div class="sim-scroll"><canvas id="youngSim" width="560" height="230"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">تباعد الشقين d (مايكرومتر): <b id="dVal">١٥٠</b>
+        <input type="range" id="dR" min="50" max="500" step="10" value="150"></div>
+      <div class="slider-group">بعد الشاشة L (متر): <b id="lVal">١.٥</b>
+        <input type="range" id="lR" min="5" max="30" step="1" value="15"></div>
+      <div class="slider-group">الطول الموجي λ (نانومتر): <b id="wlVal">٥٥٠</b>
+        <input type="range" id="wlR" min="400" max="700" step="10" value="550"></div>
+    </div>
+    <div class="readout" id="youngReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson4.html">الدرس التالي: التداخل في الأغشية الرقيقة 🫧</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة تجربة يونك ---------- */
+(function () {
+  var cv = document.getElementById("youngSim"), ctx = cv.getContext("2d");
+  var dR = document.getElementById("dR"), lR = document.getElementById("lR"), wlR = document.getElementById("wlR");
+  var dVal = document.getElementById("dVal"), lVal = document.getElementById("lVal"), wlVal = document.getElementById("wlVal");
+  var readout = document.getElementById("youngReadout");
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n, d) { return arNum(n.toFixed(d === undefined ? 0 : d)); }
+
+  function wavelengthToRgb(wl) {
+    var r = 0, g = 0, b = 0;
+    if (wl < 440) { r = -(wl - 440) / 60; b = 1; }
+    else if (wl < 490) { g = (wl - 440) / 50; b = 1; }
+    else if (wl < 510) { g = 1; b = -(wl - 510) / 20; }
+    else if (wl < 580) { r = (wl - 510) / 70; g = 1; }
+    else if (wl < 645) { r = 1; g = -(wl - 645) / 65; }
+    else { r = 1; }
+    return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+  }
+
+  function draw() {
+    var dUm = +dR.value, Lm10 = +lR.value, wl = +wlR.value;
+    var L = Lm10 / 10;
+    dVal.textContent = arNum(dUm); lVal.textContent = fmt(L, 1); wlVal.textContent = arNum(wl);
+    ctx.direction = "ltr";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    var d_m = dUm * 1e-6, L_m = L, lambda = wl * 1e-9;
+    var rgb = wavelengthToRgb(wl), cr = rgb[0], cg = rgb[1], cb = rgb[2];
+
+    var sx = 80, sy1 = 85, sy2 = 145;
+    ctx.fillStyle = "rgb(" + cr + "," + cg + "," + cb + ")";
+    [sy1, sy2].forEach(function (sy) { ctx.beginPath(); ctx.arc(sx, sy, 4, 0, 7); ctx.fill(); });
+    ctx.strokeStyle = "rgba(" + cr + "," + cg + "," + cb + ",0.3)"; ctx.lineWidth = 1.4;
+    [sy1, sy2].forEach(function (sy) {
+      for (var ring = 1; ring <= 3; ring++) { ctx.beginPath(); ctx.arc(sx, sy, ring * 22, -1.3, 1.3); ctx.stroke(); }
+    });
+
+    var screenX = 400, screenTop = 15, screenH = 200, screenW = 55;
+    var halfRangeM = 0.012;
+    for (var py = 0; py < screenH; py++) {
+      var yFrac = py / screenH - 0.5;
+      var y_m = yFrac * 2 * halfRangeM;
+      var phase = (Math.PI * d_m * y_m) / (lambda * L_m);
+      var intensity = Math.pow(Math.cos(phase), 2);
+      ctx.fillStyle = "rgb(" + Math.round(cr * intensity) + "," + Math.round(cg * intensity) + "," + Math.round(cb * intensity) + ")";
+      ctx.fillRect(screenX, screenTop + py, screenW, 1);
+    }
+    ctx.strokeStyle = "#d8d2ea"; ctx.strokeRect(screenX, screenTop, screenW, screenH);
+
+    ctx.strokeStyle = "rgba(" + cr + "," + cg + "," + cb + ",0.25)"; ctx.lineWidth = 1;
+    [sy1, sy2].forEach(function (sy) {
+      ctx.beginPath(); ctx.moveTo(sx + 6, sy); ctx.lineTo(screenX, screenTop + screenH / 2); ctx.stroke();
+    });
+
+    ctx.fillStyle = "#756b8a"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("الشقّان", sx, 185);
+    ctx.fillText("الشاشة", screenX + screenW / 2, screenTop + screenH + 22);
+
+    var deltaYmm = (lambda * L_m / d_m) * 1000;
+    readout.innerHTML = "Δy = λL/d = " + fmt(deltaYmm, 2) + " ملم بين مركزي هدبين متتاليين — الهدب المضيئة عند فرق مسار d·sinθ = mλ.";
+  }
+  dR.addEventListener("input", draw);
+  lR.addEventListener("input", draw);
+  wlR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "في تجربة شقي يونك، يحصل الهدب المضيء الأول على جانبي الهدب المركزي عندما يكون فرق المسار البصري مساوياً:",
+    opts: ["2λ", "λ", "3λ", "½λ"], a: 1,
+    why: "شرط الهدب المضيء d sinθ=mλ، وللأول (م=1) فرق المسار = λ بالضبط. (اختيار وزاري: 2019د1)" },
+  { q: "نمط التداخل بتجربة شقي يونك يتولّد بسبب:",
+    opts: ["الانعكاس فقط", "الانكسار فقط", "حيود وتداخل موجات الضوء معاً", "الاستقطاب فقط"], a: 2,
+    why: "تحيد الموجات بالشقين الضيقين فتصير مصدرين متشاكهين، ثم تتداخل: بناءً وإتلافاً بالتعاقب فيظهر الهدب. (اختيار وزاري: 2021د1)" },
+  { q: "أُجريت تجربة يونك تحت سطح الماء بدل الهواء. ماذا يحصل لفاصلة الهدب؟",
+    opts: ["تزداد وتتباعد الهدب", "تقلّ وتتقارب الهدب من بعضها", "تبقى ثابتة تماماً", "يختفي نمط التداخل كلياً"], a: 1,
+    why: "الطول الموجي يقلّ داخل الماء (λ_n=λ/n)، وبما أن Δy=λL/d تتناسب طردياً مع λ، تقلّ فاصلة الهدب. (وزاري الأكثر تكراراً: 2017د1 وغيرها)" },
+  { q: "عند إضاءة شقي يونك بضوء أخضر طوله الموجي 5×10⁻⁷ m، والبعد بين الشقين 1 mm، وبعد الشاشة 2 m، فإن فاصلة الهدب تساوي:",
+    opts: ["0.4 mm", "0.25 mm", "0.1 mm", "1 mm"], a: 3,
+    why: "Δy = λL/d = (5×10⁻⁷×2)/(1×10⁻³) = 10⁻³ m = 1 mm. (تمهيدي 2022 — سؤال الكتاب س١/١٥)" },
+  { q: "وُضعت شاشة على بُعد 4.5 m من حاجز ذي شقين وأُضيء الشقان بضوء λ=490nm، فكانت فاصلة الهدب الأول (m=1) عن المركزي 4.5 cm. ما البعد بين الشقين؟",
+    opts: ["≈0.49 mm", "≈4.9 mm", "≈0.049 mm", "≈49 mm"], a: 2,
+    why: "d = λL/y₁ = (490×10⁻⁹×4.5)/(4.5×10⁻²) = 4.9×10⁻⁵ m = 0.049 mm. (مسألة الكتاب س١)" }
+], { onDone: function (stars) { Phy.setLesson("g6c5", "3", { stars: stars }); } });
+</script>
+</body>
+</html>

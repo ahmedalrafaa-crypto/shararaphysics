@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 6: الكشف عن الموجات الكهرومغناطيسية ذات التردد الراديوي — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c4">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الرابع</a> / الدرس 6</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔍 الدرس 6: الكشف عن الموجات الكهرومغناطيسية ذات التردد الراديوي</h1>
+    <p>هوائي التسلم يلتقط الموجة، لكن كيف "يشعر" بها بالضبط ويحوّلها لتيار كهربائي مفيد؟ توجد طريقتان فقط — واحدة تستغلّ المجال الكهربائي للموجة، والأخرى تستغلّ مجالها المغناطيسي.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">📡</span>
+    <span>لهذا بالضبط تختلف أشكال الهوائيات: هوائي التلفاز القديم سلك مستقيم طويل، بينما هوائي بعض أجهزة الراديو المحمولة حلقة أو ملف ملفوف. كل شكل مصمّم ليتفاعل مع أحد مجالَي الموجة القادمة بأقصى كفاءة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔍</span> الكشف: كيف يلتقط الهوائي المعلومة؟</div>
+  <div class="card">
+    <p><b>الكشف</b> هو استخلاص المعلومة من الموجة الملتقطة، ويكون بإحدى طريقتين:</p>
+  </div>
+  <div class="defbox">
+    <b class="term">الكشف بوساطة المجال الكهربائي (هوائي مستقيم):</b> المجال الكهربائي E للموجة القادمة يكون موازياً لطول الهوائي المستقيم (ثنائي القطب)، فيدفع الإلكترونات الحرة بالمعدن للتذبذب صعوداً ونزولاً بطول السلك بتردد الموجة نفسه، فيتولّد فرق جهد متردد يُضخَّم ويُعالَج.
+  </div>
+  <div class="defbox">
+    <b class="term">الكشف بوساطة المجال المغناطيسي (هوائي حلقي):</b> المجال المغناطيسي المتغيّر B للموجة القادمة يخترق مساحة الهوائي الحلقي، فبقانون فاراداي (تتذكره من فصل الحث الكهرومغناطيسي: ε=−N ΔΦ/Δt) يُحتث بالحلقة تيار متردد يحمل المعلومة نفسها.
+  </div>
+
+  <!-- ======== المحاكاة: هوائي مستقيم مقابل هوائي حلقي ======== -->
+  <div class="sim">
+    <h3>📡 مختبر الكشف: هوائي مستقيم مقابل هوائي حلقي</h3>
+    <p class="sim-sub">اختر نوع الهوائي لترى أي مجال بالموجة القادمة (الكهربائي E أم المغناطيسي B) يتفاعل معه وكيف يتولّد التيار.</p>
+    <div class="sim-scroll"><canvas id="detectSim" width="700" height="230"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">نوع الهوائي:
+        <select id="antType" style="padding:8px;border-radius:10px;border:2px solid #e9ebfa;font-family:inherit;font-weight:700">
+          <option value="dipole">📏 هوائي مستقيم (ثنائي القطب)</option>
+          <option value="loop">⭕ هوائي حلقي</option>
+        </select></div>
+    </div>
+    <div class="readout" id="detectReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz6"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson5.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson7.html">الدرس التالي: التضمين 📻</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة الكشف: مستقيم مقابل حلقي ---------- */
+(function () {
+  var cv = document.getElementById("detectSim"), ctx = cv.getContext("2d");
+  var antType = document.getElementById("antType");
+  var readout = document.getElementById("detectReadout");
+
+  function draw() {
+    var type = antType.value;
+    ctx.direction = "ltr";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.textAlign = "center";
+
+    // الموجة القادمة (توضيحية) يسار الرسم
+    ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 2;
+    ctx.beginPath();
+    for (var x = 40; x <= 260; x++) {
+      var y = 115 - Math.sin((x - 40) / 12) * 26;
+      x === 40 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    ctx.fillStyle = "#dc2626"; ctx.font = "bold 11px Cairo"; ctx.fillText("E المجال الكهربائي (الموجة القادمة)", 150, 55);
+    ctx.fillStyle = "#334155"; ctx.font = "11px Cairo"; ctx.fillText("← تنتشر نحو الهوائي", 150, 175);
+
+    if (type === "dipole") {
+      var ax = 470, ay = 115;
+      ctx.strokeStyle = "#334155"; ctx.lineWidth = 4;
+      ctx.beginPath(); ctx.moveTo(ax, ay - 70); ctx.lineTo(ax, ay + 70); ctx.stroke();
+      ctx.fillStyle = "#dc2626";
+      ctx.beginPath(); ctx.arc(ax, ay - 50, 5, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(ax, ay + 50, 5, 0, Math.PI * 2); ctx.fill();
+      ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 1.6; ctx.setLineDash([3, 3]);
+      ctx.beginPath(); ctx.moveTo(ax, ay - 50); ctx.lineTo(ax, ay + 50); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = "#334155"; ctx.font = "bold 12px Cairo"; ctx.fillText("هوائي مستقيم", ax, ay - 85);
+      ctx.font = "10.5px Cairo";
+      ctx.fillText("E موازٍ لطول السلك", ax, ay + 95);
+      ctx.fillText("← تتذبذب الإلكترونات صعوداً ونزولاً", ax, ay + 112);
+      readout.innerHTML = "📏 <b>الهوائي المستقيم</b>: يتفاعل مع المجال الكهربائي E الموازي لطوله، فتتذبذب الإلكترونات الحرة بالسلك بتردد الموجة نفسه، فيتولّد فرق جهد متردد.";
+    } else {
+      var lx = 470, ly = 115;
+      ctx.strokeStyle = "#0369a1"; ctx.lineWidth = 4;
+      ctx.beginPath(); ctx.ellipse(lx, ly, 55, 70, 0, 0, Math.PI * 2); ctx.stroke();
+      ctx.fillStyle = "#0369a1"; ctx.font = "bold 12px Cairo"; ctx.fillText("هوائي حلقي", lx, ly - 85);
+      ctx.font = "18px Cairo"; ctx.fillText("⊙", lx, ly + 6);
+      ctx.font = "10.5px Cairo"; ctx.fillStyle = "#334155";
+      ctx.fillText("B يخترق مساحة الحلقة", lx, ly + 95);
+      ctx.fillText("← يُحتث تيار متردد (قانون فاراداي)", lx, ly + 112);
+      readout.innerHTML = "⭕ <b>الهوائي الحلقي</b>: يتفاعل مع المجال المغناطيسي B المتغيّر الذي يخترق مساحته، فيُحتث بالحلقة تيار متردد وفق قانون فاراداي ε=−NΔΦ/Δt.";
+    }
+  }
+  antType.addEventListener("change", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz6", [
+  { q: "كيف يعمل الهوائي المستقيم (ثنائي القطب) على كشف الموجة الواردة؟",
+    opts: ["المجال الكهربائي E للموجة يكون موازياً لطول السلك، فيدفع الإلكترونات الحرة للتذبذب بتردد الموجة، فيتولّد فرق جهد متردد", "يعتمد فقط على المجال المغناطيسي المخترق لمساحته", "يسخن السلك بحرارة الموجة فيتمدد وينقبض متردداً", "لا علاقة له بأي من مجالَي الموجة إطلاقاً"], a: 0,
+    why: "بالهوائي المستقيم، المجال الكهربائي E يوازي طول السلك فيدفع إلكتروناته الحرة للتذبذب بتردد الموجة نفسه، منتجاً فرق جهد متردد." },
+  { q: "كيف يكتشف الهوائي الحلقي المعلومة المحمولة على موجة كهرومغناطيسية واردة؟",
+    opts: ["بقانون فاراداي: المجال المغناطيسي المتغيّر للموجة يخترق مساحة الحلقة فيُحتث فيها تيار متردد", "بجذب الشحنات الساكنة بالهواء المحيط فقط", "لا علاقة له بأي قانون فيزيائي معروف", "بتسخين الحلقة مباشرة بالموجة الواردة"], a: 0,
+    why: "المجال المغناطيسي المتغيّر B للموجة يخترق مساحة الحلقة، فبقانون فاراداي (ε=−NΔΦ/Δt) يُحتث تيار متردد يحمل المعلومة." },
+  { q: "ما الفرق الجوهري بين طريقتَي الكشف بالمجال الكهربائي والمجال المغناطيسي؟",
+    opts: ["الأولى تستغل تذبذب الإلكترونات بسلك موازٍ لـE، والثانية تستغل تيار الحث الناتج عن B المخترق لمساحة حلقة", "لا فرق حقيقي بينهما، فكلتاهما تعتمدان على المجال نفسه", "الأولى تحتاج مصدر طاقة خارجي، والثانية لا تحتاجه إطلاقاً", "الثانية تعمل فقط بالنهار والأولى فقط بالليل"], a: 0,
+    why: "الكشف بالمجال الكهربائي يستغل قوة E الدافعة للإلكترونات بسلك موازٍ له؛ أما الكشف بالمجال المغناطيسي فيستغل الحث الكهرومغناطيسي (فاراداي) الناتج عن تغيّر الفيض المغناطيسي المخترق لحلقة." },
+  { q: "لماذا يُفضَّل الهوائي المستقيم أن يكون موازياً لاتجاه المجال الكهربائي E للموجة القادمة تحديداً؟",
+    opts: ["لأن القوة الدافعة للإلكترونات بطول السلك تكون أعظمية عندما يوازي السلك اتجاه E نفسه", "لأن ذلك يزيد سرعة الموجة نفسها أثناء انتشارها بالفضاء", "لا علاقة لاتجاه السلك بكفاءة الاستقبال إطلاقاً", "لأن ذلك يمنع أي تشويش خارجي كلياً بكل الحالات"], a: 0,
+    why: "القوة المؤثرة على إلكترونات السلك تعتمد على مركبة E الموازية له؛ فإذا كان السلك موازياً لـE تماماً، تكون هذه القوة (وبالتالي الإشارة المتولّدة) أعظمية." }
+], { onDone: function (stars) { Phy.setLesson("g6c4", "6", { stars: stars }); } });
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: طيف ذرّة الهيدروجين وسلاسله — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c8">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الثامن</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>🌈 الدرس 2: طيف ذرّة الهيدروجين وسلاسله</h1>
+    <p>حين تُثار غازة هيدروجين بالكهرباء، فإنها لا تبعث كل الألوان الممكنة، بل أربعة خطوط دقيقة فقط: أحمر وأخضر ونيلي وبنفسجي. لماذا هذه الخطوط بالذات؟ فرضيات بور التي درستها بالدرس الماضي تعطي الجواب الكامل — بدقة رياضية مذهلة.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔭</span>
+    <span>درس بور طيف ذرّة الهيدروجين لأنها أبسط ذرّة (إلكترون واحد)، وخرج باستنتاجات صارت أساس فهمنا الحديث لكل الذرّات.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📉</span> المستوى الأرضي والمستويات المتهيّجة</div>
+  <div class="card">
+    <p>عند إثارة ذرّة الهيدروجين تنتقل إلكتروناتها من المستوى الواطئ إلى مستوى أعلى، ولا يبقى الإلكترون بالمستوى الأعلى إلا لمدة زمنية قصيرة جداً (نحو 10⁻⁸s) ثم يهبط ثانية.</p>
+  </div>
+  <div class="defbox">
+    <b class="term">المستوى الأرضي (Ground State):</b> أوطأ مستوى طاقة للذرّة E₁. أما المستويات الأعلى E₂, E₃, E₄, … فتُسمى <b>المستويات المتهيّجة (Excited States)</b>. كل طاقات هذه المستويات <b>سالبة</b>؛ لذا لا يمتلك الإلكترون تحت الظروف الطبيعية طاقة كافية للهروب من الذرّة.
+  </div>
+
+  <!-- ======== المحاكاة: أنموذج بور لذرة الهيدروجين ======== -->
+  <div class="sim">
+    <h3>⚛️ مختبر أنموذج بور لذرّة الهيدروجين</h3>
+    <p class="sim-sub">اختر مستوى ابتدائياً nᵢ ومستوى نهائياً n_f، وشاهد الفوتون المنبعث بلونه الصحيح (أو "غير مرئي" إن كان خارج المدى المرئي)، والسلسلة الطيفية التي ينتمي إليها هذا الانتقال.</p>
+    <canvas id="bohrSim" width="620" height="260"></canvas>
+    <div class="controls">
+      <div class="slider-group">المستوى الابتدائي nᵢ: <b id="niVal">٣</b>
+        <input type="range" id="niR" min="2" max="6" step="1" value="3"></div>
+      <div class="slider-group">المستوى النهائي n_f: <b id="nfVal">٢</b>
+        <input type="range" id="nfR" min="1" max="5" step="1" value="2"></div>
+    </div>
+    <div class="readout" id="bohrReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="tblwrap">
+    <table class="nice">
+      <thead><tr><th>السلسلة</th><th>الانتقال إلى المستوى</th><th>المنطقة الطيفية</th><th>مرئية؟</th></tr></thead>
+      <tbody>
+        <tr><td>لايمان Lyman</td><td>n = 1</td><td>فوق البنفسجية (UV)</td><td>غير مرئية</td></tr>
+        <tr><td>بالمر Balmer</td><td>n = 2</td><td>المرئية، وتمتد حتى فوق البنفسجية</td><td><b>مرئية</b></td></tr>
+        <tr><td>باشن Paschen</td><td>n = 3</td><td>تحت الحمراء</td><td>غير مرئية</td></tr>
+        <tr><td>براكت Brackett</td><td>n = 4</td><td>تحت الحمراء</td><td>غير مرئية</td></tr>
+        <tr><td>فوند Pfund</td><td>n = 5</td><td>تحت الحمراء</td><td>غير مرئية</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="notebox">
+    <b>🌈 لماذا سلسلة بالمر وحدها مرئية؟</b>
+    <p style="margin-top:6px">لأن فرق الطاقة بين المستويات العليا والمستوى الثاني (n=2) يقابل فوتونات بأطوال موجية تقع ضمن المدى المرئي (~400–700nm)، بينما فروق الطاقة نحو المستوى الأول أكبر (فوق بنفسجي) ونحو المستويات الثالث وما فوق أصغر (تحت أحمر).</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول — ورد وزارياً بصيغ مشابهة</div>
+  <div class="example">
+    <div class="exq">إلكترون في ذرّة هيدروجين انتقل من مستوى الطاقة E₄=−0.85eV إلى مستوى الطاقة E₂=−3.4eV. جد مقدار تردد الفوتون المنبعث.</div>
+    <div class="givens">المعطيات: E₄=−0.85eV — E₂=−3.4eV — h=6.63×10⁻³⁴J.s — 1eV=1.6×10⁻¹⁹J</div>
+    <div class="step"><b>الخطوة ١:</b> طاقة الفوتون تساوي الفرق المطلق بين المستويين:
+      <div class="math">hf = E₄ − E₂ = (−0.85) − (−3.4) = 2.55 eV = 2.55 × 1.6×10⁻¹⁹ = 4.08×10⁻¹⁹ J</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نوجد التردد:
+      <div class="math">f = 4.08×10⁻¹⁹ / 6.63×10⁻³⁴ ≈ 6.15×10¹⁴ Hz</div>
+      💡 هذا الانتقال (من n=4 إلى n=2) ينتمي إلى سلسلة بالمر المرئية.</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> طيف ذرّة الهيدروجين هو طيف: <span class="wz">الدور الثالث 2019</span></summary>
+    <div class="ans"><b>طيف خطّي</b> — لأن الإلكترونات تنتقل بين مستويات طاقة منفصلة ومحددة، فتُبعث فوتونات ذات ترددات (وبالتالي أطوال موجية) محددة تماماً تظهر كخطوط منفصلة على خلفية سوداء، لا كطيف متصل.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: الأنطياف وأنواعها 📊</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة أنموذج بور ---------- */
+(function () {
+  var cv = document.getElementById("bohrSim"), ctx = cv.getContext("2d");
+  var niR = document.getElementById("niR"), nfR = document.getElementById("nfR");
+  var niVal = document.getElementById("niVal"), nfVal = document.getElementById("nfVal");
+  var readout = document.getElementById("bohrReadout");
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function E(n) { return -13.6 / (n * n); }
+  var SERIES = { 1: "لايمان (فوق بنفسجي)", 2: "بالمر (مرئي)", 3: "باشن (تحت أحمر)", 4: "براكت (تحت أحمر)", 5: "فوند (تحت أحمر)" };
+
+  function wavelengthToColor(wl) {
+    if (wl < 380) return "rgb(138,43,226)";
+    if (wl > 750) return "rgb(120,20,20)";
+    var r = 0, g = 0, b = 0;
+    if (wl < 440) { r = -(wl - 440) / 60; b = 1; }
+    else if (wl < 490) { g = (wl - 440) / 50; b = 1; }
+    else if (wl < 510) { g = 1; b = -(wl - 510) / 20; }
+    else if (wl < 580) { r = (wl - 510) / 70; g = 1; }
+    else if (wl < 645) { r = 1; g = -(wl - 645) / 65; }
+    else { r = 1; }
+    return "rgb(" + Math.round(r * 255) + "," + Math.round(g * 255) + "," + Math.round(b * 255) + ")";
+  }
+
+  var levels = [1, 2, 3, 4, 5, 6];
+  function yOf(n) { return 220 - (E(n) - E(1)) / (E(6) - E(1)) * 180; }
+
+  function draw() {
+    var nI = +niR.value, nF = +nfR.value;
+    if (nF >= nI) { nF = nI - 1; nfR.value = nF; }
+    niVal.textContent = arNum(nI); nfVal.textContent = arNum(nF);
+
+    var dE = Math.abs(E(nF) - E(nI));
+    var lambda = 1240 / dE; // تقريب مباشر: hc بوحدة eV·nm ≈ 1240
+    var color = wavelengthToColor(lambda);
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.direction = "ltr";
+    var lx = 60, lw = 220;
+    levels.forEach(function (n) {
+      var y = yOf(n);
+      ctx.strokeStyle = (n === nI || n === nF) ? "#be123c" : "#e2e8f0";
+      ctx.lineWidth = (n === nI || n === nF) ? 2.5 : 1;
+      ctx.beginPath(); ctx.moveTo(lx, y); ctx.lineTo(lx + lw, y); ctx.stroke();
+      ctx.fillStyle = "#756b8a"; ctx.font = "11px Cairo"; ctx.textAlign = "left";
+      ctx.fillText("n=" + arNum(n) + "  (" + E(n).toFixed(2) + " eV)", lx + lw + 8, y + 4);
+    });
+
+    var yI = yOf(nI), yF = yOf(nF);
+    ctx.strokeStyle = "#94a3b8"; ctx.setLineDash([3, 3]); ctx.lineWidth = 1.4;
+    ctx.beginPath(); ctx.moveTo(lx + lw / 2, yI); ctx.lineTo(lx + lw / 2, yF); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.beginPath(); ctx.arc(lx + lw / 2, yF, 6, 0, Math.PI * 2); ctx.fillStyle = "#2563eb"; ctx.fill();
+    ctx.strokeStyle = color; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.arc(lx + lw / 2, yF, 20, -0.6, 0.6); ctx.stroke();
+    ctx.beginPath(); ctx.arc(lx + lw / 2, yF, 34, -0.6, 0.6); ctx.stroke();
+
+    ctx.textAlign = "center"; ctx.fillStyle = "#211a2e"; ctx.font = "bold 12px Cairo";
+    ctx.fillText("سلسلة " + (SERIES[nF] || ("n_f=" + nF)), 420, 30);
+    ctx.fillStyle = color; ctx.fillRect(380, 45, 80, 20);
+    ctx.fillStyle = "#756b8a"; ctx.font = "11px Cairo";
+    ctx.fillText(lambda < 380 ? "غير مرئي (UV)" : lambda > 750 ? "غير مرئي (IR)" : "ضوء مرئي", 420, 85);
+
+    readout.innerHTML = "hf = Eᵢ − E_f = " + dE.toFixed(2) + " eV &nbsp;→&nbsp; λ = 1240/ΔE ≈ " + lambda.toFixed(0) + " nm &nbsp;→&nbsp; سلسلة " + (SERIES[nF] || nF);
+  }
+  niR.addEventListener("input", draw);
+  nfR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ماذا نسمي أوطأ مستوى طاقة لذرّة الهيدروجين E₁؟",
+    opts: ["المستوى المتهيّج", "المستوى الأرضي", "المستوى الحر", "المستوى الصفري"], a: 1,
+    why: "أوطأ مستوى طاقة يُسمى المستوى الأرضي (Ground State)؛ المستويات الأعلى منه تُسمى مستويات متهيّجة." },
+  { q: "إلى أي مستوى تنتهي الانتقالات الإلكترونية في سلسلة بالمر (Balmer)؟",
+    opts: ["n = 1", "n = 3", "n = 4", "n = 2"], a: 3,
+    why: "سلسلة بالمر هي كل الانتقالات المنتهية عند n=2، وهي السلسلة الوحيدة الواقعة (جزئياً) بالمدى المرئي." },
+  { q: "لماذا سلسلة لايمان (الانتقال إلى n=1) غير مرئية للعين البشرية؟",
+    opts: ["لأن فرق الطاقة بها كبير جداً فيقابل أطوالاً موجية فوق بنفسجية قصيرة", "لأن فرق الطاقة بها صغير جداً فيقابل أطوالاً موجية تحت حمراء طويلة", "لأنها لا تحدث إطلاقاً بذرّة الهيدروجين", "لأن العين البشرية لا ترى أي طيف خطي مهما كان"], a: 0,
+    why: "الانتقال إلى n=1 (أوطأ مستوى) يقابل أكبر فرق طاقة بين السلاسل، فينتج فوتونات عالية الطاقة (فوق بنفسجية قصيرة الطول الموجي)، خارج المدى المرئي." },
+  { q: "إلكترون انتقل من E₅=−0.54eV إلى E₂=−3.4eV. جد طاقة الفوتون المنبعث تقريباً بوحدة eV.",
+    opts: ["≈3.94 eV", "≈0.54 eV", "≈2.86 eV", "≈13.6 eV"], a: 2,
+    why: "hf=E₅−E₂=(−0.54)−(−3.4)=2.86eV." },
+  { q: "لماذا لا يمتلك إلكترون ذرّة الهيدروجين طاقة كافية للهروب من الذرّة تحت الظروف الطبيعية؟",
+    opts: ["لأن طاقات كل مستوياته صفر دائماً", "لأن طاقات كل مستوياته موجبة دوماً وكبيرة جداً", "لأن الإلكترون لا يملك أي طاقة إطلاقاً", "لأن طاقات كل مستوياته سالبة (الإلكترون مرتبط بالنواة)"], a: 3,
+    why: "كل مستويات طاقة الإلكترون بالذرّة سالبة (مرتبط بجذب النواة)؛ الهروب الكلي يتطلب اكتساب طاقة كافية لرفع الطاقة إلى الصفر أو أكثر (التأيّن)." }
+], { onDone: function (stars) { Phy.setLesson("g6c8", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

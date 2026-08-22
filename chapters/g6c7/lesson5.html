@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: الثنائي pn — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c7">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السابع</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔗 الدرس 5: الثنائي pn</h1>
+    <p>ماذا يحدث لو دمجنا بلورة نوع n (فائض إلكترونات) مع بلورة نوع p (فائض فجوات) في بلورة واحدة متصلة؟ لا تحتاج أي بطارية أو مصدر خارجي لكي يحدث شيء مثير: الطبيعة نفسها تُنشئ منطقة عازلة صغيرة عند نقطة التماس، وحاجز جهد داخلي دقيق — وبذلك يُولد أهم عنصر بالإلكترونيات الحديثة: <b>الثنائي</b> (Diode).</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">⚡</span>
+    <span>هذا الدرس يشرح ما يحدث لحظة "التقاء" النوعين p وn داخل بلورة واحدة متصلة (لا بلورتين منفصلتين متلامستين). الدرس القادم يشرح ماذا يحدث لهذه الوصلة عند توصيلها ببطارية خارجية.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔀</span> الانتشار عند لحظة التلامس</div>
+  <div class="card">
+    <p>عند تكوين بلورة واحدة متصلة نصفها مطعّم بالنوع p ونصفها الآخر بالنوع n (تُصنَّع كبلورة واحدة، لا كقطعتين منفصلتين تُلصقان)، يحدث عند السطح الفاصل بينهما ما يلي:</p>
+    <p>• الإلكترونات الحرة الكثيرة بجهة n "تنتشر" (Diffusion) عبر الوصلة إلى جهة p المجاورة (تنتقل من التركيز العالي إلى المنخفض)، وهناك تتحد فوراً مع فجوات جهة p وتُلغي بعضها البعض (إعادة اتحاد / Recombination).</p>
+    <p>• بالمثل، فجوات جهة p تنتشر إلى جهة n وتتحد مع إلكتروناتها الحرة.</p>
+  </div>
+
+  <!-- ======== المحاكاة: تكوّن منطقة الاستنزاف ======== -->
+  <div class="sim">
+    <h3>🧲 مختبر: تكوّن منطقة الاستنزاف</h3>
+    <p class="sim-sub">حرّك المزلاج لمحاكاة تقدّم عملية الانتشار وإعادة الاتحاد قرب الوصلة، وراقب تكوّن منطقة الاستنزاف تدريجياً بأيوناتها الثابتة، ونمو جهد الحاجز حتى يصل توازنه النهائي.</p>
+    <div class="sim-scroll"><canvas id="pnSim" width="700" height="240"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً إن لزم</p>
+    <div class="controls">
+      <div class="slider-group">مقدار تقدّم الانتشار: <b id="diffVal">٠٪</b>
+        <input type="range" id="diffR" min="0" max="100" step="1" value="0"></div>
+    </div>
+    <div class="readout" id="pnReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="defbox">
+    <b class="term">منطقة الاستنزاف (Depletion Region):</b> بعد أن "تُلغي" عمليات الانتشار وإعادة الاتحاد حاملات الشحنة الحرة القريبة من الوصلة، تبقى في هذه المنطقة الضيقة فقط <b>أيونات ثابتة</b> (لا تتحرك، لأنها جزء من البلورة نفسها): أيونات مانحة موجبة بجهة n (بعد فقدانها إلكترونها الزائد)، وأيونات مستقبِلة سالبة بجهة p (بعد اكتسابها إلكتروناً). هذه المنطقة خالية عملياً من حاملات الشحنة الحرة — ومن هنا اسمها.
+  </div>
+  <div class="defbox">
+    <b class="term">جهد الحاجز (Barrier Potential):</b> الأيونات الثابتة بمنطقة الاستنزاف تُنشئ مجالاً كهربائياً داخلياً موجّهاً من n نحو p، يُعادل فرق جهد صغيراً يمنع أي انتشار إضافي بمجرد الوصول إلى التوازن. لهذا الجهد قيمة نموذجية معروفة تعتمد على نوع المادة:
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="lawbox" style="margin:0">ثنائي السيليكون (Si)
+      <div class="formula">V₀ ≈ 0.7 V</div></div>
+    <div class="lawbox" style="margin:0">ثنائي الجرمانيوم (Ge)
+      <div class="formula">V₀ ≈ 0.3 V</div></div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري متكرر</span> علّل: سبب تولّد منطقة الاستنزاف في الثنائي البلوري pn. <span class="wz">التمهيدي 2017 · التمهيدي 2019 · الدور الأول 2022</span></summary>
+    <div class="ans">لأن حوامل الأغلبية تنتشر عبر الملتقى: الإلكترونات الحرة من المنطقة N تنتشر إلى المنطقة P، والفجوات من P إلى N، فتلتحم الإلكترونات مع الفجوات القريبة من الملتقى، تاركةً على جانبيه منطقة رقيقة تحتوي أيونات موجبة (في N) وأيونات سالبة (في P) خالية من حاملات الشحنة — هي منطقة الاستنزاف.</div>
+  </details>
+  <details class="qa">
+    <summary><span class="tag">وزاري متكرر</span> علامَ يعتمد مقدار حاجز الجهد الكهربائي في الثنائي البلوري pn؟ <span class="wz">الدور الثالث 2019 · الدور الثالث 2022-2023 · التمهيدي 2022-2023</span></summary>
+    <div class="ans">يعتمد على: ① نوع مادة شبه الموصل المستعملة (سيليكون أم جرمانيوم). ② نسبة الشوائب المطعّمة بها. ③ درجة حرارة المادة.</div>
+  </details>
+
+  <div class="notebox">
+    <b>🔌 رمز الثنائي بالدارات</b>
+    <p style="margin-top:6px">يُرمز للثنائي بسهم مثلث يشير من جهة p (<b>الأنود</b>، Anode) إلى جهة n (<b>الكاثود</b>، Cathode)؛ اتجاه السهم نفسه هو الاتجاه الذي يسمح الثنائي بمرور التيار التقليدي خلاله بسهولة — كما سترى بالدرس القادم.</p>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> لماذا تُصنَّع الوصلة pn من بلورة واحدة متصلة، لا من قطعتين منفصلتين لـn وp يتم لصقهما ميكانيكياً؟</summary>
+    <div class="ans">لأن تكوّن منطقة الاستنزاف وجهد الحاجز يتطلب استمرارية حقيقية بالبنية البلورية عبر الوصلة (شبكة ذرية متصلة بلا فجوات أو تشوهات بينية)، بحيث تنتشر حاملات الشحنة وتتحد فعلياً عبر حدود دقيقة جداً (أجزاء من الميكرومتر). أي وصلة ميكانيكية بلصق قطعتين منفصلتين تترك سطوحاً غير منتظمة وشوائب تمنع هذا السلوك الدقيق، فلا تُعطي خواص ثنائي عملي.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: فولطية الانحياز للثنائي pn 🔀</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة تكوّن منطقة الاستنزاف ---------- */
+(function () {
+  var cv = document.getElementById("pnSim"), ctx = cv.getContext("2d");
+  var diffR = document.getElementById("diffR"), diffVal = document.getElementById("diffVal");
+  var readout = document.getElementById("pnReadout");
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+
+  var W = 700, H = 190, midX = 350;
+  var pPts = [], nPts = [];
+  (function seed() {
+    var rnd = 1;
+    function r() { rnd = (rnd * 9301 + 49297) % 233280; return rnd / 233280; }
+    for (var i = 0; i < 26; i++) pPts.push({ x: 40 + r() * 280, y: 30 + r() * 140 });
+    for (var i = 0; i < 26; i++) nPts.push({ x: 380 + r() * 280, y: 30 + r() * 140 });
+  })();
+
+  function draw() {
+    var pct = +diffR.value;
+    diffVal.textContent = arNum(pct) + "٪";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    ctx.fillStyle = "#fee2e2"; ctx.fillRect(0, 0, midX, H);
+    ctx.fillStyle = "#dbeafe"; ctx.fillRect(midX, 0, W - midX, H);
+
+    ctx.fillStyle = "#7f1d1d"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("النوع p (فجوات)", 175, 20);
+    ctx.fillStyle = "#1e3a8a";
+    ctx.fillText("النوع n (إلكترونات)", 525, 20);
+
+    var depW = (pct / 100) * 90; // نصف عرض منطقة الاستنزاف لكل جهة، يكبر مع التقدم
+
+    // فجوات جهة p (تختفي القريبة من الوصلة تباعاً)
+    pPts.forEach(function (p) {
+      var distToJ = midX - p.x;
+      if (distToJ < depW) return; // أُلغيت بإعادة الاتحاد
+      ctx.beginPath(); ctx.arc(p.x, p.y, 6, 0, Math.PI * 2);
+      ctx.strokeStyle = "#dc2626"; ctx.lineWidth = 2; ctx.stroke();
+      ctx.fillStyle = "#dc2626"; ctx.font = "bold 8px Cairo"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.fillText("+", p.x, p.y + 1);
+    });
+    // إلكترونات جهة n
+    nPts.forEach(function (p) {
+      var distToJ = p.x - midX;
+      if (distToJ < depW) return;
+      ctx.beginPath(); ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
+      ctx.fillStyle = "#2563eb"; ctx.fill();
+    });
+    ctx.textBaseline = "alphabetic";
+
+    // منطقة الاستنزاف + الأيونات الثابتة
+    if (depW > 2) {
+      ctx.fillStyle = "rgba(180,83,9,.12)";
+      ctx.fillRect(midX - depW, 0, 2 * depW, H);
+      ctx.strokeStyle = "#b45309"; ctx.setLineDash([4, 3]); ctx.lineWidth = 1.5;
+      ctx.strokeRect(midX - depW, 0, 2 * depW, H);
+      ctx.setLineDash([]);
+
+      // أيونات مستقبِلة سالبة (يسار الوصلة) وأيونات مانحة موجبة (يمين الوصلة)
+      ctx.font = "bold 11px Cairo"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      for (var y = 25; y < H; y += 30) {
+        ctx.fillStyle = "#7f1d1d";
+        ctx.fillText("−", midX - depW * 0.55, y);
+        ctx.fillStyle = "#1e3a8a";
+        ctx.fillText("+", midX + depW * 0.55, y);
+      }
+      ctx.textBaseline = "alphabetic";
+    }
+
+    ctx.strokeStyle = "#334155"; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(midX, 0); ctx.lineTo(midX, H); ctx.stroke();
+
+    var v0 = (pct / 100) * 0.7;
+    var stage = pct === 0 ? "لحظة التلامس: لا انتشار بعد، لا منطقة استنزاف."
+      : pct < 100 ? "الانتشار وإعادة الاتحاد جاريان: منطقة الاستنزاف تتّسع تدريجياً."
+      : "التوازن النهائي: جهد الحاجز يوقف أي انتشار إضافي.";
+    readout.innerHTML = stage + " &nbsp;|&nbsp; جهد الحاجز التقريبي حتى الآن: <b>" + v0.toFixed(2) + " V</b> (من أصل 0.7V لثنائي سيليكون عند التوازن الكامل).";
+  }
+  diffR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ماذا يحدث للإلكترونات الحرة الكثيرة بجهة n عند تكوين وصلة pn؟",
+    opts: ["تبقى ثابتة تماماً بجهة n ولا تتحرك إطلاقاً", "تنتشر عبر الوصلة إلى جهة p وتتحد مع فجوات هناك (إعادة اتحاد)", "تنتقل جميعها فوراً إلى خارج البلورة كلياً", "تتحول إلى فجوات مباشرة بلا أي انتقال"], a: 1,
+    why: "فرق التركيز يدفع الإلكترونات الحرة للانتشار من n (تركيز عالٍ) إلى p (تركيز منخفض)، حيث تتحد فوراً مع الفجوات هناك." },
+  { q: "ما الذي يبقى فعلياً داخل منطقة الاستنزاف بعد اكتمال الانتشار وإعادة الاتحاد؟",
+    opts: ["فائض كبير من الإلكترونات الحرة المتحركة", "فائض كبير من الفجوات المتحركة", "لا يوجد أي شيء إطلاقاً؛ منطقة فارغة من المادة بالكامل", "أيونات ثابتة فقط (موجبة بجهة n وسالبة بجهة p)، بلا حاملات شحنة حرة تقريباً"], a: 3,
+    why: "بعد إعادة الاتحاد، تبقى فقط ذرات الشوائب (الآن أيونات ثابتة ضمن الشبكة البلورية) — بلا أي حاملات شحنة حرة قادرة على الحركة." },
+  { q: "ما القيمة التقريبية لجهد الحاجز عند التوازن في ثنائي مصنوع من السيليكون؟",
+    opts: ["≈0.7 V", "≈0.3 V", "≈5 V", "≈صفر تماماً"], a: 0,
+    why: "جهد الحاجز النموذجي لثنائي السيليكون عند التوازن يساوي تقريباً 0.7V (مقابل ≈0.3V للجرمانيوم)." },
+  { q: "لماذا يتوقف الانتشار عبر الوصلة pn تلقائياً عند الوصول إلى التوازن، بدل أن يستمر حتى تختفي كل حاملات الشحنة؟",
+    opts: ["لأن كل الإلكترونات والفجوات تفنى تماماً فور تكوّن الوصلة", "لأن المجال الكهربائي الداخلي الناتج عن الأيونات الثابتة بمنطقة الاستنزاف يعاكس أي انتشار إضافي ويوقفه عند جهد الحاجز", "لأن درجة حرارة الوصلة تنخفض لتمنع أي حركة إضافية", "لأن حجم البلورة ينكمش فيسدّ الوصلة فيزيائياً"], a: 1,
+    why: "الأيونات الثابتة تنشئ مجالاً كهربائياً داخلياً (وجهد حاجز مقابلاً له) يعاكس اتجاه الانتشار، فيوقفه عند نقطة توازن ديناميكي بدل استمراره حتى الفناء الكامل." },
+  { q: "في رمز الثنائي بالدارات الكهربائية، ماذا يمثّل اتجاه رأس السهم المثلث؟",
+    opts: ["اتجاه حركة الإلكترونات الحرة فقط، من n إلى p", "لا يحمل الاتجاه أي دلالة فيزيائية، مجرد رمز عشوائي", "اتجاه المجال المغناطيسي حول الثنائي", "الاتجاه الذي يسمح فيه الثنائي بمرور التيار التقليدي بسهولة، من الأنود (p) إلى الكاثود (n)"], a: 3,
+    why: "رأس السهم بالرمز يشير من الأنود (جهة p) إلى الكاثود (جهة n)، وهو اتجاه مرور التيار التقليدي السهل عبر الثنائي." },
+  { q: "بطعّم ثنائي pn بنسبة شوائب أعلى (تطعيم أكثف)، مع بقاء المادة ودرجة الحرارة ثابتتين. ماذا يحدث لمقدار جهد الحاجز عادة؟",
+    opts: ["يبقى ثابتاً تماماً مهما تغيّرت نسبة التطعيم", "يتغيّر، لأن جهد الحاجز يعتمد على نسبة الشوائب مع نوع المادة ودرجة الحرارة معاً", "ينعدم كلياً فوراً بأي زيادة بالتطعيم", "يتغيّر فقط لو كانت المادة عازلاً لا شبه موصل"], a: 1,
+    why: "حاجز الجهد في الثنائي pn يعتمد على ثلاثة عوامل معاً: نوع مادة شبه الموصل، نسبة الشوائب المطعّمة بها، ودرجة حرارة المادة." }
+], { onDone: function (stars) { Phy.setLesson("g6c7", "5", { stars: stars }); } });
+</script>
+</body>
+</html>

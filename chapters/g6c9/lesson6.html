@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 6: الانشطار النووي — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c9">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل التاسع</a> / الدرس 6</span>
+  </div>
+
+  <div class="hero">
+    <h1>💥 الدرس 6: الانشطار النووي</h1>
+    <p>نيوترون واحد بطيء يصطدم بنواة يورانيوم واحدة — فتنقسم إلى نواتين، وتُطلق طاقة هائلة، <b>وتُطلق نيوترونات جديدة</b> قادرة على تكرار العملية في نوى مجاورة. من هذه الفكرة البسيطة وُلد كل من المفاعل النووي والقنبلة الذرية.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">⚛️</span>
+    <span>تذكّر من الدرس الثاني: النوى المتوسطة (كالحديد) هي الأكثر استقراراً. الانشطار يستثمر هذه الحقيقة بالضبط: يكسر نواة ثقيلة جداً (غير مستقرة نسبياً) إلى نواتين متوسطتين (أكثر استقراراً)، محرِّراً الفرق كطاقة هائلة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔨</span> ما الانشطار النووي؟</div>
+  <div class="card">
+    <p><b>الانشطار النووي</b> تفاعل نووي تنقسم فيه نواة ثقيلة (كاليورانيوم ²³⁵₉₂U) إلى نواتين متوسطتي الكتلة، بقصفها بوساطة <b>نيوترون بطيء (حراري)</b> — نيوترون طاقته صغيرة جداً، حوالي 0.025eV فقط.</p>
+  </div>
+  <div class="lawbox">
+    معادلة انشطار اليورانيوم النموذجية
+    <div class="formula">¹₀n + ²³⁵₉₂U → ²³⁶₉₂U* → ¹⁴¹₅₆Ba + ⁹²₃₆Kr + 3¹₀n</div>
+    <p style="margin-top:6px;font-size:.82rem">²³⁶₉₂U* هي نواة اليورانيوم المركّبة المتهيّجة، تنشطر فوراً تقريباً إلى الباريوم والكريبتون + ثلاثة نيوترونات جديدة.</p>
+  </div>
+  <div class="notebox">
+    <b>⚡ من أين الطاقة الهائلة؟</b>
+    <p style="margin-top:6px">مجموع كتل النواتج <b>أقل</b> من مجموع كتل المتفاعلين — الفرق يتحوّل إلى طاقة وفق E=mc². تتحرر طاقة تُقدَّر بنحو <b>200 MeV</b> عند انشطار نواة يورانيوم واحدة فقط — أكبر بكثير من أي تفاعل كيميائي (احتراق مثلاً) لنفس الكتلة.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🔗</span> التفاعل النووي المتسلسل</div>
+  <div class="card">
+    <p>كل انشطار ينتج (نموذجياً) <b>اثنين أو ثلاثة نيوترونات جديدة</b> — قادرة على شطر نوى يورانيوم مجاورة أخرى، والتي بدورها تُطلق نيوترونات إضافية، وهكذا. هذا التصاعد يُسمّى <b>التفاعل النووي المتسلسل</b> (Chain Reaction). إن لم يُسيطر عليه، يؤدي إلى انفجار عنيف مدمِّر (القنبلة النووية/الانشطارية). أما بالسيطرة الدقيقة (بامتصاص جزء من النيوترونات الزائدة)، فنحصل على تفاعل ثابت متحكَّم به — كما بالمفاعل النووي.</p>
+  </div>
+
+  <!-- ======== المحاكاة: التفاعل المتسلسل ======== -->
+  <div class="sim">
+    <h3>🔗 مختبر: التفاعل النووي المتسلسل</h3>
+    <p class="sim-sub">اضغط ابدأ لإطلاق نيوترون واحد نحو حقل من نوى اليورانيوم، وحرّك معامل التضاعف k (متوسط عدد النيوترونات الفعّالة الناتجة عن كل انشطار) وراقب أثره.</p>
+    <div class="sim-scroll"><canvas id="chainSim" width="700" height="280"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً إن لزم</p>
+    <div class="controls">
+      <button class="btn small" id="chainStart" type="button">▶️ ابدأ التفاعل</button>
+      <div class="slider-group">معامل التضاعف k: <b id="kVal">٢.٠</b>
+        <input type="range" id="kR" min="0.5" max="3" step="0.1" value="2"></div>
+    </div>
+    <div class="readout" id="chainReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🏭</span> المفاعل النووي وأول تفاعل مسيطر عليه</div>
+  <div class="card">
+    <p><b>المفاعل النووي</b> مجموعة منظومات تسيطر على التفاعل الانشطاري المتسلسل لوقود نووي (كاليورانيوم ²³⁵₉₂U أو البلوتونيوم ²³⁹₉₄Pu) والطاقة الناتجة منه، وتُستعمل حالياً على نطاق واسع لإنتاج الكهرباء سلمياً. أول تفاعل نووي انشطاري متسلسل <b>مسيطر عليه</b> من قِبل الإنسان حقّقه العالِم <b>فيرمي</b> ومساعدوه في مدينة شيكاغو عام <b>1942</b>.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson7.html">الدرس التالي: الاندماج النووي ☀️</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة التفاعل المتسلسل ---------- */
+(function () {
+  var cv = document.getElementById("chainSim"), ctx = cv.getContext("2d");
+  var kR = document.getElementById("kR"), kVal = document.getElementById("kVal");
+  var startBtn = document.getElementById("chainStart");
+  var readout = document.getElementById("chainReadout");
+  var W = 700, H = 240;
+
+  function makeNuclei() {
+    var list = [];
+    for (var i = 0; i < 46; i++) list.push({ x: 30 + Math.random() * (W - 60), y: 30 + Math.random() * (H - 60), split: false });
+    return list;
+  }
+  var nuclei = makeNuclei(), neutrons = [], splitCount = 0, running = false, raf = null, lastT = 0;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+
+  function spawnFromSplit(x, y) {
+    var k = +kR.value, base = Math.floor(k), frac = k - base;
+    var count = base + (Math.random() < frac ? 1 : 0);
+    for (var i = 0; i < count; i++) {
+      var ang = Math.random() * Math.PI * 2;
+      neutrons.push({ x: x, y: y, vx: Math.cos(ang) * 130, vy: Math.sin(ang) * 130 });
+    }
+  }
+
+  function draw(now) {
+    var dt = Math.min(0.05, (now - lastT) / 1000 || 0.016);
+    lastT = now;
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    nuclei.forEach(function (nu) {
+      ctx.beginPath(); ctx.arc(nu.x, nu.y, nu.split ? 5 : 8, 0, Math.PI * 2);
+      ctx.fillStyle = nu.split ? "#e2e8f0" : "#15803d"; ctx.fill();
+    });
+
+    if (running) {
+      neutrons.forEach(function (n) { n.x += n.vx * dt; n.y += n.vy * dt; });
+      var survivors = [];
+      neutrons.forEach(function (n) {
+        if (n.x < -10 || n.x > W + 10 || n.y < -10 || n.y > H + 10) return;
+        var hit = null;
+        for (var i = 0; i < nuclei.length; i++) {
+          if (!nuclei[i].split && Math.hypot(nuclei[i].x - n.x, nuclei[i].y - n.y) < 11) { hit = nuclei[i]; break; }
+        }
+        if (hit) { hit.split = true; splitCount++; spawnFromSplit(hit.x, hit.y); }
+        else survivors.push(n);
+      });
+      neutrons = survivors;
+      if (neutrons.length === 0) running = false;
+    }
+
+    ctx.fillStyle = "#b45309";
+    neutrons.forEach(function (n) { ctx.beginPath(); ctx.arc(n.x, n.y, 4, 0, Math.PI * 2); ctx.fill(); });
+
+    ctx.textAlign = "right"; ctx.font = "bold 13px Cairo"; ctx.fillStyle = "#334155";
+    ctx.fillText("الانشطارات: " + arNum(splitCount) + " / " + arNum(nuclei.length), W - 10, 22);
+
+    raf = requestAnimationFrame(draw);
+  }
+
+  function updateStatus() {
+    var k = +kR.value;
+    kVal.textContent = k.toFixed(1).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; });
+    var status = k < 1 ? "دون الحرج (k&lt;1) — التفاعل يخمد وينتهي من تلقاء نفسه." :
+      Math.abs(k - 1) < 0.05 ? "حرج مضبوط (k≈1) — تفاعل ثابت متحكَّم به، كما بالمفاعل النووي." :
+      "فوق الحرج (k&gt;1) — تصاعد سريع جداً، كما بالقنبلة النووية غير المسيطر عليها.";
+    readout.innerHTML = status;
+  }
+
+  startBtn.addEventListener("click", function () {
+    nuclei = makeNuclei(); splitCount = 0;
+    var first = nuclei[Math.floor(Math.random() * nuclei.length)];
+    neutrons = [{ x: 10, y: first.y, vx: 120, vy: (first.y - 120) * 0.15 }];
+    running = true;
+  });
+  kR.addEventListener("input", updateStatus);
+  updateStatus();
+  lastT = performance.now();
+  raf = requestAnimationFrame(draw);
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ما تعريف الانشطار النووي؟",
+    opts: ["اندماج نواتين خفيفتين لتكوين نواة أثقل", "انقسام نواة ثقيلة إلى نواتين متوسطتي الكتلة، عادة بقصفها بنيوترون بطيء", "انبعاث جسيمة ألفا من نواة ثقيلة", "تحوّل بروتون داخل النواة إلى نيوترون"], a: 1,
+    why: "الانشطار النووي يقسّم نواة ثقيلة (كاليورانيوم) إلى نواتين متوسطتين، عادة بامتصاص نيوترون حراري بطيء." },
+  { q: "لماذا يُستعمل نيوترون بطيء (حراري) تحديداً لإحداث انشطار اليورانيوم ²³⁵₉₂U؟",
+    opts: ["لأن النيوترون البطيء له شحنة كهربائية أكبر", "لأن النيوترون البطيء وحده خالٍ من الكتلة", "لأن سرعته العالية جداً تخترق النواة مباشرة دون امتصاص", "لأن احتمالية امتصاصه بوساطة نواة اليورانيوم وتشكيل نواة مركّبة مثارة أكبر عند هذه الطاقة المنخفضة"], a: 3,
+    why: "نوى اليورانيوم-235 تمتص النيوترونات البطيئة (الحرارية، ~0.025eV) بكفاءة عالية، مكوّنة نواة مركّبة مثارة تنشطر فوراً تقريباً." },
+  { q: "في انشطار نموذجي لليورانيوم، كم نيوتروناً جديداً يُنتَج تقريباً من كل انشطار؟",
+    opts: ["لا يُنتَج أي نيوترون جديد إطلاقاً", "اثنان أو ثلاثة نيوترونات تقريباً", "نيوترون واحد فقط دائماً بلا استثناء", "عشرة نيوترونات أو أكثر دائماً"], a: 1,
+    why: "الانشطار النووي ينتج نموذجياً 2 أو 3 نيوترونات جديدة، وهي التي تُمكِّن من استمرار التفاعل المتسلسل." },
+  { q: "ما الفرق الجوهري بين معامل تضاعف k=1 وk>1 بالتفاعل النووي المتسلسل؟",
+    opts: ["k>1 يعني توقف التفاعل نهائياً دون أي استمرار", "لا فرق بينهما إطلاقاً بأي شكل", "k=1 حالة حرجة مضبوطة (كمفاعل)، وk>1 تصاعد سريع غير محكوم (كقنبلة)", "k=1 تفاعل خامد تماماً، وk>1 تفاعل ثابت متحكَّم به بمفاعل نووي"], a: 2,
+    why: "k=1 يعني كل انشطار ينتج بالضبط نيوتروناً فعّالاً واحداً يستمر به التفاعل بمعدل ثابت (مفاعل)؛ k>1 يعني تصاعداً هندسياً سريعاً غير محكوم (قنبلة)." },
+  { q: "من حقّق أول تفاعل نووي انشطاري متسلسل مسيطر عليه من قِبل الإنسان، وأين؟",
+    opts: ["ماري كوري، بفرنسا", "فيرمي وفريقه، بمدينة شيكاغو عام 1942", "رذرفورد، ببريطانيا", "أينشتاين، بألمانيا"], a: 1,
+    why: "حقّق العالِم إنريكو فيرمي وفريقه أول تفاعل نووي متسلسل مسيطر عليه بأول مفاعل نووي («الكومة») بجامعة شيكاغو عام 1942." },
+  { q: "من أين تأتي الطاقة الهائلة المتحررة (~200 MeV) عند انشطار نواة يورانيوم واحدة؟",
+    opts: ["من احتراق كيميائي عادي لليورانيوم مثل أي وقود آخر", "من طاقة حركية النيوترون البطيء الساقط وحدها فقط", "من تفكك الإلكترونات المدارية حول النواة", "من الفرق بين مجموع كتل المتفاعلين ومجموع كتل النواتج، المتحوّل إلى طاقة وفق E=mc²"], a: 3,
+    why: "مجموع كتل نواتج الانشطار (نواتان + نيوترونات) أقل من مجموع كتل المتفاعلين؛ هذا النقص الكتلي يتحوّل بالكامل إلى طاقة هائلة وفق علاقة أينشتاين." }
+], { onDone: function (stars) { Phy.setLesson("g6c9", "6", { stars: stars }); } });
+</script>
+</body>
+</html>

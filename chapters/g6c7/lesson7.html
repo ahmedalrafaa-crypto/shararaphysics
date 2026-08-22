@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 7: بعض أنواع الثنائيات — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c7">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل السابع</a> / الدرس 7</span>
+  </div>
+
+  <div class="hero">
+    <h1>💡 الدرس 7: بعض أنواع الثنائيات</h1>
+    <p>الثنائي الأساسي الذي درسته بالدرسين الماضيين هو نقطة الانطلاق فقط. بتعديل طفيف على طريقة التصنيع أو المادة المستعملة، يتحوّل نفس المبدأ (وصلة pn) إلى عائلة كاملة من النبائط: محوّل تيار متردد إلى مستمر، مصباح صغير يضيء بلا حرارة، حسّاس ضوئي، وحتى خلية تحوّل ضوء الشمس مباشرة إلى كهرباء.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🧰</span>
+    <span>كل نوع أدناه هو ثنائي pn عادي، لكن مصمَّم أو مستعمَل بطريقة خاصة لاستثمار جانب معيّن من سلوكه الذي تعلّمته بالدرس السابق.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔄</span> الثنائي المقوّم (Rectifier Diode)</div>
+  <div class="card">
+    <p>الاستعمال الأشيع للثنائي: تحويل التيار المتردد (AC) إلى تيار مستمر (DC) بجهاز يُسمى <b>المقوّم</b> (Rectifier). بما أن الثنائي يسمح بمرور التيار باتجاه واحد فقط، فهو "يقصّ" أو "يقلب" النصف السالب من موجة التيار المتردد الجيبية، تاركاً نبضات أحادية القطبية فقط — الخطوة الأولى بأي دائرة تزوّد إلكترونيات حساسة (كشاحن الموبايل) بتيار مستمر من مأخذ الحائط المتردد.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">💡</span> الثنائي الباعث للضوء (LED)</div>
+  <div class="card">
+    <p>عند الانحياز الأمامي، تتحد الإلكترونات الحرة مع الفجوات قرب الوصلة (كما بأي ثنائي عادي) فيما يُسمى <b>إعادة الالتحام</b>. لكن إذا كانت مادة الثنائي من <b>زرنيخيد الكاليوم (GaAs)</b>، تظهر طاقة إعادة الالتحام هذه على هيئة <b>ضوء</b> مباشرة بدلاً من حرارة مهدورة — وهذا بالضبط مبدأ عمل <b>الثنائي الباعث للضوء (LED)</b>. يبعث ألواناً مختلفة (أحمر، أصفر، أخضر...) حسب المادة المصنوع منها، ويُستعمل في الشاشات الرقمية والساعات والحاسبات (سبعة أضلاع لإظهار الأرقام 0–9). طاقة الفوتون المنبعث (وبالتالي لون الضوء) تتحدد بالضبط بمقدار الفجوة الطاقية Eg للمادة المستعملة، عبر نفس العلاقة التي استعملتها بالدرس الثاني: E=hc/λ.</p>
+  </div>
+
+  <!-- ======== المحاكاة: لون LED من فجوته الطاقية ======== -->
+  <div class="sim">
+    <h3>🌈 مختبر: من الفجوة الطاقية إلى لون الـ LED</h3>
+    <p class="sim-sub">حرّك المزلاج لتغيير الفجوة الطاقية Eg لمادة الثنائي الباعث للضوء، وراقب الطول الموجي المحسوب من E=hc/λ ولون الضوء الناتج.</p>
+    <canvas id="ledSim" width="700" height="150"></canvas>
+    <div class="controls">
+      <div class="slider-group">الفجوة الطاقية Eg (eV): <b id="egLedVal">1.90</b>
+        <input type="range" id="egLedR" min="1.4" max="3.2" step="0.02" value="1.9"></div>
+    </div>
+    <div class="readout" id="ledReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">ثنائي LED مصنوع من مادة فجوتها الطاقية Eg=1.9eV. جد الطول الموجي التقريبي للضوء المنبعث منه، وحدّد لونه تقريباً.</div>
+    <div class="givens">المعطيات: Eg=1.9eV=1.9×1.6×10⁻¹⁹J — h=6.63×10⁻³⁴J.s — c=3×10⁸m/s</div>
+    <div class="step"><b>الخطوة ١:</b> نحوّل الفجوة إلى الجول:
+      <div class="math">Eg = 1.9 × 1.6×10⁻¹⁹ ≈ 3.04×10⁻¹⁹ J</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نطبّق λ=hc/Eg:
+      <div class="math">λ = (6.63×10⁻³⁴ × 3×10⁸) / (3.04×10⁻¹⁹) ≈ 6.54×10⁻⁷ m = 654 nm</div>
+      💡 طول موجي 654nm يقع بمدى الضوء الأحمر — وهذا فعلاً قريب من فجوة موادّ الـ LED الحمراء الشائعة تجارياً. كلما كبرت Eg، قصر λ، واقترب اللون من الأزرق والبنفسجي؛ وكلما صغرت، طال λ واقترب من الأحمر وتحت الأحمر.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">📸</span> الثنائي المتحسّس للضوء (Photodiode)</div>
+  <div class="card">
+    <p>عكس مبدأ الـ LED تماماً: <b>الثنائي المتحسّس للضوء (Photodiode)</b> يُربَط بطريقة الانحياز <b>العكسي</b>. قبل تسليط الضوء يكون التيار ضعيفاً جداً (تيار الحاملات الأقلية فقط). وعند سقوط الضوء، كل فوتون ساقط طاقته ≥ Eg يكسر رابطة تساهمية قرب الوصلة، مولّداً زوج إلكترون-فجوة إضافياً — فيتناسب التيار طردياً مع <b>شدة الضوء الساقط</b>. يُستعمل في كاشفات الضوء وكمقياس لشدة الضوء.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">☀️</span> ثنائي الخلية الشمسية (Solar Cell)</div>
+  <div class="card">
+    <p>يُربَط أيضاً بطريقة الانحياز <b>العكسي</b>، لكن قبل تسليط الضوء على منطقة الملتقى — فيحوّل الطاقة الضوئية إلى <b>طاقة كهربائية</b> مباشرة (يولّد قوة دافعة كهربائية بنفسه). يُستعمل في الأقمار الصناعية كمصدر طاقة: تُربَط الخلايا على التوالي لزيادة الجهد الناتج، وعلى التوازي لزيادة القدرة الناتجة.</p>
+  </div>
+
+  <div class="tblwrap">
+    <table class="nice">
+      <thead><tr><th>النوع</th><th>الانحياز المستعمَل</th><th>أبرز استعمال</th></tr></thead>
+      <tbody>
+        <tr><td>الثنائي المقوّم</td><td>أمامي وعكسي بالتناوب (يتبع AC)</td><td>تحويل AC إلى DC</td></tr>
+        <tr><td>الثنائي الباعث للضوء LED</td><td>أمامي</td><td>الإضاءة ومؤشرات الأجهزة الرقمية</td></tr>
+        <tr><td>الثنائي المتحسّس للضوء (Photodiode)</td><td>عكسي</td><td>كاشفات الضوء وقياس شدته</td></tr>
+        <tr><td>ثنائي الخلية الشمسية (Solar Cell)</td><td>عكسي (بلا مصدر جهد خارجي)</td><td>تحويل الضوء إلى طاقة كهربائية</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">وزاري متكرر</span> ما الفرق بين الثنائي الباعث للضوء (LED) والثنائي المتحسّس للضوء (Photodiode)؟ <span class="wz">التمهيدي 2017 · التمهيدي 2018 · الدور الأول 2018</span></summary>
+    <div class="ans"><b>الثنائي الباعث للضوء (LED):</b> يُربَط بالانحياز الأمامي، ويحوّل الطاقة الكهربائية إلى ضوئية (يبعث ضوءاً عند مرور التيار).<br><b>الثنائي المتحسّس للضوء (Photodiode):</b> يُربَط بالانحياز العكسي، ويحوّل الطاقة الضوئية إلى كهربائية (يزداد تياره بازدياد شدة الضوء الساقط عليه).</div>
+  </details>
+  <details class="qa">
+    <summary><span class="tag">وزاري</span> ما الفائدة من: ① الثنائي المتحسّس للضوء؟ ② الثنائي الباعث للضوء؟ <span class="wz">الدور الثاني 2021-2022</span></summary>
+    <div class="ans">① <b>الثنائي المتحسّس للضوء:</b> يُستعمل في كاشفات الضوء وكمقياس لشدة الضوء (تحويل الطاقة الضوئية إلى كهربائية). ② <b>الثنائي الباعث للضوء (LED):</b> يُستعمل في الشاشات الرقمية والساعات والحاسبات لإظهار الأرقام (تحويل الطاقة الكهربائية إلى ضوئية).</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson8.html">الدرس التالي: الترانزستور 🎛️</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة لون LED من الفجوة الطاقية ---------- */
+(function () {
+  var cv = document.getElementById("ledSim"), ctx = cv.getContext("2d");
+  var egR = document.getElementById("egLedR"), egVal = document.getElementById("egLedVal");
+  var readout = document.getElementById("ledReadout");
+  var h = 6.63e-34, c = 3e8, eV = 1.6e-19;
+
+  // تقريب قياسي لتحويل طول موجي مرئي (نانومتر) إلى لون RGB تقريبي
+  function wavelengthToColor(nm) {
+    var r, g, b;
+    if (nm >= 380 && nm < 440) { r = -(nm - 440) / (440 - 380); g = 0; b = 1; }
+    else if (nm < 490) { r = 0; g = (nm - 440) / (490 - 440); b = 1; }
+    else if (nm < 510) { r = 0; g = 1; b = -(nm - 510) / (510 - 490); }
+    else if (nm < 580) { r = (nm - 510) / (580 - 510); g = 1; b = 0; }
+    else if (nm < 645) { r = 1; g = -(nm - 645) / (645 - 580); b = 0; }
+    else if (nm <= 750) { r = 1; g = 0; b = 0; }
+    else { r = 0.35; g = 0; b = 0; }
+    return "rgb(" + Math.round(255 * r) + "," + Math.round(255 * g) + "," + Math.round(255 * b) + ")";
+  }
+
+  function draw() {
+    var eg = +egR.value;
+    egVal.textContent = eg.toFixed(2).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; });
+    var E = eg * eV;
+    var lamM = (h * c) / E;
+    var lamNm = lamM * 1e9;
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    var visible = lamNm >= 380 && lamNm <= 750;
+    var color = visible ? wavelengthToColor(lamNm) : "#94a3b8";
+
+    // مصباح LED توضيحي
+    var cx = 100, cy = 75, r = 42;
+    ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    var grad = ctx.createRadialGradient(cx, cy, 4, cx, cy, r);
+    grad.addColorStop(0, "#fff"); grad.addColorStop(0.25, color); grad.addColorStop(1, color);
+    ctx.fillStyle = visible ? grad : "#e2e8f0";
+    ctx.fill();
+    ctx.strokeStyle = "#334155"; ctx.lineWidth = 2; ctx.stroke();
+    if (visible) {
+      ctx.globalAlpha = 0.25;
+      for (var i = 0; i < 8; i++) {
+        var ang = (i / 8) * Math.PI * 2;
+        ctx.beginPath(); ctx.moveTo(cx + Math.cos(ang) * (r + 4), cy + Math.sin(ang) * (r + 4));
+        ctx.lineTo(cx + Math.cos(ang) * (r + 22), cy + Math.sin(ang) * (r + 22));
+        ctx.strokeStyle = color; ctx.lineWidth = 3; ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    ctx.textAlign = "right"; ctx.direction = "rtl";
+    ctx.fillStyle = "#334155"; ctx.font = "bold 13px Cairo";
+    ctx.fillText("Eg = " + eg.toFixed(2) + " eV", 630, 40);
+    ctx.fillText("λ ≈ " + Math.round(lamNm) + " nm", 630, 65);
+    ctx.font = "bold 15px Cairo";
+    ctx.fillStyle = visible ? color : "#64748b";
+    var name = !visible
+      ? (lamNm > 750 ? "غير مرئي (تحت الأحمر)" : "غير مرئي (فوق البنفسجي)")
+      : lamNm < 490 ? "أزرق/بنفسجي" : lamNm < 510 ? "سماوي" : lamNm < 580 ? "أخضر" : lamNm < 645 ? "أصفر/برتقالي" : "أحمر";
+    ctx.fillText(name, 630, 95);
+
+    readout.innerHTML = "عند Eg=" + eg.toFixed(2) + "eV → λ≈" + Math.round(lamNm) + "nm → لون تقريبي: <b>" + name + "</b>" +
+      (visible ? "" : " (طاقة الفوتون خارج المدى المرئي للعين البشرية)");
+  }
+  egR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz1", [
+  { q: "ما وظيفة الثنائي المقوّم (Rectifier) بأبسط تعريف؟",
+    opts: ["تكبير الإشارات الكهربائية الضعيفة", "توليد الضوء من الكهرباء مباشرة", "تحويل التيار المتردد (AC) إلى تيار مستمر (DC) بالسماح بمرور تيار باتجاه واحد فقط", "تخزين الشحنة الكهربائية لفترة طويلة"], a: 2,
+    why: "خاصية الثنائي بالسماح بالمرور باتجاه واحد فقط تجعله أساس أي دائرة تقويم تحوّل AC إلى DC." },
+  { q: "كيف يعمل ثنائي الخلية الشمسية (Solar Cell)؟",
+    opts: ["يُربَط بانحياز عكسي، ويحوّل الطاقة الضوئية الساقطة على الملتقى إلى طاقة كهربائية مباشرة (يولّد قوة دافعة كهربائية بنفسه)", "يُربَط بانحياز أمامي، ويستهلك طاقة كهربائية لإصدار الضوء", "لا علاقة له بالضوء إطلاقاً؛ يعمل بالحرارة فقط", "يحوّل الصوت إلى كهرباء مباشرة"], a: 0,
+    why: "ثنائي الخلية الشمسية يُربَط بانحياز عكسي، ويحوّل طاقة الفوتونات الساقطة على منطقة الملتقى إلى طاقة كهربائية (قوة دافعة كهربائية) دون حاجة لمصدر جهد خارجي." },
+  { q: "في الثنائي الباعث للضوء (LED)، ماذا يحدد لون الضوء المنبعث؟",
+    opts: ["شدة التيار المطبق فقط، بصرف النظر عن المادة", "طول السلك الموصل للثنائي بالدارة", "درجة حرارة الغرفة المحيطة فقط", "الفجوة الطاقية Eg لمادة شبه الموصل المستعملة"], a: 3,
+    why: "طاقة الفوتون المنبعث تساوي تقريباً Eg للمادة (E=hc/λ)، وهي بالتالي ما يحدد الطول الموجي (اللون) بدقة." },
+  { q: "ثنائي LED فجوته الطاقية Eg=2.2eV. جد الطول الموجي التقريبي للضوء المنبعث منه.",
+    opts: ["≈1110 nm (تحت أحمر)", "≈565 nm (أخضر مائل للأصفر)", "≈250 nm (فوق بنفسجي)", "≈700 nm (أحمر غامق)"], a: 1,
+    why: "λ=hc/Eg=(6.63×10⁻³⁴×3×10⁸)/(2.2×1.6×10⁻¹⁹)≈5.65×10⁻⁷m=565nm — أخضر مائل للأصفر تقريباً." },
+  { q: "بأي انحياز يُوصَّل الثنائي المتحسّس للضوء (Photodiode) عادة كحسّاس ضوء؟",
+    opts: ["انحياز أمامي فقط، مثل الـ LED تماماً", "بلا أي انحياز إطلاقاً، ولا حتى تلامس مع دارة كهربائية", "انحياز متردد فقط، لا مستمر بأي حال", "انحياز عكسي، بحيث يزداد تيار التسرب العكسي طردياً مع شدة الضوء الساقط"], a: 3,
+    why: "الانحياز العكسي يجعل تيار التسرب العكسي الأساسي حساساً جداً لأي زوج إلكترون-فجوة إضافي يولّده الضوء الساقط، فيتناسب هذا التيار طردياً مع شدة الضوء." },
+  { q: "ما القاسم المشترك الفيزيائي بين الثنائي الباعث للضوء LED والثنائي المتحسّس للضوء (Photodiode)؟",
+    opts: ["كلاهما يعملان فقط بانحياز عكسي بلا استثناء", "لا علاقة بينهما إطلاقاً بأي شكل فيزيائي", "كلاهما يربط بين طاقة الفوتون (E=hc/λ) وفجوة الطاقة Eg لمادة شبه الموصل، لكن باتجاهين معاكسين (بعث مقابل امتصاص)", "كلاهما لا يحتاجان أي مصدر جهد خارجي مطلقاً للعمل"], a: 2,
+    why: "LED يحوّل طاقة إعادة الاتحاد (قريبة من Eg) إلى فوتون منبعث؛ الثنائي المتحسّس للضوء يمتص فوتوناً طاقته ≥Eg ليولّد زوج إلكترون-فجوة — نفس العلاقة E≈Eg، لكن بعملية معاكسة." }
+], { onDone: function (stars) { Phy.setLesson("g6c7", "7", { stars: stars }); } });
+</script>
+</body>
+</html>

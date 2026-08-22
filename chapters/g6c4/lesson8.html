@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 8: مدى الموجات الراديوية — السادس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g6c4">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل الرابع</a> / الدرس 8</span>
+  </div>
+
+  <div class="hero">
+    <h1>📶 الدرس 8: مدى الموجات الراديوية</h1>
+    <p>موجات الراديو نفسها ليست كتلة واحدة — قُسّمت لمناطق حسب ترددها، ولكل منطقة استعمال مختلف كلياً عن الأخرى: من الملاحة البحرية إلى البث الإذاعي إلى التلفاز.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">📻</span>
+    <span>حين تسمع "AM" و"FM" براديو سيارتك، أنت فعلياً تتنقل بين منطقتين ترددّيتين مختلفتين كلياً بالطيف الراديوي — لكل منهما مدى تردد محدد ورمز عالمي معروف. لماذا حُدِّدت هذه المناطق بالضبط؟</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📶</span> مدى الموجات الراديوية</div>
+  <div class="card">
+    <p>قُسّمت الموجات الراديوية إلى مناطق حسب ترددها واستعمالاتها:</p>
+  </div>
+  <div style="overflow-x:auto">
+  <table style="width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem">
+    <tr style="background:var(--box-elevated,#f8fafc)"><th style="padding:8px;text-align:right;border-bottom:2px solid #e2e8f0">المنطقة</th><th style="padding:8px;text-align:center;border-bottom:2px solid #e2e8f0">الرمز</th><th style="padding:8px;text-align:center;border-bottom:2px solid #e2e8f0">مدى التردد</th><th style="padding:8px;text-align:right;border-bottom:2px solid #e2e8f0">أهم الاستعمالات</th></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #eef2f7">منخفضة جداً</td><td style="padding:8px;text-align:center;border-bottom:1px solid #eef2f7">VLF</td><td style="padding:8px;text-align:center;border-bottom:1px solid #eef2f7">3–30 kHz</td><td style="padding:8px;border-bottom:1px solid #eef2f7">الملاحة البحرية</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #eef2f7">منخفضة</td><td style="padding:8px;text-align:center;border-bottom:1px solid #eef2f7">LF</td><td style="padding:8px;text-align:center;border-bottom:1px solid #eef2f7">30–300 kHz</td><td style="padding:8px;border-bottom:1px solid #eef2f7">الملاحة</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #eef2f7">متوسطة</td><td style="padding:8px;text-align:center;border-bottom:1px solid #eef2f7">MF</td><td style="padding:8px;text-align:center;border-bottom:1px solid #eef2f7">300 kHz–3 MHz</td><td style="padding:8px;border-bottom:1px solid #eef2f7">البث الإذاعي المتوسط (AM)</td></tr>
+    <tr><td style="padding:8px;border-bottom:1px solid #eef2f7">عالية</td><td style="padding:8px;text-align:center;border-bottom:1px solid #eef2f7">HF</td><td style="padding:8px;text-align:center;border-bottom:1px solid #eef2f7">3–30 MHz</td><td style="padding:8px;border-bottom:1px solid #eef2f7">الطائرات والاتصال بين السفن</td></tr>
+    <tr><td style="padding:8px">عالية جداً</td><td style="padding:8px;text-align:center">VHF</td><td style="padding:8px;text-align:center">30–300 MHz</td><td style="padding:8px">التلفاز والإرسال FM وأنظمة الشرطة</td></tr>
+  </table>
+  </div>
+
+  <!-- ======== المحاكاة: محدِّد المنطقة الترددية ======== -->
+  <div class="sim">
+    <h3>📶 مختبر محدِّد المنطقة الترددية</h3>
+    <p class="sim-sub">حرّك المؤشر عبر مدى التردد وشاهد أي منطقة (VLF إلى VHF) يقع بها، ورمزها، وأهم استعمالاتها.</p>
+    <div class="sim-scroll"><canvas id="bandSim" width="700" height="170"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">التردد: <b id="freqLabel2">٨٠٠ kHz</b>
+        <input type="range" id="freqR2" min="0" max="7" step="1" value="2"></div>
+    </div>
+    <div class="readout" id="bandReadout" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz8"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson7.html">➡ الدرس السابق</a>
+    <a class="btn" href="lesson9.html">الدرس التالي: انتشار الموجات الكهرومغناطيسية 🌍</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- محاكاة محدِّد المنطقة الترددية ---------- */
+(function () {
+  var cv = document.getElementById("bandSim"), ctx = cv.getContext("2d");
+  var freqR = document.getElementById("freqR2"), freqLabel = document.getElementById("freqLabel2");
+  var readout = document.getElementById("bandReadout");
+
+  var freqs = [15e3, 150e3, 800e3, 1.8e6, 10e6, 25e6, 100e6, 250e6];
+  var freqLabels = ["١٥ kHz", "١٥٠ kHz", "٨٠٠ kHz", "١.٨ MHz", "١٠ MHz", "٢٥ MHz", "١٠٠ MHz", "٢٥٠ MHz"];
+
+  var bands = [
+    { name: "VLF", range: "3–30 kHz", use: "الملاحة البحرية", x0: 0, x1: 1 },
+    { name: "LF", range: "30–300 kHz", use: "الملاحة", x0: 1, x1: 2 },
+    { name: "MF", range: "300 kHz–3 MHz", use: "البث الإذاعي المتوسط (AM)", x0: 2, x1: 4 },
+    { name: "HF", range: "3–30 MHz", use: "الطائرات والاتصال بين السفن", x0: 4, x1: 6 },
+    { name: "VHF", range: "30–300 MHz", use: "التلفاز والإرسال FM وأنظمة الشرطة", x0: 6, x1: 8 }
+  ];
+
+  function bandOf(f) {
+    if (f < 30e3) return bands[0];
+    if (f < 300e3) return bands[1];
+    if (f < 3e6) return bands[2];
+    if (f < 30e6) return bands[3];
+    return bands[4];
+  }
+
+  function draw() {
+    var idx = +freqR.value;
+    var f = freqs[idx];
+    freqLabel.textContent = freqLabels[idx];
+    var band = bandOf(f);
+
+    ctx.direction = "ltr";
+    ctx.clearRect(0, 0, cv.width, cv.height);
+
+    var x0 = 40, x1 = 660, y = 75, segW = (x1 - x0) / 8;
+    var colors = ["#7c3aed", "#0369a1", "#16a34a", "#ea580c", "#dc2626"];
+
+    bands.forEach(function (b, i) {
+      var bx0 = x0 + b.x0 * segW, bw = (b.x1 - b.x0) * segW;
+      ctx.fillStyle = colors[i] + (b.name === band.name ? "ff" : "2e");
+      ctx.fillRect(bx0, y - 20, bw, 40);
+      ctx.fillStyle = "#fff"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+      ctx.fillText(b.name, bx0 + bw / 2, y + 5);
+    });
+    ctx.strokeStyle = "#334155"; ctx.lineWidth = 1.5;
+    ctx.strokeRect(x0, y - 20, x1 - x0, 40);
+
+    var mx = x0 + (idx + 0.5) * segW;
+    ctx.fillStyle = "#334155";
+    ctx.beginPath(); ctx.moveTo(mx, y - 32); ctx.lineTo(mx - 8, y - 46); ctx.lineTo(mx + 8, y - 46); ctx.closePath(); ctx.fill();
+
+    readout.innerHTML = "f = " + freqLabels[idx] + " ⟹ المنطقة: <b>" + band.name + "</b> (" + band.range + ")" +
+      "<br>💡 أهم استعمالاتها: " + band.use;
+  }
+  freqR.addEventListener("input", draw);
+  draw();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz8", [
+  { q: "أي منطقة ترددية (رمزها) تُستعمل للبث الإذاعي المتوسط AM؟",
+    opts: ["MF (متوسطة، 300kHz–3MHz)", "VLF (منخفضة جداً)", "VHF (عالية جداً)", "HF فقط دون غيرها"], a: 0,
+    why: "منطقة MF (300kHz–3MHz) هي المخصصة للبث الإذاعي المتوسط (AM) حسب الجدول." },
+  { q: "أي منطقة ترددية تُستعمل بشكل أساسي للملاحة البحرية؟",
+    opts: ["VLF (منخفضة جداً، 3–30 kHz)", "VHF (عالية جداً)", "HF (عالية)", "MF (متوسطة)"], a: 0,
+    why: "منطقة VLF (3–30 kHz) هي الأدنى تردداً وتُستعمل أساساً بالملاحة البحرية." },
+  { q: "أي منطقة ترددية تُستعمل للتلفاز والإرسال FM وأنظمة الشرطة؟",
+    opts: ["VHF (عالية جداً، 30–300 MHz)", "VLF (منخفضة جداً)", "MF (متوسطة)", "LF (منخفضة)"], a: 0,
+    why: "منطقة VHF (30–300 MHz) هي الأعلى تردداً بين المناطق الخمس، وتُستعمل للتلفاز وإرسال FM وأنظمة الشرطة." },
+  { q: "موجة ترددها 15 MHz. إلى أي منطقة ترددية تنتمي؟",
+    opts: ["HF (عالية، 3–30 MHz)", "VLF (منخفضة جداً)", "MF (متوسطة)", "VHF (عالية جداً)"], a: 0,
+    why: "15 MHz تقع ضمن مدى 3–30 MHz، أي منطقة HF." },
+  { q: "رتّب المناطق الترددية الخمس من الأوطأ تردداً إلى الأعلى.",
+    opts: ["VLF ← LF ← MF ← HF ← VHF", "VHF ← HF ← MF ← LF ← VLF", "MF ← VLF ← HF ← LF ← VHF", "LF ← VLF ← VHF ← HF ← MF"], a: 0,
+    why: "الترتيب الصحيح تصاعدياً بالتردد: VLF (3–30kHz) ← LF (30–300kHz) ← MF (300kHz–3MHz) ← HF (3–30MHz) ← VHF (30–300MHz)." }
+], { onDone: function (stars) { Phy.setLesson("g6c4", "8", { stars: stars }); } });
+</script>
+</body>
+</html>

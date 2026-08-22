@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الدرس 5: تطبيقات الموجات الكهرومغناطيسية — السادس العلمي</title>
+<title>الدرس 5: كيفية عمل دائرة الإرسال والتسلم — السادس العلمي</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="../../assets/logo-ar.png">
@@ -26,79 +26,67 @@
   </div>
 
   <div class="hero">
-    <h1>🛰️ الدرس 5: تطبيقات الموجات الكهرومغناطيسية</h1>
-    <p>وصلتَ لخاتمة فصل الموجات الكهرومغناطيسية! بعد أن تعلّمتَ نظريتها وتوليدها وإرسالها وتضمينها وطرائق انتشارها، حان وقت رؤية ثمرة كل ذلك: جهاز غيّر مجرى حرب عالمية، وعينٌ صناعية تراقب كوكبنا كاملاً من الفضاء.</p>
+    <h1>🎛️ الدرس 5: كيفية عمل دائرة الإرسال والتسلم</h1>
+    <p>عرفتَ بالدرس الماضي أن كل جهاز يحتاج دائرة اهتزاز وهوائياً. لكن كيف تجعل الشحنات تتذبذب بالضبط بالتردد الذي تريده، وما الطول الأنسب لهوائيك؟ هنا التفاصيل الرياضية الكاملة.</p>
   </div>
 
   <div class="hook">
-    <span class="em">✈️</span>
-    <span>في الحرب العالمية الثانية، بنت بريطانيا سلسلة محطات رادار على سواحلها. كانت ترسل موجات راديوية فترتدّ عن الطائرات المعادية القادمة، فيكشف زمن الارتداد بُعدها واتجاهها قبل أن تُرى بالعين. هذا الإنذار المبكر مكّن حفنة قليلة من الطائرات المدافعة من الوصول بالوقت المناسب، فرجّح كفّة "معركة بريطانيا". فكرة فيزيائية بسيطة — قياس زمن ذهاب موجة وإيابها — قلبت موازين حرب.</span>
+    <span class="em">🎛️</span>
+    <span>حين تدير قرص "الدوزان" براديو، أنت فعلياً تغيّر سعة متسعة متغيرة بدائرة اهتزاز. عند سعة معيّنة يصير التردد الرنيني لدائرتك مساوياً تردد محطة واحدة، فتُضخَّم إشارتها بينما تبقى بقية المحطات مهملة — بالضبط نفس فكرة الرنين اللي تعلّمتها بفصل التيار المتناوب، لكن هنا تُستعمَل لاختيار موجة من الفضاء لا لتضخيم تيار بدائرة.</span>
   </div>
 
-  <!-- ======== المحاكاة: الرادار والاستشعار عن بُعد ======== -->
-  <div class="sim">
-    <h3>🛰️ استكشف التطبيقين</h3>
-    <p class="sim-sub">اختر تطبيقاً لترى مخططه المبسّط وتفسيره الفيزيائي.</p>
-    <div class="sim-scroll"><canvas id="appSim" width="700" height="240"></canvas></div>
-    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
-    <div class="controls">
-      <div class="slider-group">التطبيق:
-        <select id="appSel" style="padding:8px;border-radius:10px;border:2px solid #e9ebfa;font-family:inherit;font-weight:700">
-          <option value="radar">📡 الرادار</option>
-          <option value="remote">🛰️ الاستشعار عن بُعد</option>
-        </select></div>
-    </div>
-    <div class="readout" id="appReadout" style="margin-top:14px"></div>
-  </div>
-
-  <div class="section-title"><span class="ico">📡</span> الرادار (RADAR)</div>
+  <div class="section-title"><span class="ico">🔁</span> دائرة الاهتزاز الكهرومغناطيسي (الرنين)</div>
   <div class="card">
-    <p>اختصار Radio Detection And Ranging، ويعني الكشف وتحديد البُعد بوساطة الموجات الراديوية. يرسل الرادار موجات راديوية باتجاه الهدف فتنعكس عنه، ويدلّ <b>الزمن</b> الذي تستغرقه ذهاباً وإياباً على بُعده (مداه)، فضلاً عن الاتجاه الذي تعود منه على موقعه.</p>
+    <p>قلب جهاز الإرسال أو الاستقبال دائرة بسيطة: ملف L ومتسعة متغيّرة السعة C موصولان معاً. تتذبذب الشحنة بينهما بتردد رنيني محدد — نفس علاقة الرنين بالضبط اللي اشتققتها بفصل التيار المتناوب. بتغيير C (تدوير قرص الدوزان) نختار التردد المطلوب إرساله أو استقباله من بين كل الموجات المتاحة.</p>
   </div>
   <div class="lawbox">
-    بُعد الهدف من زمن الذهاب والإياب (رحلة كاملة بسرعة الضوء c)
-    <div class="formula">d = c × t / 2</div>
+    التردد الرنيني لدائرة الاهتزاز · وطول الموجة المقابل
+    <div class="formula">f_r = 1 / (2π√(LC))  ،  λ = c/f  ،  c = 3×10⁸ m/s</div>
   </div>
 
   <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
   <div class="example">
-    <div class="exq">أرسل رادار نبضة راديوية استغرقت 200 μs لترتدّ عن طائرة وتعود إليه. جد بُعد الطائرة عن الرادار.</div>
-    <div class="givens">المعطيات: t=200 μs=200×10⁻⁶ s (زمن الذهاب والإياب معاً) — c=3×10⁸ m/s</div>
-    <div class="step"><b>الخطوة ١:</b> المسافة الكلية المقطوعة (ذهاباً وإياباً):
-      <div class="math">d_كلي = c × t = 3×10⁸ × 200×10⁻⁶ = 60000 m = 60 km</div></div>
-    <div class="step"><b>الخطوة ٢:</b> بُعد الطائرة الفعلي (نصف المسافة الكلية، لأن الموجة قطعت المسافة مرتين):
-      <div class="math">d = d_كلي/2 = 60/2 = 30 km</div>
-      💡 هذا بالضبط سرّ الرادار: قياس زمن قصير جداً (بالميكروثانية) يكفي لحساب مسافات كبيرة، لأن سرعة الضوء هائلة.</div>
+    <div class="exq">ضُبطت دائرة موالفة بجهاز راديو محطة إذاعية إذ كانت قيمة المحاثة 6.4 µH وقيمة السعة 1.9 pF. جد: ① التردد الذي يلتقطه الجهاز. ② طول موجته.</div>
+    <div class="givens">المعطيات: L=6.4 µH=6.4×10⁻⁶ H — C=1.9 pF=1.9×10⁻¹² F</div>
+    <div class="step"><b>الخطوة ١:</b> نعوّض بقانون التردد الرنيني:
+      <div class="math">f_r = 1/(2π√(6.4×10⁻⁶ × 1.9×10⁻¹²)) ≈ 45.64×10⁶ Hz = 45.64 MHz</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نوجد طول الموجة المقابل:
+      <div class="math">λ = c/f_r = (3×10⁸)/(45.64×10⁶) ≈ 6.57 m</div>
+      💡 جرّب هذي القيم بالضبط بالمحاكاة تحت (L=6.4، C=1.9) وتحقّق من تطابق القراءة.</div>
   </div>
 
-  <div class="section-title"><span class="ico">🛰️</span> التحسّس النائي (الاستشعار عن بُعد)</div>
+  <div class="section-title"><span class="ico">📡</span> الهوائي</div>
   <div class="card">
-    <p>الحصول على معلومات عن سطح الأرض دون احتكاك مباشر بها، باستعمال موجات كهرومغناطيسية تلتقطها أجهزة على الطائرات أو الأقمار الصناعية. نوعان حسب مصدر الطاقة:</p>
+    <p>الهوائي سلكان معدنيان يبثّان الطاقة (أو يستقبلانها) على شكل موجات. لكل تردد طول هوائي أنسب: أفضل طول يساوي <b>نصف طول الموجة</b>، أو <b>ربعها</b> فقط إذا أُرِّض الهوائي (وُصل طرفه بالأرض، فتُكمِّل الأرض نصف الطول الناقص كهربائياً).</p>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-    <div class="card" style="margin:0">
-      <b>🟢 صور نشطة</b>
-      <p style="margin-top:6px;font-size:.92rem">القمر نفسه مصدر الإشعاع — يرسل موجة ويحلّل ما يرتدّ عنها (كالرادار تماماً لكن للرصد لا الكشف الحربي).</p>
-    </div>
-    <div class="card" style="margin:0">
-      <b>🔵 صور غير نشطة</b>
-      <p style="margin-top:6px;font-size:.92rem">تعتمد على الإشعاع الصادر أو المنعكس أصلاً من الهدف نفسه (كضوء الشمس المنعكس عن الأرض)، دون أن يُصدر القمر أي موجة.</p>
-    </div>
-  </div>
-  <div class="defbox">
-    <b class="term">الاستعمالات:</b> المساحة والجيولوجيا والزراعة (رصد صحة المحاصيل عبر الأشعة تحت الحمراء المنعكسة عن النبات، والتنبؤ بالجفاف قبل أن تراه العين) والأرصاد الجوية والتطبيقات العسكرية.
+  <div class="lawbox">
+    طول الهوائي المناسب لتردد معيّن
+    <div class="formula">ℓ = λ/2  (غير مؤرَّض)   ،   ℓ = λ/4  (مؤرَّض)</div>
   </div>
 
-  <div class="section-title"><span class="ico">🗺️</span> خريطة الفصل كاملاً</div>
-  <div class="card">
-    <p>راجع رحلتك عبر هذا الفصل بنظرة واحدة:</p>
-    <ul style="padding-inline-start:22px;margin-top:8px;line-height:1.9">
-      <li><b>1.</b> النظرية الكهرومغناطيسية وخصائص الموجة — حقائق ماكسويل الأربع، والموجة المستعرضة E⊥B</li>
-      <li><b>2.</b> الإرسال والاستقبال — دائرة الرنين f_r=1/2π√(LC)، والهوائي ℓ=λ/2 أو λ/4، والكشف بالمجال الكهربائي أو المغناطيسي</li>
-      <li><b>3.</b> التضمين — AM (سعة) وFM (تردد) وPM (طور)</li>
-      <li><b>4.</b> مدى الموجات الراديوية وانتشارها — VLF إلى VHF، وأرضية/سماوية/فضائية</li>
-      <li><b>5.</b> التطبيقات — الرادار (d=ct/2) والاستشعار عن بُعد</li>
-    </ul>
+  <div class="example">
+    <div class="exq">يُراد استعمال هوائي نصف موجة لإرسال إشارة تردّدها 200 MHz. احسب طول الهوائي المناسب.</div>
+    <div class="givens">المعطيات: f=200 MHz=200×10⁶ Hz</div>
+    <div class="step"><b>الخطوة ١:</b> نوجد طول الموجة:
+      <div class="math">λ = c/f = (3×10⁸)/(200×10⁶) = 1.5 m</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نصف طول الموجة:
+      <div class="math">ℓ = λ/2 = 1.5/2 = 0.75 m = 75 cm</div>
+      💡 ولو أُرِّض الهوائي لكفى ربع الموجة فقط: ℓ=λ/4=37.5cm — أنسب عملياً لأنه أقصر.</div>
+  </div>
+
+  <!-- ======== المحاكاة: الموالفة (LC → f_r → λ → طول الهوائي) ======== -->
+  <div class="sim">
+    <h3>🎛️ مختبر الموالفة: من L وC إلى طول الهوائي</h3>
+    <p class="sim-sub">غيّر L وC وراقب التردد الرنيني وطول الموجة وطول الهوائي المناسب يتغيّرون معاً — هذا بالضبط ما يحدث كل مرة تُدوِّر فيها قرص الدوزان.</p>
+    <div class="sim-scroll"><canvas id="tuneSim" width="700" height="230"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">المحاثة L (مايكروهنري): <b id="lVal">٦.٤</b>
+        <input type="range" id="lR" min="1" max="20" step="0.1" value="6.4"></div>
+      <div class="slider-group">السعة C (بيكوفاراد): <b id="cVal">١.٩</b>
+        <input type="range" id="cR" min="1" max="20" step="0.1" value="1.9"></div>
+    </div>
+    <div class="readout" id="tuneReadout" style="margin-top:14px"></div>
   </div>
 
   <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
@@ -106,7 +94,7 @@
 
   <div class="lesson-nav">
     <a class="btn ghost" href="lesson4.html">➡ الدرس السابق</a>
-    <a class="btn" href="questions.html">أسئلة نهاية الفصل 🧮</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: الكشف عن الموجات الراديوية 🔍</a>
   </div>
 
   <footer class="site">إعداد الأستاذ أحمد رافع</footer>
@@ -114,88 +102,100 @@
 
 <script src="../../js/core.js"></script>
 <script>
-/* ---------- محاكاة الرادار والاستشعار عن بُعد (اختيار: تعيد الرسم عند التبديل فقط) ---------- */
+/* ---------- محاكاة الموالفة ---------- */
 (function () {
-  var cv = document.getElementById("appSim"), ctx = cv.getContext("2d");
-  var appSel = document.getElementById("appSel");
-  var readout = document.getElementById("appReadout");
+  var cv = document.getElementById("tuneSim"), ctx = cv.getContext("2d");
+  var lR = document.getElementById("lR"), lVal = document.getElementById("lVal");
+  var cR = document.getElementById("cR"), cVal = document.getElementById("cVal");
+  var readout = document.getElementById("tuneReadout");
+  var c_light = 3e8;
+
+  function arNum(n) { return String(n).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); }
+  function fmt(n, d) { return arNum(n.toFixed(d === undefined ? 2 : d)); }
 
   function draw() {
-    var app = appSel.value;
+    var L_uH = +lR.value, C_pF = +cR.value;
+    lVal.textContent = arNum(L_uH.toFixed(1)); cVal.textContent = arNum(C_pF.toFixed(1));
+    var L = L_uH * 1e-6, C = C_pF * 1e-12;
+    var fr = 1 / (2 * Math.PI * Math.sqrt(L * C));
+    var lambda = c_light / fr;
+    var halfL = lambda / 2, quarterL = lambda / 4;
+
     ctx.direction = "ltr";
     ctx.clearRect(0, 0, cv.width, cv.height);
-    ctx.textAlign = "center";
 
-    if (app === "radar") {
-      // محطة رادار
-      ctx.strokeStyle = "#334155"; ctx.lineWidth = 3;
-      ctx.beginPath(); ctx.moveTo(120, 190); ctx.lineTo(120, 130); ctx.stroke();
-      ctx.save(); ctx.translate(120, 120); ctx.rotate(-0.3);
-      ctx.strokeStyle = "#0369a1"; ctx.lineWidth = 4;
-      ctx.beginPath(); ctx.ellipse(0, 0, 26, 10, 0, 0, Math.PI * 2); ctx.stroke();
-      ctx.restore();
-      ctx.fillStyle = "#334155"; ctx.font = "bold 12px Cairo"; ctx.fillText("محطة الرادار", 120, 210);
-
-      // نبضة ذاهبة
-      ctx.strokeStyle = "#ea580c"; ctx.lineWidth = 2.4; ctx.setLineDash([8, 5]);
-      ctx.beginPath(); ctx.moveTo(150, 115); ctx.lineTo(430, 90); ctx.stroke();
-      ctx.setLineDash([]);
-      ctx.fillStyle = "#ea580c"; ctx.font = "11px Cairo"; ctx.fillText("موجة ذاهبة", 290, 90);
-
-      // طائرة هدف
-      ctx.font = "28px Cairo"; ctx.fillText("✈️", 460, 95);
-
-      // نبضة عائدة
-      ctx.strokeStyle = "#16a34a"; ctx.lineWidth = 2.4; ctx.setLineDash([8, 5]);
-      ctx.beginPath(); ctx.moveTo(430, 105); ctx.lineTo(160, 130); ctx.stroke();
-      ctx.setLineDash([]);
-      ctx.fillStyle = "#16a34a"; ctx.font = "11px Cairo"; ctx.fillText("موجة مرتدّة", 290, 148);
-
-      ctx.fillStyle = "#334155"; ctx.font = "12px Cairo";
-      ctx.fillText("زمن الذهاب والإياب t يحدّد البُعد d=ct/2، واتجاه العودة يحدّد الموقع", 350, 210);
-      readout.innerHTML = "📡 <b>الرادار:</b> يرسل موجة راديوية فترتدّ عن الهدف، وزمن رحلتها الكاملة يكشف بُعده d=ct/2.";
-    } else {
-      // قمر صناعي يرصد الأرض
-      ctx.font = "26px Cairo"; ctx.fillText("🛰️", 350, 55);
-      ctx.strokeStyle = "#0369a1"; ctx.lineWidth = 2; ctx.setLineDash([6, 4]);
-      ctx.beginPath(); ctx.moveTo(335, 70); ctx.lineTo(230, 170); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(365, 70); ctx.lineTo(470, 170); ctx.stroke();
-      ctx.setLineDash([]);
-
-      ctx.fillStyle = "#a7d8b8";
-      ctx.beginPath(); ctx.ellipse(350, 195, 220, 26, 0, 0, Math.PI * 2); ctx.fill();
-      ctx.fillStyle = "#166534"; ctx.font = "bold 12px Cairo"; ctx.fillText("سطح الأرض", 350, 200);
-
-      ctx.fillStyle = "#334155"; ctx.font = "12px Cairo";
-      ctx.fillText("يلتقط القمر موجات صادرة أو منعكسة من السطح لرصده دون احتكاك مباشر", 350, 230);
-      readout.innerHTML = "🛰️ <b>الاستشعار عن بُعد:</b> رصد سطح الأرض بموجات كهرومغناطيسية من الفضاء — نشط (القمر يُصدر الموجة) أو غير نشط (يعتمد على إشعاع الهدف نفسه).";
+    /* ---- رسم دائرة الاهتزاز LC (تخطيطي) ---- */
+    var ox = 90, oy = 115;
+    ctx.strokeStyle = "#334155"; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.moveTo(ox, oy - 55); ctx.lineTo(ox + 70, oy - 55);
+    // ملف (زگزاگ حلقي مبسّط)
+    for (var i = 0; i < 5; i++) {
+      ctx.moveTo(ox + 70 + i * 12, oy - 55);
+      ctx.arc(ox + 76 + i * 12, oy - 55, 6, Math.PI, 0, true);
     }
-  }
+    ctx.moveTo(ox + 130, oy - 55); ctx.lineTo(ox + 190, oy - 55);
+    ctx.stroke();
+    ctx.fillStyle = "#0369a1"; ctx.font = "bold 13px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("L", ox + 100, oy - 70);
 
-  appSel.addEventListener("change", draw);
+    ctx.beginPath();
+    ctx.moveTo(ox, oy - 55); ctx.lineTo(ox, oy + 55);
+    ctx.moveTo(ox + 190, oy - 55); ctx.lineTo(ox + 190, oy + 55);
+    ctx.moveTo(ox, oy + 55); ctx.lineTo(ox + 78, oy + 55);
+    ctx.moveTo(ox + 112, oy + 55); ctx.lineTo(ox + 190, oy + 55);
+    ctx.stroke();
+    // متسعة متغيرة (لوحان + سهم)
+    ctx.beginPath(); ctx.moveTo(ox + 80, oy + 40); ctx.lineTo(ox + 80, oy + 70); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ox + 110, oy + 40); ctx.lineTo(ox + 110, oy + 70); ctx.stroke();
+    ctx.strokeStyle = "#ea580c"; ctx.beginPath(); ctx.moveTo(ox + 70, oy + 75); ctx.lineTo(ox + 120, oy + 35); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ox + 120, oy + 35); ctx.lineTo(ox + 113, oy + 39); ctx.lineTo(ox + 120, oy + 44); ctx.closePath(); ctx.fillStyle = "#ea580c"; ctx.fill();
+    ctx.fillStyle = "#ea580c"; ctx.font = "bold 13px Cairo"; ctx.fillText("C", ox + 95, oy + 90);
+
+    /* ---- هوائي (تخطيطي) ---- */
+    var ax = 420, ay = 115;
+    ctx.strokeStyle = "#334155"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(ax, ay - 70); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(ax, ay + 70); ctx.stroke();
+    ctx.fillStyle = "#334155"; ctx.beginPath(); ctx.arc(ax, ay, 4, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#334155"; ctx.font = "bold 12px Cairo"; ctx.textAlign = "center";
+    ctx.fillText("هوائي نصف موجة", ax, ay - 85);
+    ctx.font = "11px Cairo";
+    ctx.fillText("ℓ = " + fmt(halfL) + " m", ax, ay + 95);
+
+    // موجة منطلقة من الدائرة نحو الهوائي (زخرفة بصرية)
+    ctx.strokeStyle = "#0369a1"; ctx.lineWidth = 1.6; ctx.setLineDash([5, 4]);
+    ctx.beginPath();
+    for (var x = ox + 200; x <= ax - 30; x++) {
+      var y = oy + Math.sin((x - ox - 200) / 9) * 14;
+      x === ox + 200 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.stroke(); ctx.setLineDash([]);
+
+    readout.innerHTML = "f_r = 1/(2π√LC) = " + fmt(fr / 1e6) + " MHz &nbsp;|&nbsp; λ = c/f_r = " + fmt(lambda) + " m" +
+      "<br>طول الهوائي غير المؤرَّض ℓ=λ/2 = " + fmt(halfL) + " m &nbsp;|&nbsp; طول الهوائي المؤرَّض ℓ=λ/4 = " + fmt(quarterL) + " m";
+  }
+  [lR, cR].forEach(function (s) { s.addEventListener("input", draw); });
   draw();
 })();
 
 /* ---------- الاختبار ---------- */
 Phy.quiz("quiz5", [
-  { q: "ماذا يعني اختصار RADAR؟",
-    opts: ["Radio Detection And Ranging — الكشف وتحديد البُعد بوساطة الموجات الراديوية", "Rapid Data Transfer — نقل بيانات سريع", "Radio Amplitude Distance Reading", "لا يحمل الاختصار أي معنى فيزيائي محدد"], a: 0,
-    why: "RADAR اختصار Radio Detection And Ranging: الكشف وتحديد البُعد بوساطة الموجات الراديوية." },
-  { q: "كيف يحدّد الرادار بُعد الهدف عملياً؟",
-    opts: ["من الزمن الذي تستغرقه الموجة ذهاباً وإياباً بين الرادار والهدف (d=ct/2)", "من لون الموجة المرتدّة فقط", "من درجة حرارة الهدف المرصود", "من وزن الهدف المقاس مباشرة"], a: 0,
-    why: "يرسل الرادار موجة فترتدّ عن الهدف، والزمن الكلي للرحلة ذهاباً وإياباً يحدد البُعد بالعلاقة d=ct/2." },
-  { q: "رادار أرسل نبضة استغرقت 400 μs لترتدّ عن سفينة وتعود. جد بُعد السفينة (c=3×10⁸ m/s).",
-    opts: ["60 km", "120 km", "30 km", "240 km"], a: 0,
-    why: "d = ct/2 = (3×10⁸ × 400×10⁻⁶)/2 = 120000/2 = 60000 m = 60 km." },
-  { q: "ما الفرق بين الصور النشطة وغير النشطة بالاستشعار عن بُعد؟",
-    opts: ["النشطة: القمر نفسه مصدر الإشعاع (يرسل الموجة ويحلّل ارتدادها)؛ غير النشطة: تعتمد على إشعاع صادر أو منعكس من الهدف نفسه دون أن يُصدر القمر شيئاً", "لا فرق حقيقي بين النوعين إطلاقاً", "النشطة تُستعمل بالليل فقط، وغير النشطة بالنهار فقط", "النشطة تحتاج طائرة، وغير النشطة تحتاج قمراً صناعياً حصراً"], a: 0,
-    why: "بالصور النشطة يُصدر القمر موجته الخاصة ويحلّل الارتداد (كالرادار)؛ بغير النشطة يعتمد فقط على إشعاع الهدف نفسه (كضوء الشمس المنعكس)." },
-  { q: "لماذا كان الرادار حاسماً بالإنذار المبكر عن الطائرات المعادية بالحرب العالمية الثانية؟",
-    opts: ["لأنه يكشف بُعد واتجاه الطائرات القادمة بموجات راديوية قبل أن تُرى بالعين المجرّدة", "لأنه كان يُسقط الطائرات مباشرة بالموجات الراديوية", "لأنه يصنع سحابة تُخفي القوات الصديقة عن العدو", "لا علاقة حقيقية للرادار بهذا الحدث التاريخي"], a: 0,
-    why: "يكشف الرادار بُعد الهدف واتجاهه من زمن ارتداد الموجة، فيُنذر بقدوم الطائرات المعادية قبل رؤيتها بالعين — وهذا بالضبط ما منح بريطانيا وقتاً حاسماً للاستعداد." },
-  { q: "أي المجالات التالية تستفيد عملياً من الاستشعار عن بُعد؟",
-    opts: ["المساحة، الجيولوجيا، الزراعة (رصد صحة المحاصيل)، الأرصاد الجوية، والتطبيقات العسكرية", "الطب النفسي فقط دون غيره", "صناعة النسيج المحلية فقط", "لا يوجد له أي استعمال عملي حقيقي حتى الآن"], a: 0,
-    why: "الاستشعار عن بُعد يُستعمل بالمساحة والجيولوجيا والزراعة (رصد صحة المحاصيل عبر الأشعة تحت الحمراء) والأرصاد الجوية والتطبيقات العسكرية." }
+  { q: "بأي علاقة يُحسب التردد الرنيني لدائرة الاهتزاز (L وC)؟",
+    opts: ["f_r = 1/(2π√(LC))", "f_r = 2π√(LC)", "f_r = LC", "f_r = 1/(LC)"], a: 0,
+    why: "نفس علاقة الرنين بدائرة RLC المتوالية من فصل التيار المتناوب: f_r=1/(2π√(LC))." },
+  { q: "كيف نختار التردد المطلوب إرساله أو استقباله عملياً بدائرة الاهتزاز؟",
+    opts: ["بتغيير سعة المتسعة المتغيرة C (تدوير قرص الدوزان)", "بتغيير طول الهوائي فقط كل مرة", "لا يمكن اختيار تردد معيّن إطلاقاً", "بتغيير لون السلك الموصل"], a: 0,
+    why: "تغيير C يغيّر التردد الرنيني f_r=1/(2π√LC))، فنُوالف الدائرة على تردد المحطة المطلوبة." },
+  { q: "ما أفضل طول لهوائي غير مؤرَّض بالنسبة لطول الموجة λ المرسلة أو المستقبَلة؟",
+    opts: ["نصف طول الموجة (ℓ=λ/2)", "طول الموجة كاملاً (ℓ=λ)", "ضعف طول الموجة (ℓ=2λ)", "عُشر طول الموجة (ℓ=λ/10)"], a: 0,
+    why: "أفضل طول لهوائي غير مؤرَّض يساوي نصف طول الموجة ℓ=λ/2؛ ولو أُرِّض لكفى ربعها ℓ=λ/4." },
+  { q: "دائرة موالفة محاثتها 2mH وسعتها 8pF. ما تردّدها الرنيني تقريباً؟",
+    opts: ["≈1.26×10⁶ Hz", "≈2.5×10⁶ Hz", "≈0.5×10⁶ Hz", "≈16×10⁶ Hz"], a: 0,
+    why: "f_r=1/(2π√(2×10⁻³×8×10⁻¹²))=1/(2π√(1.6×10⁻¹⁴))≈1.26×10⁶ Hz." },
+  { q: "لماذا يُفضَّل عملياً تأريض الهوائي (ℓ=λ/4) على تركه غير مؤرَّض (ℓ=λ/2)؟",
+    opts: ["لأن طوله يصير أقصر بمقدار النصف لنفس التردد، إذ تُكمِّل الأرض النصف الناقص كهربائياً", "لأن الهوائي المؤرَّض لا يعمل إطلاقاً بدون بطارية إضافية", "لأنه يُضاعف تردد الموجة المستقبَلة تلقائياً", "لا فرق عملي إطلاقاً بين الحالتين"], a: 0,
+    why: "تأريض الهوائي (وصل طرفه بالأرض) يجعل الأرض تُكمِّل كهربائياً نصف الطول الناقص، فيكفي ربع طول الموجة فقط (ℓ=λ/4) بدل نصفها — هوائي أقصر وأنسب عملياً." }
 ], { onDone: function (stars) { Phy.setLesson("g6c4", "5", { stars: stars }); } });
 </script>
 </body>
