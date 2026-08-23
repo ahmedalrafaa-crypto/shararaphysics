@@ -11,9 +11,12 @@ var ShararahAccess = (function () {
   var TOKEN_KEY = "shararah_device_token";
   var UNLOCK_KEY = "shararah_unlocked";
   var EXPIRY_KEY = "shararah_expires_at";
+  var LAST_CHECK_KEY = "shararah_last_check";
   // فترة سماح للأكواد المُفعّلة قبل نظام الاشتراكات (بلا تاريخ انتهاء مخزَّن محلياً).
   // يجب أن تطابق LEGACY_EXPIRY في Google Apps Script تماماً.
   var LEGACY_EXPIRY_ISO = "2027-08-08T00:00:00Z";
+  // كل كم مدة نتأكد مع السيرفر إن الجهاز لسا مصرّح له فعلاً، بدل الثقة الدائمة بالتخزين المحلي وحده.
+  var REVALIDATE_INTERVAL_MS = 20 * 60 * 60 * 1000;
 
   if (ACCESS_CONTROL_URL.indexOf("PASTE_") === 0) {
     console.warn("[access-control] رابط Google Apps Script غير مضبوط بعد — عدّل ACCESS_CONTROL_URL في js/access-control.js");
@@ -133,6 +136,7 @@ var ShararahAccess = (function () {
   function applyResult(data) {
     if (data && data.result === "success") {
       localStorage.setItem(UNLOCK_KEY, "true");
+      localStorage.setItem(LAST_CHECK_KEY, String(Date.now()));
       if (data.expiresAt) localStorage.setItem(EXPIRY_KEY, data.expiresAt);
       else localStorage.removeItem(EXPIRY_KEY);
       setMessage("تم التفعيل بنجاح ✅", "success");
@@ -140,6 +144,7 @@ var ShararahAccess = (function () {
     } else if (data && data.result === "expired") {
       localStorage.removeItem(UNLOCK_KEY);
       localStorage.removeItem(EXPIRY_KEY);
+      localStorage.removeItem(LAST_CHECK_KEY);
       setMessage("انتهت مدة اشتراكك، تواصل مع الأستاذ أحمد للتجديد", "warning");
     } else if (data && data.result === "used_elsewhere") {
       setMessage("هذا الكود مُفعّل على جهاز آخر، تواصل مع الأستاذ أحمد لنقله", "error");
@@ -249,12 +254,58 @@ var ShararahAccess = (function () {
     }, 250);
   }
 
+  // تحقق دوري صامت مع السيرفر: يمنع بقاء حالة "مفعّل" صالحة للأبد لمجرد وجودها
+  // بالتخزين المحلي (سواء نُسخت من جهاز ثاني أو عُدّلت يدوياً)، بلا ربط حقيقي بالسيرفر.
+  // يفشل بأمان: أي خطأ اتصال لا يقفل الطالب، فقط يُعاد المحاولة بالمرة الجاية.
+  function maybeRevalidate() {
+    var last = Number(localStorage.getItem(LAST_CHECK_KEY) || 0);
+    if (Date.now() - last < REVALIDATE_INTERVAL_MS) return;
+
+    var cbName = "shararahRevalidateCb" + Date.now();
+    var script = document.createElement("script");
+    var done = false;
+    var timer = setTimeout(cleanup, 10000);
+
+    function cleanup() {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
+      delete window[cbName];
+      if (script.parentNode) script.parentNode.removeChild(script);
+    }
+
+    window[cbName] = function (data) {
+      cleanup();
+      if (data && data.result === "success") {
+        localStorage.setItem(LAST_CHECK_KEY, String(Date.now()));
+        if (data.expiresAt) localStorage.setItem(EXPIRY_KEY, data.expiresAt);
+        return;
+      }
+      // "invalid" غير مشمولة عمداً: هذا الرد اللي يرجعه السيرفر القديم (قبل نشر checkStatus)
+      // لأي طلب ما يفهمه، فلا نقفل طلاب حقيقيين لمجرد إن نسخة Apps Script لسا ما تحدّثت.
+      if (data && (data.result === "expired" || data.result === "not_found")) {
+        localStorage.removeItem(UNLOCK_KEY);
+        localStorage.removeItem(EXPIRY_KEY);
+        localStorage.removeItem(LAST_CHECK_KEY);
+        if (!overlay) showLockModal(data.result === "expired" ? "expired" : "locked");
+      }
+    };
+    script.onerror = cleanup;
+    script.src = ACCESS_CONTROL_URL + "?action=checkStatus&deviceToken=" +
+      encodeURIComponent(getDeviceToken()) + "&callback=" + cbName;
+    document.body.appendChild(script);
+  }
+
   function run() {
     getDeviceToken();
-    if (isUnlocked()) return;
+    if (isUnlocked()) {
+      maybeRevalidate();
+      return;
+    }
     var reason = lockReason();
     localStorage.removeItem(UNLOCK_KEY);
     localStorage.removeItem(EXPIRY_KEY);
+    localStorage.removeItem(LAST_CHECK_KEY);
     showLockModal(reason);
   }
   if (document.body) run();
@@ -265,6 +316,7 @@ var ShararahAccess = (function () {
     reset: function () {
       localStorage.removeItem(UNLOCK_KEY);
       localStorage.removeItem(EXPIRY_KEY);
+      localStorage.removeItem(LAST_CHECK_KEY);
     }
   };
 })();
