@@ -150,7 +150,7 @@
     });
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
+  function init() {
     var root = document.getElementById("reviewRoot");
     if (!root) return;
     var lessons = chLessons(CH);
@@ -182,5 +182,9 @@
         expandBtn.textContent = anyClosed ? "🔽 طي الكل" : "🔼 فتح الكل";
       });
     }
-  });
+  }
+  // بيانات الدروس تصير تنحمّل ديناميكياً بعد التحقق من التفعيل (راجع review.html)،
+  // يعني هذا السكربت غالباً يشتغل بعد ما DOMContentLoaded خلص من زمان — لازم نتحقق يدوياً.
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
 })();

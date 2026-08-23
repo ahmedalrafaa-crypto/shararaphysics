@@ -133,7 +133,7 @@
     }, 120);
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
+  function init() {
     var input = document.getElementById("searchInput");
     if (!input) return;
     input.addEventListener("input", function () { onInput(input); });
@@ -142,5 +142,9 @@
     if (initial) { input.value = initial; onInput(input); }
     else render("", []);
     input.focus();
-  });
+  }
+  // بيانات الدروس تصير تنحمّل ديناميكياً بعد التحقق من التفعيل (راجع search/index.html)،
+  // يعني هذا السكربت غالباً يشتغل بعد ما DOMContentLoaded خلص من زمان — لازم نتحقق يدوياً.
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
 })();

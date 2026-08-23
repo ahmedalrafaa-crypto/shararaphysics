@@ -42,9 +42,26 @@
   <footer class="site">إعداد الأستاذ أحمد رافع</footer>
 </div>
 
-<script src="../js/lessons-data.js"></script>
-<script src="../js/lessons-data-g6.js"></script>
-<script src="../js/search.js"></script>
 <script src="../js/access-control.js"></script>
+<script>
+(function () {
+  function loadScript(src, onload) {
+    var s = document.createElement("script");
+    s.src = src;
+    s.onload = onload;
+    document.body.appendChild(s);
+  }
+  // بيانات الدروس (كل الفصول، مقفولة وحرة سوا) تتحمّل بس بعد ثبوت التفعيل — بدل ما تكون
+  // ملفات عامة يقدر أي زائر يفتحها مباشرة بلا كود. lessons-data-g6.js لازم يتحمّل بعد
+  // lessons-data.js بالضبط (يدمج بياناته فوق PHY_LESSONS الموجودة أصلاً، مو يستبدلها).
+  ShararahAccess.onUnlock(function () {
+    loadScript("../js/lessons-data.js", function () {
+      loadScript("../js/lessons-data-g6.js", function () {
+        loadScript("../js/search.js", function () {});
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>

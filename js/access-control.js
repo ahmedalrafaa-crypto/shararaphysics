@@ -68,6 +68,22 @@ var ShararahAccess = (function () {
   }
 
   var overlay = null, els = {};
+  var unlockCallbacks = [];
+
+  // تسجيل دالة تُستدعى فوراً لو الطالب مفعّل أصلاً، أو تُؤجَّل لحين نجاح التفعيل.
+  // تستخدمها صفحات المراجعة والبحث لتأجيل تحميل بيانات الدروس الكاملة (js/lessons-data*.js)
+  // لحد ما يثبت التفعيل فعلاً، بدل تحميلها كملف عام يقرأه أي زائر بلا كود.
+  function onUnlock(cb) {
+    if (typeof cb !== "function") return;
+    if (isUnlocked()) { cb(); return; }
+    unlockCallbacks.push(cb);
+  }
+
+  function fireUnlockCallbacks() {
+    var cbs = unlockCallbacks;
+    unlockCallbacks = [];
+    cbs.forEach(function (cb) { cb(); });
+  }
 
   function injectStyles() {
     if (document.getElementById("shararah-access-style")) return;
@@ -140,6 +156,7 @@ var ShararahAccess = (function () {
       if (data.expiresAt) localStorage.setItem(EXPIRY_KEY, data.expiresAt);
       else localStorage.removeItem(EXPIRY_KEY);
       setMessage("تم التفعيل بنجاح ✅", "success");
+      fireUnlockCallbacks();
       setTimeout(unlockContent, 600);
     } else if (data && data.result === "expired") {
       localStorage.removeItem(UNLOCK_KEY);
@@ -313,6 +330,7 @@ var ShararahAccess = (function () {
 
   return {
     isUnlocked: isUnlocked,
+    onUnlock: onUnlock,
     reset: function () {
       localStorage.removeItem(UNLOCK_KEY);
       localStorage.removeItem(EXPIRY_KEY);

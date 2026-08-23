@@ -49,9 +49,24 @@
 </div>
 
 <script src="../../js/core.js"></script>
-<script src="../../js/lessons-data.js"></script>
 <script>var PHY_REVIEW_CH = 0;</script>
-<script src="../../js/review.js"></script>
 <script src="../../js/access-control.js"></script>
+<script>
+(function () {
+  function loadScript(src, onload) {
+    var s = document.createElement("script");
+    s.src = src;
+    s.onload = onload;
+    document.body.appendChild(s);
+  }
+  // بيانات الفصل ومحرك المراجعة يتحمّلون بس بعد ثبوت التفعيل — بدل ما يكونوا
+  // ملف عام يقدر أي زائر يفتحه مباشرة بلا كود.
+  ShararahAccess.onUnlock(function () {
+    loadScript("../../js/lessons-data.js", function () {
+      loadScript("../../js/review.js", function () {});
+    });
+  });
+})();
+</script>
 </body>
 </html>
