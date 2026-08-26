@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>فيزياء أ. أحمد رافع — الثالث متوسط والسادس الإعدادي</title>
-<meta name="description" content="منصة فيزياء تفاعلية للأستاذ أحمد رافع لطلاب الثالث متوسط والسادس الإعدادي: شرح الفصول خطوة بخطوة، اختبارات بنجوم، وأداة توقعات وزارية مبنية على تحليل أكثر من 600 سؤال وزاري.">
+<meta name="description" content="منصة فيزياء تفاعلية للأستاذ أحمد رافع لطلاب الثالث متوسط والسادس الإعدادي: شرح الفصول خطوة بخطوة، اختبارات بنجوم، وأدوات توقعات وزارية لكل مرحلة — توقعات الثالث المبنية على تحليل أكثر من 600 سؤال، وبنك أسئلة السادس المحلولة مع الأسئلة الوزارية الغريبة.">
 <link rel="canonical" href="https://shararaphysics.netlify.app/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="فيزياء أ. أحمد رافع — الثالث متوسط والسادس الإعدادي">
-<meta property="og:description" content="منصة فيزياء تفاعلية للأستاذ أحمد رافع لطلاب الثالث متوسط والسادس الإعدادي: شرح الفصول خطوة بخطوة، اختبارات بنجوم، وأداة توقعات وزارية مبنية على تحليل أكثر من 600 سؤال وزاري.">
+<meta property="og:description" content="منصة فيزياء تفاعلية للأستاذ أحمد رافع لطلاب الثالث متوسط والسادس الإعدادي: شرح الفصول خطوة بخطوة، اختبارات بنجوم، وأدوات توقعات وزارية لكل مرحلة — توقعات الثالث المبنية على تحليل أكثر من 600 سؤال، وبنك أسئلة السادس المحلولة مع الأسئلة الوزارية الغريبة.">
 <meta property="og:image" content="https://shararaphysics.netlify.app/assets/logo-ar.png">
 <meta property="og:url" content="https://shararaphysics.netlify.app/">
 <meta property="og:locale" content="ar_IQ">
@@ -31,7 +31,7 @@
   <div class="topbar">
     <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
     <a class="btn small green" href="analysis/index.html" style="margin-inline-start:auto">📊 خطة مذاكرتي</a>
-    <a class="btn small coral" href="predictions/index.html">🔮 التوقعات الوزارية</a>
+    <a class="btn small coral" id="hero-predict" href="predictions/index.html">🔮 توقعات الثالث</a>
     <a class="btn small" href="subscribe.html">💳 الاشتراك</a>
     <a class="btn small ghost" href="search/index.html">🔍 بحث</a>
   </div>
@@ -279,6 +279,24 @@
     </div>
     <p class="g6-note">✅ فصول منهج السادس الإعدادي (العلمي) التسعة كلها متوفرة الآن.</p>
 
+    <div class="section-title"><span class="ico">🔮</span> جديد: التوقعات الوزارية</div>
+    <a class="chcard cc-coral" href="predictions-g6/index.html" style="display:block">
+      <span class="em chico tool-icon">🔮</span>
+      <span class="chkicker tool-tag">أداة تدريب</span>
+      <h3>بنك أسئلة وزارية محلولة لكل فصول السادس</h3>
+      <p>من مراجعة مباشرة لأكثر من ١٤٠ صفحة حلول عبر سنوات ودورات متعددة، متحقَّق منها حسابياً واحدة واحدة — منظّم حسب الفصل مع حل خطوة بخطوة.</p>
+      <p style="margin-top:8px"><b style="color:var(--violet-deep)">افتح القسم ←</b></p>
+    </a>
+
+    <div class="section-title"><span class="ico">🕵️</span> جديد: الأسئلة الوزارية الغريبة</div>
+    <a class="chcard" href="weird-questions/index.html" style="display:block;--cc:#7c3aed;--cc-soft:#ede9fe">
+      <span class="em chico tool-icon">🕵️</span>
+      <span class="chkicker tool-tag">أداة تدريب</span>
+      <h3>نفس أسئلة الفصل... بصياغة معكوسة</h3>
+      <p>٢٤ سؤالاً منظّمة حسب الفصل: صياغات معكوسة (المعطى صار مجهولاً) وأسئلة مفاهيمية ملتوية يحبّها الوزاري — كل سؤال موضّح فيه "أين الفخ؟" قبل الحل.</p>
+      <p style="margin-top:8px"><b style="color:#7c3aed">افتح القسم ←</b></p>
+    </a>
+
     <div class="section-title"><span class="ico">📊</span> جديد: خطة مذاكرتك</div>
     <a class="chcard cc-green" href="analysis/index.html" style="display:block">
       <span class="em chico tool-icon">📊</span>
@@ -291,7 +309,7 @@
 
   <div class="section-title"><span class="ico">📖</span> عن المنصة</div>
   <p>منصة فيزياء الثالث متوسط هي موقع تفاعلي أعدّه الأستاذ أحمد رافع لطلاب الصف الثالث متوسط في العراق، مبني بالكامل على المنهج الوزاري 2027. يشرح الموقع كل فصول الفيزياء من الكهربائية الساكنة والمغناطيس والتيار الكهربائي، إلى البطارية والطاقة والقدرة الكهربائية والمحولة الكهربائية وتكنولوجيا مصادر الطاقة، بأسلوب سهل وخطوة بخطوة مع أمثلة محلولة ومحاكاات تفاعلية واختبارات بنجوم وجوائز بدل الشرح التقليدي الممل.</p>
-  <p>يضم الموقع أيضاً أداة <b>التوقعات الوزارية</b>، المبنية على تحليل إحصائي لأكثر من 600 سؤال وزاري من دورات سابقة، تساعدك تتوقع أسئلة الامتحان وتتدرب عليها بحلول مفصّلة. وأداة <b>خطة مذاكرتي</b> اللي تجمع نتائجك من كل الاختبارات، تشخّص سبب كل خطأ، وترسم لك خطة مذاكرة واضحة بدل ما تضيع وقتك بالعشوائية.</p>
+  <p>يضم الموقع أيضاً أدوات <b>التوقعات الوزارية</b> لكل مرحلة: لطلاب الثالث متوسط أداة مبنية على تحليل إحصائي لأكثر من 600 سؤال وزاري من دورات سابقة، ولطلاب السادس الإعدادي بنك أسئلة محلولة ومتحقَّق منها فصلاً بفصل مع قسم <b>الأسئلة الوزارية الغريبة</b> — كلها بحلول مفصّلة خطوة بخطوة. وأداة <b>خطة مذاكرتي</b> اللي تجمع نتائجك من كل الاختبارات، تشخّص سبب كل خطأ، وترسم لك خطة مذاكرة واضحة بدل ما تضيع وقتك بالعشوائية.</p>
   <p>كما يوفر الموقع محتوى كاملاً لطلاب <b>السادس الإعدادي</b> الفرع العلمي يغطي فصول المنهج التسعة كاملة: المتسعات، الحث الكهرومغناطيسي، التيار المتناوب، الموجات الكهرومغناطيسية، البصريات الفيزيائية، الفيزياء الحديثة، إلكترونيات الحالة الصلبة، الأطياف الذرية والليزر، والفيزياء النووية — بنفس الأسلوب التفاعلي. الهدف من المنصة هو مساعدتك تفهم الفيزياء فعلاً، مو تحفظها بس، وتوصل لأعلى درجة بالامتحان الوزاري.</p>
 
   <footer class="site">إعداد الأستاذ أحمد رافع · 📞 07800155157</footer>
@@ -368,9 +386,12 @@
   var panels = { g3: document.getElementById("panel-g3"), g6: document.getElementById("panel-g6") };
   var heroChip = document.getElementById("hero-chip");
   var heroCta = document.getElementById("hero-cta");
+  var heroPredict = document.getElementById("hero-predict");
   var heroContent = {
-    g3: { chip: "📚 الصف الثالث المتوسط — المنهج الوزاري 2027", href: "chapters/ch0/index.html" },
-    g6: { chip: "📚 الصف السادس الإعدادي — الفرع العلمي", href: "chapters/g6c1/index.html" }
+    g3: { chip: "📚 الصف الثالث المتوسط — المنهج الوزاري 2027", href: "chapters/ch0/index.html",
+          predictHref: "predictions/index.html", predictText: "🔮 توقعات الثالث" },
+    g6: { chip: "📚 الصف السادس الإعدادي — الفرع العلمي", href: "chapters/g6c1/index.html",
+          predictHref: "predictions-g6/index.html", predictText: "🔮 توقعات السادس" }
   };
   function select(grade) {
     if (!panels[grade]) grade = "g3";
@@ -382,6 +403,10 @@
     for (var g in panels) if (panels[g]) panels[g].hidden = (g !== grade);
     if (heroChip) heroChip.textContent = heroContent[grade].chip;
     if (heroCta) heroCta.href = heroContent[grade].href;
+    if (heroPredict) {
+      heroPredict.href = heroContent[grade].predictHref;
+      heroPredict.textContent = heroContent[grade].predictText;
+    }
     try { localStorage.setItem("sharara_grade", grade); } catch (e) {}
   }
   tabs.forEach(function (t) {
