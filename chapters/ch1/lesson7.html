@@ -214,7 +214,7 @@
           var m = Math.hypot(f.x, f.y); if (m < 1e-6) break;
           px += dir * f.x / m * 4; py += dir * f.y / m * 4;
           ctx.lineTo(px, py);
-          if (s === 22) arrowAt = { x: px, y: py, dx: dir * f.x / m, dy: dir * f.y / m };
+          if (s === 22) arrowAt = { x: px, y: py, dx: f.x / m, dy: f.y / m };
           if (px < 5 || px > cv.width - 5 || py < 5 || py > cv.height - 5) break;
           var stop = chs.some(function (o) { return o !== c && Math.hypot(px - o.x, py - o.y) < 24; });
           if (stop) break;
