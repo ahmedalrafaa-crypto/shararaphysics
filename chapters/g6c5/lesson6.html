@@ -55,7 +55,7 @@
   <!-- ======== المحاكاة: محزز الحيود ======== -->
   <div class="sim">
     <h3>🌈 مختبر محزز الحيود</h3>
-    <p class="sim-sub">غيّر تباعد خطوط المحزز والطول الموجي، وراقب القمم المضيئة الرئيسة تصبح أحدّ وأضيق كلما قلّ التباعد (زاد عدد الخطوط لكل سنتمتر).</p>
+    <p class="sim-sub">غيّر تباعد خطوط المحزز والطول الموجي، وراقب زوايا القمم المضيئة الرئيسة تتباعد أكثر كلما قلّ d (زاد عدد الخطوط لكل سنتمتر).</p>
     <div class="sim-scroll"><canvas id="gratingSim" width="600" height="200"></canvas></div>
     <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
     <div class="controls">
@@ -122,7 +122,7 @@
     ctx.fillStyle = "#756b8a"; ctx.font = "11px Cairo"; ctx.textAlign = "center";
     ctx.fillText("الزاوية θ ⟵", ox + w / 2, baseY + 22);
 
-    readout.innerHTML = "d sinθ = mλ (قمم مضيئة رئيسة) — كلما قلّ d ازداد تباعد القمم الرئيسة وحدّتها";
+    readout.innerHTML = "d sinθ = mλ (قمم مضيئة رئيسة) — كلما قلّ d ازداد تباعد القمم الرئيسة (تكبر زاوية كل مرتبة)؛ أما حدّة القمم فتعتمد على عدد الشقوق المضاءة N لا على d وحده";
   }
   dgR.addEventListener("input", draw);
   lamgR.addEventListener("input", draw);
