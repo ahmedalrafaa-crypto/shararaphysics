@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: انعكاس وانكسار الضوء — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c6">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">انعكاس وانكسار الضوء</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: انعكاس وانكسار الضوء</h1>
+    <p>١٠ أسئلة من أسئلة الفصل نفسها في الكتاب المنهجي — اختيار من متعدد ومسائل. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g4c6");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "أيّ العبارات الآتية تعبّر عن أحد قانوني الانعكاس؟",
+    opts: ["زاوية السقوط تساوي ضعف زاوية الانعكاس", "زاوية السقوط تساوي نصف زاوية الانعكاس", "زاوية السقوط تساوي زاوية الانعكاس", "زاوية السقوط تساوي الجذر التربيعي لزاوية الانعكاس"], a: 2,
+    why: "القانون الثاني للانعكاس: زاوية السقوط تساوي زاوية الانعكاس." },
+  { q: "سرعة الضوء في الزجاج مقارنة بسرعته في الفراغ:",
+    opts: ["أقل من سرعة الضوء في الفراغ", "أكبر من سرعة الضوء في الفراغ", "تساوي سرعة الضوء في الفراغ", "لا علاقة بينهما"], a: 0,
+    why: "سرعة الضوء في أي مادة (كالزجاج) أقل دائماً من سرعته في الفراغ، لأن n=c/v دائماً أكبر من 1 لأي مادة." },
+  { q: "النسبة بين جيب زاوية السقوط في الوسط الأول وجيب زاوية الانكسار في الوسط الثاني (نسبة ثابتة لوسطين معينين) تُسمى:",
+    opts: ["طاقة الإشعاع الضوئي", "زخم الإشعاع الضوئي", "معامل الانكسار النسبي بين الوسطين", "تردد الإشعاع الضوئي"], a: 2,
+    why: "هذه النسبة الثابتة (sinθ₁/sinθ₂) تُسمى معامل الانكسار النسبي بين الوسطين الشفافين." },
+  { q: "وحدة معامل الانكسار المطلق لمادة شفافة هي:",
+    opts: ["m", "1/m", "m²", "ليس له وحدات"], a: 3,
+    why: "معامل الانكسار المطلق n=c/v نسبة بين سرعتين، فهو كمية بلا وحدات." },
+  { q: "وُجد أن معامل الانكسار المطلق للماس يساوي 2.42، وسرعة الضوء في الفراغ 3×10⁸m/s. ما سرعة الضوء في الماس؟",
+    opts: ["1.24×10⁸ m/s", "7.26×10⁸ m/s", "2.42×10⁸ m/s", "0.81×10⁸ m/s"], a: 0,
+    why: "v = c/n = (3×10⁸)/2.42 ≈ 1.24×10⁸ m/s." },
+  { q: "علمت أن سرعة الضوء في أحد المواد الشفافة تساوي c/1.52 (حيث c سرعة الضوء بالفراغ). ما معامل انكساره المطلق؟",
+    opts: ["1.52", "0.66", "3.04", "1"], a: 0,
+    why: "n = c/v = c/(c/1.52) = 1.52 مباشرة من تعريف معامل الانكسار." },
+  { q: "معامل الانكسار المطلق للماء 4/3 ولأحد أنواع الزجاج 3/2. ما مقدار الزاوية الحرجة بين هذين الوسطين؟ (sin62.75°=0.889)",
+    opts: ["30°", "45°", "62.75°", "90°"], a: 2,
+    why: "sinθc = n(أقل)/n(أكبر) = (4/3)/(3/2) = 8/9 = 0.889 ⟹ θc = 62.75° (من الزجاج الأكثف إلى الماء الأقل كثافة ضوئياً)." },
+  { q: "سقط ضوء من الهواء على سطح الماء بزاوية سقوط 30° (n_ماء=4/3)، فانعكس جزء وانكسر جزء آخر. ما زاوية الانعكاس؟",
+    opts: ["15°", "22.02°", "30°", "60°"], a: 2,
+    why: "زاوية الانعكاس تساوي زاوية السقوط دائماً (قانون الانعكاس) = 30°، بغض النظر عن الانكسار الحادث في الجزء الآخر." },
+  { q: "بالمسألة السابقة نفسها (سقوط 30° من الهواء على الماء، n_ماء=4/3)، ما زاوية الانكسار؟ (sin30°=0.5، sin22.02°=0.375)",
+    opts: ["30°", "45°", "22.02°", "60°"], a: 2,
+    why: "من قانون سنيل: 1×sin30° = (4/3)×sinθ₂ ⟹ sinθ₂=0.375 ⟹ θ₂=22.02°." },
+  { q: "يسقط ضوء من الهواء على مادة شفافة معامل انكسارها المطلق 1.5 بزاوية سقوط 30°. ما زاوية الانكسار؟ (sin30°=0.5، sin19.45°=0.333)",
+    opts: ["45°", "19.45°", "30°", "60°"], a: 1,
+    why: "1×sin30° = 1.5×sinθ₂ ⟹ sinθ₂ = 0.5/1.5 = 0.333 ⟹ θ₂=19.45°." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g4c6", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

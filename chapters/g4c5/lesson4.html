@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: قوة الإضاءة — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c5">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الضوء</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>💡 الدرس 4: قوة الإضاءة</h1>
+    <p>لماذا يضيء مصباح 500 واط أكثر من مصباح 40 واط من نفس النوع؟ نحتاج كمية فيزيائية دقيقة لوصف "قوة" أي مصدر ضوئي في بعث الضوء.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">💡</span>
+    <span>لاحظنا سابقاً اختلاف المصادر الضوئية في إصدارها للضوء، فالشمس تضيء أكثر مما يضيء المصباح، وعلى سطح معيّن يضيء المصباح أكثر مما تضيء الشمعة بنفس الظروف. لكن كيف نقيس هذا الاختلاف رقمياً؟</span>
+  </div>
+
+  <div class="section-title"><span class="ico">💡</span> ما قوة الإضاءة؟</div>
+  <div class="card">
+    <p>لو أخذنا مصباحين متماثلين من النوع نفسه وقدرة نفسها وقوة أحدهما 500 watt والآخر 40 watt، فالمصباح الأول يضيء أكثر من المصباح الثاني. إن هذا الاختلاف يعود إلى اختلاف قوة الإضاءة أي اختلاف المعدل الزمني للطاقة المنبعثة من كل من المصدرين الضوئيين، وعلى هذا الأساس يمكننا القول:</p>
+  </div>
+
+  <div class="lawbox">
+    قوة الإضاءة (Luminous Intensity)
+    كمية الطاقة الضوئية (المرئية) المنبعثة من مصدر ضوئي خلال وحدة الزمن، وتُقاس بوحدة الشمعة القياسية (candle، الرمز cd)
+  </div>
+
+  <div class="section-title"><span class="ico">👁️</span> السيل الضوئي</div>
+  <div class="card">
+    <p>لتقييم تأثير الأشعة الضوئية في العين تُستعمل كمية فيزيائية تسمى السيل الضوئي، والذي يُعرَّف بأنه: ذلك الجزء من سيل الأشعة الذي يولد إحساساً ضوئياً في العين، فهو مقياس لقوة إضاءة المصدر.</p>
+  </div>
+
+  <div class="lawbox">
+    السيل الضوئي (Luminous Flux)
+    <div class="formula">السيل الضوئي = 4π × قوة إضاءة المصدر</div>
+    <div class="formula">Φ = 4π I</div>
+    حيث I: تمثّل قوة إضاءة المصدر النقطي مقدرة بالشمعة القياسية (cd) · Φ: السيل الضوئي، ويُقاس بوحدة اللومن (Lumen، الرمز Lm)
+  </div>
+
+  <div class="notebox">
+    <b>💡 هل تعلم؟</b> إن مصباح الإضاءة الكهربائي الذي قدرته 100W قوة إضاءته 139cd، ويبعث عند اشتغاله سيلاً ضوئياً مقداره 1750 لومن (Lm) تقريباً.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> ما الفرق بين قوة الإضاءة (I) والسيل الضوئي (Φ)؟</summary>
+    <div class="ans">قوة الإضاءة (I) خاصية ثابتة للمصدر الضوئي نفسه، تصف معدّل الطاقة الضوئية المنبعثة منه بالشمعة القياسية (cd). أما السيل الضوئي (Φ) فهو الكمية الكلية للضوء المنبعثة من المصدر في جميع الاتجاهات، وتُقاس باللومن، وترتبط بقوة الإضاءة بالعلاقة Φ=4πI — أي أن السيل الضوئي هو "توزيع" قوة الإضاءة على كامل الزاوية المجسمة المحيطة بالمصدر (4π steradian).</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz4"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson3.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: شدة الاستضاءة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz4", [
+  { q: "قوة الإضاءة تُعرَّف بأنها:",
+    opts: ["كمية الطاقة الضوئية المنبعثة من مصدر خلال وحدة الزمن", "مسافة المصدر عن السطح المضاء", "لون الضوء المنبعث فقط", "درجة حرارة المصدر الضوئي"], a: 0,
+    why: "قوة الإضاءة تصف المعدّل الزمني للطاقة الضوئية (المرئية) المنبعثة من المصدر، وتُقاس بالشمعة القياسية (cd)." },
+  { q: "وحدة قياس قوة الإضاءة هي:",
+    opts: ["اللوكس (Lux)", "اللومن (Lumen)", "الشمعة القياسية (candle)", "الواط (Watt)"], a: 2,
+    why: "قوة الإضاءة I تُقاس بوحدة الشمعة القياسية (cd)." },
+  { q: "العلاقة بين السيل الضوئي (Φ) وقوة الإضاءة (I) هي:",
+    opts: ["Φ = I / 4π", "Φ = 4π I", "Φ = I²", "Φ = I + 4π"], a: 1,
+    why: "السيل الضوئي Φ = 4πI، حيث I قوة إضاءة المصدر مقدرة بالشمعة القياسية." },
+  { q: "السيل الضوئي يُقاس بوحدة:",
+    opts: ["اللومن (Lumen)", "الشمعة القياسية (cd)", "اللوكس (Lux)", "المتر"], a: 0,
+    why: "يُقاس السيل الضوئي (Φ) بوحدة اللومن (Lm)." },
+  { q: "مصباح قوة إضاءته I=100cd. ما مقدار السيل الضوئي المنبعث منه (استعمل π≈3.14)؟",
+    opts: ["1256 Lm", "400 Lm", "100 Lm", "25 Lm"], a: 0,
+    why: "Φ = 4πI = 4×3.14×100 ≈ 1256 Lm." }
+], { onDone: function (stars) { Phy.setLesson("g4c5", "4", { stars: stars }); } });
+</script>
+</body>
+</html>

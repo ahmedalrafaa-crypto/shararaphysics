@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: المرايا — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c7">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">المرايا</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: المرايا</h1>
+    <p>١٢ سؤالاً من أسئلة الفصل نفسها في الكتاب المنهجي — اختيار من متعدد ومسائل. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g4c7");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "الصورة الخيالية (التقديرية):",
+    opts: ["تكون معتدلة بالنسبة للجسم", "تكون مقلوبة بالنسبة للجسم", "يمكن إسقاطها على حاجز", "تقع أمام المرآة"], a: 0,
+    why: "الصورة الخيالية معتدلة دائماً، ولا يمكن إسقاطها على حاجز لأنها لا تتكوّن من التقاء فعلي للأشعة." },
+  { q: "المرآة المقعرة تُظهر صورة معتدلة للجسم عندما يكون بُعده عنها:",
+    opts: ["أقل من البعد البؤري f", "مساوياً للبعد البؤري", "ضعف البعد البؤري", "بعيداً جداً عن المرآة"], a: 0,
+    why: "الصورة المعتدلة (الخيالية المكبّرة) تتكوّن فقط عندما يكون الجسم أقرب من البعد البؤري." },
+  { q: "عدد الصور المتكونة في المرايا المستوية المتقابلة (المتوازية تماماً) يكون:",
+    opts: ["30", "180", "لانهائياً (كبيراً جداً)", "صفراً"], a: 2,
+    why: "عندما تقترب الزاوية بين المرآتين من الصفر (متوازيتان تقريباً)، فإن n=(360/θ)-1 يصبح كبيراً جداً." },
+  { q: "المحور الأساس لمرآة كروية هو المستقيم المار بـ:",
+    opts: ["مركز تكوّر المرآة وأية نقطة أخرى", "مركز تكوّر المرآة وقطبها", "ببؤرة المرآة وأي نقطة على سطحها", "مماساً لسطح المرآة"], a: 1,
+    why: "المحور الأساس هو الخط الواصل بين مركز تكوّر المرآة (C) وقطبها (V) تحديداً." },
+  { q: "إذا نظرت في مرآة وكانت صورتك مكبّرة، تكون المرآة:",
+    opts: ["مقعرة", "محدبة", "مستوية", "جميع الاحتمالات السابقة"], a: 0,
+    why: "المرآة المقعرة هي الوحيدة القادرة على إعطاء صورة مكبّرة (عندما يكون الجسم أقرب من بعدها البؤري)." },
+  { q: "نصف قطر تكوّر المرآة الكروية يساوي:",
+    opts: ["نصف البعد البؤري", "ضعف البعد البؤري", "ثلاثة أضعاف البعد البؤري", "ثلث البعد البؤري"], a: 1,
+    why: "R = 2f، أي نصف القطر يساوي ضعف البعد البؤري." },
+  { q: "صفات الصورة المتكونة في المرآة المحدبة هي دائماً:",
+    opts: ["حقيقية ومعتدلة ومصغّرة", "خيالية ومعتدلة ومصغّرة", "حقيقية ومكبّرة ومقلوبة", "خيالية ومقلوبة ومكبّرة"], a: 1,
+    why: "المرآة المحدبة تعطي دائماً صورة خيالية معتدلة مصغّرة، بغض النظر عن بُعد الجسم." },
+  { q: "مرآة كروية بعدها البؤري 15cm. نصف قطر تكوّرها يساوي:",
+    opts: ["15cm", "7.5cm", "60cm", "30cm"], a: 3,
+    why: "R = 2f = 2×15 = 30cm." },
+  { q: "مسطرة طولها 10cm وُضعت عمودياً أمام مرآة مقعرة بعدها البؤري +50cm، وعلى بعد 100cm من قطب المرآة. طول الصورة المتكونة يكون:",
+    opts: ["3cm معتدلة", "3cm مقلوبة", "10cm معتدلة", "10cm مقلوبة"], a: 3,
+    why: "1/50=1/100+1/v ⟹ v=100cm. M=-v/u=-100/100=-1 ⟹ h'=-1×10=-10 (طول 10cm، إشارة سالبة = مقلوبة)." },
+  { q: "تكوّنت صورة معتدلة باستعمال مرآة مقعرة نصف قطرها 36cm، فكانت قوة التكبير 3. ما موضع الجسم بالنسبة للمرآة؟",
+    opts: ["12cm", "18cm", "36cm", "6cm"], a: 0,
+    why: "f=18cm. M=+3 (معتدلة) ⟹ v=-3u. من 1/18=1/u-1/3u=2/3u ⟹ u=12cm." },
+  { q: "وُضع جسم على بعد 4cm من مرآة فتكوّنت له صورة تقديرية مكبّرة 3 مرات. ما نوع المرآة وبعدها البؤري؟",
+    opts: ["مرآة محدبة، f=-6cm", "مرآة مقعرة، f=+6cm", "مرآة مستوية", "مرآة مقعرة، f=+12cm"], a: 1,
+    why: "M=+3، u=4 ⟹ v=-12cm. 1/f=1/4-1/12=1/6 ⟹ f=+6cm (موجب) ⟹ مرآة مقعرة." },
+  { q: "جسم طوله 4cm أمام مرآة محدبة نصف قطر تكوّرها 20cm، على بعد 40cm. طول الصورة المتكونة ونوعها:",
+    opts: ["8cm حقيقية", "0.8cm تقديرية معتدلة مصغّرة", "4cm معتدلة", "0.8cm حقيقية مقلوبة"], a: 1,
+    why: "f=-10cm. من 1/f=1/u+1/v: 1/v=-1/10-1/40=-1/8 ⟹ v=-8cm. M=-v/u=0.2 ⟹ h'=0.2×4=0.8cm، موجبة = تقديرية معتدلة مصغّرة." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g4c7", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

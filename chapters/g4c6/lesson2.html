@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: انعكاس الضوء وقانونا الانعكاس — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c6">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">انعكاس وانكسار الضوء</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>📐 الدرس 2: انعكاس الضوء وقانونا الانعكاس</h1>
+    <p>كل مرآة في بيتك تطبّق قانونين بسيطين وثابتين، اكتشفهما العلماء بتجربة يمكنك أن تكرّرها بنفسك بمصباح ليزر ومنقلة.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧪</span> نشاط: اكتشاف قانونَي الانعكاس</div>
+  <div class="card">
+    <p>نسقط بصورة مائلة حزمة رفيعة من أشعة ضوئية صادرة من مصدر ضوئي (أو مصدر ليزري) باتجاه المرآة المستوية على الورقة، فنلاحظ انعكاس الضوء عن سطح المرآة من نقطة تسمى نقطة السقوط. نرسم على الورقة عموداً من نقطة سقوط الشعاع الساقط على السطح العاكس، ونحدد على الرسم زاوية السقوط θ₁ (المحصورة بين الشعاع الساقط والعمود المقام) وزاوية الانعكاس θ'₁ (المحصورة بين الشعاع المنعكس والعمود المقام)، ثم نقيس قيمتي زاوية السقوط والانعكاس لهذه الحالة.</p>
+    <p style="margin-top:8px">نكرر التجربة بتغيير زاوية السقوط عدة مرات (25°، 30°، 35°، 40°) ونعيّن زاوية الانعكاس المناظرة لها في كل حالة.</p>
+  </div>
+
+  <div class="tblwrap"><table class="nice">
+    <tr><th>زاوية السقوط θ₁</th><th>زاوية الانعكاس θ'₁</th></tr>
+    <tr><td>25°</td><td>25°</td></tr>
+    <tr><td>30°</td><td>30°</td></tr>
+    <tr><td>35°</td><td>35°</td></tr>
+    <tr><td>40°</td><td>40°</td></tr>
+  </table></div>
+
+  <div class="lawbox">
+    القانون الأول للانعكاس
+    الشعاع الساقط والشعاع المنعكس والعمود المقام من نقطة السقوط تقع جميعها في مستوٍ واحد
+  </div>
+
+  <div class="lawbox">
+    القانون الثاني للانعكاس
+    زاوية السقوط تساوي زاوية الانعكاس
+    <div class="formula">θ₁ = θ'₁</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> أيّهما أكثر جودة في عكس الضوء: الموشور العاكس أم المرآة المستوية؟ ولماذا؟</summary>
+    <div class="ans">الموشور العاكس أكثر جودة، لأنه يعكس الضوء انعكاساً داخلياً كلياً بنسبة مقاربة جداً لـ100% (بفعل ظاهرة الانعكاس الكلي الداخلي التي سندرسها لاحقاً)، بينما المرآة المستوية النموذجية تعكس نسبة حوالي 90% فقط من الضوء الساقط عليها (يحدث امتصاص جزء من الضوء الساقط عليها). ولذلك تبدو الصورة أكثر سطوعاً ووضوح تفاصيل في حالة استعمال الموشور العاكس.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz2"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson1.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: انكسار الضوء وقانونا الانكسار ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz2", [
+  { q: "القانون الثاني للانعكاس ينص على أن:",
+    opts: ["زاوية السقوط ضعف زاوية الانعكاس", "زاوية السقوط تساوي زاوية الانعكاس", "زاوية السقوط نصف زاوية الانعكاس", "لا علاقة بين زاويتَي السقوط والانعكاس"], a: 1,
+    why: "القانون الثاني للانعكاس: زاوية السقوط = زاوية الانعكاس (θ₁=θ'₁)." },
+  { q: "القانون الأول للانعكاس ينص على أن الشعاع الساقط والمنعكس والعمود المقام:",
+    opts: ["تقع في مستويات مختلفة", "تقع جميعها في مستوٍ واحد", "متعامدة على بعضها", "متوازية دائماً"], a: 1,
+    why: "القانون الأول: الشعاع الساقط والشعاع المنعكس والعمود المقام من نقطة السقوط تقع جميعها في مستوٍ واحد." },
+  { q: "إذا كانت زاوية السقوط لشعاع ضوئي على مرآة مستوية 35°، فإن زاوية الانعكاس تساوي:",
+    opts: ["17.5°", "35°", "70°", "55°"], a: 1,
+    why: "وفق القانون الثاني للانعكاس، زاوية الانعكاس تساوي زاوية السقوط تماماً = 35°." },
+  { q: "الموشور العاكس أفضل من المرآة المستوية في عكس الضوء لأنه:",
+    opts: ["أرخص ثمناً", "يعكس الضوء بنسبة مقاربة لـ100% عبر الانعكاس الكلي الداخلي", "أخف وزناً", "لا فرق حقيقياً بينهما"], a: 1,
+    why: "الموشور العاكس يستغل ظاهرة الانعكاس الكلي الداخلي فيعكس الضوء بنسبة قريبة من الكمال، بعكس المرآة العادية (~90%)." }
+], { onDone: function (stars) { Phy.setLesson("g4c6", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

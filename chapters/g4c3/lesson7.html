@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 7: الخواص الميكانيكية للموائع المتحركة — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الموائع الساكنة</a> / الدرس 7</span>
+  </div>
+
+  <div class="hero">
+    <h1>🌊 الدرس 7: الخواص الميكانيكية للموائع المتحركة</h1>
+    <p>لحد الآن درسنا الموائع الساكنة. لكن أغلب الموائع في حياتنا اليومية متحركة: دم يجري بشرايينك، ماء بالأنابيب، هواء حول جناح طائرة. لدراسة جريانها نحتاج نموذجاً مبسّطاً نبدأ به.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🩸</span>
+    <span>للموائع المتحركة أهمية كبيرة في حياتنا اليومية، كما يحدث لحركة الطائرة أو الغواصة في الموائع، أو جريان الدم في الشرايين والأوردة أو جريان الماء في الأنابيب. وتتميز الموائع بقدرتها على الجريان عندما تؤثر فيها القوى مهما كانت صغيرة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">💡</span> المائع المثالي (Ideal Fluid)</div>
+  <div class="card">
+    <p>لوصف جريان مائع ما عند لحظة ما، فإنه يجب معرفة كثافته وضغطه وسرعة جريانه. ولتسهيل دراسة الموائع المتحركة سنفترض أن المائع مثالي (Ideal fluid) الذي يتصف بما يلي:</p>
+  </div>
+
+  <div class="tblwrap"><table class="nice">
+    <tr><th>#</th><th>الخاصية</th><th>المعنى</th></tr>
+    <tr><td>1</td><td>غير قابل للانكباس</td><td>أي لا يمكن ضغطه فكثافته تبقى ثابتة في أثناء جريانه</td></tr>
+    <tr><td>2</td><td>جريانه منتظم</td><td>يعني سرعة جريان دقائق المائع عند نقطة معينة تبقى ثابتة مع الزمن في المقدار والاتجاه</td></tr>
+    <tr><td>3</td><td>عديم اللزوجة</td><td>اللزوجة مقياس للاحتكاك الداخلي في المائع عند جريانه، لذلك نفترض لزوجة المائع صفراً</td></tr>
+    <tr><td>4</td><td>غير دوّامي (غير دوراني)</td><td>أي أن جريانه غير اضطرابي، أي لا تتداخل خطوط جريانه فلا تتكوّن فيه دوّامات</td></tr>
+  </table></div>
+
+  <div class="notebox">
+    <b>💡 لماذا هذا التبسيط؟</b> الموائع الحقيقية (كالماء والهواء) لها لزوجة حقيقية وقد يكون جريانها اضطرابياً في ظروف معينة. لكن افتراض "المائع المثالي" يبسّط الرياضيات كثيراً ويعطي نتائج تقريبية ممتازة في حالات عملية واسعة — وسنبني عليه معادلتَي الاستمرارية وبرنولي بالدروس القادمة.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> ما الفرق بين الجريان المنتظم والجريان الدوّامي؟</summary>
+    <div class="ans">الجريان المنتظم (Steady flow): سرعة دقائق المائع عند أي نقطة معينة تبقى ثابتة مع الزمن، سواء بالمقدار أو الاتجاه — حتى لو اختلفت السرعة من نقطة لأخرى. أما الجريان الدوّامي (Rotational flow): فتتداخل فيه خطوط الجريان وتتكوّن دوّامات (كما يحصل عند تصريف الماء من حوض بسرعة)، وهو ما يفترضه المائع المثالي غير موجود إطلاقاً.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz7"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson6.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson8.html">الدرس التالي: معادلة الاستمرارية ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz7", [
+  { q: "المائع المثالي (Ideal Fluid) يُفترض بأنه:",
+    opts: ["قابل للانكباس بسهولة", "غير قابل للانكباس (كثافته ثابتة)", "متغير الكثافة باستمرار", "لا وجود له في أي نموذج فيزيائي"], a: 1,
+    why: "من خصائص المائع المثالي أنه غير قابل للانكباس، فكثافته تبقى ثابتة أثناء جريانه." },
+  { q: "الجريان المنتظم (Steady flow) يعني أن سرعة دقائق المائع عند نقطة معينة:",
+    opts: ["تتغيّر باستمرار مع الزمن", "تبقى ثابتة مع الزمن مقداراً واتجاهاً", "تساوي صفراً دائماً", "تعتمد على لون المائع"], a: 1,
+    why: "الجريان المنتظم يعني ثبات سرعة الجريان عند نقطة معينة مع الزمن، مقداراً واتجاهاً." },
+  { q: "اللزوجة هي مقياس لـ:",
+    opts: ["كثافة المائع", "الاحتكاك الداخلي في المائع عند جريانه", "ضغط المائع", "درجة حرارة المائع فقط"], a: 1,
+    why: "اللزوجة تقيس الاحتكاك الداخلي بين طبقات المائع عند جريانه، وتُفترض صفراً في المائع المثالي." },
+  { q: "الجريان غير الدوّامي (غير الدوراني) يعني أن خطوط الجريان:",
+    opts: ["تتداخل وتتكوّن فيها دوّامات", "لا تتداخل ولا تتكوّن فيها دوّامات", "تتوقف تماماً", "تتحرك بشكل عشوائي دائماً"], a: 1,
+    why: "الجريان غير الدوّامي يعني عدم تداخل خطوط الجريان، فلا تتكوّن دوّامات (جريان غير اضطرابي)." }
+], { onDone: function (stars) { Phy.setLesson("g4c3", "7", { stars: stars }); } });
+</script>
+</body>
+</html>

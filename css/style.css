@@ -193,6 +193,18 @@ body::after {
   background: var(--ink); color: #fff; font-size: .7rem; font-weight: 800;
   padding: 2px 10px; border-radius: 999px;
 }
+
+/* فصل مدفوع لسا ما انفتح كوده — يبقى قابلاً للنقر (بعكس .locked) لأن الضغط
+   عليه يوديك لصفحة التفعيل نفسها. يختفي تلقائياً بعد تفعيل كود صحيح. */
+/* ملاحظة: الإعتام هنا جزء من filter (وليس خاصية opacity المنفصلة) لأن
+   حركة الدخول .chmap .chcard { animation: fadeUp ... both } تُثبّت opacity
+   على 1 بعد انتهائها وتتجاوز أي قيمة opacity ثابتة أخرى على نفس العنصر. */
+.chcard.needs-code { filter: grayscale(.3) opacity(.65); }
+.chcard.needs-code::after {
+  content: "🔒 يحتاج تفعيل"; position: absolute; top: 14px; inset-inline-start: 14px;
+  background: var(--ink); color: #fff; font-size: .7rem; font-weight: 800;
+  padding: 2px 10px; border-radius: 999px;
+}
 .pbar { height: 10px; background: #e9ebfa; border-radius: 999px; margin-top: 12px; overflow: hidden; }
 .pbar > div {
   height: 100%; border-radius: 999px;
@@ -1038,6 +1050,17 @@ footer.site::before {
   padding: 1px 9px; border-radius: 999px; vertical-align: middle;
 }
 
+/* درس مدفوع لسا ما انفتح كوده — يبقى قابلاً للنقر (بعكس .locked) لأن الضغط
+   عليه يوديك لصفحة الدرس حيث تظهر شاشة التفعيل. يختفي بعد تفعيل كود صحيح. */
+/* نفس ملاحظة .chcard.needs-code: .path .node مشمولة أيضاً بحركة fadeUp
+   اللي تُثبّت opacity على 1، فالإعتام لازم يكون عبر filter لا opacity. */
+.node.needs-code { filter: grayscale(.25) opacity(.7); }
+.node.needs-code .info::after {
+  content: "🔒 يحتاج تفعيل"; display: inline-block; margin-inline-start: 8px;
+  background: var(--ink); color: #fff; font-size: .68rem; font-weight: 800;
+  padding: 1px 9px; border-radius: 999px; vertical-align: middle;
+}
+
 /* ====== مكوّنات الفصل الثامن (مصادر الطاقة) ====== */
 /* لوحة صور الطاقة */
 .formgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 10px; margin: 10px 0; }
@@ -1273,3 +1296,122 @@ footer.site::before {
 .theme-g1c5 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(147, 51, 234, 0.30); }
 .theme-g1c5 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(147, 51, 234, .35); }
 .theme-g1c5 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(147, 51, 234, .45); }
+
+/* ===== الرابع العلمي — الفصل الأول: معلمات رئيسة في الفيزياء — نيلي/أخضر زمردي (قياس ودقّة) ===== */
+.theme-g4c1 {
+  --violet: #4f46e5;
+  --violet-deep: #4338ca;
+  --blue: #059669;
+  --shadow: 0 10px 30px rgba(79, 70, 229, 0.10);
+  --shadow-lift: 0 16px 40px rgba(79, 70, 229, 0.18);
+}
+.theme-g4c1::before { background: radial-gradient(circle, #4f46e5, transparent 70%); }
+.theme-g4c1::after { background: radial-gradient(circle, #059669, transparent 70%); }
+.theme-g4c1 .hero::before { content: "📏"; }
+.theme-g4c1 .path::before { border-inline-start-color: #c7d2fe; }
+.theme-g4c1 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #c7d2fe; }
+.theme-g4c1 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(79, 70, 229, 0.30); }
+.theme-g4c1 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(79, 70, 229, .35); }
+.theme-g4c1 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(79, 70, 229, .45); }
+
+/* ===== الرابع العلمي — الفصل الثاني: الخصائص الميكانيكية للمادة — كهرماني/بني (معدن ومرونة) ===== */
+.theme-g4c2 {
+  --violet: #b45309;
+  --violet-deep: #92400e;
+  --blue: #57534e;
+  --shadow: 0 10px 30px rgba(180, 83, 9, 0.10);
+  --shadow-lift: 0 16px 40px rgba(180, 83, 9, 0.18);
+}
+.theme-g4c2::before { background: radial-gradient(circle, #b45309, transparent 70%); }
+.theme-g4c2::after { background: radial-gradient(circle, #57534e, transparent 70%); }
+.theme-g4c2 .hero::before { content: "🌀"; }
+.theme-g4c2 .path::before { border-inline-start-color: #fde3b8; }
+.theme-g4c2 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #fde3b8; }
+.theme-g4c2 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(180, 83, 9, 0.30); }
+.theme-g4c2 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(180, 83, 9, .35); }
+.theme-g4c2 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(180, 83, 9, .45); }
+
+/* ===== الرابع العلمي — الفصل الثالث: الموائع الساكنة — سماوي/كحلي (ماء وضغط) ===== */
+.theme-g4c3 {
+  --violet: #0891b2;
+  --violet-deep: #0e7490;
+  --blue: #1e3a8a;
+  --shadow: 0 10px 30px rgba(8, 145, 178, 0.10);
+  --shadow-lift: 0 16px 40px rgba(8, 145, 178, 0.18);
+}
+.theme-g4c3::before { background: radial-gradient(circle, #0891b2, transparent 70%); }
+.theme-g4c3::after { background: radial-gradient(circle, #1e3a8a, transparent 70%); }
+.theme-g4c3 .hero::before { content: "💧"; }
+.theme-g4c3 .path::before { border-inline-start-color: #cffafe; }
+.theme-g4c3 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #cffafe; }
+.theme-g4c3 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(8, 145, 178, 0.30); }
+.theme-g4c3 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(8, 145, 178, .35); }
+.theme-g4c3 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(8, 145, 178, .45); }
+
+/* ===== الرابع العلمي — الفصل الخامس: الضوء — ذهبي/كهرماني (شمس وإضاءة) ===== */
+.theme-g4c5 {
+  --violet: #ca8a04;
+  --violet-deep: #a16207;
+  --blue: #7c3aed;
+  --shadow: 0 10px 30px rgba(202, 138, 4, 0.10);
+  --shadow-lift: 0 16px 40px rgba(202, 138, 4, 0.18);
+}
+.theme-g4c5::before { background: radial-gradient(circle, #ca8a04, transparent 70%); }
+.theme-g4c5::after { background: radial-gradient(circle, #7c3aed, transparent 70%); }
+.theme-g4c5 .hero::before { content: "☀️"; }
+.theme-g4c5 .path::before { border-inline-start-color: #fef08a; }
+.theme-g4c5 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #fef08a; }
+.theme-g4c5 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(202, 138, 4, 0.30); }
+.theme-g4c5 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(202, 138, 4, .35); }
+.theme-g4c5 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(202, 138, 4, .45); }
+
+/* ===== الرابع العلمي — الفصل السادس: انعكاس وانكسار الضوء — بنفسجي/فيروزي (منشور وانكسار) ===== */
+.theme-g4c6 {
+  --violet: #7c3aed;
+  --violet-deep: #6d28d9;
+  --blue: #0d9488;
+  --shadow: 0 10px 30px rgba(124, 58, 237, 0.10);
+  --shadow-lift: 0 16px 40px rgba(124, 58, 237, 0.18);
+}
+.theme-g4c6::before { background: radial-gradient(circle, #7c3aed, transparent 70%); }
+.theme-g4c6::after { background: radial-gradient(circle, #0d9488, transparent 70%); }
+.theme-g4c6 .hero::before { content: "💎"; }
+.theme-g4c6 .path::before { border-inline-start-color: #ede9fe; }
+.theme-g4c6 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #ede9fe; }
+.theme-g4c6 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(124, 58, 237, 0.30); }
+.theme-g4c6 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(124, 58, 237, .35); }
+.theme-g4c6 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(124, 58, 237, .45); }
+
+/* ===== الرابع العلمي — الفصل السابع: المرايا — تيل/كحلي (زجاج وانعكاس) ===== */
+.theme-g4c7 {
+  --violet: #0d9488;
+  --violet-deep: #0f766e;
+  --blue: #1e3a8a;
+  --shadow: 0 10px 30px rgba(13, 148, 136, 0.10);
+  --shadow-lift: 0 16px 40px rgba(13, 148, 136, 0.18);
+}
+.theme-g4c7::before { background: radial-gradient(circle, #0d9488, transparent 70%); }
+.theme-g4c7::after { background: radial-gradient(circle, #1e3a8a, transparent 70%); }
+.theme-g4c7 .hero::before { content: "🪞"; }
+.theme-g4c7 .path::before { border-inline-start-color: #ccfbf1; }
+.theme-g4c7 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #ccfbf1; }
+.theme-g4c7 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(13, 148, 136, 0.30); }
+.theme-g4c7 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(13, 148, 136, .35); }
+.theme-g4c7 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(13, 148, 136, .45); }
+
+/* ===== الرابع العلمي — الفصل التاسع: الكهرباء الساكنة — أحمر/كهرماني (شحنة وشرارة) ===== */
+.theme-g4c9 {
+  --violet: #dc2626;
+  --violet-deep: #b91c1c;
+  --blue: #b45309;
+  --shadow: 0 10px 30px rgba(220, 38, 38, 0.10);
+  --shadow-lift: 0 16px 40px rgba(220, 38, 38, 0.18);
+}
+.theme-g4c9::before { background: radial-gradient(circle, #dc2626, transparent 70%); }
+.theme-g4c9::after { background: radial-gradient(circle, #b45309, transparent 70%); }
+.theme-g4c9 .hero::before { content: "⚡"; }
+.theme-g4c9 .path::before { border-inline-start-color: #fecaca; }
+.theme-g4c9 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #fecaca; }
+.theme-g4c9 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(220, 38, 38, 0.30); }
+.theme-g4c9 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(220, 38, 38, .35); }
+.theme-g4c9 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(220, 38, 38, .45); }

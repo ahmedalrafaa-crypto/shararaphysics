@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: مبدأ هايجنز — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c5">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الضوء</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>🌊 الدرس 3: مبدأ هايجنز</h1>
+    <p>كيف تتحرك جبهة موجة ضوئية مستقيمة عبر الفضاء؟ العالم هايجنز أعطانا طريقة بصرية بسيطة لتخيّل ذلك: كل نقطة على الموجة هي بحدّ ذاتها مصدر جديد لموجات صغيرة.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🏖️</span>
+    <span>راقب موجات البحر القادمة من بعيد نحو الشاطئ وهي تمرّ من فتحات بحاجز صخري: كل فتحة تتصرف وكأنها مصدر جديد ينشر موجات دائرية خاصة به، حتى لو كانت الموجة الأصلية قادمة كخط مستقيم. هذا بالضبط ما وصفه هايجنز رياضياً لموجات الضوء.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📐</span> نص مبدأ هايجنز</div>
+  <div class="lawbox">
+    مبدأ هايجنز (Huygens' Principle)
+    كل نقطة من نقاط جبهة الموجة المفترضة تُعدّ مصدراً نقطياً لتوليد موجات ثانوية كروية تسمى المويجات، والتي تنتشر بعيداً عن المصدر بسرعة معينة عن الموجات في ذلك الوسط. وبعد انقضاء بعض الوقت يكون الموضع الجديد لجبهة الموجة هو السطح المماس لجبهات الموجات
+  </div>
+
+  <div class="card">
+    <p>لنتأمل موجة مستوية تتحرك عبر الفضاء الخارجي الحر عند الزمن (t=0)، جبهة الموجة موضحة بواسطة المستوى AA'. على وفق مبدأ هايجنز الافتراضي كل نقطة على جبهة الموجة تعدّ مصدراً نقطياً، وبالطريقة نفسها يظهر بناء نظرية هايجنز الافتراضي لموجة كروية.</p>
+  </div>
+
+  <div class="notebox">
+    <b>🌊 مثال تطبيقي:</b> يظهر فيه مبدأ هايجنز موجات مستوية قادمة من بعيد نحو الشاطئ مارة من فتحات في الجدار الحاجز، بهيئة موجات دائرية ذات بعدين منتشرة نحو الخارج باتجاه الساحل — تماماً مثل حركة سفينة رست بعيداً عن الشاطئ ورأيت موجاتها تتوسّع دائرياً منها كمصدر جديد.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> ما الفائدة العملية من مبدأ هايجنز؟</summary>
+    <div class="ans">يعطينا مبدأ هايجنز طريقة هندسية بصرية لتوقّع كيف ستتحرك جبهة موجة ضوئية (سواء مستوية أو كروية) عبر الزمن والمسافة، ببساطة عن طريق اعتبار كل نقطة عليها مصدراً لموجات ثانوية صغيرة ثم رسم السطح المماس لها. هذا يُستعمل لاحقاً لتفسير ظواهر مثل الانعكاس والانكسار هندسياً دون الحاجة لمعادلات موجية معقدة.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz3"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson2.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson4.html">الدرس التالي: قوة الإضاءة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz3", [
+  { q: "مبدأ هايجنز ينص على أن كل نقطة من نقاط جبهة الموجة:",
+    opts: ["تبقى ثابتة لا تتحرك", "تُعدّ مصدراً نقطياً لموجات ثانوية كروية (مويجات)", "تُلغي الموجة الأصلية", "لا علاقة لها بحركة الموجة"], a: 1,
+    why: "كل نقطة على جبهة الموجة، وفق هايجنز، تصبح مصدراً لمويجات كروية ثانوية تنتشر عنها." },
+  { q: "الموضع الجديد لجبهة الموجة بعد وقت معيّن، وفق مبدأ هايجنز، يُحدَّد بـ:",
+    opts: ["أقرب نقطة من المويجات", "السطح المماس لجبهات المويجات الثانوية", "منتصف المسافة بين المويجات فقط", "لا يمكن تحديده"], a: 1,
+    why: "الموضع الجديد لجبهة الموجة هو السطح المماس لجميع جبهات المويجات الثانوية الناتجة." },
+  { q: "مبدأ هايجنز يساعد لاحقاً في تفسير:",
+    opts: ["قانون هوك للمرونة", "ظواهر الانعكاس والانكسار هندسياً", "معادلة برنولي للموائع", "قانون أوم للتيار الكهربائي"], a: 1,
+    why: "يُستعمل مبدأ هايجنز كأداة هندسية بصرية لتفسير سلوك الموجات الضوئية عند الانعكاس والانكسار." }
+], { onDone: function (stars) { Phy.setLesson("g4c5", "3", { stars: stars }); } });
+</script>
+</body>
+</html>

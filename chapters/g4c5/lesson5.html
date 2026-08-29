@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: شدة الاستضاءة — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c5">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الضوء</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>📖 الدرس 5: شدة الاستضاءة</h1>
+    <p>لماذا يصعب القراءة في غرفة مظلمة رغم وجود شمعة واحدة؟ نحتاج التفريق بين "قوة" المصدر نفسه و"شدة" ما يصل من ضوئه فعلياً إلى السطح الذي ننظر إليه.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">📕</span>
+    <span>يصعب رؤية الأجسام من حولنا في غرفة مظلمة، ولكن عند وجود الشمعة المتقدمة يمكّننا من رؤيتها من انتشار سيل ضوئي من مصدرها (الشمعة) حيث ينعكس قسماً من السيل الضوئي الساقط على تلك الأجسام إلى العين فيمكننا من رؤية هذه الأجسام.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📏</span> شدة الاستضاءة (Illuminance)</div>
+  <div class="card">
+    <p>فكلما كان السيل الضوئي الساقط على الأجسام المنظورة أكبر كانت رؤيتنا لهذه الأجسام أكثر وضوحاً. أي أن كمية شدة الإضاءة (E) هي التي تميّز اختلاف رؤية الأجسام الذي يسببه السيل الضوئي الساقط عليها وندعوها بشدة الاستضاءة.</p>
+  </div>
+
+  <div class="card">
+    <p>فعندما يكون السيل الضوئي الساقط على السطح منتظماً عندئذٍ تقاس كمية شدة الاستضاءة بالسيل الضوئي الساقط عمودياً على وحدة المساحة من هذا السطح، أي أنّ:</p>
+  </div>
+
+  <div class="lawbox">
+    شدة الاستضاءة
+    <div class="formula">شدة الاستضاءة = السيل الضوئي ÷ المساحة</div>
+    <div class="formula">E = Φ / A</div>
+    حيث E: شدة الاستضاءة وتُقاس بوحدة Lumen/m² وتُسمى اللوكس (Lux) · Φ: السيل الضوئي مقدَّراً بـ(Lm) · A: المساحة مقدَّرة بـ(m²) — تُقاس شدة الاستضاءة E بواسطة جهاز الفوتوميتر (Photometer) واللوكسميتر
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> لماذا يصعب القراءة في غرفة مظلمة رغم وجود مصدر ضوء واحد ضعيف كالشمعة؟</summary>
+    <div class="ans">لأن شدة الاستضاءة (E) على صفحة الكتاب تكون منخفضة جداً — فالسيل الضوئي القليل الصادر عن الشمعة يتوزّع على مساحة كبيرة نسبياً، فتقلّ E=Φ/A. وكلما قلّت شدة الاستضاءة على السطح، قلّ وضوح رؤية التفاصيل الدقيقة عليه (كحروف الكتاب)، بعكس الغرفة المضاءة بمصباح قوي حيث يكون السيل الضوئي أكبر وشدة الاستضاءة أعلى.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz5"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson4.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: قانون التربيع العكسي ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz5", [
+  { q: "شدة الاستضاءة (E) تُعرَّف بأنها:",
+    opts: ["قوة إضاءة المصدر نفسه", "السيل الضوئي الساقط عمودياً على وحدة المساحة من السطح", "لون الضوء الساقط على السطح", "المسافة بين المصدر والسطح فقط"], a: 1,
+    why: "شدة الاستضاءة E = Φ/A، وهي مقياس السيل الضوئي الساقط عمودياً على وحدة المساحة." },
+  { q: "وحدة قياس شدة الاستضاءة هي:",
+    opts: ["الشمعة القياسية (cd)", "اللومن (Lm)", "اللوكس (Lux)", "الواط (Watt)"], a: 2,
+    why: "شدة الاستضاءة E تُقاس بوحدة Lumen/m² وتُسمى اللوكس (Lux)." },
+  { q: "الجهاز المستعمل لقياس شدة الاستضاءة هو:",
+    opts: ["الباروميتر", "الفوتوميتر (أو اللوكسميتر)", "الأميتر", "المانوميتر"], a: 1,
+    why: "تُقاس شدة الاستضاءة E بواسطة جهاز الفوتوميتر (Photometer) أو اللوكسميتر." },
+  { q: "سطح مساحته 2m² سقط عليه سيل ضوئي مقداره 10Lm. ما شدة الاستضاءة عليه؟",
+    opts: ["5 Lux", "20 Lux", "0.2 Lux", "12 Lux"], a: 0,
+    why: "E = Φ/A = 10/2 = 5 Lux." }
+], { onDone: function (stars) { Phy.setLesson("g4c5", "5", { stars: stars }); } });
+</script>
+</body>
+</html>

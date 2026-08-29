@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: الخصائص الميكانيكية للمادة — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الخصائص الميكانيكية للمادة</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: الخصائص الميكانيكية للمادة</h1>
+    <p>١١ سؤالاً من أسئلة الفصل نفسها في الكتاب المنهجي — اختيار من متعدد ومسائل. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g4c2");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "خاصية المادة التي تجعل النابض يستعيد طوله الأصلي بعد سحبه قليلاً وتركه تُسمى:",
+    opts: ["الهشاشة", "الليونة", "القساوة", "المرونة"], a: 3,
+    why: "المرونة هي القدرة على العودة للطول أو الشكل الأصلي بعد زوال القوة المؤثرة." },
+  { q: "ينطبق قانون هوك على المواد الصلبة في حدود:",
+    opts: ["المتانة", "العجز الهندسي", "المرونة", "إجهاد القص"], a: 2,
+    why: "قانون هوك (F=kΔL) صحيح فقط ضمن حدود مرونة المادة؛ بعدها تبدأ الاستجابة اللاخطية." },
+  { q: "المواد التي لا يمكن زيادة طولها إلا بإجهاد عالٍ، وضمن حدود مرونتها، تُسمى مواد:",
+    opts: ["هشّة", "عالية المرونة (قاسية)", "قابلة للطرق", "غير المرنة"], a: 1,
+    why: "هذا وصف القساوة (Stiffness): تحتاج إجهاداً عالياً لإحداث نفس مقدار المطاوعة، وتمتلك معامل يونك عالياً." },
+  { q: "عندما تؤثر قوة في جسم، فإن الإجهاد الطولي فيه يساوي:",
+    opts: ["التغيّر النسبي في أبعاده", "القوة العمودية المؤثرة لوحدة المساحة", "معامل يونك", "حدّ المرونة"], a: 1,
+    why: "الإجهاد الطولي = المركبة العمودية للقوة المؤثرة ÷ مساحة السطح." },
+  { q: "إجهاد القص العامل على جسم يؤثر في:",
+    opts: ["طوله", "عرضه", "حجمه", "شكله"], a: 3,
+    why: "إجهاد القص ينتج من قوة مماسية للسطح، فيغيّر شكل الجسم دون تغيير حجمه." },
+  { q: "الإجهاد المؤثر في سلك شاقولي معلَّق به ثقل لا يعتمد على:",
+    opts: ["طول السلك", "قطر السلك", "كتلة الثقل", "تعجيل الجاذبية"], a: 0,
+    why: "الإجهاد = mg/A، فهو يعتمد على قطر السلك (عبر المساحة A) وكتلة الثقل وg، لكنه لا يعتمد على طول السلك." },
+  { q: "سلكان X,Y من نفس المادة: طول X نصف طول Y، وقطر X ضعف قطر Y. إذا استطالا بالمقدار نفسه لنفس القوة، فإن القوة على X تساوي:",
+    opts: ["نصف القوة على Y", "ضعف القوة على Y", "أربعة أمثال القوة على Y", "ثمانية أمثال القوة على Y"], a: 3,
+    why: "قطر مضاعف ⟹ مساحة مقطع ×4، وطول نصف ⟹ نفس ΔL يحتاج قوة ×2 إضافية (F=YAΔL/L). الناتج الكلي: 4×2 = 8 أمثال." },
+  { q: "الزيادة الحاصلة في طول الجسم أو شكله خارج حدود المرونة تُسمى:",
+    opts: ["تشوّهاً مؤقتاً", "تشوّهاً دائمياً", "تشوّهاً يتناسب طردياً دائماً مع القوة", "لا علاقة له بالقوة المؤثرة"], a: 1,
+    why: "خارج حدود المرونة يحدث تشوّه دائمي (بلاستيكي)، ولا يعود الجسم لوضعه الأصلي بعد زوال القوة." },
+  { q: "عندما تؤثر على جسم قوتا سحب متساويتان في المقدار ومتعاكستان في الاتجاه، وعلى خط فعل واحد، يقال إن الجسم واقع تحت تأثير:",
+    opts: ["إجهاد شد", "إجهاد كبس", "المطاوعة", "إجهاد قص"], a: 0,
+    why: "قوتا شدّ متعاكستان على خط واحد تسحبان الجسم من طرفيه، وهذا تعريف إجهاد الشد بالضبط." },
+  { q: "أثّر إجهاد توتري مقداره 20×10⁶ N/m² في سلك معدني مساحة مقطعه العرضي 1.5mm². ما القوة المؤثرة فيه؟",
+    opts: ["30N", "13.3N", "3N", "300N"], a: 0,
+    why: "F = الإجهاد × A = 20×10⁶ × 1.5×10⁻⁶ = 30N." },
+  { q: "ساق طوله 0.4m قُصر بمقدار 0.05m نتيجة ضغط. ما مقدار المطاوعة النسبية له؟",
+    opts: ["0.8", "8", "0.125", "1.25"], a: 2,
+    why: "المطاوعة الطولية = ΔL/L₀ = 0.05/0.4 = 0.125." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g4c2", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

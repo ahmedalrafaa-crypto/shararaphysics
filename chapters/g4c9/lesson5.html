@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: الفيض الكهربائي — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c9">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الكهرباء الساكنة</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>🌀 الدرس 5: الفيض الكهربائي</h1>
+    <p>تخيّل خطوط المجال الكهربائي كأمطار غزيرة تخترق سطحاً معيّناً — كلما زادت كثافة "المطر" (خطوط المجال) وكبرت مساحة السطح، زاد مقدار ما يخترقه. هذا بالضبط معنى الفيض الكهربائي.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🌀</span> تعريف الفيض الكهربائي</div>
+  <div class="card">
+    <p>يتوقف المجال الكهربائي في منطقة معينة على كثافة خطوط القوة الكهربائية المارة من تلك المنطقة، ولذلك تعد كثافة خطوط القوة الكهربائية مقياساً للمجال الكهربائي. إن عدد خطوط القوة الكهربائية التي تقطع السطح عمودياً يُدعى بالفيض الكهربائي ويُرمز له بالرمز الاغريقي (Φ).</p>
+    <p style="margin-top:8px">ونجد أن مقدار الفيض الكهربائي يزداد بزيادة عدد خطوط القوة الكهربائية التي تخترق السطح (A) عمودياً، وكذلك بزيادة مقدار مساحة السطح المخترق.</p>
+  </div>
+
+  <div class="lawbox">
+    الفيض الكهربائي
+    <div class="formula">الفيض الكهربائي = المجال الكهربائي العمودي × مساحة السطح المخترق</div>
+    <div class="formula">Φ = E⊥ A</div>
+  </div>
+
+  <div class="notebox">
+    <b>📐 ملاحظة مهمة:</b> إذا كان السطح المخترق غير عمودي على اتجاه المجال الكهربائي، يقلّ مقدار الفيض الكهربائي. وإذا كان السطح يوازي اتجاه المجال الكهربائي تماماً، فإن مقدار الفيض الكهربائي يساوي صفراً — لأن أياً من خطوط المجال لا "يخترق" السطح فعلياً في هذه الحالة.
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول ١</div>
+  <div class="example">
+    <div class="exq">احسب مقدار الفيض الكهربائي خلال كرة موصلة مشحونة ومعزولة قطرها متر واحد، وعلى سطحها شحنة مقدارها +1μC.</div>
+    <div class="givens">المعطيات: q=1μC=10⁻⁶C — r=0.5m (نصف القطر)</div>
+    <div class="step"><b>الخطوة ١: نحسب المجال الكهربائي عند سطح الكرة:</b>
+      <div class="math">E = Kq/r² = 9×10⁹×10⁻⁶/1² = 9×10³ N/C</div></div>
+    <div class="step"><b>الخطوة ٢: نحسب الفيض عبر مساحة سطح الكرة الكاملة (A=4πr²):</b>
+      <div class="math">Φ = E×4πr² = 9×10³ × 4×3.14×1² </div></div>
+    <div class="step"><b>النتيجة:</b>
+      <div class="math">Φ = 1.13×10⁵ N.m²/C</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول ٢</div>
+  <div class="example">
+    <div class="exq">شحنة كهربائية مقدارها +2×10⁻⁶C وضعت في مجال كهربائي منتظم فتأثرت بقوة مقدارها 8×10⁻²N. ما مقدار المجال الكهربائي؟</div>
+    <div class="step"><b>الحل:</b>
+      <div class="math">E = F/q' = (8×10⁻²)/(2×10⁻⁶) = 4×10⁴ N/C</div></div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> متى يكون الفيض الكهربائي خلال سطح ما يساوي صفراً، رغم وجود مجال كهربائي حقيقي في تلك المنطقة؟</summary>
+    <div class="ans">عندما يكون السطح المخترق موازياً تماماً لاتجاه خطوط المجال الكهربائي (بدل أن يكون عمودياً عليها). في هذه الحالة، خطوط المجال "تنزلق" على طول السطح دون أن تخترقه فعلياً، فلا يُحسب أي فيض عبره رغم وجود مجال كهربائي فعلي في تلك المنطقة من الفضاء.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz5"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson4.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: الجهد الكهربائي وفرق الجهد ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz5", [
+  { q: "الفيض الكهربائي (Φ) يُعرَّف بأنه:",
+    opts: ["عدد خطوط القوة الكهربائية التي تقطع سطحاً معيناً عمودياً", "مقدار الشحنة الكهربائية فقط", "المسافة بين شحنتين", "كمية قياسية لا علاقة لها بالمجال"], a: 0,
+    why: "الفيض الكهربائي هو عدد خطوط القوة الكهربائية المخترقة لسطح ما بصورة عمودية." },
+  { q: "الفيض الكهربائي يُحسب من العلاقة:",
+    opts: ["Φ = E/A", "Φ = E⊥ × A", "Φ = E + A", "Φ = A/E⊥"], a: 1,
+    why: "Φ = E⊥A، حيث E⊥ المجال الكهربائي العمودي على السطح و A مساحة السطح." },
+  { q: "إذا كان السطح المخترق موازياً تماماً لخطوط المجال الكهربائي، فإن الفيض الكهربائي خلاله:",
+    opts: ["أكبر ما يمكن", "يساوي صفراً", "يبقى ثابتاً بغض النظر عن الاتجاه", "لا نهائي"], a: 1,
+    why: "عندما يوازي السطح خطوط المجال (بدل أن يكون عمودياً عليها)، لا يُخترق السطح فعلياً، فالفيض = صفر." },
+  { q: "شحنة 4×10⁻⁶C في مجال كهربائي منتظم تأثرت بقوة 2×10⁻¹N. مقدار المجال الكهربائي:",
+    opts: ["5×10⁴ N/C", "8×10⁻⁷ N/C", "2×10⁴ N/C", "0.5×10⁴ N/C"], a: 0,
+    why: "E = F/q' = (2×10⁻¹)/(4×10⁻⁶) = 0.2/0.000004 = 5×10⁴ N/C." }
+], { onDone: function (stars) { Phy.setLesson("g4c9", "5", { stars: stars }); } });
+</script>
+</body>
+</html>

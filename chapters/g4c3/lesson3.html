@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: مبدأ باسكال — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الموائع الساكنة</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>🚗 الدرس 3: مبدأ باسكال</h1>
+    <p>كيف يرفع عامل واحد سيارة كاملة بيده في محطة الغسيل؟ السرّ ليس بقوة العامل، بل بمبدأ فيزيائي بسيط يحوّل ضغطاً صغيراً إلى قوة رفع هائلة.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔧</span>
+    <span>كرامل توقيف عجلات السيارات والمطارق والرافعات الزيتية — كلها أجهزة تعمل بضغط الزيت، وأساسها جميعاً حقيقة واحدة اكتشفها العالم باسكال قبل قرون.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔵</span> مبدأ باسكال (Pascal's Principle)</div>
+  <div class="card">
+    <p>لعلّك لاحظت أن السوائل المحصورة عندما يُسلَّط عليه ضغط خارجي، فإن هذا الضغط ينتقل بالتساوي لكل أجزاء السائل وجدران الإناء الذي يحويه. وهذا ما يُسمى بمبدأ باسكال، وهو من المبادئ المهمة في ميكانيك الموائع.</p>
+  </div>
+
+  <div class="notebox">
+    <b>🚙 استعمالات عملية:</b> تلعب هذه الحقيقة دوراً أساساً في عمل الكثير من الأجهزة التي تعمل بضغط الزيت، كفرامل توقيف عجلات السيارات والمكابس والمطارق والرافعات الزيتية.
+  </div>
+
+  <div class="section-title"><span class="ico">🚗</span> الرافعة الزيتية</div>
+  <div class="card">
+    <p>يوضح مثال الرافعة الزيتية أساس عمل الرافعة الزيتية المستعملة في محطات الغسل والتشحيم، علماً بأن الزيت لا انضغاطية قليلة جداً (فهي تتألف من مكبسين واسطوانتين مختلفتين في مساحة المقطع متصلتين بأنبوب مملوءتين بالزيت).</p>
+    <p style="margin-top:8px">عندما تؤثر قوة مقدارها F₁ في المكبس الصغير الذي مقطعه A₁، فالضغط المسلط على المكبس الصغير هو P₁=F₁/A₁، وهذا الضغط ينتقل بالتساوي إلى جميع أجزاء السائل المحصور، أي منها أن P₁=P₂:</p>
+  </div>
+
+  <div class="lawbox">
+    مبدأ باسكال للرافعة الزيتية
+    <div class="formula">F₁ / A₁ = F₂ / A₂</div>
+    <div class="formula">F₂ = (A₂ / A₁) × F₁</div>
+    وهذا يعني أن مقدار القوة تتحكم بها النسبة بين مساحتي المكبسين A₂/A₁ — فكلما ازدادت هذه النسبة ازدادت القوة الرافعة في المكبس الكبير
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">احسب القوة اللازمة لرفع سيارة كتلتها 3000kg باستعمال الرافعة الزيتية المستعملة في محطات الغسل والتشحيم، علماً أن مساحة مقطع الاسطوانة الصغيرة 15cm² ومساحة مقطع الاسطوانة الكبيرة 2000cm². (g=10m/s²)</div>
+    <div class="givens">المعطيات: m=3000kg — A₁=15cm² — A₂=2000cm² — g=10m/s²</div>
+    <div class="step"><b>الخطوة ١:</b> وزن السيارة = القوة F₂ المطلوب توليدها بالمكبس الكبير:
+      <div class="math">F₂ = mg = 3000×10 = 30000N</div></div>
+    <div class="step"><b>الخطوة ٢:</b> تطبيق مبدأ باسكال:
+      <div class="math">F₁/A₁ = F₂/A₂ ⟹ F₁ = F₂ × A₁/A₂</div></div>
+    <div class="step"><b>النتيجة:</b>
+      <div class="math">F₁ = 30000 × 15/2000 = 225N</div>
+      💡 بقوة 225N فقط (وزن طفل تقريباً) استطعنا توليد قوة 30000N ترفع سيارة كاملة! هذا هو "التضخيم الهيدروليكي".</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> لماذا يجب ألا يتجمد الزيت المستعمل في المكابس والرافعات الزيتية ولا يصبح لزجاً جداً بدرجات الحرارة الواطئة؟</summary>
+    <div class="ans">لأن مبدأ باسكال يعتمد على انتقال الضغط بالتساوي عبر السائل المحصور بسهولة وفورية. لو تجمّد الزيت أو أصبح لزجاً جداً، لن ينتقل الضغط بكفاءة عبره، فتفشل الرافعة أو الفرامل في أداء وظيفتها بالسرعة والدقة المطلوبتين. كما يجب ألا يتبخر منه شيء وغير سام وليس سريع الاشتعال لأسباب السلامة.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz3"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson2.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson4.html">الدرس التالي: مبدأ أرخميدس ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz3", [
+  { q: "مبدأ باسكال ينص على أن الضغط المسلط على سائل محصور:",
+    opts: ["ينتقل بالتساوي لكل أجزاء السائل وجدران الإناء", "يبقى محصوراً بمكان تأثيره فقط", "يتلاشى تدريجياً مع البعد", "لا ينتقل إلا للأسفل"], a: 0,
+    why: "مبدأ باسكال: الضغط في سائل محصور ينتقل بالتساوي لكل أجزاء السائل وجدران الإناء الذي يحويه." },
+  { q: "في الرافعة الزيتية، العلاقة بين قوتي المكبسين ومساحتيهما هي:",
+    opts: ["F₁ × A₁ = F₂ × A₂", "F₁ / A₁ = F₂ / A₂", "F₁ + A₁ = F₂ + A₂", "F₁ − A₁ = F₂ − A₂"], a: 1,
+    why: "بما أن الضغط ينتقل بالتساوي (P₁=P₂)، فإن F₁/A₁ = F₂/A₂." },
+  { q: "لتوليد قوة رفع أكبر في المكبس الكبير للرافعة الزيتية، يجب أن تكون نسبة مساحتي المكبسين (A₂/A₁):",
+    opts: ["أصغر ما يمكن", "أكبر ما يمكن", "تساوي 1 دائماً", "لا علاقة لها بمقدار القوة"], a: 1,
+    why: "F₂ = (A₂/A₁) × F₁، فكلما ازدادت النسبة A₂/A₁ ازدادت القوة الرافعة في المكبس الكبير." },
+  { q: "رافعة زيتية مساحة مكبسها الصغير 10cm² والكبير 1000cm². ما القوة اللازمة على المكبس الصغير لرفع وزن 5000N؟",
+    opts: ["50N", "500N", "5N", "5000N"], a: 0,
+    why: "F₁ = F₂ × A₁/A₂ = 5000 × 10/1000 = 50N." },
+  { q: "من الأجهزة التي تعمل وفق مبدأ باسكال:",
+    opts: ["الباروميتر", "فرامل السيارات الهيدروليكية", "معادلة برنولي", "الأنابيب الشعرية"], a: 1,
+    why: "فرامل توقيف عجلات السيارات تعمل بضغط الزيت المحصور وفق مبدأ باسكال، مثلها مثل المكابس والرافعات الزيتية." }
+], { onDone: function (stars) { Phy.setLesson("g4c3", "3", { stars: stars }); } });
+</script>
+</body>
+</html>

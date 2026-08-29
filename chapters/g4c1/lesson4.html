@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: الرسوم البيانية — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c1">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">معلمات رئيسة في الفيزياء</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>📈 الدرس 4: الرسوم البيانية</h1>
+    <p>جدول أرقام صعب أن "تشوف" منه العلاقة بين كميّتين بنظرة واحدة. لكن ارسم نفس الأرقام كخط بياني، وفجأة تصير العلاقة واضحة أمام عينيك — بل تقدر تستخرج منها معادلة رياضية كاملة!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚗</span>
+    <span>سيارة تسير بانطلاق ثابت. عندك جدول أرقام يوضّح المسافة كل ربع ساعة — أرقام باردة. لكن لو رسمت هذه الأرقام كخط بياني مستقيم، فميل هذا الخط نفسه هو سرعة السيارة! هذا هو سرّ قوة الرسم البياني: يحوّل جدولاً من الأرقام إلى صورة تكشف القانون الفيزيائي المختبئ خلفها.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🗺️</span> خطوات رسم الخط البياني</div>
+  <div class="card">
+    <p>تُعدّ الرسوم البيانية من الطرائق المفضّلة للحصول على المتوسط الحسابي لعدد من القراءات بصورة جيدة. ولتوضيح العلاقة بين متغيّرين تجريبياً يُفضّل رسم تخطيط بياني، ويمكن استعماله في كثير من الحالات لاستنباط علاقة رياضية تربط هذين المتغيّرين، إضافة إلى تحديد قيم الثوابت من الرسم البياني.</p>
+  </div>
+
+  <div class="card">
+    <p><b>لرسم تخطيط بيانياً يتطلّب:</b></p>
+    <p style="margin-top:8px">1. تحديد نقطة الأصل في موقع ملائم على الورقة البيانية (0,0).</p>
+    <p style="margin-top:6px">2. رسم المحورين المتعامدين من نقطة الأصل: المحور الأفقي يُمثَّل بـ x (x-axis)، والمحور العمودي عليه يُمثَّل بـ y (y-axis).</p>
+    <p style="margin-top:6px">3. يتم اختيار مقياس رسم ملائم لكل احداثيين على حدة، وحسب القراءات التي تم الحصول عليها، لغرض الاستفادة من الورقة البيانية المتوفرة لديك.</p>
+    <p style="margin-top:6px">4. يفضَّل استعمال الأرقام الزوجية لتدريجات مقياس الرسم.</p>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 تطبيق: سيارة بانطلاق ثابت</h3>
+    <p class="fig-sub">سيارة تسير بانطلاق ثابت وتقطع المسافات المذكورة بالأزمان المقابلة لها. المستقيم يمرّ من نقطة الأصل — إذن المسافة تتغيّر طردياً مع الزمن.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 480 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="رسم بياني للمسافة مقابل الزمن لسيارة بانطلاق ثابت">
+        <line x1="60" y1="280" x2="440" y2="280" stroke="#334155" stroke-width="2"/>
+        <line x1="60" y1="280" x2="60" y2="30" stroke="#334155" stroke-width="2"/>
+        <polygon points="440,280 430,275 430,285" fill="#334155"/>
+        <polygon points="60,30 55,40 65,40" fill="#334155"/>
+        <text x="448" y="284" font-family="Cairo" font-size="13" fill="#334155">t (h)</text>
+        <text x="38" y="26" font-family="Cairo" font-size="13" fill="#334155">d (km)</text>
+        <g stroke="#e2e8f0" stroke-width="1">
+          <line x1="136" y1="30" x2="136" y2="280"/><line x1="212" y1="30" x2="212" y2="280"/>
+          <line x1="288" y1="30" x2="288" y2="280"/><line x1="364" y1="30" x2="364" y2="280"/>
+          <line x1="60" y1="230" x2="440" y2="230"/><line x1="60" y1="180" x2="440" y2="180"/>
+          <line x1="60" y1="130" x2="440" y2="130"/><line x1="60" y1="80" x2="440" y2="80"/>
+        </g>
+        <text x="136" y="296" text-anchor="middle" font-family="Cairo" font-size="11" fill="#64748b">0.25</text>
+        <text x="212" y="296" text-anchor="middle" font-family="Cairo" font-size="11" fill="#64748b">0.5</text>
+        <text x="288" y="296" text-anchor="middle" font-family="Cairo" font-size="11" fill="#64748b">0.75</text>
+        <text x="364" y="296" text-anchor="middle" font-family="Cairo" font-size="11" fill="#64748b">1</text>
+        <text x="46" y="234" text-anchor="end" font-family="Cairo" font-size="11" fill="#64748b">20</text>
+        <text x="46" y="184" text-anchor="end" font-family="Cairo" font-size="11" fill="#64748b">40</text>
+        <text x="46" y="134" text-anchor="end" font-family="Cairo" font-size="11" fill="#64748b">60</text>
+        <text x="46" y="84" text-anchor="end" font-family="Cairo" font-size="11" fill="#64748b">80</text>
+        <line x1="60" y1="280" x2="364" y2="80" stroke="#0891b2" stroke-width="3"/>
+        <circle cx="212" cy="180" r="5" fill="#e11d48"/>
+        <circle cx="364" cy="80" r="5" fill="#e11d48"/>
+        <text x="220" y="172" font-family="Cairo" font-weight="800" font-size="12" fill="#e11d48">p₁ (0.5, 40)</text>
+        <text x="330" y="72" font-family="Cairo" font-weight="800" font-size="12" fill="#e11d48">p₂ (1, 80)</text>
+        <line x1="212" y1="80" x2="364" y2="80" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 3"/>
+        <line x1="212" y1="80" x2="212" y2="180" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="288" y="72" text-anchor="middle" font-family="Cairo" font-size="11" fill="#b45309">Δt = 0.5h</text>
+        <text x="196" y="132" text-anchor="end" font-family="Cairo" font-size="11" fill="#b45309">Δd = 40km</text>
+      </svg>
+    </div>
+    <p class="fig-cap">النقاط الخمس على استقامة واحدة تمرّ من نقطة الأصل (0,0) — دليل على أن d تتناسب طردياً مع t.</p>
+  </div>
+
+  <div class="lawbox">
+    ميل الخط المستقيم Slope — يمكن الحصول عليه بأخذ نقطتين على المستقيم p₁, p₂
+    <div class="formula">m = Δy / Δx</div>
+    <div class="formula">في مثال السيارة: v = (d₂ − d₁) / (t₂ − t₁)</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">من الرسم البياني أعلاه، احسب مقدار انطلاق السيارة v بوحدة km/h باستعمال النقطتين p₁(0.5, 40) و p₂(1, 80).</div>
+    <div class="givens">المعطيات: p₁ = (t₁=0.5h, d₁=40km) — p₂ = (t₂=1h, d₂=80km)</div>
+    <div class="step"><b>تطبيق قانون الميل:</b>
+      <div class="math">v = (d₂ − d₁) / (t₂ − t₁)</div></div>
+    <div class="step"><b>التعويض:</b>
+      <div class="math">v = (80 − 40) / (1 − 0.5) = 40 / 0.5</div></div>
+    <div class="step"><b>النتيجة:</b>
+      <div class="math">v = 80 km/h</div>
+      💡 لاحظ: ميل الخط المستقيم في رسم (المسافة – الزمن) يعطينا مباشرة قيمة الانطلاق — بلا حاجة لأي حساب إضافي.</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> ماذا يخبرنا مرور الخط البياني من نقطة الأصل (0,0)؟</summary>
+    <div class="ans">يخبرنا أن الكميتين تتغيّران تغيّراً طردياً (تناسباً طردياً) — أي حين تكون إحداهما صفراً تكون الأخرى صفراً أيضاً، وليس بينهما أي مقدار ثابت مُضاف. هذا سيصبح أساس درس التغيّر الطردي والعكسي القادم.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz4"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson3.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: التغيّر الطردي والعكسي ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz4", [
+  { q: "أول خطوة في رسم أي تخطيط بياني هي:",
+    opts: ["اختيار مقياس الرسم", "تحديد نقطة الأصل (0,0)", "رسم المستقيم", "حساب الميل"], a: 1,
+    why: "تُحدَّد نقطة الأصل أولاً في موقع ملائم على الورقة البيانية، ثم تُرسم المحاور المتعامدة منها." },
+  { q: "المحور الأفقي في الرسم البياني يُرمز له عادة بـ:",
+    opts: ["y-axis", "x-axis", "z-axis", "لا رمز له"], a: 1,
+    why: "المحور الأفقي يمثَّل بـ x (x-axis)، والمحور العمودي عليه يمثَّل بـ y (y-axis)." },
+  { q: "ميل الخط المستقيم (Slope) يُحسب من العلاقة:",
+    opts: ["m = Δx / Δy", "m = Δy / Δx", "m = Δy × Δx", "m = Δy + Δx"], a: 1,
+    why: "الميل m = Δy/Δx، أي التغيّر بالمحور الشاقولي مقسوماً على التغيّر بالمحور الأفقي." },
+  { q: "سيارة قطعت المسافة بين نقطتين (t₁=1h, d₁=20km) و(t₂=3h, d₂=100km). ما انطلاقها؟",
+    opts: ["40 km/h", "80 km/h", "20 km/h", "120 km/h"], a: 0,
+    why: "v = (100-20)/(3-1) = 80/2 = 40 km/h." },
+  { q: "إذا كان الخط البياني مستقيماً ويمرّ من نقطة الأصل، فهذا يدلّ على أن الكميتين:",
+    opts: ["لا علاقة بينهما", "تتغيران تغيّراً طردياً", "تتغيران تغيّراً عكسياً", "ثابتتان لا تتغيران"], a: 1,
+    why: "مرور المستقيم من نقطة الأصل علامة على التناسب الطردي بين الكميتين." }
+], { onDone: function (stars) { Phy.setLesson("g4c1", "4", { stars: stars }); } });
+</script>
+</body>
+</html>

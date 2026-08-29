@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: الضوء — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c5">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الضوء</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: الضوء</h1>
+    <p>١١ سؤالاً من أسئلة الفصل نفسها في الكتاب المنهجي — اختيار من متعدد ومسائل. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g4c5");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "ينتشر الضوء الصادر عن مصدر نقطي في الفراغ:",
+    opts: ["باتجاه واحد فقط", "باتجاهين فقط", "بجميع الاتجاهات", "لا ينتشر إطلاقاً"], a: 2,
+    why: "المصدر النقطي ينشر الضوء بجميع الاتجاهات المحيطة به." },
+  { q: "لمضاعفة شدة الاستضاءة مباشرة فوق سطح منضدة مضيء عليها مصباح بارتفاع 1m من مركزها، يجب جعل المصباح على ارتفاع:",
+    opts: ["0.75m", "0.707m", "0.5m", "0.25m"], a: 1,
+    why: "E α 1/r²، فلمضاعفة E يجب أن يصبح r جديد = r/√2 = 1/√2 ≈ 0.707m." },
+  { q: "تُقاس قوة الإضاءة بوحدة:",
+    opts: ["الشمعة القياسية (candle)", "اللوكس (Lux)", "الواط (watt)", "اللومن (lumen)"], a: 0,
+    why: "قوة الإضاءة I تُقاس بوحدة الشمعة القياسية (cd)." },
+  { q: "تُقاس شدة الاستضاءة بوحدة:",
+    opts: ["الجول (Joule)", "اللومن (lumen)", "اللوكس (Lux)", "الواط (watt)"], a: 2,
+    why: "شدة الاستضاءة E تُقاس بوحدة اللوكس (Lux)." },
+  { q: "كلما ازداد بعد السطح المضاء بواسطة مصدر ضوئي نقطي، فإن شدة الاستضاءة لذلك السطح:",
+    opts: ["تزداد", "تقلّ", "لا تتأثر", "تتضاعف"], a: 1,
+    why: "وفق قانون التربيع العكسي، تقلّ شدة الاستضاءة (E α 1/r²) كلما ازداد البعد عن المصدر." },
+  { q: "مصدر ضوئي نقطي موضوع عند مركز سطح كروي. لو ازداد نصف قطر تكوّر هذا السطح، فإن السيل الضوئي الساقط عليه من المصدر:",
+    opts: ["يتناقص", "لا يتغيّر", "يتزايد", "يصبح صفراً"], a: 1,
+    why: "السيل الضوئي الكلي المنبعث من المصدر ثابت مهما كبر السطح الكروي المحيط به — كل الضوء يمرّ عبره بالضرورة." },
+  { q: "مصباحان قوة إضاءة الأول تسعة أمثال قوة إضاءة الثاني، والمسافة بينهما 1m. أين يجب وضع فوتومتر بينهما لتتساوى شدة الاستضاءة على جانبيه (بعده عن الأول)؟",
+    opts: ["0.25m", "0.5m", "0.9m", "0.75m"], a: 3,
+    why: "9/x² = 1/(1-x)² ⟹ 3(1-x)=x ⟹ x=0.75m." },
+  { q: "مصباح قوة إضاءته 12cd على بعد 1.2m من فوتومتر، ووُضع مصباح آخر على بعد 1.32m من الجهة الثانية فتساوت شدة الاستضاءة على جانبي الفوتومتر. ما قوة إضاءة المصباح الثاني؟",
+    opts: ["10.9cd", "13cd", "14.52cd", "12cd"], a: 2,
+    why: "I₂ = I₁×(r₂/r₁)² = 12×(1.32/1.2)² = 12×1.21 = 14.52cd." },
+  { q: "مصباح مضيء يسلّط عمودياً على صفحة كتاب سيلاً ضوئياً مقداره 100πLm. ما بعد المصباح عن الكتاب إذا كانت شدة إضاءته 4Lux؟",
+    opts: ["2.5m", "5m", "1.25m", "10m"], a: 0,
+    why: "E = Φ/(4πr²) ⟹ 4 = 100π/(4πr²) = 25/r² ⟹ r² = 6.25 ⟹ r = 2.5m." },
+  { q: "في ليلة مقمرة (بدر)، كانت شدة الاستضاءة 0.6Lux، والمسافة بين الأرض والقمر 3.84×10⁸m. ما قوة إضاءة القمر في تلك الليلة؟",
+    opts: ["8.84×10¹⁶cd", "6×10⁸cd", "0.6×10¹⁶cd", "3.84×10¹⁶cd"], a: 0,
+    why: "I = E×r² = 0.6×(3.84×10⁸)² ≈ 8.84×10¹⁶cd." },
+  { q: "فوتون ضوئي طول موجة إشعاعه 600nm. ما مقدار طاقة هذا الكمّ؟ (h=6.63×10⁻³⁴J.s، c=3×10⁸m/s)",
+    opts: ["3.315×10⁻¹⁹J", "1.989×10⁻²⁵J", "5×10¹⁴J", "3.315×10¹⁹J"], a: 0,
+    why: "E = hc/λ = (6.63×10⁻³⁴×3×10⁸)/(600×10⁻⁹) ≈ 3.315×10⁻¹⁹J." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g4c5", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

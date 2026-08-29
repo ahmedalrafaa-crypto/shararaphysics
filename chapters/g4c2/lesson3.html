@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: معامل يونك — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الخصائص الميكانيكية للمادة</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>💎 الدرس 3: معامل يونك (Young Modulus)</h1>
+    <p>الماس أصلب من الرصاص بمراحل — لكن كيف نقيس هذا الفرق برقم واحد؟ النسبة بين الإجهاد والمطاوعة تعطينا رقماً ثابتاً مميّزاً لكل مادة صلبة: <b>معامل يونك</b>.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">💍</span>
+    <span>لماذا يُستعمل الفولاذ في بناء الجسور بينما لا يُستعمل الرصاص رغم أن كليهما "مادة صلبة"؟ لأن مقاومة كل مادة للتشوّه تحت نفس الإجهاد مختلفة تماماً — وهذا الفرق رقم واحد ثابت لكل مادة، يسمى معامل يونك.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📊</span> تعريف معامل يونك</div>
+  <div class="card">
+    <p>إن النسبة بين الإجهاد والمطاوعة النسبية تدعى <b>معامل المرونة</b> أو <b>معامل يونك</b>، ويُعطى بالعلاقة الآتية:</p>
+  </div>
+
+  <div class="lawbox">
+    معامل يونك
+    <div class="formula">معامل يونك = الاجهاد ÷ المطاوعة النسبية</div>
+    <div class="formula">Y = (F/A) / (ΔL/L₀)</div>
+    حيث F: القوة المسلطة على الجسم · A: مساحة المقطع العرضي · L₀: الطول الأصلي · ΔL: مقدار الزيادة الحاصلة في الطول · يُقاس معامل يونك (Y) بوحدات N/m² (ونسبة الاجهاد/المطاوعة صفة مميّزة للمواد الصلبة)
+  </div>
+
+  <div class="section-title"><span class="ico">📋</span> معامل يونك لمواد مختلفة</div>
+  <div class="tblwrap"><table class="nice">
+    <tr><th>المادة</th><th>معامل يونك N/m²</th></tr>
+    <tr><td>المنيوم</td><td>70×10⁹</td></tr>
+    <tr><td>رصاص</td><td>16×10⁹</td></tr>
+    <tr><td>نحاس</td><td>120×10⁹</td></tr>
+    <tr><td>الماس</td><td>1200×10⁹</td></tr>
+    <tr><td>الذهب</td><td>79×10⁹</td></tr>
+    <tr><td>تنكستن</td><td>360×10⁹</td></tr>
+    <tr><td>فولاذ</td><td>200×10⁹</td></tr>
+    <tr><td>الخرسانة</td><td>(25-30)×10⁹</td></tr>
+    <tr><td>الزجاج</td><td>65×10⁹</td></tr>
+  </table></div>
+
+  <div class="notebox">
+    <b>💎 لهذا الماس أقسى المواد:</b> معامل يونك للماس (1200×10⁹ N/m²) أعلى بكثير من الرصاص (16×10⁹ N/m²) — يعني الماس يحتاج إجهاداً أكبر بكثير ليتشوّه بنفس نسبة تشوّه الرصاص.
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">سلك فولاذي طوله 4m ومساحة مقطعه العرضي 0.05cm²، ما مقدار الزيادة الحاصلة في طوله إذا سُحب بقوة 500N؟ (معامل يونك للفولاذ = 200×10⁹ N/m²)</div>
+    <div class="givens">المعطيات: L₀=4m — A=0.05cm²=0.05×10⁻⁴m² — F=500N — Y=200×10⁹N/m²</div>
+    <div class="step"><b>الخطوة ١:</b> نعيد ترتيب قانون معامل يونك لإيجاد ΔL:
+      <div class="math">Y = (F/A)/(ΔL/L₀) ⟹ ΔL = F·L₀ / (Y·A)</div></div>
+    <div class="step"><b>الخطوة ٢:</b> التعويض:
+      <div class="math">ΔL = (500 × 4) / (200×10⁹ × 0.05×10⁻⁴)</div></div>
+    <div class="step"><b>النتيجة:</b>
+      <div class="math">ΔL = 2×10⁻³m = 2mm</div>
+      💡 لاحظ أهمية توحيد الوحدات (cm²→m²) قبل التعويض — أشيَع مصدر خطأ بمسائل معامل يونك.</div>
+  </div>
+
+  <div class="notebox">
+    <b>🔬 تطبيق عملي — تجربة طلابية:</b> قاست مجموعة طلبة العلاقة بين قوة الشد والاستطالة لسلك (طوله 2m، مساحة مقطعه 1.25×10⁻⁶m²)، وحصلوا على علاقة خطية بين القوة والاستطالة. لإيجاد معامل يونك للسلك من تجربة كهذه: (1) نرسم العلاقة البيانية بين القوة والاستطالة، (2) معامل يونك للسلك يُحسب من ميل الخط المستقيم (F/ΔL) مضروباً بـ(L₀/A) — بالضبط نفس فكرة "ميل الرسم البياني" من الفصل الأول!
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> سلكان من نفس المادة، أحدهما أطول من الآخر. هل يختلف معامل يونك بينهما؟</summary>
+    <div class="ans">لا، معامل يونك صفة مميّزة للمادة نفسها لا تتغير بتغيّر أبعاد الجسم (الطول أو مساحة المقطع). فالسلكان الطويل والقصير من نفس المادة (فولاذ مثلاً) لهما نفس معامل يونك بالضبط، رغم أنهما قد يحتاجان قوى مختلفة لإحداث نفس مقدار الاستطالة النسبية.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz3"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson2.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson4.html">الدرس التالي: خصائص ميكانيكية أخرى ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz3", [
+  { q: "معامل يونك يُعرَّف بأنه:",
+    opts: ["حاصل ضرب الإجهاد والمطاوعة", "النسبة بين الإجهاد والمطاوعة النسبية", "القوة المؤثرة في الجسم", "مقدار الاستطالة فقط"], a: 1,
+    why: "Y = الاجهاد ÷ المطاوعة النسبية = (F/A)/(ΔL/L₀)." },
+  { q: "وفق الجدول، أيّ المواد التالية له أعلى معامل يونك (الأكثر مقاومة للتشوّه)؟",
+    opts: ["الرصاص", "الذهب", "الماس", "الزجاج"], a: 2,
+    why: "معامل يونك للماس (1200×10⁹ N/m²) هو الأعلى بين المواد المذكورة بالجدول." },
+  { q: "سلكان من نفس المادة بأبعاد مختلفة (طول ومساحة مقطع). معامل يونك بينهما:",
+    opts: ["يختلف حسب الطول", "يختلف حسب مساحة المقطع", "متساوٍ لأنه صفة مميّزة للمادة نفسها", "لا يمكن تحديده"], a: 2,
+    why: "معامل يونك خاصية مميّزة للمادة ذاتها ولا يتغيّر بتغيّر أبعاد الجسم." },
+  { q: "سلك طوله 2m ومساحة مقطعه 1×10⁻⁶m² سُحب بقوة 100N فاستطال 1mm. معامل يونك له يساوي:",
+    opts: ["2×10¹¹ N/m²", "5×10¹⁰ N/m²", "1×10⁸ N/m²", "2×10⁸ N/m²"], a: 0,
+    why: "Y = F·L₀/(A·ΔL) = (100×2)/(1×10⁻⁶×0.001) = 200/(10⁻⁹) = 2×10¹¹ N/m²." },
+  { q: "وحدة قياس معامل يونك هي نفس وحدة قياس:",
+    opts: ["القوة (N)", "الطول (m)", "الإجهاد (N/m²)", "المطاوعة (بلا وحدات)"], a: 2,
+    why: "بما أن المطاوعة بلا وحدات، فمعامل يونك = الإجهاد/المطاوعة له نفس وحدة الإجهاد: N/m²." }
+], { onDone: function (stars) { Phy.setLesson("g4c2", "3", { stars: stars }); } });
+</script>
+</body>
+</html>

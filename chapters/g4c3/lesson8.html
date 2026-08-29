@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 8: معادلة الاستمرارية في الموائع — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الموائع الساكنة</a> / الدرس 8</span>
+  </div>
+
+  <div class="hero">
+    <h1>🚿 الدرس 8: معادلة الاستمرارية في الموائع</h1>
+    <p>لماذا يخرج الماء بسرعة أكبر عندما تضيّق فوهة الخرطوم بإصبعك؟ قانون بسيط جداً يحكم هذه الظاهرة، ونستعمله يومياً دون أن ندري.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🧯</span>
+    <span>عند استعمالنا لخراطيم الماء لأغراض الرش وإطفاء الحرائق وغسل السيارات، نلاحظ كلما ضاق مجرى خروج الماء نحصل على سرعة تدفق كبيرة. هذا يعني أن سرعة جريان الماء تزداد كلما ضاقت فوهة خروجه.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔵</span> معادلة الاستمرارية (Continuity Equation)</div>
+  <div class="card">
+    <p>يبين مائعاً مثالياً كثافته ρ يجري خلال أنبوب أفقي مساحة مقطعه غير منتظمة. إذ تبلغ مساحة مقطعه الكبير A₁ ومساحة مقطعه الصغير A₂. وفي حالة الجريان الانسيابي تتحقق معادلة الاستمرارية التي تنص على أن:</p>
+  </div>
+
+  <div class="lawbox">
+    معادلة الاستمرارية
+    معدّل تدفق كمية المائع من أي مقطع داخل الانبوب يبقى ثابتاً
+    <div class="formula">مساحة المقطع الكبير (A₁) × سرعة الجريان (v₁) = مساحة المقطع الصغير (A₂) × سرعة الجريان (v₂)</div>
+    <div class="formula">A₁v₁ = A₂v₂</div>
+  </div>
+
+  <div class="notebox">
+    <b>📌 وهذه العلاقة صحيحة على طول الأنبوبة الأفقية</b>، وهي تشير إلى أن سرعة الانسياب في أي نقطة تتناسب عكسياً مع مساحة المقطع في تلك النقطة. أي أن السرعة تزداد كلما ضاقت أنبوبة الجريان.
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">يجري الماء في أنبوبة أفقية ذات مقطعين، نصف قطر المقطع الكبير 2.5cm بسرعة 2m/s إلى مقطعه الصغير الذي نصف قطره 1.5cm. ما مقدار سرعة جريان الماء في الأنبوبة الضيقة؟</div>
+    <div class="givens">المعطيات: r₁=2.5cm — v₁=2m/s — r₂=1.5cm</div>
+    <div class="step"><b>الخطوة ١:</b> نحسب المساحتين (A=πr²):
+      <div class="math">A₁ = (22/7)×(2.5)² — A₂ = (22/7)×(1.5)²</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نطبّق معادلة الاستمرارية:
+      <div class="math">v₂ = v₁ × A₁/A₂ = 2 × [(22/7)×2.5²] / [(22/7)×1.5²]</div></div>
+    <div class="step"><b>النتيجة:</b>
+      <div class="math">v₂ = 2×100 × (2.5²/1.5²) ≈ 555 cm/s = 5.55 m/s</div>
+      💡 لاحظ: النسبة π(22/7) تُحذف من البسط والمقام — لا حاجة لحسابها أصلاً، يكفي نسبة مربعَي نصفَي القطرين!</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> لماذا تزداد سرعة الماء الخارج من خرطوم عند تضييق فوهته بإصبعك؟</summary>
+    <div class="ans">وفق معادلة الاستمرارية A₁v₁=A₂v₂، فإن معدّل تدفق كمية الماء (حجم الماء بالثانية) يجب أن يبقى ثابتاً على طول الخرطوم. عندما تضيّق الفوهة بإصبعك، تقلّ مساحة المقطع A بشكل كبير، وبما أن الضرب A×v يجب أن يبقى ثابتاً، فإن السرعة v يجب أن تزداد لتعويض نقصان المساحة.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz8"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson7.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson9.html">الدرس التالي: معادلة برنولي ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz8", [
+  { q: "معادلة الاستمرارية للموائع تنص على أن:",
+    opts: ["الضغط ثابت في كل نقاط الأنبوب", "معدّل تدفق كمية المائع من أي مقطع في الأنبوب يبقى ثابتاً", "السرعة ثابتة في كل نقاط الأنبوب مهما اختلفت المساحة", "الكثافة تتغيّر باستمرار"], a: 1,
+    why: "معادلة الاستمرارية: A₁v₁ = A₂v₂ — معدّل تدفق كمية المائع يبقى ثابتاً عبر أي مقطع بالأنبوب." },
+  { q: "وفق معادلة الاستمرارية، كلما ضاقت مساحة مقطع الأنبوب، فإن سرعة جريان المائع:",
+    opts: ["تزداد", "تقلّ", "تبقى ثابتة", "تصبح صفراً"], a: 0,
+    why: "بما أن A×v ثابت، فنقصان A يستلزم زيادة v (تناسب عكسي بين السرعة ومساحة المقطع)." },
+  { q: "أنبوب مساحة مقطعه الكبير A₁=8cm² وسرعة الماء فيه 3m/s. إذا كانت مساحة المقطع الصغير A₂=2cm²، فسرعة الماء فيه:",
+    opts: ["12 m/s", "0.75 m/s", "6 m/s", "24 m/s"], a: 0,
+    why: "A₁v₁ = A₂v₂ ⟹ 8×3 = 2×v₂ ⟹ v₂ = 24/2 = 12 m/s." },
+  { q: "السبب الفيزيائي وراء زيادة سرعة الماء الخارج من خرطوم عند تضييق فوهته:",
+    opts: ["زيادة ضغط اليد فقط", "ثبوت معدّل تدفق كمية المائع رغم نقصان مساحة الفوهة", "تسخين الماء عند التضييق", "لا علاقة فيزيائية، مجرد إحساس"], a: 1,
+    why: "لثبات معدّل التدفق (A×v)، فإن نقصان مساحة الفوهة يعوَّض بزيادة السرعة." }
+], { onDone: function (stars) { Phy.setLesson("g4c3", "8", { stars: stars }); } });
+</script>
+</body>
+</html>

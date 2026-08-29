@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: قانون كولوم — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c9">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الكهرباء الساكنة</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔬 الدرس 2: قانون كولوم</h1>
+    <p>ميزان التواء بسيط ابتكره عالم فرنسي أواخر القرن الثامن عشر، أعطانا أول قانون رياضي دقيق يصف القوة بين شحنتين — أساس كل ما سيأتي بهذا الفصل.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">⚖️</span> ميزان الالتواء وقانون كولوم</div>
+  <div class="card">
+    <p>تمكّن العالم تشارلز كولوم من صياغة قانون تجريبياً يصف قوة التجاذب والتنافر بين جسمين مشحونين باستعمال ميزان الالتواء الذي ابتكره بنفسه، إذ يحتوي على كرتين مشحونتين. وإن التجاذب أو التنافر يسبب لي خيط التعليق ومقدار الزاوية التي يدور بها الخيط تبيّن مقدار القوة الكهربائية سواء أكانت جاذبة أم تنافراً.</p>
+    <p style="margin-top:8px">وقد أوضحت تجارب كولوم أن القوة الكهربائية المتبادلة (F) بين شحنتين كهربائيتين نقطيتين ساكنتين تتناسب طردياً مع حاصل ضرب الشحنتين وعكسياً مع مربع البعد بينهما.</p>
+  </div>
+
+  <div class="lawbox">
+    نص قانون كولوم
+    تتناسب القوة الكهربائية المتبادلة بين شحنتين نقطيتين تناسباً طردياً مع مقدار كل من الشحنتين وعكسياً مع مربع البعد بينهما
+    <div class="formula">F = K q₁q₂ / r²</div>
+    حيث F: القوة الكهربائية · q₁, q₂: الشحنتان · r: البعد بينهما · K: ثابت التناسب، يعتمد مقداره على نوع الوسط الموضوعة فيه الشحنتين
+  </div>
+
+  <div class="lawbox">
+    ثابت كولوم في الفراغ
+    <div class="formula">K = 9×10⁹ N.m²/C²</div>
+    <div class="formula">K = 1/4πε₀</div>
+    حيث ε₀: السماحية الكهربائية للفراغ أو الهواء = 8.85×10⁻¹² C²/N.m²
+  </div>
+
+  <div class="notebox">
+    <b>📌 ملاحظة:</b> إذا كان الوسط مادة عازلة غير الهواء (سماحيتها ε)، فإن القوة الكهربائية المتبادلة بين الشحنتين ستكون أقل مقداراً — لأن قيمة K تعتمد على نوع الوسط.
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول ١</div>
+  <div class="example">
+    <div class="exq">وُضعت شحنة نقطية كهربائية مقدارها +2μC على بعد 90cm من شحنة نقطية موجبة أخرى مقدارها +5μC. احسب القوة المتبادلة بين الشحنتين النقطيتين مبيّناً نوع القوة مع ذكر السبب.</div>
+    <div class="givens">المعطيات: q₁=2μC — q₂=5μC — r=90cm=0.9m</div>
+    <div class="step"><b>تطبيق قانون كولوم:</b>
+      <div class="math">F = Kq₁q₂/r² = (9×10⁹×2×10⁻⁶×5×10⁻⁶)/(0.9)²</div></div>
+    <div class="step"><b>النتيجة:</b>
+      <div class="math">F = 1/9 N</div>
+      💡 القوة تنافرية، لأن الشحنتين متشابهتان بالنوع (كلتاهما موجبة).</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول ٢: محصلة قوتين</div>
+  <div class="example">
+    <div class="exq">في نظام ثلاث شحنات نقطية على استقامة واحدة: q₁=+4×10⁻⁶C وq₃=-5×10⁻⁶C (بينهما r₁=2m)، وq₃ وq₂=+6×10⁻⁶C (بينهما r₂=4m). احسب محصلة القوى المؤثرة في الشحنة السالبة q₃.</div>
+    <div class="step"><b>تحسب القوتان بقانون كولوم منفردتين:</b>
+      <div class="math">F₁ = K q₁q₃/r₁² = -0.0450N (جذب نحو q₁) — F₂ = K q₂q₃/r₂² = -0.0169N (جذب نحو q₂)</div></div>
+    <div class="step"><b>بما أن القوتين متعاكستان بالاتجاه:</b>
+      <div class="math">F_R = F₁ − F₂ = 0.0450 − 0.0169 = 0.0281N باتجاه القوة الأكبر (نحو q₁)</div></div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> ماذا يحدث لمقدار القوة الكهربائية بين شحنتين لو تضاعف البعد بينهما؟</summary>
+    <div class="ans">تقلّ القوة إلى ربع قيمتها الأصلية. لأن F α 1/r² (تناسب عكسي مع مربّع البعد)، فمضاعفة r تعني قسمة F على r²=4 — بالضبط نفس فكرة "قانون التربيع العكسي" التي درستها في فصل الضوء لشدة الاستضاءة!</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz2"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson1.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: التوصيل الكهربائي وتوزيع الشحنات ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz2", [
+  { q: "قانون كولوم للقوة الكهربائية بين شحنتين نقطيتين هو:",
+    opts: ["F = K(q₁+q₂)/r", "F = Kq₁q₂/r²", "F = Kq₁q₂×r²", "F = K(q₁-q₂)/r²"], a: 1,
+    why: "F = Kq₁q₂/r² — تناسب طردي مع حاصل ضرب الشحنتين وعكسي مع مربع البعد." },
+  { q: "قيمة ثابت كولوم K في الفراغ (أو الهواء تقريباً) تساوي:",
+    opts: ["6.63×10⁻³⁴ N.m²/C²", "1.6×10⁻¹⁹ N.m²/C²", "9×10⁹ N.m²/C²", "3×10⁸ N.m²/C²"], a: 2,
+    why: "K = 9×10⁹ N.m²/C² في الفراغ أو الهواء." },
+  { q: "شحنتان متساويتان بالمقدار (1μC) ومتشابهتان بالنوع، متباعدتان 10cm. القوة بينهما:",
+    opts: ["تنافرية مقدارها 0.9N", "تجاذبية مقدارها 0.9N", "تنافرية مقدارها 9N", "صفر"], a: 0,
+    why: "F=Kq₁q₂/r²=9×10⁹×(10⁻⁶)²/(0.1)²=0.9N، وتنافرية لأن الشحنتين متشابهتان." },
+  { q: "إذا تضاعف البعد بين شحنتين، فإن القوة الكهربائية المتبادلة بينهما تصبح:",
+    opts: ["ضعف ما كانت عليه", "نصف ما كانت عليه", "ربع ما كانت عليه", "أربعة أمثال ما كانت عليه"], a: 2,
+    why: "F α 1/r²، فمضاعفة r تُنقص القوة إلى ربع قيمتها الأصلية." },
+  { q: "قوة كهربائية بين شحنتين في مادة عازلة (غير الهواء) مقارنة بنفس الشحنتين وبنفس البعد في الهواء:",
+    opts: ["أكبر دائماً", "أقل دائماً", "متساوية دائماً", "صفر دائماً"], a: 1,
+    why: "ثابت K في أي مادة عازلة أقل من قيمته بالهواء، فتكون القوة الكهربائية أقل مقداراً." }
+], { onDone: function (stars) { Phy.setLesson("g4c9", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

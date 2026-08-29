@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: الإجهاد والمطاوعة — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الخصائص الميكانيكية للمادة</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>📐 الدرس 2: الإجهاد والمطاوعة</h1>
+    <p>قانون هوك (F=kΔL) وصف نابضاً واحداً بذاته. لكن الفيزياء تحتاج مقاييس تصلح لأي مادة وأي شكل — هنا يأتي دور <b>الإجهاد</b> (القوة موزّعة على مساحة) و<b>المطاوعة</b> (نسبة التشوّه)، وهما اللبنتان اللتان سنبني عليهما معامل يونك بالدرس القادم.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🎒</span>
+    <span>نفس القوة (10N)، لكن على خيط رفيع جداً مقابل حبل سميك: الخيط الرفيع "يتألم" أكثر لأن نفس القوة توزّعت على مساحة مقطع أصغر بكثير. هذا بالضبط معنى <b>الإجهاد</b>: القوة وحدها لا تكفي لوصف تأثيرها على مادة — لازم نقسمها على المساحة التي تؤثر فيها.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">💪</span> الإجهاد (Stress)</div>
+  <div class="card">
+    <p>يعبَّر عن الإجهاد بأنه: مقدار القوة العمودية المؤثرة في وحدة المساحة من الجسم. فلو أثّرت قوة محدثة في الجسم فيه تشوّه (تغيّراً في الشكل او الحجم او كليهما) عندئذٍ يقال إن الجسم قد تعرّض إلى إجهاد، ويقاس الإجهاد بوحدات N/m².</p>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 أنواع الإجهاد الثلاثة</h3>
+    <p class="fig-sub">شدّ: قوتان متعاكستان تسحبان للخارج. كبس: قوتان متعاكستان تضغطان للداخل. قص: قوة مماسية توازي السطح.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="أنواع الإجهاد: شد وكبس وقص">
+        <g transform="translate(10,15)">
+          <text x="90" y="10" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#0e7490">اجهاد الشد</text>
+          <rect x="45" y="60" width="90" height="40" fill="#a5d8e8" stroke="#0e7490" stroke-width="2"/>
+          <line x1="10" y1="80" x2="45" y2="80" stroke="#e11d48" stroke-width="3"/>
+          <polygon points="10,80 20,75 20,85" fill="#e11d48"/>
+          <line x1="135" y1="80" x2="170" y2="80" stroke="#e11d48" stroke-width="3"/>
+          <polygon points="170,80 160,75 160,85" fill="#e11d48"/>
+          <text x="90" y="130" text-anchor="middle" font-family="Cairo" font-size="12" fill="#334155">F ← ▭ → F</text>
+        </g>
+        <g transform="translate(220,15)">
+          <text x="90" y="10" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#b45309">اجهاد الكبس</text>
+          <rect x="45" y="60" width="90" height="40" fill="#fde3b8" stroke="#b45309" stroke-width="2"/>
+          <line x1="0" y1="80" x2="42" y2="80" stroke="#b45309" stroke-width="3"/>
+          <polygon points="42,80 32,75 32,85" fill="#b45309"/>
+          <line x1="180" y1="80" x2="138" y2="80" stroke="#b45309" stroke-width="3"/>
+          <polygon points="138,80 148,75 148,85" fill="#b45309"/>
+          <text x="90" y="130" text-anchor="middle" font-family="Cairo" font-size="12" fill="#334155">F → ▭ ← F</text>
+        </g>
+        <g transform="translate(430,15)">
+          <text x="90" y="10" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#7c3aed">اجهاد القص</text>
+          <polygon points="45,100 135,100 155,60 65,60" fill="#e2d7fb" stroke="#7c3aed" stroke-width="2"/>
+          <line x1="65" y1="60" x2="115" y2="60" stroke="#e11d48" stroke-width="3"/>
+          <polygon points="115,60 105,55 105,65" fill="#e11d48"/>
+          <line x1="45" y1="100" x2="45" y2="130" stroke="#334155" stroke-width="1.5" stroke-dasharray="3 2"/>
+          <text x="90" y="150" text-anchor="middle" font-family="Cairo" font-size="12" fill="#334155">F مماسية للسطح العلوي</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="card">
+    <p><b>1. الإجهاد الطولي:</b> وهو الإجهاد الذي يسبب تشوّهاً طولياً في طول الجسم، ويكون على نوعين:</p>
+    <p style="margin-top:8px">• <b>إجهاد الشد (Tensile stress):</b> الإجهاد الذي يسبب تشوّهاً في طول الجسم عندما تؤثر قوتا شد عموديّاً في سطحين متقابلَين، فيؤدي بالنتيجة إلى زيادة في الطول (استطالة).</p>
+    <p style="margin-top:6px">• <b>إجهاد الكبس (Compressive stress):</b> عندما تؤثر قوتان بصورة عمودية في الجسم باتجاه الداخل، فتسبب له انضغاطاً (نقصاناً في الطول).</p>
+  </div>
+
+  <div class="lawbox">
+    الإجهاد الطولي
+    <div class="formula">الإجهاد الطولي = المركبة العمودية للقوة المؤثرة في السطح ÷ مساحة السطح الذي فيه تؤثر القوة</div>
+  </div>
+
+  <div class="card">
+    <p><b>2. إجهاد القص (Shear stress):</b> إذا وضعت يدك على كتاب موضوع على سطح منضدة خشنة ودفعته بقوة مماسية لسطحه نلاحظ حدوث تشوّه في شكل الكتاب.</p>
+  </div>
+
+  <div class="lawbox">
+    إجهاد القص
+    <div class="formula">إجهاد القص = مركبة القوة المماسية للسطح ÷ مساحة السطح الذي فيه تؤثر القوة</div>
+  </div>
+
+  <div class="section-title"><span class="ico">📏</span> المطاوعة (Strain)</div>
+  <div class="card">
+    <p>تُعرَّف المطاوعة بأنها: مقياس لمقدار تشوّه المادة (تغيّراً في الشكل أو الحجم) نتيجة الإجهاد الذي تعرّضت له. وإن نوع المطاوعة يتوقف على نوع الإجهاد الذي يتعرّض له، وأنواع المطاوعة هي:</p>
+  </div>
+
+  <div class="lawbox">
+    1. المطاوعة الطولية (Longitudinal strain) — عند استطالة الجسم أو انضغاطه يتغير شكله من غير تغيّر في حجمه
+    <div class="formula">المطاوعة الطولية النسبية = التغيّر في الطول ÷ الطول الأصلي = ΔL / L₀</div>
+  </div>
+
+  <div class="lawbox">
+    2. مطاوعة القص (Shear strain) — استجابة الجسم عند تعرّضه لإجهاد قص، فيتشوّه شكله ولا يتغيّر حجمه
+    تقاس مطاوعة القص بمقدار الزاوية (θ) التي ينحرف بها سطحا الجسم الشاقوليان المتقابلان المؤثرة فيهما القوة (F)
+  </div>
+
+  <div class="lawbox">
+    3. مطاوعة الحجم (Volume strain) — تنتج من تعرّض الجسم بأكمله للانضغاط، فان حجمه سيقلّ مع ثبوت شكله
+    <div class="formula">المطاوعة الحجمية النسبية = التغيّر في الحجم ÷ الحجم الأصلي = ΔV / V₀</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> ما الفرق بين إجهاد الكبس وإجهاد القص من ناحية اتجاه القوة؟</summary>
+    <div class="ans">في إجهاد الكبس، تؤثر القوتان بصورة عمودية على السطح باتجاه الداخل (تضغطان الجسم من طرفيه فينضغط طولياً). أما في إجهاد القص، فالقوة تؤثر بصورة مماسية (موازية) للسطح لا عمودية عليه، فتسبب انزياحاً في شكل الجسم (كإمالة كتاب) دون أن تغيّر حجمه.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">سلك طوله الأصلي 2m، سُحب بقوة أدّت إلى استطالته 4mm. ما مقدار المطاوعة الطولية النسبية للسلك؟</div>
+    <div class="givens">المعطيات: L₀ = 2m — ΔL = 4mm = 0.004m</div>
+    <div class="step"><b>تطبيق قانون المطاوعة الطولية:</b>
+      <div class="math">المطاوعة الطولية = ΔL / L₀</div></div>
+    <div class="step"><b>التعويض:</b>
+      <div class="math">= 0.004 / 2</div></div>
+    <div class="step"><b>النتيجة:</b>
+      <div class="math">المطاوعة الطولية = 0.002 (بلا وحدات — فهي نسبة طول إلى طول)</div>
+      💡 لاحظ أن المطاوعة كمية بلا وحدات دائماً، لأنها نسبة بين كميتين من نفس النوع (طول/طول أو حجم/حجم).</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz2"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson1.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: معامل يونك ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz2", [
+  { q: "الإجهاد يُعرَّف بأنه:",
+    opts: ["القوة المؤثرة في الجسم فقط", "مقدار القوة العمودية المؤثرة في وحدة المساحة", "التغيّر في طول الجسم", "ثابت مرونة المادة"], a: 1,
+    why: "الإجهاد = القوة العمودية المؤثرة ÷ مساحة السطح الذي تؤثر فيه، ويقاس بوحدات N/m²." },
+  { q: "عندما تؤثر قوتان متقابلتان في اتجاه الداخل فتُنقصان طول الجسم، يسمى هذا الإجهاد:",
+    opts: ["إجهاد شد", "إجهاد كبس", "إجهاد قص", "إجهاد حجمي"], a: 1,
+    why: "إجهاد الكبس (Compressive stress) ينتج من قوتين تؤثران للداخل فتسببان نقصاناً في الطول." },
+  { q: "القوة المماسية (الموازية) لسطح الجسم، لا العمودية عليه، تنتج:",
+    opts: ["إجهاد شد", "إجهاد كبس", "إجهاد قص", "لا تنتج أي إجهاد"], a: 2,
+    why: "إجهاد القص (Shear stress) ينتج تحديداً من مركبة القوة المماسية للسطح." },
+  { q: "المطاوعة الطولية النسبية تُحسب من العلاقة:",
+    opts: ["ΔL × L₀", "ΔL / L₀", "L₀ / ΔL", "ΔL + L₀"], a: 1,
+    why: "المطاوعة الطولية = التغيّر في الطول مقسوماً على الطول الأصلي = ΔL/L₀." },
+  { q: "أيّ أنواع المطاوعة التالية يتغيّر فيها شكل الجسم دون أن يتغيّر حجمه (نتيجة إجهاد قص)؟",
+    opts: ["المطاوعة الطولية", "مطاوعة الحجم", "مطاوعة القص", "لا توجد إجابة صحيحة"], a: 2,
+    why: "مطاوعة القص تنتج من إجهاد القص وتُقاس بزاوية الانحراف θ، ويتغيّر فيها الشكل لا الحجم." },
+  { q: "سلك طوله 4m استطال 8mm بتأثير قوة. مقدار مطاوعته الطولية النسبية:",
+    opts: ["0.002", "2", "0.5", "32"], a: 0,
+    why: "ΔL/L₀ = 0.008/4 = 0.002." }
+], { onDone: function (stars) { Phy.setLesson("g4c2", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

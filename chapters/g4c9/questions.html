@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: الكهرباء الساكنة — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c9">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الكهرباء الساكنة</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: الكهرباء الساكنة</h1>
+    <p>١٠ أسئلة من أسئلة الفصل نفسها في الكتاب المنهجي — اختيار من متعدد ومسائل. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g4c9");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "كثافة الشحنة الكهربائية لموصل معزول مشحون فيه نتوءات (رؤوس مدببة) تكون:",
+    opts: ["أكبر ما يمكن عند رؤوسه المدببة", "أقل ما يمكن عند رؤوسه المدببة", "متساوية في كل نقاطه", "صفراً عند الرؤوس المدببة"], a: 0,
+    why: "كثافة الشحنة تتناسب عكسياً مع نصف قطر الانحناء، فتكون أكبر ما يمكن عند الرؤوس المدببة (نصف قطر صغير)." },
+  { q: "في حالة المجال الكهربائي المنتظم، يكون المجال:",
+    opts: ["متغيّر المقدار في جميع نقاطه", "ثابت المقدار والاتجاه في جميع نقاطه", "ثابت الاتجاه فقط دون المقدار", "متغيّر المقدار والاتجاه معاً"], a: 1,
+    why: "المجال المنتظم ثابت المقدار والاتجاه معاً في كل نقاطه (كالمجال بين لوحين متوازيين)." },
+  { q: "إذا وضعت شحنة كهربائية طليقة في مجال كهربائي، فإنها تتحرك:",
+    opts: ["باتجاه المجال دائماً بغض النظر عن نوعها", "بعكس اتجاه المجال دائماً", "باتجاه المجال إذا كانت موجبة وبعكسه إذا كانت سالبة", "عمودياً على المجال دائماً"], a: 2,
+    why: "الشحنة الموجبة تتحرك باتجاه المجال، والسالبة بعكس اتجاهه." },
+  { q: "كرة موصلة مشحونة ومعزولة، جهد إحدى نقاط سطحها فولط واحد. الجهد الكهربائي في مركزها:",
+    opts: ["فولطاً واحداً", "صفراً", "أقل من واحد فولط وأكبر من الصفر", "أكبر من فولط واحد"], a: 0,
+    why: "المجال الكهربائي داخل الكرة الموصلة يساوي صفراً، فالجهد ثابت بكل الفراغ الداخلي ويساوي جهد السطح (1V)." },
+  { q: "ما مقدار قوة التنافر بين شحنتين نقطيتين متساويتين، مقدار كل منهما 1μC، وعلى بعد 10cm عن بعضهما؟",
+    opts: ["0.9N", "9N", "0.09N", "9000N"], a: 0,
+    why: "F=Kq₁q₂/r²=9×10⁹×(10⁻⁶)²/(0.1)²=0.9N." },
+  { q: "وُضعت شحنتان نقطيتان +3μC و+27μC على خط مستقيم متباعدتان متراً واحداً. أين يجب وضع شحنة نقطية ثالثة حتى تصبح محصلة القوى المؤثرة عليها من قِبل الشحنتين صفراً؟ (بعدها عن الشحنة الأولى 3μC)",
+    opts: ["25cm", "50cm", "75cm", "10cm"], a: 0,
+    why: "3/x² = 27/(1-x)² ⟹ (1-x)/x = 3 ⟹ x = 0.25m = 25cm." },
+  { q: "سطحان متوازيان من سطوح تساوي الجهد، جهد نقطة (a) يساوي 10V وجهد نقطة (b) يساوي -2V، والبعد بينهما 4mm. المجال الكهربائي بينهما:",
+    opts: ["3000 N/C", "2000 N/C", "12 N/C", "300 N/C"], a: 0,
+    why: "E = (10-(-2))/0.004 = 12/0.004 = 3000 N/C." },
+  { q: "فرق الجهد بين نقطتين A,B يساوي 60V (وفق تعريف المسألة V_AB=-60V). ما الشغل اللازم لنقل بروتون (q=+e) من A إلى B؟",
+    opts: ["-9.6×10⁻¹⁸ J", "+9.6×10⁻¹⁸ J", "-1.6×10⁻¹⁹ J", "+60 J"], a: 0,
+    why: "W_AB = q×V_AB = (1.6×10⁻¹⁹)×(-60) = -9.6×10⁻¹⁸ J." },
+  { q: "نقطة A تبعد 0.5m عن مركز كرة مشحونة بشحنة 1×10⁻³μC، ونقطة B تبعد 0.9m عن مركز الكرة نفسها. الشغل اللازم لنقل شحنة 2μC من B إلى A:",
+    opts: ["16×10⁻⁶ J موجب", "8×10⁻⁶ J سالب", "10×10⁻⁶ J موجب", "2×10⁻⁶ J موجب"], a: 0,
+    why: "V_A=18V، V_B=10V. W=q(V_A-V_B)=2×10⁻⁶×8=16×10⁻⁶J (موجب لأن الشحنة تنتقل نحو جهد أعلى)." },
+  { q: "شحنة 6μC وُضعت على بعد 1.2m من شحنة أخرى 5μC (بالفراغ). الشغل المبذول لتحريك الشحنة الثانية لتصبح على بعد 0.9m من الأولى:",
+    opts: ["+0.075J", "-0.075J", "+0.225J", "+0.3J"], a: 0,
+    why: "U_initial=0.225J، U_final=0.3J. الشغل = ΔU = 0.3-0.225 = +0.075J." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g4c9", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

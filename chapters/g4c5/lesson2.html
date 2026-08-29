@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: المصدر النقطي للضوء — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c5">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الضوء</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔦 الدرس 2: المصدر النقطي للضوء</h1>
+    <p>الضوء ينتقل بخطوط مستقيمة عادة — لكن هل يبقى كذلك دائماً عند مروره من فتحة ضيقة جداً؟ الجواب يعتمد على مقارنة بسيطة بين حجم الفتحة وطول موجة الضوء نفسه.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚪</span>
+    <span>مرّر شعاع ليزر من باب واسع فيمرّ بخط مستقيم تماماً. لكن مرّره من فتحة ضيقة جداً بقدر طول موجة الضوء نفسه، وستراه ينتشر في كل الاتجاهات! هذه الظاهرة، رغم غرابتها، هي مفتاح فهم "المصدر النقطي".</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📏</span> متى تصبح الفتحة مصدراً نقطياً؟</div>
+  <div class="card">
+    <p>إن موجات الضوء تنتقل في الوسط المتجانس في خطوط مستقيمة وباتجاه انتشار الأشعة الضوئية. فإذا صادفت هذه الموجات حاجزاً فيه فتحة دائرية قطرها (d)، فالنتيجة تعتمد على مقارنة قطر الفتحة بالطول الموجي للضوء (λ):</p>
+  </div>
+
+  <div class="tblwrap"><table class="nice">
+    <tr><th>الحالة</th><th>النتيجة</th></tr>
+    <tr><td>d &gt;&gt; λ (الفتحة أكبر بكثير من طول الموجة)</td><td>الموجة تجتاز الفتحة مستمرة على الحركة بخط مستقيم</td></tr>
+    <tr><td>d = λ (قطر الفتحة يقارب طول الموجة تقريباً)</td><td>الضوء ينتشر من الفتحة في جميع الاتجاهات</td></tr>
+    <tr><td>d &lt;&lt; λ (الفتحة أصغر بكثير من طول الموجة)</td><td>تُعدّ هذه الفتحة مصدراً نقطياً للضوء</td></tr>
+  </table></div>
+
+  <div class="notebox">
+    <b>💡 خلاصة:</b> كلما اقترب قطر الفتحة من طول موجة الضوء أو صغر عنه كثيراً، تحوّلت الفتحة نفسها إلى مصدر ينشر الضوء في كل الاتجاهات — بدل أن تكون مجرد ممر يمرّ منه شعاع مستقيم واحد.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> لماذا لا نلاحظ عادةً انتشار الضوء في كل الاتجاهات عند مروره من أبواب ونوافذ منازلنا؟</summary>
+    <div class="ans">لأن أبعاد الأبواب والنوافذ (بالسنتيمترات أو الأمتار) أكبر بكثير جداً (d &gt;&gt; λ) من الطول الموجي للضوء المرئي (بضع مئات من النانومترات فقط). في هذه الحالة يجتاز الضوء الفتحة مستمراً بخط مستقيم تقريباً، ولا تظهر ظاهرة الانتشار في كل الاتجاهات إلا عندما تكون الفتحة دقيقة جداً بحجم مقارب لطول الموجة نفسه.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz2"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson1.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: مبدأ هايجنز ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz2", [
+  { q: "إذا كان قطر الفتحة (d) أكبر بكثير من الطول الموجي للضوء (λ)، أي d>>λ، فإن الموجة:",
+    opts: ["تنتشر في كل الاتجاهات", "تجتاز الفتحة مستمرة بخط مستقيم", "تتوقف تماماً عن الانتشار", "تنعكس بالكامل للخلف"], a: 1,
+    why: "عندما تكون الفتحة أكبر بكثير من طول الموجة، تستمر الموجة بالحركة بخط مستقيم تقريباً دون انتشار ملحوظ." },
+  { q: "متى تصبح الفتحة الدائرية مصدراً نقطياً للضوء؟",
+    opts: ["عندما يكون قطرها أكبر بكثير من طول الموجة", "عندما يكون قطرها أصغر بكثير من طول الموجة", "عندما تكون مربّعة الشكل فقط", "لا تصبح أي فتحة مصدراً نقطياً"], a: 1,
+    why: "عندما يكون قطر الفتحة (d) أصغر بكثير من الطول الموجي (λ)، أي d<<λ، تُعدّ هذه الفتحة مصدراً نقطياً ينشر الضوء بكل الاتجاهات." },
+  { q: "لماذا لا نلاحظ انتشار الضوء بكل الاتجاهات عند مروره من نافذة عادية؟",
+    opts: ["لأن أبعاد النافذة أكبر بكثير من طول موجة الضوء", "لأن الزجاج يمنع الانتشار", "لأن الضوء لا ينتشر من أي فتحة إطلاقاً", "لأن النافذة مربعة الشكل"], a: 0,
+    why: "أبعاد النافذة (سنتيمترات/أمتار) أكبر بكثير من الطول الموجي للضوء (نانومترات)، فيجتازها الضوء بخط مستقيم." }
+], { onDone: function (stars) { Phy.setLesson("g4c5", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

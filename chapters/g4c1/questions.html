@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: معلمات رئيسة في الفيزياء — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c1">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">معلمات رئيسة في الفيزياء</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: معلمات رئيسة في الفيزياء</h1>
+    <p>١١ سؤالاً من أسئلة الفصل نفسها في الكتاب المنهجي — اختيار من متعدد. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g4c1");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "الزاوية نصف القطرية (radian) هي الزاوية المركزية المقابلة لقوس طوله يساوي:",
+    opts: ["نصف قطر الدائرة", "قطر الدائرة", "نصف محيط الدائرة", "محيط الدائرة"], a: 0,
+    why: "radian هي الزاوية التي يساوي طول قوسها نصف قطر الدائرة تماماً (L = r)." },
+  { q: "محيط الدائرة يقابل:",
+    opts: ["π من الزوايا نصف القطرية", "2π من الزوايا نصف القطرية", "3π من الزوايا نصف القطرية", "زاوية نصف قطرية واحدة"], a: 1,
+    why: "محيط الدائرة = 2πr، ولأن كل نصف قطر يقابل زاوية 1rad، فالمحيط الكامل يقابل 2π من الزوايا نصف القطرية." },
+  { q: "مساحة الكرة السطحية تقابل:",
+    opts: ["π Sr", "2π Sr", "3π Sr", "4π Sr"], a: 3,
+    why: "مساحة سطح الكرة = 4πr²، وبقسمتها على r² نحصل على 4π من الزوايا المجسمة (Sr)." },
+  { q: "إحدى الكميات الفيزيائية الآتية تقاس بوحدة الأمبير هي:",
+    opts: ["فرق الجهد الكهربائي", "المقاومة", "التيار الكهربائي", "القدرة الكهربائية"], a: 2,
+    why: "الأمبير (A) هو وحدة SI الأساسية لقياس التيار الكهربائي." },
+  { q: "الملمتر المربع (mm²) يساوي:",
+    opts: ["10⁻²m²", "10⁻⁶m²", "10⁻⁴m²", "10⁻³m²"], a: 1,
+    why: "بما أن 1mm = 10⁻³m، فإن 1mm² = (10⁻³)² = 10⁻⁶m²." },
+  { q: "إذا تغيّرت x طردياً مع y، عندما x=8 وكانت y=15، فإن مقدار x عندما y=10 هو:",
+    opts: ["7/3", "2", "16/3", "3"], a: 2,
+    why: "x/y = ثابت ⟹ 8/15 = x/10 ⟹ x = 8×10/15 = 80/15 = 16/3." },
+  { q: "إذا تغيّرت x عكسياً مع y، فإذا كانت y=3 عندما x=7، فإن مقدار y عندما x=3 يساوي:",
+    opts: ["7", "9", "10/3", "6"], a: 0,
+    why: "x×y = ثابت ⟹ 7×3 = 21. عند x=3: y = 21/3 = 7." },
+  { q: "الزاوية نصف القطرية (1rad) تقابل زاوية قياسها يساوي:",
+    opts: ["57.3°", "360°/π", "90°/π", "1°"], a: 0,
+    why: "1rad = 360°/2π = 57.3° تقريباً." },
+  { q: "إن مقدار العدد (5) المرفوع للأس صفر (5⁰) يساوي:",
+    opts: ["5", "صفر", "1", "ما لا نهاية"], a: 2,
+    why: "أي عدد لا يساوي صفراً مرفوعاً للأس صفر يساوي دائماً 1." },
+  { q: "إذا كانت العلاقة الرياضية التي تربط المتغيّرين x,y هي y=2x+5، فإن y تتغيّر تغيّراً:",
+    opts: ["خطياً طردياً مع x ويمرّ بنقطة الأصل", "عكسياً مع x", "خطياً طردياً مع x ولا يمرّ بنقطة الأصل", "غير خطي مع x"], a: 2,
+    why: "وجود الحد الثابت (+5) يجعل العلاقة خطية الشكل لكنها لا تمرّ من نقطة الأصل، فلا تُعدّ تناسباً طردياً بالتعريف الدقيق." },
+  { q: "إذا كانت العلاقة الرياضية y=mx التي تربط المتغيّرين x,y، فإن y تتغيّر تغيّراً:",
+    opts: ["خطياً طردياً مع x ولا يمرّ بنقطة الأصل", "غير خطي مع x", "خطياً طردياً مع x ويمرّ بنقطة الأصل", "عكسياً مع x"], a: 2,
+    why: "y=mx خط مستقيم يمرّ من نقطة الأصل (عندما x=0 فإن y=0) — وهذا هو التعريف الدقيق للتناسب الطردي." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g4c1", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

@@ -26,17 +26,21 @@ var ShararahAccess = (function () {
 
   // نحسب مسار جذر الموقع اعتماداً على مسار هذا السكربت نفسه،
   // لأنه يُستدعى بعمق مختلف حسب الصفحة (../js أو ../../js)
-  var SITE_ROOT = (function () {
-    var src = document.currentScript && document.currentScript.getAttribute("src");
-    if (!src) {
-      var scripts = document.getElementsByTagName("script");
-      for (var i = 0; i < scripts.length; i++) {
-        var s = scripts[i].getAttribute("src") || "";
-        if (s.indexOf("access-control.js") !== -1) { src = s; break; }
-      }
+  var ACCESS_SCRIPT_EL = (function () {
+    if (document.currentScript) return document.currentScript;
+    var scripts = document.getElementsByTagName("script");
+    for (var i = 0; i < scripts.length; i++) {
+      if ((scripts[i].getAttribute("src") || "").indexOf("access-control.js") !== -1) return scripts[i];
     }
+    return null;
+  })();
+  var SITE_ROOT = (function () {
+    var src = ACCESS_SCRIPT_EL && ACCESS_SCRIPT_EL.getAttribute("src");
     return src ? src.replace(/js\/access-control\.js(?:\?.*)?$/, "") : "./";
   })();
+  // صفحات مثل الرئيسية وخريطة فصول السادس تعرض دروساً مجانية ومدفوعة معاً:
+  // نكتفي فيها بتظليل العناصر [data-req-stage] المقفلة، بلا قفل الصفحة كلها بستارة.
+  var BADGES_ONLY = !!(ACCESS_SCRIPT_EL && ACCESS_SCRIPT_EL.hasAttribute("data-badges-only"));
   var HOME_URL = SITE_ROOT + "index.html";
   var SUBSCRIBE_URL = SITE_ROOT + "subscribe.html";
 
@@ -117,6 +121,18 @@ var ShararahAccess = (function () {
     if (!subscriptionActive()) return "expired";
     if (!stageAllows(currentStage(), requiredStage())) return "stage";
     return "locked";
+  }
+
+  // يظلّل أي عنصر عليه data-req-stage="g3|g6" ويضيف رمز 🔒 عليه لو مرحلته
+  // غير مفعّلة بعد، بلا ما يمس باقي الصفحة — تُستخدم بصفحات القوائم المختلطة
+  // (الرئيسية، خريطة فصول السادس) حيث تظهر دروس مجانية ومدفوعة بنفس القائمة.
+  function decorateLockBadges() {
+    var nodes = document.querySelectorAll("[data-req-stage]");
+    for (var i = 0; i < nodes.length; i++) {
+      var stage = nodes[i].getAttribute("data-req-stage");
+      var covered = subscriptionActive() && stageAllows(currentStage(), stage);
+      nodes[i].classList.toggle("needs-code", !covered);
+    }
   }
 
   var overlay = null, els = {};
@@ -379,6 +395,8 @@ var ShararahAccess = (function () {
 
   function run() {
     getDeviceToken();
+    decorateLockBadges();
+    if (BADGES_ONLY) return;
     if (isUnlocked()) {
       maybeRevalidate();
       return;
@@ -390,6 +408,10 @@ var ShararahAccess = (function () {
   }
   if (document.body) run();
   else document.addEventListener("DOMContentLoaded", run);
+
+  // عند الرجوع لصفحة محفوظة بذاكرة المتصفح (bfcache) بعد تفعيل الكود بصفحة
+  // ثانية، لا تُعاد سكربتات الصفحة — فنُحدّث الشارات يدوياً لتختفي فوراً.
+  window.addEventListener("pageshow", decorateLockBadges);
 
   return {
     isUnlocked: isUnlocked,

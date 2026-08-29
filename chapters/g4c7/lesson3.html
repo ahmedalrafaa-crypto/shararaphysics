@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: المرايا الكروية — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c7">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">المرايا</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>🥄 الدرس 3: المرايا الكروية</h1>
+    <p>انظر لوجهك في ملعقة طعام — من سطحها الداخلي (المقعر) ومن سطحها الخارجي (المحدب). ستلاحظ صورتين مختلفتين جداً رغم أنهما نفس الملعقة!</p>
+  </div>
+
+  <div class="lawbox">
+    المرايا الكروية (Spherical Mirrors)
+    هي المرايا التي يكون فيها السطح العاكس جزءاً من سطح كرة مجوفة. فإذا كان السطح العاكس هو السطح الداخلي للكرة سُميت مرآة مقعرة (Concave Mirror)، وإذا كان السطح العاكس هو السطح الخارجي سُميت مرآة محدبة (Convex Mirror)
+  </div>
+
+  <div class="section-title"><span class="ico">📐</span> ستة مصطلحات أساسية</div>
+  <div class="tblwrap"><table class="nice">
+    <tr><th>المصطلح</th><th>الرمز</th><th>التعريف</th></tr>
+    <tr><td>مركز تكوّر المرآة</td><td>C</td><td>مركز الكرة التي اقتُطع منها سطح المرآة</td></tr>
+    <tr><td>قطب المرآة</td><td>V</td><td>النقطة التي تتوسط سطح المرآة الكروية</td></tr>
+    <tr><td>المحور الأساس</td><td>—</td><td>الخط الواصل بين مركز تكوّر المرآة وقطبها</td></tr>
+    <tr><td>نصف قطر تكوّر المرآة</td><td>R</td><td>نصف قطر الكرة التي اقتُطع منها سطح المرآة</td></tr>
+    <tr><td>بؤرة المرآة</td><td>F</td><td>نقطة واقعة على المحور الأساس تلتقي عندها الأشعة المنعكسة عن المرآة (أو امتداداتها) الساقطة موازية للمحور الأساس</td></tr>
+    <tr><td>البعد البؤري</td><td>f</td><td>البعد بين قطب المرآة وبؤرتها</td></tr>
+  </table></div>
+
+  <div class="lawbox">
+    العلاقة بين البعد البؤري ونصف القطر
+    <div class="formula">f = ½R</div>
+    البعد البؤري لتكور المرآة يساوي نصف نصف قطر تكوّرها
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> ما الفرق الأساسي بين المرآة المقعرة والمحدبة من حيث السطح العاكس؟</summary>
+    <div class="ans">في المرآة المقعرة، السطح العاكس هو السطح الداخلي للكرة المجوّفة (كالسطح الداخلي لملعقة الطعام). أما في المرآة المحدبة، فالسطح العاكس هو السطح الخارجي للكرة (كالسطح الخارجي للملعقة). هذا الفرق البسيط في اتجاه السطح العاكس يؤدي لاحقاً لاختلاف جوهري تام في خصائص الصور المتكونة بكل نوع.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz3"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson2.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson4.html">الدرس التالي: خصائص الصور في المرآة المقعرة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz3", [
+  { q: "المرآة الكروية التي يكون سطحها العاكس هو السطح الداخلي للكرة تسمى:",
+    opts: ["مرآة محدبة", "مرآة مقعرة", "مرآة مستوية", "مرآة مزدوجة"], a: 1,
+    why: "المرآة المقعرة (Concave) سطحها العاكس هو الداخلي، مثل السطح الداخلي لملعقة الطعام." },
+  { q: "بؤرة المرآة الكروية (F) هي النقطة التي:",
+    opts: ["تتوسط سطح المرآة", "تلتقي عندها الأشعة المنعكسة الساقطة موازية للمحور الأساس", "تمثّل مركز الكرة الأصلية", "لا معنى فيزيائي لها"], a: 1,
+    why: "البؤرة F نقطة على المحور الأساس تلتقي عندها (أو عند امتدادها) الأشعة الساقطة موازية للمحور بعد انعكاسها." },
+  { q: "العلاقة بين البعد البؤري (f) ونصف قطر التكوّر (R) للمرآة الكروية هي:",
+    opts: ["f = R", "f = 2R", "f = R/2", "f = R²"], a: 2,
+    why: "f = ½R — البعد البؤري يساوي نصف نصف قطر التكوّر." },
+  { q: "مرآة كروية نصف قطر تكوّرها 30cm. ما بعدها البؤري؟",
+    opts: ["30cm", "60cm", "15cm", "10cm"], a: 2,
+    why: "f = R/2 = 30/2 = 15cm." }
+], { onDone: function (stars) { Phy.setLesson("g4c7", "3", { stars: stars }); } });
+</script>
+</body>
+</html>

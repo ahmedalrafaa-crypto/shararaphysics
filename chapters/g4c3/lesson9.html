@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 9: معادلة برنولي — الرابع العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g4c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الموائع الساكنة</a> / الدرس 9</span>
+  </div>
+
+  <div class="hero">
+    <h1>✈️ الدرس 9: معادلة برنولي</h1>
+    <p>معادلة الاستمرارية ربطت السرعة بالمساحة. لكن ماذا عن الضغط؟ العالم برنولي وجد أن سرعة المائع وضغطه مرتبطان أيضاً بعلاقة رياضية أنيقة واحدة — ستفسّر لك لاحقاً كيف تطير الطائرة!</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🎈</span>
+    <span>لقد وجد العالم برنولي في عام 1738 أن ضغط المائع يتغيّر بتغيّر سرعته. وعندما اشتق المعادلة التي يطلق عليها اسمه، افترض أن المائع عديم اللزوجة وغير قابل للانضغاط ويجري انسيابياً — بالضبط "المائع المثالي" الذي درسناه بالدرس السابق.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📐</span> اشتقاق معادلة برنولي</div>
+  <div class="card">
+    <p>ولكي نحصل على العلاقة الرياضية التي تربط بين الضغط (P) والارتفاع (h) عن مستوى أفقي معيّن وسرعة المائع المثالي (v) لمائع في أنبوب مساحة مقطعه غير منتظمة، يختلف ارتفاع أجزائه عن مستوى معين. فإذا كان ضغط المائع عند نقطة (a) هو P₁ ومساحة مقطع الأنبوبة A₁ وسرعة المائع v₁، وارتفاع مركز المقطع A₁ عن مستوى أفقي معين هو h₁، وكان ضغط المائع عند نقطة (b) هو P₂ ومساحة مقطع الأنبوبة A₂ وسرعة المائع v₂، وارتفاع مركز المقطع A₂ عن نفس المستوى هو h₂...</p>
+  </div>
+
+  <div class="lawbox">
+    معادلة برنولي (Bernoulli's Equation)
+    مجموع الضغط والطاقة الحركية لوحدة الحجوم والطاقة الكامنة الوضعية لوحدة الحجوم يساوي مقداراً ثابتاً في جميع النقاط على طول مجرى المائع المثالي
+    <div class="formula">P₁ + ½ρv₁² + ρgh₁ = P₂ + ½ρv₂² + ρgh₂</div>
+    <div class="formula">P + ½ρv² + ρgh = constant</div>
+    علماً أن ρ هي كثافة المائع وهي ثابتة لأن المائع غير قابل للانكباس
+  </div>
+
+  <div class="notebox">
+    <b>💡 اقرأها هكذا:</b> إذا زادت سرعة جريان المائع (v) عند نقطة معينة (كأنبوب ضيّق)، فإن ضغطه (P) عند تلك النقطة يجب أن يقلّ للحفاظ على ثبات المجموع — بشرط بقاء الارتفاع h ثابتاً تقريباً. هذه هي الفكرة المحورية وراء كل تطبيقات معادلة برنولي القادمة.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> ما العلاقة بين معادلة برنولي وقانون حفظ الطاقة؟</summary>
+    <div class="ans">معادلة برنولي هي في جوهرها صيغة من قانون حفظ الطاقة مطبّقة على المائع المثالي: المجموع (طاقة الضغط + الطاقة الحركية لوحدة الحجوم + الطاقة الكامنة الوضعية لوحدة الحجوم) يبقى ثابتاً على طول مجرى المائع، تماماً كما تُحفظ الطاقة الميكانيكية الكلية (حركية+وضعية) لجسم متحرك بغياب الاحتكاك.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz9"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson8.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson10.html">الدرس التالي: تطبيقات برنولي واللزوجة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz9", [
+  { q: "معادلة برنولي تصف العلاقة بين:",
+    opts: ["الضغط والسرعة والارتفاع لمائع مثالي جارٍ", "الإجهاد والمطاوعة لمادة صلبة", "الشد السطحي والخاصية الشعرية فقط", "معامل يونك ودرجة الحرارة"], a: 0,
+    why: "معادلة برنولي تربط الضغط P وسرعة الجريان v وارتفاع h لمائع مثالي في حالة جريان انسيابي." },
+  { q: "الصيغة الصحيحة لمعادلة برنولي هي:",
+    opts: ["P + ½ρv² + ρgh = constant", "P × v × h = constant", "P − ρv − gh = constant", "P/v/h = constant"], a: 0,
+    why: "مجموع الضغط والطاقة الحركية والطاقة الوضعية لوحدة الحجوم = مقدار ثابت على طول مجرى المائع." },
+  { q: "إذا زادت سرعة جريان المائع عند نقطة معينة (وبقي الارتفاع ثابتاً تقريباً)، فإن ضغطه عند تلك النقطة:",
+    opts: ["يزداد أيضاً", "يقلّ", "يبقى ثابتاً دائماً", "يصبح صفراً حتماً"], a: 1,
+    why: "للحفاظ على ثبات مجموع معادلة برنولي، زيادة السرعة (وبالتالي الطاقة الحركية) تستلزم نقصان الضغط." },
+  { q: "افترض برنولي عند اشتقاق معادلته أن المائع:",
+    opts: ["قابل للانضغاط وله لزوجة عالية", "عديم اللزوجة وغير قابل للانضغاط ويجري انسيابياً", "يجري بشكل دوّامي واضطرابي", "متغيّر الكثافة باستمرار"], a: 1,
+    why: "معادلة برنولي مبنية على افتراضات المائع المثالي: عديم اللزوجة، غير قابل للانضغاط، جريان انسيابي منتظم." }
+], { onDone: function (stars) { Phy.setLesson("g4c3", "9", { stars: stars }); } });
+</script>
+</body>
+</html>
