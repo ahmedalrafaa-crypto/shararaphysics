@@ -12,6 +12,8 @@ var ShararahAccess = (function () {
   var UNLOCK_KEY = "shararah_unlocked";
   var EXPIRY_KEY = "shararah_expires_at";
   var LAST_CHECK_KEY = "shararah_last_check";
+  // مرحلة الاشتراك: "g3" الثالث متوسط · "g6" السادس العلمي · "all" المرحلتان.
+  var STAGE_KEY = "shararah_stage";
   // فترة سماح للأكواد المُفعّلة قبل نظام الاشتراكات (بلا تاريخ انتهاء مخزَّن محلياً).
   // يجب أن تطابق LEGACY_EXPIRY في Google Apps Script تماماً.
   var LEGACY_EXPIRY_ISO = "2027-08-08T00:00:00Z";
@@ -56,15 +58,65 @@ var ShararahAccess = (function () {
     return token;
   }
 
-  function isUnlocked() {
+  // ---- فصل الوصول حسب المرحلة (تسعير منفصل للثالث متوسط والسادس العلمي) ----
+
+  // أي مرحلة تحتاجها هذه الصفحة؟ null = أداة مشتركة يكفيها أي اشتراك فعّال.
+  // فصول الخامس العلمي (g5cN) مجانية أصلاً ولا تُحمّل هذا الملف إطلاقاً.
+  function requiredStage() {
+    var p = (location.pathname || "").toLowerCase();
+    if (/\/g6c\d+\//.test(p) || p.indexOf("/predictions-g6/") !== -1 || p.indexOf("/weird-questions/") !== -1) return "g6";
+    if (/\/ch\d+\//.test(p) || p.indexOf("/predictions/") !== -1) return "g3";
+    return null;
+  }
+
+  // يفشل مفتوحاً عمداً: الكود القديم (عموده فارغ) والسيرفر اللي لسا ما نُشرت عليه
+  // نسخة المراحل كلاهما يعطي stage فاضية — فلا نقفل طالباً دافعاً بسبب تأخّر نشر.
+  function stageAllows(stage, needed) {
+    if (!needed) return true;
+    if (!stage || stage === "all") return true;
+    return stage === needed;
+  }
+
+  function stageName(s) {
+    if (s === "g6") return "السادس العلمي";
+    if (s === "g3") return "الثالث المتوسط";
+    return "المرحلتين";
+  }
+
+  function currentStage() {
+    return localStorage.getItem(STAGE_KEY);
+  }
+
+  function stageMismatchText() {
+    return "اشتراكك يغطي " + stageName(currentStage()) +
+      "، وهذا المحتوى يخص " + stageName(requiredStage()) +
+      ". تواصل مع الأستاذ أحمد لترقية اشتراكك.";
+  }
+
+  function clearSubscription() {
+    localStorage.removeItem(UNLOCK_KEY);
+    localStorage.removeItem(EXPIRY_KEY);
+    localStorage.removeItem(LAST_CHECK_KEY);
+    localStorage.removeItem(STAGE_KEY);
+  }
+
+  function subscriptionActive() {
     if (localStorage.getItem(UNLOCK_KEY) !== "true") return false;
     var expiresAt = localStorage.getItem(EXPIRY_KEY);
     return Date.now() < Date.parse(expiresAt || LEGACY_EXPIRY_ISO);
   }
 
-  // يميّز "أول مرة" عن "انتهت مدة الاشتراك" عشان تظهر رسالة القفل المناسبة.
+  function isUnlocked() {
+    if (!subscriptionActive()) return false;
+    return stageAllows(currentStage(), requiredStage());
+  }
+
+  // يميّز "أول مرة" عن "انتهت المدة" عن "مرحلة أخرى" عشان تظهر رسالة القفل المناسبة.
   function lockReason() {
-    return localStorage.getItem(UNLOCK_KEY) === "true" ? "expired" : "locked";
+    if (localStorage.getItem(UNLOCK_KEY) !== "true") return "locked";
+    if (!subscriptionActive()) return "expired";
+    if (!stageAllows(currentStage(), requiredStage())) return "stage";
+    return "locked";
   }
 
   var overlay = null, els = {};
@@ -155,13 +207,20 @@ var ShararahAccess = (function () {
       localStorage.setItem(LAST_CHECK_KEY, String(Date.now()));
       if (data.expiresAt) localStorage.setItem(EXPIRY_KEY, data.expiresAt);
       else localStorage.removeItem(EXPIRY_KEY);
+      if (data.stage) localStorage.setItem(STAGE_KEY, data.stage);
+      else localStorage.removeItem(STAGE_KEY);
+
+      // الكود صحيح وفعّال، لكنه لمرحلة ثانية: نُبقيه محفوظاً (فصوله تفتح عنده)
+      // ونكتفي بشرح سبب بقاء هذه الصفحة مقفلة.
+      if (!stageAllows(currentStage(), requiredStage())) {
+        setMessage(stageMismatchText(), "warning");
+        return;
+      }
       setMessage("تم التفعيل بنجاح ✅", "success");
       fireUnlockCallbacks();
       setTimeout(unlockContent, 600);
     } else if (data && data.result === "expired") {
-      localStorage.removeItem(UNLOCK_KEY);
-      localStorage.removeItem(EXPIRY_KEY);
-      localStorage.removeItem(LAST_CHECK_KEY);
+      clearSubscription();
       setMessage("انتهت مدة اشتراكك، تواصل مع الأستاذ أحمد للتجديد", "warning");
     } else if (data && data.result === "used_elsewhere") {
       setMessage("هذا الكود مُفعّل على جهاز آخر، تواصل مع الأستاذ أحمد لنقله", "error");
@@ -223,9 +282,11 @@ var ShararahAccess = (function () {
     overlay.id = "shararah-access-overlay";
     overlay.innerHTML =
       '<div class="sc-modal" role="dialog" aria-modal="true" aria-labelledby="sc-title">' +
-        '<div class="sc-icon">🔒</div>' +
-        '<h2 id="sc-title">هذا المحتوى مقفل</h2>' +
-        '<p class="sc-sub">أدخل كود التفعيل لفتح هذا الفصل</p>' +
+        '<div class="sc-icon">' + (reason === "stage" ? "🎓" : "🔒") + "</div>" +
+        '<h2 id="sc-title">' + (reason === "stage" ? "هذا المحتوى لمرحلة ثانية" : "هذا المحتوى مقفل") + "</h2>" +
+        '<p class="sc-sub">' + (reason === "stage"
+          ? "اشتراكك الحالي ما يشمل " + stageName(requiredStage()) + " — أدخل كود هذه المرحلة لو عندك واحد"
+          : "أدخل كود التفعيل لفتح هذا الفصل") + "</p>" +
         '<input type="text" class="sc-input" id="sc-code-input" placeholder="اكتب كود التفعيل هنا" autocomplete="off">' +
         '<button type="button" class="sc-btn" id="sc-submit-btn">تفعيل ⚡</button>' +
         '<p class="sc-msg" id="sc-msg"></p>' +
@@ -252,6 +313,8 @@ var ShararahAccess = (function () {
 
     if (reason === "expired") {
       setMessage("انتهت مدة اشتراكك، أدخل كوداً جديداً أو تواصل مع الأستاذ أحمد للتجديد", "warning");
+    } else if (reason === "stage") {
+      setMessage(stageMismatchText(), "warning");
     }
   }
 
@@ -296,14 +359,15 @@ var ShararahAccess = (function () {
       if (data && data.result === "success") {
         localStorage.setItem(LAST_CHECK_KEY, String(Date.now()));
         if (data.expiresAt) localStorage.setItem(EXPIRY_KEY, data.expiresAt);
+        // نحدّث المرحلة فقط لو أرسلها السيرفر — غيابها يعني نسخة سكربت قديمة، فنُبقي المخزَّن.
+        if (data.stage) localStorage.setItem(STAGE_KEY, data.stage);
+        if (!stageAllows(currentStage(), requiredStage()) && !overlay) showLockModal("stage");
         return;
       }
       // "invalid" غير مشمولة عمداً: هذا الرد اللي يرجعه السيرفر القديم (قبل نشر checkStatus)
       // لأي طلب ما يفهمه، فلا نقفل طلاب حقيقيين لمجرد إن نسخة Apps Script لسا ما تحدّثت.
       if (data && (data.result === "expired" || data.result === "not_found")) {
-        localStorage.removeItem(UNLOCK_KEY);
-        localStorage.removeItem(EXPIRY_KEY);
-        localStorage.removeItem(LAST_CHECK_KEY);
+        clearSubscription();
         if (!overlay) showLockModal(data.result === "expired" ? "expired" : "locked");
       }
     };
@@ -320,9 +384,8 @@ var ShararahAccess = (function () {
       return;
     }
     var reason = lockReason();
-    localStorage.removeItem(UNLOCK_KEY);
-    localStorage.removeItem(EXPIRY_KEY);
-    localStorage.removeItem(LAST_CHECK_KEY);
+    // اشتراك المرحلة الثانية سليم وفعّال — لا نمسحه، وإلا انقفلت فصوله هو كمان.
+    if (reason !== "stage") clearSubscription();
     showLockModal(reason);
   }
   if (document.body) run();
@@ -331,10 +394,7 @@ var ShararahAccess = (function () {
   return {
     isUnlocked: isUnlocked,
     onUnlock: onUnlock,
-    reset: function () {
-      localStorage.removeItem(UNLOCK_KEY);
-      localStorage.removeItem(EXPIRY_KEY);
-      localStorage.removeItem(LAST_CHECK_KEY);
-    }
+    stage: currentStage,
+    reset: clearSubscription
   };
 })();

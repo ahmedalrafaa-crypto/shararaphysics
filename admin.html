@@ -43,9 +43,17 @@
           <option value="تحويل">تحويل</option>
         </select>
       </div>
+      <div class="admin-field">
+        <label>المرحلة</label>
+        <select id="gen-stage">
+          <option value="g3">الثالث المتوسط — 5,000 شهري · 30,000 سنوي</option>
+          <option value="g6">السادس العلمي — 8,000 شهري · 45,000 سنوي</option>
+          <option value="all">المرحلتان معاً — سعر خاص تحدّده أنت</option>
+        </select>
+      </div>
       <div class="admin-btn-row">
-        <button type="button" class="btn" id="gen-monthly">شهري (5,000 د.ع)</button>
-        <button type="button" class="btn green" id="gen-yearly">سنوي (30,000 د.ع)</button>
+        <button type="button" class="btn" id="gen-monthly">شهري</button>
+        <button type="button" class="btn green" id="gen-yearly">سنوي</button>
       </div>
       <p class="admin-msg" id="gen-msg"></p>
       <div class="code-result" id="gen-result">
@@ -64,6 +72,15 @@
       <div class="admin-field">
         <label>كود التفعيل</label>
         <input type="text" id="ren-code" placeholder="اكتب الكود هنا" style="text-transform:uppercase">
+      </div>
+      <div class="admin-field">
+        <label>المرحلة</label>
+        <select id="ren-stage">
+          <option value="">بلا تغيير — تبقى مرحلة الكود نفسها</option>
+          <option value="g3">نقلها للثالث المتوسط</option>
+          <option value="g6">نقلها للسادس العلمي</option>
+          <option value="all">ترقية للمرحلتين معاً</option>
+        </select>
       </div>
       <div class="admin-btn-row">
         <button type="button" class="btn" id="ren-monthly">تجديد شهري</button>
@@ -174,10 +191,29 @@
     pinMsg.textContent = "رمز الحماية غير صحيح";
   }
 
+  // ---- أسعار المراحل (تطابق subscribe.html — عدّلها بالمكانين معاً لو تغيّرت) ----
+  var STAGES = {
+    g3:  { name: "الثالث المتوسط", monthly: "5,000", yearly: "30,000" },
+    g6:  { name: "السادس العلمي",  monthly: "8,000", yearly: "45,000" },
+    all: { name: "المرحلتان معاً", monthly: "",      yearly: "" }
+  };
+  var genStage = document.getElementById("gen-stage");
+
+  // تسمية الأزرار تتبع المرحلة المختارة، فما تولّد كوداً بسعر مرحلة ثانية بالغلط.
+  function refreshPriceLabels() {
+    var s = STAGES[genStage.value] || STAGES.g3;
+    document.getElementById("gen-monthly").textContent = s.monthly ? "شهري (" + s.monthly + " د.ع)" : "شهري";
+    document.getElementById("gen-yearly").textContent = s.yearly ? "سنوي (" + s.yearly + " د.ع)" : "سنوي";
+  }
+  genStage.addEventListener("change", refreshPriceLabels);
+  refreshPriceLabels();
+
   // ---- توليد كود جديد ----
   function generate(type) {
     var msg = document.getElementById("gen-msg");
     var result = document.getElementById("gen-result");
+    var stage = genStage.value;
+    var stageInfo = STAGES[stage] || STAGES.g3;
     result.classList.remove("shown");
     msg.className = "admin-msg";
     msg.textContent = "جارٍ التوليد...";
@@ -187,13 +223,19 @@
       pin: getPin(),
       studentName: document.getElementById("gen-name").value || "",
       paymentMethod: document.getElementById("gen-payment").value,
-      type: type
+      type: type,
+      stage: stage
     }, function (data) {
       if (data && data.result === "success") {
         msg.textContent = "";
         document.getElementById("gen-code").textContent = data.code;
-        document.getElementById("gen-type-label").textContent = type === "yearly" ? "اشتراك سنوي" : "اشتراك شهري";
-        var waText = encodeURIComponent("كود تفعيل شرارة: " + data.code + "\nصالح لمدة " + (type === "yearly" ? "سنة كاملة" : "شهر واحد") + " من أول استخدام.");
+        var typeLabel = type === "yearly" ? "اشتراك سنوي" : "اشتراك شهري";
+        document.getElementById("gen-type-label").textContent = typeLabel + " — " + stageInfo.name;
+        var waText = encodeURIComponent(
+          "كود تفعيل شرارة: " + data.code +
+          "\nالمرحلة: " + stageInfo.name +
+          "\nصالح لمدة " + (type === "yearly" ? "سنة كاملة" : "شهر واحد") + " من أول استخدام."
+        );
         document.getElementById("gen-whatsapp").href = "https://wa.me/" + WHATSAPP_SHARE_NUMBER + "?text=" + waText;
         result.classList.add("shown");
       } else if (data && data.result === "unauthorized") {
@@ -222,12 +264,18 @@
     msg.className = "admin-msg";
     msg.textContent = "جارٍ التجديد...";
 
-    callApi({ action: "renewCode", pin: getPin(), code: code, type: type }, function (data) {
+    // stage فاضية = ما نغيّر مرحلة الكود، السيرفر يُبقي المخزَّنة كما هي.
+    callApi({
+      action: "renewCode", pin: getPin(), code: code, type: type,
+      stage: document.getElementById("ren-stage").value
+    }, function (data) {
       if (data && data.result === "success") {
         msg.textContent = "";
         document.getElementById("ren-code-echo").textContent = data.code;
         var expiryDate = data.expiresAt ? new Date(data.expiresAt).toLocaleDateString("ar-IQ") : "";
-        document.getElementById("ren-expiry-label").textContent = "ينتهي بتاريخ: " + expiryDate;
+        var stageInfo = STAGES[data.stage];
+        document.getElementById("ren-expiry-label").textContent =
+          "ينتهي بتاريخ: " + expiryDate + (stageInfo ? " · المرحلة: " + stageInfo.name : "");
         result.classList.add("shown");
       } else if (data && data.result === "unauthorized") {
         handleUnauthorized();
