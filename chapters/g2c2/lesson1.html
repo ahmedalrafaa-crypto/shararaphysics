@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 1: قوانين الحركة لنيوتن — الثاني متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">قوانين الحركة</a> / الدرس 1</span>
+  </div>
+
+  <div class="hero">
+    <h1>⚖️ الدرس 1: قوانين الحركة لنيوتن</h1>
+    <p>ثلاث جمل بسيطة كتبها نيوتن سنة ١٦٨٧، وما زالت تفسّر كل شي من مشية النملة إلى إطلاق الصواريخ.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚌</span>
+    <span>الباص واقف، وأنت واقف بداخله بلا ما تمسك شي. فجأة ينطلق الباص بسرعة — جسمك ينرمي للخلف رغم إنك ما سويت شي! ليش؟ لأن جسمك "يقاوم" التغيّر بحالته — هذا بالضبط قانون نيوتن الأول.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">1️⃣</span> القانون الأول: القصور الذاتي</div>
+  <div class="card">
+    <p>الجسم يبقى <b>ساكناً</b> أو <b>متحركاً بخط مستقيم وسرعة ثابتة</b>، ما لم تؤثر عليه <b>قوة محصّلة</b> تغيّر حاله. هذه الخاصية — مقاومة الجسم لأي تغيير بحالة حركته — تُسمى <b>القصور الذاتي</b>. كلما زادت كتلة الجسم زاد قصوره الذاتي (صعب تحريكه أو إيقافه).</p>
+  </div>
+
+  <div class="section-title"><span class="ico">2️⃣</span> القانون الثاني: القوة والتسارع</div>
+  <div class="card">
+    <p>القوة المحصّلة المؤثرة على جسم = كتلته × تسارعه. كلما زادت القوة المؤثرة، زاد تسارع الجسم؛ وكلما زادت كتلته، قلّ تسارعه لنفس القوة (تحريك سيارة أصعب من تحريك دراجة بنفس القوة).</p>
+  </div>
+
+  <div class="lawbox">
+    القانون الثاني لنيوتن
+    <div class="formula">F = m × a</div>
+  </div>
+
+  <div class="figbox">
+    <h3>➡️ الفعل وردّ الفعل</h3>
+    <p class="fig-sub">لكل قوة "فعل"، توجد قوة "ردّ فعل" مساوية لها بالمقدار ومعاكسة لها بالاتجاه.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="رسم يوضّح قانون الفعل وردّ الفعل بمثال سباح يدفع حائط المسبح">
+        <rect x="20" y="30" width="24" height="90" fill="#93c5fd"/>
+        <circle cx="140" cy="75" r="22" fill="#2563eb"/>
+        <line x1="118" y1="75" x2="60" y2="75" stroke="#dc2626" stroke-width="4" marker-end="url(#arF)"/>
+        <text x="88" y="60" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#dc2626">فعل</text>
+        <line x1="162" y1="75" x2="270" y2="75" stroke="#16a34a" stroke-width="4" marker-end="url(#arF2)"/>
+        <text x="215" y="60" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#16a34a">ردّ فعل</text>
+        <text x="32" y="140" text-anchor="middle" font-family="Cairo" font-weight="700" font-size="12" fill="#1e40af">حائط المسبح</text>
+        <text x="140" y="140" text-anchor="middle" font-family="Cairo" font-weight="700" font-size="12" fill="#1e40af">السبّاح</text>
+        <defs>
+          <marker id="arF" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#dc2626"/></marker>
+          <marker id="arF2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#16a34a"/></marker>
+        </defs>
+      </svg>
+    </div>
+    <p class="fig-cap">السبّاح يدفع الحائط للخلف (فعل)، فيدفعه الحائط للأمام بنفس المقدار (ردّ فعل) — وهذا ما يدفع السبّاح للانطلاق.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">3️⃣</span> القانون الثالث: الفعل وردّ الفعل</div>
+  <div class="card">
+    <p>لكل فعل ردّة فعل <b>مساوية له بالمقدار</b> و<b>معاكسة له بالاتجاه</b>. لهذا يرتد المسدس عند إطلاق الرصاصة، وينطلق الصاروخ للأعلى بفعل دفع الغازات للأسفل بقوة مساوية.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">عربة كتلتها ٥ كغم، أثّرت عليها قوة محصّلة مقدارها ٢٠ نيوتن. احسب تسارع العربة.</div>
+    <div class="givens">المعطيات: الكتلة m = 5 كغم، القوة F = 20 نيوتن. المطلوب: التسارع a.</div>
+    <div class="step"><b>نعيد ترتيب القانون:</b>
+      <div class="math">a = F ÷ m</div></div>
+    <div class="step"><b>نعوّض بالأرقام:</b>
+      <div class="math">a = 20 ÷ 5 = 4 م/ث²</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson2.html">الدرس التالي: الجاذبية ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "خاصية مقاومة الجسم لأي تغيير بحالة حركته تسمى:",
+    opts: ["الجاذبية", "القصور الذاتي", "الاحتكاك", "الطاقة"], a: 1,
+    why: "القصور الذاتي هو ميل الجسم للبقاء على حالته (ساكناً أو متحركاً) ما لم تؤثر عليه قوة." },
+  { q: "وفق القانون الثاني لنيوتن، القوة تساوي:",
+    opts: ["الكتلة ÷ التسارع", "الكتلة × التسارع", "الكتلة + التسارع", "التسارع ÷ الكتلة"], a: 1,
+    why: "القانون الثاني: F = m × a." },
+  { q: "قوة محصّلة 15 نيوتن أثّرت على جسم كتلته 3 كغم. تسارع الجسم:",
+    opts: ["5 م/ث²", "45 م/ث²", "12 م/ث²", "18 م/ث²"], a: 0,
+    why: "a = F ÷ m = 15 ÷ 3 = 5 م/ث²." },
+  { q: "عند إطلاق رصاصة من مسدس، يرتد المسدس للخلف. هذا يفسَّر بـ:",
+    opts: ["القانون الأول لنيوتن", "قانون الجاذبية", "القانون الثالث لنيوتن (الفعل وردّ الفعل)", "لا تفسير فيزيائياً له"], a: 2,
+    why: "دفع الرصاصة للأمام (فعل) يقابله دفع المسدس للخلف بنفس المقدار (ردّ فعل)." },
+  { q: "لماذا يصعب تحريك شاحنة محمّلة مقارنة بدراجة هوائية بنفس مقدار القوة؟",
+    opts: ["لأن للشاحنة كتلة أكبر فقصورها الذاتي أكبر", "لأن الشاحنة لا تخضع لقوانين نيوتن", "لأن الدراجة أثقل من الشاحنة", "لا علاقة للكتلة بذلك"], a: 0,
+    why: "كلما زادت كتلة الجسم، زاد قصوره الذاتي، فقلّ تسارعه لنفس مقدار القوة المؤثرة." }
+], { onDone: function (stars) { Phy.setLesson("g2c2", "1", { stars: stars }); } });
+</script>
+</body>
+</html>

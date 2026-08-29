@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 1: القياس — الثاني متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الحركة</a> / الدرس 1</span>
+  </div>
+
+  <div class="hero">
+    <h1>📏 الدرس 1: القياس</h1>
+    <p>الفيزياء علم يبني كل قوانينه على أرقام حقيقية — وأي رقم بلا قياس دقيق يهدم النتيجة كلها. هذا الدرس يبني أساس القياس العلمي الصحيح.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚀</span>
+    <span>سنة ١٩٩٩، خسرت وكالة ناسا مسباراً كاملاً (Mars Climate Orbiter) كلّف ١٢٥ مليون دولار — السبب؟ فريق حسب القوة بوحدة "الباوند" وفريق آخر أدخلها بالحاسوب على أساس أنها "نيوتن"! خطأ بسيط بالوحدات دمّر مهمة فضائية كاملة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🌍</span> لماذا نحتاج نظاماً موحداً للقياس؟</div>
+  <div class="card">
+    <p>لو كل بلد يقيس بوحدات مختلفة (كالباوند والميل بمكان، والكيلوغرام والكيلومتر بمكان آخر)، تصير مقارنة النتائج وتبادل العلم شبه مستحيلة. لهذا اتفق العلماء عالمياً على <b>النظام الدولي للوحدات (SI)</b> — نظام موحّد يستعمله العلماء بكل الدول.</p>
+  </div>
+
+  <div class="lawbox">
+    الوحدات الأساسية بالنظام الدولي
+    <div class="formula" style="font-size:1rem">الطول: المتر (م) &nbsp;|&nbsp; الكتلة: الكيلوغرام (كغم) &nbsp;|&nbsp; الزمن: الثانية (ث)</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧰</span> أدوات القياس ودقتها</div>
+  <div class="card">
+    <p>كل كمية فيزيائية تحتاج أداة مناسبة لقياسها: <b>المسطرة</b> للأطوال الصغيرة، <b>شريط القياس</b> للمسافات الكبيرة، <b>الميزان الحساس</b> للكتلة، و<b>الساعة الرقمية</b> للزمن. اختيار الأداة غير المناسبة (كقياس سمك ورقة بمسطرة عادية) يعطي نتيجة غير دقيقة — <b>دقة القياس تعتمد على دقة الأداة نفسها</b>.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">حوّل القياسات الآتية: (أ) طول ٢٥٠ سم إلى المتر. (ب) كتلة ٣٫٥ كغم إلى الغرام.</div>
+    <div class="givens">نتذكّر: ١ م = ١٠٠ سم، و١ كغم = ١٠٠٠ غم.</div>
+    <div class="step"><b>(أ) تحويل السم إلى متر:</b>
+      <div class="math">٢٥٠ سم ÷ ١٠٠ = ٢٫٥ م</div></div>
+    <div class="step"><b>(ب) تحويل الكغم إلى غرام:</b>
+      <div class="math">٣٫٥ كغم × ١٠٠٠ = ٣٥٠٠ غم</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson2.html">الدرس التالي: الحركة وأنواعها ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "الوحدة الأساسية للطول بالنظام الدولي هي:",
+    opts: ["السنتيمتر", "المتر", "الكيلومتر", "الميل"], a: 1,
+    why: "المتر هو الوحدة الأساسية للطول بالنظام الدولي؛ السنتيمتر والكيلومتر مضاعفات أو أجزاء منه." },
+  { q: "الأداة الأنسب لقياس كتلة قطعة صغيرة بدقة هي:",
+    opts: ["شريط القياس", "الميزان الحساس", "الساعة الرقمية", "المسطرة"], a: 1,
+    why: "الميزان الحساس مصمّم خصيصاً لقياس الكتلة بدقة عالية." },
+  { q: "٤ متر تساوي بوحدة السنتيمتر:",
+    opts: ["40 سم", "400 سم", "4000 سم", "0.4 سم"], a: 1,
+    why: "١ م = ١٠٠ سم، فـ٤ م = ٤ × ١٠٠ = ٤٠٠ سم." },
+  { q: "لماذا اتفق العلماء على نظام دولي موحّد للوحدات؟",
+    opts: ["لأنه أسهل بالحفظ", "لتسهيل تبادل النتائج العلمية عالمياً", "لأن باقي الأنظمة محرَّمة", "لا يوجد سبب علمي"], a: 1,
+    why: "النظام الموحّد يسمح للعلماء بمختلف الدول بفهم ومقارنة النتائج دون لبس." },
+  { q: "قياس سمك ورقة واحدة بمسطرة عادية مدرَّجة بالسنتيمتر يُعدّ:",
+    opts: ["دقيقاً جداً", "غير دقيق — الأداة غير مناسبة لهذا القياس", "الطريقة الوحيدة الممكنة", "لا علاقة للأداة بالدقة"], a: 1,
+    why: "مسطرة السنتيمتر لا تميّز فروقاً بحجم جزء من الملم — تحتاج أداة أدق لقياس سمك ورقة واحدة." }
+], { onDone: function (stars) { Phy.setLesson("g2c1", "1", { stars: stars }); } });
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 1: العتلات — الثاني متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الآلات البسيطة</a> / الدرس 1</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔧 الدرس 1: العتلات</h1>
+    <p>قضيب حديد بسيط يكدر يرفع صخرة أثقل منك بعشرات المرّات — بشرط وحد بس: توضعه صح.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🪜</span> ما العتلة؟</div>
+  <div class="card">
+    <p>العتلة قضيب صلب يدور حول نقطة ثابتة تسمى <b>نقطة الارتكاز</b>. تخليك "تكبّر" قوتك أو تغيّر اتجاهها لرفع حمل أثقل من قوتك العادية بمفردها.</p>
+  </div>
+
+  <div class="figbox">
+    <h3>⚖️ عناصر العتلة</h3>
+    <p class="fig-sub">ثلاثة عناصر بكل عتلة: نقطة الارتكاز، والقوة المؤثرة، والحمل المراد رفعه.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 420 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="رسم يوضّح عناصر العتلة: نقطة الارتكاز والقوة والحمل">
+        <line x1="40" y1="90" x2="380" y2="60" stroke="#78716c" stroke-width="8" stroke-linecap="round"/>
+        <path d="M 150 90 L 130 130 L 170 130 Z" fill="#57534e"/>
+        <line x1="380" y1="60" x2="380" y2="20" stroke="#dc2626" stroke-width="4" marker-end="url(#arL)"/>
+        <text x="380" y="12" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#dc2626">القوة</text>
+        <rect x="30" y="70" width="26" height="26" fill="#2563eb"/>
+        <text x="43" y="118" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#2563eb">الحمل</text>
+        <text x="150" y="150" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#57534e">نقطة الارتكاز</text>
+        <defs>
+          <marker id="arL" markerWidth="7" markerHeight="7" refX="3.5" refY="0" orient="auto"><path d="M0,7 L3.5,0 L7,7 z" fill="#dc2626"/></marker>
+        </defs>
+      </svg>
+    </div>
+    <p class="fig-cap">كلما اقتربت نقطة الارتكاز من الحمل وابتعدت عن القوة، صار رفع الحمل أسهل.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🔢</span> أنواع العتلات الثلاثة</div>
+  <div class="card">
+    <p>حسب ترتيب نقطة الارتكاز والقوة والحمل على القضيب، عندنا ثلاثة أنواع:</p>
+    <p style="margin-top:8px">• <b>النوع الأول:</b> نقطة الارتكاز بالوسط بين القوة والحمل — مثل الجزّازة (مقص الحديقة) والقفل.</p>
+    <p style="margin-top:8px">• <b>النوع الثاني:</b> الحمل بالوسط بين نقطة الارتكاز والقوة — مثل عربة اليد وكسّارة الجوز.</p>
+    <p style="margin-top:8px">• <b>النوع الثالث:</b> القوة بالوسط بين نقطة الارتكاز والحمل — مثل ملقط الطعام وذراع الصياد.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson2.html">الدرس التالي: بقية الآلات البسيطة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "النقطة الثابتة التي تدور حولها العتلة تسمى:",
+    opts: ["نقطة الحمل", "نقطة الارتكاز", "نقطة القوة", "المحور المتحرك"], a: 1,
+    why: "نقطة الارتكاز هي النقطة الثابتة التي يدور حولها قضيب العتلة." },
+  { q: "بعتلة النوع الأول، يكون ترتيب العناصر:",
+    opts: ["نقطة الارتكاز بالوسط بين القوة والحمل", "الحمل بالوسط", "القوة بالوسط", "لا ترتيب محدداً"], a: 0,
+    why: "بالنوع الأول، نقطة الارتكاز تقع بين القوة والحمل — كالجزّازة." },
+  { q: "عربة اليد (اليدوية) مثال على عتلة من النوع:",
+    opts: ["الأول", "الثاني (الحمل بالوسط)", "الثالث", "ليست عتلة أصلاً"], a: 1,
+    why: "بعربة اليد، الحمل يقع بالوسط بين نقطة الارتكاز (العجلة) والقوة (يدا الشخص)." },
+  { q: "لتسهيل رفع حمل ثقيل بعتلة، يجب تحريك نقطة الارتكاز:",
+    opts: ["بعيداً عن الحمل وقريباً من القوة", "قريباً من الحمل وبعيداً عن القوة", "لا فرق بموقعها", "خارج القضيب تماماً"], a: 1,
+    why: "كلما اقتربت نقطة الارتكاز من الحمل وابتعدت عن القوة، سهل رفع الحمل بقوة أقل." },
+  { q: "ملقط الطعام مثال على عتلة من النوع:",
+    opts: ["الأول", "الثاني", "الثالث (القوة بالوسط)", "ليست عتلة"], a: 2,
+    why: "بملقط الطعام، القوة (أصابعك) تقع بالوسط بين نقطة الارتكاز (المفصل) والحمل (طرف الملقط)." }
+], { onDone: function (stars) { Phy.setLesson("g2c4", "1", { stars: stars }); } });
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: الجاذبية — الثاني متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">قوانين الحركة</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>🌍 الدرس 2: الجاذبية</h1>
+    <p>رائد الفضاء يطفو داخل محطته، لكن نفس الرائد يمشي طبيعياً على سطح القمر. جسمه ما تغيّر — فشنو اللي تغيّر؟</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧲</span> ما الجاذبية؟</div>
+  <div class="card">
+    <p>الجاذبية قوة تجاذب تؤثر بين <b>أي جسمين لهما كتلة</b> — كلما زادت كتلة الجسمين وقلّت المسافة بينهما، زادت قوة التجاذب. الأرض كتلتها هائلة، فتجذب كل شيء قريب منها نحو مركزها — وهذا ما يجعل الأجسام "تسقط" للأسفل.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">⚖️</span> الفرق بين الكتلة والوزن</div>
+  <div class="card">
+    <p><b>الكتلة</b> مقدار ثابت من المادة بالجسم — لا تتغيّر أينما كنت. <b>الوزن</b> هو قوة جذب الأرض (أو أي كوكب) للجسم = الكتلة × تسارع الجاذبية (g). لأن g يختلف من كوكب لآخر، <b>وزنك يتغيّر</b> حسب مكانك، لكن <b>كتلتك تبقى ثابتة</b>.</p>
+  </div>
+
+  <div class="lawbox">
+    قانون الوزن
+    <div class="formula">الوزن = الكتلة × g &nbsp; (g ≈ 9.8 م/ث² على الأرض)</div>
+  </div>
+
+  <div class="figbox">
+    <h3>🌕 نفس الكتلة، وزن مختلف</h3>
+    <p class="fig-sub">تسارع الجاذبية على القمر أقل بكثير من الأرض (حوالي سدسها) — لهذا يخفّ وزن نفس الجسم هناك.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 420 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مقارنة وزن نفس الكتلة على الأرض وعلى القمر">
+        <text x="105" y="24" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="15" fill="#2563eb">الأرض</text>
+        <rect x="20" y="35" width="170" height="120" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+        <circle cx="105" cy="85" r="18" fill="#2563eb"/>
+        <line x1="105" y1="103" x2="105" y2="140" stroke="#dc2626" stroke-width="4" marker-end="url(#arW)"/>
+        <text x="105" y="128" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#dc2626" transform="translate(28,0)">وزن كبير</text>
+
+        <text x="315" y="24" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="15" fill="#57534e">القمر</text>
+        <rect x="230" y="35" width="170" height="120" rx="8" fill="#fafaf9" stroke="#d6d3d1" stroke-width="2"/>
+        <circle cx="315" cy="85" r="18" fill="#57534e"/>
+        <line x1="315" y1="103" x2="315" y2="115" stroke="#dc2626" stroke-width="4" marker-end="url(#arW)"/>
+        <text x="315" y="140" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#dc2626">وزن أخفّ</text>
+        <defs>
+          <marker id="arW" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#dc2626"/></marker>
+        </defs>
+      </svg>
+    </div>
+    <p class="fig-cap">نفس الجسم (نفس الكتلة الزرقاء/الرمادية) — سهم الوزن أقصر على القمر لأن g هناك أصغر بكثير.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">جسم كتلته ١٠ كغم. احسب وزنه على سطح الأرض (g ≈ 9.8 م/ث²).</div>
+    <div class="givens">المعطيات: الكتلة m = 10 كغم، g = 9.8 م/ث². المطلوب: الوزن.</div>
+    <div class="step"><b>نطبّق القانون:</b>
+      <div class="math">الوزن = m × g = 10 × 9.8</div></div>
+    <div class="step"><b>الناتج:</b>
+      <div class="math">الوزن = 98 نيوتن</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="questions.html">اختبار الفصل الخفيف 🏆</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "الجاذبية قوة تجاذب تؤثر بين:",
+    opts: ["الأجسام الساخنة فقط", "أي جسمين لهما كتلة", "الأجسام المشحونة كهربائياً فقط", "الأجسام الصلبة فقط"], a: 1,
+    why: "أي جسمين لهما كتلة يتجاذبان — تزداد القوة بزيادة الكتلتين وتقارب المسافة." },
+  { q: "أيّ الكميتين تبقى ثابتة أينما ذهب الجسم؟",
+    opts: ["الوزن", "الكتلة", "كلاهما يتغيّر", "لا شيء منهما ثابت"], a: 1,
+    why: "الكتلة مقدار المادة بالجسم، لا تتغيّر بتغيّر المكان — بخلاف الوزن الذي يعتمد على g." },
+  { q: "جسم كتلته 5 كغم على الأرض (g ≈ 9.8 م/ث²). وزنه:",
+    opts: ["5 نيوتن", "9.8 نيوتن", "49 نيوتن", "14.8 نيوتن"], a: 2,
+    why: "الوزن = m × g = 5 × 9.8 = 49 نيوتن." },
+  { q: "رائد فضاء كتلته 70 كغم على الأرض، انتقل للقمر حيث g أصغر بكثير. ماذا يحدث لكتلته ووزنه؟",
+    opts: ["كتلته ووزنه يبقيان كما هما", "كتلته تبقى 70 كغم ووزنه يقلّ", "كتلته تقلّ ووزنه يبقى ثابتاً", "كلاهما يزداد"], a: 1,
+    why: "الكتلة خاصية جوهرية بالجسم لا تتغيّر بالمكان، أمّا الوزن فيعتمد على g الذي يقلّ على القمر." },
+  { q: "لماذا تزداد قوة الجاذبية بين جسمين كلما اقتربا من بعضهما؟",
+    opts: ["لأن قوة التجاذب تزداد بزيادة الكتلة وتقلّ بزيادة المسافة", "لا علاقة للمسافة بقوة الجاذبية إطلاقاً", "الجاذبية تقلّ دائماً بالاقتراب", "الجاذبية ثابتة بغض النظر عن المسافة"], a: 0,
+    why: "قوة الجاذبية بين جسمين تكبر كلما زادت كتلتاهما وقلّت المسافة بينهما." }
+], { onDone: function (stars) { Phy.setLesson("g2c2", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

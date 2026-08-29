@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: انعكاس الضوء — الثاني متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الضوء</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>🪞 الدرس 2: انعكاس الضوء</h1>
+    <p>ليش تشوف صورتك بالمرآة بالضبط بنفس زاوية وقوفك؟ قانون واحد بسيط يحكم كل انعكاس ضوئي بالكون.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">↩️</span> ما الانعكاس؟</div>
+  <div class="card">
+    <p>انعكاس الضوء هو <b>ارتداد أشعته</b> عن سطح (كالمرآة) بدل ما يخترقه أو يُمتصّ بداخله.</p>
+  </div>
+
+  <div class="figbox">
+    <h3>📐 قانون الانعكاس</h3>
+    <p class="fig-sub">تُقاس الزوايا دائماً من الخط العمودي على السطح، لا من السطح نفسه.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="رسم يوضّح قانون انعكاس الضوء: زاوية السقوط تساوي زاوية الانعكاس">
+        <line x1="30" y1="160" x2="370" y2="160" stroke="#57534e" stroke-width="4"/>
+        <line x1="200" y1="160" x2="200" y2="30" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="210" y="35" font-family="Cairo" font-weight="700" font-size="12" fill="#64748b">العمود المقام</text>
+        <line x1="90" y1="55" x2="200" y2="160" stroke="#f59e0b" stroke-width="3.5" marker-end="url(#arI)"/>
+        <text x="95" y="75" font-family="Cairo" font-weight="800" font-size="13" fill="#b45309">شعاع ساقط</text>
+        <line x1="200" y1="160" x2="310" y2="55" stroke="#2563eb" stroke-width="3.5" marker-end="url(#arR)"/>
+        <text x="255" y="75" font-family="Cairo" font-weight="800" font-size="13" fill="#1d4ed8">شعاع منعكس</text>
+        <path d="M 200 120 A 40 40 0 0 0 165 100" fill="none" stroke="#b45309" stroke-width="2"/>
+        <text x="150" y="118" font-family="Cairo" font-weight="800" font-size="13" fill="#b45309">‌⦡ السقوط</text>
+        <path d="M 200 120 A 40 40 0 0 1 235 100" fill="none" stroke="#1d4ed8" stroke-width="2"/>
+        <text x="238" y="118" font-family="Cairo" font-weight="800" font-size="13" fill="#1d4ed8">الانعكاس ⦡</text>
+        <defs>
+          <marker id="arI" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#b45309"/></marker>
+          <marker id="arR" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M0,7 L3.5,0 L7,7 z" fill="#1d4ed8"/></marker>
+        </defs>
+      </svg>
+    </div>
+    <p class="fig-cap">زاوية السقوط (بين الشعاع الساقط والعمود المقام) = زاوية الانعكاس (بين الشعاع المنعكس والعمود المقام) دائماً.</p>
+  </div>
+
+  <div class="lawbox">
+    قانون الانعكاس
+    <div class="formula">زاوية السقوط = زاوية الانعكاس</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: انكسار الضوء ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "انعكاس الضوء هو:",
+    opts: ["اختراق الضوء لسطح شفاف", "ارتداد أشعة الضوء عن سطح", "امتصاص السطح للضوء كلياً", "انحناء مسار الضوء بين وسطين"], a: 1,
+    why: "الانعكاس هو ارتداد الأشعة الضوئية عن سطح بدل اختراقه." },
+  { q: "زوايا السقوط والانعكاس تُقاس دائماً من:",
+    opts: ["سطح المرآة نفسه", "الخط العمودي على السطح (العمود المقام)", "أعلى نقطة بالمرآة", "لا تُقاس بطريقة محددة"], a: 1,
+    why: "قانون الانعكاس يعرّف الزوايا بالنسبة للعمود المقام على السطح، لا السطح نفسه." },
+  { q: "إذا كانت زاوية سقوط شعاع ضوئي على مرآة مستوية 40 درجة، فإن زاوية الانعكاس تساوي:",
+    opts: ["40 درجة", "50 درجة", "80 درجة", "20 درجة"], a: 0,
+    why: "وفق قانون الانعكاس: زاوية السقوط = زاوية الانعكاس = 40 درجة." },
+  { q: "قانون الانعكاس ينص على أن:",
+    opts: ["زاوية السقوط أكبر من زاوية الانعكاس دائماً", "زاوية السقوط تساوي زاوية الانعكاس", "لا علاقة بين الزاويتين", "زاوية الانعكاس ثابتة دائماً عند 90 درجة"], a: 1,
+    why: "قانون الانعكاس الأساسي: زاوية السقوط = زاوية الانعكاس." },
+  { q: "رؤيتك لصورتك بالمرآة تُفسَّر أساساً بظاهرة:",
+    opts: ["انكسار الضوء", "انعكاس الضوء", "امتصاص الضوء الكامل", "تشتت الضوء فقط"], a: 1,
+    why: "المرآة تعكس أشعة الضوء الساقطة عليها بنظام (وفق قانون الانعكاس)، فتتكوّن الصورة." }
+], { onDone: function (stars) { Phy.setLesson("g2c6", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

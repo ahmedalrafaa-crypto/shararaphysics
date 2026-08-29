@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: الحركة — الثاني متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الحركة</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: الحركة</h1>
+    <p>١٢ سؤالاً منوّعة على دروس الفصل الثلاثة — اختيار من متعدد، مفاهيمي، ومسائل بسيطة. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g2c1");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "الوحدة الأساسية للزمن بالنظام الدولي (SI) هي:",
+    opts: ["الدقيقة", "الساعة", "الثانية", "اليوم"], a: 2,
+    why: "الثانية هي الوحدة الأساسية للزمن بالنظام الدولي." },
+  { q: "٢ كيلوغرام تساوي بوحدة الغرام:",
+    opts: ["20 غم", "200 غم", "2000 غم", "20000 غم"], a: 2,
+    why: "1 كغم = 1000 غم، فـ2 كغم = 2000 غم." },
+  { q: "لماذا لا نستعمل مسطرة السنتيمتر لقياس سمك شعرة واحدة؟",
+    opts: ["لأن الشعرة لا تُقاس أصلاً", "لأن الأداة غير دقيقة كفاية لهذا القياس الدقيق جداً", "لأن الشعرة ليست مادة", "لا سبب فيزيائي لذلك"], a: 1,
+    why: "دقة القياس تعتمد على دقة الأداة — مسطرة السنتيمتر خشنة جداً لقياس شيء بحجم شعرة." },
+  { q: "شخص جالس بمقعده داخل سيارة متوقفة عند إشارة المرور. عندما تتحرك السيارة المجاورة للأمام، يشعر أحياناً وكأن سيارته هو من يتحرك للخلف. هذا يوضّح:",
+    opts: ["أن الحركة مطلقة لا تتغيّر", "نسبية الحركة واعتمادها على نقطة الإسناد", "أن السيارة المجاورة هي الخاطئة", "خطأ بالعين لا علاقة له بالفيزياء"], a: 1,
+    why: "الإحساس بالحركة يعتمد على نقطة الإسناد التي نلاحظ منها — وهذا بالضبط معنى نسبية الحركة." },
+  { q: "دوران الأرض حول محورها مثال على الحركة:",
+    opts: ["المستقيمة", "الدائرية", "الاهتزازية", "لا نوع لها"], a: 1,
+    why: "الأرض تدور حول محور ثابت، وهذا تعريف الحركة الدائرية." },
+  { q: "وتر آلة الكمان بعد نقره يهتز يميناً ويساراً حول موضعه الأصلي. هذا مثال على الحركة:",
+    opts: ["المستقيمة", "الدائرية", "الاهتزازية", "العشوائية"], a: 2,
+    why: "التكرار ذهاباً وإياباً حول موضع ثابت هو تعريف الحركة الاهتزازية." },
+  { q: "الكمية التي لها مقدار واتجاه معاً تسمى:",
+    opts: ["كمية قياسية", "كمية متجهة", "كمية ثابتة", "كمية عشوائية"], a: 1,
+    why: "الكمية المتجهة (كالإزاحة والسرعة المتجهة) لها مقدار واتجاه معاً، خلافاً للكمية القياسية." },
+  { q: "دراج قطع 100 م شمالاً ثم رجع 40 م جنوباً. المسافة الكلية التي قطعها:",
+    opts: ["60 م", "100 م", "140 م", "40 م"], a: 2,
+    why: "المسافة تجمع كل الأطوال المقطوعة بغض النظر عن الاتجاه: 100 + 40 = 140 م." },
+  { q: "بنفس مثال السؤال السابق، إزاحة الدراج النهائية:",
+    opts: ["140 م شمالاً", "60 م شمالاً", "100 م شمالاً", "صفر"], a: 1,
+    why: "الإزاحة = الموضع النهائي − الموضع الابتدائي = 100 − 40 = 60 م شمالاً (باتجاه نقطة الانطلاق الأصلي)." },
+  { q: "قطار قطع مسافة 240 كم خلال 3 ساعات. سرعته المتوسطة:",
+    opts: ["80 كم/سا", "60 كم/سا", "720 كم/سا", "40 كم/سا"], a: 0,
+    why: "السرعة = المسافة ÷ الزمن = 240 ÷ 3 = 80 كم/سا." },
+  { q: "عدّاء يجري بسرعة ثابتة 5 م/ث. المسافة التي يقطعها خلال 20 ثانية:",
+    opts: ["4 م", "15 م", "25 م", "100 م"], a: 3,
+    why: "المسافة = السرعة × الزمن = 5 × 20 = 100 م." },
+  { q: "طالب أكمل دورة كاملة حول الملعب ورجع لنقطة انطلاقه بالضبط. ماذا عن إزاحته النهائية؟",
+    opts: ["تساوي محيط الملعب", "نصف المحيط", "صفر", "لا يمكن تحديدها"], a: 2,
+    why: "بما أن نقطة النهاية = نقطة البداية، فالإزاحة (التغيّر بالموضع) = صفر، رغم أن المسافة المقطوعة (محيط الملعب) كبيرة." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g2c1", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

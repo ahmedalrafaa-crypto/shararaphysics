@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: بقية الآلات البسيطة — الثاني متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الآلات البسيطة</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>📐 الدرس 2: بقية الآلات البسيطة</h1>
+    <p>المنحدر أخف من السلّم العمودي، والبرغي يثبّت بقوة هائلة بلفّة إصبع — نفس الفكرة الفيزيائية وراء الاثنين.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">⛰️</span> السطح المائل</div>
+  <div class="card">
+    <p>السطح المائل يقلّل القوة اللازمة لرفع حمل، مقابل زيادة المسافة التي تدفع بها الحمل — لهذا دفع عربة على منحدر أخف من رفعها عمودياً لنفس الارتفاع، رغم أنك تقطع مسافة أطول.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🌀</span> البريمة والإسفين</div>
+  <div class="card">
+    <p><b>البريمة (البرغي):</b> سطح مائل ملفوف حول محور أسطواني — كل لفّة تدفعه للأمام مسافة صغيرة بقوة دوران بسيطة. <b>الإسفين:</b> سطح مائل متحرك، يُستعمل لشق أو فصل مادة (كنصل الفأس أو السكين) — كلما كانت زاويته أحدّ، احتاج قوة أقل للاختراق.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">⚙️</span> العجلة والمحور، والبكرة</div>
+  <div class="card">
+    <p><b>العجلة والمحور:</b> عجلة كبيرة مثبّتة بمحور صغير يدوران معاً — تقلّل الاحتكاك وتسهّل الحركة (كعجلات السيارة ومقبض الباب). <b>البكرة:</b> عجلة مجرّاة عليها حبل — <b>البكرة الثابتة</b> تغيّر اتجاه القوة فقط (تسحب للأسفل لترفع للأعلى)، أما <b>البكرة المتحركة</b> فتقلّل مقدار القوة اللازمة أيضاً.</p>
+  </div>
+
+  <div class="notebox">
+    <b>لاحظ:</b> كل الآلات البسيطة تشترك بنفس الفكرة — لا تُلغي الشغل المطلوب، بس تعيد توزيعه بين القوة والمسافة بما يناسبنا.
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="questions.html">اختبار الفصل الخفيف 🏆</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "دفع صندوق على منحدر (سطح مائل) بدل رفعه عمودياً يحتاج قوة:",
+    opts: ["أكبر لكن مسافة أقصر", "أقل لكن مسافة أطول", "نفس القوة ونفس المسافة", "لا علاقة للمنحدر بالقوة"], a: 1,
+    why: "السطح المائل يقلّل القوة اللازمة مقابل زيادة المسافة المقطوعة." },
+  { q: "البرغي (البريمة) هو أساساً:",
+    opts: ["بكرة ملفوفة", "سطح مائل ملفوف حول محور", "عتلة من النوع الأول", "إسفين متحرك فقط"], a: 1,
+    why: "البرغي سطح مائل ملفوف حول محور أسطواني، وكل لفّة تدفعه للأمام مسافة صغيرة." },
+  { q: "نصل السكين مثال على:",
+    opts: ["العجلة والمحور", "البكرة الثابتة", "الإسفين", "العتلة"], a: 2,
+    why: "نصل السكين إسفين — سطح مائل متحرك يُستعمل للشق والفصل." },
+  { q: "البكرة الثابتة (المثبّتة بمكانها) تفيد أساساً في:",
+    opts: ["تقليل مقدار القوة المطلوبة", "تغيير اتجاه القوة فقط دون تقليل مقدارها", "مضاعفة القوة دائماً", "لا فائدة منها"], a: 1,
+    why: "البكرة الثابتة تسمح بسحب الحبل للأسفل لرفع حمل للأعلى — تغيّر الاتجاه فقط." },
+  { q: "مقبض الباب الدائري مثال على آلة بسيطة من نوع:",
+    opts: ["العجلة والمحور", "الإسفين", "البكرة المتحركة", "السطح المائل"], a: 0,
+    why: "المقبض (عجلة) يدور حول محور صغير (قضيب القفل)، وهذا مبدأ العجلة والمحور." }
+], { onDone: function (stars) { Phy.setLesson("g2c4", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

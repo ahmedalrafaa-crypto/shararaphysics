@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: قوانين الحركة — الثاني متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">قوانين الحركة</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: قوانين الحركة</h1>
+    <p>١٢ سؤالاً منوّعة على دروس الفصل — اختيار من متعدد، مفاهيمي، ومسائل بسيطة. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g2c2");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "القانون الأول لنيوتن يوصف عادة بقانون:",
+    opts: ["الفعل وردّ الفعل", "القصور الذاتي", "الجاذبية", "حفظ الطاقة"], a: 1,
+    why: "القانون الأول يصف ميل الجسم للبقاء على حالته (القصور الذاتي)." },
+  { q: "القانون الثاني لنيوتن يُعبَّر عنه بالصيغة:",
+    opts: ["F = m + a", "F = m × a", "F = m ÷ a", "F = a ÷ m"], a: 1,
+    why: "القوة = الكتلة × التسارع." },
+  { q: "قوة محصّلة 24 نيوتن أثّرت على جسم كتلته 6 كغم. تسارعه:",
+    opts: ["4 م/ث²", "144 م/ث²", "18 م/ث²", "30 م/ث²"], a: 0,
+    why: "a = F ÷ m = 24 ÷ 6 = 4 م/ث²." },
+  { q: "جسم كتلته 2 كغم يحتاج تسارعاً مقداره 3 م/ث². القوة المحصّلة اللازمة:",
+    opts: ["1.5 نيوتن", "5 نيوتن", "6 نيوتن", "0.67 نيوتن"], a: 2,
+    why: "F = m × a = 2 × 3 = 6 نيوتن." },
+  { q: "عند قفز شخص من قارب صغير إلى الرصيف، يتحرّك القارب للخلف. هذا مثال على:",
+    opts: ["القانون الأول لنيوتن", "القانون الثالث لنيوتن", "قانون الجاذبية فقط", "لا تفسير له"], a: 1,
+    why: "دفع الشخص للقارب للخلف (فعل) أثناء قفزه للأمام يقابله ردّ فعل يدفع القارب بالاتجاه المعاكس." },
+  { q: "لماذا يصعب إيقاف شاحنة مسرعة بسرعة مقارنة بدراجة بنفس السرعة؟",
+    opts: ["لأن للشاحنة قصوراً ذاتياً أكبر بسبب كتلتها الكبيرة", "لأن الشاحنة أسرع دائماً", "لا علاقة للكتلة بالقصور الذاتي", "لأن الدراجة بلا كتلة"], a: 0,
+    why: "كلما زادت الكتلة، زاد القصور الذاتي، فصار تغيير حالة حركة الجسم (تسريعه أو إيقافه) أصعب." },
+  { q: "الجاذبية قوة تجاذب تؤثر بين:",
+    opts: ["الأجسام المشحونة فقط", "أي جسمين لهما كتلة", "المعادن فقط", "الأجسام الساخنة فقط"], a: 1,
+    why: "أي جسمين لهما كتلة يتجاذبان بقوة الجاذبية." },
+  { q: "الكمية التي تبقى ثابتة مهما تغيّر مكان الجسم هي:",
+    opts: ["الوزن", "الكتلة", "كلاهما يتغيّر معاً", "لا شيء ثابت"], a: 1,
+    why: "الكتلة مقدار المادة بالجسم، ثابتة أينما ذهب — بخلاف الوزن المعتمد على g." },
+  { q: "جسم كتلته 8 كغم على الأرض (g ≈ 9.8 م/ث²). وزنه:",
+    opts: ["8 نيوتن", "9.8 نيوتن", "78.4 نيوتن", "1.225 نيوتن"], a: 2,
+    why: "الوزن = m × g = 8 × 9.8 = 78.4 نيوتن." },
+  { q: "رائد فضاء وزنه على الأرض 700 نيوتن. عند انتقاله للقمر حيث g أصغر بكثير، وزنه هناك:",
+    opts: ["يبقى 700 نيوتن بالضبط", "يصبح أكبر من 700 نيوتن", "يقلّ عن 700 نيوتن", "يصبح صفراً تماماً"], a: 2,
+    why: "الوزن = m × g، وبما أن g على القمر أصغر بكثير من الأرض بينما الكتلة ثابتة، فالوزن يقلّ." },
+  { q: "أيّ العبارات صحيحة؟",
+    opts: ["كلما زادت المسافة بين جسمين، زادت قوة الجاذبية بينهما", "كلما زادت كتلتا الجسمين، زادت قوة الجاذبية بينهما", "الجاذبية لا علاقة لها بالكتلة", "الجاذبية تؤثر فقط على الأجسام الساكنة"], a: 1,
+    why: "قوة الجاذبية تزداد بزيادة كتلتي الجسمين، وتقلّ بزيادة المسافة بينهما (عكس ما ذُكر بالخيار الأول)." },
+  { q: "دفعت طاولة بقوة 10 نيوتن فما تحرّكت. وفق القانون الثالث لنيوتن، ردّ فعل الطاولة على يدك:",
+    opts: ["صفر لأن الطاولة ثابتة", "10 نيوتن بالاتجاه المعاكس", "5 نيوتن فقط", "20 نيوتن"], a: 1,
+    why: "ردّ الفعل يساوي الفعل بالمقدار (10 نيوتن) ويعاكسه بالاتجاه، بغض النظر عن كون الجسم تحرّك أم لا." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g2c2", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

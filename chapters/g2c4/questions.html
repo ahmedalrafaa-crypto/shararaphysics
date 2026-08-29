@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: الآلات البسيطة — الثاني متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الآلات البسيطة</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: الآلات البسيطة</h1>
+    <p>١٢ سؤالاً منوّعة على دروس الفصل — اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g2c4");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "العتلة قضيب صلب يدور حول نقطة ثابتة تسمى:",
+    opts: ["نقطة القوة", "نقطة الارتكاز", "نقطة الحمل", "محور الدوران المتحرك"], a: 1,
+    why: "نقطة الارتكاز هي النقطة الثابتة التي تدور حولها العتلة." },
+  { q: "الجزّازة (مقص الحديقة) مثال على عتلة النوع:",
+    opts: ["الأول (الارتكاز بالوسط)", "الثاني", "الثالث", "ليست عتلة"], a: 0,
+    why: "بمقص الحديقة، نقطة الارتكاز (المفصل) تقع بين مقبضي القوة وشفرتي القص (الحمل)." },
+  { q: "كسّارة الجوز مثال على عتلة النوع:",
+    opts: ["الأول", "الثاني (الحمل بالوسط)", "الثالث", "ليست عتلة"], a: 1,
+    why: "بكسّارة الجوز، الحمل (الجوزة) يقع بالوسط بين نقطة الارتكاز والقوة المؤثرة." },
+  { q: "دفع عربة على منحدر بدل رفعها عمودياً يحتاج:",
+    opts: ["قوة أكبر ومسافة أقصر", "قوة أقل ومسافة أطول", "نفس القوة تماماً", "قوة أقل ومسافة أقصر معاً"], a: 1,
+    why: "السطح المائل (المنحدر) يقلّل القوة اللازمة مقابل زيادة المسافة المقطوعة." },
+  { q: "البرغي (البريمة) هو أساساً:",
+    opts: ["عتلة ملفوفة", "سطح مائل ملفوف حول محور", "بكرة متحركة", "إسفين ثابت فقط"], a: 1,
+    why: "البرغي سطح مائل ملتف حول محور أسطواني." },
+  { q: "نصل الفأس مثال على آلة بسيطة من نوع:",
+    opts: ["العجلة والمحور", "الإسفين", "البكرة الثابتة", "العتلة من النوع الثاني"], a: 1,
+    why: "نصل الفأس إسفين يُستعمل للشق بتركيز القوة على حافة رفيعة." },
+  { q: "البكرة الثابتة تفيد أساساً في:",
+    opts: ["تقليل مقدار القوة اللازمة", "تغيير اتجاه القوة فقط", "مضاعفة القوة تلقائياً", "لا فائدة فيزيائية منها"], a: 1,
+    why: "البكرة الثابتة تغيّر اتجاه سحب الحبل (تسحب للأسفل لترفع للأعلى) دون تقليل مقدار القوة." },
+  { q: "عجلات السيارة، مع المحور الذي تدور حوله، مثال على مبدأ:",
+    opts: ["العجلة والمحور", "الإسفين", "السطح المائل", "البكرة المتحركة"], a: 0,
+    why: "العجلة الكبيرة (الإطار) المثبّتة بمحور صغير تدوران معاً، وهذا تعريف العجلة والمحور." },
+  { q: "لتسهيل رفع حمل ثقيل بعتلة، أفضل تعديل هو تحريك نقطة الارتكاز:",
+    opts: ["بعيداً عن الحمل", "قريباً من الحمل وبعيداً عن القوة", "خارج العتلة", "لا فرق لموقعها إطلاقاً"], a: 1,
+    why: "كلما اقتربت نقطة الارتكاز من الحمل وابتعدت عن القوة، سهل رفع الحمل بقوة أقل." },
+  { q: "أيّ العبارات تصف الفكرة المشتركة بين كل الآلات البسيطة؟",
+    opts: ["تُلغي الشغل المطلوب كلياً", "تعيد توزيع الشغل بين القوة والمسافة، لا تُلغيه", "تزيد الطاقة الكلية من عدم", "لا فكرة مشتركة بينها"], a: 1,
+    why: "الآلات البسيطة لا تُلغي الشغل المطلوب، بل تسمح بإنجازه بقوة أقل مقابل مسافة أطول، أو العكس." },
+  { q: "ملقط تحريك الفحم (كماشة النار) مثال على عتلة النوع:",
+    opts: ["الأول", "الثاني", "الثالث (القوة بالوسط)", "ليست عتلة"], a: 2,
+    why: "بهذا الملقط، القوة (قبضة اليد) تقع بالوسط بين نقطة الارتكاز والحمل." },
+  { q: "زاوية الإسفين الحادّة جداً (رفيعة) مقارنة بإسفين زاويته أوسع، تحتاج قوة اختراق:",
+    opts: ["أكبر", "أقل", "نفس القوة تماماً", "لا علاقة للزاوية بالقوة"], a: 1,
+    why: "كلما كانت زاوية الإسفين أحدّ (أرفع)، احتاج قوة أقل للاختراق — لهذا السكاكين الحادة تقطع بسهولة أكبر." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g2c4", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: الحركة الموجية والصوت — الثاني متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الحركة الموجية والصوت</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: الحركة الموجية والصوت</h1>
+    <p>١٢ سؤالاً منوّعة على دروس الفصل — اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g2c5");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "الموجة تنقل من مكان لآخر:",
+    opts: ["المادة نفسها", "الطاقة دون نقل المادة", "الكتلة فقط", "لا تنقل شيئاً"], a: 1,
+    why: "الموجة تنقل الطاقة عبر الوسط دون أن تنقل جزيئات المادة معها إلى مسافة بعيدة." },
+  { q: "الموجة الكهرومغناطيسية (كالضوء)، بخلاف الميكانيكية:",
+    opts: ["تحتاج وسطاً مادياً حتماً", "تنتقل حتى بالفراغ التام", "لا تنتقل إلا بالماء", "أبطأ من الصوت دائماً"], a: 1,
+    why: "الموجات الكهرومغناطيسية لا تحتاج وسطاً مادياً، فتنتقل حتى بالفراغ." },
+  { q: "بالموجة الطولية، اتجاه اهتزاز الوسط يكون:",
+    opts: ["عمودياً على اتجاه انتشار الموجة", "بنفس اتجاه انتشار الموجة", "عشوائياً تماماً", "لا يهتز الوسط إطلاقاً"], a: 1,
+    why: "بالموجة الطولية (كالصوت)، يهتز الوسط بنفس اتجاه انتشار الموجة." },
+  { q: "المسافة بين قمّتين متتاليتين على الموجة تسمى:",
+    opts: ["السعة", "التردد", "الطول الموجي", "الشدة"], a: 2,
+    why: "الطول الموجي هو المسافة بين نقطتين متطابقتين متتاليتين، كقمّتين متتاليتين." },
+  { q: "الصوت من حيث النوع هو موجة:",
+    opts: ["كهرومغناطيسية مستعرضة", "ميكانيكية طولية", "ميكانيكية مستعرضة", "غير قابلة للتصنيف"], a: 1,
+    why: "الصوت موجة ميكانيكية طولية تحتاج وسطاً مادياً لتنتقل خلاله." },
+  { q: "بالفراغ الكوني التام، الصوت:",
+    opts: ["ينتقل بسرعة الضوء", "لا ينتقل إطلاقاً لعدم وجود وسط مادي", "ينتقل بنفس سرعته بالهواء", "ينتقل بشكل أبطأ فقط"], a: 1,
+    why: "الصوت يحتاج وسطاً مادياً حتماً — بالفراغ التام لا يوجد وسط، فلا ينتقل." },
+  { q: "سرعة الصوت تكون عادة الأكبر بالوسط:",
+    opts: ["الغازي", "السائل", "الصلب", "لا فرق بين الأوساط"], a: 2,
+    why: "تلاصق جزيئات المواد الصلبة ينقل اهتزاز الصوت بسرعة أكبر من السوائل والغازات." },
+  { q: "الخاصية التي تصف ارتفاع الصوت أو انخفاضه (بصوت أم همس) تسمى:",
+    opts: ["طبقة الصوت", "شدة الصوت", "الطول الموجي", "سرعة الصوت"], a: 1,
+    why: "شدة الصوت (بالديسيبل) تصف مدى ارتفاعه أو انخفاضه." },
+  { q: "الخاصية التي تصف حدّة الصوت (رفيع) أو غلظته (عميق) تسمى:",
+    opts: ["شدة الصوت", "طبقة الصوت", "سرعة الصوت", "السعة"], a: 1,
+    why: "طبقة الصوت تصف حدّته أو غلظته، وهي مختلفة عن شدته." },
+  { q: "أقصى إزاحة للوسط عن موضع الاستواء بالموجة تسمى:",
+    opts: ["الطول الموجي", "التردد", "السعة", "الزمن الدوري"], a: 2,
+    why: "السعة هي أقصى إزاحة عن خط الاستواء بالموجة." },
+  { q: "إلصاق الأذن بقضيب معدني لسماع صوت طرقة بالطرف الآخر أسرع من سماعها بالهواء يُفسَّر بـ:",
+    opts: ["أن المعدن يمنع الصوت بالهواء", "سرعة الصوت بالمعدن الصلب أكبر من سرعته بالهواء", "لا علاقة للوسط بسرعة الصوت", "أن الصوت لا ينتقل بالمعادن"], a: 1,
+    why: "سرعة الصوت بالمواد الصلبة أكبر بكثير من سرعته بالهواء." },
+  { q: "موجات الماء الدائرية الناتجة عن رمي حجر ببركة هادئة مثال على موجة:",
+    opts: ["كهرومغناطيسية", "ميكانيكية", "لا تُصنَّف كموجة", "طاقة نووية"], a: 1,
+    why: "موجات الماء تحتاج وسطاً مادياً (الماء) لتنتقل خلاله، فهي موجة ميكانيكية." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g2c5", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

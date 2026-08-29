@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: وصف الحركة — الثاني متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الحركة</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>📐 الدرس 3: وصف الحركة</h1>
+    <p>جهاز GPS بسيارتك يقول لك "قطعت ٨ كم"، لكن المسافة المباشرة بينك وبين وجهتك ٥ كم بس. ليش الفرق؟ لأن الفيزياء تفرّق بين شيئين مختلفين تماماً: المسافة والإزاحة.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🛣️</span> المسافة والإزاحة</div>
+  <div class="card">
+    <p><b>المسافة</b> هي طول المسار الكلي الذي يقطعه الجسم، بغض النظر عن شكل المسار أو اتجاهه — <b>كمية قياسية</b> (لها مقدار فقط، بلا اتجاه).</p>
+    <p style="margin-top:8px"><b>الإزاحة</b> هي التغيّر بموضع الجسم، مقاسة بخط مستقيم من نقطة البداية إلى نقطة النهاية مباشرة — <b>كمية متجهة</b> (لها مقدار واتجاه معاً).</p>
+  </div>
+
+  <div class="figbox">
+    <h3>🗺️ المسافة مقابل الإزاحة</h3>
+    <p class="fig-sub">نفس نقطتي البداية والنهاية، لكن مسارين مختلفين تماماً بالطول.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مقارنة المسافة المقطوعة على مسار متعرّج بالإزاحة المستقيمة بين نفس نقطتي البداية والنهاية">
+        <path d="M 70 170 Q 140 60 220 140 T 340 90 T 490 60" fill="none" stroke="#ea580c" stroke-width="4" stroke-linecap="round"/>
+        <line x1="70" y1="170" x2="490" y2="60" stroke="#4d96ff" stroke-width="4" stroke-dasharray="10 8" stroke-linecap="round"/>
+        <circle cx="70" cy="170" r="9" fill="#1d4ed8"/>
+        <circle cx="490" cy="60" r="9" fill="#1d4ed8"/>
+        <text x="55" y="196" font-family="Cairo" font-weight="800" font-size="14" fill="#1d4ed8">البداية</text>
+        <text x="465" y="42" font-family="Cairo" font-weight="800" font-size="14" fill="#1d4ed8">النهاية</text>
+        <text x="230" y="70" font-family="Cairo" font-weight="900" font-size="16" fill="#ea580c">المسافة (المسار الكامل)</text>
+        <text x="230" y="150" font-family="Cairo" font-weight="900" font-size="16" fill="#2563eb">الإزاحة (خط مستقيم)</text>
+      </svg>
+    </div>
+    <p class="fig-cap">المسافة (البرتقالي) تتبع المسار الفعلي المتعرّج بطوله الكامل، بينما الإزاحة (الأزرق المتقطّع) خط مستقيم مباشر من البداية للنهاية فقط.</p>
+  </div>
+
+  <div class="notebox">
+    <b>مثال يوضّح الفرق:</b> لاعب يجري حول ملعب دائري كامل ويرجع لنفس نقطة البداية بالضبط: المسافة التي قطعها = محيط الملعب كاملاً (رقم كبير)، لكن الإزاحة = صفر! لأنه رجع لنفس النقطة اللي بدأ منها.
+  </div>
+
+  <div class="section-title"><span class="ico">⚡</span> السرعة والسرعة المتجهة</div>
+  <div class="card">
+    <p><b>السرعة</b> (كمية قياسية) = المسافة المقطوعة ÷ الزمن المستغرق. أمّا <b>السرعة المتجهة</b> (كمية متجهة) فتضيف الاتجاه: = الإزاحة ÷ الزمن.</p>
+  </div>
+
+  <div class="lawbox">
+    السرعة
+    <div class="formula">السرعة = المسافة ÷ الزمن</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">سيارة قطعت مسافة ١٥٠ كم خلال ساعتين ونصف. احسب سرعتها المتوسطة بوحدة كم/سا.</div>
+    <div class="givens">المعطيات: المسافة = ١٥٠ كم، الزمن = ٢٫٥ سا. المطلوب: السرعة.</div>
+    <div class="step"><b>نطبّق القانون:</b>
+      <div class="math">السرعة = المسافة ÷ الزمن = ١٥٠ ÷ ٢٫٥</div></div>
+    <div class="step"><b>الناتج:</b>
+      <div class="math">السرعة = ٦٠ كم/سا</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="questions.html">اختبار الفصل الخفيف 🏆</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "الكمية التي لها مقدار فقط بلا اتجاه تسمى كمية:",
+    opts: ["متجهة", "قياسية", "عكسية", "نسبية"], a: 1,
+    why: "الكمية القياسية لها مقدار فقط (كالمسافة)، بينما الكمية المتجهة لها مقدار واتجاه معاً (كالإزاحة)." },
+  { q: "طالب مشى ٣٠٠ م شرقاً ثم رجع ١٠٠ م غرباً. المسافة الكلية التي قطعها:",
+    opts: ["200 م", "300 م", "400 م", "100 م"], a: 2,
+    why: "المسافة تجمع كل الأطوال المقطوعة بغض النظر عن الاتجاه: 300 + 100 = 400 م." },
+  { q: "بنفس مثال السؤال السابق، إزاحة الطالب النهائية:",
+    opts: ["400 م شرقاً", "200 م شرقاً", "300 م شرقاً", "صفر"], a: 1,
+    why: "الإزاحة = الموضع النهائي − الموضع الابتدائي = 300 − 100 = 200 م شرقاً." },
+  { q: "دراج قطع 40 كم خلال ساعتين. سرعته المتوسطة:",
+    opts: ["80 كم/سا", "20 كم/سا", "40 كم/سا", "2 كم/سا"], a: 1,
+    why: "السرعة = المسافة ÷ الزمن = 40 ÷ 2 = 20 كم/سا." },
+  { q: "عدّاء أكمل لفة كاملة حول مضمار دائري ورجع لنقطة انطلاقه بالضبط. ماذا عن إزاحته؟",
+    opts: ["تساوي محيط المضمار", "نصف محيط المضمار", "صفر", "لا يمكن حسابها"], a: 2,
+    why: "بما أن نقطة النهاية هي نفسها نقطة البداية، فالتغيّر بالموضع (الإزاحة) = صفر، رغم أن المسافة المقطوعة كبيرة." }
+], { onDone: function (stars) { Phy.setLesson("g2c1", "3", { stars: stars }); } });
+</script>
+</body>
+</html>
