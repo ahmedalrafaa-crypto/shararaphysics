@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: القوة — الأول متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g1c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">القوة</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: القوة</h1>
+    <p>١٢ سؤالاً منوّعة على دروس الفصل — اختيار من متعدد، مفاهيمي، ومسائل بسيطة. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g1c2");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "القوة هي كل مؤثر يغيّر أو يحاول أن يغيّر:",
+    opts: ["شكل الجسم فقط", "حالته الحركية فقط", "حالته الحركية أو شكله", "لون الجسم"], a: 2,
+    why: "التعريف الكامل للقوة يشمل تغيير الحالة الحركية أو الشكل معاً." },
+  { q: "وحدة قياس القوة في النظام الدولي هي:",
+    opts: ["الجول", "النيوتن", "الواط", "الباسكال"], a: 1,
+    why: "القوة تقاس بالنيوتن (N)." },
+  { q: "جسم كتلته 5 kg. ما وزنه على سطح الأرض (g=9.8 N/kg)؟",
+    opts: ["5 N", "9.8 N", "49 N", "0.51 N"], a: 2,
+    why: "w = m×g = 5 × 9.8 = 49 N." },
+  { q: "تبقى كتلة الجسم ثابتة أينما ذهب، بينما يتغيّر ___ من كوكب لآخر:",
+    opts: ["حجمه", "وزنه", "شكله", "لونه"], a: 1,
+    why: "الوزن يعتمد على قوة الجاذبية التي تختلف من كوكب لآخر، أما الكتلة فثابتة." },
+  { q: "قوة دفع اليد لعربة تجاه أمامها تصنَّف من:",
+    opts: ["قوى المجال", "القوة الكهربائية", "قوى التماس", "القوة المغناطيسية"], a: 2,
+    why: "الدفع باليد ناتج عن تماس مباشر مع العربة، فهو من قوى التماس." },
+  { q: "القوة الكهرومغناطيسية تُعدّ إحدى:",
+    opts: ["القوى الأربع الأساسية في الطبيعة (قوى مجال)", "قوى التماس", "قوى الاحتكاك فقط", "قوى ميكانيكية بحتة"], a: 0,
+    why: "القوة الكهرومغناطيسية إحدى القوى الأربع الأساسية في الطبيعة، وهي قوة مجال تؤثر عن بُعد." },
+  { q: "قوتان متعاكستان مقدارهما 500 N و200 N. مقدار محصلتهما:",
+    opts: ["700 N", "300 N", "100 N", "500 N"], a: 1,
+    why: "القوتان متعاكستان فتُطرح الأصغر من الأكبر: 500 − 200 = 300 N." },
+  { q: "عندما تكون محصلة القوى المؤثرة في جسم لا تساوي صفراً (Fnet≠0)، فإن ذلك:",
+    opts: ["يبقيه ساكناً حتماً", "يغيّر سرعته أو اتجاه حركته", "لا يؤثر في حركته إطلاقاً", "يزيد من كتلته"], a: 1,
+    why: "القوى غير المتزنة (Fnet≠0) هي التي تُحدث تغييراً في سرعة الجسم أو اتجاهه." },
+  { q: "عنصر تمثيل القوة بالرسم الذي يحدده طول السهم هو:",
+    opts: ["الاتجاه", "نقطة التأثير", "المقدار", "خط الفعل"], a: 2,
+    why: "طول السهم يمثل مقدار القوة." },
+  { q: "ركل كرة قدم ساكنة فجعلها تتحرك مثال على قوة:",
+    opts: ["توقف حركة", "تغيّر اتجاه حركة فقط", "متزنة", "تُنشئ حركة"], a: 3,
+    why: "الكرة كانت ساكنة ثم اكتسبت حركة، فهذا مثال على قوة تُنشئ حركة." },
+  { q: "قوتان متعامدتان مقدارهما 9 N و12 N. مقدار محصلتهما:",
+    opts: ["21 N", "3 N", "108 N", "15 N"], a: 3,
+    why: "بنظرية فيثاغورس: Fnet = √(9²+12²) = √(81+144) = √225 = 15 N." },
+  { q: "أيّ القوى الآتية مثال على قوة تماس؟",
+    opts: ["الجاذبية الأرضية", "القوة الكهربائية", "ضغط اليد على كرة مطاطية", "القوة المغناطيسية"], a: 2,
+    why: "ضغط اليد على الكرة ناتج عن تماس فعلي مباشر، أما البقية فقوى مجال تؤثر عن بُعد." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g1c2", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

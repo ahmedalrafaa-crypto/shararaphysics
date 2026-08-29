@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: الضغط — الأول متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g1c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الضغط</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: الضغط</h1>
+    <p>١٢ سؤالاً منوّعة على دروس الفصل الثلاثة — اختيار من متعدد، مفاهيمي، ومسائل بسيطة. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g1c3");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "الضغط يساوي:",
+    opts: ["القوة العمودية ÷ المساحة", "القوة × المساحة", "الكتلة ÷ الحجم", "المساحة ÷ القوة"], a: 0,
+    why: "P = F/A، أي القوة العمودية مقسومة على مساحة السطح." },
+  { q: "وحدة قياس الضغط هي:",
+    opts: ["الجول", "الباسكال", "النيوتن", "الواط"], a: 1,
+    why: "تقاس وحدة الضغط بالباسكال (Pa) وتساوي N/m²." },
+  { q: "قوة مقدارها 200 N أثّرت في سطح مساحته 0.1 m². الضغط الناتج:",
+    opts: ["200 Pa", "20 Pa", "2000 Pa", "0.0005 Pa"], a: 2,
+    why: "P = F/A = 200 / 0.1 = 2000 Pa." },
+  { q: "سبب صنع إبرة الحقن الطبية بطرف رفيع ومدبب هو:",
+    opts: ["لا علاقة للشكل بالضغط", "لتقليل القوة اللازمة", "لتقليل الضغط الناتج", "لزيادة الضغط عند نفس مقدار القوة"], a: 3,
+    why: "تقليل مساحة الطرف يزيد الضغط الناتج عن القوة نفسها، فيسهل اختراق الجلد." },
+  { q: "يزداد ضغط السائل الساكن في نقطة معينة كلما:",
+    opts: ["زاد عمق النقطة عن سطح السائل", "قلّ عمق النقطة عن السطح", "قلّت كثافة السائل", "بقي العمق ثابتاً"], a: 0,
+    why: "ضغط السائل الساكن يتناسب طردياً مع العمق داخل السائل." },
+  { q: "مقدار الضغط الجوي عند مستوى سطح البحر يساوي تقريباً:",
+    opts: ["100 Pa", "101325 Pa", "1 Pa", "9.8 N"], a: 1,
+    why: "1 atm = 101325 Pa = 760 mmHg عند مستوى سطح البحر." },
+  { q: "زيادة كمية الغاز المحصور في وعاء ثابت الحجم تؤدي إلى:",
+    opts: ["نقصان ضغطه", "ثبوت ضغطه", "زيادة ضغطه", "انعدام ضغطه"], a: 2,
+    why: "زيادة عدد جزيئات الغاز يزيد عدد تصادماتها بجدران الوعاء فيزداد الضغط." },
+  { q: "تعتمد فكرة عمل الأواني المستطرقة (المتصلة من الأسفل) على أن:",
+    opts: ["كثافة السوائل فيها مختلفة دائماً", "ضغط الغاز فوقها متساوٍ فقط", "الجاذبية تختلف بين الأواني", "ضغط السائل الساكن يعتمد على العمق لا على شكل الإناء، فيرتفع لنفس المستوى في الجميع"], a: 3,
+    why: "بما أن ضغط السائل لا يعتمد على شكل الإناء، يرتفع الماء لنفس المستوى الأفقي في كل الأواني المتصلة." },
+  { q: "ينص مبدأ أرخميدس على أن قوة الطفو المؤثرة في جسم مغمور تساوي:",
+    opts: ["وزن السائل الذي أزاحه الجسم", "وزن الجسم الحقيقي", "حجم الجسم المغمور فقط", "كثافة الجسم"], a: 0,
+    why: "هذا هو نص مبدأ أرخميدس بدقة." },
+  { q: "يغطس الجسم في سائل عندما:",
+    opts: ["تكون كثافته أقل من كثافة السائل", "يكون وزنه أكبر من قوة الطفو (كثافته أكبر من السائل)", "يكون وزنه معدوماً", "يكون حجمه كبيراً جداً"], a: 1,
+    why: "الغطس يحدث عندما يكون وزن الجسم أكبر من قوة الطفو المؤثرة فيه، وهذا يعني أن كثافته أكبر من كثافة السائل." },
+  { q: "جسم وزنه الحقيقي 60 N ووزنه الظاهري في الماء 45 N. مقدار قوة الطفو المؤثرة فيه:",
+    opts: ["105 N", "60 N", "15 N", "45 N"], a: 2,
+    why: "قوة الطفو = الوزن الحقيقي − الوزن الظاهري = 60 − 45 = 15 N." },
+  { q: "سبب طفو زيت الطعام فوق سطح الماء هو أن:",
+    opts: ["كثافة الزيت أكبر من كثافة الماء", "الزيت لا يخضع لقوة الطفو إطلاقاً", "لزوجة الزيت أعلى من لزوجة الماء دائماً", "كثافة الزيت أقل من كثافة الماء"], a: 3,
+    why: "كل سائل كثافته أقل من سائل آخر يطفو فوقه عند مزجهما، والزيت أقل كثافة من الماء." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g1c3", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: حفظ الطاقة الميكانيكية — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c5">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الشغل والطاقة والزخم</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔄 الدرس 4: حفظ الطاقة الميكانيكية</h1>
+    <p>الطاقة لا تُخلق من عدم ولا تفنى، لكنها تتحوّل من صورة إلى أخرى. وهذا المبدأ البسيط يحلّ لك مسائل معقّدة بسطرٍ واحد، دون الحاجة إلى قوانين نيوتن إطلاقاً.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🎢</span>
+    <span>عربة الأفعوانية تُسحب ببطء إلى أعلى نقطة، ثم يُتركها العامل تنطلق. من تلك اللحظة لا يدفعها أحد — ومع ذلك تصعد وتهبط وتدور بسرعات مذهلة. من أين تأتي كل هذه السرعة؟ إنها الطاقة الكامنة التي خُزّنت في الأعلى، تتحوّل إلى طاقة حركية في الأسفل، ثم تعود لتُخزَّن مرة أخرى في الصعود التالي.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">⚖️</span> القوى المحافظة وغير المحافظة</div>
+  <div class="card">
+    <p><b>القوة المحافظة</b> هي التي يمكن استرداد الشغل المبذول ضدها كاملاً على هيئة طاقة كامنة. مثالاها: <b>قوة الجاذبية</b> و<b>قوة النابض المرونية</b>. فحين ترفع جسماً إلى أعلى تبذل شغلاً، وحين تتركه يسقط تستردّ هذا الشغل كاملاً على هيئة طاقة حركية.</p>
+    <p><b>القوة غير المحافظة</b> هي التي لا يمكن استرداد شغلها. مثالاها: <b>قوة الاحتكاك</b> و<b>مقاومة الهواء</b>. فالشغل الذي يبذله الاحتكاك يتحوّل إلى <b>حرارة</b> تتبدّد في المحيط ولا يمكن إرجاعها حركةً.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🔋</span> الطاقة الميكانيكية ومبدأ حفظها</div>
+  <div class="card">
+    <p><b>الطاقة الميكانيكية الكلية (E)</b> لجسم هي مجموع طاقته الحركية وطاقته الكامنة:</p>
+  </div>
+  <div class="lawbox">
+    الطاقة الميكانيكية الكلية
+    <div class="formula">E = KE + PE</div>
+  </div>
+  <div class="card">
+    <p>و<b>مبدأ حفظ الطاقة الميكانيكية</b> ينصّ على أنه: إذا كانت القوى المؤثرة في الجسم <b>محافظة فقط</b> (أي بإهمال الاحتكاك ومقاومة الهواء)، فإن الطاقة الميكانيكية الكلية للجسم <b>تبقى ثابتة</b> مهما تغيّر موضعه أو انطلاقه — وما يحدث هو مجرّد <b>تحوّل</b> بين الطاقة الحركية والكامنة.</p>
+  </div>
+  <div class="lawbox">
+    حفظ الطاقة الميكانيكية
+    <div class="formula">KE₁ + PE₁ = KE₂ + PE₂</div>
+  </div>
+  <div class="lawbox">
+    وبصيغتها المفصّلة
+    <div class="formula">½ m v₁² + m g h₁ = ½ m v₂² + m g h₂</div>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 السقوط الحر: الطاقة تتحوّل ولا تضيع</h3>
+    <p class="fig-sub">كرة تسقط من ارتفاع 20m. لاحظ الأعمدة: الكامنة (الصفراء) تتناقص، والحركية (الخضراء) تتزايد بالمقدار نفسه — والمجموع ثابت عند 200 J في كل لحظة.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="تحوّل الطاقة الكامنة إلى حركية أثناء السقوط الحر مع بقاء المجموع ثابتاً">
+        <line x1="40" y1="245" x2="580" y2="245" stroke="#334155" stroke-width="3"/>
+        <line x1="545" y1="245" x2="545" y2="58" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 6"/>
+        <g transform="translate(430,0)">
+          <circle cx="115" cy="45" r="13" fill="#be123c"/>
+          <text x="105" y="22" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#9f1239">h = 20m — v = 0</text>
+          <rect x="10" y="120" width="34" height="100" fill="#f59e0b"/>
+          <rect x="52" y="220" width="34" height="0" fill="#15803d"/>
+          <text x="27" y="112" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#b45309">200</text>
+          <text x="69" y="212" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#15803d">0</text>
+          <text x="48" y="240" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#475569">E = 200 J</text>
+        </g>
+        <g transform="translate(230,0)">
+          <circle cx="115" cy="140" r="13" fill="#be123c"/>
+          <text x="115" y="118" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#9f1239">h = 10m</text>
+          <rect x="10" y="170" width="34" height="50" fill="#f59e0b"/>
+          <rect x="52" y="170" width="34" height="50" fill="#15803d"/>
+          <text x="27" y="162" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#b45309">100</text>
+          <text x="69" y="162" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#15803d">100</text>
+          <text x="48" y="240" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#475569">E = 200 J</text>
+        </g>
+        <g transform="translate(30,0)">
+          <circle cx="115" cy="232" r="13" fill="#be123c"/>
+          <text x="115" y="210" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#9f1239">h = 0</text>
+          <rect x="10" y="220" width="34" height="0" fill="#f59e0b"/>
+          <rect x="52" y="120" width="34" height="100" fill="#15803d"/>
+          <text x="27" y="212" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#b45309">0</text>
+          <text x="69" y="112" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#15803d">200</text>
+          <text x="48" y="240" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#475569">E = 200 J</text>
+        </g>
+        <rect x="395" y="257" width="16" height="14" fill="#f59e0b"/>
+        <text x="348" y="269" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#b45309">طاقة كامنة PE</text>
+        <rect x="255" y="257" width="16" height="14" fill="#15803d"/>
+        <text x="207" y="269" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#15803d">طاقة حركية KE</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="notebox">
+    <b>نتيجة مهمة — انطلاق جسم يسقط من ارتفاع h:</b> عند القمة كل الطاقة كامنة (mgh)، وعند الأرض كلها حركية (½mv²). وبمساواتهما:
+    <br><b>mgh = ½mv²</b> ⟸ ومنها (بعد حذف m) <b>v = √(2gh)</b>.
+    <br>ولاحظ أن <b>الكتلة اختفت</b>! أي أن ريشة وحجراً يسقطان من الارتفاع نفسه (بإهمال مقاومة الهواء) يصلان الأرض بالانطلاق نفسه.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> عند إهمال مقاومة الهواء، يصل جسمان مختلفا الكتلة يسقطان من الارتفاع نفسه إلى الأرض بالانطلاق نفسه.</summary>
+    <div class="ans">لأن حفظ الطاقة الميكانيكية يعطي mgh = ½mv²، وعند حذف الكتلة m من الطرفين نحصل على v = √(2gh) — وهي علاقة <b>لا تحتوي الكتلة إطلاقاً</b>، بل تعتمد على الارتفاع وتعجيل الجاذبية فقط.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🕰️</span> البندول: مثال كلاسيكي على التحوّل</div>
+  <div class="card">
+    <p>في البندول البسيط تتكرّر دورة تحوّل الطاقة باستمرار:</p>
+    <p>• عند <b>أقصى ارتفاع</b> (نهايتا التأرجح): الانطلاق يساوي صفراً ⟵ <b>KE = 0</b> والطاقة كلها <b>كامنة</b>.</p>
+    <p>• عند <b>أخفض نقطة</b> (منتصف التأرجح): الارتفاع أقل ما يمكن ⟵ <b>PE أصغرية</b> والطاقة كلها تقريباً <b>حركية</b>، والانطلاق أعظم ما يمكن.</p>
+    <p>• وفي المواضع بين هذين الطرفين تكون الطاقة موزّعة بين الصورتين، ومجموعهما ثابت دائماً.</p>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 البندول البسيط وتحوّل الطاقة</h3>
+    <p class="fig-sub">الطاقة كامنة بالكامل عند الطرفين، وحركية بالكامل (تقريباً) عند أخفض نقطة، والمجموع ثابت.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="بندول بسيط يوضح تحوّل الطاقة الكامنة إلى حركية">
+        <rect x="150" y="20" width="320" height="10" rx="4" fill="#334155"/>
+        <line x1="310" y1="30" x2="200" y2="140" stroke="#94a3b8" stroke-width="2.5"/>
+        <line x1="310" y1="30" x2="420" y2="140" stroke="#94a3b8" stroke-width="2.5"/>
+        <line x1="310" y1="30" x2="310" y2="175" stroke="#0f766e" stroke-width="3"/>
+        <path d="M 200 140 Q 310 210 420 140" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 5"/>
+        <circle cx="200" cy="145" r="14" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+        <circle cx="420" cy="145" r="14" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+        <circle cx="310" cy="180" r="14" fill="#15803d" stroke="#166534" stroke-width="2"/>
+        <text x="150" y="176" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#b45309">PE عظمى</text>
+        <text x="150" y="194" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#b45309">KE = 0</text>
+        <text x="470" y="176" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#b45309">PE عظمى</text>
+        <text x="470" y="194" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#b45309">KE = 0</text>
+        <text x="310" y="209" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#15803d">KE عظمى — PE صغرى</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">🔥</span> ماذا لو وُجد احتكاك؟</div>
+  <div class="card">
+    <p>في الواقع لا يوجد نظام خالٍ من الاحتكاك تماماً. وعندئذ <b>تنقص الطاقة الميكانيكية</b> تدريجياً — ولهذا يتوقّف البندول الحقيقي بعد حين، وتتوقّف الكرة المتدحرجة.</p>
+    <p>لكن الطاقة <b>لم تفنَ</b>: مقدار النقص تحوّل إلى <b>حرارة</b> في السطحين والهواء. وهذا هو <b>قانون حفظ الطاقة العام</b>: الطاقة لا تُستحدث ولا تفنى، وإنما تتحوّل من صورة إلى أخرى، ويبقى مجموعها الكلي ثابتاً.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (1)</div>
+  <div class="example">
+    <div class="exq">سقط جسم كتلته 2kg من ارتفاع 5m عن سطح الأرض. احسب انطلاقه لحظة وصوله الأرض (بإهمال مقاومة الهواء، g = 10 m/s²).</div>
+    <div class="givens">المعطيات: m = 2kg — h = 5m — g = 10 m/s² — v₁ = 0</div>
+    <div class="step"><b>الحل:</b> نطبّق حفظ الطاقة الميكانيكية بين القمة (كلها كامنة) والأرض (كلها حركية):
+      <div class="math">m g h = ½ m v² ⟹ v = √(2 g h)</div>
+      <div class="math">v = √(2 × 10 × 5) = √100 = 10 m/s</div>
+      💡 لاحظ أن الكتلة 2kg لم تدخل الحل أصلاً — لأنها تُحذف من الطرفين.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (2)</div>
+  <div class="example">
+    <div class="exq">جسم كتلته 4kg يتحرك بانطلاق 6 m/s على سطح أفقي أملس، ثم صعد منحدراً أملس. ما أقصى ارتفاع يبلغه؟ (g = 10 m/s²)</div>
+    <div class="givens">المعطيات: m = 4kg — v₁ = 6 m/s — عند أقصى ارتفاع v₂ = 0</div>
+    <div class="step"><b>الحل:</b> الطاقة الحركية الابتدائية تتحوّل كلها إلى طاقة كامنة عند أقصى ارتفاع:
+      <div class="math">½ m v₁² = m g h ⟹ h = v₁² / (2 g)</div>
+      <div class="math">h = 36 / (2 × 10) = 36 / 20 = 1.8 m</div></div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">فكّر</span> لماذا يتوقّف البندول الحقيقي بعد فترة رغم أن الطاقة «لا تفنى»؟</summary>
+    <div class="ans">لأن الطاقة الميكانيكية وحدها هي التي نقصت، لا الطاقة الكلية. فقوتا الاحتكاك عند نقطة التعليق ومقاومة الهواء — وكلتاهما <b>قوة غير محافظة</b> — تبذلان شغلاً سالباً يحوّل الطاقة الميكانيكية تدريجياً إلى <b>حرارة</b> تتبدّد في المحيط. ومجموع الطاقة الكلي (ميكانيكية + حرارية) يبقى محفوظاً تماماً.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: القدرة والكفاءة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "أي القوى التالية تُعدّ قوة غير محافظة؟",
+    opts: ["قوة الجاذبية", "قوة النابض المرونية", "قوة الجذب العام", "قوة الاحتكاك"], a: 3,
+    why: "الاحتكاك قوة غير محافظة لأن شغلها يتحوّل إلى حرارة تتبدّد ولا يمكن استردادها؛ أما الجاذبية وقوة النابض فمحافظتان." },
+  { q: "عند أخفض نقطة في تأرجح البندول تكون:",
+    opts: ["الطاقة الحركية معدومة", "الطاقة الحركية عظمى والكامنة صغرى", "الطاقتان معدومتين", "الطاقة الكامنة عظمى"], a: 1,
+    why: "عند أخفض نقطة يكون الارتفاع أقل ما يمكن (PE صغرى) والانطلاق أعظم ما يمكن (KE عظمى)." },
+  { q: "جسم يسقط سقوطاً حراً من ارتفاع 20m (g = 10 m/s²). انطلاقه لحظة وصوله الأرض:",
+    opts: ["10 m/s", "40 m/s", "20 m/s", "200 m/s"], a: 2,
+    why: "v = √(2gh) = √(2×10×20) = √400 = 20 m/s." },
+  { q: "ينص مبدأ حفظ الطاقة الميكانيكية — بإهمال الاحتكاك — على أن:",
+    opts: ["مجموع KE + PE يبقى ثابتاً", "الطاقة الحركية تبقى ثابتة", "الطاقة الكامنة تبقى ثابتة", "الطاقتين تتناقصان معاً"], a: 0,
+    why: "بغياب القوى غير المحافظة تتحوّل الطاقة بين الصورتين الحركية والكامنة، لكن مجموعهما (الطاقة الميكانيكية الكلية) يبقى ثابتاً." },
+  { q: "كرة تتدحرج على أرض خشنة حتى توقّفت. الطاقة الحركية المفقودة تحوّلت أساساً إلى:",
+    opts: ["طاقة كامنة ثقالية", "حرارة", "طاقة كهربائية", "لا شيء — الطاقة فنيت"], a: 1,
+    why: "الاحتكاك قوة غير محافظة، وشغله السالب يحوّل الطاقة الميكانيكية إلى حرارة تتبدّد في السطحين والهواء — والطاقة الكلية تبقى محفوظة." }
+], { onDone: function (stars) { Phy.setLesson("g5c5", "4", { stars: stars }); } });
+</script>
+</body>
+</html>

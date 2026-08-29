@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: الشغل والطاقة والزخم — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c5">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الشغل والطاقة والزخم</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: الشغل والطاقة والزخم</h1>
+    <p>١٤ سؤالاً منوّعة على دروس الفصل الستة — اختيار من متعدد، مفاهيمي، ومسائل بسيطة. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g5c5");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "العلاقة الصحيحة لحساب الشغل المبذول بقوة F تصنع زاوية θ مع الإزاحة d هي:",
+    opts: ["W = F d sin θ", "W = F d cos θ", "W = F / d", "W = ½ F d²"], a: 1,
+    why: "الشغل = مركّبة القوة في اتجاه الإزاحة × الإزاحة، ومركّبة القوة باتجاه الإزاحة هي F cos θ." },
+  { q: "أي الحالات التالية يكون فيها الشغل المبذول معدوماً؟",
+    opts: ["سحب صندوق بحبل أفقي", "رفع جسم عمودياً إلى أعلى", "دفع عربة إلى الأمام", "حمل حقيبة والسير بها أفقياً"], a: 3,
+    why: "القوة الحاملة عمودية إلى أعلى والإزاحة أفقية، فالزاوية بينهما 90° و cos 90° = 0، فيكون الشغل معدوماً." },
+  { q: "الطاقة الحركية لجسم كتلته m وانطلاقه v تُحسب بالعلاقة:",
+    opts: ["½ m v²", "m g h", "½ k x²", "m v"], a: 0,
+    why: "KE = ½mv². أما mgh فطاقة كامنة ثقالية، و ½kx² طاقة كامنة مرونية، و mv هو الزخم." },
+  { q: "تنص مبرهنة الشغل والطاقة الحركية على أن الشغل المحصّل المبذول على جسم يساوي:",
+    opts: ["طاقته الكامنة", "قدرته مضروبة بالزمن فقط", "التغيّر في طاقته الحركية", "وزنه مضروباً بالارتفاع"], a: 2,
+    why: "W(محصّل) = ΔKE = ½mv₂² − ½mv₁²، أي الفرق بين الطاقة الحركية النهائية والابتدائية." },
+  { q: "جسم كتلته 2kg رُفع إلى ارتفاع 10m (g = 10 m/s²). طاقته الكامنة الثقالية:",
+    opts: ["200 J", "20 J", "100 J", "2000 J"], a: 0,
+    why: "PE = mgh = 2 × 10 × 10 = 200 J." },
+  { q: "في قانون هوك F = kx، يمثّل الرمز k:",
+    opts: ["استطالة النابض", "ثابت النابض ووحدته N/m", "الطاقة المخزونة في النابض", "كتلة النابض"], a: 1,
+    why: "k هو ثابت النابض ويقيس صلابته، ووحدته نيوتن/متر؛ أما x فهي الاستطالة أو الانضغاط." },
+  { q: "بإهمال الاحتكاك، تبقى الطاقة الميكانيكية الكلية للجسم:",
+    opts: ["متزايدة باستمرار", "متناقصة باستمرار", "معدومة", "ثابتة مع تحوّل الطاقة بين صورتيها"], a: 3,
+    why: "بغياب القوى غير المحافظة يبقى مجموع KE + PE ثابتاً، وما يحدث هو تحوّل بين الطاقتين الحركية والكامنة فقط." },
+  { q: "جسم يسقط سقوطاً حراً من ارتفاع 45m (g = 10 m/s²). انطلاقه عند وصوله الأرض:",
+    opts: ["45 m/s", "90 m/s", "30 m/s", "15 m/s"], a: 2,
+    why: "v = √(2gh) = √(2 × 10 × 45) = √900 = 30 m/s." },
+  { q: "الفرق الأساسي بين الشغل والقدرة هو أن القدرة:",
+    opts: ["لا تعتمد على الشغل", "تأخذ الزمن بنظر الاعتبار", "تُقاس بالجول", "كمية متجهة"], a: 1,
+    why: "القدرة = الشغل ÷ الزمن، فهي تقيس سرعة إنجاز الشغل؛ آلتان تبذلان الشغل نفسه في زمنين مختلفين قدرتاهما مختلفتان." },
+  { q: "الواط الواحد يكافئ:",
+    opts: ["جول واحد لكل ثانية", "جول واحد × ثانية", "نيوتن واحد لكل متر", "نيوتن واحد × متر"], a: 0,
+    why: "P = W/t، فوحدة القدرة هي جول/ثانية وتُسمّى الواط. أما النيوتن × متر فهو الجول (وحدة شغل)." },
+  { q: "رافعة رفعت حملاً وبذلت شغلاً 9000 J خلال 30 ثانية. قدرتها تساوي:",
+    opts: ["270000 W", "9030 W", "0.003 W", "300 W"], a: 3,
+    why: "P = W/t = 9000/30 = 300 W." },
+  { q: "آلة دخلها 1000 J وخرجها المفيد 700 J. كفاءتها والطاقة الضائعة هما:",
+    opts: ["143% و 300 J", "70% و 1700 J", "70% و 300 J", "30% و 700 J"], a: 2,
+    why: "الكفاءة = (700 ÷ 1000) × 100 = 70%، والضائع = 1000 − 700 = 300 J يتحوّل إلى حرارة وصوت بفعل الاحتكاك." },
+  { q: "جسم كتلته 4kg يتحرك بسرعة 5 m/s. زخمه الخطي يساوي:",
+    opts: ["0.8 kg·m/s", "20 kg·m/s", "9 kg·m/s", "50 kg·m/s"], a: 1,
+    why: "p = m v = 4 × 5 = 20 kg·m/s، واتجاهه اتجاه سرعة الجسم." },
+  { q: "تُقلّل الوسادة الهوائية القوة المؤثرة في الراكب لأنها:",
+    opts: ["تُقلّل كتلته", "تُلغي التغيّر في زخمه", "تزيد سرعته", "تُطيل زمن التصادم"], a: 3,
+    why: "من F Δt = Δp، وتغيّر الزخم ثابت؛ فإطالة زمن التصادم Δt تستلزم نقصان القوة F بالنسبة نفسها." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g5c5", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

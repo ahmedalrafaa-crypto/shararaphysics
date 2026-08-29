@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: الحرارة — الأول متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g1c4">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الحرارة</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: الحرارة</h1>
+    <p>١٢ سؤالاً منوّعة على دروس الفصل — اختيار من متعدد، مفاهيمي، ومسائل بسيطة. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g1c4");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "الفرق بين الحرارة ودرجة الحرارة هو أن:",
+    opts: ["الحرارة مجموع الطاقة الحركية للجسيمات، ودرجة الحرارة معدلها", "لا فرق بينهما إطلاقاً", "درجة الحرارة تقاس بالنيوتن", "الحرارة لا علاقة لها بحركة الجسيمات"], a: 0,
+    why: "الحرارة هي مجموع الطاقات الحركية لكل الجسيمات، بينما درجة الحرارة مقياس لمعدلها." },
+  { q: "الاتزان الحراري هو الحالة التي:",
+    opts: ["يتمدد فيها جسم بالحرارة", "تتساوى فيها درجتا حرارة جسمين متلامسين", "ينصهر فيها جسم صلب", "تنعدم فيها حركة الجسيمات"], a: 1,
+    why: "الاتزان الحراري يعني توقف انتقال الحرارة لتساوي درجتي الحرارة." },
+  { q: "درجة حرارة 50°C تعادل بالكلفن:",
+    opts: ["50 K", "223 K", "323 K", "50000 K"], a: 2,
+    why: "K = 273 + °C = 273 + 50 = 323 K." },
+  { q: "التوصيل الحراري يحدث بكفاءة عالية بشكل خاص في:",
+    opts: ["الغازات النادرة", "الفراغ", "الأخشاب والصوف", "المواد الصلبة، وخاصة المعادن"], a: 3,
+    why: "المعادن توصل الحرارة بكفاءة عالية بسبب إلكتروناتها الحرة، وهذا مثال على التوصيل في المواد الصلبة." },
+  { q: "من الأمثلة على العوازل الحرارية الجيدة:",
+    opts: ["الخشب", "الفضة", "النحاس", "الحديد"], a: 0,
+    why: "الخشب عازل حراري جيد، بينما الفضة والنحاس والحديد من أفضل الموصلات الحرارية." },
+  { q: "انتقال الحرارة بطريقة الحمل يقتصر على:",
+    opts: ["المواد الصلبة فقط", "السوائل والغازات (الموائع)", "الفراغ فقط", "المعادن فقط"], a: 1,
+    why: "الحمل يعتمد على حركة الجزيئات نفسها، وهذا ممكن فقط في الموائع لا في المواد الصلبة المقيدة الحركة." },
+  { q: "تصل حرارة الشمس إلى الأرض عبر الفضاء الخالي بطريقة:",
+    opts: ["التوصيل", "الحمل", "الإشعاع، لأنه لا يحتاج وسطاً مادياً", "التبخر"], a: 2,
+    why: "الإشعاع هو الطريقة الوحيدة التي تنتقل بها الحرارة عبر الفراغ دون الحاجة لوسط مادي." },
+  { q: "سبب شعورك بسخونة مقبض ملعقة معدنية موضوعة في وعاء ساخن هو:",
+    opts: ["الإشعاع الصادر من الوعاء", "تيار الحمل داخل المقبض", "تبخر المعدن", "التوصيل الحراري الجيد للمعادن"], a: 3,
+    why: "المعادن موصلات حرارية ممتازة، فتنتقل الحرارة بسرعة عبر الملعقة كلها بالتوصيل." },
+  { q: "نسيم البر الذي يهب ليلاً يتحرك من:",
+    opts: ["اليابسة نحو البحر", "البحر نحو اليابسة فقط", "الأعلى نحو الأسفل دائماً", "لا يحدث ليلاً إطلاقاً"], a: 0,
+    why: "ليلاً تبرد اليابسة أسرع من البحر، فيرتفع الهواء الدافئ فوق البحر ويحل محله الهواء البارد القادم من اليابسة." },
+  { q: "الجهاز المستعمل لقياس درجة الحرارة يسمى:",
+    opts: ["الميزان", "المحرار", "المسعر", "البارومتر"], a: 1,
+    why: "المحرار هو الجهاز المخصص لقياس درجة الحرارة." },
+  { q: "درجة غليان الماء 100°C تعادل بالكلفن:",
+    opts: ["100 K", "173 K", "373 K", "0 K"], a: 2,
+    why: "K = 273 + 100 = 373 K." },
+  { q: "قنينة الترموس تحافظ على حرارة المشروب لساعات لأن:",
+    opts: ["لونها الخارجي عاكس فقط", "جدارها سميك جداً فقط", "غطاءها محكم الإغلاق فقط", "الفراغ بين جداريها يمنع التوصيل والحمل الحراريين"], a: 3,
+    why: "الفراغ بين الجدارين لا يحوي مادة يمكن أن تنقل الحرارة بالتوصيل أو الحمل، فتبقى الحرارة محبوسة داخلها." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g1c4", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: السرعة المتوسطة والانطلاق المتوسط — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الحركة الخطية</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>⏱️ الدرس 2: السرعة المتوسطة والانطلاق المتوسط</h1>
+    <p>عدّاد السيارة (الأنالوغ) يقيس شيئاً مختلفاً عمّا يقيسه فيزيائي حريص على الاتجاه. لنفرّق بين «السرعة» و«الانطلاق» — نفس فكرة الإزاحة والمسافة، لكن مقسومة على الزمن.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚗</span>
+    <span>مثل الإزاحة والمسافة تماماً: <b>السرعة المتوسطة</b> تُبنى على الإزاحة (متجهة، تهتم بالاتجاه)، بينما <b>الانطلاق المتوسط</b> يُبنى على المسافة (قياسي، يهتم بالمقدار فقط). عدّاد سيارتك يعرض لك الانطلاق، لا السرعة!</span>
+  </div>
+
+  <div class="section-title"><span class="ico">➗</span> السرعة المتوسطة</div>
+  <div class="card">
+    <p><b>السرعة المتوسطة</b> هي النسبة بين التغيّر في الإزاحة إلى التغيّر في الزمن. كمية <b>اتجاهية</b> تأخذ إشارة الإزاحة نفسها: إذا كانت الإزاحة بالاتجاه الموجب فالسرعة موجبة، والعكس صحيح.</p>
+  </div>
+  <div class="lawbox">
+    السرعة المتوسطة
+    <div class="formula">v̄ = ΔX / Δt = (X<sub>f</sub> − X<sub>i</sub>) / (t<sub>f</sub> − t<sub>i</sub>)</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🏃</span> الانطلاق المتوسط</div>
+  <div class="card">
+    <p><b>الانطلاق المتوسط</b> هو نسبة المسافة الكلية المقطوعة إلى الزمن المستغرق. كمية <b>قياسية</b> لأن المسافة قياسية، ولا يمكن أن يساوي صفراً أبداً (ما لم يكن الجسم ساكناً تماماً).</p>
+  </div>
+  <div class="lawbox">
+    الانطلاق المتوسط
+    <div class="formula">الانطلاق المتوسط = المسافة الكلية / الزمن المستغرق</div>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 السرعة المتوسطة = ميل الخط على مخطط (الموقع–الزمن)</h3>
+    <p class="fig-sub">سيارة تنتقل من الموقع A عند t=1s إلى الموقع B عند t=4s. السرعة المتوسطة هي ميل الخط المستقيم الواصل بين النقطتين.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مخطط الموقع مقابل الزمن يوضح السرعة المتوسطة كميل الخط">
+        <!-- محاور -->
+        <line x1="60" y1="220" x2="520" y2="220" stroke="#334155" stroke-width="2"/>
+        <line x1="60" y1="220" x2="60" y2="30" stroke="#334155" stroke-width="2"/>
+        <polygon points="520,220 510,215 510,225" fill="#334155"/>
+        <polygon points="60,30 55,40 65,40" fill="#334155"/>
+        <text x="528" y="224" font-family="Cairo" font-size="13" fill="#334155">t (s)</text>
+        <text x="54" y="24" font-family="Cairo" font-size="13" fill="#334155">x (m)</text>
+        <!-- خط الحركة -->
+        <line x1="60" y1="220" x2="140" y2="190" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+        <line x1="140" y1="190" x2="440" y2="70" stroke="#ea580c" stroke-width="4"/>
+        <!-- نقطة A -->
+        <circle cx="140" cy="190" r="7" fill="#1e3a8a"/>
+        <text x="140" y="212" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#1e3a8a">A (1s, 2m)</text>
+        <!-- نقطة B -->
+        <circle cx="440" cy="70" r="7" fill="#1e3a8a"/>
+        <text x="440" y="58" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#1e3a8a">B (4s, 32m)</text>
+        <!-- مثلث الميل -->
+        <line x1="140" y1="190" x2="440" y2="190" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 3"/>
+        <line x1="440" y1="190" x2="440" y2="70" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 3"/>
+        <text x="290" y="208" text-anchor="middle" font-family="Cairo" font-size="12" fill="#7c3aed">Δt = 3s</text>
+        <text x="460" y="135" font-family="Cairo" font-size="12" fill="#7c3aed">ΔX = 30m</text>
+        <text x="290" y="140" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#c2410c" transform="rotate(-24 290 140)">الميل = v̄</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="notebox">
+    <b>متى يتساوى مقدار السرعة المتوسطة مع الانطلاق المتوسط؟</b> فقط عندما يتحرك الجسم على <b>مسار مستقيم باتجاه ثابت</b> — عندها تكون الإزاحة الكلية مساوية للمسافة الكلية، فيُعبّر الانطلاق عن المقدار العددي للسرعة تماماً.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> هل يمكن للسرعة المتوسطة أن تساوي صفراً، وهل يمكن للانطلاق المتوسط ذلك؟</summary>
+    <div class="ans">نعم يمكن للسرعة المتوسطة أن تساوي صفراً إذا تحرّك الجسم من نقطة A إلى B ثم عاد إلى A (الإزاحة الكلية صفر). لكن لا يمكن للانطلاق المتوسط أن يساوي صفراً أبداً طالما تحرّك الجسم فعلياً، لأن المسافة الكلية لا تساوي صفراً.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">سيارة سباق تتحرك بخط مستقيم بالاتجاه الموجب لمحور x. عند t<sub>i</sub> = 1s كانت عند الموقع A الذي يبعد 2m عن الأصل، وعند t<sub>f</sub> = 4s وصلت الموقع B الذي يبعد 32m عن الأصل. احسب متوسط سرعة السيارة بين A و B.</div>
+    <div class="givens">المعطيات: X<sub>i</sub> = 2m — X<sub>f</sub> = 32m — t<sub>i</sub> = 1s — t<sub>f</sub> = 4s</div>
+    <div class="step"><b>الخطوة ١:</b> نحسب الإزاحة والزمن:
+      <div class="math">ΔX = 32 − 2 = 30m — Δt = 4 − 1 = 3s</div></div>
+    <div class="step"><b>الخطوة ٢:</b> السرعة المتوسطة:
+      <div class="math">v̄ = ΔX/Δt = 30/3 = 10 m/s</div>
+      💡 وبما أن الحركة على خط مستقيم باتجاه ثابت، فإن هذا العدد يساوي أيضاً الانطلاق المتوسط.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: التعجيل الخطي ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "السرعة المتوسطة كمية:",
+    opts: ["قياسية دائماً موجبة", "اتجاهية تأخذ إشارة الإزاحة", "لا وحدة لها", "تساوي الانطلاق دائماً"], a: 1,
+    why: "السرعة المتوسطة v̄=ΔX/Δt كمية اتجاهية، إشارتها من إشارة الإزاحة (موجبة أو سالبة)." },
+  { q: "عدّاد السيارة الذي يعرض الرقم أمام السائق يقيس فعلياً:",
+    opts: ["السرعة المتوسطة", "الانطلاق (مقدار السرعة فقط)", "الإزاحة", "التعجيل"], a: 1,
+    why: "العدّاد يعرض الانطلاق: مقدار السرعة بلا اعتبار للاتجاه؛ فقد تكون السيارة تسير بخط مستقيم أو منعطف بنفس القراءة." },
+  { q: "جسم انتقل من X<sub>i</sub>=10m إلى X<sub>f</sub>=40m خلال 5s. ما سرعته المتوسطة؟",
+    opts: ["8 m/s", "6 m/s", "50 m/s", "2 m/s"], a: 1,
+    why: "v̄ = (40−10)/5 = 30/5 = 6 m/s." },
+  { q: "متى يتساوى مقدار السرعة المتوسطة مع الانطلاق المتوسط؟",
+    opts: ["دائماً", "عند الحركة على خط مستقيم باتجاه ثابت", "عند السكون فقط", "لا يتساويان أبداً"], a: 1,
+    why: "فقط عند الحركة المستقيمة باتجاه ثابت تتساوى الإزاحة مع المسافة، فيتساوى مقدار السرعة مع الانطلاق." },
+  { q: "جسم تحرك من A إلى B ثم عاد إلى A خلال 10s. ماذا نقول عن سرعته المتوسطة وانطلاقه المتوسط؟",
+    opts: ["كلاهما صفر", "السرعة المتوسطة صفر، والانطلاق المتوسط ليس صفراً", "كلاهما ليس صفراً", "الانطلاق صفر فقط"], a: 1,
+    why: "الإزاحة الكلية صفر (عاد لنفس النقطة) فالسرعة المتوسطة صفر، لكن المسافة المقطوعة ليست صفراً فالانطلاق المتوسط ليس صفراً." }
+], { onDone: function (stars) { Phy.setLesson("g5c2", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

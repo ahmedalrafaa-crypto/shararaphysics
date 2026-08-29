@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: الزخم الزاوي وحفظه — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c7">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الجسم الجاسئ</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>🧊 الدرس 5: الزخم الزاوي وحفظه</h1>
+    <p>كما للحركة الخطية زخم يُحفظ عند غياب القوى الخارجية، للحركة الدورانية زخم مماثل — الزخم الزاوي — ويُحفظ عند غياب العزوم الخارجية. وهو يفسّر أكثر الظواهر إثارة في الدوران.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🤾</span>
+    <span>غطّاس يقفز عن لوح الغطس مفرود الجسم، ثم يُقرّب ركبتيه إلى صدره فجأة في الهواء فيدور بسرعة مذهلة عدة لفات، ثم يفرد جسمه مجدداً قبل الماء فيتباطأ دورانه استعداداً للدخول المستقيم. لا شيء دفعه أو أوقفه — كل ما فعله هو تغيير <b>توزيع كتلته</b>.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🌀</span> تعريف الزخم الزاوي</div>
+  <div class="card">
+    <p><b>الزخم الزاوي (L)</b> لجسم جاسئ يدور حول محور ثابت هو حاصل ضرب <b>عزم قصوره الذاتي</b> في <b>سرعته الزاوية</b>. وهو النظير الدوراني للزخم الخطي p = mv.</p>
+  </div>
+  <div class="lawbox">
+    الزخم الزاوي
+    <div class="formula">L = I ω</div>
+  </div>
+  <div class="card">
+    <p>وحدته <b>kg·m²/s</b>. وهو كمية متجهة، اتجاهها عمودي على مستوى الدوران.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🔒</span> مبدأ حفظ الزخم الزاوي</div>
+  <div class="card">
+    <p>ينص المبدأ على أنه: إذا كان <b>العزم الخارجي المحصّل الصفر</b> (Στ<sub>خارجي</sub> = 0)، فإن <b>الزخم الزاوي الكلي للنظام يبقى ثابتاً</b>:</p>
+  </div>
+  <div class="lawbox">
+    حفظ الزخم الزاوي
+    <div class="formula">I₁ ω₁ = I₂ ω₂</div>
+  </div>
+  <div class="card">
+    <p>وهذه العلاقة هي مفتاح فهم المتزلجة والغطّاس: لا عزم خارجي كبير يؤثر فيهما أثناء الحركة الحرة (بإهمال احتكاك الهواء)، فيبقى L = Iω <b>ثابتاً</b>. وبما أن تقريب الأطراف من الجسم <b>يُنقص I</b>، يجب أن <b>تزداد ω</b> تعويضاً لبقاء الجداء ثابتاً — فتدور أسرع.</p>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 حفظ الزخم الزاوي: المتزلجة الدوّارة</h3>
+    <p class="fig-sub">L = Iω ثابت قبل وبعد. عند تقريب الذراعين ينقص I إلى الربع، فتتضاعف ω أربع مرات ليبقى الجداء ثابتاً.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="متزلجة تدور أسرع عند تقريب ذراعيها حفاظاً على الزخم الزاوي">
+        <g transform="translate(330,0)">
+          <text x="140" y="24" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#b45309">ذراعان مقرّبتان</text>
+          <circle cx="140" cy="115" r="10" fill="#334155"/>
+          <line x1="140" y1="105" x2="140" y2="150" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+          <line x1="140" y1="112" x2="128" y2="128" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
+          <line x1="140" y1="112" x2="152" y2="128" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
+          <path d="M 140 90 A 30 30 0 1 1 139 90" fill="none" stroke="#b45309" stroke-width="3"/>
+          <polygon points="139,90 128,84 128,98" fill="#b45309"/>
+          <text x="140" y="180" text-anchor="middle" font-family="Cairo" font-weight="700" font-size="12" fill="#b45309" style="direction:ltr">I صغير</text>
+          <text x="140" y="208" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="14" fill="#b45309" style="direction:ltr">ω كبيرة (دوران سريع)</text>
+        </g>
+        <g transform="translate(20,0)">
+          <text x="140" y="24" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#0f766e">ذراعان مفرودتان</text>
+          <circle cx="140" cy="115" r="10" fill="#334155"/>
+          <line x1="140" y1="105" x2="140" y2="150" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+          <line x1="140" y1="112" x2="90" y2="112" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
+          <line x1="140" y1="112" x2="190" y2="112" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
+          <path d="M 140 70 A 45 45 0 1 1 139 70" fill="none" stroke="#0f766e" stroke-width="3"/>
+          <polygon points="139,70 128,64 128,78" fill="#0f766e"/>
+          <text x="140" y="180" text-anchor="middle" font-family="Cairo" font-weight="700" font-size="12" fill="#0f766e" style="direction:ltr">I كبير</text>
+          <text x="140" y="208" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="14" fill="#0f766e" style="direction:ltr">ω صغيرة (دوران بطيء)</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> يفرد الغطّاس جسمه قبل الدخول إلى الماء بعد أن كان مقرّباً ركبتيه أثناء الدوران السريع في الهواء.</summary>
+    <div class="ans">حفاظاً على الزخم الزاوي L = Iω ثابتاً (لا عزم خارجي مؤثر أثناء السقوط الحر). فحين يفرد جسمه، يزداد عزم قصوره الذاتي I (تبتعد كتلته عن محور الدوران)، فيجب أن <b>تنقص</b> سرعته الزاوية ω تعويضاً — فيتباطأ دورانه ويدخل الماء بوضع مستقيم مضبوط بدل الدوران السريع غير المنضبط.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">متزلجة عزم قصورها الذاتي 4 kg·m² وهي مفرودة الذراعين، تدور بسرعة زاوية 2 rad/s. قرّبت ذراعيها فصار عزم قصورها الذاتي 1 kg·m². احسب سرعتها الزاوية الجديدة.</div>
+    <div class="givens">المعطيات: I₁ = 4 kg·m² — ω₁ = 2 rad/s — I₂ = 1 kg·m²</div>
+    <div class="step"><b>الحل:</b> نطبّق حفظ الزخم الزاوي:
+      <div class="math">I₁ ω₁ = I₂ ω₂ ⟹ 4 × 2 = 1 × ω₂</div>
+      <div class="math">ω₂ = 8 rad/s</div>
+      💡 لاحظ: عزم القصور الذاتي نقص إلى الربع (من 4 إلى 1)، فتضاعفت السرعة الزاوية أربع مرات (من 2 إلى 8) — تماماً لبقاء الجداء Iω ثابتاً عند 8 kg·m²/s.</div>
+  </div>
+
+  <div class="notebox">
+    <b>خلاصة الفصل — النظير الكامل بين الحركتين:</b>
+    <br>الإزاحة x ⟷ θ &nbsp;|&nbsp; السرعة v ⟷ ω &nbsp;|&nbsp; التعجيل a ⟷ α &nbsp;|&nbsp; الكتلة m ⟷ I &nbsp;|&nbsp; القوة F ⟷ τ &nbsp;|&nbsp; ΣF=ma ⟷ Στ=Iα &nbsp;|&nbsp; ½mv² ⟷ ½Iω² &nbsp;|&nbsp; p=mv ⟷ L=Iω.
+    <br>كل قانون درسته في فصول الحركة والقوة والطاقة والزخم له توأم دوراني — احفظ هذا الجدول وستفهم أي مسألة دوران بسرعة.
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="questions.html">🏆 اختبار الفصل الخفيف</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "الزخم الزاوي L يُحسب بالعلاقة:",
+    opts: ["L = m v", "L = I ω", "L = ½ I ω²", "L = Στ"], a: 1,
+    why: "L = Iω، وهو النظير الدوراني للزخم الخطي p = mv." },
+  { q: "يُحفظ الزخم الزاوي لنظام عندما:",
+    opts: ["تكون سرعته الزاوية صفراً", "يكون العزم الخارجي المحصّل صفراً", "تكون كتلته ثابتة فقط", "تتضاعف قوته المؤثرة"], a: 1,
+    why: "عند انعدام العزم الخارجي المحصّل (Στ خارجي = 0)، يبقى الزخم الزاوي الكلي ثابتاً." },
+  { q: "متزلجة تُقرّب ذراعيها أثناء الدوران، فإن سرعتها الزاوية:",
+    opts: ["تزداد لأن I ينقص", "تنقص لأن I يزداد", "تبقى ثابتة دائماً", "تصير صفراً"], a: 0,
+    why: "L=Iω ثابت؛ نقصان I (بتقريب الذراعين) يستلزم زيادة ω ليبقى الجداء ثابتاً." },
+  { q: "جسم عزم قصوره الذاتي 6 kg·m² يدور بسرعة زاوية 3 rad/s. زخمه الزاوي:",
+    opts: ["2 kg·m²/s", "9 kg·m²/s", "18 kg·m²/s", "0.5 kg·m²/s"], a: 2,
+    why: "L = Iω = 6 × 3 = 18 kg·m²/s." },
+  { q: "متزلج عزم قصوره الذاتي 8 kg·m² وسرعته الزاوية 1.5 rad/s، قلّص عزم قصوره الذاتي إلى 3 kg·m². سرعته الزاوية الجديدة:",
+    opts: ["0.56 rad/s", "4.5 rad/s", "1.5 rad/s", "24 rad/s"], a: 1,
+    why: "I₁ω₁ = I₂ω₂ ⟹ 8×1.5 = 3×ω₂ ⟹ ω₂ = 12/3 = 4.5 rad/s." }
+], { onDone: function (stars) { Phy.setLesson("g5c7", "5", { stars: stars }); } });
+</script>
+</body>
+</html>

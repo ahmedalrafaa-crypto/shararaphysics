@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: تحليل المتجه وإيجاد المحصلة — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c1">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">المتجهات</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>📐 الدرس 4: تحليل المتجه وإيجاد المحصلة</h1>
+    <p>الجمع البياني جميل للفهم، لكنه غير دقيق للحساب. الحلّ: نُحلّل كل متجه مائل إلى مركبتين متعامدتين (أفقية وشاقولية)، فيتحوّل الجمع الهندسي إلى جمع أرقام بسيط.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🪜</span>
+    <span>سلّم مائل مسنود على جدار: جزء من قوّته يدفع <b>نحو الجدار</b> (أفقياً) وجزء يضغط <b>نحو الأرض</b> (شاقولياً). كل متجه مائل يمكن «تفكيكه» إلى هذين الاتجاهين المتعامدين — وهذا بالضبط ما نسمّيه <b>تحليل المتجه إلى مركّبتيه</b>.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">✂️</span> تحليل المتجه إلى مركّبتين</div>
+  <div class="card">
+    <p>أي متجه مائل <span class="formula-inline">R⃗</span> يصنع زاوية Ɵ مع المحور x يمكن تحليله إلى:</p>
+    <p style="margin-top:6px">• <b>مركبة أفقية</b> <span class="formula-inline">Rₓ</span> توازي المحور x.<br>• <b>مركبة شاقولية</b> <span class="formula-inline">R<sub>y</sub></span> توازي المحور y.</p>
+    <p style="margin-top:6px">وتُشكّل المركبتان ضلعي مثلث قائم الزاوية، والمتجه R⃗ هو <b>الوتر</b>.</p>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 تحليل المتجه إلى مركّبتيه</h3>
+    <p class="fig-sub">المتجه R⃗ (الأحمر) وتر مثلث قائم؛ مركبته الأفقية Rₓ (سماوي) والشاقولية R<sub>y</sub> (كهرماني) هما ضلعا القائمة.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="تحليل متجه مائل إلى مركبة أفقية وشاقولية">
+        <!-- محاور -->
+        <line x1="60" y1="250" x2="560" y2="250" stroke="#334155" stroke-width="2"/>
+        <line x1="90" y1="280" x2="90" y2="40" stroke="#334155" stroke-width="2"/>
+        <polygon points="560,250 550,245 550,255" fill="#334155"/>
+        <polygon points="90,40 85,50 95,50" fill="#334155"/>
+        <text x="566" y="254" font-family="Cairo" font-size="14" fill="#334155">x</text>
+        <text x="84" y="36" font-family="Cairo" font-size="14" fill="#334155">y</text>
+        <!-- المركبة الأفقية Rx -->
+        <line x1="90" y1="250" x2="430" y2="250" stroke="#0891b2" stroke-width="5" stroke-linecap="round"/>
+        <polygon points="430,250 414,243 414,257" fill="#0891b2"/>
+        <text x="255" y="272" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="15" fill="#0891b2">Rₓ = R cos Ɵ</text>
+        <!-- المركبة الشاقولية Ry (منقطة صعوداً من رأس Rx) -->
+        <line x1="430" y1="250" x2="430" y2="100" stroke="#f59e0b" stroke-width="5" stroke-linecap="round"/>
+        <polygon points="430,100 423,116 437,116" fill="#f59e0b"/>
+        <text x="500" y="180" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="15" fill="#b45309">R<sub>y</sub> = R sin Ɵ</text>
+        <!-- المتجه R (الوتر) -->
+        <line x1="90" y1="250" x2="430" y2="100" stroke="#e11d48" stroke-width="5" stroke-linecap="round"/>
+        <polygon points="430,100 412,104 420,116" fill="#e11d48"/>
+        <text x="235" y="160" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="18" fill="#e11d48" transform="rotate(-24 235 160)">R⃗</text>
+        <!-- زاوية Ɵ -->
+        <path d="M 150 250 A 60 60 0 0 0 143 224" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+        <text x="158" y="238" font-family="Cairo" font-weight="800" font-size="15" fill="#7c3aed">Ɵ</text>
+        <!-- علامة القائمة -->
+        <rect x="414" y="234" width="16" height="16" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="lawbox">
+    مركّبتا المتجه
+    <div class="formula">Rₓ = R cos Ɵ</div>
+    <div class="formula">R<sub>y</sub> = R sin Ɵ</div>
+  </div>
+
+  <div class="lawbox">
+    مقدار المتجه من مركّبتيه (فيثاغورس) واتجاهه
+    <div class="formula">R = <span class="sqrt">√<span class="rad">Rₓ² + R<sub>y</sub>²</span></span></div>
+    <div class="formula">tan Ɵ = R<sub>y</sub> / Rₓ</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧭</span> طريقة التحليل المتعامد للمحصلة</div>
+  <div class="card">
+    <p>لجمع متجهين أو أكثر بدقة: نحلّل كل متجه إلى مركبتيه، ثم نجمع كل المركبات الأفقية معاً، وكل المركبات الشاقولية معاً:</p>
+  </div>
+  <div class="lawbox">
+    محصّلة المركبات ثم المتجه الكلي
+    <div class="formula">Rₓ = Aₓ + Bₓ + …</div>
+    <div class="formula">R<sub>y</sub> = A<sub>y</sub> + B<sub>y</sub> + …</div>
+    <div class="formula">R = <span class="sqrt">√<span class="rad">Rₓ² + R<sub>y</sub>²</span></span></div>
+  </div>
+
+  <div class="notebox">
+    <b>متى نستعمل ماذا؟</b>
+    <br>• إذا كانت الزاوية بين المتجهين <b>90°</b> → نظرية فيثاغورس مباشرة.
+    <br>• إذا كانت الزاوية <b>ليست 90°</b> → قانون الجيب تمام (cosine) لمقدار المحصّل، أو قانون الجيب (sine) للزوايا.
+    <br>قانون الجيب تمام: مربع المحصّل = مجموع مربّعي المتجهين مطروحاً منه ضِعف حاصل ضربهما في جيب تمام الزاوية بينهما.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> متى يتساوى مقدار المتجه مع إحدى مركّبتيه؟</summary>
+    <div class="ans">عندما يكون المتجه <b>موازياً لتلك المركبة وعمودياً على الأخرى</b>؛ فتصبح المركبة الأخرى صفراً ويساوي المتجه كاملاً المركبة الموازية له.</div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> متى تتساوى مركبتا المتجه R⃗؟</summary>
+    <div class="ans">عندما تكون زاويته <b>45°</b> مع المحور، لأن sin45° = cos45°، فتتساوى المركبة الأفقية مع الشاقولية: R cos45° = R sin45°.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">متجه A⃗ مقداره 175m ويميل بزاوية 53° عن المحور x. جد مركّبتيه، علماً أن sin53° = 0.8 و cos53° = 0.6.</div>
+    <div class="givens">المعطيات: A = 175m — Ɵ = 53° — cos53° = 0.6 — sin53° = 0.8</div>
+    <div class="step"><b>الخطوة ١:</b> المركبة الأفقية:
+      <div class="math">Aₓ = A cos Ɵ = 175 × 0.6 = 105 m</div></div>
+    <div class="step"><b>الخطوة ٢:</b> المركبة الشاقولية:
+      <div class="math">A<sub>y</sub> = A sin Ɵ = 175 × 0.8 = 140 m</div></div>
+    <div class="step"><b>تحقّق:</b> فيثاغورس يعيدنا للأصل:
+      <div class="math">√(105² + 140²) = √(11025 + 19600) = √30625 = 175 ✓</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: ضرب المتجهات ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "المركبة الأفقية لمتجه R⃗ يصنع زاوية Ɵ مع المحور x تُعطى بـ:",
+    opts: ["R sin Ɵ", "R cos Ɵ", "R tan Ɵ", "R / sin Ɵ"], a: 1,
+    why: "Rₓ = R cos Ɵ (الأفقية)، و R<sub>y</sub> = R sin Ɵ (الشاقولية)." },
+  { q: "متجه مركبتاه Rₓ = 6 و R<sub>y</sub> = 8. ما مقداره؟",
+    opts: ["14", "10", "2", "48"], a: 1,
+    why: "R = √(Rₓ² + R<sub>y</sub>²) = √(36+64) = √100 = 10." },
+  { q: "متى تتساوى مركبتا المتجه (الأفقية = الشاقولية)؟",
+    opts: ["عند زاوية 30°", "عند زاوية 45°", "عند زاوية 60°", "عند زاوية 90°"], a: 1,
+    why: "عند 45° يكون sin45° = cos45°، فتتساوى المركبتان." },
+  { q: "متجه موازٍ تماماً للمحور x. ما مركبته الشاقولية R<sub>y</sub>؟",
+    opts: ["تساوي مقدار المتجه", "تساوي صفراً", "نصف المقدار", "لا يمكن تحديدها"], a: 1,
+    why: "R<sub>y</sub> = R sin0° = 0؛ المتجه الموازي للمحور x مركبته الشاقولية صفر وكل مقداره أفقي." },
+  { q: "لجمع متجهين بينهما زاوية لا تساوي 90°، نستعمل:",
+    opts: ["فيثاغورس مباشرة", "قانون الجيب تمام (cosine)", "جمعاً جبرياً عادياً", "قاعدة الكف اليمنى"], a: 1,
+    why: "فيثاغورس تصلح للمتعامدين فقط؛ لغير المتعامدين نستعمل قانون الجيب تمام (أو التحليل المتعامد)." }
+], { onDone: function (stars) { Phy.setLesson("g5c1", "4", { stars: stars }); } });
+</script>
+</body>
+</html>

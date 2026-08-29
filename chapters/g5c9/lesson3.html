@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: التوصيل التسلسلي والتوازي للمقاومات — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c9">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">التيار الكهربائي</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔗 الدرس 3: التوصيل التسلسلي والتوازي للمقاومات</h1>
+    <p>نادراً ما تجد مقاومة واحدة في دارة حقيقية — غالباً عدة مقاومات مرتبطة معاً. وطريقة ربطها (تسلسلياً أو توازياً) تُغيّر النتيجة كلياً: من كيف يتوزّع الجهد إلى كيف يتوزّع التيار.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🎄</span>
+    <span>لمبات الزينة القديمة كانت تُوصَّل تسلسلياً: إن احترقت لمبة واحدة، انطفأت السلسلة كلها! أما مصابيح بيتك فمُوصَّلة توازياً: يمكنك إطفاء غرفة دون أن تتأثر الغرف الأخرى. الفرق بين النوعين هو موضوع هذا الدرس بالضبط.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">➡️</span> التوصيل التسلسلي</div>
+  <div class="card">
+    <p>في <b>التوصيل التسلسلي</b>، تُوصَل المقاومات على التوالي في مسار واحد لا يتفرّع، فيمرّ فيها <b>التيار نفسه</b>، بينما يتوزّع فرق الجهد الكلي بينها حسب مقدار كل مقاومة.</p>
+  </div>
+  <div class="lawbox">
+    المقاومة المكافئة للتوصيل التسلسلي
+    <div class="formula">R<sub>مكافئة</sub> = R₁ + R₂ + R₃ + ...</div>
+  </div>
+  <div class="card">
+    <p>وبما أن المقاومة المكافئة تساوي <b>مجموع</b> المقاومات، فإنها دائماً <b>أكبر</b> من أكبر مقاومة منفردة في التوصيلة.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🔀</span> التوصيل التوازي</div>
+  <div class="card">
+    <p>في <b>التوصيل التوازي</b>، تُوصَل المقاومات بين نقطتين مشتركتين فيتفرّع المسار، فيكون <b>فرق الجهد نفسه</b> على كل مقاومة، بينما يتوزّع التيار الكلي بينها.</p>
+  </div>
+  <div class="lawbox">
+    المقاومة المكافئة للتوصيل التوازي
+    <div class="formula">1 / R<sub>مكافئة</sub> = 1/R₁ + 1/R₂ + 1/R₃ + ...</div>
+  </div>
+  <div class="card">
+    <p>والنتيجة أن المقاومة المكافئة للتوازي دائماً <b>أصغر</b> من أصغر مقاومة منفردة في التوصيلة — لأن فتح مسارات إضافية يسهّل مرور التيار الكلي، لا يعيقه.</p>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 التسلسلي مقابل التوازي</h3>
+    <p class="fig-sub">في التسلسلي: مسار واحد، التيار نفسه في كل مقاومة. في التوازي: مسارات متفرّعة، الجهد نفسه على كل مقاومة.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مقارنة توصيل المقاومات تسلسلياً وتوازياً">
+        <g transform="translate(330,0)">
+          <text x="140" y="26" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#1d4ed8">توصيل تسلسلي</text>
+          <path d="M 50 130 L 90 130" stroke="#334155" stroke-width="3"/>
+          <rect x="90" y="115" width="55" height="30" rx="5" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2.5"/>
+          <text x="117" y="135" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#1d4ed8" style="direction:ltr">R1</text>
+          <path d="M 145 130 L 175 130" stroke="#334155" stroke-width="3"/>
+          <rect x="175" y="115" width="55" height="30" rx="5" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2.5"/>
+          <text x="202" y="135" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#1d4ed8" style="direction:ltr">R2</text>
+          <path d="M 230 130 L 260 130" stroke="#334155" stroke-width="3"/>
+          <text x="150" y="180" text-anchor="middle" font-family="Cairo" font-weight="700" font-size="12" fill="#475569" style="direction:ltr">نفس I في R1 وR2</text>
+          <text x="150" y="205" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="13" fill="#1d4ed8" style="direction:ltr">R = R1 + R2</text>
+        </g>
+        <g transform="translate(20,0)">
+          <text x="140" y="26" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#a16207">توصيل توازي</text>
+          <path d="M 50 130 L 85 130 M 85 90 L 85 170" stroke="#334155" stroke-width="3"/>
+          <path d="M 85 100 L 120 100" stroke="#334155" stroke-width="3"/>
+          <rect x="120" y="85" width="55" height="30" rx="5" fill="#fef9c3" stroke="#a16207" stroke-width="2.5"/>
+          <text x="147" y="105" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#a16207" style="direction:ltr">R1</text>
+          <path d="M 175 100 L 210 100 L 210 130" stroke="#334155" stroke-width="3"/>
+          <path d="M 85 160 L 120 160" stroke="#334155" stroke-width="3"/>
+          <rect x="120" y="145" width="55" height="30" rx="5" fill="#fef9c3" stroke="#a16207" stroke-width="2.5"/>
+          <text x="147" y="165" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#a16207" style="direction:ltr">R2</text>
+          <path d="M 175 160 L 210 160 L 210 130 L 260 130" stroke="#334155" stroke-width="3"/>
+          <text x="150" y="205" text-anchor="middle" font-family="Cairo" font-weight="700" font-size="12" fill="#475569" style="direction:ltr">نفس V على R1 وR2</text>
+          <text x="150" y="230" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="13" fill="#a16207" style="direction:ltr">1/R = 1/R1 + 1/R2</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> عند احتراق لمبة واحدة في سلسلة زينة موصّلة تسلسلياً، تنطفئ جميع اللمبات الأخرى.</summary>
+    <div class="ans">لأن التوصيل التسلسلي يشكّل <b>مساراً واحداً</b> لا يتفرّع، فيمرّ التيار نفسه عبر كل اللمبات بالتتابع. وحين تحترق إحداها، ينقطع هذا المسار الوحيد فيتوقف التيار في <b>كامل</b> السلسلة — بعكس التوصيل التوازي الذي يوفّر مساراً مستقلاً لكل فرع.</div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> المقاومة المكافئة لعدة مقاومات موصّلة توازياً أصغر دائماً من أصغر مقاومة منفردة فيها.</summary>
+    <div class="ans">لأن التوصيل التوازي يفتح <b>مسارات إضافية</b> للتيار، فيسهل مروره الكلي أكثر مما لو مرّ عبر أي فرع منفرد وحده. ورياضياً: بما أن 1/R = 1/R₁ + 1/R₂ + ...، فإن 1/R أكبر من كل حد منفرد فيها، وبالتالي R نفسها أصغر من أصغر مقاومة منفردة.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (1)</div>
+  <div class="example">
+    <div class="exq">وُصلت مقاومتان 4Ω و6Ω على التوالي (تسلسلياً). احسب المقاومة المكافئة.</div>
+    <div class="givens">المعطيات: R₁ = 4Ω — R₂ = 6Ω — توصيل تسلسلي</div>
+    <div class="step"><b>الحل:</b>
+      <div class="math">R = R₁ + R₂ = 4 + 6</div>
+      <div class="math">R = 10 Ω</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (2)</div>
+  <div class="example">
+    <div class="exq">وُصلت مقاومتان 6Ω و3Ω على التوازي. احسب المقاومة المكافئة.</div>
+    <div class="givens">المعطيات: R₁ = 6Ω — R₂ = 3Ω — توصيل توازي</div>
+    <div class="step"><b>الحل:</b>
+      <div class="math">1/R = 1/R₁ + 1/R₂ = 1/6 + 1/3 = 1/6 + 2/6 = 3/6</div>
+      <div class="math">R = 6/3 = 2 Ω</div>
+      💡 لاحظ أن الناتج (2Ω) أصغر من أصغر مقاومة منفردة (3Ω) — كما هو متوقّع دائماً في التوازي.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson4.html">الدرس التالي: القدرة والطاقة الكهربائية ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "في التوصيل التسلسلي، يكون نفسه في جميع المقاومات هو:",
+    opts: ["فرق الجهد", "القدرة", "المقاومة", "التيار"], a: 3,
+    why: "التسلسلي مسار واحد لا يتفرّع، فيمرّ التيار نفسه عبر كل مقاومة، بينما يتوزّع الجهد بينها." },
+  { q: "في التوصيل التوازي، يكون نفسه على جميع المقاومات هو:",
+    opts: ["فرق الجهد", "التيار", "المقاومة المكافئة", "الزمن"], a: 0,
+    why: "التوازي يوفّر فرق الجهد نفسه على كل فرع، بينما يتوزّع التيار الكلي بين الفروع." },
+  { q: "المقاومة المكافئة لتوصيل تسلسلي تكون دائماً:",
+    opts: ["أصغر من أصغر مقاومة منفردة", "أكبر من أكبر مقاومة منفردة", "مساوية لأصغر مقاومة", "صفراً دائماً"], a: 1,
+    why: "R = R1+R2+...، فمجموع المقاومات أكبر حتماً من أي مقاومة منفردة فيها." },
+  { q: "وُصلت مقاومتان 5Ω و7Ω تسلسلياً. المقاومة المكافئة:",
+    opts: ["2 Ω", "35 Ω", "12 Ω", "0.5 Ω"], a: 2,
+    why: "R = R1+R2 = 5+7 = 12 Ω." },
+  { q: "وُصلت مقاومتان 4Ω و4Ω على التوازي. المقاومة المكافئة:",
+    opts: ["2 Ω", "8 Ω", "16 Ω", "0.5 Ω"], a: 0,
+    why: "1/R = 1/4+1/4 = 2/4 = 1/2 ⟹ R = 2Ω." }
+], { onDone: function (stars) { Phy.setLesson("g5c9", "3", { stars: stars }); } });
+</script>
+</body>
+</html>

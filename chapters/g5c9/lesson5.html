@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: القوة الدافعة الكهربائية والمقاومة الداخلية — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c9">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">التيار الكهربائي</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>🪫 الدرس 5: القوة الدافعة الكهربائية والمقاومة الداخلية</h1>
+    <p>حتى الآن تعاملنا مع البطارية كأنها مصدر جهد مثالي لا عيب فيه. لكن الواقع مختلف قليلاً: كل بطارية حقيقية «تخسر» جزءاً من جهدها داخل نفسها. هذا الدرس يكشف لك الفرق بين البطارية المثالية والحقيقية.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🔦</span>
+    <span>لاحظت يوماً أن ضوء المصباح اليدوي يخفت تدريجياً كلما قَدُمت بطاريته، رغم أنها لم «تنتهِ» بالكامل بعد؟ هذا لأن للبطارية <b>مقاومة داخلية</b> تكبر مع تقادمها، فتسحب جزءاً أكبر من جهدها لنفسها بدل أن توصله كاملاً إلى المصباح.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔋</span> القوة الدافعة الكهربائية (ε)</div>
+  <div class="card">
+    <p><b>القوة الدافعة الكهربائية (EMF، ويُرمز لها ε)</b> هي الطاقة التي يمنحها المصدر لوحدة الشحنات — أي أقصى فرق جهد يمكن أن يوفّره المصدر <b>لو كان مثالياً بلا مقاومة داخلية</b>. وتُقاس بالفولت مثل فرق الجهد العادي.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧱</span> المقاومة الداخلية (r)</div>
+  <div class="card">
+    <p>كل مصدر جهد حقيقي (بطارية أو مولّد) له <b>مقاومة داخلية (r)</b> ناتجة عن مادته الداخلية نفسها. وحين يسري تيار في الدارة، يفقد جزء من القوة الدافعة الكهربائية <b>داخل المصدر نفسه</b> بسبب هذه المقاومة، فلا يصل الجهد الكامل ε إلى الدارة الخارجية.</p>
+  </div>
+  <div class="lawbox">
+    الجهد الطرفي للمصدر الحقيقي
+    <div class="formula">V = ε − I r</div>
+  </div>
+  <div class="card">
+    <p>حيث <b>V</b> هو <b>الجهد الطرفي</b> الفعلي المتوفّر للدارة الخارجية، و<b>ε</b> القوة الدافعة الكهربائية، و<b>I</b> التيار المار، و<b>r</b> المقاومة الداخلية. لاحظ أن V أقل من ε دائماً طالما يسري تيار (I ≠ 0).</p>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 لماذا الجهد الطرفي أقل من القوة الدافعة الكهربائية؟</h3>
+    <p class="fig-sub">جزء من ε (وهو Ir) «يُستهلك» داخل البطارية نفسها بسبب مقاومتها الداخلية، فلا يصل للدارة الخارجية سوى الباقي V.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مخطط توزيع القوة الدافعة الكهربائية بين الجهد الطرفي والهبوط الداخلي">
+        <rect x="440" y="55" width="150" height="80" rx="10" fill="#fef9c3" stroke="#a16207" stroke-width="2.5"/>
+        <text x="515" y="84" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#92400e">القوة الدافعة</text>
+        <text x="515" y="116" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="16" fill="#92400e" style="direction:ltr">ε</text>
+        <line x1="435" y1="95" x2="418" y2="95" stroke="#a16207" stroke-width="6" stroke-linecap="round"/>
+        <polygon points="414,95 430,88 430,102" fill="#a16207"/>
+        <line x1="275" y1="80" x2="200" y2="80" stroke="#1d4ed8" stroke-width="12" stroke-linecap="round"/>
+        <polygon points="194,80 212,71 212,89" fill="#1d4ed8"/>
+        <text x="120" y="68" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#1d4ed8">الجهد الطرفي للدارة</text>
+        <text x="120" y="98" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="16" fill="#1d4ed8" style="direction:ltr">V = ε − Ir</text>
+        <line x1="275" y1="128" x2="215" y2="150" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/>
+        <polygon points="210,152 226,142 231,155" fill="#dc2626"/>
+        <text x="135" y="146" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#dc2626">هبوط داخلي (حرارة)</text>
+        <text x="135" y="174" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="15" fill="#dc2626" style="direction:ltr">I r</text>
+      </svg>
+    </div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> يخفت ضوء المصباح المتّصل ببطارية عندما تُستنزَف البطارية تدريجياً، رغم أنها لم تنفد كلياً بعد.</summary>
+    <div class="ans">لأن المقاومة الداخلية r للبطارية <b>تزداد</b> مع استعمالها وتقادمها. وبما أن الجهد الطرفي V = ε − Ir، فإن زيادة r تعني زيادة الهبوط الداخلي Ir، فيقلّ الجهد الطرفي المتوفّر فعلياً للمصباح — فيقلّ التيار المار فيه ويخفت ضوؤه، حتى لو بقيت ε نفسها قريبة من قيمتها الأصلية.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">⚠️</span> تيار الدارة القصيرة</div>
+  <div class="card">
+    <p>إذا وُصل طرفا مصدر الجهد مباشرة بسلك بلا أي مقاومة خارجية (دارة قصيرة)، فإن كل المقاومة في الدارة تصبح r فقط، ويبلغ التيار أقصى قيمة ممكنة له:</p>
+  </div>
+  <div class="lawbox">
+    تيار الدارة القصيرة
+    <div class="formula">I<sub>max</sub> = ε / r</div>
+  </div>
+  <div class="card">
+    <p>وهذا تيار كبير جداً وخطر (لأن r عادة صغيرة جداً)، ولهذا يُحذَّر دائماً من توصيل طرفي البطارية مباشرة ببعضهما.</p>
+  </div>
+
+  <div class="notebox">
+    <b>⚡ لماذا هذا الدرس أساس لما بعده بالسادس العلمي؟</b> في فصل <b>المتسعات</b> بالسادس ستتعامل مع دارات شحن تحتوي مصدر جهد ومقاومة، وستحتاج فهم V = ε − Ir لحساب الجهد الفعلي أثناء الشحن. وفي فصل <b>الحث الكهرومغناطيسي</b> سيكون المولّد نفسه مصدراً له EMF ومقاومة داخلية بالضبط كما درست هنا. هذا الدرس ليس معزولاً — إنه حجر الأساس لفهم دارات أكثر تعقيداً لاحقاً.
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">بطارية قوتها الدافعة الكهربائية 6V ومقاومتها الداخلية 0.5Ω، وُصلت بمقاومة خارجية فمرّ تيار مقداره 2A. احسب الجهد الطرفي للبطارية.</div>
+    <div class="givens">المعطيات: ε = 6V — r = 0.5Ω — I = 2A</div>
+    <div class="step"><b>الحل:</b>
+      <div class="math">V = ε − I r = 6 − (2 × 0.5)</div>
+      <div class="math">V = 6 − 1 = 5 V</div>
+      💡 لاحظ أن 1V من أصل 6V «ضاع» داخل البطارية نفسها بسبب مقاومتها الداخلية، فلم يصل للدارة الخارجية سوى 5V فقط.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="questions.html">🏆 اختبار الفصل الخفيف</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "القوة الدافعة الكهربائية ε هي:",
+    opts: ["الجهد الفعلي المتوفّر للدارة الخارجية دوماً", "المقاومة الداخلية للمصدر", "أقصى جهد يوفّره المصدر لو كان مثالياً بلا مقاومة داخلية", "التيار الأقصى الذي يسحبه المصدر"], a: 2,
+    why: "ε هي الطاقة الممنوحة لوحدة الشحنات من المصدر المثالي؛ الجهد الطرفي الفعلي V أقل منها بسبب المقاومة الداخلية." },
+  { q: "العلاقة بين الجهد الطرفي V والقوة الدافعة الكهربائية ε والمقاومة الداخلية r هي:",
+    opts: ["V = ε + I r", "V = ε × r", "V = ε / r", "V = ε − I r"], a: 3,
+    why: "V = ε − Ir؛ الجهد الطرفي يساوي القوة الدافعة مطروحاً منها الهبوط الداخلي Ir." },
+  { q: "يخفت ضوء المصباح المتّصل ببطارية قديمة لأن مقاومتها الداخلية:",
+    opts: ["تزداد فيقلّ الجهد الطرفي", "تنقص فيزداد الجهد الطرفي", "تبقى صفراً دائماً", "لا علاقة لها بسطوع المصباح"], a: 0,
+    why: "زيادة r تزيد الهبوط الداخلي Ir فيقلّ الجهد الطرفي V = ε − Ir المتاح للمصباح." },
+  { q: "بطارية ε = 9V، r = 1Ω، مرّ فيها تيار 3A. الجهد الطرفي لها:",
+    opts: ["12 V", "9 V", "6 V", "3 V"], a: 2,
+    why: "V = ε − Ir = 9 − (3×1) = 6 V." },
+  { q: "هذا الفصل (التيار الكهربائي) يُعدّ أساساً مباشراً لأي فصول بالسادس العلمي؟",
+    opts: ["البصريات والفيزياء الحديثة فقط", "الأطياف الذرية والليزر فقط", "المتسعات والحث الكهرومغناطيسي والتيار المتناوب", "الفيزياء النووية فقط"], a: 2,
+    why: "فصول الكهرباء بالسادس (المتسعات، الحث الكهرومغناطيسي، التيار المتناوب) تفترض إتقان التيار والجهد والمقاومة وقانون أوم من هذا الفصل." }
+], { onDone: function (stars) { Phy.setLesson("g5c9", "5", { stars: stars }); } });
+</script>
+</body>
+</html>

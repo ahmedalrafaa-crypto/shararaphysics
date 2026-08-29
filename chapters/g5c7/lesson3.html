@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: عزم القصور الذاتي — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c7">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الجسم الجاسئ</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>⚙️ الدرس 3: عزم القصور الذاتي</h1>
+    <p>تذكر القصور الذاتي: الكتلة تقيس مقاومة الجسم لتغيّر حركته الخطية. في الدوران، هناك مقياس مشابه لكنه أعمق: لا يهم فقط <b>كم</b> كتلة الجسم، بل <b>أين</b> تتوزّع بالنسبة لمحور الدوران.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🤸</span>
+    <span>لاحظ متزلجة فنية تدور: حين تُقرّب ذراعيها من جسدها تدور <b>أسرع بكثير</b> فجأة، وحين تفردهما تتباطأ. كتلتها لم تتغيّر أبداً! ما تغيّر هو <b>كيف توزّعت كتلتها</b> حول محور الدوران — وهذا بالضبط ما يقيسه <b>عزم القصور الذاتي</b>.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">⚖️</span> تعريف عزم القصور الذاتي</div>
+  <div class="card">
+    <p><b>عزم القصور الذاتي (I)</b> هو مقياس مقاومة الجسم لتغيّر حالته الدورانية — أي النظير الدوراني للكتلة. ولجسيم نقطي كتلته m يبعد r عن محور الدوران:</p>
+  </div>
+  <div class="lawbox">
+    عزم القصور الذاتي لجسيم نقطي
+    <div class="formula">I = m r²</div>
+  </div>
+  <div class="card">
+    <p>ولجسم مكوّن من عدة جسيمات، يكون عزم قصوره الذاتي الكلي مجموع مساهمات كل جسيم:</p>
+  </div>
+  <div class="lawbox">
+    عزم القصور الذاتي لنظام جسيمات
+    <div class="formula">I = Σ m<sub>i</sub> r<sub>i</sub>²</div>
+  </div>
+  <div class="card">
+    <p>وحدته في النظام الدولي <b>kg·m²</b>. ولاحظ الأمر الحاسم: العزم يتناسب مع <b>مربّع</b> البُعد عن المحور — فمضاعفة بُعد كتلة عن المحور تجعل مساهمتها في I <b>أربعة أضعاف</b>، لا ضعفين.</p>
+  </div>
+
+  <div class="notebox">
+    <b>الفرق الجوهري بين الكتلة وعزم القصور الذاتي:</b> الكتلة m خاصية ثابتة للجسم مهما دار حول أي محور. أما <b>I يعتمد على محور الدوران المختار</b> — فنفس الجسم له عزم قصور ذاتي مختلف حول محاور مختلفة (يدور أسهل حول محور يمر بمركز كتلته من محور عند طرفه، مثلاً).
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 نفس الكتلة، توزيع مختلف، عزم قصور ذاتي مختلف</h3>
+    <p class="fig-sub">كتلتان متساويتان بالمجموع (2kg)، لكن كلما ابتعدت الكتلة عن المحور كبر عزم القصور الذاتي بمربّع البعد — لا بتناسب خطي.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مقارنة عزم القصور الذاتي لكتلتين متساويتين على أبعاد مختلفة عن محور الدوران">
+        <g transform="translate(330,0)">
+          <text x="140" y="26" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#0f766e">كتلتان قريبتان (r = 0.2m)</text>
+          <circle cx="140" cy="130" r="6" fill="#334155"/>
+          <line x1="140" y1="130" x2="80" y2="130" stroke="#94a3b8" stroke-width="2.5"/>
+          <line x1="140" y1="130" x2="200" y2="130" stroke="#94a3b8" stroke-width="2.5"/>
+          <circle cx="80" cy="130" r="16" fill="#0d9488" stroke="#0f766e" stroke-width="2.5"/>
+          <circle cx="200" cy="130" r="16" fill="#0d9488" stroke="#0f766e" stroke-width="2.5"/>
+          <text x="80" y="135" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#fff">1kg</text>
+          <text x="200" y="135" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#fff">1kg</text>
+          <text x="140" y="182" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="15" fill="#0f766e">I صغير</text>
+        </g>
+        <g transform="translate(20,0)">
+          <text x="140" y="26" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#b45309">كتلتان بعيدتان (r = 0.4m)</text>
+          <circle cx="140" cy="130" r="6" fill="#334155"/>
+          <line x1="140" y1="130" x2="20" y2="130" stroke="#94a3b8" stroke-width="2.5"/>
+          <line x1="140" y1="130" x2="260" y2="130" stroke="#94a3b8" stroke-width="2.5"/>
+          <circle cx="20" cy="130" r="16" fill="#b45309" stroke="#92400e" stroke-width="2.5"/>
+          <circle cx="260" cy="130" r="16" fill="#b45309" stroke="#92400e" stroke-width="2.5"/>
+          <text x="20" y="135" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#fff">1kg</text>
+          <text x="260" y="135" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#fff">1kg</text>
+          <text x="140" y="182" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="15" fill="#b45309">I أكبر بأربعة أضعاف!</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> تدور المتزلجة الفنية أسرع بكثير حين تُقرّب ذراعيها من جسدها أثناء الدوران.</summary>
+    <div class="ans">لأن تقريب الذراعين يُقرّب كتلتيهما من محور الدوران، فيقلّ عزم قصورها الذاتي I (لأن I يتناسب مع مربّع البُعد r² عن المحور). وبحفظ الزخم الزاوي L = Iω (سندرسه بالدرس 5)، فإن نقصان I يستلزم زيادة ω للحفاظ على L ثابتاً — فتدور أسرع.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🔵</span> عزم القصور الذاتي لأشكال منتظمة</div>
+  <div class="card">
+    <p>باستعمال التكامل (خارج نطاق هذا الدرس)، يمكن حساب I لأشكال هندسية منتظمة كتلتها M ونصف قطرها R حول محور يمر بمركزها:</p>
+    <p>• <b>حلقة رقيقة</b> (كل الكتلة على المحيط): <b>I = M R²</b></p>
+    <p>• <b>قرص أو إسطوانة مصمتة</b>: <b>I = ½ M R²</b></p>
+    <p>• <b>كرة مصمتة</b> (حول قطرها): <b>I = ⅖ M R²</b></p>
+    <p>• <b>قضيب رفيع</b> (حول محور عمودي يمر بمنتصفه، طوله L): <b>I = (1/12) M L²</b></p>
+  </div>
+  <div class="notebox">
+    <b>لماذا تختلف هذه القيم رغم تساوي M وR؟</b> لأن الحلقة تُركّز <b>كل</b> كتلتها عند أقصى بُعد ممكن (R)، بينما القرص يوزّع كتلته من المركز حتى الحافة (بعضها أقرب)، فيكون معدّل r² أصغر. وهذا يفسّر لماذا تتدحرج الكرة المصمتة أسرع من الإسطوانة المجوّفة على منحدر — عزم قصورها الذاتي أصغر لكتلة ونصف قطر متساويين.
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (1)</div>
+  <div class="example">
+    <div class="exq">أربع كتل، كل منها 0.5kg، مثبّتة على أطراف قضيب خفيف الوزن طوله 1m (كتلتان عند كل طرف تبعدان 0.5m عن المحور المركزي). احسب عزم القصور الذاتي الكلي حول مركز القضيب.</div>
+    <div class="givens">المعطيات: 4 كتل × 0.5kg — كل منها تبعد r = 0.5m عن المحور</div>
+    <div class="step"><b>الحل:</b> بما أن جميع الكتل على البُعد نفسه من المحور:
+      <div class="math">I = Σ m<sub>i</sub> r<sub>i</sub>² = 4 × (0.5 × 0.5²)</div>
+      <div class="math">I = 4 × (0.5 × 0.25) = 4 × 0.125</div>
+      <div class="math">I = 0.5 kg·m²</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (2)</div>
+  <div class="example">
+    <div class="exq">قرص مصمت كتلته 2kg ونصف قطره 0.3m. احسب عزم قصوره الذاتي حول محور يمر بمركزه.</div>
+    <div class="givens">المعطيات: M = 2kg — R = 0.3m — القرص مصمت</div>
+    <div class="step"><b>الحل:</b>
+      <div class="math">I = ½ M R² = ½ × 2 × (0.3)²</div>
+      <div class="math">I = 1 × 0.09 = 0.09 kg·m²</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson4.html">الدرس التالي: قانون نيوتن الثاني للدوران ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "عزم القصور الذاتي هو النظير الدوراني لـ:",
+    opts: ["السرعة", "القوة", "الكتلة", "الشغل"], a: 2,
+    why: "I يقيس مقاومة الجسم لتغيّر حالته الدورانية، تماماً كما تقيس الكتلة m مقاومته لتغيّر حالته الانتقالية." },
+  { q: "عزم القصور الذاتي لجسيم نقطي كتلته m يبعد r عن المحور يساوي:",
+    opts: ["I = m r", "I = m r²", "I = m / r", "I = m² r"], a: 1,
+    why: "I = mr²؛ يتناسب طردياً مع الكتلة، وطردياً مع مربّع البُعد عن المحور." },
+  { q: "بثبوت الكتلة، إذا تضاعف بُعد الكتلة عن محور الدوران، فإن مساهمتها في عزم القصور الذاتي:",
+    opts: ["تتضاعف", "تصير أربعة أضعاف", "تبقى ثابتة", "تنقص للنصف"], a: 1,
+    why: "I = mr²؛ العزم يتناسب مع مربّع البُعد، فمضاعفة r تجعل مساهمتها في I أربعة أضعاف." },
+  { q: "تدور المتزلجة الفنية أسرع عند تقريب ذراعيها من جسدها لأن ذلك:",
+    opts: ["يزيد كتلتها الكلية", "يُنقص عزم قصورها الذاتي", "يزيد عزم قصورها الذاتي", "لا علاقة له بسرعة الدوران"], a: 1,
+    why: "تقريب الذراعين يُقرّب كتلتهما من المحور فيقلّ I، وبحفظ الزخم الزاوي L=Iω يستلزم ذلك زيادة ω." },
+  { q: "قرص مصمت كتلته 4kg ونصف قطره 0.5m. عزم قصوره الذاتي حول مركزه (I = ½MR²) يساوي:",
+    opts: ["1 kg·m²", "2 kg·m²", "0.5 kg·m²", "4 kg·m²"], a: 0,
+    why: "I = ½MR² = ½ × 4 × 0.25 = 1 kg·m²." }
+], { onDone: function (stars) { Phy.setLesson("g5c7", "3", { stars: stars }); } });
+</script>
+</body>
+</html>

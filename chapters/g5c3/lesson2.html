@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 2: قانونا نيوتن الأول والثاني — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">قوانين الحركة</a> / الدرس 2</span>
+  </div>
+
+  <div class="hero">
+    <h1>1️⃣ الدرس 2: قانونا نيوتن الأول والثاني</h1>
+    <p>بنى إسحاق نيوتن نظريته في الحركة على ثلاثة قوانين بسيطة. اليوم نتعلّم الأول (متى لا تتغيّر حالة الجسم) والثاني (متى تتغيّر وكم).</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚗</span>
+    <span>جالس في سيارة متوقفة، وفجأة انطلقت بسرعة — جسمك يندفع للخلف. وإن كانت متحركة وتوقفت فجأة — جسمك يندفع للأمام. في الحالتين جسمك «يقاوم» تغيير حالته الحركية. هذا بالضبط ما يصفه <b>قانون نيوتن الأول</b>.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">1️⃣</span> قانون نيوتن الأول (قانون القصور الذاتي)</div>
+  <div class="card">
+    <p>ينصّ على أن <b>الجسم الساكن يبقى ساكناً</b>، و<b>الجسم المتحرك بسرعة منتظمة يبقى متحركاً بسرعته المنتظمة</b>، طالما أن <b>محصّلة القوى المؤثرة فيه تساوي صفراً</b>.</p>
+  </div>
+  <div class="lawbox">
+    قانون نيوتن الأول
+    <div class="formula">ΣF = 0 ⟹ الجسم ساكن أو متحرك بسرعة ثابتة</div>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 القصور الذاتي أثناء توقّف مفاجئ ودوران منعطف</h3>
+    <p class="fig-sub">يمين: توقّف مفاجئ ⟵ الجسم يندفع للأمام (يحاول الاستمرار بالحركة). يسار: منعطف ⟵ الجسم يميل للاستمرار بخط مستقيم (باتجاه المماس).</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="القصور الذاتي عند التوقف المفاجئ وعند الانعطاف">
+        <!-- ===== توقف مفاجئ (يمين) ===== -->
+        <g transform="translate(330,10)">
+          <text x="140" y="14" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#4338ca">توقّف مفاجئ</text>
+          <rect x="40" y="120" width="150" height="55" rx="10" fill="#c7d2fe" stroke="#4f46e5" stroke-width="2.5"/>
+          <text x="115" y="152" text-anchor="middle" font-family="Cairo" weight="800" font-size="12" fill="#4338ca">سيارة (توقفت)</text>
+          <circle cx="230" cy="140" r="14" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+          <line x1="248" y1="140" x2="280" y2="140" stroke="#e11d48" stroke-width="4" stroke-linecap="round"/>
+          <polygon points="280,140 266,133 266,147" fill="#e11d48"/>
+          <text x="260" y="120" text-anchor="middle" font-family="Cairo" weight="800" font-size="11" fill="#e11d48">اندفاع للأمام</text>
+          <line x1="30" y1="185" x2="290" y2="185" stroke="#334155" stroke-width="2"/>
+        </g>
+        <!-- ===== منعطف (يسار) ===== -->
+        <g transform="translate(20,10)">
+          <text x="140" y="14" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#4338ca">دوران في منعطف</text>
+          <path d="M 40 180 Q 40 90 160 90 Q 220 90 220 130" fill="none" stroke="#94a3b8" stroke-width="18" stroke-linecap="round"/>
+          <path d="M 40 180 Q 40 90 160 90 Q 220 90 220 130" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="8 6"/>
+          <circle cx="170" cy="93" r="10" fill="#059669"/>
+          <line x1="180" y1="90" x2="255" y2="80" stroke="#e11d48" stroke-width="4" stroke-linecap="round"/>
+          <polygon points="255,80 240,76 244,90" fill="#e11d48"/>
+          <text x="260" y="62" text-anchor="middle" font-family="Cairo" weight="800" font-size="11" fill="#e11d48">يميل للمماس (خط مستقيم)</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> عندما تسير السيارة في منعطف أفقي بانطلاق ثابت، يستمر الجسم في اتجاه المماس.</summary>
+    <div class="ans">لأن جسمك يقاوم التغيّر الحاصل في اتجاه حركته (بسبب القصور الذاتي)، فيميل للاستمرار على خطه المستقيم الأصلي (باتجاه المماس للمنحنى) بدل الانعطاف مع السيارة تلقائياً.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">2️⃣</span> قانون نيوتن الثاني</div>
+  <div class="card">
+    <p>إذا كان القانون الأول ينطبق عندما تكون محصّلة القوى <b>صفراً</b>، فإن قانون نيوتن الثاني ينطبق عندما تكون محصّلة القوى <b>لا تساوي صفراً</b> — أي توجد قوى خارجية صافية تؤثر في الجسم. عندئذ يكتسب الجسم <b>تعجيلاً</b> يتناسب طردياً مع محصّلة القوة وعكسياً مع كتلته.</p>
+  </div>
+  <div class="lawbox">
+    قانون نيوتن الثاني
+    <div class="formula">ΣF = m a</div>
+  </div>
+
+  <div class="notebox">
+    <b>ملاحظتان مهمتان:</b>
+    <br>• إذا كانت السرعة ثابتة (منتظمة)، فإن التعجيل يساوي صفراً، أي ΣF = 0 — وهذه في الواقع حالة خاصة من القانون الأول.
+    <br>• إذا كانت السرعة غير ثابتة، فإن التعجيل لا يساوي صفراً، أي أن الجسم يتعجّل بفعل محصّلة قوة غير صفرية.
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">أثّرت محصّلة قوة مقدارها 20N في جسم كتلته 4kg. احسب مقدار التعجيل الذي يكتسبه الجسم.</div>
+    <div class="givens">المعطيات: ΣF = 20N — m = 4kg</div>
+    <div class="step"><b>الخطوة:</b> نطبّق قانون نيوتن الثاني:
+      <div class="math">ΣF = m a ⟹ a = ΣF / m = 20 / 4</div>
+      <div class="math">a = 5 m/s²</div>
+      💡 لاحظ العلاقة العكسية مع الكتلة: لو كانت الكتلة ضعف ذلك (8kg) لكان التعجيل نصف القيمة (2.5 m/s²) بنفس القوة.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson3.html">الدرس التالي: الوزن والكتلة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "قانون نيوتن الأول ينطبق عندما تكون محصّلة القوى المؤثرة في الجسم:",
+    opts: ["كبيرة جداً", "تساوي صفراً", "متزايدة باستمرار", "سالبة فقط"], a: 1,
+    why: "القانون الأول يصف حالة اتزان: الجسم ساكن أو متحرك بسرعة ثابتة عندما ΣF = 0." },
+  { q: "في منعطف بانطلاق ثابت، يستمر جسمك بالاندفاع باتجاه:",
+    opts: ["مركز المنعطف", "المماس (الخط المستقيم الأصلي)", "عكس اتجاه السيارة", "الأعلى"], a: 1,
+    why: "بسبب القصور الذاتي، يقاوم الجسم تغيّر اتجاه حركته فيميل للاستمرار باتجاه المماس." },
+  { q: "الصيغة الرياضية لقانون نيوتن الثاني هي:",
+    opts: ["ΣF = 0", "ΣF = m a", "ΣF = m/a", "a = m × ΣF"], a: 1,
+    why: "قانون نيوتن الثاني: محصّلة القوة تساوي حاصل ضرب الكتلة في التعجيل (ΣF=ma)." },
+  { q: "جسم كتلته 2kg أثّرت فيه محصّلة قوة 10N. ما تعجيله؟",
+    opts: ["20 m/s²", "5 m/s²", "0.2 m/s²", "12 m/s²"], a: 1,
+    why: "a = ΣF/m = 10/2 = 5 m/s²." },
+  { q: "بثبوت محصّلة القوة، إذا تضاعفت كتلة الجسم فإن تعجيله:",
+    opts: ["يتضاعف", "ينقص إلى النصف", "يبقى ثابتاً", "يصبح صفراً"], a: 1,
+    why: "التعجيل يتناسب عكسياً مع الكتلة (a=ΣF/m)؛ فمضاعفة الكتلة بثبوت القوة تُنصّف التعجيل." }
+], { onDone: function (stars) { Phy.setLesson("g5c3", "2", { stars: stars }); } });
+</script>
+</body>
+</html>

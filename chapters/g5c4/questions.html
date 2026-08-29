@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: الاتزان والعزوم — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c4">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الاتزان والعزوم</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: الاتزان والعزوم</h1>
+    <p>١٢ سؤالاً منوّعة على دروس الفصل الخمسة — اختيار من متعدد، مفاهيمي، ومسائل بسيطة. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g5c4");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "عزم القوة حول نقطة يساوي حاصل ضرب القوة في:",
+    opts: ["الزمن", "الكتلة", "ذراع القوة (البُعد العمودي)", "الانطلاق"], a: 2,
+    why: "τ = F × d، حيث d هو ذراع القوة أي البُعد العمودي من نقطة الارتكاز إلى خط عمل القوة." },
+  { q: "وحدة قياس العزم هي:",
+    opts: ["نيوتن·متر", "الجول", "الواط", "النيوتن"], a: 0,
+    why: "وحدة العزم نيوتن·متر (N·m)، ولا تُسمّى جولاً رغم تطابق الأبعاد لاختلاف المعنى الفيزيائي." },
+  { q: "قوة مقدارها 60N تؤثر عمودياً عند بُعد 0.4m من محور الدوران. مقدار العزم:",
+    opts: ["150 N·m", "24 N·m", "60.4 N·m", "0.0067 N·m"], a: 1,
+    why: "τ = F × d = 60 × 0.4 = 24 N·m." },
+  { q: "محصّلة قوتي المزدوجة تساوي صفراً، ومع ذلك تُحدث المزدوجة:",
+    opts: ["انتقالاً بلا دوران", "سكوناً تاماً", "تعجيلاً انتقالياً", "دوراناً بلا انتقال"], a: 3,
+    why: "انعدام المحصّلة يمنع الانتقال فقط؛ أما عزما القوتين فيتجمّعان في اتجاه الدوران نفسه فينتج دوران خالص." },
+  { q: "عزم مزدوجة قوة كل من قوتيها 20N والبُعد بين خطي عملهما 0.5m يساوي:",
+    opts: ["20 N·m", "10 N·m", "40 N·m", "5 N·m"], a: 1,
+    why: "τ = F × d = 20 × 0.5 = 10 N·m، ونضرب في قوة واحدة لا في مجموع القوتين." },
+  { q: "الشرط الأول للاتزان هو:",
+    opts: ["Στ = 0", "W = mg", "ΣF = 0", "τ = F d"], a: 2,
+    why: "الشرط الأول (الاتزان الانتقالي) هو انعدام محصّلة القوى ΣF = 0، فيكون تعجيل الجسم صفراً." },
+  { q: "جسم وزنه 50N معلّق ساكن بحبل رأسي واحد. الشد في الحبل يساوي:",
+    opts: ["50 N", "25 N", "100 N", "صفراً"], a: 0,
+    why: "الجسم متزن رأسياً: ΣF y = 0 ⟹ T − W = 0 ⟹ T = 50 N." },
+  { q: "الشرط الثاني للاتزان ينص على أن:",
+    opts: ["محصّلة القوى تساوي صفراً", "الجسم يجب أن يكون ساكناً", "الوزن يساوي رد الفعل", "المجموع الجبري للعزوم يساوي صفراً"], a: 3,
+    why: "Στ = 0، أي أن مجموع العزوم عكس عقرب الساعة يساوي مجموع العزوم مع عقرب الساعة، فلا يدور الجسم." },
+  { q: "طفل وزنه 400N يجلس على بُعد 1.5m من مركز أرجوحة. أين يجلس طفل وزنه 300N ليتزنا؟",
+    opts: ["على بُعد 1.5m", "على بُعد 1m", "على بُعد 2m من الجهة الأخرى", "في المركز"], a: 2,
+    why: "W₁d₁ = W₂d₂ ⟹ 400×1.5 = 300×d₂ ⟹ d₂ = 600/300 = 2m." },
+  { q: "الجسم الذي يعود إلى وضعه الأصلي بعد إزاحته إزاحة صغيرة يكون في اتزان:",
+    opts: ["متعادل", "مستقر", "غير مستقر", "لا اتزان له"], a: 1,
+    why: "في الاتزان المستقر يرتفع مركز الثقل عند الإزاحة فينشأ عزم استرجاعي يعيد الجسم إلى وضعه." },
+  { q: "مخروط واقف على رأسه يكون في حالة اتزان:",
+    opts: ["غير مستقر", "مستقر", "متعادل", "تام"], a: 0,
+    why: "أي إزاحة صغيرة تخفض مركز ثقله فينشأ عزم يُبعده أكثر عن وضعه الأصلي، فلا يعود — وهذا الاتزان غير المستقر." },
+  { q: "ينقلب الجسم المائل عندما:",
+    opts: ["يرتفع مركز ثقله قليلاً", "تتّسع قاعدة ارتكازه", "يزداد وزنه", "يخرج خط عمل وزنه عن قاعدة ارتكازه"], a: 3,
+    why: "ما دام خط عمل الوزن ساقطاً داخل القاعدة يعود الجسم؛ فإن خرج عنها نشأ عزم يقلبه — وهذا سرّ بقاء برج بيزا قائماً." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g5c4", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: قانون نيوتن الثاني للدوران والطاقة الحركية الدورانية — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c7">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الجسم الجاسئ</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔄 الدرس 4: قانون نيوتن الثاني للدوران والطاقة الحركية الدورانية</h1>
+    <p>تذكّر ΣF = ma من الفصل الثالث؟ اليوم نكتب نسخته الدورانية بالضبط: نستبدل القوة بالعزم، والكتلة بعزم القصور الذاتي، والتعجيل الخطي بالتعجيل الزاوي.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚲</span>
+    <span>لماذا تحتاج قوة دفع أكبر لتُدير عجلة دراجة ثقيلة الإطار من عجلة خفيفة، رغم تساوي كتلتيهما الكلية؟ لأن عزم القصور الذاتي — لا الكتلة وحدها — هو ما يقاوم تغيّر الدوران، تماماً كما تقاوم الكتلة تغيّر الحركة الخطية.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">2️⃣</span> قانون نيوتن الثاني للدوران</div>
+  <div class="card">
+    <p>كما أن محصّلة القوة تُكسب الجسم تعجيلاً خطياً (ΣF = ma)، فإن محصّلة العزم تُكسب الجسم الجاسئ <b>تعجيلاً زاوياً</b>:</p>
+  </div>
+  <div class="lawbox">
+    قانون نيوتن الثاني للدوران
+    <div class="formula">Στ = I α</div>
+  </div>
+  <div class="card">
+    <p>حيث <b>Στ</b> محصّلة العزوم المؤثرة، و<b>I</b> عزم القصور الذاتي حول محور الدوران، و<b>α</b> التعجيل الزاوي الناتج. وكلما كبر I، احتجنا عزماً أكبر لإحداث التعجيل الزاوي نفسه — تماماً كما تحتاج كتلة أكبر قوة أكبر لتعجيلها بالمقدار نفسه.</p>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 النظير الكامل: ΣF = ma مقابل Στ = Iα</h3>
+    <p class="fig-sub">عجلتان بنفس محصّلة العزم؛ العجلة ذات عزم القصور الذاتي الأكبر (الإطار الثقيل) تكتسب تعجيلاً زاوياً أصغر.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مقارنة تعجيل زاوي لعجلتين مختلفتي عزم القصور الذاتي بنفس العزم المؤثر">
+        <g transform="translate(330,0)">
+          <text x="140" y="26" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#0f766e">إطار خفيف (I صغير)</text>
+          <circle cx="140" cy="120" r="55" fill="none" stroke="#0d9488" stroke-width="8"/>
+          <circle cx="140" cy="120" r="8" fill="#334155"/>
+          <path d="M 140 65 A 55 55 0 0 1 185 95" fill="none" stroke="#b45309" stroke-width="4"/>
+          <polygon points="185,95 170,90 176,104" fill="#b45309"/>
+          <text x="140" y="192" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="15" fill="#0f766e">α كبير ⟵ يتسارع بسرعة</text>
+        </g>
+        <g transform="translate(20,0)">
+          <text x="140" y="26" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#b45309">إطار ثقيل (I كبير)</text>
+          <circle cx="140" cy="120" r="55" fill="none" stroke="#b45309" stroke-width="14"/>
+          <circle cx="140" cy="120" r="8" fill="#334155"/>
+          <path d="M 140 65 A 55 55 0 0 1 165 72" fill="none" stroke="#0f766e" stroke-width="4"/>
+          <polygon points="165,72 150,70 154,84" fill="#0f766e"/>
+          <text x="140" y="192" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="15" fill="#b45309">α صغير ⟵ يتسارع ببطء</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> بنفس العزم المؤثر، تكتسب العجلة ذات عزم القصور الذاتي الأكبر تعجيلاً زاوياً أصغر.</summary>
+    <div class="ans">من قانون نيوتن الثاني للدوران Στ = Iα، فإن α = Στ/I. وبثبوت العزم المحصّل Στ، تكون العلاقة عكسية بين I وα — فكلما كبر عزم القصور الذاتي، قلّ التعجيل الزاوي الناتج عن العزم نفسه.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">⚡</span> الطاقة الحركية الدورانية</div>
+  <div class="card">
+    <p>كل نقطة في جسم دوّار تتحرك بسرعة خطية v = rω، وتمتلك طاقة حركية ½mv². وبجمع مساهمات كل نقاط الجسم نحصل على <b>الطاقة الحركية الدورانية الكلية</b>:</p>
+  </div>
+  <div class="lawbox">
+    الطاقة الحركية الدورانية
+    <div class="formula">KE<sub>دوران</sub> = ½ I ω²</div>
+  </div>
+  <div class="card">
+    <p>لاحظ التطابق التام مع KE<sub>خطية</sub> = ½mv²؛ فقط استبدل m بـI وv بـω. وإذا كان الجسم <b>يتدحرج</b> (يدور وينتقل معاً، كعجلة سيارة أو كرة على منحدر)، فإن طاقته الحركية الكلية هي مجموع النوعين:</p>
+  </div>
+  <div class="lawbox">
+    الطاقة الحركية الكلية لجسم يتدحرج
+    <div class="formula">KE<sub>كلية</sub> = ½ m v² + ½ I ω²</div>
+  </div>
+
+  <div class="notebox">
+    <b>لماذا تصل الكرة المصمتة إلى أسفل المنحدر قبل الإسطوانة المجوّفة رغم تساوي كتلتيهما ونصفي قطريهما؟</b> لأن عزم القصور الذاتي للكرة المصمتة (⅖MR²) أصغر من الإسطوانة المجوّفة (MR²). فعند تساوي الطاقة الكامنة المتحوّلة، تذهب حصة أقل من طاقة الكرة إلى الدوران (½Iω²) وحصة أكبر إلى الانتقال (½mv²) — فتكتسب انطلاقاً خطياً أكبر وتصل أولاً.
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (1)</div>
+  <div class="example">
+    <div class="exq">أثّر عزم محصّل مقداره 6 N·m في قرص عزم قصوره الذاتي 2 kg·m². احسب التعجيل الزاوي الناتج.</div>
+    <div class="givens">المعطيات: Στ = 6 N·m — I = 2 kg·m²</div>
+    <div class="step"><b>الحل:</b>
+      <div class="math">Στ = I α ⟹ α = Στ / I = 6 / 2</div>
+      <div class="math">α = 3 rad/s²</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (2)</div>
+  <div class="example">
+    <div class="exq">إسطوانة عزم قصورها الذاتي 0.4 kg·m² تدور بسرعة زاوية 5 rad/s. احسب طاقتها الحركية الدورانية.</div>
+    <div class="givens">المعطيات: I = 0.4 kg·m² — ω = 5 rad/s</div>
+    <div class="step"><b>الحل:</b>
+      <div class="math">KE = ½ I ω² = ½ × 0.4 × (5)²</div>
+      <div class="math">KE = 0.2 × 25 = 5 J</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: الزخم الزاوي وحفظه ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "قانون نيوتن الثاني للدوران هو النظير الدوراني لـ:",
+    opts: ["W = Fd", "ΣF = m a", "p = m v", "KE = ½mv²"], a: 1,
+    why: "Στ = Iα هو النظير الدوراني تماماً لقانون نيوتن الثاني الخطي ΣF = ma." },
+  { q: "بثبوت محصّلة العزم، إذا كان عزم القصور الذاتي كبيراً، فإن التعجيل الزاوي الناتج:",
+    opts: ["يكبر", "يصغر", "يبقى ثابتاً", "يصير صفراً"], a: 1,
+    why: "α = Στ/I؛ العلاقة عكسية بين I وα بثبوت العزم — فكبر I يعني صغر α." },
+  { q: "الطاقة الحركية الدورانية لجسم عزم قصوره الذاتي I يدور بسرعة زاوية ω تُحسب بالعلاقة:",
+    opts: ["½ I ω²", "I ω", "½ m v²", "Στ = I α"], a: 0,
+    why: "KE(دوران) = ½Iω²، وهي النظير الدوراني لـ½mv²." },
+  { q: "أثّر عزم 10 N·m في جسم عزم قصوره الذاتي 5 kg·m². التعجيل الزاوي الناتج:",
+    opts: ["50 rad/s²", "2 rad/s²", "0.5 rad/s²", "15 rad/s²"], a: 1,
+    why: "α = Στ/I = 10/5 = 2 rad/s²." },
+  { q: "تصل الكرة المصمتة إلى أسفل منحدر قبل الإسطوانة المجوّفة (نفس m وR) لأن الكرة:",
+    opts: ["أثقل من الإسطوانة", "عزم قصورها الذاتي أصغر فتكتسب انطلاقاً خطياً أكبر", "لا تدور إطلاقاً", "عزم قصورها الذاتي أكبر"], a: 1,
+    why: "I الكرة (⅖MR²) أصغر من الإسطوانة (MR²)، فتذهب حصة أقل من طاقتها للدوران وحصة أكبر للانتقال، فتصل أولاً." }
+], { onDone: function (stars) { Phy.setLesson("g5c7", "4", { stars: stars }); } });
+</script>
+</body>
+</html>

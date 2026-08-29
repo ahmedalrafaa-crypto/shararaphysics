@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: قوانين الحركة — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c3">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">قوانين الحركة</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: قوانين الحركة</h1>
+    <p>١٢ سؤالاً منوّعة على دروس الفصل الخمسة — اختيار من متعدد، مفاهيمي، ومسائل بسيطة. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g5c3");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "القصور الذاتي للجسم يعتمد بشكل أساسي على:",
+    opts: ["سرعته", "كتلته", "لونه", "شكله فقط"], a: 1,
+    why: "القصور الذاتي يعتمد على كتلة الجسم؛ الكتلة الأكبر تُبدي مقاومة أكبر لتغيير حالتها الحركية." },
+  { q: "أي القوى التالية من القوى بلا تماس (قوى المجال)؟",
+    opts: ["الدفع", "قوة الجاذبية", "الشد", "الاحتكاك"], a: 1,
+    why: "قوة الجاذبية من القوى الأساسية بلا تماس مباشر؛ الدفع والشد والاحتكاك من قوى التماس." },
+  { q: "قانون نيوتن الأول ينطبق عندما تكون محصّلة القوى:",
+    opts: ["تساوي صفراً", "كبيرة جداً", "متزايدة", "سالبة فقط"], a: 0,
+    why: "القانون الأول يصف حالة اتزان (سكون أو سرعة ثابتة) عندما ΣF=0." },
+  { q: "جسم كتلته 3kg أثّرت فيه محصّلة قوة 15N. ما تعجيله؟",
+    opts: ["45 m/s²", "5 m/s²", "0.2 m/s²", "18 m/s²"], a: 1,
+    why: "a = ΣF/m = 15/3 = 5 m/s²." },
+  { q: "إذا انتقل جسم من الأرض إلى القمر، فإن:",
+    opts: ["كتلته ووزنه يتغيّران معاً", "كتلته ثابتة ووزنه يتغيّر", "وزنه ثابت وكتلته تتغيّر", "كلاهما يبقى ثابتاً"], a: 1,
+    why: "الكتلة خاصية ثابتة للجسم، لكن الوزن W=mg يتغيّر لاختلاف g من كوكب لآخر." },
+  { q: "جسم كتلته 6kg على سطح الأرض (g=10 m/s²). ما وزنه؟",
+    opts: ["0.6 N", "16 N", "60 N", "6 N"], a: 2,
+    why: "W = mg = 6×10 = 60 N." },
+  { q: "وفق قانون الجذب العام، قوة الجذب بين كتلتين تتناسب طردياً مع:",
+    opts: ["مجموع الكتلتين", "حاصل ضرب الكتلتين", "الفرق بين الكتلتين", "مربّع الكتلتين"], a: 1,
+    why: "F = G m₁m₂/d²؛ القوة تتناسب طردياً مع حاصل ضرب الكتلتين وعكسياً مع مربّع البُعد." },
+  { q: "قوتا الفعل ورد الفعل (قانون نيوتن الثالث) تؤثران في:",
+    opts: ["نفس الجسم", "جسمين مختلفين", "ثلاثة أجسام", "لا جسم"], a: 1,
+    why: "الفعل ورد الفعل يؤثران دائماً في جسمين مختلفين، متساويان بالمقدار ومتعاكسان بالاتجاه." },
+  { q: "القوة العمودية N التي يؤثر بها السطح على جسم موضوع عليه تكون اتجاهها:",
+    opts: ["موازية للسطح", "عمودية على السطح دائماً", "بلا اتجاه محدد", "نحو مركز الأرض دائماً"], a: 1,
+    why: "القوة العمودية N عمودية دائماً على السطح وتتجه بعيداً عنه." },
+  { q: "اتجاه قوة الاحتكاك بالنسبة لاتجاه حركة الجسم (أو محاولتها):",
+    opts: ["نفس الاتجاه", "معاكس دائماً", "عمودي عليه", "عشوائي"], a: 1,
+    why: "الاحتكاك يعمل دائماً بعكس اتجاه الحركة أو محاولة الحركة." },
+  { q: "متى يبلغ الاحتكاك السكوني أعظم مقدار له؟",
+    opts: ["عند أي قوة صغيرة", "لحظة أن يوشك الجسم على الحركة", "بعد حركة طويلة", "لا يبلغ قيمة عظمى"], a: 1,
+    why: "يزداد الاحتكاك السكوني مع القوة المؤثرة حتى يبلغ أقصاه لحظة وشوك الجسم على الانزلاق." },
+  { q: "صندوق كتلته 15kg على سطح أفقي، μ_s=0.3 (g=10 m/s²). ما أعظم قوة احتكاك سكوني؟",
+    opts: ["4.5 N", "45 N", "450 N", "0.45 N"], a: 1,
+    why: "N=mg=150N، fs(max)=μsN=0.3×150=45N." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g5c3", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

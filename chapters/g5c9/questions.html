@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: التيار الكهربائي — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c9">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">التيار الكهربائي</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: التيار الكهربائي</h1>
+    <p>١٢ سؤالاً منوّعة على دروس الفصل الخمسة — اختيار من متعدد، مفاهيمي، ومسائل بسيطة. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g5c9");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "التيار الكهربائي I يُعرَّف بالعلاقة:",
+    opts: ["I = Q t", "I = Q + t", "I = t / Q", "I = Q / t"], a: 3,
+    why: "I = Q/t؛ معدّل مرور الشحنة عبر مقطع الموصل خلال وحدة الزمن." },
+  { q: "اتجاه التيار الاصطلاحي في الدارة الخارجية هو من:",
+    opts: ["الموجب إلى السالب", "السالب إلى الموجب", "لا اتجاه محدد له", "منتصف الدارة فقط"], a: 0,
+    why: "اصطلاحاً، يُفترض أن التيار يسري من القطب الموجب إلى السالب خارج المصدر، عكس حركة الإلكترونات الفعلية." },
+  { q: "ينص قانون أوم على أن:",
+    opts: ["V = I R", "V = I + R", "V = I / R", "V = R / I"], a: 0,
+    why: "V = IR؛ فرق الجهد يساوي حاصل ضرب التيار في المقاومة." },
+  { q: "مقاومة سلك معدني (R = ρL/A) تزداد كلما:",
+    opts: ["قصُر السلك واتّسع مقطعه", "قصُر السلك فقط", "اتّسع مقطعه فقط", "طال السلك وضاق مقطعه"], a: 3,
+    why: "المقاومة تتناسب طردياً مع الطول L وعكسياً مع مساحة المقطع A." },
+  { q: "في التوصيل التسلسلي للمقاومات، الكمية المشتركة بين جميع المقاومات هي:",
+    opts: ["فرق الجهد", "القدرة", "المقاومة المكافئة", "التيار"], a: 3,
+    why: "التسلسلي مسار واحد لا يتفرّع، فيمرّ التيار نفسه في كل مقاومة." },
+  { q: "في التوصيل التوازي، المقاومة المكافئة تكون دائماً:",
+    opts: ["أكبر من أكبر مقاومة منفردة", "مساوية لمجموع المقاومات", "أصغر من أصغر مقاومة منفردة", "صفراً دائماً"], a: 2,
+    why: "1/R = 1/R1+1/R2+...، فالمسارات الإضافية تُسهّل مرور التيار الكلي فتصغر المقاومة المكافئة." },
+  { q: "القدرة الكهربائية P تُحسب بالعلاقة الأساسية:",
+    opts: ["P = V I", "P = V + I", "P = V − I", "P = I / V"], a: 0,
+    why: "P = VI، وتُشتقّ منها I²R و V²/R باستعمال قانون أوم." },
+  { q: "الوحدة العملية لقياس الطاقة الكهربائية بفواتير الكهرباء هي:",
+    opts: ["الأوم", "الأمبير", "الكيلوواط.ساعة", "الفولت"], a: 2,
+    why: "الكيلوواط.ساعة (kWh) = قدرة (kW) × زمن (h)، وهي وحدة طاقة عملية." },
+  { q: "الجهد الطرفي V لمصدر حقيقي يرتبط بالقوة الدافعة ε والمقاومة الداخلية r بالعلاقة:",
+    opts: ["V = ε + I r", "V = ε − I r", "V = ε r", "V = ε / I"], a: 1,
+    why: "V = ε − Ir؛ جزء من ε يُستهلك داخل المصدر نفسه بسبب مقاومته الداخلية." },
+  { q: "مصباح جهده 12V ويسحب تياراً 0.5A. قدرته تساوي:",
+    opts: ["6 W", "24 W", "12.5 W", "0.04 W"], a: 0,
+    why: "P = VI = 12 × 0.5 = 6 W." },
+  { q: "مقاومتان 3Ω و6Ω موصولتان تسلسلياً. مقاومتهما المكافئة:",
+    opts: ["2 Ω", "18 Ω", "9 Ω", "3 Ω"], a: 2,
+    why: "R = R1+R2 = 3+6 = 9 Ω." },
+  { q: "مقاومتان 4Ω و4Ω موصولتان توازياً. مقاومتهما المكافئة:",
+    opts: ["8 Ω", "1 Ω", "16 Ω", "2 Ω"], a: 3,
+    why: "1/R = 1/4+1/4 = 1/2 ⟹ R = 2Ω." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g5c9", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

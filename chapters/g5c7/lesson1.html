@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 1: الحركة الدورانية والإزاحة الزاوية — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c7">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الجسم الجاسئ</a> / الدرس 1</span>
+  </div>
+
+  <div class="hero">
+    <h1>📐 الدرس 1: الحركة الدورانية والإزاحة الزاوية</h1>
+    <p>الجسم الجاسئ هو جسم لا يتغيّر شكله عند تأثير القوى فيه (نُهمل أي تشوّه). حين يدور مثل هذا الجسم حول محور ثابت، نحتاج لغة جديدة لوصف حركته: لغة الزوايا لا المسافات.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🎡</span>
+    <span>على عجلة فيريس (الدولاب الدوّار)، كل مقعد يقطع مسافة مختلفة عن الآخر بحسب بُعده عن المحور، لكن جميع المقاعد تدور <b>بالزاوية نفسها في الزمن نفسه</b>. هذا هو السبب في أننا نصف دوران الجسم الجاسئ بالزاوية، لا بالمسافة الخطية.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🧱</span> الجسم الجاسئ</div>
+  <div class="card">
+    <p><b>الجسم الجاسئ (Rigid Body)</b> هو جسم تبقى المسافة بين أي نقطتين فيه <b>ثابتة</b> مهما أثّرت فيه القوى — أي لا يتشوّه ولا يتمدد ولا ينضغط. وهذا تقريب مفيد جداً لدراسة دوران الأجسام الصلبة كالعجلات والأقراص والقضبان.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">📏</span> الإزاحة الزاوية والراديان</div>
+  <div class="card">
+    <p>عندما يدور جسم جاسئ حول محور ثابت، يصف كل نقطة فيه (باستثناء نقاط المحور نفسه) قوساً من دائرة. ونقيس مقدار الدوران بـ<b>الإزاحة الزاوية θ</b>، وهي الزاوية التي يدورها الجسم.</p>
+    <p>وحدة الزاوية الأنسب في الفيزياء هي <b>الراديان (rad)</b>، ويُعرَّف بأنه: الزاوية المركزية التي يقابلها قوس طوله يساوي نصف قطر الدائرة.</p>
+  </div>
+  <div class="lawbox">
+    العلاقة بين طول القوس والزاوية
+    <div class="formula">s = r θ &nbsp; (θ بالراديان)</div>
+  </div>
+  <div class="card">
+    <p>حيث <b>s</b> طول القوس المقطوع، و<b>r</b> نصف قطر الدوران، و<b>θ</b> الزاوية بالراديان. ودورة كاملة (360°) تقابل <b>2π راديان</b> ≈ 6.28 rad، أي أن:</p>
+    <p><b>1 راديان ≈ 57.3°</b> &nbsp;&nbsp; و&nbsp;&nbsp; <b>180° = π راديان</b></p>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 الإزاحة الزاوية واحدة، والمسافة الخطية تختلف</h3>
+    <p class="fig-sub">نقطتان على قرص دوّار: الخارجية تقطع مسافة أطول من الداخلية رغم أن كلتيهما تدور بالزاوية θ نفسها في الزمن نفسه.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="قرص دوار يوضح أن نقطتين مختلفتي البعد عن المحور تدوران بالزاوية نفسها لكن بمسافات قوسية مختلفة">
+        <circle cx="310" cy="140" r="105" fill="#ccfbf1" stroke="#0d9488" stroke-width="2.5"/>
+        <circle cx="310" cy="140" r="6" fill="#334155"/>
+        <line x1="310" y1="140" x2="310" y2="35" stroke="#334155" stroke-width="2.5" stroke-dasharray="5 4"/>
+        <line x1="310" y1="140" x2="381" y2="88" stroke="#0f766e" stroke-width="3"/>
+        <line x1="310" y1="140" x2="366" y2="98" stroke="#b45309" stroke-width="3"/>
+        <path d="M 310 90 A 50 50 0 0 1 346 108" fill="none" stroke="#334155" stroke-width="2"/>
+        <text x="336" y="98" font-family="Cairo" font-weight="800" font-size="13" fill="#334155">θ</text>
+        <circle cx="381" cy="88" r="8" fill="#0f766e"/>
+        <text x="400" y="78" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#0f766e">نقطة خارجية (r كبير)</text>
+        <circle cx="366" cy="98" r="7" fill="#b45309"/>
+        <text x="450" y="130" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#b45309">نقطة داخلية (r صغير)</text>
+        <path d="M 381 88 A 105 105 0 0 1 310 35" fill="none" stroke="#0f766e" stroke-width="4"/>
+        <path d="M 366 98 A 71 71 0 0 1 310 69" fill="none" stroke="#b45309" stroke-width="4"/>
+        <text x="150" y="225" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="14" fill="#0f766e">s = r θ — نفس θ، وقوس أطول للنقطة الأبعد</text>
+      </svg>
+    </div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> على عجلة فيريس (الدولاب)، تتحرك المقاعد الخارجية بمسافة أكبر من مقعد أقرب للمحور خلال الزمن نفسه، رغم أن كليهما «يدور بالسرعة نفسها».</summary>
+    <div class="ans">لأن الجسم الجاسئ يدور بالزاوية نفسها في الزمن نفسه لكل نقاطه (السرعة <b>الزاوية</b> واحدة)، لكن المسافة الخطية المقطوعة تعتمد على نصف قطر الدوران أيضاً (s = rθ). فالنقطة الأبعد عن المحور (r أكبر) تقطع طول قوس أكبر بنفس الزاوية، أي أن سرعتها <b>الخطية</b> أكبر رغم تساوي سرعتها الزاوية مع النقاط الأقرب.</div>
+  </details>
+
+  <div class="notebox">
+    <b>لماذا الراديان تحديداً؟</b> لأن استعمال الراديان يجعل العلاقة بين الكميات الزاوية والخطية <b>بسيطة بلا ثوابت تحويل</b> (s = rθ مباشرة، لا حاجة لضرب بـπ/180). لو استعملنا الدرجة لاحتجنا معامل تحويل في كل معادلة — لذلك يُشترط استعمال الراديان في كل قوانين الحركة الدورانية.
+  </div>
+
+  <div class="section-title"><span class="ico">🔁</span> الدورة الكاملة والتردد</div>
+  <div class="card">
+    <p>حين يكمل الجسم <b>دورة كاملة</b> واحدة، تكون إزاحته الزاوية θ = 2π rad = 360°. ويُعرَّف <b>عدد الدورات في وحدة الزمن</b> بأنه <b>التردد الدوراني (f)</b> ووحدته الدورة/ثانية أو الهرتز (Hz)، ويُعرَّف مقلوبه (زمن الدورة الواحدة) بـ<b>الدور (T)</b>.</p>
+  </div>
+  <div class="lawbox">
+    الدور والتردد
+    <div class="formula">T = 1 / f</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (1)</div>
+  <div class="example">
+    <div class="exq">دار قرص إسطوانة زاوية مقدارها 3 rad. إذا كان نصف قطر القرص 0.2m، احسب طول القوس الذي قطعته نقطة على حافته.</div>
+    <div class="givens">المعطيات: θ = 3 rad — r = 0.2m</div>
+    <div class="step"><b>الحل:</b>
+      <div class="math">s = r θ = 0.2 × 3</div>
+      <div class="math">s = 0.6 m</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (2)</div>
+  <div class="example">
+    <div class="exq">دولاب سيارة نصف قطره 0.3m، قطعت نقطة على حافته الخارجية طول قوس مقداره 1.5m أثناء دورانه. احسب الإزاحة الزاوية بالراديان وبالدرجات. (1 rad ≈ 57.3°)</div>
+    <div class="givens">المعطيات: r = 0.3m — s = 1.5m</div>
+    <div class="step"><b>الحل:</b>
+      <div class="math">θ = s / r = 1.5 / 0.3 = 5 rad</div>
+      <div class="math">θ° = 5 × 57.3 ≈ 286.5°</div>
+      💡 هذا أقل قليلاً من دورة كاملة (360°) — أي أن الدولاب لم يُكمل دورة واحدة بعد.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson2.html">الدرس التالي: السرعة والتعجيل الزاويان ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "الجسم الجاسئ هو جسم:",
+    opts: ["عديم الكتلة", "لا تتغيّر المسافة بين أي نقطتين فيه", "يتحرك بتعجيل ثابت فقط", "لا يمكنه الدوران"], a: 1,
+    why: "الجسم الجاسئ لا يتشوّه: تبقى المسافة بين أي نقطتين فيه ثابتة مهما أثّرت فيه القوى." },
+  { q: "العلاقة بين طول القوس s ونصف القطر r والزاوية θ (بالراديان) هي:",
+    opts: ["s = r / θ", "s = r θ", "s = θ / r", "s = 2πr"], a: 1,
+    why: "s = rθ، وهذه العلاقة البسيطة صحيحة فقط عندما تكون θ مقيسة بالراديان." },
+  { q: "دورة كاملة (360°) تكافئ بالراديان:",
+    opts: ["π rad", "π/2 rad", "2π rad", "360 rad"], a: 2,
+    why: "الدورة الكاملة تقابل محيط الدائرة كاملاً، أي 2πr، فتكون الزاوية θ = s/r = 2πr/r = 2π rad." },
+  { q: "قرص نصف قطره 0.5m دار زاوية 4 rad. طول القوس الذي قطعته نقطة على حافته:",
+    opts: ["0.125 m", "8 m", "2 m", "4.5 m"], a: 2,
+    why: "s = rθ = 0.5 × 4 = 2 m." },
+  { q: "على عجلة دوّارة، النقطة الأبعد عن المحور مقارنةً بالأقرب منه (لنفس الزاوية المقطوعة):",
+    opts: ["تقطع مسافة خطية أكبر", "تقطع مسافة خطية أصغر", "تدور بزاوية أكبر", "لا فرق بينهما إطلاقاً"], a: 0,
+    why: "بما أن s = rθ وθ واحدة للنقطتين، فإن النقطة ذات r الأكبر تقطع طول قوس (مسافة خطية) أكبر." }
+], { onDone: function (stars) { Phy.setLesson("g5c7", "1", { stars: stars }); } });
+</script>
+</body>
+</html>

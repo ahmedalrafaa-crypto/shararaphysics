@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 6: الزخم والدفع وحفظ الزخم — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c5">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الشغل والطاقة والزخم</a> / الدرس 6</span>
+  </div>
+
+  <div class="hero">
+    <h1>🎱 الدرس 6: الزخم والدفع وحفظ الزخم</h1>
+    <p>لماذا يؤلمك اصطدام كرة صغيرة سريعة بقدر شاحنة بطيئة؟ ولماذا ترتد البندقية إلى الخلف عند إطلاقها؟ الجواب في كمية فيزيائية واحدة: <b>الزخم</b>.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🥎</span>
+    <span>لاعب البيسبول يمدّ يده مع الكرة أثناء التقاطها بدل أن يوقفها فجأة. لماذا؟ لأن تغيّر زخم الكرة ثابت في الحالتين، لكن <b>إطالة زمن التصادم تُقلّل القوة</b> التي تتلقّاها يده. هذا بالضبط مبدأ عمل الوسائد الهوائية وأحزمة الأمان.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🎯</span> الزخم الخطي</div>
+  <div class="card">
+    <p><b>الزخم الخطي (p)</b> لجسم متحرك هو حاصل ضرب <b>كتلته</b> في <b>سرعته المتجهة</b>. وهو مقياس لمدى «صعوبة إيقاف» الجسم.</p>
+  </div>
+  <div class="lawbox">
+    الزخم الخطي
+    <div class="formula">p = m v</div>
+  </div>
+  <div class="card">
+    <p>• وحدة الزخم في النظام الدولي هي <b>كغم·م/ث (kg·m/s)</b>.</p>
+    <p>• الزخم كمية <b>متجهة</b>، واتجاهه هو <b>اتجاه سرعة الجسم</b> نفسه.</p>
+    <p>• يتناسب طردياً مع الكتلة ومع السرعة معاً — فشاحنة بطيئة قد يكون زخمها مساوياً لزخم سيارة سريعة.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">💥</span> الدفع وعلاقته بتغيّر الزخم</div>
+  <div class="card">
+    <p><b>الدفع</b> هو حاصل ضرب <b>القوة</b> في <b>زمن تأثيرها</b>. وينص <b>مبدأ الدفع والزخم</b> على أن الدفع المؤثر في جسم يساوي <b>التغيّر في زخمه</b>:</p>
+  </div>
+  <div class="lawbox">
+    مبدأ الدفع والزخم
+    <div class="formula">F Δt = Δp = m v₂ − m v₁</div>
+  </div>
+  <div class="card">
+    <p>ومن هذه العلاقة نستنتج نتيجة عملية بالغة الأهمية: بثبوت التغيّر في الزخم، فإن <b>إطالة زمن التصادم Δt تُصغّر القوة F</b> بالنسبة نفسها. وهذا هو السبب الفيزيائي وراء:</p>
+    <p>• <b>الوسادة الهوائية</b> وحزام الأمان: يطيلان زمن توقّف جسم الراكب فتقلّ القوة عليه.</p>
+    <p>• <b>ثني الركبتين</b> عند القفز من ارتفاع بدل الهبوط بساقين مشدودتين.</p>
+    <p>• <b>خوذة الدرّاج</b> وحشوة صناديق التغليف.</p>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 لماذا تُنقذ الوسادة الهوائية؟ نفس الزخم، وقوة أقل بكثير</h3>
+    <p class="fig-sub">التغيّر في الزخم واحد في الحالتين، لكن إطالة زمن التوقّف من 0.05s إلى 0.5s تُصغّر القوة إلى عُشرها.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مقارنة القوة عند توقف مفاجئ وتوقف ممتد بنفس تغير الزخم">
+        <g transform="translate(330,0)">
+          <rect x="10" y="25" width="255" height="185" rx="12" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+          <text x="138" y="52" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#15803d">مع وسادة هوائية</text>
+          <text x="138" y="80" text-anchor="middle" font-family="Cairo" font-weight="700" font-size="12" fill="#166534" style="direction:ltr">Δp = 500 kg·m/s</text>
+          <text x="138" y="104" text-anchor="middle" font-family="Cairo" font-weight="700" font-size="13" fill="#166534">الزمن Δt = 0.5 s</text>
+          <rect x="70" y="122" width="26" height="34" rx="4" fill="#15803d"/>
+          <text x="138" y="180" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="18" fill="#15803d">F = 1000 N</text>
+        </g>
+        <g transform="translate(20,0)">
+          <rect x="10" y="25" width="255" height="185" rx="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+          <text x="138" y="52" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#b91c1c">بلا وسادة هوائية</text>
+          <text x="138" y="80" text-anchor="middle" font-family="Cairo" font-weight="700" font-size="12" fill="#991b1b" style="direction:ltr">Δp = 500 kg·m/s</text>
+          <text x="138" y="104" text-anchor="middle" font-family="Cairo" font-weight="700" font-size="13" fill="#991b1b">الزمن Δt = 0.05 s</text>
+          <rect x="70" y="112" width="130" height="44" rx="4" fill="#b91c1c"/>
+          <text x="138" y="180" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="18" fill="#b91c1c">F = 10000 N</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> يثني القافز ركبتيه عند هبوطه على الأرض.</summary>
+    <div class="ans">لأن ثني الركبتين <b>يطيل زمن التوقّف Δt</b>. وبما أن الدفع يساوي التغيّر في الزخم (F Δt = Δp) وتغيّر الزخم ثابت لا يتغيّر، فإن زيادة Δt تستلزم <b>نقصان القوة F</b> المؤثرة في جسمه — فتقلّ خطورة الإصابة.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🔒</span> مبدأ حفظ الزخم</div>
+  <div class="card">
+    <p>ينص <b>مبدأ حفظ الزخم</b> على أنه: إذا لم تؤثر قوى خارجية في نظام معزول، فإن <b>الزخم الكلي للنظام قبل التصادم يساوي الزخم الكلي بعده</b>.</p>
+  </div>
+  <div class="lawbox">
+    حفظ الزخم
+    <div class="formula">m₁v₁ + m₂v₂ = m₁v′₁ + m₂v′₂</div>
+  </div>
+  <div class="card">
+    <p>وأشهر تطبيقاته <b>ارتداد البندقية</b>: قبل الإطلاق كان زخم النظام (بندقية + طلقة) يساوي صفراً لأن كليهما ساكن. وبعد الإطلاق يجب أن يبقى المجموع صفراً — فتندفع الطلقة إلى الأمام بزخم، وترتدّ البندقية إلى الخلف بزخم <b>مساوٍ في المقدار ومعاكس في الاتجاه</b>. وبما أن كتلة البندقية أكبر بكثير، فإن سرعة ارتدادها تكون صغيرة.</p>
+    <p>وعلى المبدأ نفسه تعمل <b>الصواريخ</b>: تقذف الغازات إلى الخلف بزخم كبير، فتندفع هي إلى الأمام بزخم مساوٍ ومعاكس.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (1)</div>
+  <div class="example">
+    <div class="exq">جسم كتلته 5kg يتحرك بسرعة 4 m/s. احسب زخمه.</div>
+    <div class="givens">المعطيات: m = 5kg — v = 4 m/s</div>
+    <div class="step"><b>الحل:</b>
+      <div class="math">p = m v = 5 × 4</div>
+      <div class="math">p = 20 kg·m/s باتجاه الحركة</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (2)</div>
+  <div class="example">
+    <div class="exq">كرة كتلتها 0.5kg تتحرك بسرعة 10 m/s اصطدمت بجدار وتوقّفت خلال 0.02s. احسب متوسط القوة التي أثّر بها الجدار في الكرة.</div>
+    <div class="givens">المعطيات: m = 0.5kg — v₁ = 10 m/s — v₂ = 0 — Δt = 0.02s</div>
+    <div class="step"><b>الحل:</b> نطبّق مبدأ الدفع والزخم:
+      <div class="math">F Δt = m v₂ − m v₁ = 0 − (0.5 × 10) = −5</div>
+      <div class="math">F = −5 / 0.02 = −250 N</div>
+      💡 الإشارة السالبة تعني أن اتجاه القوة معاكس لاتجاه حركة الكرة الأصلي، ومقدارها 250 N.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (3)</div>
+  <div class="example">
+    <div class="exq">بندقية كتلتها 4kg أطلقت طلقة كتلتها 0.02kg بسرعة 400 m/s. احسب سرعة ارتداد البندقية.</div>
+    <div class="givens">المعطيات: M = 4kg — m = 0.02kg — v(الطلقة) = 400 m/s — الزخم قبل الإطلاق = صفر</div>
+    <div class="step"><b>الحل:</b> نطبّق حفظ الزخم:
+      <div class="math">0 = M V + m v ⟹ 4 V + (0.02 × 400) = 0</div>
+      <div class="math">4 V = −8 ⟹ V = −2 m/s</div>
+      💡 الإشارة السالبة تعني أن البندقية ترتدّ في الاتجاه المعاكس للطلقة، بسرعة 2 m/s فقط — صغيرة لأن كتلتها أكبر بكثير.</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> ترتدّ البندقية إلى الخلف عند إطلاق الطلقة منها.</summary>
+    <div class="ans">حفظاً للزخم. فالزخم الكلي للنظام (بندقية + طلقة) كان يساوي <b>صفراً</b> قبل الإطلاق لأن كليهما ساكن، ويجب أن يبقى صفراً بعده لعدم وجود قوى خارجية. فحين تكتسب الطلقة زخماً إلى الأمام، لا بدّ أن تكتسب البندقية زخماً <b>مساوياً بالمقدار ومعاكساً بالاتجاه</b> ليبقى المجموع صفراً — فترتدّ إلى الخلف.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="questions.html">🏆 اختبار الفصل الخفيف</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "الزخم الخطي لجسم يساوي:",
+    opts: ["نصف الكتلة في مربّع السرعة", "حاصل ضرب كتلته في سرعته", "القوة في الزمن فقط", "الكتلة في التعجيل"], a: 1,
+    why: "p = m v؛ والزخم كمية متجهة اتجاهها اتجاه سرعة الجسم." },
+  { q: "وحدة قياس الزخم في النظام الدولي هي:",
+    opts: ["الجول", "النيوتن", "كغم·م/ث", "الواط"], a: 2,
+    why: "من p = mv تكون الوحدة كيلوغرام × متر/ثانية أي kg·m/s." },
+  { q: "الدفع المؤثر في جسم يساوي:",
+    opts: ["التغيّر في زخمه", "طاقته الحركية", "وزنه في الارتفاع", "زخمه الابتدائي فقط"], a: 0,
+    why: "مبدأ الدفع والزخم: F Δt = Δp = mv₂ − mv₁." },
+  { q: "تُقلّل الوسادة الهوائية الأذى في الحوادث لأنها:",
+    opts: ["تُقلّل كتلة الراكب", "تُلغي التغيّر في الزخم", "تزيد سرعة السيارة", "تُطيل زمن التصادم فتقلّ القوة"], a: 3,
+    why: "التغيّر في الزخم ثابت، فإطالة Δt تستلزم نقصان F لأن F = Δp / Δt." },
+  { q: "جسم كتلته 3kg يتحرك بسرعة 6 m/s. زخمه يساوي:",
+    opts: ["9 kg·m/s", "54 kg·m/s", "0.5 kg·m/s", "18 kg·m/s"], a: 3,
+    why: "p = mv = 3 × 6 = 18 kg·m/s." },
+  { q: "ترتدّ البندقية عند الإطلاق حفاظاً على:",
+    opts: ["الطاقة الحركية", "الزخم الكلي للنظام", "الشغل المبذول", "كتلة الطلقة"], a: 1,
+    why: "الزخم الكلي كان صفراً قبل الإطلاق، فيجب أن يبقى صفراً بعده — فزخم الطلقة للأمام يقابله زخم مساوٍ ومعاكس للبندقية." }
+], { onDone: function (stars) { Phy.setLesson("g5c5", "6", { stars: stars }); } });
+</script>
+</body>
+</html>

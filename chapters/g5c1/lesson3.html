@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 3: جمع وطرح المتجهات بيانياً — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c1">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">المتجهات</a> / الدرس 3</span>
+  </div>
+
+  <div class="hero">
+    <h1>➕ الدرس 3: جمع وطرح المتجهات بيانياً</h1>
+    <p>2 + 3 = 5 دائماً في الحساب… لكن في المتجهات قد يكون مجموع متجهين مقدارهما 3 و 2 أي قيمة بين 1 و 5! السبب أن الاتجاه يدخل في الحساب. لنتعلّم كيف نجمع المتجهات هندسياً.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚶</span>
+    <span>امشِ <b>4 خطوات شرقاً</b> ثم <b>3 خطوات شمالاً</b>. كم بَعُدتَ عن نقطة البداية؟ ليس 7 خطوات! بل <b>5 خطوات فقط</b> بخط مستقيم مائل — لأن الاتجاهين مختلفان. هذا الخط المستقيم من البداية إلى النهاية هو <b>المتجه المحصّل</b>، وهو قلب موضوع جمع المتجهات.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">⚠️</span> لماذا لا تُجمع المتجهات جبرياً؟</div>
+  <div class="card">
+    <p>الكميات المتجهة <b>لا تُجمع جبرياً</b> وإنما <b>هندسياً</b>، ويُشترط أن تكون لمقدار فيزيائي واحد — فلا يمكن مثلاً جمع متجه القوة مع متجه السرعة. ولجمع متجهين أو أكثر هندسياً نستعمل <b>طريقة الرأس والذيل</b>.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🔺</span> الطريقة البيانية (الرأس إلى الذيل)</div>
+  <div class="card">
+    <p>نرسم المتجه الأول <span class="formula-inline">A⃗</span>، ثم نضع <b>ذيل</b> المتجه الثاني <span class="formula-inline">B⃗</span> عند <b>رأس</b> المتجه الأول، ثم نصل بخط مستقيم من ذيل A⃗ إلى رأس B⃗ — هذا الخط هو المتجه المحصّل <span class="formula-inline">R⃗</span>.</p>
+  </div>
+
+  <div class="lawbox">
+    خاصية الإبدال في الجمع
+    <div class="formula">A⃗ + B⃗ = B⃗ + A⃗ = R⃗</div>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 الجمع (يمين) والطرح (يسار)</h3>
+    <p class="fig-sub">يمين: A⃗ + B⃗ = R⃗ بطريقة الرأس والذيل. يسار: A⃗ − B⃗ = A⃗ + (−B⃗) — نعكس B⃗ ثم نجمع.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="جمع وطرح المتجهات بطريقة الرأس والذيل">
+        <!-- ===== الجمع (يمين) ===== -->
+        <g transform="translate(330,0)">
+          <text x="140" y="24" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="15" fill="#0e7490">A⃗ + B⃗ = R⃗</text>
+          <!-- A -->
+          <line x1="40" y1="230" x2="180" y2="230" stroke="#0891b2" stroke-width="4" stroke-linecap="round"/>
+          <polygon points="180,230 164,223 164,237" fill="#0891b2"/>
+          <text x="110" y="250" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#0891b2">A⃗</text>
+          <!-- B من رأس A -->
+          <line x1="180" y1="230" x2="250" y2="110" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+          <polygon points="250,110 244,128 234,120" fill="#f59e0b"/>
+          <text x="228" y="180" font-family="Cairo" font-weight="800" font-size="14" fill="#b45309">B⃗</text>
+          <!-- R المحصلة -->
+          <line x1="40" y1="230" x2="250" y2="110" stroke="#e11d48" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="1"/>
+          <polygon points="250,110 232,112 240,124" fill="#e11d48"/>
+          <text x="120" y="158" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="15" fill="#e11d48" transform="rotate(-30 120 158)">R⃗</text>
+          <circle cx="40" cy="230" r="5" fill="#334155"/>
+        </g>
+        <!-- ===== الطرح (يسار) ===== -->
+        <g transform="translate(20,0)">
+          <text x="140" y="24" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="15" fill="#0e7490">A⃗ − B⃗ = A⃗ + (−B⃗)</text>
+          <!-- A -->
+          <line x1="40" y1="230" x2="180" y2="230" stroke="#0891b2" stroke-width="4" stroke-linecap="round"/>
+          <polygon points="180,230 164,223 164,237" fill="#0891b2"/>
+          <text x="110" y="250" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#0891b2">A⃗</text>
+          <!-- -B من رأس A (معكوس اتجاه B) -->
+          <line x1="180" y1="230" x2="110" y2="110" stroke="#7c3aed" stroke-width="4" stroke-linecap="round"/>
+          <polygon points="110,110 116,128 126,120" fill="#7c3aed"/>
+          <text x="128" y="180" font-family="Cairo" font-weight="800" font-size="14" fill="#7c3aed">−B⃗</text>
+          <!-- المحصلة -->
+          <line x1="40" y1="230" x2="110" y2="110" stroke="#e11d48" stroke-width="4.5" stroke-linecap="round"/>
+          <polygon points="110,110 92,116 102,126" fill="#e11d48"/>
+          <text x="52" y="165" font-family="Cairo" font-weight="800" font-size="15" fill="#e11d48" transform="rotate(-60 52 165)">R⃗</text>
+          <circle cx="40" cy="230" r="5" fill="#334155"/>
+        </g>
+      </svg>
+    </div>
+    <p class="fig-cap">فكرة الطرح ببساطة: بدل أن نطرح B⃗، نعكس اتجاهه (نحصل على −B⃗) ثم نجمعه عادةً.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">➖</span> طرح المتجهات</div>
+  <div class="card">
+    <p>حاصل طرح المتجهين <span class="formula-inline">A⃗ − B⃗</span> يُعرَّف على أنه حاصل جمع المتجه A⃗ مع <b>سالب</b> المتجه B⃗:</p>
+  </div>
+  <div class="lawbox">
+    الطرح = جمع للسالب
+    <div class="formula">A⃗ − B⃗ = A⃗ + (−B⃗)</div>
+  </div>
+
+  <div class="notebox">
+    <b>ملاحظة على أكثر من متجهين:</b> لإيجاد محصلة ثلاثة متجهات أو أكثر تبدأ من نقطة التأثير نفسها، نضع ذيل كل متجه عند رأس الذي قبله بالترتيب، ثم يكون المحصّل من ذيل المتجه الأول إلى رأس المتجه الأخير.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> إذا كان A⃗ + B⃗ = 0، فماذا نقول عن المتجهين؟</summary>
+    <div class="ans">لهما نفس المقدار (نفس طول السهم) ومتوازيان لكنهما <b>متعاكسان في الاتجاه</b> — أي أن أحدهما سالب الآخر، فيلغي كل منهما تأثير الآخر.</div>
+  </details>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> مقدار المحصّل قد يكون أصغر من مقدار أيّ من المتجهين.</summary>
+    <div class="ans">لأن الجمع هندسي لا جبري؛ فإذا كان بين المتجهين زاوية كبيرة (أو كانا متعاكسين جزئياً) فإن جزءاً منهما يلغي الآخر، فيصغُر المحصّل. مثال: متجه 12m ومتجه 9m متعاكسان يعطيان محصّلاً 3m فقط.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">متجه إزاحة A⃗ مقداره 4m شرقاً، ومتجه إزاحة B⃗ مقداره 3m شمالاً (متعامدان). جد مقدار المحصّل R⃗.</div>
+    <div class="givens">المعطيات: A = 4m — B = 3m — الزاوية بينهما 90°</div>
+    <div class="step"><b>الخطوة ١:</b> بما أنهما متعامدان، نطبّق نظرية فيثاغورس (لأنهما ضلعا القائمة و R⃗ الوتر):
+      <div class="math">R = <span class="sqrt">√<span class="rad">A² + B²</span></span> = <span class="sqrt">√<span class="rad">4² + 3²</span></span></div></div>
+    <div class="step"><b>الخطوة ٢:</b> نحسب:
+      <div class="math">R = <span class="sqrt">√<span class="rad">16 + 9</span></span> = <span class="sqrt">√<span class="rad">25</span></span> = 5 m</div>
+      💡 نفس نتيجة «4 خطوات شرقاً و3 شمالاً = 5 بخط مستقيم» في مقدّمة الدرس.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson4.html">الدرس التالي: تحليل المتجه والمحصلة ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "لماذا لا تُجمع المتجهات جبرياً؟",
+    opts: ["لأنها كميات صغيرة", "لأن لها اتجاهاً فتُجمع هندسياً", "لأنها موجبة دائماً", "لأنها بلا وحدات"], a: 1,
+    why: "المتجهات لها مقدار واتجاه، فيدخل الاتجاه في الحساب وتُجمع هندسياً (رأس إلى ذيل) لا جبرياً." },
+  { q: "في طريقة الرأس والذيل، نضع ذيل المتجه الثاني عند:",
+    opts: ["ذيل المتجه الأول", "رأس المتجه الأول", "نقطة الأصل", "منتصف المتجه الأول"], a: 1,
+    why: "نضع ذيل الثاني عند رأس الأول، ثم المحصّل من ذيل الأول إلى رأس الثاني." },
+  { q: "المتجه A⃗ − B⃗ يساوي:",
+    opts: ["A⃗ + B⃗", "A⃗ + (−B⃗)", "B⃗ − A⃗", "−A⃗ − B⃗"], a: 1,
+    why: "الطرح = جمع للسالب: A⃗ − B⃗ = A⃗ + (−B⃗)؛ نعكس اتجاه B⃗ ثم نجمع." },
+  { q: "متجهان مقداراهما 6m و 8m ومتعامدان. مقدار محصّلهما:",
+    opts: ["14m", "10m", "2m", "48m"], a: 1,
+    why: "متعامدان ⟵ فيثاغورس: R = √(6²+8²) = √(36+64) = √100 = 10m." },
+  { q: "متجهان 12m و 9m متوازيان ومتعاكسان. مقدار المحصّل:",
+    opts: ["21m", "3m باتجاه الأكبر", "108m", "صفر"], a: 1,
+    why: "المتعاكسان يُطرح مقداراهما: 12 − 9 = 3m، والاتجاه باتجاه المتجه الأكبر." }
+], { onDone: function (stars) { Phy.setLesson("g5c1", "3", { stars: stars }); } });
+</script>
+</body>
+</html>

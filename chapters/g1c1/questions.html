@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: خواص المادة — الأول متوسط</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g1c1">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">خواص المادة</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: خواص المادة</h1>
+    <p>١٢ سؤالاً منوّعة على دروس الفصل الثلاثة — اختيار من متعدد، مفاهيمي، ومسائل بسيطة. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g1c1");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "المادة هي كل شيء له:",
+    opts: ["حجم فقط", "كتلة فقط", "كتلة وحجم معاً", "لون محدد"], a: 2,
+    why: "تُعرَّف المادة بأن لها كتلة وحجماً معاً." },
+  { q: "غليان الماء وتحوّله إلى بخار يُعدّ تغيّراً:",
+    opts: ["كيميائياً", "فيزيائياً", "لا يوصف علمياً", "نووياً"], a: 1,
+    why: "الماء يبقى H₂O، فقط تغيّرت حالته من سائل لغاز ← تغيّر فيزيائي." },
+  { q: "أيّ حالات المادة الآتية تمتلك شكلاً وحجماً ثابتين معاً؟",
+    opts: ["الغازية", "السائلة", "البلازما", "الصلبة"], a: 3,
+    why: "الحالة الصلبة فقط هي التي تمتلك شكلاً وحجماً ثابتين معاً؛ السائلة حجمها ثابت وشكلها متغيّر، والغازية لا شكل ولا حجم ثابتين لها." },
+  { q: "تحوّل الحليب إلى زبادي (تخمّر) هو تغيّر:",
+    opts: ["فيزيائي بسيط", "كيميائي", "لا يحدث فيه أي تغيّر", "في الحجم فقط"], a: 1,
+    why: "التخمّر ينتج مادة جديدة مختلفة تماماً في تركيبها عن الحليب الأصلي ← تغيّر كيميائي." },
+  { q: "1 لتر يساوي بوحدة السنتيمتر المكعب:",
+    opts: ["10 cm³", "100 cm³", "1000 cm³", "10000 cm³"], a: 2,
+    why: "1 L = 1000 cm³ = 1000 mL." },
+  { q: "غُمر جسم صلب في اسطوانة مدرجة فارتفع مستوى الماء من 40 cm³ إلى 65 cm³. حجم الجسم:",
+    opts: ["40 cm³", "65 cm³", "105 cm³", "25 cm³"], a: 3,
+    why: "حجم الجسم = V₂ − V₁ = 65 − 40 = 25 cm³." },
+  { q: "الكثافة خاصية فيزيائية تُستعمل عملياً في:",
+    opts: ["قياس درجة الحرارة", "التعرّف على نوع المادة", "قياس الزمن", "قياس القوة المؤثرة"], a: 1,
+    why: "لأن لكل مادة نقية كثافة مميّزة تقريباً، تساعد كثافة الجسم على تحديد نوع مادته." },
+  { q: "جسم كتلته 50 g وحجمه 25 cm³. كثافته:",
+    opts: ["2 g/cm³", "0.5 g/cm³", "1250 g/cm³", "25 g/cm³"], a: 0,
+    why: "ρ = m/V = 50/25 = 2 g/cm³." },
+  { q: "زيت كثافته أقل من كثافة الماء. عند مزجهما في وعاء واحد فإن:",
+    opts: ["يغرق الزيت أسفل الماء", "يطفو الزيت فوق الماء", "يذوب الزيت في الماء تماماً", "يتبخّر الزيت فوراً"], a: 1,
+    why: "كلما قلّت كثافة السائل عن سائل آخر، طفا فوقه — كما يطفو الزيت فوق الماء." },
+  { q: "أنسب أداة لقياس حجم كمية من السائل مباشرة هي:",
+    opts: ["الميزان الحساس", "الاسطوانة المدرجة", "المسطرة", "مقياس الحرارة"], a: 1,
+    why: "الاسطوانة المدرجة (أو أي وعاء مدرّج) مصمَّمة خصيصاً لقراءة حجم السوائل مباشرة." },
+  { q: "مادة صلبة تترتّب جزيئاتها بنمط هندسي منتظم ومتكرّر تسمى مادة:",
+    opts: ["غير بلّورية", "بلازمية", "غازية", "بلّورية"], a: 3,
+    why: "المواد البلّورية (كالماس والجليد) جزيئاتها مرتّبة بنمط منتظم متكرر، خلافاً لغير البلّورية العشوائية الترتيب." },
+  { q: "الحالة التي تتحرّك فيها جزيئات المادة بأكبر قدر من الحرّية هي:",
+    opts: ["الصلبة", "السائلة", "الغازية", "البلّورية"], a: 2,
+    why: "في الحالة الغازية تكون قوى التجاذب بين الجزيئات أضعف ما يمكن، فتتحرك بحرّية تامة في كل الاتجاهات." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g1c1", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

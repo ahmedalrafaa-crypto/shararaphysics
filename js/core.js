@@ -145,9 +145,9 @@ var Phy = (function () {
 
   // سياق الصفحة من المسار: أي فصل وأي درس/اختبار (يعمل تلقائياً بلا تعديل الاختبارات)
   function pageContext() {
-    // يشمل فصول الثالث متوسط (chN) وفصول السادس العلمي (g6cN)،
-    // وصفحة أسئلة نهاية الفصل تُعامل معاملة الاختبار (exam).
-    var m = (location.pathname || "").match(/\/(ch[0-9]+|g6c[0-9]+)\/(lesson[0-9]+|exam|questions)/i);
+    // يشمل فصول الثالث متوسط (chN) والأول متوسط (g1cN) والخامس العلمي (g5cN)
+    // والسادس العلمي (g6cN)، وصفحة أسئلة نهاية الفصل تُعامل معاملة الاختبار (exam).
+    var m = (location.pathname || "").match(/\/(ch[0-9]+|g1c[0-9]+|g5c[0-9]+|g6c[0-9]+)\/(lesson[0-9]+|exam|questions)/i);
     if (!m) return { ch: null, node: null };
     var node = m[2].toLowerCase();
     return { ch: m[1].toLowerCase(), node: node === "questions" ? "exam" : node };

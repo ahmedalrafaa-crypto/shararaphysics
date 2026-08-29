@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبار الفصل الخفيف: الجسم الجاسئ — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c7">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الجسم الجاسئ</a> / اختبار الفصل</span>
+  </div>
+
+  <div class="hero">
+    <h1>🏆 اختبار الفصل الخفيف: الجسم الجاسئ</h1>
+    <p>١٢ سؤالاً منوّعة على دروس الفصل الخمسة — اختيار من متعدد، مفاهيمي، ومسائل بسيطة. جاوب وسيظهر لك الشرح فوراً بعد كل اختيار. اجمع ٣ نجوم!</p>
+    <span class="chip" id="bestScore"></span>
+  </div>
+
+  <div id="qz"></div>
+
+  <div class="notebox">
+    <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+    <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="../../index.html">الرئيسية</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+(function () {
+  var best = Phy.getExam("g5c7");
+  document.getElementById("bestScore").textContent = best
+    ? "أفضل نتيجة سابقة: " + best.score + "/" + best.total + " " + Phy.starsStr(best.stars)
+    : "المحاولة الأولى — بالتوفيق! 🍀";
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بصفحة: " + document.title + "\n" + location.href + "\n\nالخطأ: ";
+  document.getElementById("reportBtn").href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+
+Phy.quiz("qz", [
+  { q: "وحدة الإزاحة الزاوية الأنسب في الفيزياء هي:",
+    opts: ["الدرجة", "الراديان", "المتر", "الهرتز"], a: 1,
+    why: "الراديان يجعل العلاقة s=rθ بسيطة بلا معامل تحويل، ولذلك يُشترط استعماله في قوانين الحركة الدورانية." },
+  { q: "العلاقة بين السرعة الخطية v والزاوية ω لنقطة تبعد r عن المحور:",
+    opts: ["v = r / ω", "v = r ω", "v = ω / r", "v = r + ω"], a: 1,
+    why: "v = rω، فكلما بعدت النقطة عن المحور زادت سرعتها الخطية لنفس السرعة الزاوية." },
+  { q: "عزم القصور الذاتي لجسيم نقطي كتلته m يبعد r عن المحور:",
+    opts: ["I = m r", "I = m / r", "I = m r²", "I = 2 m r"], a: 2,
+    why: "I = mr²؛ يتناسب مع مربّع البُعد عن المحور، لا مع البُعد نفسه." },
+  { q: "قانون نيوتن الثاني للدوران هو:",
+    opts: ["ΣF = m a", "Στ = I α", "L = I ω", "KE = ½ I ω²"], a: 1,
+    why: "Στ = Iα هو النظير الدوراني لـΣF = ma." },
+  { q: "الطاقة الحركية الدورانية لجسم عزم قصوره I يدور بسرعة زاوية ω:",
+    opts: ["I ω", "½ m v²", "½ I ω²", "m g h"], a: 2,
+    why: "KE(دوران) = ½Iω²، النظير الدوراني لـ½mv²." },
+  { q: "الزخم الزاوي L يُحسب بالعلاقة:",
+    opts: ["L = m v", "L = ½ I ω²", "L = I ω", "L = F d"], a: 2,
+    why: "L = Iω، النظير الدوراني للزخم الخطي p = mv." },
+  { q: "يُحفظ الزخم الزاوي لنظام عندما:",
+    opts: ["يكون العزم الخارجي المحصّل صفراً", "تكون كتلته ثابتة فقط", "يتوقف عن الدوران", "تكون سرعته الخطية صفراً"], a: 0,
+    why: "عند Στ(خارجي) = 0 يبقى L = Iω ثابتاً — أساس تسارع المتزلجة عند تقريب ذراعيها." },
+  { q: "قرص نصف قطره 0.4m دار زاوية 5 rad. طول القوس الذي قطعته نقطة على حافته:",
+    opts: ["1.25 m", "2 m", "20 m", "0.08 m"], a: 1,
+    why: "s = rθ = 0.4 × 5 = 2 m." },
+  { q: "دولاب يدور بسرعة زاوية 12 rad/s، ونقطة على حافته تبعد 0.25m عن المحور. سرعتها الخطية:",
+    opts: ["48 m/s", "3 m/s", "12.25 m/s", "0.02 m/s"], a: 1,
+    why: "v = rω = 0.25 × 12 = 3 m/s." },
+  { q: "أثّر عزم محصّل مقداره 8 N·m في جسم عزم قصوره الذاتي 4 kg·m². التعجيل الزاوي الناتج:",
+    opts: ["32 rad/s²", "2 rad/s²", "0.5 rad/s²", "12 rad/s²"], a: 1,
+    why: "α = Στ/I = 8/4 = 2 rad/s²." },
+  { q: "متزلج عزم قصوره الذاتي 6 kg·m² وسرعته الزاوية 2 rad/s، قلّص عزم قصوره الذاتي إلى 2 kg·m². سرعته الزاوية الجديدة:",
+    opts: ["0.67 rad/s", "12 rad/s", "6 rad/s", "2 rad/s"], a: 2,
+    why: "I₁ω₁ = I₂ω₂ ⟹ 6×2 = 2×ω₂ ⟹ ω₂ = 12/2 = 6 rad/s." },
+  { q: "تصل الكرة المصمتة أسفل منحدر قبل الإسطوانة المجوّفة (نفس m وR) لأن الكرة:",
+    opts: ["أثقل من الإسطوانة", "لا تدور إطلاقاً", "عزم قصورها الذاتي أصغر", "عزم قصورها الذاتي أكبر"], a: 2,
+    why: "I الكرة (⅖MR²) أصغر من الإسطوانة (MR²)، فتذهب حصة أكبر من طاقتها للانتقال الخطي فتصل أولاً." }
+], {
+  onDone: function (stars, score, total) {
+    Phy.setExam("g5c7", stars, score, total);
+    if (stars === 3) setTimeout(Phy.confetti, 800);
+  }
+});
+</script>
+</body>
+</html>

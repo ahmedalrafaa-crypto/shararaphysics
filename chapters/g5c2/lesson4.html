@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 4: معادلات الحركة بتعجيل منتظم — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الحركة الخطية</a> / الدرس 4</span>
+  </div>
+
+  <div class="hero">
+    <h1>🧮 الدرس 4: معادلات الحركة بتعجيل منتظم</h1>
+    <p>أربع معادلات فقط تربط بين خمس كميات: السرعة الابتدائية، السرعة النهائية، التعجيل، الزمن، والإزاحة. تعرف أي ثلاث منها؟ تقدر تحسب الباقي.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚦</span>
+    <span>ضغط سائق على الكوابح فتباطأت سيارته بمعدّل ثابت حتى توقفت. لمعرفة متى ستتوقف تماماً وكم متراً ستقطع قبل التوقف، لا نحتاج تجربة فعلية — تكفينا <b>معادلات الحركة بتعجيل منتظم</b>، وهي أداة حسابية قوية لأي حركة بتعجيل ثابت.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">🔢</span> المعادلات الأربع</div>
+  <div class="card">
+    <p>لحركة بتعجيل منتظم (ثابت) a، تربط هذه المعادلات الكميات الخمس: السرعة الابتدائية v<sub>i</sub>، السرعة النهائية v<sub>f</sub>، التعجيل a، الزمن t، والإزاحة Δx.</p>
+  </div>
+
+  <div class="lawbox">
+    معادلات الحركة بتعجيل منتظم
+    <div class="formula">① v<sub>f</sub> = v<sub>i</sub> + a t</div>
+    <div class="formula">② Δx = v<sub>i</sub> t + ½ a t²</div>
+    <div class="formula">③ v<sub>f</sub>² = v<sub>i</sub>² + 2 a Δx</div>
+    <div class="formula">④ Δx = ½ (v<sub>i</sub> + v<sub>f</sub>) t</div>
+  </div>
+
+  <div class="notebox">
+    <b>كيف تختار المعادلة الصحيحة؟</b> اكتب الكميات الخمس (v<sub>i</sub>, v<sub>f</sub>, a, t, Δx) وحدّد المعطى منها والمطلوب. كل معادلة تربط أربعاً من الخمس وتتجاهل واحدة — اختر المعادلة التي لا تحتوي الكمية غير المعطاة وغير المطلوبة.
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 مساحة تحت مخطط (السرعة–الزمن) = الإزاحة</h3>
+    <p class="fig-sub">لسيارة تنطلق من السكون بتعجيل منتظم، الإزاحة المقطوعة تساوي مساحة المثلث تحت الخط المائل.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مساحة تحت مخطط السرعة الزمن تمثل الإزاحة">
+        <line x1="60" y1="220" x2="500" y2="220" stroke="#334155" stroke-width="2"/>
+        <line x1="60" y1="220" x2="60" y2="40" stroke="#334155" stroke-width="2"/>
+        <polygon points="500,220 490,215 490,225" fill="#334155"/>
+        <polygon points="60,40 55,50 65,50" fill="#334155"/>
+        <text x="508" y="224" font-family="Cairo" font-size="13" fill="#334155">t (s)</text>
+        <text x="54" y="34" font-family="Cairo" font-size="13" fill="#334155">v (m/s)</text>
+        <!-- المثلث الممثل للمساحة -->
+        <polygon points="60,220 400,220 400,80" fill="#fde0c8" stroke="#ea580c" stroke-width="3"/>
+        <text x="220" y="255" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#c2410c">المساحة = Δx = ½ v<sub>f</sub> t</text>
+        <text x="415" y="84" font-family="Cairo" weight="800" font-size="12" fill="#1e3a8a">v<sub>f</sub></text>
+        <line x1="400" y1="80" x2="400" y2="220" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <text x="400" y="238" text-anchor="middle" font-family="Cairo" font-size="12" fill="#64748b">t</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="notebox">
+    <b>حالات خاصة تسهّل الحل:</b>
+    <br>• الحركة تبدأ من السكون: <span class="formula-inline">v<sub>i</sub> = 0</span>.
+    <br>• الجسم يتباطأ حتى يتوقف: <span class="formula-inline">v<sub>f</sub> = 0</span>.
+    <br>• التعجيل a يُعوَّض بإشارة <b>موجبة</b> عند الحركة المتزايدة، وبإشارة <b>سالبة</b> عند الحركة المتباطئة.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> ما شرط استخدام هذه المعادلات الأربع؟</summary>
+    <div class="ans">أن يكون التعجيل <b>منتظماً (ثابتاً)</b> طوال فترة الحركة المدروسة — إذا تغيّر التعجيل نفسه مع الزمن فلا تصلح هذه المعادلات مباشرة، بل تُقسَّم الحركة إلى مراحل كل منها بتعجيل ثابت.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">سيارة تتحرك بسرعة 30 m/s. ضغط سائقها على الكوابح فتباطأت السيارة بمقدار 6 m/s². احسب: ١) الزمن الذي تستغرقه حتى تتوقف. ٢) الإزاحة التي تقطعها حتى التوقف.</div>
+    <div class="givens">المعطيات: v<sub>i</sub> = 30 m/s — v<sub>f</sub> = 0 (تتوقف) — a = −6 m/s² (تباطؤ)</div>
+    <div class="step"><b>الخطوة ١:</b> نستعمل المعادلة ① لإيجاد الزمن:
+      <div class="math">v<sub>f</sub> = v<sub>i</sub> + a t ⟹ 0 = 30 + (−6) t</div>
+      <div class="math">t = 30 / 6 = 5 s</div></div>
+    <div class="step"><b>الخطوة ٢:</b> نستعمل المعادلة ③ لإيجاد الإزاحة (أسرع من ② هنا لأننا نعرف السرعتين):
+      <div class="math">v<sub>f</sub>² = v<sub>i</sub>² + 2aΔx ⟹ 0 = 30² + 2(−6)Δx</div>
+      <div class="math">Δx = 900 / 12 = 75 m</div>
+      💡 السيارة تحتاج 5 ثوانٍ و75 متراً كاملة لتتوقف بعد الضغط على الكوابح.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson5.html">الدرس التالي: السقوط الحر ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "أي معادلة تربط v<sub>f</sub> و v<sub>i</sub> و a و Δx بلا الحاجة إلى الزمن t؟",
+    opts: ["v<sub>f</sub> = v<sub>i</sub> + at", "Δx = v<sub>i</sub> t + ½at²", "v<sub>f</sub>² = v<sub>i</sub>² + 2aΔx", "Δx = ½(v<sub>i</sub>+v<sub>f</sub>)t"], a: 2,
+    why: "المعادلة v<sub>f</sub>² = v<sub>i</sub>² + 2aΔx لا تحتوي على الزمن t، وهي المفيدة عندما لا يُعطى الزمن." },
+  { q: "جسم بدأ من السكون بتعجيل منتظم 4 m/s². ما سرعته بعد 3s؟",
+    opts: ["12 m/s", "7 m/s", "1.33 m/s", "24 m/s"], a: 0,
+    why: "v<sub>f</sub> = v<sub>i</sub> + at = 0 + 4×3 = 12 m/s." },
+  { q: "عند تباطؤ جسم حتى يتوقف، أي كمية تُعوَّض بصفر؟",
+    opts: ["السرعة الابتدائية v<sub>i</sub>", "السرعة النهائية v<sub>f</sub>", "الزمن t", "التعجيل a"], a: 1,
+    why: "عندما يتوقف الجسم فإن سرعته النهائية v<sub>f</sub> تصبح صفراً." },
+  { q: "التعجيل a يُعوَّض بإشارة سالبة في المعادلات عندما تكون الحركة:",
+    opts: ["متزايدة السرعة", "متباطئة", "دائرية", "ثابتة السرعة"], a: 1,
+    why: "التعجيل السالب (التباطؤي) يُعوَّض بإشارة سالبة، والموجب (التسارعي) بإشارة موجبة." },
+  { q: "سيارة سرعتها الابتدائية 20 m/s وتعجيلها 2- m/s². ما المسافة حتى تتوقف؟ (استخدم v<sub>f</sub>²=v<sub>i</sub>²+2aΔx)",
+    opts: ["100 m", "50 m", "10 m", "200 m"], a: 0,
+    why: "0 = 20² + 2(−2)Δx ⟹ 0 = 400 − 4Δx ⟹ Δx = 400/4 = 100 m." }
+], { onDone: function (stars) { Phy.setLesson("g5c2", "4", { stars: stars }); } });
+</script>
+</body>
+</html>

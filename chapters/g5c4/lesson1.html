@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 1: عزم القوة وذراع القوة — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c4">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الاتزان والعزوم</a> / الدرس 1</span>
+  </div>
+
+  <div class="hero">
+    <h1>🔧 الدرس 1: عزم القوة وذراع القوة</h1>
+    <p>القوة وحدها لا تكفي لتدوير جسم. المهم أيضاً <b>أين</b> تؤثر و<b>باتجاه أي جهة</b>. هذا ما يقيسه العزم — أثر القوة الدوراني.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🚪</span>
+    <span>جرّب أن تفتح باباً بالدفع قرب المفصلة تماماً: ستحتاج قوة هائلة. ثم ادفعه من الطرف البعيد: يُفتح بلمسة خفيفة. القوة قد تكون هي نفسها، لكن <b>بُعدها عن المفصلة</b> هو ما غيّر النتيجة. هذا هو <b>عزم القوة</b>: أثر القوة في إدارة الجسم حول محور.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📐</span> تعريف عزم القوة</div>
+  <div class="card">
+    <p><b>عزم القوة (τ)</b> حول نقطة (أو محور) هو حاصل ضرب <b>مقدار القوة</b> في <b>البُعد العمودي</b> بين خط عمل القوة ونقطة الارتكاز. ويُسمّى هذا البُعد العمودي <b>ذراع القوة</b>.</p>
+  </div>
+  <div class="lawbox">
+    عزم القوة
+    <div class="formula">τ = F × d</div>
+  </div>
+  <div class="card">
+    <p>حيث <b>F</b> مقدار القوة، و<b>d</b> ذراع القوة (البُعد العمودي من نقطة الارتكاز إلى خط عمل القوة).</p>
+    <p>وحدة العزم في النظام الدولي هي <b>نيوتن·متر (N·m)</b>.</p>
+    <p>⚠️ <b>انتبه:</b> رغم أن وحدة العزم (N·m) تطابق وحدة الشغل بالأبعاد، فإننا <b>لا نسمّيها جولاً أبداً</b>؛ لأن الشغل والعزم كميتان مختلفتان تماماً في المعنى: الشغل ينتج عن قوة في اتجاه الإزاحة، والعزم ينتج عن قوة عمودية على ذراع.</p>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 لماذا يُفتح الباب بسهولة من طرفه البعيد؟</h3>
+    <p class="fig-sub">نفس القوة F، لكن ذراع القوة مختلف. كلما ابتعدت نقطة التأثير عن المفصلة كبر الذراع، وكبر معه العزم.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مقارنة عزم القوة عند الدفع قرب المفصلة وبعيداً عنها">
+        <g transform="translate(330,0)">
+          <rect x="10" y="20" width="255" height="190" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+          <text x="138" y="46" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#6d28d9">دفع بعيداً عن المفصلة</text>
+          <circle cx="230" cy="80" r="7" fill="#334155"/>
+          <text x="230" y="70" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#334155">المفصلة</text>
+          <rect x="60" y="88" width="170" height="18" rx="4" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
+          <line x1="70" y1="97" x2="70" y2="150" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
+          <polygon points="70,157 63,141 77,141" fill="#b45309"/>
+          <text x="70" y="175" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#b45309">F</text>
+          <line x1="70" y1="122" x2="230" y2="122" stroke="#1d4ed8" stroke-width="2.5"/>
+          <text x="150" y="140" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#1d4ed8">ذراع كبير d</text>
+          <text x="138" y="200" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="14" fill="#15803d">عزم كبير ⟵ يُفتح بسهولة</text>
+        </g>
+        <g transform="translate(20,0)">
+          <rect x="10" y="20" width="255" height="190" rx="12" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+          <text x="138" y="46" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="14" fill="#92400e">دفع قرب المفصلة</text>
+          <circle cx="230" cy="80" r="7" fill="#334155"/>
+          <text x="230" y="70" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#334155">المفصلة</text>
+          <rect x="60" y="88" width="170" height="18" rx="4" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+          <line x1="200" y1="97" x2="200" y2="150" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
+          <polygon points="200,157 193,141 207,141" fill="#b45309"/>
+          <text x="200" y="175" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#b45309">F</text>
+          <line x1="200" y1="122" x2="230" y2="122" stroke="#1d4ed8" stroke-width="2.5"/>
+          <text x="150" y="140" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#1d4ed8">ذراع صغير d</text>
+          <text x="138" y="200" text-anchor="middle" font-family="Cairo" font-weight="900" font-size="14" fill="#b91c1c">عزم صغير ⟵ يصعب فتحه</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">📏</span> ذراع القوة: كيف نحدّده بدقة؟</div>
+  <div class="card">
+    <p>ذراع القوة <b>ليس</b> المسافة من نقطة الارتكاز إلى نقطة تأثير القوة، بل هو <b>العمود المرسوم من نقطة الارتكاز إلى خط عمل القوة</b>. فإذا كانت القوة مائلة بزاوية θ على المسافة L، فإن الذراع الفعلي هو:</p>
+  </div>
+  <div class="lawbox">
+    العزم عندما تكون القوة مائلة
+    <div class="formula">τ = F L sin θ</div>
+  </div>
+  <div class="card">
+    <p>ومن هذه العلاقة نستنتج نتيجتين مهمتين:</p>
+    <p>• عندما تكون القوة <b>عمودية</b> على الذراع (θ = 90°) فإن sin 90° = 1، ويكون العزم <b>أعظم ما يمكن</b>: τ = F L.</p>
+    <p>• عندما يكون <b>خط عمل القوة ماراً بنقطة الارتكاز</b> (θ = 0° أو 180°) فإن sin θ = 0، ويكون العزم <b>معدوماً</b> مهما كبرت القوة — لأن الذراع يساوي صفراً.</p>
+  </div>
+
+  <div class="figbox">
+    <h3>🎨 مفتاح ربط: القوة العمودية تعطي أكبر عزم</h3>
+    <p class="fig-sub">ثلاث قوى متساوية بالمقدار على المفتاح نفسه. العمودية تعطي أعظم عزم، والمائلة أقل، والمارّة بمركز الصامولة عزمها صفر.</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مقارنة عزوم ثلاث قوى متساوية باتجاهات مختلفة على مفتاح ربط">
+        <g transform="translate(415,0)">
+          <text x="95" y="24" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#15803d">قوة عمودية — عزم أعظم</text>
+          <circle cx="160" cy="120" r="18" fill="#94a3b8" stroke="#334155" stroke-width="2.5"/>
+          <rect x="45" y="112" width="115" height="16" rx="5" fill="#cbd5e1" stroke="#334155" stroke-width="2"/>
+          <line x1="55" y1="112" x2="55" y2="62" stroke="#15803d" stroke-width="5" stroke-linecap="round"/>
+          <polygon points="55,55 48,71 62,71" fill="#15803d"/>
+          <text x="55" y="46" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="12" fill="#15803d">F</text>
+          <text x="105" y="165" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#15803d">τ = F L</text>
+        </g>
+        <g transform="translate(210,0)">
+          <text x="95" y="30" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#b45309">قوة مائلة — عزم أقل</text>
+          <circle cx="160" cy="120" r="18" fill="#94a3b8" stroke="#334155" stroke-width="2.5"/>
+          <rect x="45" y="112" width="115" height="16" rx="5" fill="#cbd5e1" stroke="#334155" stroke-width="2"/>
+          <line x1="55" y1="112" x2="20" y2="66" stroke="#b45309" stroke-width="5" stroke-linecap="round"/>
+          <polygon points="16,60 20,77 32,68" fill="#b45309"/>
+          <path d="M 85 112 A 30 30 0 0 0 78 96" fill="none" stroke="#334155" stroke-width="2"/>
+          <text x="92" y="104" font-family="Cairo" font-weight="800" font-size="12" fill="#334155">θ</text>
+          <text x="105" y="165" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#b45309">τ = F L sin θ</text>
+        </g>
+        <g transform="translate(5,0)">
+          <text x="95" y="30" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#b91c1c">القوة تمر بالمركز</text>
+          <circle cx="160" cy="120" r="18" fill="#94a3b8" stroke="#334155" stroke-width="2.5"/>
+          <rect x="45" y="112" width="115" height="16" rx="5" fill="#cbd5e1" stroke="#334155" stroke-width="2"/>
+          <line x1="55" y1="120" x2="15" y2="120" stroke="#b91c1c" stroke-width="5" stroke-linecap="round"/>
+          <polygon points="10,120 26,114 26,126" fill="#b91c1c"/>
+          <line x1="15" y1="120" x2="185" y2="120" stroke="#b91c1c" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <text x="105" y="165" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#b91c1c">τ = 0</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">علل</span> لا يدور الجسم إذا كان خط عمل القوة المؤثرة فيه يمر بنقطة الارتكاز مهما كبرت القوة.</summary>
+    <div class="ans">لأن ذراع القوة في هذه الحالة يساوي <b>صفراً</b> (لا يوجد بُعد عمودي بين خط عمل القوة ونقطة الارتكاز)، وبما أن τ = F × d فإن العزم يساوي صفراً مهما كانت F كبيرة — فلا يحدث أي أثر دوراني.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🧭</span> اتجاه العزم: مع أو عكس عقرب الساعة</div>
+  <div class="card">
+    <p>العزم كمية <b>متجهة</b>، ونحدّد اتجاهه في المسائل المستوية باصطلاح بسيط:</p>
+    <p>• العزم الذي يُدير الجسم <b>عكس اتجاه عقرب الساعة</b> نعتبره <b>موجباً (+)</b>.</p>
+    <p>• العزم الذي يُدير الجسم <b>باتجاه عقرب الساعة</b> نعتبره <b>سالباً (−)</b>.</p>
+    <p>وعند تأثير أكثر من قوة، نجمع العزوم <b>جبرياً</b> (مع مراعاة الإشارات) للحصول على العزم المحصّل.</p>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (1)</div>
+  <div class="example">
+    <div class="exq">أثّرت قوة مقدارها 40N عمودياً على مفتاح ربط عند بُعد 0.25m من مركز الصامولة. احسب عزم القوة.</div>
+    <div class="givens">المعطيات: F = 40N — d = 0.25m — القوة عمودية على الذراع</div>
+    <div class="step"><b>الحل:</b>
+      <div class="math">τ = F × d = 40 × 0.25</div>
+      <div class="math">τ = 10 N·m</div></div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول (2)</div>
+  <div class="example">
+    <div class="exq">أثّرت قوة مقدارها 50N على طرف عارضة طولها 0.8m من نقطة الارتكاز، وتصنع القوة زاوية 30° مع العارضة. احسب العزم. (sin 30° = 0.5)</div>
+    <div class="givens">المعطيات: F = 50N — L = 0.8m — θ = 30°</div>
+    <div class="step"><b>الحل:</b> نستعمل صيغة القوة المائلة:
+      <div class="math">τ = F L sin θ = 50 × 0.8 × sin 30°</div>
+      <div class="math">τ = 50 × 0.8 × 0.5 = 20 N·m</div>
+      💡 لو كانت القوة عمودية (θ = 90°) لكان العزم 40 N·m — أي ضعف ما حصلنا عليه. لهذا نؤثر بالقوة عمودياً كلما أمكن.</div>
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> ما الفرق بين ذراع القوة والمسافة من نقطة الارتكاز إلى نقطة تأثير القوة؟</summary>
+    <div class="ans">هما متساويان <b>فقط</b> عندما تكون القوة <b>عمودية</b> على الخط الواصل بين النقطتين. أما في الحالة العامة فذراع القوة هو <b>العمود</b> المرسوم من نقطة الارتكاز إلى <b>خط عمل القوة</b>، ويساوي L sin θ — وهو دائماً أصغر من L أو مساوٍ لها.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson2.html">الدرس التالي: المزدوجة وعزمها ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "وحدة قياس عزم القوة في النظام الدولي هي:",
+    opts: ["الجول", "نيوتن·متر", "النيوتن", "الواط"], a: 1,
+    why: "وحدة العزم هي نيوتن·متر (N·m). ولا تُسمّى جولاً رغم تطابق الأبعاد، لأن العزم والشغل كميتان مختلفتان في المعنى." },
+  { q: "ذراع القوة هو:",
+    opts: ["مقدار القوة نفسه", "المسافة من طرف الجسم إلى طرفه الآخر", "زاوية ميل القوة", "البُعد العمودي من نقطة الارتكاز إلى خط عمل القوة"], a: 3,
+    why: "ذراع القوة هو طول العمود المرسوم من نقطة الارتكاز إلى خط عمل القوة، وليس مجرد المسافة إلى نقطة تأثير القوة." },
+  { q: "إذا مرّ خط عمل القوة بنقطة الارتكاز، فإن عزمها:",
+    opts: ["يساوي صفراً", "يكون أعظم ما يمكن", "يساوي القوة نفسها", "يتضاعف"], a: 0,
+    why: "الذراع يساوي صفراً في هذه الحالة، وبما أن τ = F × d فإن العزم يساوي صفراً مهما كبرت القوة." },
+  { q: "قوة مقدارها 20N تؤثر عمودياً عند بُعد 0.5m من محور الدوران. مقدار العزم:",
+    opts: ["40 N·m", "20.5 N·m", "10 N·m", "0.025 N·m"], a: 2,
+    why: "τ = F × d = 20 × 0.5 = 10 N·m." },
+  { q: "يكون عزم القوة أعظم ما يمكن عندما تكون الزاوية بين القوة والذراع:",
+    opts: ["صفراً", "180°", "30°", "90°"], a: 3,
+    why: "τ = F L sin θ، و sin 90° = 1 وهي أكبر قيمة ممكنة — أي أن القوة العمودية على الذراع تعطي أعظم عزم." }
+], { onDone: function (stars) { Phy.setLesson("g5c4", "1", { stars: stars }); } });
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 1: الموقع والإزاحة والمسافة — الخامس العلمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="theme-g5c2">
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الحركة الخطية</a> / الدرس 1</span>
+  </div>
+
+  <div class="hero">
+    <h1>📍 الدرس 1: الموقع والإزاحة والمسافة</h1>
+    <p>قبل وصف أي حركة، نحتاج نقطة ثابتة نقيس منها. ثم نفرّق بين سؤالين يبدوان متشابهين لكنهما مختلفان تماماً: «كم انتقلت؟» و«كم مشيت؟».</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🏟️</span>
+    <span>لاعب كرة قدم يجري حول الملعب مسافة <b>110 متراً</b> كاملة، ثم يعود إلى نقطة انطلاقه نفسها. كم انتقل عن مكانه الأصلي؟ <b>صفر!</b> رغم أنه أنهك نفسه بالجري 110 متراً. هذا هو الفرق بين <b>المسافة</b> التي يهتم بها عدّاد الخطى، و<b>الإزاحة</b> التي تهتم بها الفيزياء عند حساب التغيّر في الموقع.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📌</span> الحركة ونقطة الإسناد</div>
+  <div class="card">
+    <p><b>الحركة:</b> هي التغيّر المستمر في موقع الجسم بالنسبة إلى نقطة تُعتبر ثابتة تُسمّى <b>نقطة الإسناد</b> (مثل شجرة أو منزل). لا يمكن اتخاذ جسم متحرك بسرعة غير ثابتة نقطة إسناد (مثل سحابة أو طائرة تتحرك).</p>
+    <p style="margin-top:8px"><b>أنواع الحركة الرئيسية:</b> الخطية (سيارة على طريق مستقيم)، الشاقولية (قذف جسم للأعلى)، في بُعدين (المقذوفات)، الدائرية (دوران القمر حول الأرض)، الدورانية (دوران الأرض حول نفسها)، والدورية أو الاهتزازية (البندول).</p>
+  </div>
+
+  <div class="section-title"><span class="ico">↔️</span> الإزاحة مقابل المسافة</div>
+  <div class="card">
+    <p><b>الإزاحة (ΔX):</b> هي التغيّر في متجه موقع الجسم، وتساوي الفرق بين الموقع النهائي والموقع الابتدائي. كمية <b>اتجاهية</b> تُجمع جمعاً اتجاهياً، وقد تكون <b>صفراً</b> إذا عاد الجسم إلى موقعه الابتدائي.</p>
+  </div>
+
+  <div class="lawbox">
+    الإزاحة
+    <div class="formula">ΔX = X<sub>f</sub> − X<sub>i</sub></div>
+  </div>
+
+  <p><b>المسافة (d):</b> مقدار الطريق المقطوع فعلياً بلا اعتبار للاتجاه. كمية <b>قياسية</b> تُجمع جمعاً جبرياً عادياً، ولا يمكن أن تكون سالبة أبداً، ولا تساوي صفراً إلا إذا لم يتحرك الجسم إطلاقاً.</p>
+
+  <div class="figbox">
+    <h3>🎨 نفس الرحلة، وصفان مختلفان</h3>
+    <p class="fig-sub">عداء يبدأ من 5m+، يجري إلى 15m- (بعيداً)، ثم يعود إلى 1m+. لاحظ: المسافة المقطوعة (الخط المتعرّج الكامل) أكبر بكثير من الإزاحة النهائية (الخط المستقيم من البداية للنهاية).</p>
+    <div class="fig-scroll">
+      <svg viewBox="0 0 620 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مقارنة الإزاحة بالمسافة على خط الحركة">
+        <!-- خط الأعداد -->
+        <line x1="40" y1="70" x2="580" y2="70" stroke="#334155" stroke-width="2"/>
+        <polygon points="580,70 570,65 570,75" fill="#334155"/>
+        <text x="588" y="74" font-family="Cairo" font-size="13" fill="#334155">x (m)</text>
+        <!-- علامات -->
+        <g stroke="#94a3b8" stroke-width="1.5" font-family="Cairo" font-size="11" fill="#64748b">
+          <line x1="470" y1="64" x2="470" y2="76"/><text x="470" y="92" text-anchor="middle">5+</text>
+          <line x1="330" y1="64" x2="330" y2="76"/><text x="330" y="92" text-anchor="middle">0</text>
+          <line x1="150" y1="64" x2="150" y2="76"/><text x="150" y="92" text-anchor="middle">15-</text>
+          <line x1="410" y1="64" x2="410" y2="76"/><text x="410" y="92" text-anchor="middle">1+</text>
+        </g>
+        <!-- المسافة: قوسان فوق الخط (ذهاب وإياب) -->
+        <path d="M 470 55 Q 310 10 150 55" fill="none" stroke="#ea580c" stroke-width="3" stroke-dasharray="6 4"/>
+        <text x="310" y="24" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#c2410c">المسافة d = 20m</text>
+        <path d="M 150 85 Q 280 130 410 85" fill="none" stroke="#ea580c" stroke-width="3" stroke-dasharray="6 4"/>
+        <text x="280" y="145" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#c2410c">+ 16m = 36m إجمالاً</text>
+        <!-- الإزاحة: سهم مستقيم من البداية للنهاية -->
+        <line x1="470" y1="170" x2="410" y2="170" stroke="#1e3a8a" stroke-width="4.5" stroke-linecap="round"/>
+        <polygon points="410,170 424,164 424,176" fill="#1e3a8a"/>
+        <text x="440" y="192" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="13" fill="#1e3a8a">الإزاحة ΔX = 4- m فقط</text>
+        <!-- نقاط -->
+        <circle cx="470" cy="70" r="6" fill="#16a34a"/><text x="470" y="45" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#16a34a">البداية</text>
+        <circle cx="150" cy="70" r="5" fill="#7c3aed"/>
+        <circle cx="410" cy="70" r="6" fill="#e11d48"/><text x="410" y="45" text-anchor="middle" font-family="Cairo" font-weight="800" font-size="11" fill="#e11d48">النهاية</text>
+      </svg>
+    </div>
+    <p class="fig-cap">الإشارة السالبة في الإزاحة تدل على الاتجاه (يسار المحور x)، وليست خطأً حسابياً.</p>
+  </div>
+
+  <div class="notebox">
+    <b>متى تتساوى الإزاحة مع المسافة؟</b> فقط عندما يتحرك الجسم على <b>خط مستقيم باتجاه ثابت</b> (بلا رجوع للخلف). في أي حركة أخرى تكون المسافة أكبر من مقدار الإزاحة أو تساويها، لكن لا تقل عنها أبداً.
+  </div>
+
+  <details class="qa">
+    <summary><span class="tag">س</span> هل يمكن للإزاحة أن تساوي صفراً؟ ومتى؟</summary>
+    <div class="ans">نعم، بما أن الإزاحة كمية اتجاهية يمكن أن تكون صفراً عندما يتحرك الجسم من موقعه الابتدائي إلى موقع آخر ثم يعود إلى الموقع الابتدائي نفسه — كما في مثال لاعب الملعب.</div>
+  </details>
+
+  <div class="section-title"><span class="ico">🧮</span> مثال محلول</div>
+  <div class="example">
+    <div class="exq">عداء تحرك من موقعه الابتدائي X<sub>i</sub> = 5+m باتجاه معاكس إلى موقعه النهائي X<sub>f</sub> = 1-m. احسب إزاحته.</div>
+    <div class="givens">المعطيات: X<sub>i</sub> = 5+m — X<sub>f</sub> = 1-m</div>
+    <div class="step"><b>الخطوة:</b> نطبّق قانون الإزاحة:
+      <div class="math">ΔX = X<sub>f</sub> − X<sub>i</sub> = (−1) − (5) = −6 m</div>
+      💡 الإشارة السالبة تدل على أن إزاحة العداء كانت باتجاه يسار المحور x.</div>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz1"></div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="index.html">🏠 خريطة الفصل</a>
+    <a class="btn" href="lesson2.html">الدرس التالي: السرعة والانطلاق المتوسط ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+Phy.quiz("quiz1", [
+  { q: "ما نقطة الإسناد؟",
+    opts: ["أي جسم متحرك بسرعة عالية", "نقطة ثابتة نقيس منها حركة الجسم مثل شجرة أو منزل", "سحابة متحركة", "الجسم نفسه المتحرك"], a: 1,
+    why: "نقطة الإسناد نقطة ثابتة (كشجرة أو منزل) تُعدّ بداية قياس حركة الجسم؛ لا يصلح جسم متحرك (كسحابة) نقطة إسناد." },
+  { q: "أي الكميتين تُجمع جبرياً ولا يمكن أن تكون سالبة؟",
+    opts: ["الإزاحة", "المسافة", "كلاهما", "لا أحد منهما"], a: 1,
+    why: "المسافة كمية قياسية تُجمع جبرياً وقيمتها موجبة دائماً؛ الإزاحة كمية متجهة تحمل إشارة تدل على الاتجاه." },
+  { q: "عداء بدأ من X<sub>i</sub>=2m وانتهى عند X<sub>f</sub>=10m. ما مقدار إزاحته؟",
+    opts: ["12m", "8m", "5m", "صفر"], a: 1,
+    why: "ΔX = X<sub>f</sub> − X<sub>i</sub> = 10 − 2 = 8m." },
+  { q: "لاعب جرى 110m حول الملعب وعاد لنقطة انطلاقه. ما إزاحته الكلية؟",
+    opts: ["110m", "صفر", "55m", "220m"], a: 1,
+    why: "الإزاحة تعتمد على الموقعين الابتدائي والنهائي فقط؛ بما أنه عاد لنفس النقطة فإزاحته صفر (رغم أن مسافته 110m)." },
+  { q: "متى تتساوى المسافة المقطوعة مع مقدار الإزاحة؟",
+    opts: ["دائماً", "عندما يتحرك الجسم على خط مستقيم باتجاه ثابت", "عندما يتحرك الجسم بسرعة عالية", "لا تتساويان أبداً"], a: 1,
+    why: "فقط في الحركة على خط مستقيم بلا تغيير الاتجاه تتساوى المسافة مع مقدار الإزاحة." }
+], { onDone: function (stars) { Phy.setLesson("g5c2", "1", { stars: stars }); } });
+</script>
+</body>
+</html>

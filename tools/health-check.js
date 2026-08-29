@@ -24,12 +24,14 @@ const bad = m => { fail++; console.log('  \x1b[31m✗\x1b[0m ' + m); };
 
 const G6 = ['g6c1','g6c2','g6c3','g6c4','g6c5','g6c6','g6c7','g6c8','g6c9'];
 const G3 = ['ch0','ch1','ch2','ch3','ch4','ch5','ch6','ch7','ch8','ch9'];
+const G5 = ['g5c1','g5c2','g5c3','g5c4','g5c5','g5c7','g5c9'];
+const G1 = ['g1c1', 'g1c2', 'g1c3', 'g1c4', 'g1c5'];
 
 // ── ١) توزيع مواضع الإجابة الصحيحة ─────────────────────────────────────────
 // الخلل الأصلي: الإجابة دائماً بالخيار الأول ⇒ درجة كاملة بلا قراءة.
 console.log('\n\x1b[1m١) توزيع مواضع الإجابة الصحيحة\x1b[0m');
 const RE_A = /(?:^|[,{\s])"?a"?\s*:\s*(\d)/gm;
-for (const ch of [...G6, ...G3]) {
+for (const ch of [...G6, ...G5, ...G3, ...G1]) {
   const dir = p('chapters', ch);
   if (!fs.existsSync(dir)) continue;
   const counts = [0, 0, 0, 0];
