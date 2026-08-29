@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>البحث في الدروس — فيزياء أ. أحمد رافع</title>
-<meta name="description" content="ابحث بكل دروس فيزياء الثالث متوسط والسادس الإعدادي دفعة وحدة: المفاهيم والقوانين والملاحظات والجداول والأسئلة، مع تمييز المحتوى الوزاري.">
+<meta name="description" content="ابحث بكل دروس فيزياء الثالث متوسط والسادس العلمي دفعة وحدة: المفاهيم والقوانين والملاحظات والجداول والأسئلة، مع تمييز المحتوى الوزاري.">
 <link rel="canonical" href="https://shararaphysics.netlify.app/search/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
 
   <div class="hero">
     <h1>🔍 البحث في الدروس</h1>
-    <p>دوّر بكل دروس الثالث متوسط والسادس الإعدادي دفعة وحدة — مفاهيم وقوانين وملاحظات وجداول وأسئلة — واضغط أي نتيجة تودي مباشرة لدرسها.</p>
+    <p>دوّر بكل دروس الثالث متوسط والسادس العلمي دفعة وحدة — مفاهيم وقوانين وملاحظات وجداول وأسئلة — واضغط أي نتيجة تودي مباشرة لدرسها.</p>
   </div>
 
   <div class="searchbar">
@@ -42,7 +42,6 @@
   <footer class="site">إعداد الأستاذ أحمد رافع</footer>
 </div>
 
-<script src="../js/access-control.js"></script>
 <script>
 (function () {
   function loadScript(src, onload) {
@@ -51,14 +50,14 @@
     s.onload = onload;
     document.body.appendChild(s);
   }
-  // بيانات الدروس (كل الفصول، مقفولة وحرة سوا) تتحمّل بس بعد ثبوت التفعيل — بدل ما تكون
-  // ملفات عامة يقدر أي زائر يفتحها مباشرة بلا كود. lessons-data-g6.js لازم يتحمّل بعد
-  // lessons-data.js بالضبط (يدمج بياناته فوق PHY_LESSONS الموجودة أصلاً، مو يستبدلها).
-  ShararahAccess.onUnlock(function () {
-    loadScript("../js/lessons-data.js", function () {
-      loadScript("../js/lessons-data-g6.js", function () {
-        loadScript("../js/search.js", function () {});
-      });
+  // البحث نفسه مجاني ومتاح بلا كود تفعيل (الموقع صار فيه مراحل مجانية بالكامل).
+  // فتح صفحة أي درس مقفول من نتائج البحث يبقى محكوماً بـaccess-control.js
+  // بصفحة الدرس نفسها، فلا تسريب فعلي — فقط الفهرسة والعرض بنتائج البحث صار حراً.
+  // lessons-data-g6.js لازم يتحمّل بعد lessons-data.js بالضبط (يدمج بياناته فوق
+  // PHY_LESSONS الموجودة أصلاً، مو يستبدلها).
+  loadScript("../js/lessons-data.js", function () {
+    loadScript("../js/lessons-data-g6.js", function () {
+      loadScript("../js/search.js", function () {});
     });
   });
 })();

@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الاشتراك — فيزياء الثالث متوسط والسادس الإعدادي — أ. أحمد رافع</title>
-<meta name="description" content="اشترك بمنصة فيزياء الثالث متوسط والسادس الإعدادي للأستاذ أحمد رافع: وصول كامل لكل الفصول والدروس المتقدمة واختباراتها، أداة خطة مذاكرتي، والتوقعات الوزارية — اشتراك شهري أو سنوي.">
+<title>الاشتراك — فيزياء الثالث متوسط والسادس العلمي — أ. أحمد رافع</title>
+<meta name="description" content="خطط الاشتراك بمنصة فيزياء الأستاذ أحمد رافع: الثالث متوسط 5,000 د.ع شهرياً أو 30,000 سنوياً، والسادس العلمي 8,000 شهرياً أو 45,000 سنوياً — وفيزياء الخامس العلمي مجانية بالكامل.">
 <link rel="canonical" href="https://shararaphysics.netlify.app/subscribe">
 <meta property="og:type" content="website">
-<meta property="og:title" content="الاشتراك — فيزياء الثالث متوسط والسادس الإعدادي — أ. أحمد رافع">
-<meta property="og:description" content="اشترك بمنصة فيزياء الثالث متوسط والسادس الإعدادي للأستاذ أحمد رافع: وصول كامل لكل الفصول والدروس المتقدمة واختباراتها، أداة خطة مذاكرتي، والتوقعات الوزارية — اشتراك شهري أو سنوي.">
+<meta property="og:title" content="الاشتراك — فيزياء الثالث متوسط والسادس العلمي — أ. أحمد رافع">
+<meta property="og:description" content="خطط الاشتراك بمنصة فيزياء الأستاذ أحمد رافع: الثالث متوسط 5,000 د.ع شهرياً أو 30,000 سنوياً، والسادس العلمي 8,000 شهرياً أو 45,000 سنوياً — وفيزياء الخامس العلمي مجانية بالكامل.">
 <meta property="og:image" content="https://shararaphysics.netlify.app/assets/logo-ar.png">
 <meta property="og:url" content="https://shararaphysics.netlify.app/subscribe">
 <meta property="og:locale" content="ar_IQ">
@@ -35,36 +35,85 @@
   <div class="hero">
     <span class="chip">⚡ افتح كل الفصول والأدوات</span>
     <h1>اشترك وافتح رحلتك كاملة</h1>
-    <p>وصول كامل للفصول المتقدمة، اختباراتها، وأداتَي خطة مذاكرتي والتوقعات الوزارية.</p>
+    <p>اختر مرحلتك أولاً — كل مرحلة لها اشتراكها الخاص بمحتواها وأدواتها.</p>
   </div>
 
-  <div class="pricing-grid">
-    <div class="plan-card">
-      <h3>⚡ الاشتراك الشهري</h3>
-      <div class="price">5,000<small> د.ع / شهر</small></div>
-      <ul class="plan-feats">
-        <li>الثالث متوسط: 7 فصول كاملة (من الثالث للتاسع) + اختباراتها</li>
-        <li>السادس العلمي: كل الدروس المتقدمة بالفصول التسعة (من الدرس الثالث)</li>
-        <li>أداة خطة مذاكرتي الذكية</li>
-        <li>التوقعات الوزارية (+600 سؤال محلول)</li>
-        <li>يعمل على أي جهاز</li>
-      </ul>
-      <a class="btn ghost" id="wa-monthly" target="_blank" rel="noopener noreferrer" href="#">اشترك شهري</a>
-    </div>
+  <div class="gradetabs" role="tablist" aria-label="اختر المرحلة الدراسية">
+    <button class="gradetab active" type="button" role="tab" aria-selected="true" aria-controls="panel-g3" data-grade="g3">الثالث المتوسط</button>
+    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g6" data-grade="g6">السادس العلمي</button>
+  </div>
 
-    <div class="plan-card best">
-      <span class="best-badge">🏆 الأوفر</span>
-      <h3>🚀 الاشتراك السنوي</h3>
-      <div class="price">30,000<small> د.ع / سنة</small></div>
-      <p class="save">توفّر 30,000 د.ع مقارنة بالاشتراك الشهري (نص السعر تقريباً)</p>
-      <ul class="plan-feats">
-        <li>كل مزايا الاشتراك الشهري</li>
-        <li>يغطي السنة الدراسية كاملة</li>
-        <li>ما تكرر الدفع كل شهر</li>
-        <li>يعمل على أي جهاز</li>
-      </ul>
-      <a class="btn" id="wa-yearly" target="_blank" rel="noopener noreferrer" href="#">اشترك سنوي</a>
+  <!-- ===== الثالث المتوسط ===== -->
+  <div class="gradepanel" id="panel-g3" role="tabpanel">
+    <div class="pricing-grid">
+      <div class="plan-card">
+        <h3>⚡ الاشتراك الشهري</h3>
+        <div class="price">5,000<small> د.ع / شهر</small></div>
+        <ul class="plan-feats">
+          <li>7 فصول كاملة (من الثالث للتاسع) + اختباراتها</li>
+          <li>صفحات المراجعة السريعة لكل فصل</li>
+          <li>أداة خطة مذاكرتي الذكية</li>
+          <li>التوقعات الوزارية (+600 سؤال محلول)</li>
+          <li>بلا تحميل تطبيق — يفتح بأي متصفح</li>
+        </ul>
+        <a class="btn ghost" id="wa-g3-monthly" target="_blank" rel="noopener noreferrer" href="#">اشترك شهري</a>
+      </div>
+
+      <div class="plan-card best">
+        <span class="best-badge">🏆 الأوفر</span>
+        <h3>🚀 الاشتراك السنوي</h3>
+        <div class="price">30,000<small> د.ع / سنة</small></div>
+        <p class="save">توفّر 30,000 د.ع مقارنة بالاشتراك الشهري (نص السعر تقريباً)</p>
+        <ul class="plan-feats">
+          <li>كل مزايا الاشتراك الشهري</li>
+          <li>يغطي السنة الدراسية كاملة</li>
+          <li>ما تكرر الدفع كل شهر</li>
+          <li>بلا تحميل تطبيق — يفتح بأي متصفح</li>
+        </ul>
+        <a class="btn" id="wa-g3-yearly" target="_blank" rel="noopener noreferrer" href="#">اشترك سنوي</a>
+      </div>
     </div>
+  </div><!-- /panel-g3 -->
+
+  <!-- ===== السادس العلمي ===== -->
+  <div class="gradepanel" id="panel-g6" role="tabpanel" hidden>
+    <div class="pricing-grid">
+      <div class="plan-card">
+        <h3>⚡ الاشتراك الشهري</h3>
+        <div class="price">8,000<small> د.ع / شهر</small></div>
+        <ul class="plan-feats">
+          <li>كل الدروس المتقدمة بالفصول التسعة (من الدرس الثالث)</li>
+          <li>الاختبار النهائي لكل فصل + صفحات المراجعة السريعة</li>
+          <li>أداة خطة مذاكرتي الذكية</li>
+          <li>توقعات السادس: بنك أسئلة محلول ومتحقَّق منه</li>
+          <li>تبويب الأسئلة الوزارية الغريبة</li>
+        </ul>
+        <a class="btn ghost" id="wa-g6-monthly" target="_blank" rel="noopener noreferrer" href="#">اشترك شهري</a>
+      </div>
+
+      <div class="plan-card best">
+        <span class="best-badge">🏆 الأوفر</span>
+        <h3>🚀 الاشتراك السنوي</h3>
+        <div class="price">45,000<small> د.ع / سنة</small></div>
+        <p class="save">توفّر 51,000 د.ع مقارنة بالاشتراك الشهري (أقل من نص السعر)</p>
+        <ul class="plan-feats">
+          <li>كل مزايا الاشتراك الشهري</li>
+          <li>يغطي سنة البكالوريا كاملة</li>
+          <li>ما تكرر الدفع كل شهر</li>
+          <li>بلا تحميل تطبيق — يفتح بأي متصفح</li>
+        </ul>
+        <a class="btn" id="wa-g6-yearly" target="_blank" rel="noopener noreferrer" href="#">اشترك سنوي</a>
+      </div>
+    </div>
+  </div><!-- /panel-g6 -->
+
+  <p style="text-align:center;color:var(--ink-soft);font-size:.85rem;font-weight:600;margin:2px 0 16px">
+    🔐 كل كود يُفعَّل على جهاز واحد. غيّرت جهازك؟ تواصل مع الأستاذ أحمد وينقله لك.
+  </p>
+
+  <div class="notebox" style="margin-top:4px">
+    <b>🎁 الخامس العلمي مجاني بالكامل:</b> فيزياء الخامس العلمي مفتوحة للجميع بلا اشتراك وبلا كود — تقدر تدرسها الآن من
+    <a href="index.html">الصفحة الرئيسية</a>.
   </div>
 
   <div class="card">
@@ -82,9 +131,39 @@
   function waLink(message) {
     return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
   }
-  document.getElementById("wa-monthly").href = waLink("مرحباً، أريد الاشتراك الشهري (5,000 د.ع)");
-  document.getElementById("wa-yearly").href = waLink("مرحباً، أريد الاشتراك السنوي (30,000 د.ع)");
-  document.getElementById("wa-general").href = waLink("مرحباً، عندي سؤال عن الاشتراك");
+
+  // الرسالة تذكر المرحلة صراحةً — لأن الأستاذ يولّد الكود بمرحلته من admin.html
+  document.getElementById("wa-g3-monthly").href = waLink("مرحباً، أريد الاشتراك الشهري بفيزياء الثالث المتوسط (5,000 د.ع)");
+  document.getElementById("wa-g3-yearly").href  = waLink("مرحباً، أريد الاشتراك السنوي بفيزياء الثالث المتوسط (30,000 د.ع)");
+  document.getElementById("wa-g6-monthly").href = waLink("مرحباً، أريد الاشتراك الشهري بفيزياء السادس العلمي (8,000 د.ع)");
+  document.getElementById("wa-g6-yearly").href  = waLink("مرحباً، أريد الاشتراك السنوي بفيزياء السادس العلمي (45,000 د.ع)");
+  document.getElementById("wa-general").href    = waLink("مرحباً، عندي سؤال عن الاشتراك");
+})();
+
+// تبديل تبويبات المرحلة — يشارك المفتاح نفسه مع الصفحة الرئيسية
+// فالطالب اللي اختار مرحلته هناك يلقى أسعارها مفتوحة هنا مباشرة.
+(function () {
+  var tabs = document.querySelectorAll(".gradetab");
+  var panels = { g3: document.getElementById("panel-g3"), g6: document.getElementById("panel-g6") };
+
+  function selectGrade(grade) {
+    if (!panels[grade]) return; // الخامس مجاني ولا بطاقة سعر له → نرجع للافتراضي
+    tabs.forEach(function (t) {
+      var on = t.dataset.grade === grade;
+      t.classList.toggle("active", on);
+      t.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    Object.keys(panels).forEach(function (g) { panels[g].hidden = g !== grade; });
+    try { localStorage.setItem("sharara_grade", grade); } catch (e) {}
+  }
+
+  tabs.forEach(function (t) {
+    t.addEventListener("click", function () { selectGrade(t.dataset.grade); });
+  });
+
+  var saved = null;
+  try { saved = localStorage.getItem("sharara_grade"); } catch (e) {}
+  if (saved && panels[saved]) selectGrade(saved);
 })();
 </script>
 </body>

@@ -288,6 +288,7 @@ body::after {
 }
 .gradetab.active .tab-badge { background: rgba(255,255,255,.28); color: #fff; }
 .gradepanel[hidden] { display: none; }
+.btn[hidden] { display: none !important; }
 .g6-note {
   color: var(--ink-soft); font-size: .9rem; font-weight: 600;
   margin-top: 16px; text-align: center;
@@ -395,6 +396,14 @@ math msqrt { padding-inline: 1px; }
 }
 .slider-group { display: flex; flex-direction: column; gap: 2px; font-size: .85rem; font-weight: 700; flex: 1; min-width: 150px; }
 input[type="range"] { accent-color: var(--violet); width: 100%; }
+
+/* ---------- رسم توضيحي ثابت (SVG) — للمراحل بدون محاكاة تفاعلية ---------- */
+.figbox { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px; margin: 18px 0; }
+.figbox h3 { font-weight: 900; margin-bottom: 4px; }
+.figbox .fig-sub { color: var(--ink-soft); font-size: .88rem; margin-bottom: 12px; }
+.figbox .fig-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 16px; }
+.figbox svg { width: 100%; min-width: 480px; height: auto; display: block; background: #f8fbfd; border: 2px solid #e6f1f5; border-radius: 16px; }
+.figbox .fig-cap { color: var(--ink-soft); font-size: .82rem; margin-top: 8px; text-align: center; }
 
 /* ---------- buttons ---------- */
 .btn {
@@ -902,6 +911,125 @@ footer.site::before {
 .theme-g6c9 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(21, 128, 61, .35); }
 .theme-g6c9 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(21, 128, 61, .45); }
 
+/* ===== الخامس العلمي — هوية سماوي/كهرماني (مجاني، مميّزة عن الثالث والسادس) ===== */
+.theme-g5c1 {
+  --violet: #0891b2;
+  --violet-deep: #0e7490;
+  --blue: #f59e0b;
+  --shadow: 0 10px 30px rgba(8, 145, 178, 0.10);
+  --shadow-lift: 0 16px 40px rgba(8, 145, 178, 0.18);
+}
+.theme-g5c1::before { background: radial-gradient(circle, #0891b2, transparent 70%); }
+.theme-g5c1::after { background: radial-gradient(circle, #f59e0b, transparent 70%); }
+.theme-g5c1 .hero::before { content: "➹"; }
+.theme-g5c1 .path::before { border-inline-start-color: #c5eaf2; }
+.theme-g5c1 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #c5eaf2; }
+.theme-g5c1 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(8, 145, 178, 0.30); }
+.theme-g5c1 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(8, 145, 178, .35); }
+.theme-g5c1 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(8, 145, 178, .45); }
+
+/* الخامس العلمي — الفصل الثاني: الحركة الخطية — برتقالي/كحلي (سرعة وطريق) */
+.theme-g5c2 {
+  --violet: #ea580c;
+  --violet-deep: #c2410c;
+  --blue: #1e3a8a;
+  --shadow: 0 10px 30px rgba(234, 88, 12, 0.10);
+  --shadow-lift: 0 16px 40px rgba(234, 88, 12, 0.18);
+}
+.theme-g5c2::before { background: radial-gradient(circle, #ea580c, transparent 70%); }
+.theme-g5c2::after { background: radial-gradient(circle, #1e3a8a, transparent 70%); }
+.theme-g5c2 .hero::before { content: "🏃"; }
+.theme-g5c2 .path::before { border-inline-start-color: #fde0c8; }
+.theme-g5c2 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #fde0c8; }
+.theme-g5c2 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(234, 88, 12, 0.30); }
+.theme-g5c2 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(234, 88, 12, .35); }
+.theme-g5c2 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(234, 88, 12, .45); }
+
+/* الخامس العلمي — الفصل الثالث: قوانين الحركة — نيلي/أخضر زمردي (قوة واتزان) */
+.theme-g5c3 {
+  --violet: #4f46e5;
+  --violet-deep: #4338ca;
+  --blue: #059669;
+  --shadow: 0 10px 30px rgba(79, 70, 229, 0.10);
+  --shadow-lift: 0 16px 40px rgba(79, 70, 229, 0.18);
+}
+.theme-g5c3::before { background: radial-gradient(circle, #4f46e5, transparent 70%); }
+.theme-g5c3::after { background: radial-gradient(circle, #059669, transparent 70%); }
+.theme-g5c3 .hero::before { content: "🏋️"; }
+.theme-g5c3 .path::before { border-inline-start-color: #dcdafb; }
+.theme-g5c3 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #dcdafb; }
+.theme-g5c3 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(79, 70, 229, 0.30); }
+.theme-g5c3 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(79, 70, 229, .35); }
+.theme-g5c3 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(79, 70, 229, .45); }
+
+/* الخامس العلمي — الفصل الرابع: الاتزان والعزوم — بنفسجي داكن/كهرماني (توازن ورافعة) */
+.theme-g5c4 {
+  --violet: #7c3aed;
+  --violet-deep: #6d28d9;
+  --blue: #d97706;
+  --shadow: 0 10px 30px rgba(124, 58, 237, 0.10);
+  --shadow-lift: 0 16px 40px rgba(124, 58, 237, 0.18);
+}
+.theme-g5c4::before { background: radial-gradient(circle, #7c3aed, transparent 70%); }
+.theme-g5c4::after { background: radial-gradient(circle, #d97706, transparent 70%); }
+.theme-g5c4 .hero::before { content: "⚖️"; }
+.theme-g5c4 .path::before { border-inline-start-color: #e2d7fb; }
+.theme-g5c4 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #e2d7fb; }
+.theme-g5c4 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(124, 58, 237, 0.30); }
+.theme-g5c4 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(124, 58, 237, .35); }
+.theme-g5c4 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(124, 58, 237, .45); }
+
+/* الخامس العلمي — الفصل الخامس: الشغل والطاقة والزخم — قرمزي/تركوازي (طاقة وتحوّل) */
+.theme-g5c5 {
+  --violet: #be123c;
+  --violet-deep: #9f1239;
+  --blue: #0f766e;
+  --shadow: 0 10px 30px rgba(190, 18, 60, 0.10);
+  --shadow-lift: 0 16px 40px rgba(190, 18, 60, 0.18);
+}
+.theme-g5c5::before { background: radial-gradient(circle, #be123c, transparent 70%); }
+.theme-g5c5::after { background: radial-gradient(circle, #0f766e, transparent 70%); }
+.theme-g5c5 .hero::before { content: "🔋"; }
+.theme-g5c5 .path::before { border-inline-start-color: #fbd7de; }
+.theme-g5c5 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #fbd7de; }
+.theme-g5c5 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(190, 18, 60, 0.30); }
+.theme-g5c5 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(190, 18, 60, .35); }
+.theme-g5c5 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(190, 18, 60, .45); }
+
+/* الخامس العلمي — الفصل السابع: الجسم الجاسئ — تركوازي/كهرماني (دوران وعجلات) */
+.theme-g5c7 {
+  --violet: #0d9488;
+  --violet-deep: #0f766e;
+  --blue: #f59e0b;
+  --shadow: 0 10px 30px rgba(13, 148, 136, 0.10);
+  --shadow-lift: 0 16px 40px rgba(13, 148, 136, 0.18);
+}
+.theme-g5c7::before { background: radial-gradient(circle, #0d9488, transparent 70%); }
+.theme-g5c7::after { background: radial-gradient(circle, #f59e0b, transparent 70%); }
+.theme-g5c7 .hero::before { content: "🌀"; }
+.theme-g5c7 .path::before { border-inline-start-color: #ccfbf1; }
+.theme-g5c7 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #ccfbf1; }
+.theme-g5c7 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(13, 148, 136, 0.30); }
+.theme-g5c7 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(13, 148, 136, .35); }
+.theme-g5c7 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(13, 148, 136, .45); }
+
+/* الخامس العلمي — الفصل التاسع: التيار الكهربائي — ذهبي/أزرق كهربائي (تيار ودارات) */
+.theme-g5c9 {
+  --violet: #ca8a04;
+  --violet-deep: #a16207;
+  --blue: #1d4ed8;
+  --shadow: 0 10px 30px rgba(202, 138, 4, 0.10);
+  --shadow-lift: 0 16px 40px rgba(202, 138, 4, 0.18);
+}
+.theme-g5c9::before { background: radial-gradient(circle, #ca8a04, transparent 70%); }
+.theme-g5c9::after { background: radial-gradient(circle, #1d4ed8, transparent 70%); }
+.theme-g5c9 .hero::before { content: "⚡"; }
+.theme-g5c9 .path::before { border-inline-start-color: #fef9c3; }
+.theme-g5c9 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #fef9c3; }
+.theme-g5c9 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(202, 138, 4, 0.30); }
+.theme-g5c9 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(202, 138, 4, .35); }
+.theme-g5c9 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(202, 138, 4, .45); }
+
 /* عقدة درس لم يُنشر بعد — ضمن خريطة الفصل */
 .node.locked { opacity: .55; filter: grayscale(.35); pointer-events: none; }
 .node.locked .info::after {
@@ -1060,3 +1188,88 @@ footer.site::before {
   border-radius: 10px; padding: 8px 12px; font-size: .85rem; font-weight: 700; margin: 0;
 }
 .courses-promo-submit { width: 100%; }
+
+/* ===== الأول متوسط — هوية أزرق/ليموني (مجاني، مميّزة عن الثالث والخامس والسادس) ===== */
+.theme-g1c1 {
+  --violet: #2563eb;
+  --violet-deep: #1d4ed8;
+  --blue: #65a30d;
+  --shadow: 0 10px 30px rgba(37, 99, 235, 0.10);
+  --shadow-lift: 0 16px 40px rgba(37, 99, 235, 0.18);
+}
+.theme-g1c1::before { background: radial-gradient(circle, #2563eb, transparent 70%); }
+.theme-g1c1::after { background: radial-gradient(circle, #65a30d, transparent 70%); }
+.theme-g1c1 .hero::before { content: "🧪"; }
+.theme-g1c1 .path::before { border-inline-start-color: #bfdbfe; }
+.theme-g1c1 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #bfdbfe; }
+.theme-g1c1 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(37, 99, 235, 0.30); }
+.theme-g1c1 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(37, 99, 235, .35); }
+.theme-g1c1 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(37, 99, 235, .45); }
+
+/* ===== الأول متوسط — الفصل الثاني: القوة — أحمر/كهرماني (طاقة وحركة) ===== */
+.theme-g1c2 {
+  --violet: #dc2626;
+  --violet-deep: #b91c1c;
+  --blue: #f59e0b;
+  --shadow: 0 10px 30px rgba(220, 38, 38, 0.10);
+  --shadow-lift: 0 16px 40px rgba(220, 38, 38, 0.18);
+}
+.theme-g1c2::before { background: radial-gradient(circle, #dc2626, transparent 70%); }
+.theme-g1c2::after { background: radial-gradient(circle, #f59e0b, transparent 70%); }
+.theme-g1c2 .hero::before { content: "💪"; }
+.theme-g1c2 .path::before { border-inline-start-color: #fecaca; }
+.theme-g1c2 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #fecaca; }
+.theme-g1c2 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(220, 38, 38, 0.30); }
+.theme-g1c2 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(220, 38, 38, .35); }
+.theme-g1c2 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(220, 38, 38, .45); }
+
+/* ===== الأول متوسط — الفصل الثالث: الضغط — نيلي/تركوازي (سوائل وضغط) ===== */
+.theme-g1c3 {
+  --violet: #4338ca;
+  --violet-deep: #3730a3;
+  --blue: #0d9488;
+  --shadow: 0 10px 30px rgba(67, 56, 202, 0.10);
+  --shadow-lift: 0 16px 40px rgba(67, 56, 202, 0.18);
+}
+.theme-g1c3::before { background: radial-gradient(circle, #4338ca, transparent 70%); }
+.theme-g1c3::after { background: radial-gradient(circle, #0d9488, transparent 70%); }
+.theme-g1c3 .hero::before { content: "💦"; }
+.theme-g1c3 .path::before { border-inline-start-color: #c7d2fe; }
+.theme-g1c3 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #c7d2fe; }
+.theme-g1c3 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(67, 56, 202, 0.30); }
+.theme-g1c3 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(67, 56, 202, .35); }
+.theme-g1c3 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(67, 56, 202, .45); }
+
+/* ===== الأول متوسط — الفصل الرابع: الحرارة — برتقالي/سماوي (ساخن وبارد) ===== */
+.theme-g1c4 {
+  --violet: #c2410c;
+  --violet-deep: #9a3412;
+  --blue: #0369a1;
+  --shadow: 0 10px 30px rgba(194, 65, 12, 0.10);
+  --shadow-lift: 0 16px 40px rgba(194, 65, 12, 0.18);
+}
+.theme-g1c4::before { background: radial-gradient(circle, #c2410c, transparent 70%); }
+.theme-g1c4::after { background: radial-gradient(circle, #0369a1, transparent 70%); }
+.theme-g1c4 .hero::before { content: "🔥"; }
+.theme-g1c4 .path::before { border-inline-start-color: #fed7aa; }
+.theme-g1c4 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #fed7aa; }
+.theme-g1c4 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(194, 65, 12, 0.30); }
+.theme-g1c4 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(194, 65, 12, .35); }
+.theme-g1c4 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(194, 65, 12, .45); }
+
+/* ===== الأول متوسط — الفصل الخامس: أثر الحرارة في المواد — بنفسجي/وردي ===== */
+.theme-g1c5 {
+  --violet: #9333ea;
+  --violet-deep: #7e22ce;
+  --blue: #db2777;
+  --shadow: 0 10px 30px rgba(147, 51, 234, 0.10);
+  --shadow-lift: 0 16px 40px rgba(147, 51, 234, 0.18);
+}
+.theme-g1c5::before { background: radial-gradient(circle, #9333ea, transparent 70%); }
+.theme-g1c5::after { background: radial-gradient(circle, #db2777, transparent 70%); }
+.theme-g1c5 .hero::before { content: "🌡️"; }
+.theme-g1c5 .path::before { border-inline-start-color: #e9d5ff; }
+.theme-g1c5 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #e9d5ff; }
+.theme-g1c5 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(147, 51, 234, 0.30); }
+.theme-g1c5 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(147, 51, 234, .35); }
+.theme-g1c5 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(147, 51, 234, .45); }

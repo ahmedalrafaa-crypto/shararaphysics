@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>فيزياء أ. أحمد رافع — الثالث متوسط والسادس الإعدادي</title>
-<meta name="description" content="منصة فيزياء تفاعلية للأستاذ أحمد رافع لطلاب الثالث متوسط والسادس الإعدادي: شرح الفصول خطوة بخطوة، اختبارات بنجوم، وأدوات توقعات وزارية لكل مرحلة — توقعات الثالث المبنية على تحليل أكثر من 600 سؤال، وبنك أسئلة السادس المحلولة مع الأسئلة الوزارية الغريبة.">
+<title>فيزياء أ. أحمد رافع — الثالث متوسط والسادس العلمي</title>
+<meta name="description" content="منصة فيزياء تفاعلية للأستاذ أحمد رافع لطلاب الثالث متوسط والسادس العلمي: شرح الفصول خطوة بخطوة، اختبارات بنجوم، وأدوات توقعات وزارية لكل مرحلة — توقعات الثالث المبنية على تحليل أكثر من 600 سؤال، وبنك أسئلة السادس المحلولة مع الأسئلة الوزارية الغريبة.">
 <link rel="canonical" href="https://shararaphysics.netlify.app/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="فيزياء أ. أحمد رافع — الثالث متوسط والسادس الإعدادي">
-<meta property="og:description" content="منصة فيزياء تفاعلية للأستاذ أحمد رافع لطلاب الثالث متوسط والسادس الإعدادي: شرح الفصول خطوة بخطوة، اختبارات بنجوم، وأدوات توقعات وزارية لكل مرحلة — توقعات الثالث المبنية على تحليل أكثر من 600 سؤال، وبنك أسئلة السادس المحلولة مع الأسئلة الوزارية الغريبة.">
+<meta property="og:title" content="فيزياء أ. أحمد رافع — الثالث متوسط والسادس العلمي">
+<meta property="og:description" content="منصة فيزياء تفاعلية للأستاذ أحمد رافع لطلاب الثالث متوسط والسادس العلمي: شرح الفصول خطوة بخطوة، اختبارات بنجوم، وأدوات توقعات وزارية لكل مرحلة — توقعات الثالث المبنية على تحليل أكثر من 600 سؤال، وبنك أسئلة السادس المحلولة مع الأسئلة الوزارية الغريبة.">
 <meta property="og:image" content="https://shararaphysics.netlify.app/assets/logo-ar.png">
 <meta property="og:url" content="https://shararaphysics.netlify.app/">
 <meta property="og:locale" content="ar_IQ">
@@ -30,15 +30,18 @@
 
   <div class="topbar">
     <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
-    <a class="btn small green" href="analysis/index.html" style="margin-inline-start:auto">📊 خطة مذاكرتي</a>
+    <a class="btn small green" id="hero-studyplan" href="analysis/index.html" style="margin-inline-start:auto">📊 خطة مذاكرتي</a>
     <a class="btn small coral" id="hero-predict" href="predictions/index.html">🔮 توقعات الثالث</a>
     <a class="btn small" href="subscribe.html">💳 الاشتراك</a>
     <a class="btn small ghost" href="search/index.html">🔍 بحث</a>
   </div>
 
   <div class="gradetabs" role="tablist" aria-label="اختر المرحلة الدراسية">
+    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g1" data-grade="g1">الأول متوسط</button>
+    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g2" data-grade="g2">الثاني متوسط</button>
     <button class="gradetab active" type="button" role="tab" aria-selected="true" aria-controls="panel-g3" data-grade="g3">الثالث المتوسط</button>
-    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g6" data-grade="g6">السادس الإعدادي</button>
+    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g5" data-grade="g5">الخامس العلمي</button>
+    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g6" data-grade="g6">السادس العلمي</button>
   </div>
 
   <div class="hero with-photo">
@@ -96,7 +99,7 @@
         <select id="cp-grade" name="grade" required>
           <option value="" disabled selected>اختر صفك</option>
           <option value="الثالث متوسط">الثالث متوسط</option>
-          <option value="السادس الإعدادي">السادس الإعدادي</option>
+          <option value="السادس العلمي">السادس العلمي</option>
         </select>
       </div>
       <p class="courses-promo-error" id="cp-error" role="alert" hidden></p>
@@ -229,7 +232,7 @@
   </div><!-- /panel-g3 -->
 
   <div class="gradepanel" id="panel-g6" role="tabpanel" hidden>
-    <div class="section-title"><span class="ico">🔷</span> فيزياء السادس الإعدادي</div>
+    <div class="section-title"><span class="ico">🔷</span> فيزياء السادس العلمي</div>
     <div class="chmap chmap--square">
       <a class="chcard cc-g6 tile" href="chapters/g6c1/index.html">
         <span class="em chico tool-icon">🔷</span>
@@ -277,7 +280,7 @@
         <span class="chkicker">٨ دروس</span>
       </a>
     </div>
-    <p class="g6-note">✅ فصول منهج السادس الإعدادي (العلمي) التسعة كلها متوفرة الآن.</p>
+    <p class="g6-note">✅ فصول منهج السادس العلمي التسعة كلها متوفرة الآن.</p>
 
     <div class="section-title"><span class="ico">🔮</span> جديد: التوقعات الوزارية</div>
     <a class="chcard cc-coral" href="predictions-g6/index.html" style="display:block">
@@ -302,15 +305,146 @@
       <span class="em chico tool-icon">📊</span>
       <span class="chkicker tool-tag">أداة تحليل</span>
       <h3>حلّل نتائجك واكتشف مواطن ضعفك</h3>
-      <p>يجمع إجاباتك من كل اختبارات السادس الإعدادي، يشخّص سبب كل خطأ ونوعه (فهم / حساب / تسرّع)، يقوّم مستواك في كل موضوع، ويرسم لك خطة معالجة عملية مع رابط مباشر للدرس.</p>
+      <p>يجمع إجاباتك من كل اختبارات السادس العلمي، يشخّص سبب كل خطأ ونوعه (فهم / حساب / تسرّع)، يقوّم مستواك في كل موضوع، ويرسم لك خطة معالجة عملية مع رابط مباشر للدرس.</p>
       <p style="margin-top:8px"><b style="color:var(--green)">افتح خطتي ←</b></p>
     </a>
   </div><!-- /panel-g6 -->
 
+  <div class="gradepanel" id="panel-g5" role="tabpanel" hidden>
+    <div class="notebox" style="margin-bottom:18px">
+      <b>🎁 مرحلة مجانية بالكامل:</b> فيزياء الخامس العلمي مفتوحة للجميع بدون اشتراك وبدون رمز دخول. دروس مبسّطة برسوم توضيحية ملوّنة واختبار خفيف لكل فصل — الهدف تثبيت الأساس قبل السادس.
+    </div>
+    <div class="section-title"><span class="ico">➹</span> فيزياء الخامس العلمي</div>
+    <div class="chmap chmap--square">
+      <a class="chcard tile" href="chapters/g5c1/index.html" style="--cc:#0891b2;--cc-soft:#d7eef4">
+        <span class="em chico tool-icon">➹</span>
+        <h3>الفصل الأول<br>المتجهات</h3>
+        <span class="chkicker">٥ دروس · مجاني</span>
+      </a>
+      <a class="chcard tile" href="chapters/g5c2/index.html" style="--cc:#ea580c;--cc-soft:#fde0c8">
+        <span class="em chico tool-icon">🏃</span>
+        <h3>الفصل الثاني<br>الحركة الخطية</h3>
+        <span class="chkicker">٥ دروس · مجاني</span>
+      </a>
+      <a class="chcard tile" href="chapters/g5c3/index.html" style="--cc:#4f46e5;--cc-soft:#dcdafb">
+        <span class="em chico tool-icon">🏋️</span>
+        <h3>الفصل الثالث<br>قوانين الحركة</h3>
+        <span class="chkicker">٥ دروس · مجاني</span>
+      </a>
+      <a class="chcard tile" href="chapters/g5c4/index.html" style="--cc:#7c3aed;--cc-soft:#e2d7fb">
+        <span class="em chico tool-icon">⚖️</span>
+        <h3>الفصل الرابع<br>الاتزان والعزوم</h3>
+        <span class="chkicker">٥ دروس · مجاني</span>
+      </a>
+      <a class="chcard tile" href="chapters/g5c5/index.html" style="--cc:#be123c;--cc-soft:#fbd7de">
+        <span class="em chico tool-icon">🔋</span>
+        <h3>الفصل الخامس<br>الشغل والطاقة والزخم</h3>
+        <span class="chkicker">٦ دروس · مجاني</span>
+      </a>
+      <a class="chcard tile locked" href="#" style="--cc:#64748b;--cc-soft:#e2e8f0" tabindex="-1" aria-disabled="true">
+        <span class="em chico tool-icon">🌡️</span>
+        <h3>الفصل السادس<br>التمدد الحراري</h3>
+        <span class="chkicker">يُضاف لاحقاً</span>
+      </a>
+      <a class="chcard tile" href="chapters/g5c7/index.html" style="--cc:#0d9488;--cc-soft:#ccfbf1">
+        <span class="em chico tool-icon">🌀</span>
+        <h3>الفصل السابع<br>الجسم الجاسئ</h3>
+        <span class="chkicker">٥ دروس · مجاني</span>
+      </a>
+      <a class="chcard tile locked" href="#" style="--cc:#64748b;--cc-soft:#e2e8f0" tabindex="-1" aria-disabled="true">
+        <span class="em chico tool-icon">🎵</span>
+        <h3>الفصل الثامن<br>الحركة الاهتزازية والموجية والصوت</h3>
+        <span class="chkicker">يُضاف لاحقاً</span>
+      </a>
+      <a class="chcard tile" href="chapters/g5c9/index.html" style="--cc:#ca8a04;--cc-soft:#fef9c3">
+        <span class="em chico tool-icon">⚡</span>
+        <h3>الفصل التاسع<br>التيار الكهربائي</h3>
+        <span class="chkicker">٥ دروس · مجاني · أساس السادس</span>
+      </a>
+    </div>
+    <p class="g6-note">🚧 سبعة فصول من الخامس العلمي متوفّرة الآن (فصلان قادمان قريباً)، وبقية الفصول تُضاف تباعاً بإذن الله.</p>
+    <div class="notebox" style="margin-top:14px">
+      <b>⚡ الفصل التاسع مهم جداً لطلاب السادس العلمي القادمين:</b> فصل التيار الكهربائي هو الأساس الذي تُبنى عليه فصول الكهرباء بالسادس (المتسعات، الحث الكهرومغناطيسي، التيار المتناوب). أتقنه جيداً الآن ليسهل عليك فهمها لاحقاً.
+    </div>
+  </div><!-- /panel-g5 -->
+
+  <div class="gradepanel" id="panel-g1" role="tabpanel" hidden>
+    <div class="notebox" style="margin-bottom:18px">
+      <b>🎁 مرحلة مجانية بالكامل:</b> فيزياء الأول متوسط مفتوحة للجميع بدون اشتراك وبدون رمز دخول. دروس مبسّطة برسوم توضيحية ملوّنة واختبار خفيف لكل فصل.
+    </div>
+    <div class="section-title"><span class="ico">🧪</span> فيزياء الأول متوسط</div>
+    <div class="chmap chmap--square">
+      <a class="chcard tile" href="chapters/g1c1/index.html" style="--cc:#2563eb;--cc-soft:#dbeafe">
+        <span class="em chico tool-icon">🧪</span>
+        <h3>الفصل الأول<br>خواص المادة</h3>
+        <span class="chkicker">٣ دروس · مجاني</span>
+      </a>
+      <a class="chcard tile" href="chapters/g1c2/index.html" style="--cc:#dc2626;--cc-soft:#fecaca">
+        <span class="em chico tool-icon">💪</span>
+        <h3>الفصل الثاني<br>القوة</h3>
+        <span class="chkicker">درسان · مجاني</span>
+      </a>
+      <a class="chcard tile" href="chapters/g1c3/index.html" style="--cc:#4338ca;--cc-soft:#c7d2fe">
+        <span class="em chico tool-icon">💦</span>
+        <h3>الفصل الثالث<br>الضغط</h3>
+        <span class="chkicker">٣ دروس · مجاني</span>
+      </a>
+      <a class="chcard tile" href="chapters/g1c4/index.html" style="--cc:#c2410c;--cc-soft:#fed7aa">
+        <span class="em chico tool-icon">🔥</span>
+        <h3>الفصل الرابع<br>الحرارة</h3>
+        <span class="chkicker">درسان · مجاني</span>
+      </a>
+      <a class="chcard tile" href="chapters/g1c5/index.html" style="--cc:#9333ea;--cc-soft:#e9d5ff">
+        <span class="em chico tool-icon">🌡️</span>
+        <h3>الفصل الخامس<br>أثر الحرارة في المواد</h3>
+        <span class="chkicker">درسان · مجاني</span>
+      </a>
+    </div>
+    <p class="g6-note">✅ منهج الأول متوسط الخمسة فصول متوفّر بالكامل الآن، مجاناً وبلا رمز دخول.</p>
+  </div><!-- /panel-g1 -->
+
+  <div class="gradepanel" id="panel-g2" role="tabpanel" hidden>
+    <div class="notebox" style="margin-bottom:18px">
+      <b>🎁 مرحلة مجانية بالكامل:</b> فيزياء الثاني متوسط مفتوحة للجميع بدون اشتراك وبدون رمز دخول. دروس بأمثلة محلولة ورسوم توضيحية واختبار خفيف لكل فصل.
+    </div>
+    <div class="section-title"><span class="ico">🧪</span> فيزياء الثاني متوسط</div>
+    <div class="chmap chmap--square">
+      <a class="chcard tile" href="chapters/g2c1/index.html" style="--cc:#2563eb;--cc-soft:#dbeafe">
+        <span class="em chico tool-icon">🏃</span>
+        <h3>الفصل الأول<br>الحركة</h3>
+        <span class="chkicker">٣ دروس · مجاني</span>
+      </a>
+      <a class="chcard tile" href="chapters/g2c2/index.html" style="--cc:#dc2626;--cc-soft:#fecaca">
+        <span class="em chico tool-icon">🍎</span>
+        <h3>الفصل الثاني<br>قوانين الحركة</h3>
+        <span class="chkicker">درسان · مجاني</span>
+      </a>
+      <a class="chcard tile" href="chapters/g2c3/index.html" style="--cc:#0d9488;--cc-soft:#ccfbf1">
+        <span class="em chico tool-icon">🔋</span>
+        <h3>الفصل الثالث<br>الشغل والقدرة والطاقة</h3>
+        <span class="chkicker">درسان · مجاني</span>
+      </a>
+      <a class="chcard tile" href="chapters/g2c4/index.html" style="--cc:#7c3aed;--cc-soft:#e9d5ff">
+        <span class="em chico tool-icon">⚙️</span>
+        <h3>الفصل الرابع<br>الآلات البسيطة</h3>
+        <span class="chkicker">درسان · مجاني</span>
+      </a>
+      <a class="chcard tile" href="chapters/g2c5/index.html" style="--cc:#0891b2;--cc-soft:#d7eef4">
+        <span class="em chico tool-icon">🌊</span>
+        <h3>الفصل الخامس<br>الحركة الموجية والصوت</h3>
+        <span class="chkicker">درسان · مجاني</span>
+      </a>
+      <a class="chcard tile" href="chapters/g2c6/index.html" style="--cc:#ca8a04;--cc-soft:#fef9c3">
+        <span class="em chico tool-icon">💡</span>
+        <h3>الفصل السادس<br>الضوء</h3>
+        <span class="chkicker">٣ دروس · مجاني</span>
+      </a>
+    </div>
+    <p class="g6-note">✅ منهج الثاني متوسط الستة فصول متوفّر بالكامل الآن، مجاناً وبلا رمز دخول.</p>
+  </div><!-- /panel-g2 -->
+
   <div class="section-title"><span class="ico">📖</span> عن المنصة</div>
-  <p>منصة فيزياء الثالث متوسط هي موقع تفاعلي أعدّه الأستاذ أحمد رافع لطلاب الصف الثالث متوسط في العراق، مبني بالكامل على المنهج الوزاري 2027. يشرح الموقع كل فصول الفيزياء من الكهربائية الساكنة والمغناطيس والتيار الكهربائي، إلى البطارية والطاقة والقدرة الكهربائية والمحولة الكهربائية وتكنولوجيا مصادر الطاقة، بأسلوب سهل وخطوة بخطوة مع أمثلة محلولة ومحاكاات تفاعلية واختبارات بنجوم وجوائز بدل الشرح التقليدي الممل.</p>
-  <p>يضم الموقع أيضاً أدوات <b>التوقعات الوزارية</b> لكل مرحلة: لطلاب الثالث متوسط أداة مبنية على تحليل إحصائي لأكثر من 600 سؤال وزاري من دورات سابقة، ولطلاب السادس الإعدادي بنك أسئلة محلولة ومتحقَّق منها فصلاً بفصل مع قسم <b>الأسئلة الوزارية الغريبة</b> — كلها بحلول مفصّلة خطوة بخطوة. وأداة <b>خطة مذاكرتي</b> اللي تجمع نتائجك من كل الاختبارات، تشخّص سبب كل خطأ، وترسم لك خطة مذاكرة واضحة بدل ما تضيع وقتك بالعشوائية.</p>
-  <p>كما يوفر الموقع محتوى كاملاً لطلاب <b>السادس الإعدادي</b> الفرع العلمي يغطي فصول المنهج التسعة كاملة: المتسعات، الحث الكهرومغناطيسي، التيار المتناوب، الموجات الكهرومغناطيسية، البصريات الفيزيائية، الفيزياء الحديثة، إلكترونيات الحالة الصلبة، الأطياف الذرية والليزر، والفيزياء النووية — بنفس الأسلوب التفاعلي. الهدف من المنصة هو مساعدتك تفهم الفيزياء فعلاً، مو تحفظها بس، وتوصل لأعلى درجة بالامتحان الوزاري.</p>
+  <p>منصة فيزياء تفاعلية للأستاذ أحمد رافع تغطي الأول والثالث متوسط والخامس والسادس العلمي: شرح كل الفصول خطوة بخطوة بأمثلة محلولة ومحاكاات تفاعلية، واختبارات بنجوم وجوائز بدل الشرح التقليدي الممل. ولطلاب الثالث والسادس العلمي أدوات <b>التوقعات الوزارية</b> و<b>خطة مذاكرتي</b> اللي تشخّص أخطاءك وترسم لك خطة واضحة. الهدف: تفهم الفيزياء فعلاً، مو تحفظها بس.</p>
 
   <footer class="site">إعداد الأستاذ أحمد رافع · 📞 07800155157</footer>
 </div>
@@ -380,18 +514,25 @@
 })();
 </script>
 <script>
-/* تبديل تبويبات المرحلة: الثالث المتوسط / السادس الإعدادي */
+/* تبديل تبويبات المرحلة: الثالث المتوسط / السادس العلمي */
 (function () {
   var tabs = document.querySelectorAll(".gradetab");
-  var panels = { g3: document.getElementById("panel-g3"), g6: document.getElementById("panel-g6") };
+  var panels = { g3: document.getElementById("panel-g3"), g5: document.getElementById("panel-g5"), g6: document.getElementById("panel-g6"), g1: document.getElementById("panel-g1"), g2: document.getElementById("panel-g2") };
   var heroChip = document.getElementById("hero-chip");
   var heroCta = document.getElementById("hero-cta");
   var heroPredict = document.getElementById("hero-predict");
+  var heroStudyplan = document.getElementById("hero-studyplan");
   var heroContent = {
     g3: { chip: "📚 الصف الثالث المتوسط — المنهج الوزاري 2027", href: "chapters/ch0/index.html",
           predictHref: "predictions/index.html", predictText: "🔮 توقعات الثالث" },
-    g6: { chip: "📚 الصف السادس الإعدادي — الفرع العلمي", href: "chapters/g6c1/index.html",
-          predictHref: "predictions-g6/index.html", predictText: "🔮 توقعات السادس" }
+    g5: { chip: "🎁 الصف الخامس العلمي — مجاني بالكامل", href: "chapters/g5c1/index.html",
+          predictHref: null, predictText: "" },
+    g6: { chip: "📚 الصف السادس العلمي", href: "chapters/g6c1/index.html",
+          predictHref: "predictions-g6/index.html", predictText: "🔮 توقعات السادس" },
+    g1: { chip: "🎁 الصف الأول متوسط — مجاني بالكامل", href: "chapters/g1c1/index.html",
+          predictHref: null, predictText: "" },
+    g2: { chip: "🎁 الصف الثاني متوسط — مجاني بالكامل", href: "chapters/g2c1/index.html",
+          predictHref: null, predictText: "" }
   };
   function select(grade) {
     if (!panels[grade]) grade = "g3";
@@ -404,9 +545,16 @@
     if (heroChip) heroChip.textContent = heroContent[grade].chip;
     if (heroCta) heroCta.href = heroContent[grade].href;
     if (heroPredict) {
-      heroPredict.href = heroContent[grade].predictHref;
-      heroPredict.textContent = heroContent[grade].predictText;
+      // المرحلة غير الوزارية (مثل الأول والخامس) لا توقعات ولا خطة مذاكرة لها → نخفي الزرّين
+      if (heroContent[grade].predictHref) {
+        heroPredict.hidden = false;
+        heroPredict.href = heroContent[grade].predictHref;
+        heroPredict.textContent = heroContent[grade].predictText;
+      } else {
+        heroPredict.hidden = true;
+      }
     }
+    if (heroStudyplan) heroStudyplan.hidden = !heroContent[grade].predictHref;
     try { localStorage.setItem("sharara_grade", grade); } catch (e) {}
   }
   tabs.forEach(function (t) {
