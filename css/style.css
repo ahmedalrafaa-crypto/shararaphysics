@@ -277,11 +277,12 @@ body::after {
   margin-bottom: 8px;
 }
 .gradetab {
-  flex: 1; border: none; cursor: pointer; font-family: inherit;
+  flex: 1; min-width: 0; border: none; cursor: pointer; font-family: inherit;
   font-weight: 800; font-size: .98rem; color: var(--ink-soft);
   background: transparent; border-radius: 999px;
   padding: 12px 14px; min-height: 50px;
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  text-align: center; line-height: 1.2;
   transition: color .2s, background .2s, box-shadow .2s;
 }
 .gradetab:hover { color: var(--violet-deep); }
@@ -299,6 +300,15 @@ body::after {
   padding: 1px 9px; border-radius: 999px;
 }
 .gradetab.active .tab-badge { background: rgba(255,255,255,.28); color: #fff; }
+@media (max-width: 620px) {
+  .gradetabs {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 6px; padding: 6px;
+  }
+  .gradetab {
+    padding: 10px 4px; min-height: 46px; font-size: .82rem;
+  }
+}
 .gradepanel[hidden] { display: none; }
 .btn[hidden] { display: none !important; }
 .g6-note {
