@@ -1052,6 +1052,23 @@ footer.site::before {
 .theme-g5c9 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(202, 138, 4, .35); }
 .theme-g5c9 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(202, 138, 4, .45); }
 
+/* الخامس العلمي — الفصل العاشر: المغناطيسية — أحمر/أزرق (قطبا N/S) */
+.theme-g5c10 {
+  --violet: #b91c1c;
+  --violet-deep: #991b1b;
+  --blue: #1e40af;
+  --shadow: 0 10px 30px rgba(185, 28, 28, 0.10);
+  --shadow-lift: 0 16px 40px rgba(185, 28, 28, 0.18);
+}
+.theme-g5c10::before { background: radial-gradient(circle, #b91c1c, transparent 70%); }
+.theme-g5c10::after { background: radial-gradient(circle, #1e40af, transparent 70%); }
+.theme-g5c10 .hero::before { content: "🧲"; }
+.theme-g5c10 .path::before { border-inline-start-color: #fecaca; }
+.theme-g5c10 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #fecaca; }
+.theme-g5c10 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(185, 28, 28, 0.30); }
+.theme-g5c10 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(185, 28, 28, .35); }
+.theme-g5c10 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(185, 28, 28, .45); }
+
 /* عقدة درس لم يُنشر بعد — ضمن خريطة الفصل */
 .node.locked { opacity: .55; filter: grayscale(.35); pointer-events: none; }
 .node.locked .info::after {
