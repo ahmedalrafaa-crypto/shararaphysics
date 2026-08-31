@@ -1196,6 +1196,10 @@ footer.site::before {
 @media (prefers-reduced-motion: no-preference) {
   .courses-promo-badge { animation: coursesPulse 2.8s ease-in-out infinite; }
 }
+.mockexam-promo { background: linear-gradient(135deg, #7a1712 0%, var(--coral) 100%); }
+.mockexam-cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 20px; }
+.mockexam-cta-row .btn { flex: 1 1 200px; max-width: 260px; }
+
 @media (prefers-reduced-motion: reduce) {
   .courses-promo, .courses-promo *, .courses-promo-dialog, .courses-promo-dialog * {
     animation: none !important; transition: none !important;
