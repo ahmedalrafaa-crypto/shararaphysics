@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محاكي الامتحان الوزاري (تجربة سريعة) — الثالث متوسط</title>
+<meta name="description" content="محاكي مجاني سريع للامتحان الوزاري لمادة فيزياء الثالث متوسط: ١٥ سؤالاً عشوائياً من كل مواضيع المنهج، بمؤقّت ١٥ دقيقة، وتصحيح فوري بالنتيجة بعد التسليم.">
+<link rel="canonical" href="https://shararaphysics.netlify.app/mock-exam-g3/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../assets/logo-ar.png">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .qopt.picked { background: #eef0ff !important; border-color: var(--violet) !important; }
+  #timerChip.warn { background: var(--coral); }
+  #examScreen, #resultWrap { display: none; }
+  .exam-progress { position: sticky; top: 8px; z-index: 5; display: flex; justify-content: center; margin-bottom: 18px; }
+</style>
+</head>
+<body>
+<script>
+(function() {
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="../index.html">الرئيسية</a> / محاكي الامتحان الوزاري</span>
+  </div>
+
+  <div id="startScreen">
+    <div class="hero">
+      <h1>🎯 محاكي الامتحان الوزاري — الثالث متوسط</h1>
+      <p>تجربة سريعة ومجانية لجوّ الامتحان الحقيقي: أسئلة عشوائية من كل فصول المنهج، بمؤقّت حقيقي، وبلا معرفة الجواب الصحيح إلا بعد التسليم — تماماً مثل قاعة الامتحان.</p>
+    </div>
+
+    <div class="notebox" style="margin-bottom:18px">
+      <b>🎁 مجاني بالكامل وبلا رمز دخول</b> — هذه نسخة سريعة تجريبية من المحاكي.
+    </div>
+
+    <div class="card">
+      <p><b>📋 قواعد المحاكاة:</b></p>
+      <p>• ١٥ سؤالاً عشوائياً من جميع فصول المنهج (٦٨٩ سؤالاً بالبنك الكامل).<br>
+      • مؤقّت ١٥ دقيقة — يُسلَّم الامتحان تلقائياً عند انتهاء الوقت.<br>
+      • اختيار من متعدد، إجابة واحدة لكل سؤال.<br>
+      • <b>لن تعرف إجابتك صحيحة أم لا إلا بعد الضغط على "تسليم الامتحان"</b> — تماماً كالامتحان الحقيقي.<br>
+      • تقدر تعيد المحاولة بأسئلة جديدة عشوائية في أي وقت.</p>
+    </div>
+
+    <div style="text-align:center;margin-top:24px">
+      <button type="button" class="btn" id="startBtn" style="font-size:1.1rem;padding:14px 36px">🚀 ابدأ المحاكاة</button>
+    </div>
+
+    <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+  </div>
+
+  <div id="examScreen">
+    <div class="exam-progress">
+      <span class="chip" id="timerChip">١٥:٠٠</span>
+    </div>
+
+    <div id="qlist"></div>
+
+    <div style="text-align:center;margin:20px 0">
+      <button type="button" class="btn" id="submitBtn">✅ تسليم الامتحان</button>
+    </div>
+  </div>
+
+  <div id="resultWrap">
+    <div class="quiz-result shown" id="resultBox"></div>
+    <div style="text-align:center;margin-top:20px">
+      <button type="button" class="btn" id="retryBtn">🔄 حاول مرة أخرى بأسئلة جديدة</button>
+      <a class="btn ghost" href="../index.html" style="margin-inline-start:10px">🏠 الرئيسية</a>
+    </div>
+    <div class="notebox" style="margin-top:20px">
+      <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
+      <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
+    </div>
+    <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+  </div>
+
+</div>
+
+<script src="../js/mock-exam-g3-data.js"></script>
+<script src="../js/core.js"></script>
+<script>
+(function () {
+  var TOTAL_Q = 15;
+  var TOTAL_SECONDS = 15 * 60;
+  var pool = window.MOCK_EXAM_G3_POOL || [];
+  var exam = [];       // { q, opts, correctIdx, why }
+  var answers = [];    // picked option index per question, or -1
+  var timeLeft = TOTAL_SECONDS;
+  var timerId = null;
+  var submitted = false;
+
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function buildExam() {
+    var picked = shuffle(pool).slice(0, TOTAL_Q);
+    exam = picked.map(function (src) {
+      var order = shuffle([0, 1, 2, 3]);
+      var newOpts = order.map(function (origIdx) { return src.opts[origIdx]; });
+      var newCorrect = order.indexOf(src.a);
+      return { q: src.q, opts: newOpts, correctIdx: newCorrect, why: src.why };
+    });
+    answers = exam.map(function () { return -1; });
+  }
+
+  function renderExam() {
+    var html = '';
+    exam.forEach(function (item, qi) {
+      html += '<div class="qitem" id="qitem-' + qi + '">';
+      html += '<div class="qtext">' + (qi + 1) + '. ' + item.q + '</div>';
+      html += '<div class="opts">';
+      item.opts.forEach(function (opt, oi) {
+        html += '<button type="button" class="qopt" data-q="' + qi + '" data-o="' + oi + '">' + opt + '</button>';
+      });
+      html += '</div>';
+      html += '<div class="qexpl" id="qexpl-' + qi + '">💡 ' + item.why + '</div>';
+      html += '</div>';
+    });
+    document.getElementById('qlist').innerHTML = html;
+    document.querySelectorAll('.qopt').forEach(function (btn) {
+      btn.addEventListener('click', onPick);
+    });
+  }
+
+  function onPick(e) {
+    if (submitted) return;
+    var qi = +e.currentTarget.dataset.q, oi = +e.currentTarget.dataset.o;
+    answers[qi] = oi;
+    document.querySelectorAll('.qopt[data-q="' + qi + '"]').forEach(function (b) {
+      b.classList.toggle('picked', +b.dataset.o === oi);
+    });
+  }
+
+  function fmtTime(s) {
+    var m = Math.floor(s / 60), sec = s % 60;
+    return String(m).padStart(2, '0') + ':' + String(sec).padStart(2, '0');
+  }
+
+  function tick() {
+    timeLeft--;
+    document.getElementById('timerChip').textContent = '⏱ ' + fmtTime(timeLeft);
+    if (timeLeft <= 120) document.getElementById('timerChip').classList.add('warn');
+    if (timeLeft <= 0) submitExam();
+  }
+
+  function submitExam() {
+    if (submitted) return;
+    submitted = true;
+    clearInterval(timerId);
+    var score = 0;
+    exam.forEach(function (item, qi) {
+      document.querySelectorAll('.qopt[data-q="' + qi + '"]').forEach(function (b) { b.disabled = true; });
+      var picked = answers[qi];
+      if (picked === item.correctIdx) score++;
+      var correctBtn = document.querySelector('.qopt[data-q="' + qi + '"][data-o="' + item.correctIdx + '"]');
+      if (correctBtn) correctBtn.classList.add('correct');
+      if (picked !== -1 && picked !== item.correctIdx) {
+        var wrongBtn = document.querySelector('.qopt[data-q="' + qi + '"][data-o="' + picked + '"]');
+        if (wrongBtn) wrongBtn.classList.add('wrong');
+      }
+      document.getElementById('qexpl-' + qi).classList.add('shown');
+    });
+    showResult(score);
+  }
+
+  function showResult(score) {
+    var pct = Math.round((score / TOTAL_Q) * 100);
+    var stars = pct >= 80 ? 3 : pct >= 60 ? 2 : pct >= 40 ? 1 : 0;
+    var msg = pct >= 80 ? 'ممتاز! جاهز للامتحان الحقيقي 🎉' : pct >= 60 ? 'جيد جداً، استمر بالمراجعة 💪' :
+      pct >= 40 ? 'لسا تحتاج مراجعة أكثر 📚' : 'راجع الفصول اللي أخطأت فيها وحاول من جديد 🔁';
+    document.getElementById('resultBox').innerHTML =
+      '<div class="big">' + score + ' / ' + TOTAL_Q + '</div>' +
+      '<div style="font-size:1.3rem;margin:6px 0">' + pct + '٪</div>' +
+      '<div class="stars-line">' + Phy.starsStr(stars) + '</div>' +
+      '<div style="margin-top:10px;font-weight:700">' + msg + '</div>';
+    document.getElementById('examScreen').style.display = 'none';
+    document.getElementById('resultWrap').style.display = 'block';
+    if (stars === 3) setTimeout(Phy.confetti, 500);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.getElementById('startBtn').addEventListener('click', function () {
+    if (!pool.length) { alert('تعذّر تحميل بنك الأسئلة، أعد تحميل الصفحة.'); return; }
+    buildExam();
+    renderExam();
+    document.getElementById('startScreen').style.display = 'none';
+    document.getElementById('examScreen').style.display = 'block';
+    timerId = setInterval(tick, 1000);
+  });
+
+  document.getElementById('submitBtn').addEventListener('click', submitExam);
+
+  document.getElementById('retryBtn').addEventListener('click', function () {
+    location.reload();
+  });
+
+  var waMsg = "مرحباً أستاذ أحمد 👋\nلاحظت خطأ بمحاكي الامتحان الوزاري (الثالث متوسط)\n\nالخطأ: ";
+  document.getElementById('reportBtn').href = "https://wa.me/9647800155157?text=" + encodeURIComponent(waMsg);
+})();
+</script>
+</body>
+</html>
