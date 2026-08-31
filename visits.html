@@ -216,6 +216,8 @@
     statsRoot.style.display = "none";
     callApi({ action: "getVisits", pin: getPin() }, function (data) {
       if (data && data.result === "success") {
+        // رمز حماية صحيح = هذا جهازك، فلا تُحتسب زياراته بعد الآن
+        localStorage.setItem("phy3m_owner", "1");
         render(data);
       } else if (data && data.result === "unauthorized") {
         handleUnauthorized();

@@ -12,6 +12,7 @@
 <body class="theme-ch6">
 <script>
 (function() {
+  if (localStorage.getItem('phy3m_owner')) return;
   if (sessionStorage.getItem('phy3m_visit_logged')) return;
   sessionStorage.setItem('phy3m_visit_logged', '1');
   var img = new Image();
