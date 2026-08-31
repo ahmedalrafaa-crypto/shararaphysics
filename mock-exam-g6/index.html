@@ -12,6 +12,11 @@
 <link rel="stylesheet" href="../css/style.css">
 <style>
   .qopt.picked { background: #eef0ff !important; border-color: var(--violet) !important; }
+  .mockexam-status { display: none; font-weight: 800; font-size: .9rem; margin-top: 10px; padding: 8px 12px; border-radius: 10px; }
+  .mockexam-status.ok, .mockexam-status.bad, .mockexam-status.skip { display: block; }
+  .mockexam-status.ok { background: #e8fbf3; color: #1a9c6b; }
+  .mockexam-status.bad { background: #ffefef; color: #d64545; }
+  .mockexam-status.skip { background: #f1f2f8; color: #666; }
   #timerChip.warn { background: var(--coral); }
   #examScreen { display: none; }
   .exam-progress { position: sticky; top: 8px; z-index: 5; display: flex; justify-content: center; margin-bottom: 18px; }
@@ -131,6 +136,7 @@
         html += '<button type="button" class="qopt" data-q="' + qi + '" data-o="' + oi + '">' + opt + '</button>';
       });
       html += '</div>';
+      html += '<div class="mockexam-status" id="qstatus-' + qi + '"></div>';
       html += '<div class="qexpl" id="qexpl-' + qi + '">💡 ' + item.why + '</div>';
       html += '</div>';
     });
@@ -175,6 +181,17 @@
       if (picked !== -1 && picked !== item.correctIdx) {
         var wrongBtn = document.querySelector('.qopt[data-q="' + qi + '"][data-o="' + picked + '"]');
         if (wrongBtn) wrongBtn.classList.add('wrong');
+      }
+      var statusEl = document.getElementById('qstatus-' + qi);
+      if (picked === item.correctIdx) {
+        statusEl.className = 'mockexam-status ok';
+        statusEl.textContent = '✅ إجابتك صحيحة';
+      } else if (picked === -1) {
+        statusEl.className = 'mockexam-status skip';
+        statusEl.textContent = '⚪ ما جاوبت — الصحيح: ' + item.opts[item.correctIdx];
+      } else {
+        statusEl.className = 'mockexam-status bad';
+        statusEl.textContent = '❌ إجابتك: ' + item.opts[picked] + ' — الصحيح: ' + item.opts[item.correctIdx];
       }
       document.getElementById('qexpl-' + qi).classList.add('shown');
     });
