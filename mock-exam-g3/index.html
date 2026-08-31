@@ -13,7 +13,7 @@
 <style>
   .qopt.picked { background: #eef0ff !important; border-color: var(--violet) !important; }
   #timerChip.warn { background: var(--coral); }
-  #examScreen, #resultWrap { display: none; }
+  #examScreen { display: none; }
   .exam-progress { position: sticky; top: 8px; z-index: 5; display: flex; justify-content: center; margin-bottom: 18px; }
 </style>
 </head>
@@ -64,23 +64,25 @@
       <span class="chip" id="timerChip">١٥:٠٠</span>
     </div>
 
+    <div class="quiz-result" id="resultBox" style="display:none;margin-bottom:24px"></div>
+
     <div id="qlist"></div>
 
-    <div style="text-align:center;margin:20px 0">
+    <div style="text-align:center;margin:20px 0" id="submitArea">
       <button type="button" class="btn" id="submitBtn">✅ تسليم الامتحان</button>
     </div>
-  </div>
 
-  <div id="resultWrap">
-    <div class="quiz-result shown" id="resultBox"></div>
-    <div style="text-align:center;margin-top:20px">
+    <div style="text-align:center;margin:20px 0;display:none" id="afterSubmitArea">
+      <p style="font-weight:800;margin-bottom:14px">👆 راجع أعلاه إجاباتك: <span style="color:var(--green)">🟢 الجواب الصحيح</span> و<span style="color:var(--coral)">🔴 اختيارك الخطأ</span> مع شرح كل سؤال.</p>
       <button type="button" class="btn" id="retryBtn">🔄 حاول مرة أخرى بأسئلة جديدة</button>
       <a class="btn ghost" href="../index.html" style="margin-inline-start:10px">🏠 الرئيسية</a>
     </div>
-    <div class="notebox" style="margin-top:20px">
+
+    <div class="notebox" style="margin-top:20px;display:none" id="reportBox">
       <b>📩 لاحظت خطأ؟</b> إذا لاحظت أي خطأ بسؤال أو حل، بلّغ الأستاذ أحمد فورًا وسيراجعه.
       <br><a class="btn ghost small" id="reportBtn" target="_blank" rel="noopener noreferrer" href="#" style="margin-top:10px">🐞 بلّغ عن خطأ عبر واتساب</a>
     </div>
+
     <footer class="site">إعداد الأستاذ أحمد رافع</footer>
   </div>
 
@@ -184,13 +186,17 @@
     var stars = pct >= 80 ? 3 : pct >= 60 ? 2 : pct >= 40 ? 1 : 0;
     var msg = pct >= 80 ? 'ممتاز! جاهز للامتحان الحقيقي 🎉' : pct >= 60 ? 'جيد جداً، استمر بالمراجعة 💪' :
       pct >= 40 ? 'لسا تحتاج مراجعة أكثر 📚' : 'راجع الفصول اللي أخطأت فيها وحاول من جديد 🔁';
-    document.getElementById('resultBox').innerHTML =
+    var resultBox = document.getElementById('resultBox');
+    resultBox.innerHTML =
       '<div class="big">' + score + ' / ' + TOTAL_Q + '</div>' +
       '<div style="font-size:1.3rem;margin:6px 0">' + pct + '٪</div>' +
       '<div class="stars-line">' + Phy.starsStr(stars) + '</div>' +
       '<div style="margin-top:10px;font-weight:700">' + msg + '</div>';
-    document.getElementById('examScreen').style.display = 'none';
-    document.getElementById('resultWrap').style.display = 'block';
+    resultBox.style.display = 'block';
+    resultBox.classList.add('shown');
+    document.getElementById('submitArea').style.display = 'none';
+    document.getElementById('afterSubmitArea').style.display = 'block';
+    document.getElementById('reportBox').style.display = 'block';
     if (stars === 3) setTimeout(Phy.confetti, 500);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
