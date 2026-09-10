@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "subject": "physics",
+    "grade": "ثالث_متوسط",
+    "generated_at": "2026-09-10",
+    "status": "raw_unverified",
+    "note": "بيانات خام منقولة بصرياً من صور أوراق وزارية حقيقية — غير معتمدة علمياً. ممنوع استخدامها بالمنصة قبل مراجعة أحمد سؤالاً سؤالاً.",
+    "extraction_method": "قراءة بصرية مباشرة لصورة الورقة بدقّتها الكاملة. لم يُخمَّن شيء: ما لم أجزم به تُرك null وعُلِّم needs_review.",
+    "source_caveat": "هذه الورقة مسح ضوئي للأصل الوزاري (اللجنة المركزية للامتحانات العامة) بلا إعادة رقن — لذلك source_confidence = high.",
+    "total_questions": 21,
+    "needs_review_count": 1
+  },
+  "questions": [
+    {
+      "id": "phy3-2023-r1-001", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س1-A", "question_type": "مسألة_حسابية", "marks": null,
+      "question_text": "محولة كهربائية ربط ملفها الابتدائي مع مصدر للفولطية المتناوبة ( 220v ) والجهاز الكهربائي ( الحمل ) المربوط مع ملفها الثانوي يشتغل على فولطية متناوبة ( 110v ) ، وكان عدد لفات ملفها الثانوي ( 250turns ) : 1) ما نوع هذه المحولة ؟ 2) احسب عدد لفات ملفها الابتدائي 3) ما مقدار نسبة التحويل فيها ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2023-r1-002", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س1-B-1", "question_type": "مقالي", "marks": null,
+      "question_text": "علل : بعد سيرك على سجادة من الصوف ولامست جسماً معدنياً ( مقبض باب ) فإنك غالباً ما تصاب بصعقة كهربائية خفيفة ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "تعليمات الفرع: علل اثنين مما يأتي"
+    },
+    {
+      "id": "phy3-2023-r1-003", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س1-B-2", "question_type": "مقالي", "marks": null,
+      "question_text": "علل : يعطي المصباح ذي القدرة ( 100w ) إضاءة أكبر من المصباح المماثل له ذي القدرة ( 20w ) ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2023-r1-004", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س1-B-3", "question_type": "مقالي", "marks": null,
+      "question_text": "علل : تعد طبقة الأوزون مظلة واقية لكل كائن حي على سطح الأرض ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2023-r1-005", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س2-A", "question_type": "مسألة_حسابية", "marks": null,
+      "question_text": "المقاومتان ( R ، 4Ω ) ربطتا على التوالي مع بعضهما ثم ربطتا على طرفي مصدر فرق جهده الكهربائي ( 16V ) فانساب تيار كهربائي في الدائرة مقداره ( 2A ) ، احسب : 1) المقاومة المجهولة 2) فرق الجهد على طرفي كل مقاومة .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2023-r1-006", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س2-B-1", "question_type": "اختيار_من_متعدد", "marks": null,
+      "question_text": "تكون مقاومة الأميتر بالنسبة لمقاومة الدائرة أو الجهاز المراد قياس التيار فيه :",
+      "options": ["كبيرة جدا", "صغيرة جدا", "مساوية"],
+      "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "تعليمات الفرع: اختر الإجابة الصحيحة من بين القوسين ( لاثنين فقط )"
+    },
+    {
+      "id": "phy3-2023-r1-007", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س2-B-2", "question_type": "اختيار_من_متعدد", "marks": null,
+      "question_text": "إحدى الوحدات التالية هي وحدة للقدرة الكهربائية :",
+      "options": ["Volt/Amper", "Amper/Volt", "Joule/Second"],
+      "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2023-r1-008", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س2-B-3", "question_type": "اختيار_من_متعدد", "marks": null,
+      "question_text": "أعلى طبقة من طبقات جو الأرض وتقع على ارتفاع يزيد على ( 500Km ) من سطح الأرض هي :",
+      "options": ["الميزوسفير", "الأكسوسفير", "الثرموسفير"],
+      "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2023-r1-009", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س3-A", "question_type": "مقالي", "marks": null,
+      "question_text": "وضح بنشاط كيفية توليد تيار كهربائي باستعمال مجال مغناطيسي .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2023-r1-010", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س3-B-1", "question_type": "مقالي", "marks": 4,
+      "question_text": "هناك نوعان من خسائر القدرة في المحولة الكهربائية ، عددها فقط .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "تعليمات الفرع: أجب عما يأتي"
+    },
+    {
+      "id": "phy3-2023-r1-011", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س3-B-2", "question_type": "مقالي", "marks": 6,
+      "question_text": "مقدار قوة المغناطيس الكهربائي يعتمد على عدة عوامل ، عددها .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2023-r1-012", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س4-A", "question_type": "مقالي", "marks": null,
+      "question_text": "ماذا نعني بالقوة الدافعة الكهربائية ( emf ) ؟ وما وحدة قياسها ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2023-r1-013", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س4-B", "question_type": "مقالي", "marks": null,
+      "question_text": "اذكر ثلاثة أسباب جعلت استعمال الطاقة المتجددة تفضل على أنواع الطاقة غير المتجددة .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2023-r1-014", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س4-C", "question_type": "مقالي", "marks": null,
+      "question_text": "ما الفرق بين المواد الدايا مغناطيسية والمواد الفيرو مغناطيسية ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2023-r1-015", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س5-A-1", "question_type": "مقالي", "marks": null,
+      "question_text": "ضع كلمة ( صح ) أمام العبارة الصحيحة وكلمة ( خطأ ) أمام العبارة غير الصحيحة ، ثم صحح الخطأ إن وجد دون تغيير ما تحته خط : عند تقريب جسم مشحون بشحنة سالبة من قرص كشاف كهربائي متصل بالأرض تنفرج ورقتا الكشاف نتيجة ظهور شحنة سالبة عليها .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": true,
+      "notes": "الخط في الصورة يمتد تحت جزء طويل من العبارة — يبدو شاملاً \"متصل بالأرض تنفرج ورقتا\" لكن حدّه الدقيق غير قاطع، وهو يحدّد الجواب."
+    },
+    {
+      "id": "phy3-2023-r1-016", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س5-A-2", "question_type": "مقالي", "marks": null,
+      "question_text": "ضع كلمة ( صح ) أمام العبارة الصحيحة وكلمة ( خطأ ) أمام العبارة غير الصحيحة ، ثم صحح الخطأ إن وجد دون تغيير ما تحته خط : ارتفاعات الأقمار الصناعية للاتصالات عالية جدا عن سطح الأرض .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "ما تحته خط في الصورة: \"ارتفاعات الأقمار الصناعية للاتصالات عالية\"."
+    },
+    {
+      "id": "phy3-2023-r1-017", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س5-A-3", "question_type": "مقالي", "marks": null,
+      "question_text": "ضع كلمة ( صح ) أمام العبارة الصحيحة وكلمة ( خطأ ) أمام العبارة غير الصحيحة ، ثم صحح الخطأ إن وجد دون تغيير ما تحته خط : تعد الطاقة الشمسية أحد أهم الأساليب المتبعة علميا لتوفير بعض الطلب العالمي على مصادر الطاقة .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "ما تحته خط في الصورة: \"تعد الطاقة الشمسية أحد أهم الأساليب\"."
+    },
+    {
+      "id": "phy3-2023-r1-018", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س5-B", "question_type": "مسألة_حسابية", "marks": null,
+      "question_text": "إذا كان مقدار التيار المنساب في موصل يساوي ( 0.4A ) ، احسب كمية الشحنة التي تعبر مقطعاً من موصل خلال ( 2minuts ) .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "كتبت الورقة \"2minuts\" هكذا (بخطأ إملائي في الأصل)."
+    },
+    {
+      "id": "phy3-2023-r1-019", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س6-A", "question_type": "مسألة_حسابية", "marks": null,
+      "question_text": "مدفأة كهربائية سلطت عليها فولطية مقدارها ( 220volt ) وكانت مقاومة أحد أسلاك التسخين ( 44 Ω ) احسب : 1) القدرة المستهلكة في أحد أسلاك التسخين . 2) التيار المنساب في أحد أسلاك التسخين .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2023-r1-020", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س6-B-1", "question_type": "مقالي", "marks": null,
+      "question_text": "كيف تحدد اتجاه المجال المغناطيسي حول سلك مستقيم ينساب فيه تيار كهربائي مستمر حسب قاعدة الكف اليمنى ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "تعليمات الفرع: أجب عن واحد مما يأتي"
+    },
+    {
+      "id": "phy3-2023-r1-021", "grade": "ثالث_متوسط", "year": 2023, "round": 1, "track": "موحد",
+      "question_number": "س6-B-2", "question_type": "مقالي", "marks": null,
+      "question_text": "عدد الطرق التي يمكن من خلالها أن نحصل على المغانط الدائمة والمغانط المؤقتة .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_43_46-scaled.jpg",
+      "source_type": "image", "source_confidence": "high",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    }
+  ]
+}

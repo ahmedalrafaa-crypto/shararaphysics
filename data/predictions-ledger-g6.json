@@ -1,0 +1,2332 @@
+{
+ "generated": "2026-09-10",
+ "note": "مولَّد آلياً بـ tools/feedback-predictions-g6.js — لا يُعدَّل يدوياً.",
+ "papers_in_bank": [
+  {
+   "key": "2024-r1",
+   "label": "الدور الأول 2024",
+   "questions": 49
+  },
+  {
+   "key": "2025-r1",
+   "label": "الدور الأول 2025",
+   "questions": 26
+  },
+  {
+   "key": "2025-r3",
+   "label": "الدور الثالث 2025",
+   "questions": 25
+  },
+  {
+   "key": "2026-r0",
+   "label": "التمهيدي 2026",
+   "questions": 24
+  },
+  {
+   "key": "2026-r1",
+   "label": "الدور الأول 2026",
+   "questions": 26
+  },
+  {
+   "key": "2026-r2",
+   "label": "الدور الثاني 2026",
+   "questions": 26
+  }
+ ],
+ "last_round": {
+  "key": "2026-r2",
+  "label": "الدور الثاني 2026",
+  "year": 2026,
+  "round": 2
+ },
+ "untagged": [],
+ "scored": [
+  {
+   "target": {
+    "year": 2026,
+    "round": 2
+   },
+   "key": "2026-r2",
+   "label": "الدور الثاني 2026",
+   "built": "2026-09-09",
+   "items": [
+    {
+     "q": "الأول",
+     "part": "أ",
+     "marks": 10,
+     "id": "phy6-ahyaai-2024-r1-001",
+     "concepts": [
+      "cap-problem"
+     ],
+     "group": "problem",
+     "rule": "R1",
+     "label": "مسألة ربط المتسعات مع العازل",
+     "outcome": "hit",
+     "via": "phy6-muwahad-2026-r2-011",
+     "variant": "same"
+    },
+    {
+     "q": "الأول",
+     "part": "ب",
+     "marks": 6,
+     "id": "phy6-muwahad-2025-r1-002",
+     "concepts": [
+      "carrier-wave"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "الموجة الحاملة",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الأول",
+     "part": "ب",
+     "marks": 6,
+     "id": "phy6-muwahad-2025-r1-002",
+     "concepts": [
+      "quantum-mechanics"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "الميكانيك الكمي",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الأول",
+     "part": "ب",
+     "marks": 6,
+     "id": "phy6-muwahad-2025-r1-002",
+     "concepts": [
+      "pumping-systems"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "تقنية الضخ ومنظومات الليزر",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الأول",
+     "part": "ج",
+     "marks": 4,
+     "id": "phy6-muwahad-2025-r1-003",
+     "concepts": [
+      "single-slit"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "الحيود من شق واحد",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الثاني",
+     "part": "أ",
+     "marks": 10,
+     "id": "phy6-ahyaai-2024-r1-005",
+     "concepts": [
+      "mutual-problem"
+     ],
+     "group": "problem",
+     "rule": "R1",
+     "label": "مسألة الحث المتبادل بين ملفين",
+     "outcome": "hit",
+     "via": "phy6-muwahad-2026-r2-001",
+     "variant": null
+    },
+    {
+     "q": "الثاني",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-muwahad-2026-r0-006",
+     "concepts": [
+      "series-cap-equivalent"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "نقصان السعة المكافئة عند ربط التوالي",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الثاني",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-muwahad-2026-r0-007",
+     "concepts": [
+      "inductor-avg-power"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "القدرة المتوسطة في دائرة محث صرف",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الثاني",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-muwahad-2026-r0-008",
+     "concepts": [
+      "scattering-sky"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "الاستطارة ولون السماء",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الثالث",
+     "part": "أ",
+     "marks": 10,
+     "id": "phy6-muwahad-2025-r3-008",
+     "concepts": [
+      "ac-rlc-problem"
+     ],
+     "group": "problem",
+     "rule": "R1",
+     "label": "مسألة دائرة RLC (توالٍ، توازٍ، رنين)",
+     "outcome": "hit",
+     "via": "phy6-muwahad-2026-r2-015",
+     "variant": "changed"
+    },
+    {
+     "q": "الثالث",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-muwahad-2025-r3-009",
+     "concepts": [
+      "cap-factors"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "العوامل المؤثرة في سعة المتسعة",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الثالث",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-muwahad-2025-r3-010",
+     "concepts": [
+      "transistor-structure"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "تركيب الترانزستور (الباعث والقاعدة والجامع)",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الثالث",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-muwahad-2025-r3-011",
+     "concepts": [
+      "boltzmann"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "توزيع بولتزمان والتوزيع المعكوس",
+     "outcome": "hit",
+     "via": "phy6-muwahad-2026-r2-005",
+     "variant": null
+    },
+    {
+     "q": "الرابع",
+     "part": "أ",
+     "marks": 10,
+     "id": "phy6-ahyaai-2024-r1-014",
+     "concepts": [
+      "photoelectric-problem",
+      "debroglie-problem"
+     ],
+     "group": "problem",
+     "rule": "R1",
+     "label": "مسألة الظاهرة الكهروضوئية",
+     "outcome": "hit",
+     "via": "phy6-muwahad-2026-r2-019",
+     "variant": "changed"
+    },
+    {
+     "q": "الرابع",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-muwahad-2026-r1-002",
+     "concepts": [
+      "wavefunction"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "دالة الموجة وكثافة الاحتمالية",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الرابع",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-muwahad-2026-r1-003",
+     "concepts": [
+      "cap-electrolytic"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "المتسعة الإلكتروليتية",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الرابع",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-muwahad-2026-r1-004",
+     "concepts": [
+      "pumping-systems"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "تقنية الضخ ومنظومات الليزر",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الخامس",
+     "part": "أ",
+     "marks": 10,
+     "id": "phy6-ahyaai-2024-r1-009",
+     "concepts": [
+      "nuclear-radius-problem"
+     ],
+     "group": "problem",
+     "rule": "R4",
+     "label": "مسألة نصف قطر النواة",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الخامس",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-tatbiqi-2024-r1-019",
+     "concepts": [
+      "back-emf"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "القوة الدافعة الكهربائية المضادة",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "الخامس",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-tatbiqi-2024-r1-020",
+     "concepts": [
+      "space-waves"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "الموجات الفضائية",
+     "outcome": "hit",
+     "via": "phy6-muwahad-2026-r2-024",
+     "variant": null
+    },
+    {
+     "q": "الخامس",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-tatbiqi-2024-r1-021",
+     "concepts": [
+      "barrier-potential"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "جهد الحاجز",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "السادس",
+     "part": "أ",
+     "marks": 10,
+     "id": "phy6-muwahad-2026-r0-009",
+     "concepts": [
+      "em-induction-activity"
+     ],
+     "group": "activity",
+     "rule": "R3",
+     "label": "نشاط الحث الكهرومغناطيسي (ساق مغناطيسية وملف)",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "السادس",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-muwahad-2026-r1-024",
+     "concepts": [
+      "transistor-amp"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "الترانزستور مضخماً (ربح التيار والفولطية)",
+     "outcome": "partial",
+     "via": "phy6-muwahad-2026-r2-006",
+     "variant": null
+    },
+    {
+     "q": "السادس",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-muwahad-2026-r1-025",
+     "concepts": [
+      "radar"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "الرادار",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    },
+    {
+     "q": "السادس",
+     "part": "ب",
+     "marks": 10,
+     "id": "phy6-muwahad-2026-r1-026",
+     "concepts": [
+      "guitar"
+     ],
+     "group": "theory",
+     "rule": "R3",
+     "label": "القيثارة الكهربائية",
+     "outcome": "miss",
+     "via": null,
+     "variant": null
+    }
+   ],
+   "coverage": [
+    {
+     "id": "phy6-muwahad-2026-r2-001",
+     "concepts": [
+      "mutual-problem"
+     ],
+     "group": "problem",
+     "label": "مسألة الحث المتبادل بين ملفين",
+     "covered": "main",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-002",
+     "concepts": [
+      "modulation-types"
+     ],
+     "group": "theory",
+     "label": "التضمين وأنواعه (AM / FM)",
+     "covered": "none",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-003",
+     "concepts": [
+      "depletion-region"
+     ],
+     "group": "theory",
+     "label": "منطقة الاستنزاف",
+     "covered": "none",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-004",
+     "concepts": [
+      "cap-discharge-wire"
+     ],
+     "group": "theory",
+     "label": "تفريغ المتسعة بوصل صفيحتيها بسلك",
+     "covered": "none",
+     "novel": true
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-005",
+     "concepts": [
+      "boltzmann"
+     ],
+     "group": "theory",
+     "label": "توزيع بولتزمان والتوزيع المعكوس",
+     "covered": "main",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-006",
+     "concepts": [
+      "transistor-amp"
+     ],
+     "group": "problem",
+     "label": "الترانزستور مضخماً (ربح التيار والفولطية)",
+     "covered": "main",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-007",
+     "concepts": [
+      "xray-problem"
+     ],
+     "group": "problem",
+     "label": "مسألة الأشعة السينية (الجهد، التردد، الطول الموجي)",
+     "covered": "none",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-008",
+     "concepts": [
+      "dielectric-benefits"
+     ],
+     "group": "theory",
+     "label": "فوائد إدخال العازل بين صفيحتي المتسعة",
+     "covered": "none",
+     "novel": true
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-009",
+     "concepts": [
+      "eddy-currents"
+     ],
+     "group": "theory",
+     "label": "التيارات الدوامة وتقليلها",
+     "covered": "none",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-010",
+     "concepts": [
+      "photoelectric-theory"
+     ],
+     "group": "theory",
+     "label": "تفسير الانبعاث الكهروضوئي (دالة الشغل والعتبة)",
+     "covered": "none",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-011",
+     "concepts": [
+      "cap-problem"
+     ],
+     "group": "problem",
+     "label": "مسألة ربط المتسعات مع العازل",
+     "covered": "main",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-012",
+     "concepts": [
+      "hole"
+     ],
+     "group": "theory",
+     "label": "الفجوة في شبه الموصل",
+     "covered": "none",
+     "novel": true
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-012",
+     "concepts": [
+      "interference-def"
+     ],
+     "group": "theory",
+     "label": "تداخل الضوء وشروطه",
+     "covered": "none",
+     "novel": true
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-012",
+     "concepts": [
+      "apparent-power"
+     ],
+     "group": "theory",
+     "label": "القدرة الظاهرية والحقيقية وعامل القدرة",
+     "covered": "none",
+     "novel": true
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-013",
+     "concepts": [
+      "thin-films"
+     ],
+     "group": "theory",
+     "label": "التداخل في الأغشية الرقيقة",
+     "covered": "none",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-014",
+     "concepts": [
+      "compton"
+     ],
+     "group": "theory",
+     "label": "تأثير كومبتن",
+     "covered": "none",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-015",
+     "concepts": [
+      "ac-rlc-problem"
+     ],
+     "group": "problem",
+     "label": "مسألة دائرة RLC (توالٍ، توازٍ، رنين)",
+     "covered": "main",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-016",
+     "concepts": [
+      "rectifier"
+     ],
+     "group": "theory",
+     "label": "الثنائي المعدل (المقوّم) للتيار",
+     "covered": "none",
+     "novel": true
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-017",
+     "concepts": [
+      "lenz-b-bind"
+     ],
+     "group": "theory",
+     "label": "قانون لنز: الفيض الخارجي B والمحتث B_ind",
+     "covered": "none",
+     "novel": true
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-018",
+     "concepts": [
+      "hertz"
+     ],
+     "group": "theory",
+     "label": "تجربة هرتز لتوليد الموجات الكهرومغناطيسية",
+     "covered": "none",
+     "novel": true
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-019",
+     "concepts": [
+      "photoelectric-problem"
+     ],
+     "group": "problem",
+     "label": "مسألة الظاهرة الكهروضوئية",
+     "covered": "main",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-020",
+     "concepts": [
+      "rl-growth-decay"
+     ],
+     "group": "theory",
+     "label": "تنامي التيار وتلاشيه في دائرة RL",
+     "covered": "none",
+     "novel": true
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-021",
+     "concepts": [
+      "fringe-spacing"
+     ],
+     "group": "theory",
+     "label": "فاصلة الهدب ΔY = λL/d",
+     "covered": "none",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-022",
+     "concepts": [
+      "laser-industrial"
+     ],
+     "group": "theory",
+     "label": "تطبيقات الليزر الصناعية",
+     "covered": "none",
+     "novel": true
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-023",
+     "concepts": [
+      "lc-oscillation"
+     ],
+     "group": "activity",
+     "label": "دائرة الاهتزاز الكهرومغناطيسي LC (تبادل الطاقة)",
+     "covered": "none",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-024",
+     "concepts": [
+      "space-waves"
+     ],
+     "group": "theory",
+     "label": "الموجات الفضائية",
+     "covered": "main",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-025",
+     "concepts": [
+      "brewster"
+     ],
+     "group": "theory",
+     "label": "زاوية الاستقطاب (قانون بروستر)",
+     "covered": "none",
+     "novel": false
+    },
+    {
+     "id": "phy6-muwahad-2026-r2-026",
+     "concepts": [
+      "cap-apps"
+     ],
+     "group": "theory",
+     "label": "تطبيقات عملية للمتسعة",
+     "covered": "none",
+     "novel": true
+    }
+   ],
+   "summary": {
+    "total": 25,
+    "hit": 6,
+    "alt": 0,
+    "partial": 1,
+    "miss": 18,
+    "strict_pct": 24,
+    "loose_pct": 28,
+    "marks_pct": 39,
+    "marks_loose_pct": 42,
+    "big_total": 6,
+    "big_hit": 4,
+    "variant_checked": 3,
+    "variant_changed": 2,
+    "variant_same": 1
+   },
+   "cov": {
+    "total": 28,
+    "main": 7,
+    "alt": 0,
+    "none": 21,
+    "novel": 11,
+    "novel_pct": 39
+   }
+  }
+ ],
+ "rules": {
+  "R1": {
+   "name": "القالب ثابت والشكل يتغيّر (نوع الربط، المعطى، المطلوب)",
+   "hits": 4,
+   "total": 4
+  },
+  "R2": {
+   "name": "المرآة: يأتي نظير السؤال السابق (X_L ← X_C، f_max ← λ_min، الأرضية ← الفضائية)",
+   "hits": 0,
+   "total": 0
+  },
+  "R3": {
+   "name": "عودة سؤال سابق بعد غياب (نفسه أو بصيغة أخرى)",
+   "hits": 2,
+   "total": 20
+  },
+  "R4": {
+   "name": "الفصل الغائب في الدور السابق يعود",
+   "hits": 0,
+   "total": 1
+  }
+ },
+ "concepts": {
+  "cap-problem": {
+   "name": "مسألة ربط المتسعات مع العازل",
+   "lesson": "g6c1-L5",
+   "rounds": [
+    "2024-r1",
+    "2025-r1",
+    "2026-r0",
+    "2026-r1",
+    "2026-r2"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "cap-arrangement": {
+   "name": "ترتيب المتسعات لأكبر وأصغر سعة مكافئة",
+   "lesson": "g6c1-L5",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "proof"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "series-cap-equivalent": {
+   "name": "نقصان السعة المكافئة عند ربط التوالي",
+   "lesson": "g6c1-L5",
+   "rounds": [
+    "2026-r0"
+   ],
+   "kinds": [
+    "reason"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "rc-circuit": {
+   "name": "دائرة شحن المتسعة (RC)",
+   "lesson": "g6c1-L7",
+   "rounds": [
+    "2025-r3",
+    "2026-r0"
+   ],
+   "kinds": [
+    "problem",
+    "explain"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "charging-activity": {
+   "name": "نشاط شحن وتفريغ المتسعة",
+   "lesson": "g6c1-L7",
+   "rounds": [],
+   "kinds": [],
+   "last": null,
+   "status": "never"
+  },
+  "cap-dc-open": {
+   "name": "المتسعة في دائرة التيار المستمر مفتاح مفتوح",
+   "lesson": "g6c1-L7",
+   "rounds": [
+    "2024-r1",
+    "2026-r1"
+   ],
+   "kinds": [
+    "reason",
+    "explain"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "cap-discharge-wire": {
+   "name": "تفريغ المتسعة بوصل صفيحتيها بسلك",
+   "lesson": "g6c1-L7",
+   "rounds": [
+    "2026-r2"
+   ],
+   "kinds": [
+    "tf"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "dielectric-effect": {
+   "name": "أثر العازل في المجال الكهربائي بين الصفيحتين",
+   "lesson": "g6c1-L3",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "dielectric-benefits": {
+   "name": "فوائد إدخال العازل بين صفيحتي المتسعة",
+   "lesson": "g6c1-L3",
+   "rounds": [
+    "2026-r2"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "dielectric-activity": {
+   "name": "نشاط تأثير العازل في سعة المتسعة",
+   "lesson": "g6c1-L3",
+   "rounds": [],
+   "kinds": [],
+   "last": null,
+   "status": "never"
+  },
+  "cap-factors": {
+   "name": "العوامل المؤثرة في سعة المتسعة",
+   "lesson": "g6c1-L4",
+   "rounds": [
+    "2025-r1",
+    "2025-r3"
+   ],
+   "kinds": [
+    "depends",
+    "mcq"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "cap-apps": {
+   "name": "تطبيقات عملية للمتسعة",
+   "lesson": "g6c1-L8",
+   "rounds": [
+    "2026-r2"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "cap-flash": {
+   "name": "متسعة المصباح الوميضي في آلة التصوير",
+   "lesson": "g6c1-L8",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "cap-mic": {
+   "name": "متسعة اللاقطة الصوتية",
+   "lesson": "g6c1-L8",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "cap-medical": {
+   "name": "المتسعة في المجال الطبي",
+   "lesson": "g6c1-L8",
+   "rounds": [
+    "2026-r0"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "cap-electrolytic": {
+   "name": "المتسعة الإلكتروليتية",
+   "lesson": "g6c1-L8",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "tf"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "lorentz-force": {
+   "name": "القوة على شحنة متحركة (قوة لورنتز)",
+   "lesson": "g6c2-L1",
+   "rounds": [],
+   "kinds": [],
+   "last": null,
+   "status": "never"
+  },
+  "motional-emf": {
+   "name": "القوة الدافعة الكهربائية المحتثة الحركية",
+   "lesson": "g6c2-L2",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "define"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "rod-problem": {
+   "name": "مسألة الساق المنزلقة (ε = BLv)",
+   "lesson": "g6c2-L2",
+   "rounds": [
+    "2026-r0"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "flux-problem": {
+   "name": "مسألة الفيض المغناطيسي بزوايا مختلفة",
+   "lesson": "g6c2-L3",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "b-units": {
+   "name": "وحدات قياس الكميات المغناطيسية",
+   "lesson": "g6c2-L3",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "faraday-coil-problem": {
+   "name": "مسألة ملف يتغيّر فيضه (قانون فاراداي)",
+   "lesson": "g6c2-L4",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "emf-factors": {
+   "name": "العوامل المؤثرة في القوة الدافعة المحتثة",
+   "lesson": "g6c2-L4",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "depends"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "em-induction-activity": {
+   "name": "نشاط الحث الكهرومغناطيسي (ساق مغناطيسية وملف)",
+   "lesson": "g6c2-L4",
+   "rounds": [
+    "2026-r0"
+   ],
+   "kinds": [
+    "activity"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "lenz-b-bind": {
+   "name": "قانون لنز: الفيض الخارجي B والمحتث B_ind",
+   "lesson": "g6c2-L5",
+   "rounds": [
+    "2026-r2"
+   ],
+   "kinds": [
+    "compare"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "eddy-currents": {
+   "name": "التيارات الدوامة وتقليلها",
+   "lesson": "g6c2-L10",
+   "rounds": [
+    "2024-r1",
+    "2025-r1",
+    "2026-r2"
+   ],
+   "kinds": [
+    "explain",
+    "activity"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "self-induction-problem": {
+   "name": "مسألة الحث الذاتي (الفيض، الطاقة، القوة الدافعة)",
+   "lesson": "g6c2-L6",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "self-induction-activity": {
+   "name": "نشاط تولد القوة الدافعة المحتثة ذاتياً",
+   "lesson": "g6c2-L6",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "activity"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "inductor-energy": {
+   "name": "الطاقة المختزنة في المحث",
+   "lesson": "g6c2-L6",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "rl-growth-decay": {
+   "name": "تنامي التيار وتلاشيه في دائرة RL",
+   "lesson": "g6c2-L6",
+   "rounds": [
+    "2026-r2"
+   ],
+   "kinds": [
+    "reason"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "mutual-problem": {
+   "name": "مسألة الحث المتبادل بين ملفين",
+   "lesson": "g6c2-L7",
+   "rounds": [
+    "2024-r1",
+    "2026-r2"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "transformer": {
+   "name": "المحولة ونقل القدرة الكهربائية",
+   "lesson": "g6c2-L7",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "explain",
+    "reason"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "induced-e-fields": {
+   "name": "المجالات الكهربائية المستقرة وغير المستقرة",
+   "lesson": "g6c2-L8",
+   "rounds": [
+    "2026-r0"
+   ],
+   "kinds": [
+    "define"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "generator-problem": {
+   "name": "مسألة المولّد الدوّار (ε_max = NBAω)",
+   "lesson": "g6c2-L9",
+   "rounds": [],
+   "kinds": [],
+   "last": null,
+   "status": "never"
+  },
+  "dc-generator-motor": {
+   "name": "مولد التيار المستمر ومحركه",
+   "lesson": "g6c2-L9",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "compare"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "back-emf": {
+   "name": "القوة الدافعة الكهربائية المضادة",
+   "lesson": "g6c2-L9",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "define"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "guitar": {
+   "name": "القيثارة الكهربائية",
+   "lesson": "g6c2-L10",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "ac-effective": {
+   "name": "المقدار المؤثر للتيار المتناوب (برهان)",
+   "lesson": "g6c3-L2",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "proof"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "inductor-avg-power": {
+   "name": "القدرة المتوسطة في دائرة محث صرف",
+   "lesson": "g6c3-L3",
+   "rounds": [
+    "2024-r1",
+    "2026-r0"
+   ],
+   "kinds": [
+    "explain",
+    "reason"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "lamp-inductor-freq": {
+   "name": "مصباح مع محث صرف وأثر التردد",
+   "lesson": "g6c3-L3",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "xl-activity": {
+   "name": "نشاط رادة الحث X_L",
+   "lesson": "g6c3-L3",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "activity"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "xc-activity": {
+   "name": "نشاط رادة السعة X_C",
+   "lesson": "g6c3-L4",
+   "rounds": [],
+   "kinds": [],
+   "last": null,
+   "status": "never"
+  },
+  "cap-current-lead": {
+   "name": "تيار المتسعة يتقدم الفولطية بـ π/2 (برهان)",
+   "lesson": "g6c3-L4",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "proof"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "lamp-capacitor-freq": {
+   "name": "مصباح مع متسعة صرف وأثر التردد",
+   "lesson": "g6c3-L4",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "ac-rlc-problem": {
+   "name": "مسألة دائرة RLC (توالٍ، توازٍ، رنين)",
+   "lesson": "g6c3-L5",
+   "rounds": [
+    "2024-r1",
+    "2025-r1",
+    "2025-r3",
+    "2026-r1",
+    "2026-r2"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "rlc-frequency-doubling": {
+   "name": "أثر تغيير التردد في R وX_L وX_C",
+   "lesson": "g6c3-L5",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "apparent-power": {
+   "name": "القدرة الظاهرية والحقيقية وعامل القدرة",
+   "lesson": "g6c3-L6",
+   "rounds": [
+    "2026-r2"
+   ],
+   "kinds": [
+    "define"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "resonance": {
+   "name": "الرنين وعامل النوعية",
+   "lesson": "g6c3-L7",
+   "rounds": [
+    "2024-r1",
+    "2026-r0"
+   ],
+   "kinds": [
+    "mcq",
+    "depends"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "maxwell-displacement": {
+   "name": "فرضية ماكسويل وتيار الإزاحة",
+   "lesson": "g6c4-L2",
+   "rounds": [
+    "2024-r1",
+    "2026-r0"
+   ],
+   "kinds": [
+    "define",
+    "mcq"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "hertz": {
+   "name": "تجربة هرتز لتوليد الموجات الكهرومغناطيسية",
+   "lesson": "g6c4-L3",
+   "rounds": [
+    "2026-r2"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "lc-oscillation": {
+   "name": "دائرة الاهتزاز الكهرومغناطيسي LC (تبادل الطاقة)",
+   "lesson": "g6c4-L4",
+   "rounds": [
+    "2024-r1",
+    "2026-r2"
+   ],
+   "kinds": [
+    "explain",
+    "activity"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "lc-problem": {
+   "name": "مسألة التردد الطبيعي لدائرة LC",
+   "lesson": "g6c4-L4",
+   "rounds": [
+    "2026-r0"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "transmitter": {
+   "name": "جهاز إرسال الموجات (مخطط وأجزاء)",
+   "lesson": "g6c4-L4",
+   "rounds": [
+    "2026-r0"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "receiver": {
+   "name": "جهاز تسلم الموجات (أجزاؤه)",
+   "lesson": "g6c4-L5",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "antenna-ground": {
+   "name": "تأريض الهوائي",
+   "lesson": "g6c4-L5",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "antenna-length-problem": {
+   "name": "مسألة طول الهوائي",
+   "lesson": "g6c4-L6",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "carrier-wave": {
+   "name": "الموجة الحاملة",
+   "lesson": "g6c4-L7",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "define"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "modulation-types": {
+   "name": "التضمين وأنواعه (AM / FM)",
+   "lesson": "g6c4-L7",
+   "rounds": [
+    "2026-r0",
+    "2026-r2"
+   ],
+   "kinds": [
+    "define",
+    "tf"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "am-wavelength-problem": {
+   "name": "مسألة الطول الموجي لمحطة إذاعية",
+   "lesson": "g6c4-L7",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "em-speed-media": {
+   "name": "سرعة الموجة الكهرومغناطيسية في الأوساط",
+   "lesson": "g6c4-L9",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "mcq"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "ground-waves": {
+   "name": "الموجات الأرضية",
+   "lesson": "g6c4-L9",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "sky-waves": {
+   "name": "الموجات السماوية",
+   "lesson": "g6c4-L9",
+   "rounds": [],
+   "kinds": [],
+   "last": null,
+   "status": "never"
+  },
+  "space-waves": {
+   "name": "الموجات الفضائية",
+   "lesson": "g6c4-L9",
+   "rounds": [
+    "2024-r1",
+    "2026-r2"
+   ],
+   "kinds": [
+    "define",
+    "explain"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "radar": {
+   "name": "الرادار",
+   "lesson": "g6c4-L10",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "remote-sensing": {
+   "name": "التحسس النائي",
+   "lesson": "g6c4-L10",
+   "rounds": [
+    "2026-r0"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "interference-def": {
+   "name": "تداخل الضوء وشروطه",
+   "lesson": "g6c5-L2",
+   "rounds": [
+    "2026-r2"
+   ],
+   "kinds": [
+    "define"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "interference-activity": {
+   "name": "نشاط تداخل الموجات",
+   "lesson": "g6c5-L2",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "activity"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "coherent-sources": {
+   "name": "المصادر المتشاكهة",
+   "lesson": "g6c5-L2",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "young-interference-type": {
+   "name": "نوع التداخل في تجربة يونك",
+   "lesson": "g6c5-L3",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "depends"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "young-path-difference": {
+   "name": "مسألة فرق المسار ونوع التداخل",
+   "lesson": "g6c5-L3",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "fringe-spacing": {
+   "name": "فاصلة الهدب ΔY = λL/d",
+   "lesson": "g6c5-L3",
+   "rounds": [
+    "2024-r1",
+    "2025-r3",
+    "2026-r2"
+   ],
+   "kinds": [
+    "explain",
+    "proof",
+    "reason"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "thin-films": {
+   "name": "التداخل في الأغشية الرقيقة",
+   "lesson": "g6c5-L4",
+   "rounds": [
+    "2025-r3",
+    "2026-r0",
+    "2026-r2"
+   ],
+   "kinds": [
+    "reason",
+    "mcq",
+    "depends"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "single-slit": {
+   "name": "الحيود من شق واحد",
+   "lesson": "g6c5-L5",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "diffraction-activity": {
+   "name": "نشاط حيود الضوء",
+   "lesson": "g6c5-L5",
+   "rounds": [],
+   "kinds": [],
+   "last": null,
+   "status": "never"
+  },
+  "grating-problem": {
+   "name": "مسألة محزز الحيود",
+   "lesson": "g6c5-L6",
+   "rounds": [],
+   "kinds": [],
+   "last": null,
+   "status": "never"
+  },
+  "polarization-basics": {
+   "name": "الضوء المستقطب وطرائق الحصول عليه",
+   "lesson": "g6c5-L7",
+   "rounds": [
+    "2026-r0",
+    "2026-r1"
+   ],
+   "kinds": [
+    "compare",
+    "explain"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "polarization-activity": {
+   "name": "نشاط استقطاب الضوء",
+   "lesson": "g6c5-L7",
+   "rounds": [],
+   "kinds": [],
+   "last": null,
+   "status": "never"
+  },
+  "brewster": {
+   "name": "زاوية الاستقطاب (قانون بروستر)",
+   "lesson": "g6c5-L7",
+   "rounds": [
+    "2025-r3",
+    "2026-r2"
+   ],
+   "kinds": [
+    "problem",
+    "explain"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "scattering-sky": {
+   "name": "الاستطارة ولون السماء",
+   "lesson": "g6c5-L8",
+   "rounds": [
+    "2024-r1",
+    "2026-r0"
+   ],
+   "kinds": [
+    "reason"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "blackbody": {
+   "name": "إشعاع الجسم الأسود وقانون فين",
+   "lesson": "g6c6-L2",
+   "rounds": [
+    "2026-r0"
+   ],
+   "kinds": [
+    "mcq"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "photon-energy-problem": {
+   "name": "مسألة طاقة الفوتون",
+   "lesson": "g6c6-L2",
+   "rounds": [
+    "2026-r0"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "photoelectric-problem": {
+   "name": "مسألة الظاهرة الكهروضوئية",
+   "lesson": "g6c6-L3",
+   "rounds": [
+    "2024-r1",
+    "2025-r1",
+    "2026-r1",
+    "2026-r2"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "photoelectric-theory": {
+   "name": "تفسير الانبعاث الكهروضوئي (دالة الشغل والعتبة)",
+   "lesson": "g6c6-L3",
+   "rounds": [
+    "2024-r1",
+    "2026-r2"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "photoelectric-devices": {
+   "name": "تطبيقات الظاهرة الكهروضوئية",
+   "lesson": "g6c6-L3",
+   "rounds": [
+    "2024-r1",
+    "2026-r0"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "quartz-window": {
+   "name": "نافذة الكوارتز في الخلية الكهروضوئية",
+   "lesson": "g6c6-L3",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "reason"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "photon-momentum": {
+   "name": "زخم الفوتون وطوله الموجي",
+   "lesson": "g6c6-L4",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "debroglie-problem": {
+   "name": "مسألة طول موجة دي برولي",
+   "lesson": "g6c6-L5",
+   "rounds": [
+    "2024-r1",
+    "2025-r3"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "wave-packet": {
+   "name": "الرزمة الموجية",
+   "lesson": "g6c6-L5",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "define"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "quantum-mechanics": {
+   "name": "الميكانيك الكمي",
+   "lesson": "g6c6-L6",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "define"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "wavefunction": {
+   "name": "دالة الموجة وكثافة الاحتمالية",
+   "lesson": "g6c6-L6",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "tf"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "uncertainty": {
+   "name": "مبدأ اللادقة لهايزنبرك",
+   "lesson": "g6c6-L7",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "define"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "einstein-postulates": {
+   "name": "فرضيتا آينشتاين للنسبية الخاصة",
+   "lesson": "g6c6-L9",
+   "rounds": [
+    "2024-r1",
+    "2026-r0"
+   ],
+   "kinds": [
+    "mcq",
+    "explain"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "lorentz-transform": {
+   "name": "تحويلات لورنتز",
+   "lesson": "g6c6-L10",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "define"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "relativistic-mass": {
+   "name": "ازدياد الكتلة النسبية (معامل لورنتز γ)",
+   "lesson": "g6c6-L11",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "proof"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "energy-bands": {
+   "name": "حزم الطاقة في الموصلات والعوازل وأشباه الموصلات",
+   "lesson": "g6c7-L2",
+   "rounds": [
+    "2025-r1",
+    "2025-r3",
+    "2026-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "hole": {
+   "name": "الفجوة في شبه الموصل",
+   "lesson": "g6c7-L3",
+   "rounds": [
+    "2026-r2"
+   ],
+   "kinds": [
+    "define"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "fermi-level": {
+   "name": "مستوى فيرمي",
+   "lesson": "g6c7-L3",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "mcq"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "donor-acceptor": {
+   "name": "الشوائب المانحة والقابلة",
+   "lesson": "g6c7-L4",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "reason"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "depletion-region": {
+   "name": "منطقة الاستنزاف",
+   "lesson": "g6c7-L5",
+   "rounds": [
+    "2025-r3",
+    "2026-r2"
+   ],
+   "kinds": [
+    "reason",
+    "tf"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "barrier-potential": {
+   "name": "جهد الحاجز",
+   "lesson": "g6c7-L5",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "define"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "rectifier": {
+   "name": "الثنائي المعدل (المقوّم) للتيار",
+   "lesson": "g6c7-L7",
+   "rounds": [
+    "2026-r2"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "photodiode": {
+   "name": "الثنائي المتحسس للضوء",
+   "lesson": "g6c7-L7",
+   "rounds": [
+    "2026-r0"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "transistor-amp": {
+   "name": "الترانزستور مضخماً (ربح التيار والفولطية)",
+   "lesson": "g6c7-L8",
+   "rounds": [
+    "2025-r1",
+    "2026-r0",
+    "2026-r1",
+    "2026-r2"
+   ],
+   "kinds": [
+    "problem",
+    "compare"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "transistor-structure": {
+   "name": "تركيب الترانزستور (الباعث والقاعدة والجامع)",
+   "lesson": "g6c7-L8",
+   "rounds": [
+    "2025-r3",
+    "2026-r1"
+   ],
+   "kinds": [
+    "mcq",
+    "compare"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "bohr-angular-momentum": {
+   "name": "الزخم الزاوي للإلكترون (فرضيات بور)",
+   "lesson": "g6c8-L1",
+   "rounds": [
+    "2025-r3",
+    "2026-r1"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "hydrogen-spectrum": {
+   "name": "طيف الهيدروجين وسلاسله",
+   "lesson": "g6c8-L2",
+   "rounds": [
+    "2025-r1",
+    "2025-r3"
+   ],
+   "kinds": [
+    "mcq",
+    "compare"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "hydrogen-ionization": {
+   "name": "تأين ذرة الهيدروجين (13.6 eV)",
+   "lesson": "g6c8-L2",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "hydrogen-transition-problem": {
+   "name": "مسألة انتقال الإلكترون وطاقة الفوتون المنبعث",
+   "lesson": "g6c8-L2",
+   "rounds": [],
+   "kinds": [],
+   "last": null,
+   "status": "never"
+  },
+  "line-spectrum": {
+   "name": "الطيف الخطي وفائدته",
+   "lesson": "g6c8-L3",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "xray-continuous": {
+   "name": "الطيف المستمر للأشعة السينية",
+   "lesson": "g6c8-L4",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "xray-problem": {
+   "name": "مسألة الأشعة السينية (الجهد، التردد، الطول الموجي)",
+   "lesson": "g6c8-L4",
+   "rounds": [
+    "2026-r1",
+    "2026-r2"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "xray-intensity": {
+   "name": "شدة الأشعة السينية",
+   "lesson": "g6c8-L4",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "compton": {
+   "name": "تأثير كومبتن",
+   "lesson": "g6c8-L5",
+   "rounds": [
+    "2026-r1",
+    "2026-r2"
+   ],
+   "kinds": [
+    "explain",
+    "depends"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "laser-properties": {
+   "name": "خصائص الليزر",
+   "lesson": "g6c8-L6",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "mcq"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "stimulated-emission": {
+   "name": "الانبعاث المحفز (توليد الليزر)",
+   "lesson": "g6c8-L6",
+   "rounds": [
+    "2026-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "boltzmann": {
+   "name": "توزيع بولتزمان والتوزيع المعكوس",
+   "lesson": "g6c8-L7",
+   "rounds": [
+    "2025-r1",
+    "2025-r3",
+    "2026-r2"
+   ],
+   "kinds": [
+    "problem",
+    "mcq",
+    "proof"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "pumping-systems": {
+   "name": "تقنية الضخ ومنظومات الليزر",
+   "lesson": "g6c8-L7",
+   "rounds": [
+    "2025-r1",
+    "2026-r1"
+   ],
+   "kinds": [
+    "define",
+    "tf"
+   ],
+   "last": "2026-r1",
+   "status": "recent"
+  },
+  "laser-industrial": {
+   "name": "تطبيقات الليزر الصناعية",
+   "lesson": "g6c8-L8",
+   "rounds": [
+    "2026-r2"
+   ],
+   "kinds": [
+    "reason"
+   ],
+   "last": "2026-r2",
+   "status": "just-used"
+  },
+  "holography": {
+   "name": "التصوير المجسم (الهولوغرافي)",
+   "lesson": "g6c8-L8",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "nucleus-composition": {
+   "name": "مكونات النواة",
+   "lesson": "g6c9-L1",
+   "rounds": [
+    "2026-r0"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2026-r0",
+   "status": "recent"
+  },
+  "nuclear-radius-problem": {
+   "name": "مسألة نصف قطر النواة",
+   "lesson": "g6c9-L1",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "binding-energy": {
+   "name": "طاقة الربط النووية",
+   "lesson": "g6c9-L2",
+   "rounds": [
+    "2024-r1"
+   ],
+   "kinds": [
+    "problem"
+   ],
+   "last": "2024-r1",
+   "status": "due"
+  },
+  "alpha-decay": {
+   "name": "انحلال ألفا",
+   "lesson": "g6c9-L3",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "gamma-emission": {
+   "name": "انبعاث أشعة كاما",
+   "lesson": "g6c9-L4",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "reason"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "nuclear-equation": {
+   "name": "إكمال المعادلة النووية",
+   "lesson": "g6c9-L5",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "nuclear-reactor": {
+   "name": "المفاعل النووي والانشطار",
+   "lesson": "g6c9-L6",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "define"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  },
+  "fusion": {
+   "name": "الاندماج النووي",
+   "lesson": "g6c9-L7",
+   "rounds": [
+    "2025-r1"
+   ],
+   "kinds": [
+    "mcq"
+   ],
+   "last": "2025-r1",
+   "status": "due"
+  },
+  "radiation-protection": {
+   "name": "الوقاية من الإشعاع النووي",
+   "lesson": "g6c9-L8",
+   "rounds": [
+    "2025-r3"
+   ],
+   "kinds": [
+    "explain"
+   ],
+   "last": "2025-r3",
+   "status": "due"
+  }
+ }
+}

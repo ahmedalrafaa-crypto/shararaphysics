@@ -84,6 +84,44 @@ for (const ch of [...G6, ...G3]) {
 }
 if (!leaks) ok('لا صفحة مراجعة تحمّل بيانات الدروس بوسم ثابت');
 
+// ── ٥) التوقعات الوزارية للسادس: البنك موسوم والورقة متّسقة ─────────────────
+// المقارنة الآلية بين التوقع والامتحان الحقيقي تعتمد على وسم كل سؤال بمفهومه —
+// سؤال بلا وسم يسقط من المقارنة بصمت، فيجب أن يُكشف هنا.
+console.log('\n\x1b[1m٥) التوقعات الوزارية (السادس)\x1b[0m');
+{
+  const J = f => JSON.parse(read(path.join('data', f)));
+  const bank = J('wazariyat-sadis-ilmi.json').questions.filter(q => !/^ثوابت/.test(q.question_number || ''));
+  const T = J('concept-tags-g6.json'), P = J('expected-papers-g6.json'), L = J('predictions-ledger-g6.json');
+  const untagged = bank.filter(q => !(T.tags[q.id] || []).length);
+  untagged.length ? bad('أسئلة وزارية بلا وسم مفهوم: ' + untagged.map(q => q.id).join(', '))
+                  : ok(`كل الأسئلة الوزارية (${bank.length}) موسومة بمفهومها`);
+  const ids = new Set(bank.map(q => q.id));
+  const refs = P.papers.flatMap(pp => pp.questions.flatMap(q => q.parts.flatMap(x => x.ids || [x.id])));
+  const dangling = refs.filter(i => !ids.has(i));
+  dangling.length ? bad('الأوراق المتوقّعة تشير لأسئلة غير موجودة: ' + dangling.join(', '))
+                  : ok(`كل فروع الأوراق المتوقّعة (${refs.length}) أسئلة وزارية حقيقية في البنك`);
+  const open = P.papers.filter(pp => pp.status === 'open');
+  open.length === 1 ? ok(`ورقة متوقّعة مفتوحة واحدة (${open[0].target.year} د${open[0].target.round})`)
+                    : bad(`عدد الأوراق المفتوحة ${open.length} — المطلوب واحدة`);
+  const rounds = new Set(bank.map(q => q.year + '-r' + q.round));
+  L.papers_in_bank.length === rounds.size ? ok(`سجلّ التغذية الراجعة محدَّث (${rounds.size} أوراق)`)
+    : bad('سجلّ التغذية الراجعة قديم — شغّل node tools/feedback-predictions-g6.js');
+  const stu = read(path.join('predictions-g6', 'expected-paper.html'));
+  /class="(src|ans|pwhy|why|rule)[ "]/.test(stu) ? bad('نسخة الطالب تحوي مصادر أو أجوبة أو تبريرات المعلّم')
+                                                 : ok('نسخة الطالب بلا مصادر ولا أجوبة ولا تبريرات');
+}
+
+// ── ٦) نسخ المعلّم خارج مجلد الموقع ───────────────────────────────────────
+// نسخة المعلّم فيها الأجوبة الرسمية ومصادر الأسئلة، وصفحة الإحصاءات للأستاذ —
+// وجودهما داخل المستودع يعني نشرهما مع أول رفعة.
+console.log('\n\x1b[1m٦) نسخ المعلّم لا تُنشر (السادس والثالث)\x1b[0m');
+const teacherLeaks = ['predictions-g6/expected-paper-teacher.html', 'predictions-g6/preview.html',
+  'predictions/expected-paper-teacher.html', 'predictions/preview.html']
+  .filter(f => fs.existsSync(p(f)));
+teacherLeaks.length
+  ? bad('داخل مجلد الموقع وستُرفع: ' + teacherLeaks.join(', ') + ' — مكانها Desktop/شرارة-نسخ-المعلم')
+  : ok('نسخة المعلّم وصفحة الإحصاءات خارج مجلد الموقع');
+
 // ── الخلاصة ────────────────────────────────────────────────────────────────
 console.log(`\n${fail ? '\x1b[31m' : '\x1b[32m'}\x1b[1m${fail ? '✗ فشل' : '✓ نجح'}\x1b[0m  ناجح: ${pass} · فاشل: ${fail}\n`);
 if (fail) console.log('راجع الفحوص الفاشلة أعلاه قبل الرفع.\n');

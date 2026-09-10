@@ -1,0 +1,958 @@
+{
+ "generated": "2026-09-09",
+ "total_questions": 898,
+ "dated_questions": 363,
+ "classified_questions": 235,
+ "years_covered": [
+  2013,
+  2014,
+  2015,
+  2016,
+  2017,
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025,
+  2026
+ ],
+ "year_span": 14,
+ "chapter_weight": [
+  {
+   "chapter": 1,
+   "name": "المتسعات",
+   "count": 60,
+   "pct": 25.5,
+   "years": 12
+  },
+  {
+   "chapter": 2,
+   "name": "الحث الكهرومغناطيسي والذاتي",
+   "count": 46,
+   "pct": 19.6,
+   "years": 9
+  },
+  {
+   "chapter": 3,
+   "name": "التيار المتناوب",
+   "count": 37,
+   "pct": 15.7,
+   "years": 11
+  },
+  {
+   "chapter": 6,
+   "name": "الفيزياء الحديثة",
+   "count": 33,
+   "pct": 14,
+   "years": 11
+  },
+  {
+   "chapter": 8,
+   "name": "الأطياف الذرية والليزر",
+   "count": 23,
+   "pct": 9.8,
+   "years": 9
+  },
+  {
+   "chapter": 5,
+   "name": "البصريات الفيزيائية",
+   "count": 16,
+   "pct": 6.8,
+   "years": 8
+  },
+  {
+   "chapter": 9,
+   "name": "الفيزياء النووية",
+   "count": 12,
+   "pct": 5.1,
+   "years": 6
+  },
+  {
+   "chapter": 7,
+   "name": "إلكترونيات الحالة الصلبة",
+   "count": 7,
+   "pct": 3,
+   "years": 5
+  },
+  {
+   "chapter": 4,
+   "name": "الموجات الكهرومغناطيسية",
+   "count": 1,
+   "pct": 0.4,
+   "years": 1
+  }
+ ],
+ "type_distribution_all": {
+  "مسألة حسابية": 376,
+  "مفهومي": 316,
+  "تعليل": 110,
+  "مصطلح": 28,
+  "مقارنة": 17,
+  "اختيار من متعدد": 17,
+  "مسألة معكوسة": 14,
+  "صح وخطأ": 11,
+  "برهان": 9
+ },
+ "type_distribution_dated": {
+  "مسألة حسابية": 256,
+  "مفهومي": 70,
+  "اختيار من متعدد": 12,
+  "مصطلح": 10,
+  "تعليل": 7,
+  "مقارنة": 4,
+  "برهان": 4
+ },
+ "priority": {
+  "must": [
+   {
+    "chapter": 6,
+    "topic": "التأثير الكهروضوئي",
+    "count": 21,
+    "year_count": 9,
+    "last": 2021,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 9,
+    "topic": "الشحنة ونصف القطر النووي",
+    "count": 8,
+    "year_count": 5,
+    "last": 2019,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 2,
+    "topic": "مولد يدور",
+    "count": 7,
+    "year_count": 5,
+    "last": 2023,
+    "types": [
+     "مسألة حسابية",
+     "مفهومي"
+    ]
+   },
+   {
+    "chapter": 3,
+    "topic": "التوازي",
+    "count": 7,
+    "year_count": 5,
+    "last": 2023,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 2,
+    "topic": "ملف وتغيّر كثافة الفيض",
+    "count": 6,
+    "year_count": 5,
+    "last": 2023,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 2,
+    "topic": "حث ذاتي",
+    "count": 6,
+    "year_count": 4,
+    "last": 2017,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 6,
+    "topic": "طول موجة دي برولي",
+    "count": 5,
+    "year_count": 4,
+    "last": 2020,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 6,
+    "topic": "مسائل الجسم الأسود",
+    "count": 4,
+    "year_count": 4,
+    "last": 2022,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "توالي متسعتين",
+    "count": 4,
+    "year_count": 4,
+    "last": 2020,
+    "types": [
+     "مسألة حسابية"
+    ]
+   }
+  ],
+  "rotate": [
+   {
+    "chapter": 8,
+    "topic": "أنبوبة الأشعة السينية",
+    "count": 7,
+    "year_count": 3,
+    "last": 2019,
+    "types": [
+     "مفهومي",
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 7,
+    "topic": "ترانزستور",
+    "count": 5,
+    "year_count": 3,
+    "last": 2024,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 2,
+    "topic": "الساق الموصلة المنزلقة",
+    "count": 4,
+    "year_count": 3,
+    "last": 2020,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 3,
+    "topic": "الرنين",
+    "count": 4,
+    "year_count": 3,
+    "last": 2019,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "ثابت العزل الكهربائي",
+    "count": 4,
+    "year_count": 3,
+    "last": 2020,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 5,
+    "topic": "محزز الحيود (تتمة) + الاستقطاب",
+    "count": 3,
+    "year_count": 3,
+    "last": 2024,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "إيجاد الجهد من الطاقة + المجال الكهربائي",
+    "count": 3,
+    "year_count": 3,
+    "last": 2020,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "ربط مختلط",
+    "count": 3,
+    "year_count": 3,
+    "last": 2022,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 5,
+    "topic": "محزز الحيود",
+    "count": 3,
+    "year_count": 2,
+    "last": 2019,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "إيجاد K",
+    "count": 3,
+    "year_count": 2,
+    "last": 2023,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 2,
+    "topic": "الحث المتبادل",
+    "count": 2,
+    "year_count": 2,
+    "last": 2023,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 2,
+    "topic": "RL والحث المتبادل معاً",
+    "count": 2,
+    "year_count": 2,
+    "last": 2016,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 2,
+    "topic": "RL",
+    "count": 2,
+    "year_count": 2,
+    "last": 2018,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 3,
+    "topic": "التوالي",
+    "count": 2,
+    "year_count": 2,
+    "last": 2021,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 3,
+    "topic": "دوائر RLC",
+    "count": 2,
+    "year_count": 2,
+    "last": 2015,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 3,
+    "topic": "الرنين، إيجاد C من زاوية تأخّر/تقدّم محدَّدة",
+    "count": 2,
+    "year_count": 2,
+    "last": 2021,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 6,
+    "topic": "مبدأ عدم التأكد",
+    "count": 2,
+    "year_count": 2,
+    "last": 2019,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 7,
+    "topic": "ترانزستور القاعدة المشتركة",
+    "count": 2,
+    "year_count": 2,
+    "last": 2016,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 8,
+    "topic": "طاقة الفوتون وانتقالات الذرة",
+    "count": 2,
+    "year_count": 2,
+    "last": 2022,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 9,
+    "topic": "طاقة الربط النووية",
+    "count": 2,
+    "year_count": 2,
+    "last": 2021,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "الشحنة والسعة بعد إدخال العازل",
+    "count": 2,
+    "year_count": 2,
+    "last": 2018,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "الطاقة والقدرة + متسعة الصفائح المتوازية",
+    "count": 2,
+    "year_count": 2,
+    "last": 2019,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "إيجاد الجهد من الطاقة + الطاقة بعد العازل",
+    "count": 2,
+    "year_count": 2,
+    "last": 2020,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "توالي ثلاث متسعات",
+    "count": 2,
+    "year_count": 2,
+    "last": 2019,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "ربط مختلط + الطاقة",
+    "count": 2,
+    "year_count": 2,
+    "last": 2019,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "توازي، عازل بعد الفصل + الطاقة",
+    "count": 2,
+    "year_count": 2,
+    "last": 2017,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "المتسعة مع مقاومة",
+    "count": 2,
+    "year_count": 2,
+    "last": 2017,
+    "types": [
+     "مسألة حسابية"
+    ]
+   }
+  ],
+  "comeback": [
+   {
+    "chapter": 2,
+    "topic": "RL بطريقة \"كسر الفولطية المطبّقة\"",
+    "count": 2,
+    "year_count": 1,
+    "last": 2019,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 2,
+    "topic": "حث متبادل",
+    "count": 2,
+    "year_count": 1,
+    "last": 2020,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 3,
+    "topic": "مسائل المقاومة صرف والمحث صرف والمتسعة صرف",
+    "count": 2,
+    "year_count": 1,
+    "last": 2018,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 3,
+    "topic": "إيجاد معامل الحث الذاتي من مركّبات الدائرة",
+    "count": 2,
+    "year_count": 1,
+    "last": 2023,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "توالي مع الطاقة",
+    "count": 2,
+    "year_count": 1,
+    "last": 2015,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 2,
+    "topic": "RL: القوة الدافعة والمعدل الزمني",
+    "count": 1,
+    "year_count": 1,
+    "last": 2013,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 3,
+    "topic": "مسائل متسعة ذات سعة صرف",
+    "count": 1,
+    "year_count": 1,
+    "last": 2018,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 3,
+    "topic": "دائرة توالي RLC كاملة",
+    "count": 1,
+    "year_count": 1,
+    "last": 2014,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 3,
+    "topic": "تحويل بطارية (مستمر) إلى مصدر متناوب",
+    "count": 1,
+    "year_count": 1,
+    "last": 2020,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "أكبر وأصغر سعة مكافئة",
+    "count": 1,
+    "year_count": 1,
+    "last": 2016,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "توازي، عازل في المتسعة الثانية",
+    "count": 1,
+    "year_count": 1,
+    "last": 2019,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "توازي، عازل بعد الفصل",
+    "count": 1,
+    "year_count": 1,
+    "last": 2018,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "توازي، عازل والمجموعة متصلة",
+    "count": 1,
+    "year_count": 1,
+    "last": 2014,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "توازي، عازل بعد الفصل + K + الطاقة",
+    "count": 1,
+    "year_count": 1,
+    "last": 2020,
+    "types": [
+     "مسألة حسابية"
+    ]
+   },
+   {
+    "chapter": 1,
+    "topic": "إيجاد الجهد من الطاقة + توصيل متسعة مشحونة بأخرى غير مشحونة",
+    "count": 1,
+    "year_count": 1,
+    "last": 2015,
+    "types": [
+     "مسألة حسابية"
+    ]
+   }
+  ]
+ },
+ "unclassified": {
+  "count": 198,
+  "pct": 54.5
+ },
+ "gaps": [
+  {
+   "chapter": 1,
+   "chapter_name": "المتسعات",
+   "type": "مصطلح",
+   "count": 0
+  },
+  {
+   "chapter": 1,
+   "chapter_name": "المتسعات",
+   "type": "صح وخطأ",
+   "count": 0
+  },
+  {
+   "chapter": 1,
+   "chapter_name": "المتسعات",
+   "type": "فراغات",
+   "count": 0
+  },
+  {
+   "chapter": 1,
+   "chapter_name": "المتسعات",
+   "type": "برهان",
+   "count": 0
+  },
+  {
+   "chapter": 2,
+   "chapter_name": "الحث الكهرومغناطيسي والذاتي",
+   "type": "مقارنة",
+   "count": 0
+  },
+  {
+   "chapter": 2,
+   "chapter_name": "الحث الكهرومغناطيسي والذاتي",
+   "type": "صح وخطأ",
+   "count": 0
+  },
+  {
+   "chapter": 2,
+   "chapter_name": "الحث الكهرومغناطيسي والذاتي",
+   "type": "اختيار من متعدد",
+   "count": 0
+  },
+  {
+   "chapter": 2,
+   "chapter_name": "الحث الكهرومغناطيسي والذاتي",
+   "type": "فراغات",
+   "count": 0
+  },
+  {
+   "chapter": 3,
+   "chapter_name": "التيار المتناوب",
+   "type": "مصطلح",
+   "count": 0
+  },
+  {
+   "chapter": 3,
+   "chapter_name": "التيار المتناوب",
+   "type": "مقارنة",
+   "count": 0
+  },
+  {
+   "chapter": 3,
+   "chapter_name": "التيار المتناوب",
+   "type": "اختيار من متعدد",
+   "count": 0
+  },
+  {
+   "chapter": 3,
+   "chapter_name": "التيار المتناوب",
+   "type": "فراغات",
+   "count": 0
+  },
+  {
+   "chapter": 3,
+   "chapter_name": "التيار المتناوب",
+   "type": "برهان",
+   "count": 0
+  },
+  {
+   "chapter": 3,
+   "chapter_name": "التيار المتناوب",
+   "type": "مسألة معكوسة",
+   "count": 0
+  },
+  {
+   "chapter": 4,
+   "chapter_name": "الموجات الكهرومغناطيسية",
+   "type": "مقارنة",
+   "count": 0
+  },
+  {
+   "chapter": 4,
+   "chapter_name": "الموجات الكهرومغناطيسية",
+   "type": "صح وخطأ",
+   "count": 0
+  },
+  {
+   "chapter": 4,
+   "chapter_name": "الموجات الكهرومغناطيسية",
+   "type": "اختيار من متعدد",
+   "count": 0
+  },
+  {
+   "chapter": 4,
+   "chapter_name": "الموجات الكهرومغناطيسية",
+   "type": "فراغات",
+   "count": 0
+  },
+  {
+   "chapter": 4,
+   "chapter_name": "الموجات الكهرومغناطيسية",
+   "type": "برهان",
+   "count": 0
+  },
+  {
+   "chapter": 5,
+   "chapter_name": "البصريات الفيزيائية",
+   "type": "مقارنة",
+   "count": 0
+  },
+  {
+   "chapter": 5,
+   "chapter_name": "البصريات الفيزيائية",
+   "type": "اختيار من متعدد",
+   "count": 0
+  },
+  {
+   "chapter": 5,
+   "chapter_name": "البصريات الفيزيائية",
+   "type": "فراغات",
+   "count": 0
+  },
+  {
+   "chapter": 6,
+   "chapter_name": "الفيزياء الحديثة",
+   "type": "مقارنة",
+   "count": 0
+  },
+  {
+   "chapter": 6,
+   "chapter_name": "الفيزياء الحديثة",
+   "type": "صح وخطأ",
+   "count": 0
+  },
+  {
+   "chapter": 6,
+   "chapter_name": "الفيزياء الحديثة",
+   "type": "فراغات",
+   "count": 0
+  },
+  {
+   "chapter": 6,
+   "chapter_name": "الفيزياء الحديثة",
+   "type": "برهان",
+   "count": 0
+  },
+  {
+   "chapter": 7,
+   "chapter_name": "إلكترونيات الحالة الصلبة",
+   "type": "اختيار من متعدد",
+   "count": 0
+  },
+  {
+   "chapter": 7,
+   "chapter_name": "إلكترونيات الحالة الصلبة",
+   "type": "فراغات",
+   "count": 0
+  },
+  {
+   "chapter": 7,
+   "chapter_name": "إلكترونيات الحالة الصلبة",
+   "type": "برهان",
+   "count": 0
+  },
+  {
+   "chapter": 7,
+   "chapter_name": "إلكترونيات الحالة الصلبة",
+   "type": "مسألة معكوسة",
+   "count": 0
+  },
+  {
+   "chapter": 8,
+   "chapter_name": "الأطياف الذرية والليزر",
+   "type": "مصطلح",
+   "count": 0
+  },
+  {
+   "chapter": 8,
+   "chapter_name": "الأطياف الذرية والليزر",
+   "type": "صح وخطأ",
+   "count": 0
+  },
+  {
+   "chapter": 8,
+   "chapter_name": "الأطياف الذرية والليزر",
+   "type": "فراغات",
+   "count": 0
+  },
+  {
+   "chapter": 9,
+   "chapter_name": "الفيزياء النووية",
+   "type": "مقارنة",
+   "count": 0
+  },
+  {
+   "chapter": 9,
+   "chapter_name": "الفيزياء النووية",
+   "type": "صح وخطأ",
+   "count": 0
+  },
+  {
+   "chapter": 9,
+   "chapter_name": "الفيزياء النووية",
+   "type": "فراغات",
+   "count": 0
+  },
+  {
+   "chapter": 9,
+   "chapter_name": "الفيزياء النووية",
+   "type": "برهان",
+   "count": 0
+  },
+  {
+   "chapter": 1,
+   "chapter_name": "المتسعات",
+   "type": "اختيار من متعدد",
+   "count": 1
+  },
+  {
+   "chapter": 2,
+   "chapter_name": "الحث الكهرومغناطيسي والذاتي",
+   "type": "برهان",
+   "count": 1
+  },
+  {
+   "chapter": 2,
+   "chapter_name": "الحث الكهرومغناطيسي والذاتي",
+   "type": "مسألة معكوسة",
+   "count": 1
+  },
+  {
+   "chapter": 6,
+   "chapter_name": "الفيزياء الحديثة",
+   "type": "اختيار من متعدد",
+   "count": 1
+  },
+  {
+   "chapter": 8,
+   "chapter_name": "الأطياف الذرية والليزر",
+   "type": "اختيار من متعدد",
+   "count": 1
+  },
+  {
+   "chapter": 8,
+   "chapter_name": "الأطياف الذرية والليزر",
+   "type": "مسألة معكوسة",
+   "count": 1
+  },
+  {
+   "chapter": 1,
+   "chapter_name": "المتسعات",
+   "type": "مسألة معكوسة",
+   "count": 2
+  },
+  {
+   "chapter": 4,
+   "chapter_name": "الموجات الكهرومغناطيسية",
+   "type": "مصطلح",
+   "count": 2
+  },
+  {
+   "chapter": 4,
+   "chapter_name": "الموجات الكهرومغناطيسية",
+   "type": "مسألة معكوسة",
+   "count": 2
+  },
+  {
+   "chapter": 5,
+   "chapter_name": "البصريات الفيزيائية",
+   "type": "مصطلح",
+   "count": 2
+  },
+  {
+   "chapter": 5,
+   "chapter_name": "البصريات الفيزيائية",
+   "type": "صح وخطأ",
+   "count": 2
+  },
+  {
+   "chapter": 5,
+   "chapter_name": "البصريات الفيزيائية",
+   "type": "برهان",
+   "count": 2
+  },
+  {
+   "chapter": 5,
+   "chapter_name": "البصريات الفيزيائية",
+   "type": "مسألة معكوسة",
+   "count": 2
+  },
+  {
+   "chapter": 8,
+   "chapter_name": "الأطياف الذرية والليزر",
+   "type": "برهان",
+   "count": 2
+  },
+  {
+   "chapter": 9,
+   "chapter_name": "الفيزياء النووية",
+   "type": "مصطلح",
+   "count": 2
+  },
+  {
+   "chapter": 9,
+   "chapter_name": "الفيزياء النووية",
+   "type": "اختيار من متعدد",
+   "count": 2
+  },
+  {
+   "chapter": 9,
+   "chapter_name": "الفيزياء النووية",
+   "type": "مسألة معكوسة",
+   "count": 2
+  }
+ ]
+}

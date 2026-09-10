@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "subject": "physics",
+    "grade": "ثالث_متوسط",
+    "generated_at": "2026-09-10",
+    "status": "raw_unverified",
+    "note": "بيانات خام منقولة بصرياً من صور أوراق وزارية حقيقية — غير معتمدة علمياً. ممنوع استخدامها بالمنصة قبل مراجعة أحمد سؤالاً سؤالاً.",
+    "extraction_method": "قراءة بصرية مباشرة لصورة الورقة بدقّتها الكاملة. لم يُخمَّن شيء: ما لم أجزم به تُرك null وعُلِّم needs_review.",
+    "source_caveat": "نسخة مُعاد رقنها وعليها علامة مائية باسم \"سلطان\" — احتمال خطأ رقن قائم، لذلك source_confidence = medium.",
+    "total_questions": 22,
+    "needs_review_count": 1
+  },
+  "questions": [
+    {
+      "id": "phy3-2024-r2-001", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س1-A", "question_type": "مقالي", "marks": null,
+      "question_text": "مم تتركب بطارية السيارة ؟ مع ذكر نوع مادة القطب الموجب والقطب السالب في البطارية .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "الورقة لا تذكر توزيع الدرجات على فروع هذا السؤال."
+    },
+    {
+      "id": "phy3-2024-r2-002", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س1-B-1", "question_type": "مقالي", "marks": null,
+      "question_text": "ما مميزات ربط الخلايا ( الأعمدة ) الكهربائية على التوالي ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "تعليمات الفرع: أجب عما يأتي"
+    },
+    {
+      "id": "phy3-2024-r2-003", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س1-B-2", "question_type": "مقالي", "marks": null,
+      "question_text": "علل : انجذاب قصاصات الورق الصغيرة من بالون ( نفاخة مملوءة بالهواء ) بعد دلك البالون بقطعة الصوف .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r2-004", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س2-A", "question_type": "مسألة_حسابية", "marks": null,
+      "question_text": "محولة كهربائية ربط ملفها الابتدائي مع مصدر للفولطية المتناوبة ( 220V ) ، والجهاز الكهربائي ( الحمل ) المربوط مع ملفها الثانوي يشتغل على فولطية ( 10V ) ، وكان عدد لفات ملفها الثانوي ( 20 turns ) ، فما عدد لفات ملفها الابتدائي ؟ وما نوع المحولة ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r2-005", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س2-B-1", "question_type": "مقالي", "marks": null,
+      "question_text": "ضع كلمة ( صح ) أمام العبارة الصحيحة وكلمة ( خطأ ) أمام العبارة غير الصحيحة ، ثم صحح الخطأ إن وجد دون تغيير ما تحته خط : المواد التي تنجذب بالمغناطيس القوي تجاذباً ضعيفاً مثل التيتانيوم تدعى البارامغناطيسية .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": true,
+      "notes": "موضع الكلمات التي تحتها خط غير واضح في هذه النسخة — يجب تأكيده من الأصل لأنه يحدّد الجواب."
+    },
+    {
+      "id": "phy3-2024-r2-006", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س2-B-2", "question_type": "مقالي", "marks": null,
+      "question_text": "ضع كلمة ( صح ) أمام العبارة الصحيحة وكلمة ( خطأ ) أمام العبارة غير الصحيحة ، ثم صحح الخطأ إن وجد دون تغيير ما تحته خط : مقاومة الموصل ( R ) تتناسب عكسياً مع مساحة مقطعه العرضي ( A ) بثبوت العوامل الأخرى .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r2-007", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س2-B-3", "question_type": "مقالي", "marks": null,
+      "question_text": "ضع كلمة ( صح ) أمام العبارة الصحيحة وكلمة ( خطأ ) أمام العبارة غير الصحيحة ، ثم صحح الخطأ إن وجد دون تغيير ما تحته خط : يمكن تحويل مولد التيار المتناوب إلى مولد للتيار المستمر وذلك برفع حلقتي الزلق منه وربط طرفي الملف بسلك غليظ .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r2-008", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س3-A", "question_type": "مسألة_حسابية", "marks": null,
+      "question_text": "مكواة كهربائية تعمل على فرق جهد ( 220V ) وينساب فيها تيار مقداره ( 5A ) ، احسب : (1) قدرة المكواة . (2) الطاقة الكهربائية المستثمرة ( المستهلكة ) خلال زمن ( 30s ) .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r2-009", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س3-B-1", "question_type": "مقالي", "marks": null,
+      "question_text": "املأ الفراغ بما يناسبه : المجال الكهربائي يمثل بالرسم بخطوط قوى تبدأ من الشحنة ............... وتنتهي بالشحنة ............... .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "تعليمات الفرع: املأ الفراغات الآتية بما يناسبها"
+    },
+    {
+      "id": "phy3-2024-r2-010", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س3-B-2", "question_type": "مقالي", "marks": null,
+      "question_text": "املأ الفراغ بما يناسبه : الخلية الكلفانية تتكون من نصفي خليتين يغمر في كل واحد منها لوح معدني أحدهما من ............... والآخر من ............... .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r2-011", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س3-B-3", "question_type": "مقالي", "marks": null,
+      "question_text": "املأ الفراغ بما يناسبه : المغانط الدائمة تصنع من مادة ............... .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r2-012", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س4-A", "question_type": "مسألة_حسابية", "marks": null,
+      "question_text": "في الشكل المجاور ربطت المقاومتان R₁ = 6Ω ، R₂ = 12Ω على التوازي ، وربطت المجموعة مع مصدر فرق جهد فانساب تيار في الدائرة مقداره ( 9A ) ، احسب : (1) المقاومة المكافئة . (2) فرق الجهد الكلي للمصدر .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "السؤال يشير إلى شكل مرفق (مقاومتان على التوازي مع مصدر) — الشكل غير منقول هنا."
+    },
+    {
+      "id": "phy3-2024-r2-013", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س4-B-1", "question_type": "مقالي", "marks": null,
+      "question_text": "هل تنفرج ورقتي الكشاف الكهربائي عند تقريب جسم مشحون بشحنة سالبة من قرص الكشاف إذا كان القرص متصل بالأرض ؟ ولماذا ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "تعليمات الفرع: أجب عن ( اثنين ) مما يأتي"
+    },
+    {
+      "id": "phy3-2024-r2-014", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س4-B-2", "question_type": "مقالي", "marks": null,
+      "question_text": "وضح كيف يعمل الهاتف ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r2-015", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س4-B-3", "question_type": "مقالي", "marks": null,
+      "question_text": "عرف الأقطاب المغناطيسية ، وهل يمكن أن نحصل على قطب منفرد عند تقطيع المغناطيس ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r2-016", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س5-A", "question_type": "مقالي", "marks": null,
+      "question_text": "وضح بنشاط ( تخطيط المجال المغناطيسي لتيار مستمر ينساب في سلك مستقيم ) .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r2-017", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س5-B-1", "question_type": "مقالي", "marks": null,
+      "question_text": "عدد فقط أنواع الخسائر في المحولة الكهربائية .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "تعليمات الفرع: أجب عن ( واحد ) مما يأتي"
+    },
+    {
+      "id": "phy3-2024-r2-018", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س5-B-2", "question_type": "مقالي", "marks": null,
+      "question_text": "اذكر استعمالين فقط للأقمار الصناعية .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r2-019", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س6-A", "question_type": "مسألة_حسابية", "marks": null,
+      "question_text": "وضعت شحنة كهربائية نقطية موجبة مقدارها ( 4 × 10⁻⁶ C ) على بعد ( 0.03m ) من شحنة كهربائية نقطية أخرى موجبة مقدارها ( 5 × 10⁻⁶ C ) ، احسب مقدار القوة التي تؤثر بها الشحنة الأولى على الشحنة الثانية ، وما نوعها ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r2-020", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س6-B-1", "question_type": "اختيار_من_متعدد", "marks": null,
+      "question_text": "التيار المحتث في الدائرة الكهربائية المقفلة ينشأ من تحرك المغناطيس أو الملف مسبباً تغيراً في :",
+      "options": ["خطوط المجال الكهربائي", "خطوط المجال المغناطيسي", "فرق الجهد الكهربائي"],
+      "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "تعليمات الفرع: اختر الإجابة الصحيحة من بين الأقواس ( لاثنين ) فقط"
+    },
+    {
+      "id": "phy3-2024-r2-021", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س6-B-2", "question_type": "اختيار_من_متعدد", "marks": null,
+      "question_text": "جهاز يقوم بقطع التيار الكهربائي تلقائياً في حالة انسياب تيار أكبر من التيار المصمم لها يدعى :",
+      "options": ["قاطع الدورة", "القابس", "السلك المؤرض"],
+      "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r2-022", "grade": "ثالث_متوسط", "year": 2024, "round": 2, "track": "موحد",
+      "question_number": "س6-B-3", "question_type": "اختيار_من_متعدد", "marks": null,
+      "question_text": "تستعمل الموجات السماوية للاتصالات :",
+      "options": ["بعيدة المدى", "قصيرة المدى", "متوسطة المدى"],
+      "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_45_09-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    }
+  ]
+}

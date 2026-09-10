@@ -1,0 +1,221 @@
+{
+  "metadata": {
+    "subject": "physics",
+    "grade": "ثالث_متوسط",
+    "generated_at": "2026-09-10",
+    "status": "raw_unverified",
+    "note": "بيانات خام منقولة بصرياً من صور أوراق وزارية حقيقية — غير معتمدة علمياً. ممنوع استخدامها بالمنصة قبل مراجعة أحمد سؤالاً سؤالاً.",
+    "extraction_method": "قراءة بصرية مباشرة لصورة الورقة بدقّتها الكاملة. لم يُخمَّن شيء: ما لم أجزم به تُرك null وعُلِّم needs_review.",
+    "source_caveat": "نسخة هذه الورقة مُعاد رقنها (لا مسح ضوئي للأصل) وعليها علامة مائية باسم \"سلطان\". الصياغة مقروءة وواضحة، لكن احتمال خطأ رقن من الناسخ قائم — لذلك source_confidence = medium لكل الأسئلة.",
+    "total_questions": 22,
+    "needs_review_count": 0
+  },
+  "questions": [
+    {
+      "id": "phy3-2024-r1-001", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س1-A", "question_type": "مسألة_حسابية", "marks": 10,
+      "question_text": "شحنتان كهربائيتان متماثلتان ، مقدار كل منهما ( 3 × 10⁻⁹ C ) ، وقوة التنافر بينهما تساوي ( 0.1 × 10⁻⁴ N ) ، احسب البعد بين الشحنتين علماً أن ثابت كولوم يساوي .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "قيمة ثابت كولوم لم تُذكر رقماً في الورقة — انتهى السطر عند \"يساوي\"."
+    },
+    {
+      "id": "phy3-2024-r1-002", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س1-B-1", "question_type": "مقالي", "marks": 5,
+      "question_text": "علل : يُصنع قلب المحولة الكهربائية بشكل صفائح من الحديد المطاوع رقيقة ومعزولة عن بعضها كهربائياً ومكبوسة كبساً شديداً .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "تعليمات الفرع: علل ( واحد ) مما يأتي"
+    },
+    {
+      "id": "phy3-2024-r1-003", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س1-B-2", "question_type": "مقالي", "marks": 5,
+      "question_text": "علل : يفضل ربط المصابيح والأجهزة الكهربائية في الدائرة الكهربائية في المنازل على التوازي .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-004", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س1-C", "question_type": "مقالي", "marks": 5,
+      "question_text": "ماذا يحدث عند وضع مسمار من الحديد بالقرب من مغناطيس قوي من غير حدوث تماس بين مسمار الحديد والمغناطيس ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-005", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س2-A", "question_type": "مسألة_حسابية", "marks": 10,
+      "question_text": "المقاومتان R₁ = 60Ω ، R₂ = 90Ω مربوطتان مع بعضهما على التوازي ، وربطت المجموعة عبر مصدر فرق جهد 36V ، احسب : (1) التيار المنساب في كل مقاومة . (2) القدرة المستهلكة في كل مقاومة .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-006", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س2-B", "question_type": "مقالي", "marks": 4,
+      "question_text": "ما الغرض من استخدام الكشاف الكهربائي ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-007", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س2-C-1", "question_type": "اختيار_من_متعدد", "marks": 3,
+      "question_text": "المغانط الدائمة تصنع عادة من مادة :",
+      "options": ["الألمنيوم", "الحديد المطاوع", "الفولاذ"],
+      "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "تعليمات الفرع: اختر الإجابة الصحيحة من بين الأقواس ( لاثنتين ) مما يأتي — مجموع الفرع 6 درجات"
+    },
+    {
+      "id": "phy3-2024-r1-008", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س2-C-2", "question_type": "اختيار_من_متعدد", "marks": 3,
+      "question_text": "عند ربط ثلاثة أعمدة ( خلايا كهربائية ) على التوازي مقدار emf لكل منها 1.5V ، فإن الفولطية :",
+      "options": ["1.5V", "3V", "4.5V"],
+      "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-009", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س2-C-3", "question_type": "اختيار_من_متعدد", "marks": 3,
+      "question_text": "الغاية من الأقمار الصناعية العلمية :",
+      "options": ["تصوير المواقع الأرضية", "مراقبة المواقع الأرضية", "مراقبة الطقس والأنواء الجوية لأغراض الاتصالات"],
+      "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-010", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س3-A", "question_type": "مسألة_حسابية", "marks": 10,
+      "question_text": "إذا كانت القدرة الداخلة في الملف الابتدائي لمحولة كهربائية 200W ، وخسائر القدرة فيها 10W ، جد كفاءة المحولة .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-011", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س3-B-1", "question_type": "مقالي", "marks": 10,
+      "question_text": "مم يتركب المولد الكهربائي للتيار المتناوب ؟ وكيف يتولد التيار الكهربائي فيه ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "تعليمات الفرع: أجب عن ( واحد ) فقط"
+    },
+    {
+      "id": "phy3-2024-r1-012", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س3-B-2", "question_type": "مقالي", "marks": 10,
+      "question_text": "مم تتكون الخلية الكلفانية ؟ وماذا يحصل داخل الخلية ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-013", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س4-A", "question_type": "مقالي", "marks": 12,
+      "question_text": "وضح بنشاط توليد تيار محتث في ملف .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-014", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س4-B-1", "question_type": "مقالي", "marks": 4,
+      "question_text": "أكمل بما يناسبها : عند تحديد المجال المغناطيسي حول سلك مستقيم ينساب فيه تيار مستمر حسب قاعدة الكف اليمنى يشير الإبهام إلى اتجاه ............... واتجاه لفة الأصابع حول السلك تمثل ............... .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false,
+      "notes": "تعليمات الفرع: أكمل ( اثنتين ) من العبارات الآتية بما يناسبها — مجموع الفرع 8 درجات"
+    },
+    {
+      "id": "phy3-2024-r1-015", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س4-B-2", "question_type": "مقالي", "marks": 4,
+      "question_text": "أكمل بما يناسبها : هنالك نوعان من المقاومات هي ............... و ............... .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-016", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س4-B-3", "question_type": "مقالي", "marks": 4,
+      "question_text": "أكمل بما يناسبها : البطارية الكهربائية التي لا يمكن إعادة شحنها أثناء عملها تدعى بطارية ............... والبطارية التي يمكن إعادة شحنها تدعى ............... .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-017", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س5-A", "question_type": "مسألة_حسابية", "marks": 6,
+      "question_text": "انسابت كمية من الشحنات الكهربائية q ومقدارها 10 C خلال بطارية ، فاكتسبت طاقة مقدارها 40J ، احسب مقدار القوة الدافعة الكهربائية ( emf ) ( أي الطاقة التي يكتسبها الكولوم الواحد ) .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-018", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س5-B", "question_type": "مقالي", "marks": 6,
+      "question_text": "وضح كيف يمكننا أن نحصل على المغانط الدائمة بطريقة الدلك ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-019", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س5-C", "question_type": "مقالي", "marks": 8,
+      "question_text": "عدد فقط العوامل التي يتوقف عليها مقدار مقاومة الموصل .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-020", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س6-A", "question_type": "مسألة_حسابية", "marks": 10,
+      "question_text": "استعملت غسالة كهربائية لمدة ( 90 minutes ) ، وكانت الغسالة تستهلك قدرة 500W ، وثمن الوحدة الواحدة 100 Dinar/kw-h ، فما الثمن الواجب دفعه ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-021", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س6-B", "question_type": "مقالي", "marks": 4,
+      "question_text": "عرف ما يأتي : ( القوة الدافعة الكهربائية ، الموجات الأرضية ) .",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2024-r1-022", "grade": "ثالث_متوسط", "year": 2024, "round": 1, "track": "موحد",
+      "question_number": "س6-C", "question_type": "مقالي", "marks": 6,
+      "question_text": "بعد سيرك على سجادة من الصوف ولامست جسماً معدنياً ( مثل مقبض الباب ) . غالباً ما تصاب بصعقة كهربائية خفيفة ، لماذا ؟",
+      "options": null, "answer": null,
+      "source_url": "https://iraqedu.net/wp-content/uploads/2025/03/2025_03_31_16_44_40-scaled.jpg",
+      "source_type": "image", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    }
+  ]
+}

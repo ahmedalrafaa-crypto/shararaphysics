@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "subject": "physics",
+    "grade": "ثالث_متوسط",
+    "generated_at": "2026-09-10",
+    "status": "raw_unverified",
+    "note": "بيانات خام — غير معتمدة علمياً. ممنوع استخدامها بالمنصة قبل مراجعة أحمد سؤالاً سؤالاً.",
+    "extraction_method": "نقل حرفي لنصّ الورقة كما كتبه الأستاذ أحمد رافع في رسالته (أول رسائل محادثة 10 أيلول 2026) — لا قراءة بصرية.",
+    "source_caveat": "مصدر هذه الورقة نصّ كتبه أحمد من ورقة الامتحان الفعلية، لا صورة. لذلك source_confidence = medium حتى تُرفق صورة الورقة الأصلية للمطابقة. ترقيم الفروع (أ/ب) كما ورد في النص.",
+    "total_questions": 23,
+    "needs_review_count": 0
+  },
+  "questions": [
+    {
+      "id": "phy3-2026-r2-001", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س1-أ", "question_type": "مسألة_حسابية", "marks": 10,
+      "question_text": "شحنتان كهربائيتان نقطيتان موجبتان متماثلتان مقدار كل منهما (3×10⁻⁹ C)، والبعد بينهما (5 cm). احسب مقدار قوة التنافر بينهما. علماً أنّ: K = 9×10⁹ N·m²/C²",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-002", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س1-ب", "question_type": "مقالي", "marks": 10,
+      "question_text": "عرّف (اثنين) مما يأتي: الأقطاب المغناطيسية، السلك المؤرض، المقاومة الكهربائية.",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": "5+5 درجات"
+    },
+    {
+      "id": "phy3-2026-r2-003", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س2-أ", "question_type": "مسألة_حسابية", "marks": 10,
+      "question_text": "سخّان كهربائي يستهلك قدرة (2000 W)، شُغّل لمدة ست ساعات (6 hours)، إذا علمت أنّ ثمن (Kw-h) الواحد (100) دينار، ما كلفة الطاقة المستهلكة؟",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-004", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س2-ب-1", "question_type": "مقالي", "marks": 5,
+      "question_text": "علّل: عدم سحب تيار عالٍ من بطارية السيارة لفترة زمنية طويلة نسبياً.",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": "تعليمات الفرع: علّل (اثنين)"
+    },
+    {
+      "id": "phy3-2026-r2-005", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س2-ب-2", "question_type": "مقالي", "marks": 5,
+      "question_text": "علّل: في كثير من الأحيان تكون المغانط ملائمة للاستعمال في أبواب خزانات الملابس والثلاجة والكهربائية.",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-006", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س2-ب-3", "question_type": "مقالي", "marks": 5,
+      "question_text": "علّل: إذا مسكت بيدك ساق من النحاس ودلكتها بقطعة من الصوف أو الفرو وقربتها من قصاصات صغيرة من الورق نلاحظ عدم انجذاب تلك القصاصات إليها.",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-007", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س3-أ", "question_type": "مقالي", "marks": 10,
+      "question_text": "وضّح بنشاط كيفية توليد تيار كهربائي باستعمال مجال مغناطيسي.",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-008", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س3-ب-1", "question_type": "مقالي", "marks": 5,
+      "question_text": "قارن بين الأميتر والفولتميتر من حيث الاستخدام في القياس والربط في الدائرة.",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": "تعليمات الفرع: قارن بين (اثنين فقط)"
+    },
+    {
+      "id": "phy3-2026-r2-009", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س3-ب-2", "question_type": "مقالي", "marks": 5,
+      "question_text": "قارن بين المواد الدايامغناطيسية والمواد البارامغناطيسية.",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-010", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س3-ب-3", "question_type": "مقالي", "marks": 5,
+      "question_text": "قارن بين الطاقة المتجددة والطاقة غير المتجددة.",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-011", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س4-أ", "question_type": "مسألة_حسابية", "marks": 10,
+      "question_text": "المقاومتان (R، 4Ω) ربطتا على التوالي مع بعضهما ثمّ ربطتا على طرفي مصدر فرق جهده الكهربائي (18V) فينساب تيار كهربائي مقداره (3A) في الدائرة. احسب مقدار: 1) المقاومة المجهولة. 2) فرق الجهد الكهربائي على طرفي كل مقاومة.",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-012", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س4-ب-1", "question_type": "اختيار_من_متعدد", "marks": 5,
+      "question_text": "النسبة بين فولطية الملف الثانوي وفولطية الملف الإبتدائي في المحولة الكهربائية لا يعتمد على:",
+      "options": ["نسبة عدد اللفات في الملفين", "مقاومة أسلاك الملفين", "الفولطية الخارجة من الملف الإبتدائي", "الفولطية الخارجة من الملف الثانوي"],
+      "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": "تعليمات الفرع: اختر الجواب الصحيح (لاثنتين فقط)"
+    },
+    {
+      "id": "phy3-2026-r2-013", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س4-ب-2", "question_type": "اختيار_من_متعدد", "marks": 5,
+      "question_text": "الوقود المستعمل في المفاعلات النووية هو:",
+      "options": ["الكادميوم", "الراديوم", "الثوريوم", "اليورانيوم"],
+      "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-014", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س4-ب-3", "question_type": "اختيار_من_متعدد", "marks": 5,
+      "question_text": "في بطارية (أيون – الليثيوم) تعمل شريحة العازل بين قطبيها على:",
+      "options": ["السماح للأيونات المرور من خلالها", "السماح للمحلول الإلكتروليتي للمرور من خلالها", "السماح للأيونات والمحلول الإلكتروليتي المرور من خلالها", "لا تسمح للأيونات والمحلول الإلكتروليتي المرور من خلالها"],
+      "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-015", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س5-1", "question_type": "مقالي", "marks": 5,
+      "question_text": "ممّ يتألف الكشاف الكهربائي؟",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": "تعليمات السؤال: أجب عن (أربعة) مما يأتي"
+    },
+    {
+      "id": "phy3-2026-r2-016", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س5-2", "question_type": "مقالي", "marks": 5,
+      "question_text": "هل يمكن تحويل مولد التيار المتناوب إلى مولد التيار المستمر؟ وضّح ذلك.",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-017", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س5-3", "question_type": "مقالي", "marks": 5,
+      "question_text": "اشرح خسارة التيارات الدوامة في المحولة الكهربائية، واذكر طريقة تقليلها.",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-018", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س5-4", "question_type": "مقالي", "marks": 5,
+      "question_text": "ممّ يتألف الجرس الكهربائي؟",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-019", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س5-5", "question_type": "مسألة_حسابية", "marks": 5,
+      "question_text": "إنسياب كمية من الشحنات الكهربائية (q) مقدارها (10 C) خلال بطارية فاكتسبت طاقة (w) مقدارها (30 J)، احسب مقدار القوة الدافعة الكهربائية (emf) لهذه البطارية (أي الطاقة التي تكسبها الكولوم الواحد).",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-020", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س6-أ", "question_type": "مسألة_حسابية", "marks": 10,
+      "question_text": "محوّلة كهربائية كفاءتها (80%) والقدرة الخارجة منها (4.8 Kw)، ما مقدار القدرة الداخلة في المحوّلة؟",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-021", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س6-ب-1", "question_type": "مقالي", "marks": null,
+      "question_text": "إملأ الفراغ: يمكن أن نحصل على المغانط الدائمية والمغانط المؤقتة بطريقتين هما ............ و ............ .",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": "تعليمات الفرع: إملأ الفراغات الآتية بما يناسبها — 5+5 درجات"
+    },
+    {
+      "id": "phy3-2026-r2-022", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س6-ب-2", "question_type": "مقالي", "marks": null,
+      "question_text": "إملأ الفراغ: يُنتج الوقود الحيوي السائل بنوعين هما ............ و ............ .",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    },
+    {
+      "id": "phy3-2026-r2-023", "grade": "ثالث_متوسط", "year": 2026, "round": 2, "track": "موحد",
+      "question_number": "س6-ب-3", "question_type": "مقالي", "marks": null,
+      "question_text": "إملأ الفراغ: الفاصم يجب أن يُربط على ............ مع السلك الحي.",
+      "options": null, "answer": null, "source_url": null,
+      "source_type": "user_provided_text", "source_confidence": "medium",
+      "duplicate_sources": [], "needs_review": false, "notes": ""
+    }
+  ]
+}
