@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الدرس 3: العازل الكهربائي — السادس العلمي</title>
+<meta name="description" content="الدرس 3: العازل الكهربائي — درس ضمن الفصل الأول: المتسعات، فيزياء السادس العلمي: شرح مبسط وأمثلة محلولة خطوة بخطوة | شرارة">
+<link rel="canonical" href="https://shararaphysics.netlify.app/chapters/g6c1/lesson3">
+<meta property="og:type" content="website">
+<meta property="og:title" content="الدرس 3: العازل الكهربائي — السادس العلمي">
+<meta property="og:description" content="الدرس 3: العازل الكهربائي — درس ضمن الفصل الأول: المتسعات، فيزياء السادس العلمي: شرح مبسط وأمثلة محلولة خطوة بخطوة | شرارة">
+<meta property="og:image" content="https://shararaphysics.netlify.app/assets/og-image.png">
+<meta property="og:url" content="https://shararaphysics.netlify.app/chapters/g6c1/lesson3">
+<meta property="og:locale" content="ar_IQ">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="../../assets/logo-ar.png">
@@ -41,6 +50,13 @@
     <b class="term">العازل الكهربائي (Dielectric):</b> مادة لا تحتوي على شحنات حرة تتحرك خلالها، تُوضع بين صفيحتي المتسعة. عند تعريضها للمجال الكهربائي <b>تستقطب</b> جزيئاتها: يظهر طرف موجب وآخر سالب لكل جزيء، فتنتظم الجزيئات بحيث تظهر شحنات سطحية على وجهي العازل معاكسة لشحنات الصفيحتين.
   </div>
   <p>لكل مادة عازلة رقم يميّزها اسمه <b>ثابت العزل الكهربائي k</b> (أو κ): نسبة سعة المتسعة والعازل بينها إلى سعتها والفراغ بينها. للفراغ k=1، وللهواء ≈1، وللورق نحو 3.7، وللماء نحو 80. وكلّما زاد k زادت السعة.</p>
+
+  <div class="section-title"><span class="ico">🧭</span> كيف تستقطب الجزيئات فعلياً؟ نوعان</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="defbox" style="margin:0"><b class="term">عازل غير قطبي (Non-polar):</b> جزيئاته متماثلة التوزيع أصلاً ولا قطبية دائمة لها (كالزجاج وأغلب البلاستيك المستعمل بالمتسعات العملية). عند تسليط المجال فقط تنزاح سحابة الإلكترونات قليلاً عن النواة بكل جزيء، فتُستحدَث قطبية <b>مؤقتة (مستحثّة)</b> تزول فور إزالة المجال.</div>
+    <div class="defbox" style="margin:0"><b class="term">عازل قطبي (Polar):</b> جزيئاته قطبية <b>دائماً</b> حتى بغياب أي مجال (كالماء)، لكنها موجَّهة عشوائياً بفعل الحركة الحرارية فيُلغي بعضها أثر بعض. عند تسليط المجال <b>تدور</b> هذه الجزيئات لتصطفّ باتجاهه.</div>
+  </div>
+  <div class="notebox" style="margin-top:12px"><b>النتيجة واحدة بالحالتين:</b> سواء استُحثّت القطبية أم اصطفّت جزيئات قطبية أصلاً، تظهر شحنات سطحية على وجهي العازل معاكسة لشحنات الصفيحتين — وهي أساس كل ما ستقرؤه تالياً عن زيادة السعة ونقصان المجال.</div>
 
   <div class="section-title"><span class="ico">🧲</span> كيف يزيد العازل السعة؟</div>
   <div class="card">
@@ -98,6 +114,11 @@
 
   <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
   <div id="quiz3"></div>
+
+  <div class="notebox" style="margin-top:20px">
+    <b>🏠 نشاط منزلي:</b> ثبّت الدرس بـ 5 أسئلة إضافية وأنت بالبيت — اسأل أستاذك عن كلمة السر.
+    <br><a class="btn ghost small" href="lesson3-activity.html" style="margin-top:10px">ابدأ النشاط المنزلي</a>
+  </div>
 
   <div class="lesson-nav">
     <a class="btn ghost" href="lesson2.html">➡ الدرس السابق</a>
@@ -214,7 +235,10 @@ Phy.quiz("quiz3", [
     why: "الشحنات السطحية للعازل تولّد مجالاً معاكساً، فيقلّ المجال المحصّل إلى E_k = E/k." },
   { q: "ماذا يمثّل ثابت العزل الكهربائي k لمادة ما؟",
     opts: ["مقاومتها الكهربائية", "نسبة سعة المتسعة بوجود المادة إلى سعتها والفراغ بينها", "كثافتها", "جهد انهيارها"], a: 1,
-    why: "k = C_k / C₀، أي كم مرة تزيد المادة سعة المتسعة مقارنة بالفراغ." }
+    why: "k = C_k / C₀، أي كم مرة تزيد المادة سعة المتسعة مقارنة بالفراغ." },
+  { q: "ماذا يحصل؟ ولماذا؟ للمجال الكهربائي المؤثر عند إدخال عازل غير قطبي مثل الزجاج بين صفيحتي متسعة مشحونة (مفصولة عن البطارية)؟",
+    opts: ["يقلّ إلى E/k، لأن جزيئات الزجاج تستحثّ قطبية مؤقتة تولّد مجالاً معاكساً يُضعف المجال الأصلي", "يزداد k مرة، لأن الزجاج موصل جيد للكهرباء", "يبقى ثابتاً، لأن الزجاج غير قطبي فلا يتأثر بالمجال إطلاقاً", "ينعدم تماماً بمجرد إدخال أي عازل"], a: 0,
+    why: "الزجاج عازل غير قطبي: المجال يستحثّ قطبية مؤقتة بجزيئاته (لا يوجّه قطبية موجودة أصلاً كما بالعوازل القطبية)، فتظهر شحنات سطحية معاكسة تُضعف المجال المحصّل إلى E/k — نفس نتيجة أي عازل مهما كان نوعه." }
 ], { onDone: function (stars) { Phy.setLesson("g6c1", "3", { stars: stars }); } });
 </script>
 <script src="../../js/access-control.js"></script>
