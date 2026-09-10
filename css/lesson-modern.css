@@ -1,0 +1,124 @@
+/* ============================================================
+   الهوية البصرية الجديدة — نسخة صفحات الدروس/الفصول
+   ------------------------------------------------------------
+   نفس فكرة home.css بالضبط: كل قاعدة هنا مقيّدة بـ body.modern
+   فلا تؤثر على أي صفحة ما انضاف لها هذا الصنف. الفكرة: نُبقي
+   ألوان كل فصل المميزة (theme-chN / theme-g6cN عبر --violet/
+   --blue) كما هي، ونُبدّل فقط "السطح": خلفية عاجية + بطاقات
+   بيضاء + ظلال هادئة + حواف نظيفة بدل الصناديق المتدرّجة
+   الملوّنة — تماماً كما صار بالصفحة الرئيسية.
+   تجربة أولى على فصل واحد (g6c2) قبل التعميم على بقية الموقع.
+   ============================================================ */
+
+body.modern {
+  --bg: #FAF7F1;
+  --card: #FFFFFF;
+  --ink: #33302C;
+  --ink-soft: #6B6660;
+  --hairline: rgba(51, 48, 44, 0.10);
+  --radius: 20px;
+  --shadow: 0 8px 24px rgba(51, 48, 44, 0.07);
+  --shadow-lift: 0 16px 36px rgba(51, 48, 44, 0.12);
+}
+
+/* الفقاعات الضبابية بالخلفية: أخفّ بكثير كي تبقى لمسة هوية لا تُشوّش */
+body.modern::before, body.modern::after { opacity: .10; }
+
+/* ---------- 1) الشريط العلوي ---------- */
+body.modern .topbar {
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 16px; margin-bottom: 10px;
+}
+body.modern .topbar .brand { color: var(--violet-deep); }
+body.modern .topbar .brand-logo { box-shadow: 0 4px 12px rgba(51, 48, 44, .18); }
+body.modern .topbar .crumbs a { color: var(--violet-deep); }
+
+/* ---------- 2) Hero — بطاقة بيضاء بدل التدرّج الملوّن ---------- */
+body.modern .hero {
+  background: var(--card); color: var(--ink);
+  border: 1px solid var(--hairline); box-shadow: var(--shadow);
+}
+body.modern .hero::before { opacity: .07; }
+body.modern .hero h1 { color: var(--ink); }
+body.modern .hero p { opacity: 1; color: var(--ink-soft); }
+body.modern .hero .chip {
+  background: var(--violet-deep); color: #fff; backdrop-filter: none;
+}
+
+/* ---------- 3) صندوق الافتتاحية (hook) ---------- */
+body.modern .hook {
+  background: var(--card); color: var(--ink);
+  border: 1px solid var(--hairline); border-inline-start: 4px solid var(--violet);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- 4) صناديق الملاحظات والتعريف والقانون ---------- */
+body.modern .notebox {
+  background: var(--card); border: 1px solid var(--hairline);
+  border-inline-start: 4px solid var(--teal);
+  box-shadow: var(--shadow);
+}
+body.modern .defbox {
+  background: var(--card); border: 1px solid var(--hairline);
+  border-inline-start: 4px solid var(--coral);
+  box-shadow: var(--shadow);
+}
+body.modern .defbox b.term { color: var(--violet-deep); }
+body.modern .lawbox { border-radius: var(--radius); }
+
+/* ---------- 5) الأمثلة المحلولة ---------- */
+body.modern .example {
+  background: var(--card); border: 1px solid var(--hairline); box-shadow: var(--shadow);
+}
+body.modern .example .exq { background: rgba(51, 48, 44, .045); color: var(--ink); }
+body.modern .example .givens { background: rgba(255, 122, 92, .08); border-color: var(--coral); }
+body.modern .example .step { background: rgba(51, 48, 44, .03); border-inline-start-color: var(--violet); }
+
+/* ---------- 6) أكورديون "علل" ---------- */
+body.modern .qa { border: 1px solid var(--hairline); background: var(--card); box-shadow: var(--shadow); }
+body.modern .qa summary:hover { background: rgba(51, 48, 44, .04); }
+body.modern .qa[open] summary { background: rgba(51, 48, 44, .05); }
+body.modern .qa summary .tag { background: var(--violet-deep); }
+body.modern .qa .ans { background: rgba(51, 48, 44, .02); border-top: 1px solid var(--hairline); }
+body.modern .qa .ans::before { color: #1f9d6f; }
+
+/* ---------- 7) الاختبارات التفاعلية (Phy.quiz) ---------- */
+body.modern .qitem { background: var(--card); border: 1px solid var(--hairline); box-shadow: var(--shadow); }
+body.modern .qfig { background: rgba(51, 48, 44, .03); }
+body.modern .qopt { background: rgba(51, 48, 44, .03); border-color: var(--hairline); color: var(--ink); }
+body.modern .qopt:hover:not(:disabled) { border-color: var(--violet); background: rgba(15, 148, 136, .06); }
+body.modern .qopt.correct { background: rgba(31, 157, 111, .12) !important; border-color: #1f9d6f !important; }
+body.modern .qopt.wrong { background: rgba(217, 75, 75, .10) !important; border-color: #d94b4b !important; }
+body.modern .qexpl { background: rgba(56, 189, 248, .08); color: var(--ink); }
+body.modern .quiz-result { border-radius: var(--radius); box-shadow: var(--shadow-lift); }
+
+/* ---------- 8) المحاكاات والرسوم التوضيحية ---------- */
+body.modern .sim, body.modern .figbox {
+  background: var(--card); border: 1px solid var(--hairline); box-shadow: var(--shadow);
+}
+body.modern .sim canvas, body.modern .figbox svg {
+  background: rgba(51, 48, 44, .02); border-color: var(--hairline);
+}
+body.modern .sim .readout { background: rgba(51, 48, 44, .04); color: var(--ink); }
+
+/* ---------- 9) خريطة الفصل (path/node) ---------- */
+body.modern .path::before { border-inline-start: 2px solid var(--hairline); }
+body.modern .node .dot { background: var(--card); border-color: var(--hairline); }
+body.modern .node .info { background: var(--card); border: 1px solid var(--hairline); box-shadow: var(--shadow); }
+body.modern .node:hover .info { box-shadow: var(--shadow-lift); }
+
+/* ---------- 10) نماذج النشاط المنزلي (كلمة السر / الاسم) ---------- */
+body.modern .admin-field input, body.modern .admin-field select {
+  background: rgba(51, 48, 44, .03); border-color: var(--hairline); color: var(--ink);
+}
+body.modern .admin-field input:focus, body.modern .admin-field select:focus { border-color: var(--violet); }
+
+/* ---------- 11) مراجعة سريعة (review.css) ---------- */
+body.modern .review-controls { background: var(--card); border: 1px solid var(--hairline); box-shadow: var(--shadow); }
+body.modern .review-controls select { background: rgba(51, 48, 44, .03); border-color: var(--hairline); color: var(--ink); }
+body.modern .revlesson { background: var(--card); border: 1px solid var(--hairline); box-shadow: var(--shadow); }
+body.modern .revqa { background: rgba(51, 48, 44, .03); border-inline-start-color: var(--coral); }
+body.modern .revqa .revq .tag { background: var(--violet-deep); }
+
+/* ---------- 12) التذييل ---------- */
+body.modern footer.site { border-top: 1px solid var(--hairline); }

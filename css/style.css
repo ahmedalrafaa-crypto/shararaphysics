@@ -1446,3 +1446,54 @@ footer.site::before {
 .theme-g4c9 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(220, 38, 38, 0.30); }
 .theme-g4c9 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(220, 38, 38, .35); }
 .theme-g4c9 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(220, 38, 38, .45); }
+
+/* ── فقرة التوقعات الوزارية بالصفحة الرئيسية ─────────────────────────── */
+.pred-promo {
+  position: relative; overflow: hidden; border-radius: var(--radius);
+  background: linear-gradient(135deg, #22347a 0%, #6b3fa8 100%);
+  box-shadow: 0 0 0 1px rgba(107, 63, 168, .24), 0 18px 44px rgba(107, 63, 168, .22);
+  padding: 34px 26px; margin-bottom: 30px;
+  transition: transform .2s, box-shadow .2s;
+}
+.pred-promo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1px rgba(107, 63, 168, .4), 0 22px 54px rgba(107, 63, 168, .36);
+}
+.pred-promo::after {
+  content: ""; position: absolute; top: -80px; inset-inline-start: -60px;
+  width: 280px; height: 280px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.14), transparent 70%);
+  pointer-events: none;
+}
+.pred-promo-inner { position: relative; z-index: 1; text-align: center; }
+.pred-promo-badge {
+  display: inline-block; background: #0f9d58; color: #fff;
+  font-size: .74rem; font-weight: 800; padding: 3px 14px;
+  border-radius: 999px; margin-bottom: 16px;
+}
+.pred-promo-inner h3 { color: #fff; font-size: 1.3rem; font-weight: 900; margin-bottom: 8px; }
+.pred-promo-sub {
+  color: rgba(255,255,255,.92); font-weight: 600; font-size: .95rem;
+  margin: 0 auto 18px; max-width: 56ch; line-height: 1.9;
+}
+.pred-promo-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.pred-promo-pill {
+  background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28);
+  color: #fff; font-size: .8rem; font-weight: 700;
+  padding: 6px 15px; border-radius: 999px;
+}
+.pred-promo-match {
+  margin-top: 18px; background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.3); border-radius: 12px;
+  padding: 11px 16px; color: #fff; font-size: .9rem; font-weight: 700;
+}
+.pred-promo-cta { display: block; width: 100%; margin-top: 20px; }
+.pred-promo-note {
+  color: rgba(255,255,255,.8); font-size: .78rem; font-weight: 600; margin-top: 14px;
+}
+@media (min-width: 621px) {
+  .pred-promo-cta { display: inline-block; width: auto; min-width: 260px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pred-promo, .pred-promo * { transition: none !important; }
+}

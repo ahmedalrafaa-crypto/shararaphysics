@@ -9,15 +9,17 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="فيزياء أ. أحمد رافع — الثالث متوسط والسادس العلمي">
 <meta property="og:description" content="منصة فيزياء تفاعلية للأستاذ أحمد رافع لطلاب الثالث متوسط والسادس العلمي: شرح الفصول خطوة بخطوة، اختبارات بنجوم، وأدوات توقعات وزارية لكل مرحلة — توقعات الثالث المبنية على تحليل أكثر من 600 سؤال، وبنك أسئلة السادس المحلولة مع الأسئلة الوزارية الغريبة.">
-<meta property="og:image" content="https://shararaphysics.netlify.app/assets/logo-ar.png">
+<meta property="og:image" content="https://shararaphysics.netlify.app/assets/og-image.png">
 <meta property="og:url" content="https://shararaphysics.netlify.app/">
 <meta property="og:locale" content="ar_IQ">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/logo-ar.png">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
 </head>
-<body>
+<body class="home">
 <script>
 (function() {
   if (localStorage.getItem('phy3m_owner')) return;
@@ -27,76 +29,104 @@
   img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
 })();
 </script>
-<div class="wrap">
 
-  <div class="topbar">
-    <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
-    <a class="btn small green" id="hero-studyplan" href="analysis/index.html" style="margin-inline-start:auto">📊 خطة مذاكرتي</a>
-    <a class="btn small coral" id="hero-predict" href="predictions/index.html">🔮 توقعات الثالث</a>
-    <a class="btn small" href="subscribe.html">💳 الاشتراك</a>
-    <a class="btn small ghost" href="search/index.html">🔍 بحث</a>
+<nav class="home-nav" id="site-nav">
+  <div class="home-nav-inner">
+    <a class="home-nav-brand" href="index.html">
+      <img class="home-nav-logo" src="assets/logo-ar.png" alt="شعار أ. أحمد رافع">
+      <span>فيزياء أ. أحمد رافع</span>
+    </a>
+    <button type="button" class="home-nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="فتح القائمة">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="home-nav-links" id="navLinks">
+      <a href="#top">الرئيسية</a>
+      <a href="search/index.html">🔍 بحث</a>
+      <a href="#stages">المراحل</a>
+      <a href="#courses">الدورات الإلكترونية</a>
+      <a href="#tools">أدوات الطالب</a>
+      <a class="btn small" href="subscribe.html">💳 الاشتراك</a>
+    </div>
   </div>
+</nav>
 
-  <div class="gradetabs" role="tablist" aria-label="اختر المرحلة الدراسية">
-    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g1" data-grade="g1">الأول متوسط</button>
-    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g2" data-grade="g2">الثاني متوسط</button>
-    <button class="gradetab active" type="button" role="tab" aria-selected="true" aria-controls="panel-g3" data-grade="g3">الثالث المتوسط</button>
-    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g4" data-grade="g4">الرابع العلمي</button>
-    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g5" data-grade="g5">الخامس العلمي</button>
-    <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g6" data-grade="g6">السادس العلمي</button>
-  </div>
+<div class="wrap" id="top">
 
-  <div class="hero with-photo">
-    <img class="hero-photo" src="assets/teacher.jpg" alt="الأستاذ أحمد رافع" onerror="this.style.display='none'">
-    <div>
+  <div class="hero with-photo" id="hero">
+    <div class="hero-copy">
       <span class="chip" id="hero-chip">📚 الصف الثالث المتوسط — المنهج الوزاري 2027</span>
-      <h1>أهلاً بك في رحلة الفيزياء! 🚀</h1>
+      <h1>افهم <span class="accent">الفيزياء</span>، لا تحفظها فقط</h1>
       <p>ملزمة الأستاذ <b>أحمد رافع</b> صارت موقعاً تفاعلياً: تجارب ممتعة، أمثلة محلولة خطوة بخطوة، واختبارات بنجوم وجوائز.</p>
-      <a class="btn ghost hero-cta" id="hero-cta" href="chapters/ch0/index.html">ابدأ رحلتك الآن ⚡</a>
+      <div class="hero-cta-row">
+        <a class="btn coral hero-cta" id="hero-cta" href="chapters/ch0/index.html">ابدأ التعلم مجاناً</a>
+        <a class="btn ghost" href="#stages">استكشف المراحل</a>
+      </div>
+    </div>
+    <div class="hero-teacher-card">
+      <img class="hero-photo" src="assets/teacher.jpg" alt="الأستاذ أحمد رافع" onerror="this.style.display='none'">
+      <span class="hero-teacher-badge">👨‍🏫 مدرس الفيزياء</span>
+      <p class="hero-teacher-line">معك خطوة بخطوة</p>
     </div>
   </div>
 
-  <section class="courses-promo" aria-labelledby="courses-promo-title">
-    <svg class="courses-promo-bg" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-      <defs>
-        <pattern id="pcbTrace" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M0 12 H10 V28 H24 V16 H40 M24 28 V40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="10" cy="12" r="1.6" fill="currentColor"/>
-          <circle cx="10" cy="28" r="1.6" fill="currentColor"/>
-          <circle cx="24" cy="28" r="1.6" fill="currentColor"/>
-          <circle cx="24" cy="16" r="1.6" fill="currentColor"/>
-        </pattern>
-      </defs>
-      <rect width="200" height="200" fill="url(#pcbTrace)"/>
-    </svg>
-    <div class="courses-promo-inner">
-      <span class="courses-promo-badge">جديد</span>
-      <h3 id="courses-promo-title">دورات الأستاذ أحمد رافع الإلكترونية</h3>
-      <p class="courses-promo-sub">شرح مسجّل، خطوة بخطوة، تكدر ترجعله وقت ما تريد</p>
-      <div class="courses-promo-pills">
-        <span class="courses-promo-pill">شرح مسجّل</span>
-        <span class="courses-promo-pill">أسئلة وزارية محلولة</span>
-        <span class="courses-promo-pill">متابعة مع الأستاذ</span>
-      </div>
-      <button type="button" class="btn ghost courses-promo-cta" id="coursesPromoOpenBtn" aria-haspopup="dialog" aria-controls="coursesPromoDialog">ابدأ الدورة الآن</button>
+  <div class="features-bar">
+    <div class="feature-item"><span class="fi-ico">🎓</span><b>مراحل دراسية متعددة</b><p>من الأول متوسط إلى السادس العلمي</p></div>
+    <div class="feature-item"><span class="fi-ico">📖</span><b>شرح خطوة بخطوة</b><p>أمثلة محلولة بالتفصيل</p></div>
+    <div class="feature-item"><span class="fi-ico">🧩</span><b>اختبارات تفاعلية</b><p>بنجوم ونتائج فورية</p></div>
+    <div class="feature-item"><span class="fi-ico">📊</span><b>متابعة تقدمك</b><p>نسبة إنجاز كل فصل تلقائياً</p></div>
+  </div>
+
+  <section id="stages">
+    <div class="section-title"><span class="ico">🧭</span> اختر طريقك في الفيزياء</div>
+    <div class="gradetabs" role="tablist" aria-label="اختر المرحلة الدراسية">
+      <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g1" data-grade="g1">
+        <span class="stage-name">الأول متوسط</span><span class="stage-badge">مجاني</span>
+      </button>
+      <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g2" data-grade="g2">
+        <span class="stage-name">الثاني متوسط</span><span class="stage-badge">مجاني</span>
+      </button>
+      <button class="gradetab active" type="button" role="tab" aria-selected="true" aria-controls="panel-g3" data-grade="g3">
+        <span class="stage-name">الثالث المتوسط</span><span class="stage-badge stage-badge--curriculum">المنهج الوزاري</span>
+      </button>
+      <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g4" data-grade="g4">
+        <span class="stage-name">الرابع العلمي</span><span class="stage-badge">مجاني</span>
+      </button>
+      <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g5" data-grade="g5">
+        <span class="stage-name">الخامس العلمي</span><span class="stage-badge">مجاني</span>
+      </button>
+      <button class="gradetab" type="button" role="tab" aria-selected="false" aria-controls="panel-g6" data-grade="g6">
+        <span class="stage-name">السادس العلمي</span><span class="stage-badge stage-badge--curriculum">المنهج الوزاري</span>
+      </button>
     </div>
   </section>
 
-  <section class="courses-promo mockexam-promo" aria-labelledby="mockexam-promo-title">
-    <div class="courses-promo-inner">
-      <span class="courses-promo-badge">🎯 جديد</span>
-      <h3 id="mockexam-promo-title">محاكي الامتحان الوزاري</h3>
-      <p class="courses-promo-sub">تجربة مجانية سريعة: ١٥ سؤالاً عشوائياً بمؤقّت حقيقي — تماماً متل قاعة الامتحان</p>
-      <div class="courses-promo-pills">
-        <span class="courses-promo-pill">⏱ مؤقّت حقيقي</span>
-        <span class="courses-promo-pill">🎲 أسئلة عشوائية</span>
-        <span class="courses-promo-pill">✅ تصحيح فوري</span>
+  <section id="courses">
+    <div class="section-title"><span class="ico">📝</span> الدورات الإلكترونية</div>
+    <section class="courses-promo" aria-labelledby="courses-promo-title">
+      <svg class="courses-promo-bg" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+        <defs>
+          <pattern id="pcbTrace" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M0 12 H10 V28 H24 V16 H40 M24 28 V40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="12" r="1.6" fill="currentColor"/>
+            <circle cx="10" cy="28" r="1.6" fill="currentColor"/>
+            <circle cx="24" cy="28" r="1.6" fill="currentColor"/>
+            <circle cx="24" cy="16" r="1.6" fill="currentColor"/>
+          </pattern>
+        </defs>
+        <rect width="200" height="200" fill="url(#pcbTrace)"/>
+      </svg>
+      <div class="courses-promo-inner">
+        <span class="courses-promo-badge">جديد</span>
+        <h3 id="courses-promo-title">دورات الأستاذ أحمد رافع الإلكترونية</h3>
+        <p class="courses-promo-sub">شرح مكتوب بالتفصيل، خطوة بخطوة، ترجعله وقت ما تريد</p>
+        <div class="courses-promo-pills">
+          <span class="courses-promo-pill">شرح مكتوب مفصّل</span>
+          <span class="courses-promo-pill">أسئلة وزارية محلولة</span>
+          <span class="courses-promo-pill">متابعة مع الأستاذ</span>
+        </div>
+        <button type="button" class="btn ghost courses-promo-cta" id="coursesPromoOpenBtn" aria-haspopup="dialog" aria-controls="coursesPromoDialog">ابدأ الدورة الآن</button>
       </div>
-      <div class="mockexam-cta-row">
-        <a class="btn ghost" href="mock-exam-g3/index.html">الثالث متوسط 🚀</a>
-        <a class="btn ghost" href="mock-exam-g6/index.html">السادس العلمي 🚀</a>
-      </div>
-    </div>
+    </section>
   </section>
 
   <dialog class="courses-promo-dialog" id="coursesPromoDialog" aria-labelledby="courses-promo-dialog-title">
@@ -126,6 +156,8 @@
     </form>
   </dialog>
 
+  <section id="chapters">
+
   <div class="gradepanel" id="panel-g3" role="tabpanel">
 
   <div class="section-title"><span class="ico">🗺️</span> خريطة الفصول</div>
@@ -137,7 +169,7 @@
       <h3>أساسيات الرياضيات</h3>
       <p>التدوين العلمي، ضرب وقسمة القوى، الجذور، إيجاد المجهول، وتحويل الوحدات — سلاحك لحل المسائل</p>
       <div class="pbar"><div id="p-ch0" style="width:0%"></div></div>
-      <p style="margin-top:6px"><b id="t-ch0">0%</b> مكتمل</p>
+      <p style="margin-top:6px"><b id="t-ch0">0%</b> مكتمل · <span class="chcard-cta">تابع الدرس ←</span></p>
     </a>
     <a class="chcard" href="chapters/ch1/index.html" data-ch="1">
       <span class="em chico">⚡</span>
@@ -145,7 +177,7 @@
       <h3>الكهربائية الساكنة</h3>
       <p>الشحنات، طرائق الشحن، الكشاف، قانون كولوم والمجال الكهربائي</p>
       <div class="pbar"><div id="p-ch1" style="width:0%"></div></div>
-      <p style="margin-top:6px"><b id="t-ch1">0%</b> مكتمل</p>
+      <p style="margin-top:6px"><b id="t-ch1">0%</b> مكتمل · <span class="chcard-cta">تابع الدرس ←</span></p>
     </a>
     <a class="chcard" href="chapters/ch2/index.html" data-ch="2">
       <span class="em chico">🧲</span>
@@ -153,7 +185,7 @@
       <h3>المغناطيس</h3>
       <p>المواد المغناطيسية، الأقطاب، المجال المغناطيسي ونفاذه، وتمغنط المواد</p>
       <div class="pbar"><div id="p-ch2" style="width:0%"></div></div>
-      <p style="margin-top:6px"><b id="t-ch2">0%</b> مكتمل</p>
+      <p style="margin-top:6px"><b id="t-ch2">0%</b> مكتمل · <span class="chcard-cta">تابع الدرس ←</span></p>
     </a>
     <a class="chcard" href="chapters/ch3/index.html" data-ch="3" data-req-stage="g3">
       <span class="em chico">🔌</span>
@@ -161,7 +193,7 @@
       <h3>التيار الكهربائي</h3>
       <p>التيار والأمبير، الدائرة الكهربائية، فرق الجهد، قانون أوم وربط المقاومات</p>
       <div class="pbar"><div id="p-ch3" style="width:0%"></div></div>
-      <p style="margin-top:6px"><b id="t-ch3">0%</b> مكتمل</p>
+      <p style="margin-top:6px"><b id="t-ch3">0%</b> مكتمل · <span class="chcard-cta">تابع الدرس ←</span></p>
     </a>
     <a class="chcard" href="chapters/ch4/index.html" data-ch="4" data-req-stage="g3">
       <span class="em chico">🔋</span>
@@ -169,7 +201,7 @@
       <h3>البطارية والقوة الدافعة الكهربائية</h3>
       <p>أنواع البطاريات: خلية دانيال والجافة وبطارية السيارة والليثيوم والوقود + القوة الدافعة الكهربائية</p>
       <div class="pbar"><div id="p-ch4" style="width:0%"></div></div>
-      <p style="margin-top:6px"><b id="t-ch4">0%</b> مكتمل</p>
+      <p style="margin-top:6px"><b id="t-ch4">0%</b> مكتمل · <span class="chcard-cta">تابع الدرس ←</span></p>
     </a>
     <a class="chcard" href="chapters/ch5/index.html" data-ch="5" data-req-stage="g3">
       <span class="em chico">💡</span>
@@ -177,7 +209,7 @@
       <h3>الطاقة والقدرة الكهربائية</h3>
       <p>القدرة وقوانينها الثلاثة، الطاقة وكلفتها بالدينار، الكهرباء في بيوتنا والفاصم وقاطع الدورة والتأريض</p>
       <div class="pbar"><div id="p-ch5" style="width:0%"></div></div>
-      <p style="margin-top:6px"><b id="t-ch5">0%</b> مكتمل</p>
+      <p style="margin-top:6px"><b id="t-ch5">0%</b> مكتمل · <span class="chcard-cta">تابع الدرس ←</span></p>
     </a>
     <a class="chcard" href="chapters/ch6/index.html" data-ch="6" data-req-stage="g3">
       <span class="em chico">🌀</span>
@@ -185,7 +217,7 @@
       <h3>الكهربائية والمغناطيسية</h3>
       <p>تجربة أورستد والمجال المغناطيسي للتيار والمغناطيس الكهربائي والحث والمولدات والمحرك</p>
       <div class="pbar"><div id="p-ch6" style="width:0%"></div></div>
-      <p style="margin-top:6px"><b id="t-ch6">0%</b> مكتمل</p>
+      <p style="margin-top:6px"><b id="t-ch6">0%</b> مكتمل · <span class="chcard-cta">تابع الدرس ←</span></p>
     </a>
     <a class="chcard" href="chapters/ch7/index.html" data-ch="7" data-req-stage="g3">
       <span class="em chico">🔌</span>
@@ -193,7 +225,7 @@
       <h3>المحولة الكهربائية</h3>
       <p>التيار المحتث والحث المتبادل، قانون المحولة ونسبة التحويل، القدرة والكفاءة، الخسائر ونقل الطاقة لمسافات بعيدة</p>
       <div class="pbar"><div id="p-ch7" style="width:0%"></div></div>
-      <p style="margin-top:6px"><b id="t-ch7">0%</b> مكتمل</p>
+      <p style="margin-top:6px"><b id="t-ch7">0%</b> مكتمل · <span class="chcard-cta">تابع الدرس ←</span></p>
     </a>
     <a class="chcard" href="chapters/ch8/index.html" data-ch="8" data-req-stage="g3">
       <span class="em chico">🔆</span>
@@ -201,7 +233,7 @@
       <h3>تكنولوجيا مصادر الطاقة</h3>
       <p>مصادر الطاقة الحالية (الأحفورية والمائية والنووية) والمتجددة (الشمسية والرياح والوقود الحيوي والمد والجزر)</p>
       <div class="pbar"><div id="p-ch8" style="width:0%"></div></div>
-      <p style="margin-top:6px"><b id="t-ch8">0%</b> مكتمل</p>
+      <p style="margin-top:6px"><b id="t-ch8">0%</b> مكتمل · <span class="chcard-cta">تابع الدرس ←</span></p>
     </a>
     <a class="chcard" href="chapters/ch9/index.html" data-ch="9" data-req-stage="g3">
       <span class="em chico">🛰️</span>
@@ -209,27 +241,9 @@
       <h3>فيزياء الجو وتقنية الاتصالات الحديثة</h3>
       <p>طبقات الغلاف الجوي الخمس، طبقة الأوزون والاحتباس الحراري، انتشار الموجات اللاسلكية، الهاتف النقال والأقمار الصناعية</p>
       <div class="pbar"><div id="p-ch9" style="width:0%"></div></div>
-      <p style="margin-top:6px"><b id="t-ch9">0%</b> مكتمل</p>
+      <p style="margin-top:6px"><b id="t-ch9">0%</b> مكتمل · <span class="chcard-cta">تابع الدرس ←</span></p>
     </a>
   </div>
-
-  <div class="section-title"><span class="ico">🔮</span> جديد: التوقعات الوزارية</div>
-  <a class="chcard cc-coral" href="predictions/index.html" style="display:block">
-    <span class="em chico tool-icon">🔮</span>
-    <span class="chkicker tool-tag">أداة تدريب</span>
-    <h3>أسئلة متوقّعة للسنوات 2026 – 2030 (دور أول وثاني)</h3>
-    <p>مبنية على تحليل إحصائي لـ 616 سؤالاً وزارياً (2011 – 2023): فلترة حسب السنة والدور والفصل والنوع، حلول خطوة بخطوة، ووضع امتحان تجريبي بمؤقّت زمني.</p>
-    <p style="margin-top:8px"><b style="color:var(--violet-deep)">افتح القسم ←</b></p>
-  </a>
-
-  <div class="section-title"><span class="ico">📊</span> جديد: خطة مذاكرتك</div>
-  <a class="chcard cc-green" href="analysis/index.html" style="display:block">
-    <span class="em chico tool-icon">📊</span>
-    <span class="chkicker tool-tag">أداة تحليل</span>
-    <h3>حلّل نتائجك واكتشف مواطن ضعفك</h3>
-    <p>يجمع إجاباتك من كل الاختبارات، يشخّص سبب كل خطأ ونوعه (فهم / حساب / تسرّع)، يقوّم مستواك في كل موضوع، ويرسم لك خطة معالجة عملية مع رابط مباشر للدرس.</p>
-    <p style="margin-top:8px"><b style="color:var(--green)">افتح خطتي ←</b></p>
-  </a>
 
   <div class="section-title"><span class="ico">🏅</span> أوسمتك</div>
   <div class="badges" id="badges">
@@ -257,58 +271,67 @@
         <span class="em chico tool-icon">🔷</span>
         <h3>الفصل الأول<br>المتسعات</h3>
         <span class="chkicker">٨ دروس</span>
+        <div class="pbar"><div id="p-g6c1" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g6c1">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g6c2/index.html" style="--cc:#b91c1c;--cc-soft:#fbe3e3">
         <span class="em chico tool-icon">🧲</span>
         <h3>الفصل الثاني<br>الحث الكهرومغناطيسي</h3>
         <span class="chkicker">١٠ دروس</span>
+        <div class="pbar"><div id="p-g6c2" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g6c2">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g6c3/index.html" style="--cc:#a21caf;--cc-soft:#f8e3f9">
         <span class="em chico tool-icon">🌊</span>
         <h3>الفصل الثالث<br>التيار المتناوب</h3>
         <span class="chkicker">٨ دروس</span>
+        <div class="pbar"><div id="p-g6c3" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g6c3">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g6c4/index.html" style="--cc:#0369a1;--cc-soft:#dcedf9">
         <span class="em chico tool-icon">📡</span>
         <h3>الفصل الرابع<br>الموجات الكهرومغناطيسية</h3>
         <span class="chkicker">١٠ دروس</span>
+        <div class="pbar"><div id="p-g6c4" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g6c4">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g6c5/index.html" style="--cc:#7c3aed;--cc-soft:#ede9fe">
         <span class="em chico tool-icon">🌈</span>
         <h3>الفصل الخامس<br>البصريات الفيزيائية</h3>
         <span class="chkicker">٨ دروس</span>
+        <div class="pbar"><div id="p-g6c5" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g6c5">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g6c6/index.html" style="--cc:#0f766e;--cc-soft:#e0f2ee">
         <span class="em chico tool-icon">🔬</span>
         <h3>الفصل السادس<br>الفيزياء الحديثة</h3>
         <span class="chkicker">١٢ درساً</span>
+        <div class="pbar"><div id="p-g6c6" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g6c6">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g6c7/index.html" style="--cc:#b45309;--cc-soft:#faecd8">
         <span class="em chico tool-icon">🔌</span>
         <h3>الفصل السابع<br>إلكترونيات الحالة الصلبة</h3>
         <span class="chkicker">٨ دروس</span>
+        <div class="pbar"><div id="p-g6c7" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g6c7">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g6c8/index.html" style="--cc:#be123c;--cc-soft:#fce2e8">
         <span class="em chico tool-icon">⚛️</span>
         <h3>الفصل الثامن<br>الأطياف الذرية والليزر</h3>
         <span class="chkicker">٨ دروس</span>
+        <div class="pbar"><div id="p-g6c8" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g6c8">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g6c9/index.html" style="--cc:#15803d;--cc-soft:#dcfce7">
         <span class="em chico tool-icon">☢️</span>
         <h3>الفصل التاسع<br>الفيزياء النووية</h3>
         <span class="chkicker">٨ دروس</span>
+        <div class="pbar"><div id="p-g6c9" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g6c9">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
     </div>
     <p class="g6-note">✅ فصول منهج السادس العلمي التسعة كلها متوفرة الآن.</p>
-
-    <div class="section-title"><span class="ico">🔮</span> جديد: التوقعات الوزارية</div>
-    <a class="chcard cc-coral" href="predictions-g6/index.html" style="display:block">
-      <span class="em chico tool-icon">🔮</span>
-      <span class="chkicker tool-tag">أداة تدريب</span>
-      <h3>بنك أسئلة وزارية محلولة لكل فصول السادس</h3>
-      <p>من مراجعة مباشرة لأكثر من ١٤٠ صفحة حلول عبر سنوات ودورات متعددة، متحقَّق منها حسابياً واحدة واحدة — منظّم حسب الفصل مع حل خطوة بخطوة.</p>
-      <p style="margin-top:8px"><b style="color:var(--violet-deep)">افتح القسم ←</b></p>
-    </a>
 
     <div class="section-title"><span class="ico">🕵️</span> جديد: الأسئلة الوزارية الغريبة</div>
     <a class="chcard" href="weird-questions/index.html" style="display:block;--cc:#7c3aed;--cc-soft:#ede9fe">
@@ -317,15 +340,6 @@
       <h3>نفس أسئلة الفصل... بصياغة معكوسة</h3>
       <p>٢٤ سؤالاً منظّمة حسب الفصل: صياغات معكوسة (المعطى صار مجهولاً) وأسئلة مفاهيمية ملتوية يحبّها الوزاري — كل سؤال موضّح فيه "أين الفخ؟" قبل الحل.</p>
       <p style="margin-top:8px"><b style="color:#7c3aed">افتح القسم ←</b></p>
-    </a>
-
-    <div class="section-title"><span class="ico">📊</span> جديد: خطة مذاكرتك</div>
-    <a class="chcard cc-green" href="analysis/index.html" style="display:block">
-      <span class="em chico tool-icon">📊</span>
-      <span class="chkicker tool-tag">أداة تحليل</span>
-      <h3>حلّل نتائجك واكتشف مواطن ضعفك</h3>
-      <p>يجمع إجاباتك من كل اختبارات السادس العلمي، يشخّص سبب كل خطأ ونوعه (فهم / حساب / تسرّع)، يقوّم مستواك في كل موضوع، ويرسم لك خطة معالجة عملية مع رابط مباشر للدرس.</p>
-      <p style="margin-top:8px"><b style="color:var(--green)">افتح خطتي ←</b></p>
     </a>
   </div><!-- /panel-g6 -->
 
@@ -339,16 +353,22 @@
         <span class="em chico tool-icon">📏</span>
         <h3>الفصل الأول<br>معلمات رئيسة في الفيزياء</h3>
         <span class="chkicker">٥ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g4c1" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g4c1">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g4c2/index.html" style="--cc:#b45309;--cc-soft:#fef3c7">
         <span class="em chico tool-icon">🔧</span>
         <h3>الفصل الثاني<br>الخصائص الميكانيكية للمادة</h3>
         <span class="chkicker">٤ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g4c2" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g4c2">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g4c3/index.html" style="--cc:#0891b2;--cc-soft:#cffafe">
         <span class="em chico tool-icon">💧</span>
         <h3>الفصل الثالث<br>الموائع الساكنة</h3>
         <span class="chkicker">١٠ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g4c3" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g4c3">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile locked" href="#" style="--cc:#64748b;--cc-soft:#e2e8f0" tabindex="-1" aria-disabled="true">
         <span class="em chico tool-icon">🌡️</span>
@@ -359,16 +379,22 @@
         <span class="em chico tool-icon">☀️</span>
         <h3>الفصل الخامس<br>الضوء</h3>
         <span class="chkicker">٦ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g4c5" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g4c5">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g4c6/index.html" style="--cc:#7c3aed;--cc-soft:#ede9fe">
         <span class="em chico tool-icon">💎</span>
         <h3>الفصل السادس<br>انعكاس وانكسار الضوء</h3>
         <span class="chkicker">٧ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g4c6" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g4c6">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g4c7/index.html" style="--cc:#0d9488;--cc-soft:#ccfbf1">
         <span class="em chico tool-icon">🪞</span>
         <h3>الفصل السابع<br>المرايا</h3>
         <span class="chkicker">٧ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g4c7" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g4c7">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile locked" href="#" style="--cc:#64748b;--cc-soft:#e2e8f0" tabindex="-1" aria-disabled="true">
         <span class="em chico tool-icon">🔍</span>
@@ -379,6 +405,8 @@
         <span class="em chico tool-icon">⚡</span>
         <h3>الفصل التاسع<br>الكهرباء الساكنة</h3>
         <span class="chkicker">٧ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g4c9" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g4c9">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
     </div>
     <p class="g6-note">✅ كل فصول الرابع العلمي المخطط لها متوفّرة الآن (الأول، الثاني، الثالث، الخامس، السادس، السابع، والتاسع). الرابع والثامن مؤجَّلان حالياً.</p>
@@ -394,26 +422,36 @@
         <span class="em chico tool-icon">➹</span>
         <h3>الفصل الأول<br>المتجهات</h3>
         <span class="chkicker">٥ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g5c1" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g5c1">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g5c2/index.html" style="--cc:#ea580c;--cc-soft:#fde0c8">
         <span class="em chico tool-icon">🏃</span>
         <h3>الفصل الثاني<br>الحركة الخطية</h3>
         <span class="chkicker">٥ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g5c2" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g5c2">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g5c3/index.html" style="--cc:#4f46e5;--cc-soft:#dcdafb">
         <span class="em chico tool-icon">🏋️</span>
         <h3>الفصل الثالث<br>قوانين الحركة</h3>
         <span class="chkicker">٥ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g5c3" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g5c3">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g5c4/index.html" style="--cc:#7c3aed;--cc-soft:#e2d7fb">
         <span class="em chico tool-icon">⚖️</span>
         <h3>الفصل الرابع<br>الاتزان والعزوم</h3>
         <span class="chkicker">٥ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g5c4" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g5c4">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g5c5/index.html" style="--cc:#be123c;--cc-soft:#fbd7de">
         <span class="em chico tool-icon">🔋</span>
         <h3>الفصل الخامس<br>الشغل والطاقة والزخم</h3>
         <span class="chkicker">٦ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g5c5" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g5c5">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile locked" href="#" style="--cc:#64748b;--cc-soft:#e2e8f0" tabindex="-1" aria-disabled="true">
         <span class="em chico tool-icon">🌡️</span>
@@ -424,6 +462,8 @@
         <span class="em chico tool-icon">🌀</span>
         <h3>الفصل السابع<br>الجسم الجاسئ</h3>
         <span class="chkicker">٥ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g5c7" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g5c7">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile locked" href="#" style="--cc:#64748b;--cc-soft:#e2e8f0" tabindex="-1" aria-disabled="true">
         <span class="em chico tool-icon">🎵</span>
@@ -434,11 +474,15 @@
         <span class="em chico tool-icon">⚡</span>
         <h3>الفصل التاسع<br>التيار الكهربائي</h3>
         <span class="chkicker">٥ دروس · مجاني · أساس السادس</span>
+        <div class="pbar"><div id="p-g5c9" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g5c9">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g5c10/index.html" style="--cc:#b91c1c;--cc-soft:#fecaca">
         <span class="em chico tool-icon">🧲</span>
         <h3>الفصل العاشر<br>المغناطيسية</h3>
         <span class="chkicker">٥ دروس · مجاني · أساس السادس</span>
+        <div class="pbar"><div id="p-g5c10" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g5c10">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
     </div>
     <p class="g6-note">✅ ثمانية فصول من الخامس العلمي متوفّرة الآن — المنهج مكتمل عدا الفصلين السادس والثامن.</p>
@@ -457,26 +501,36 @@
         <span class="em chico tool-icon">🧪</span>
         <h3>الفصل الأول<br>خواص المادة</h3>
         <span class="chkicker">٣ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g1c1" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g1c1">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g1c2/index.html" style="--cc:#dc2626;--cc-soft:#fecaca">
         <span class="em chico tool-icon">💪</span>
         <h3>الفصل الثاني<br>القوة</h3>
         <span class="chkicker">درسان · مجاني</span>
+        <div class="pbar"><div id="p-g1c2" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g1c2">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g1c3/index.html" style="--cc:#4338ca;--cc-soft:#c7d2fe">
         <span class="em chico tool-icon">💦</span>
         <h3>الفصل الثالث<br>الضغط</h3>
         <span class="chkicker">٣ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g1c3" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g1c3">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g1c4/index.html" style="--cc:#c2410c;--cc-soft:#fed7aa">
         <span class="em chico tool-icon">🔥</span>
         <h3>الفصل الرابع<br>الحرارة</h3>
         <span class="chkicker">درسان · مجاني</span>
+        <div class="pbar"><div id="p-g1c4" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g1c4">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g1c5/index.html" style="--cc:#9333ea;--cc-soft:#e9d5ff">
         <span class="em chico tool-icon">🌡️</span>
         <h3>الفصل الخامس<br>أثر الحرارة في المواد</h3>
         <span class="chkicker">درسان · مجاني</span>
+        <div class="pbar"><div id="p-g1c5" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g1c5">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
     </div>
     <p class="g6-note">✅ منهج الأول متوسط الخمسة فصول متوفّر بالكامل الآن، مجاناً وبلا رمز دخول.</p>
@@ -492,40 +546,115 @@
         <span class="em chico tool-icon">🏃</span>
         <h3>الفصل الأول<br>الحركة</h3>
         <span class="chkicker">٣ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g2c1" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g2c1">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g2c2/index.html" style="--cc:#dc2626;--cc-soft:#fecaca">
         <span class="em chico tool-icon">🍎</span>
         <h3>الفصل الثاني<br>قوانين الحركة</h3>
         <span class="chkicker">درسان · مجاني</span>
+        <div class="pbar"><div id="p-g2c2" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g2c2">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g2c3/index.html" style="--cc:#0d9488;--cc-soft:#ccfbf1">
         <span class="em chico tool-icon">🔋</span>
         <h3>الفصل الثالث<br>الشغل والقدرة والطاقة</h3>
         <span class="chkicker">درسان · مجاني</span>
+        <div class="pbar"><div id="p-g2c3" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g2c3">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g2c4/index.html" style="--cc:#7c3aed;--cc-soft:#e9d5ff">
         <span class="em chico tool-icon">⚙️</span>
         <h3>الفصل الرابع<br>الآلات البسيطة</h3>
         <span class="chkicker">درسان · مجاني</span>
+        <div class="pbar"><div id="p-g2c4" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g2c4">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g2c5/index.html" style="--cc:#0891b2;--cc-soft:#d7eef4">
         <span class="em chico tool-icon">🌊</span>
         <h3>الفصل الخامس<br>الحركة الموجية والصوت</h3>
         <span class="chkicker">درسان · مجاني</span>
+        <div class="pbar"><div id="p-g2c5" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g2c5">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
       <a class="chcard tile" href="chapters/g2c6/index.html" style="--cc:#ca8a04;--cc-soft:#fef9c3">
         <span class="em chico tool-icon">💡</span>
         <h3>الفصل السادس<br>الضوء</h3>
         <span class="chkicker">٣ دروس · مجاني</span>
+        <div class="pbar"><div id="p-g2c6" style="width:0%"></div></div>
+        <p style="margin-top:6px"><b id="t-g2c6">0%</b> · <span class="chcard-cta">تابع الدرس ←</span></p>
       </a>
     </div>
     <p class="g6-note">✅ منهج الثاني متوسط الستة فصول متوفّر بالكامل الآن، مجاناً وبلا رمز دخول.</p>
   </div><!-- /panel-g2 -->
 
-  <div class="section-title"><span class="ico">📖</span> عن المنصة</div>
-  <p>منصة فيزياء تفاعلية للأستاذ أحمد رافع تغطي الأول والثالث متوسط والخامس والسادس العلمي: شرح كل الفصول خطوة بخطوة بأمثلة محلولة ومحاكاات تفاعلية، واختبارات بنجوم وجوائز بدل الشرح التقليدي الممل. ولطلاب الثالث والسادس العلمي أدوات <b>التوقعات الوزارية</b> و<b>خطة مذاكرتي</b> اللي تشخّص أخطاءك وترسم لك خطة واضحة. الهدف: تفهم الفيزياء فعلاً، مو تحفظها بس.</p>
+  </section><!-- /#chapters -->
 
-  <footer class="site">إعداد الأستاذ أحمد رافع · 📞 07800155157</footer>
+  <section id="predictions">
+    <div class="section-title"><span class="ico">🔮</span> التوقعات الوزارية</div>
+    <section class="pred-promo" id="predPromo" aria-labelledby="pred-promo-title">
+      <div class="pred-promo-inner">
+        <span class="pred-promo-badge" id="predPromoRound">الدور القادم</span>
+        <h3 id="pred-promo-title">ورقة الامتحان المتوقّعة</h3>
+        <p class="pred-promo-sub" id="predPromoSub">ورقة كاملة بصيغة الامتحان الوزاري — كل سؤال فيها <b>جاء فعلاً في امتحان سابق</b>، وتحته ملاحظة تقول ما الذي قد يتغيّر.</p>
+        <div class="pred-promo-pills">
+          <span class="pred-promo-pill">📄 أسئلة وزارية حقيقية</span>
+          <span class="pred-promo-pill">📌 ملاحظة تحت كل سؤال</span>
+          <span class="pred-promo-pill">🖨️ تُطبع PDF</span>
+        </div>
+        <div class="pred-promo-match" id="predPromoMatch" hidden></div>
+        <a class="btn ghost pred-promo-cta" id="predPromoCta" href="predictions-g6/expected-paper.html">افتح الورقة المتوقّعة</a>
+        <p class="pred-promo-note">🔒 ضمن اشتراك المرحلة · توقعات دراسية، ليست أسئلة مسرّبة ولا مضمونة</p>
+      </div>
+    </section>
+  </section>
+
+  <section id="tools">
+    <div class="section-title"><span class="ico">🧰</span> أدوات الطالب</div>
+    <div class="tools-grid">
+      <div class="tool-card" id="tool-mockexam">
+        <span class="tool-ico">⏱️</span>
+        <h3>محاكي الامتحان الوزاري</h3>
+        <p>تجربة امتحان وزاري حقيقية: أسئلة عشوائية، مؤقّت حقيقي، وتصحيح فوري.</p>
+        <small class="tool-unavailable" hidden>غير متاح لهذه المرحلة حالياً</small>
+        <a class="btn small" id="hero-mockexam" href="mock-exam-g3/index.html">جرّب المحاكي</a>
+      </div>
+      <div class="tool-card" id="tool-predict">
+        <span class="tool-ico">🔮</span>
+        <h3>التوقعات الوزارية</h3>
+        <p>أسئلة متوقّعة مبنية على تحليل شامل للأسئلة الوزارية السابقة، مع حلول خطوة بخطوة.</p>
+        <small class="tool-unavailable" hidden>غير متاح لهذه المرحلة حالياً</small>
+        <a class="btn small coral" id="hero-predict" href="predictions/index.html">🔮 توقعات الثالث</a>
+      </div>
+      <div class="tool-card" id="tool-studyplan">
+        <span class="tool-ico">📊</span>
+        <h3>خطة مذاكرتي</h3>
+        <p>يحلّل نتائجك من كل الاختبارات، يشخّص أخطاءك، ويرسم لك خطة مذاكرة عملية.</p>
+        <small class="tool-unavailable" hidden>غير متاح لهذه المرحلة حالياً</small>
+        <a class="btn small green" id="hero-studyplan" href="analysis/index.html">📊 خطة مذاكرتي</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-title"><span class="ico">📖</span> عن المنصة والأستاذ</div>
+    <p>منصة <b>شرارة</b> هي منصة فيزياء تفاعلية لطلاب العراق، من إعداد الأستاذ <b>أحمد رافع</b>، مدرّس الفيزياء في <b>ثانوية الرافدين للبنات</b> في الرمادي - الأنبار، تغطي المرحلة من الأول متوسط إلى السادس العلمي: شرح كل الفصول خطوة بخطوة بأمثلة محلولة ومحاكاات تفاعلية، واختبارات بنجوم وجوائز بدل الشرح التقليدي الممل.</p>
+    <p style="margin-top:10px">ولطلاب الثالث والسادس العلمي أدوات <b>التوقعات الوزارية</b> و<b>خطة مذاكرتي</b> اللي تشخّص أخطاءك وترسم لك خطة واضحة. الهدف: تفهم الفيزياء فعلاً، مو تحفظها بس.</p>
+  </section>
+
+  <section id="final-cta" class="final-cta">
+    <h2>خطوتك الأولى تبدأ الآن</h2>
+    <a class="btn coral" href="#stages">ابدأ مجاناً</a>
+  </section>
+
+  <footer class="site">
+    <div class="footer-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="search/index.html">🔍 بحث</a>
+      <a href="subscribe.html">💳 الاشتراك</a>
+    </div>
+    <p>إعداد الأستاذ أحمد رافع · 📞 07800155157</p>
+  </footer>
 </div>
 
 <script src="js/core.js"></script>
@@ -593,6 +722,26 @@
 })();
 </script>
 <script>
+/* أشرطة تقدّم بقية المراحل (أول/ثاني/رابع/خامس/سادس) — تستخدم نفس
+   Phy.chapterPercent() الجاهزة، فقط بعدد الدروس المنشور فعلاً لكل فصل.
+   الفصول غير المنشورة بعد (يُضاف لاحقاً) مستثناة عمداً — لا بطاقة لها هنا. */
+(function () {
+  var CH_LESSONS = {
+    g1c1: 3, g1c2: 2, g1c3: 3, g1c4: 2, g1c5: 2,
+    g2c1: 3, g2c2: 2, g2c3: 2, g2c4: 2, g2c5: 2, g2c6: 3,
+    g4c1: 5, g4c2: 4, g4c3: 10, g4c5: 6, g4c6: 7, g4c7: 7, g4c9: 7,
+    g5c1: 5, g5c2: 5, g5c3: 5, g5c4: 5, g5c5: 6, g5c7: 5, g5c9: 5, g5c10: 5,
+    g6c1: 8, g6c2: 10, g6c3: 8, g6c4: 10, g6c5: 8, g6c6: 12, g6c7: 8, g6c8: 8, g6c9: 8
+  };
+  Object.keys(CH_LESSONS).forEach(function (id) {
+    var pct = Phy.chapterPercent(id, CH_LESSONS[id]);
+    var bar = document.getElementById("p-" + id), txt = document.getElementById("t-" + id);
+    if (bar) bar.style.width = pct + "%";
+    if (txt) txt.textContent = pct + "%";
+  });
+})();
+</script>
+<script>
 /* تبديل تبويبات المرحلة: الثالث المتوسط / السادس العلمي */
 (function () {
   var tabs = document.querySelectorAll(".gradetab");
@@ -601,20 +750,58 @@
   var heroCta = document.getElementById("hero-cta");
   var heroPredict = document.getElementById("hero-predict");
   var heroStudyplan = document.getElementById("hero-studyplan");
+  var heroMockExam = document.getElementById("hero-mockexam");
   var heroContent = {
     g3: { chip: "📚 الصف الثالث المتوسط — المنهج الوزاري 2027", href: "chapters/ch0/index.html",
-          predictHref: "predictions/index.html", predictText: "🔮 توقعات الثالث" },
+          predictHref: "predictions/index.html", predictText: "🔮 توقعات الثالث", mockExamHref: "mock-exam-g3/index.html" },
     g5: { chip: "🎁 الصف الخامس العلمي — مجاني بالكامل", href: "chapters/g5c1/index.html",
-          predictHref: null, predictText: "" },
+          predictHref: null, predictText: "", mockExamHref: null },
     g6: { chip: "📚 الصف السادس العلمي", href: "chapters/g6c1/index.html",
-          predictHref: "predictions-g6/index.html", predictText: "🔮 توقعات السادس" },
+          predictHref: "predictions-g6/index.html", predictText: "🔮 توقعات السادس", mockExamHref: "mock-exam-g6/index.html" },
     g1: { chip: "🎁 الصف الأول متوسط — مجاني بالكامل", href: "chapters/g1c1/index.html",
-          predictHref: null, predictText: "" },
+          predictHref: null, predictText: "", mockExamHref: null },
     g2: { chip: "🎁 الصف الثاني متوسط — مجاني بالكامل", href: "chapters/g2c1/index.html",
-          predictHref: null, predictText: "" },
+          predictHref: null, predictText: "", mockExamHref: null },
     g4: { chip: "🎁 الصف الرابع العلمي — مجاني بالكامل", href: "chapters/g4c1/index.html",
-          predictHref: null, predictText: "" }
+          predictHref: null, predictText: "", mockExamHref: null }
   };
+  // يفعّل/يعطّل بطاقة أداة داخل قسم "أدوات الطالب" حسب توفّرها للمرحلة المختارة،
+  // بدل إخفاء الزر بالكامل كما كان بالتصميم القديم — يبقى شكل الصفحة ثابتاً
+  // عند التنقل بين المراحل، مع رسالة صريحة "غير متاح لهذه المرحلة حالياً".
+  // فقرة التوقعات: تُعرض فقط للمرحلتين المدفوعتين، ويتغيّر نصّها ووجهتها حسب المرحلة.
+  // "round" هو الدور المستهدف — يُحدَّث يدوياً بعد كل امتحان وزاري.
+  // "match" يبقى null حتى نقيس نسبة التطابق فعلياً بعد صدور الورقة الحقيقية.
+  var predPromoContent = {
+    g3: { round: "التمهيدي 2027", href: "predictions/expected-paper.html", match: null },
+    g6: { round: "التمهيدي 2027", href: "predictions-g6/expected-paper.html",
+          match: "📊 توقعاتنا للدور الثاني 2026: جاءت <b>4 من 6</b> مسائل وأنشطة كبرى، و<b>39%</b> من درجات الورقة المتوقّعة — النتيجة كاملة داخل الورقة." }
+  };
+  function updatePredPromo(grade) {
+    var sec = document.getElementById("predictions");
+    var cfg = predPromoContent[grade];
+    if (!sec) return;
+    sec.hidden = !cfg;
+    if (!cfg) return;
+    var badge = document.getElementById("predPromoRound");
+    var cta = document.getElementById("predPromoCta");
+    var match = document.getElementById("predPromoMatch");
+    if (badge) badge.textContent = "🎯 توقعات " + cfg.round;
+    if (cta) cta.href = cfg.href;
+    if (match) {
+      match.hidden = !cfg.match;
+      if (cfg.match) match.innerHTML = cfg.match;
+    }
+  }
+
+  function toggleTool(el, href) {
+    if (!el) return;
+    var card = el.closest(".tool-card");
+    var note = card && card.querySelector(".tool-unavailable");
+    var available = !!href;
+    if (available) el.href = href;
+    if (card) card.classList.toggle("disabled", !available);
+    if (note) note.hidden = available;
+  }
   function select(grade) {
     if (!panels[grade]) grade = "g3";
     tabs.forEach(function (t) {
@@ -625,17 +812,11 @@
     for (var g in panels) if (panels[g]) panels[g].hidden = (g !== grade);
     if (heroChip) heroChip.textContent = heroContent[grade].chip;
     if (heroCta) heroCta.href = heroContent[grade].href;
-    if (heroPredict) {
-      // المرحلة غير الوزارية (مثل الأول والخامس) لا توقعات ولا خطة مذاكرة لها → نخفي الزرّين
-      if (heroContent[grade].predictHref) {
-        heroPredict.hidden = false;
-        heroPredict.href = heroContent[grade].predictHref;
-        heroPredict.textContent = heroContent[grade].predictText;
-      } else {
-        heroPredict.hidden = true;
-      }
-    }
-    if (heroStudyplan) heroStudyplan.hidden = !heroContent[grade].predictHref;
+    if (heroPredict && heroContent[grade].predictHref) heroPredict.textContent = heroContent[grade].predictText;
+    toggleTool(heroPredict, heroContent[grade].predictHref);
+    toggleTool(heroMockExam, heroContent[grade].mockExamHref);
+    updatePredPromo(grade);
+    toggleTool(heroStudyplan, heroContent[grade].predictHref ? "analysis/index.html" : null);
     try { localStorage.setItem("sharara_grade", grade); } catch (e) {}
   }
   tabs.forEach(function (t) {
@@ -697,6 +878,24 @@
     var msg = "مرحباً، أريد أسجل بالدورة الإلكترونية.\nالاسم: " + name + "\nرقم الموبايل: " + phone + "\nالصف: " + grade;
     window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
     closeDialog();
+  });
+})();
+</script>
+<script>
+/* قائمة الهاتف (همبرغر) — خاصة بالصفحة الرئيسية فقط */
+(function () {
+  var toggle = document.getElementById("navToggle");
+  var links = document.getElementById("navLinks");
+  if (!toggle || !links) return;
+  toggle.addEventListener("click", function () {
+    var open = links.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  links.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      links.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
   });
 })();
 </script>
