@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نشاط منزلي — الدرس 7: دائرة RC — الشحن والتفريغ — السادس العلمي</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="activityRoot"></div>
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var ACTIVITY = {
+  ch: "g6c1",
+  lesson: "7",
+  title: "دائرة RC — الشحن والتفريغ",
+  // نفس أسئلة "اختبر نفسك" الموجودة بنهاية الدرس (lesson7.html) — إعادة استخدام بدل التكرار.
+  questions: [
+  { q: "دائرة شحن: بطارية 24V ومقاومة 60Ω ومتسعة. ما مقدار أعظم تيار شحن لحظة غلق المفتاح؟",
+    opts: ["0.4 A", "1440 A", "2.5 A", "84 A"], a: 0,
+    why: "لحظة الغلق المتسعة فارغة فكل الجهد على المقاومة: I = ΔV/R = 24/60 = 0.4 A." },
+  { q: "بعد اكتمال شحن متسعة في دائرة RC، ما مقدار التيار في الدائرة؟",
+    opts: ["أعظم قيمة ΔV/R", "صفر", "نصف القيمة الأعظم", "يتذبذب باستمرار"], a: 1,
+    why: "عند اكتمال الشحن يتساوى جهد المتسعة مع جهد البطارية فلا يبقى جهد على المقاومة، فيكون التيار صفراً — المتسعة كمفتاح مفتوح." },
+  { q: "دائرة RC فيها R=2kΩ وC=50μF. ما مقدار الزمن الثابت τ؟",
+    opts: ["0.1 s", "100 s", "0.04 s", "40 s"], a: 0,
+    why: "τ = RC = 2000 × 50×10⁻⁶ = 0.1 s." },
+  { q: "عند رسم دائرة تفريغ المتسعة، ما الخطأ الأكثر شيوعاً الذي يُصفّر درجة السؤال؟",
+    opts: ["نسيان رسم المفتاح", "رسم بطارية في دائرة التفريغ", "نسيان تسمية المقاومة", "رسم المصباح بدل المقاومة"], a: 1,
+    why: "دائرة التفريغ لا تحتوي بطارية إطلاقاً — مصدر الطاقة هو المتسعة المشحونة نفسها." },
+  { q: "بعد زمن ثابت واحد τ من بدء الشحن، يبلغ جهد المتسعة نحو:",
+    opts: ["100% من أقصاه", "63% من أقصاه", "37% من أقصاه", "صفر"], a: 1,
+    why: "خاصية المنحنى الأسّي: بعد τ واحد يصل الشحن إلى نحو 63% من قيمته النهائية." }
+]
+};
+</script>
+<script src="../../js/activity.js"></script>
+</body>
+</html>

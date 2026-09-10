@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نشاط منزلي — الدرس 7: دائرة الرنين بربط التوالي — السادس العلمي</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="activityRoot"></div>
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var ACTIVITY = {
+  ch: "g6c3",
+  lesson: "7",
+  title: "دائرة الرنين بربط التوالي",
+  // نفس أسئلة "اختبر نفسك" الموجودة بنهاية الدرس (lesson7.html) — إعادة استخدام بدل التكرار.
+  questions: [
+  { q: "ما شرط حدوث الرنين بدائرة RLC متوالية؟",
+    opts: ["X_L = X_C", "R = Z", "X_L = R", "X_C = 0 دائماً"], a: 0,
+    why: "الرنين يحدث عندما تتساوى الرادتان X_L و X_C فتلغي إحداهما الأخرى." },
+  { q: "عند الرنين، ما مقدار الممانعة الكلية Z؟",
+    opts: [ "Z = 0","Z = R (أصغر ما يمكن)", "Z = X_L + X_C", "Z تساوي لانهاية"], a: 1,
+    why: "عند الرنين X_L=X_C فتلغي إحداهما الأخرى في Z²=R²+(X_L−X_C)²، فتصبح Z=R بالضبط — أصغر قيمة ممكنة للممانعة." },
+  { q: "ما قانون التردد الرنيني f_r؟",
+    opts: [ "f_r = 1/(2πLC)", "f_r = 2π√(LC)","f_r = 1/(2π√(LC))", "f_r = √(L/C)"], a: 2,
+    why: "من شرط الرنين ωL=1/ωC نستخرج ω_r=1/√(LC)، وf_r=ω_r/2π=1/(2π√(LC))." },
+  { q: "دائرة رنين محثها L=2H ومتسعتها C=0.5μF. جد التردد الزاوي الرنيني ω_r.",
+    opts: [ "0.001 rad/s", "500 rad/s", "2000 rad/s","1000 rad/s"], a: 3,
+    why: "ω_r = 1/√(LC) = 1/√(2×0.5×10⁻⁶) = 1/√(10⁻⁶) = 1000 rad/s." },
+  { q: "ماذا يعني عامل نوعية Q_f مرتفع؟",
+    opts: ["قمة رنين حادة وضيقة (انتقائية عالية لتردد واحد)، غالباً بمقاومة R صغيرة", "قمة رنين عريضة وغير دقيقة", "لا علاقة له بحدّة القمة إطلاقاً", "يعني تيار الرنين صغير جداً"], a: 0,
+    why: "Q_f=(1/R)√(L/C) — كلما صغرت R كبر Q_f وصارت قمة الرنين أحدّ (نطاق Δf أضيق)، وهذا ما يمنح الراديو انتقائية عالية لمحطة واحدة." },
+  { q: "علّل: يمكن أن تكون زاوية فرق الطور Φ=0 بدائرة RLC متوالية الربط.",
+    opts: [ "لأن R تساوي دائماً صفراً بكل الدوائر","عند حالة الرنين (X_L=X_C) تُلغي الرادتان بعضهما فتصبح Z=R فقط، وtanΦ=(X_L−X_C)/R=0", "لأن المصدر بالضرورة تيار مستمر", "هذا لا يحدث أبداً بدائرة RLC متوالية"], a: 1,
+    why: "بحالة الرنين تتساوى X_L وX_C فيصبح البسط بقانون الزاوية صفراً، وبالتالي Φ=0 وعامل القدرة=1." }
+]
+};
+</script>
+<script src="../../js/activity.js"></script>
+</body>
+</html>

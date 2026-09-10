@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نشاط منزلي — الدرس 1: القوة على شحنة متحركة وقوة لورنتز — السادس العلمي</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/lesson-modern.css">
+</head>
+<body class="theme-g6c2 modern">
+<div class="wrap">
+  <div id="activityRoot"></div>
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var ACTIVITY = {
+  ch: "g6c2",
+  lesson: "1",
+  title: "القوة على شحنة متحركة وقوة لورنتز",
+  // نفس أسئلة "اختبر نفسك" الموجودة بنهاية الدرس (lesson1.html) — إعادة استخدام بدل التكرار.
+  questions: [
+  { q: "ما القانون الصحيح للقوة المغناطيسية المؤثرة في شحنة متحركة داخل مجال مغناطيسي منتظم؟",
+    opts: ["F_b = qvB", "F_b = qvB sinθ", "F_b = qv/B", "F_b = qBsinθ"], a: 1,
+    why: "القانون العام يتضمن الزاوية θ بين السرعة والمجال: F_b = qvB sinθ." },
+  { q: "علّل: شحنة تتحرك موازية لمجال مغناطيسي منتظم لا تتأثر بأي قوة مغناطيسية.",
+    opts: ["لأن الشحنة معدومة", "لأن θ=0° وsin0°=0 فتكون F_b=صفر", "لأن السرعة معدومة", "لأن المجال معدوم"], a: 1,
+    why: "F_b=qvBsinθ، وعندما تكون v موازية لـB فإن θ=0° وsin0°=0، فلا قوة تؤثر." },
+  { q: "شحنة q=5×10⁻⁶ C تتحرك بسرعة v=4×10⁴ m/s عمودياً على مجال B=0.2T. ما مقدار القوة المغناطيسية؟",
+    opts: ["4×10⁻² N", "4×10⁻¹ N", "2×10⁻² N", "4×10⁻³ N"], a: 0,
+    why: "بما أن θ=90° فإن sinθ=1، إذن F_b=qvB=5×10⁻⁶×4×10⁴×0.2=0.04N=4×10⁻² N." },
+  { q: "ما محصّلة القوتين الكهربائية والمغناطيسية المؤثرتين معاً في شحنة متحركة داخل مجالين متزامنين؟",
+    opts: ["قانون فاراداي", "قوة لورنتز", "قانون لينز", "القوة الدافعة الحركية"], a: 1,
+    why: "قوة لورنتز F_Lorentz = F_e + F_b هي محصّلة القوة الكهربائية والمغناطيسية معاً." },
+  { q: "في مرشّح السرعة، عند توازن القوتين الكهربائية والمغناطيسية، ما السرعة التي تمرّ من الفتحة؟",
+    opts: ["v = E×B", "v = E/B", "v = B/E", "v = qE"], a: 1,
+    why: "عند التوازن qE=qvB ⟹ v=E/B — لا تمرّ إلا الشحنات بهذه السرعة بالضبط." },
+  { q: "لماذا لا تُغيّر القوة المغناطيسية مقدار سرعة الشحنة المتحركة؟",
+    opts: ["لأنها قوة ضعيفة جداً", "لأنها عمودية دائماً على السرعة فلا تبذل شغلاً", "لأن الشحنة ثابتة", "لأن المجال ضعيف"], a: 1,
+    why: "القوة المغناطيسية عمودية دائماً على v، وأي قوة عمودية على الحركة لا تبذل شغلاً (W=Fdcos90°=0) فلا تُغيّر الطاقة الحركية." }
+]
+};
+</script>
+<script src="../../js/activity.js"></script>
+</body>
+</html>

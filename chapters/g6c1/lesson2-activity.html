@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نشاط منزلي — الدرس 2: المتسعة والمتسعة ذات الصفيحتين المتوازيتين — السادس العلمي</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="activityRoot"></div>
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var ACTIVITY = {
+  ch: "g6c1",
+  lesson: "2",
+  title: "المتسعة والمتسعة ذات الصفيحتين المتوازيتين",
+  // نفس أسئلة "اختبر نفسك" الموجودة بنهاية الدرس (lesson2.html) — إعادة استخدام بدل التكرار.
+  questions: [
+  { q: "متسعة سعتها 5μF رُبطت بمصدر جهده 12V. ما مقدار الشحنة المختزنة في أيٍّ من صفيحتيها؟",
+    opts: ["60 μC", "2.4 μC", "17 μC", "600 μC"], a: 0,
+    why: "من تعريف السعة: Q = C×ΔV = 5×12 = 60 μC." },
+  { q: "ما وحدة قياس السعة الكهربائية؟",
+    opts: ["الفولط (V)", "الفاراد (F = C/V)", "الكولوم (C)", "الأوم (Ω)"], a: 1,
+    why: "السعة C = Q/ΔV، فوحدتها كولوم/فولط وتسمى الفاراد (Farad)." },
+  { q: "عند مضاعفة فرق الجهد بين صفيحتي متسعة (سعتها ثابتة)، فإن الشحنة المختزنة تصبح:",
+    opts: ["Q", "½Q", "2Q", "4Q"], a: 2,
+    why: "بما أن Q=C×ΔV والسعة ثابتة لا تتأثر بالجهد، فمضاعفة ΔV تضاعف Q." },
+  { q: "علّل: صافي الشحنة الكلية للمتسعة المشحونة يساوي صفراً.",
+    opts: ["لأنها لا تُشحن أصلاً", "لأن صفيحة تحمل +Q وأخرى −Q فمجموعهما صفر", "لأن الشحنة تتسرّب", "لأن العازل يلغيها"], a: 1,
+    why: "الصفيحتان تحملان شحنتين متساويتين متعاكستين (+Q و−Q)، فمجموعهما الجبري صفر." },
+  { q: "قياسات على متسعة: عند 10V شحنتها 20μC، وعند 30V شحنتها 60μC. ما مقدار سعتها؟",
+    opts: ["2 μF", "0.5 μF", "6 μF", "تتغيّر مع الجهد"], a: 0,
+    why: "النسبة Q/ΔV ثابتة: 20/10 = 60/30 = 2 μF — وهذا يؤكد أن السعة لا تتغيّر بالجهد." }
+]
+};
+</script>
+<script src="../../js/activity.js"></script>
+</body>
+</html>

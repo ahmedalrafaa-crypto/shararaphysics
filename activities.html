@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>روابط الأنشطة المنزلية — شرارة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/logo-ar.png">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .act-search { width: 100%; box-sizing: border-box; padding: 12px 14px; border-radius: 12px; border: 1.5px solid rgba(0,0,0,.12); font-family: inherit; font-size: 1rem; margin-bottom: 6px; }
+  .act-chapter-head { font-weight: 900; font-size: 1.05rem; margin: 18px 0 4px; padding-top: 10px; border-top: 2px solid rgba(0,0,0,.06); }
+  .act-chapter-head:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+  .act-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,.07); }
+  .act-row:last-child { border-bottom: none; }
+  .act-title { font-weight: 800; flex: 1 1 220px; min-width: 0; }
+  .act-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+  .act-empty { color: #888; padding: 10px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ روابط الأنشطة</span>
+  </div>
+
+  <div id="pinScreen" class="pin-gate">
+    <h1>🔒 روابط الأنشطة المنزلية</h1>
+    <p>هذه الصفحة للأستاذ فقط — أدخل رمز الحماية</p>
+    <input type="password" inputmode="text" id="teacherPin" placeholder="••••••" autocomplete="off">
+    <button type="button" class="btn" id="pinSubmit" style="width:100%">دخول</button>
+    <p class="admin-msg error" id="pinMsg"></p>
+  </div>
+
+  <div id="mainScreen" style="display:none">
+    <div class="hero">
+      <span class="chip">🏠 الأنشطة المنزلية</span>
+      <h1>روابط جاهزة للإرسال لطلابك</h1>
+      <p>كل رابط يفتح نشاط الدرس مباشرة (كلمة السر محمولة داخل الرابط، فالطالب ما يحتاج يكتبها).</p>
+    </div>
+
+    <div class="card">
+      <h2>⚡ أنشطة السادس العلمي (80 درساً)</h2>
+      <input type="text" class="act-search" id="actSearch" placeholder="🔍 دوّر باسم الدرس... (مثلاً: العازل، الليزر، النواة)">
+      <div id="actList"></div>
+    </div>
+
+    <div class="notebox">
+      <b>🔑 كلمة سر الطلاب الحالية:</b> <span id="pwEcho" style="font-weight:900"></span>
+      <br>لو أحد فتح صفحة النشاط بدون الرابط الجاهز (مثلاً من داخل الدرس)، راح تنطلب منه هذه الكلمة.
+    </div>
+
+    <a href="#" class="admin-logout" id="logoutLink">مسح رمز الحماية من هذا الجهاز</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع · 📞 07800155157</footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ⚠️ غيّر هذين السطرين متى ما تريد:
+  var TEACHER_PIN = "admin2026";       // رمز دخول هذه الصفحة (خاص بك أنت)
+  var CLASS_PASSWORD = "sharara26";    // كلمة سر الطلاب — لازم تطابق المكتوبة بـ js/activity.js
+
+  // كل نشاط جاهز، مرتّب حسب الفصل والدرس. عند إضافة نشاط جديد لدرس، أضف سطراً هنا فقط.
+  var ACTIVITIES = [
+    { chapterName: "الفصل الأول" },
+    { ch: "g6c1", lesson: "1", title: "الموصل الكروي المنفرد المعزول" },
+    { ch: "g6c1", lesson: "2", title: "المتسعة والمتسعة ذات الصفيحتين المتوازيتين" },
+    { ch: "g6c1", lesson: "3", title: "العازل الكهربائي" },
+    { ch: "g6c1", lesson: "4", title: "العوامل المؤثرة في سعة المتسعة" },
+    { ch: "g6c1", lesson: "5", title: "طرائق ربط المتسعات (توازٍ وتوالٍ)" },
+    { ch: "g6c1", lesson: "6", title: "الطاقة المختزنة والقدرة" },
+    { ch: "g6c1", lesson: "7", title: "دائرة RC — الشحن والتفريغ" },
+    { ch: "g6c1", lesson: "8", title: "أنواع المتسعات والتطبيقات العملية" },
+    { chapterName: "الفصل الثاني" },
+    { ch: "g6c2", lesson: "1", title: "القوة على شحنة متحركة وقوة لورنتز" },
+    { ch: "g6c2", lesson: "2", title: "القوة الدافعة المحتثة الحركية" },
+    { ch: "g6c2", lesson: "3", title: "الفيض المغناطيسي" },
+    { ch: "g6c2", lesson: "4", title: "قانون فاراداي" },
+    { ch: "g6c2", lesson: "5", title: "قانون لنز" },
+    { ch: "g6c2", lesson: "6", title: "الحث الذاتي" },
+    { ch: "g6c2", lesson: "7", title: "الحث المتبادل" },
+    { ch: "g6c2", lesson: "8", title: "المجالات الكهربائية المحتثة" },
+    { ch: "g6c2", lesson: "9", title: "المولّدات والمحرّكات الكهربائية" },
+    { ch: "g6c2", lesson: "10", title: "التطبيقات العملية" },
+    { chapterName: "الفصل الثالث" },
+    { ch: "g6c3", lesson: "1", title: "مقدمة والمقدار المؤثر للتيار المتناوب" },
+    { ch: "g6c3", lesson: "2", title: "دائرة تيار متناوب تحتوي مقاومة صرفة R" },
+    { ch: "g6c3", lesson: "3", title: "دائرة تحتوي محث صرف L" },
+    { ch: "g6c3", lesson: "4", title: "دائرة تحتوي متسعة ذات سعة صرف C" },
+    { ch: "g6c3", lesson: "5", title: "ربط التوالي R-L-C" },
+    { ch: "g6c3", lesson: "6", title: "عامل القدرة والقدرة المستهلكة" },
+    { ch: "g6c3", lesson: "7", title: "دائرة الرنين بربط التوالي" },
+    { ch: "g6c3", lesson: "8", title: "ربط التوازي R-L-C" },
+    { chapterName: "الفصل الرابع" },
+    { ch: "g6c4", lesson: "1", title: "مقدمة" },
+    { ch: "g6c4", lesson: "2", title: "ماكسويل والنظرية الكهرومغناطيسية" },
+    { ch: "g6c4", lesson: "3", title: "توليد الموجات الكهرومغناطيسية من الشحنات المعجلة" },
+    { ch: "g6c4", lesson: "4", title: "مبادئ الإرسال والتسلم للموجات الكهرومغناطيسية" },
+    { ch: "g6c4", lesson: "5", title: "كيفية عمل دائرة الإرسال والتسلم" },
+    { ch: "g6c4", lesson: "6", title: "الكشف عن الموجات الكهرومغناطيسية ذات التردد الراديوي" },
+    { ch: "g6c4", lesson: "7", title: "التضمين — AM وFM وPM" },
+    { ch: "g6c4", lesson: "8", title: "مدى الموجات الراديوية" },
+    { ch: "g6c4", lesson: "9", title: "انتشار الموجات الكهرومغناطيسية" },
+    { ch: "g6c4", lesson: "10", title: "بعض تطبيقات الموجات الكهرومغناطيسية" },
+    { chapterName: "الفصل الخامس" },
+    { ch: "g6c5", lesson: "1", title: "مقدمة في البصريات الفيزيائية" },
+    { ch: "g6c5", lesson: "2", title: "تداخل الموجات الضوئية" },
+    { ch: "g6c5", lesson: "3", title: "تجربة شقي يونك" },
+    { ch: "g6c5", lesson: "4", title: "التداخل في الأغشية الرقيقة" },
+    { ch: "g6c5", lesson: "5", title: "حيود موجات الضوء" },
+    { ch: "g6c5", lesson: "6", title: "مُحزّز الحيود" },
+    { ch: "g6c5", lesson: "7", title: "استقطاب الضوء" },
+    { ch: "g6c5", lesson: "8", title: "استطارة الضوء" },
+    { chapterName: "الفصل السادس" },
+    { ch: "g6c6", lesson: "1", title: "مقدمة" },
+    { ch: "g6c6", lesson: "2", title: "نظرية الكم — إشعاع الجسم الأسود وفرضية بلانك" },
+    { ch: "g6c6", lesson: "3", title: "الظاهرة الكهروضوئية" },
+    { ch: "g6c6", lesson: "4", title: "الجسيمات (الدقائق) والموجات" },
+    { ch: "g6c6", lesson: "5", title: "الموجات المادية" },
+    { ch: "g6c6", lesson: "6", title: "مدخل إلى مفهوم ميكانيك الكم ودالة الموجة" },
+    { ch: "g6c6", lesson: "7", title: "مبدأ اللادقة (اللاتحديد) لهايزنبرغ" },
+    { ch: "g6c6", lesson: "8", title: "النظرية النسبية" },
+    { ch: "g6c6", lesson: "9", title: "فرضيتا آينشتاين للنسبية الخاصة" },
+    { ch: "g6c6", lesson: "10", title: "تحويلات لورنتز" },
+    { ch: "g6c6", lesson: "11", title: "أهم النتائج المترتبة على النظرية النسبية الخاصة" },
+    { ch: "g6c6", lesson: "12", title: "تكافؤ الكتلة والطاقة" },
+    { chapterName: "الفصل السابع" },
+    { ch: "g6c7", lesson: "1", title: "مقدمة ومستويات الطاقة في الذرة" },
+    { ch: "g6c7", lesson: "2", title: "حزم الطاقة — الموصلات والعوازل وأشباه الموصلات" },
+    { ch: "g6c7", lesson: "3", title: "أشباه الموصلات النقية" },
+    { ch: "g6c7", lesson: "4", title: "أشباه الموصلات المطعّمة" },
+    { ch: "g6c7", lesson: "5", title: "الثنائي pn" },
+    { ch: "g6c7", lesson: "6", title: "فولطية الانحياز للثنائي pn" },
+    { ch: "g6c7", lesson: "7", title: "بعض أنواع الثنائيات" },
+    { ch: "g6c7", lesson: "8", title: "الترانزستور" },
+    { chapterName: "الفصل الثامن" },
+    { ch: "g6c8", lesson: "1", title: "فشل أنموذج رذرفورد وفرضيات بور" },
+    { ch: "g6c8", lesson: "2", title: "طيف ذرّة الهيدروجين وسلاسله" },
+    { ch: "g6c8", lesson: "3", title: "الأنطياف وأنواعها" },
+    { ch: "g6c8", lesson: "4", title: "الأشعة السينية" },
+    { ch: "g6c8", lesson: "5", title: "تأثير كومبتن" },
+    { ch: "g6c8", lesson: "6", title: "الليزر — التسمية والخصائص وآلية العمل" },
+    { ch: "g6c8", lesson: "7", title: "التوزيع المعكوس ومكونات الليزر ومنظوماته" },
+    { ch: "g6c8", lesson: "8", title: "أنواع الليزر وتطبيقاته" },
+    { chapterName: "الفصل التاسع" },
+    { ch: "g6c9", lesson: "1", title: "نموذج النواة وتركيبها وخصائصها" },
+    { ch: "g6c9", lesson: "2", title: "طاقة الربط النووية" },
+    { ch: "g6c9", lesson: "3", title: "انحلال ألفا" },
+    { ch: "g6c9", lesson: "4", title: "انحلال بيتا وكاما" },
+    { ch: "g6c9", lesson: "5", title: "التفاعلات النووية" },
+    { ch: "g6c9", lesson: "6", title: "الانشطار النووي" },
+    { ch: "g6c9", lesson: "7", title: "الاندماج النووي" },
+    { ch: "g6c9", lesson: "8", title: "مخاطر وفوائد الإشعاع النووي" }
+  ];
+
+  var PIN_KEY = "shararah_activities_pin";
+
+  // نفس توحيد الأرقام المستخدم بصفحات الأنشطة: ٢٠٢٦ و 2026 سيّان.
+  function normalize(s) {
+    return (s || "")
+      .replace(/[٠-٩]/g, function (d) { return String.fromCharCode(d.charCodeAt(0) - 0x0660 + 48); })
+      .replace(/[۰-۹]/g, function (d) { return String.fromCharCode(d.charCodeAt(0) - 0x06F0 + 48); })
+      .replace(/\s+/g, "")
+      .toLowerCase();
+  }
+
+  function activityUrl(item) {
+    // location.origin يخلي الروابط تشتغل محلياً وعلى الموقع المنشور بلا تعديل.
+    return location.origin + "/chapters/" + item.ch + "/lesson" + item.lesson +
+      "-activity.html?p=" + encodeURIComponent(CLASS_PASSWORD);
+  }
+
+  // رابط المعاينة فقط (زر 👁): يضيف preview=1 فيتخطى شاشة الاسم بالكامل ويدخل
+  // الأسئلة مباشرة بلا إرسال نتيجة — للأستاذ يراجع المحتوى بلا اسم وهمي ولا
+  // تلويث لجدول الدرجات. رابطا الواتساب والنسخ يبقيان بلا هذا الترميز عمداً.
+  function previewUrl(item) {
+    return activityUrl(item) + "&preview=1";
+  }
+
+  function waHref(item) {
+    var msg = "📚 نشاط منزلي — " + item.title +
+      "\nافتح الرابط وجاوب على الأسئلة، والنتيجة راح توصلني تلقائياً:\n" + activityUrl(item);
+    // رقم فاضي عمداً: يفتح منتقي المحادثات بدل رقم ثابت.
+    return "https://wa.me/?text=" + encodeURIComponent(msg);
+  }
+
+  function keyOf(item) { return item.ch + ":" + item.lesson; }
+
+  function render() {
+    var host = document.getElementById("actList");
+    host.innerHTML = "";
+    ACTIVITIES.forEach(function (item) {
+      if (item.chapterName) {
+        var head = document.createElement("div");
+        head.className = "act-chapter-head";
+        head.setAttribute("data-chapter", "1");
+        head.textContent = "📖 " + item.chapterName;
+        host.appendChild(head);
+        return;
+      }
+      var row = document.createElement("div");
+      row.className = "act-row";
+      row.setAttribute("data-title", item.title);
+      row.setAttribute("data-key", keyOf(item));
+      row.innerHTML =
+        '<div class="act-title">درس ' + item.lesson + ' — ' + item.title + "</div>" +
+        '<div class="act-btns">' +
+          '<button type="button" class="btn ghost small" data-copy="' + keyOf(item) + '">📋 نسخ الرابط</button>' +
+          '<a class="btn ghost small" target="_blank" rel="noopener noreferrer" href="' + waHref(item) + '">📱 واتساب</a>' +
+          '<a class="btn ghost small" target="_blank" rel="noopener noreferrer" href="' + previewUrl(item) + '">👁 معاينة</a>' +
+        "</div>";
+      host.appendChild(row);
+    });
+
+    host.addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-copy]");
+      if (!btn) return;
+      var item = ACTIVITIES.find(function (a) { return !a.chapterName && keyOf(a) === btn.dataset.copy; });
+      if (!item) return;
+      var url = activityUrl(item);
+      function done() {
+        var old = btn.textContent;
+        btn.textContent = "✅ تم النسخ";
+        setTimeout(function () { btn.textContent = old; }, 1600);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, function () { window.prompt("انسخ الرابط:", url); });
+      } else {
+        window.prompt("انسخ الرابط:", url);
+      }
+    });
+
+    document.getElementById("pwEcho").textContent = CLASS_PASSWORD;
+
+    document.getElementById("actSearch").addEventListener("input", function () {
+      applyFilter(this.value);
+    });
+  }
+
+  // فلترة بسيطة بالاسم: تخفي الصفوف غير المطابقة، وتخفي عنوان الفصل لو ما تبقّى تحته شي.
+  function applyFilter(query) {
+    var q = (query || "").trim().toLowerCase();
+    var host = document.getElementById("actList");
+    var nodes = Array.prototype.slice.call(host.children);
+    var currentHead = null, currentHeadHasVisible = false;
+
+    function closeGroup() {
+      if (currentHead) currentHead.style.display = currentHeadHasVisible ? "" : "none";
+    }
+
+    nodes.forEach(function (node) {
+      if (node.hasAttribute("data-chapter")) {
+        closeGroup();
+        currentHead = node;
+        currentHeadHasVisible = false;
+        return;
+      }
+      var match = !q || node.getAttribute("data-title").toLowerCase().indexOf(q) !== -1;
+      node.style.display = match ? "" : "none";
+      if (match) currentHeadHasVisible = true;
+    });
+    closeGroup();
+  }
+
+  function showMain() {
+    document.getElementById("pinScreen").style.display = "none";
+    document.getElementById("mainScreen").style.display = "block";
+    render();
+  }
+
+  function tryEnter() {
+    var val = document.getElementById("teacherPin").value;
+    if (normalize(val) !== normalize(TEACHER_PIN)) {
+      document.getElementById("pinMsg").textContent = "رمز الحماية غير صحيح";
+      return;
+    }
+    localStorage.setItem(PIN_KEY, "1");
+    showMain();
+  }
+
+  document.getElementById("pinSubmit").addEventListener("click", tryEnter);
+  document.getElementById("teacherPin").addEventListener("keydown", function (e) {
+    if (e.key === "Enter") tryEnter();
+  });
+  document.getElementById("logoutLink").addEventListener("click", function (e) {
+    e.preventDefault();
+    localStorage.removeItem(PIN_KEY);
+    location.reload();
+  });
+
+  if (localStorage.getItem(PIN_KEY) === "1") showMain();
+})();
+</script>
+</body>
+</html>

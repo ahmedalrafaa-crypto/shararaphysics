@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نشاط منزلي — الدرس 1: مقدمة والمقدار المؤثر للتيار المتناوب — السادس العلمي</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="activityRoot"></div>
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var ACTIVITY = {
+  ch: "g6c3",
+  lesson: "1",
+  title: "مقدمة والمقدار المؤثر للتيار المتناوب",
+  // نفس أسئلة "اختبر نفسك" الموجودة بنهاية الدرس (lesson1.html) — إعادة استخدام بدل التكرار.
+  questions: [
+  { q: "ما العلاقة الصحيحة اللي تمثّل تياراً متناوباً أعظمه I_m وتردده الزاوي ω؟",
+    opts: ["I = I_m sin(ωt)", "I = I_m cos(ω/t)", "I = I_m / sin(ωt)", "I = I_m × ωt"], a: 0,
+    why: "التيار المتناوب دالة جيبية بالزمن: I = I_m sin(ωt)، حيث ω = 2πf." },
+  { q: "كم مرة ينعكس اتجاه التيار المتناوب بالعراق (f=50Hz) خلال ثانية واحدة؟",
+    opts: ["50 مرة", "100 مرة", "25 مرة", "314 مرة"], a: 1,
+    why: "ينعكس اتجاه التيار مرتين كل دورة (عند القمة الموجبة والسالبة)، فيكون العدد 2×50=100 مرة بالثانية." },
+  { q: "ماذا يمثّل مسقط متجه الطور الدوّار على المحور الشاقولي بأي لحظة؟",
+    opts: ["التردد f", "زاوية الطور فقط", "القيمة الآنية للفولطية أو التيار", "المقاومة R"], a: 2,
+    why: "مسقط متجه الطور (طوله V_m أو I_m) على المحور الشاقولي يعطي بالضبط القيمة الآنية بتلك اللحظة." },
+  { q: "تيار متناوب أعظمه I_m=8A. ما مقداره المؤثر؟",
+    opts: [ "4 A", "8 A", "11.3 A","5.66 A"], a: 3,
+    why: "I_eff = I_m/√2 = 8/1.414 ≈ 5.66 A." },
+  { q: "فولطية مؤثرة قراءتها على الفولتميتر 220V. ما القيمة العظمى الحقيقية لهذه الفولطية؟",
+    opts: [ "311 V", "155.6 V","220 V", "440 V"], a: 0,
+    why: "V_m = √2 × V_eff = 1.414 × 220 ≈ 311 V." },
+  { q: "مصدر فولطية متناوبة معطى بالعلاقة V = 311 sin(314t). ما مقدارها المؤثر؟",
+    opts: ["311 V", "220 V", "155.5 V", "440 V"], a: 1,
+    why: "V_eff = V_m/√2 = 311/1.414 ≈ 220 V — نفس فولطية البيت المعروفة." }
+]
+};
+</script>
+<script src="../../js/activity.js"></script>
+</body>
+</html>

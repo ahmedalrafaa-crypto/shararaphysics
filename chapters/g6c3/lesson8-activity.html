@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نشاط منزلي — الدرس 8: ربط التوازي R-L-C — السادس العلمي</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="activityRoot"></div>
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var ACTIVITY = {
+  ch: "g6c3",
+  lesson: "8",
+  title: "ربط التوازي R-L-C",
+  // نفس أسئلة "اختبر نفسك" الموجودة بنهاية الدرس (lesson8.html) — إعادة استخدام بدل التكرار.
+  questions: [
+  { q: "بربط التوازي RLC، أي كمية تكون نفسها عبر كل العناصر؟",
+    opts: [ "المقاومة R فقط", "التيار الكلي I_T","الفولطية V", "لا شيء مشترك بينها"], a: 2,
+    why: "بالتوازي، الفولطية نفسها عبر كل الفروع V_R=V_L=V_C=V، بعكس التوالي حيث التيار هو المشترك." },
+  { q: "ما قانون التيار الرئيس I_T بربط التوازي؟",
+    opts: [ "I_T = I_R × I_L × I_C", "I_T = I_R + I_L + I_C", "I_T² = I_R² + I_L² + I_C²","I_T² = I_R² + (I_C−I_L)²"], a: 3,
+    why: "نجمع تيارات الفروع متجهياً: I_R مرجع، و(I_C−I_L) هو المحصّلة الشاقولية، فـI_T هو وتر المثلث الناتج." },
+  { q: "دائرة توازي: I_R=3A، I_C=8A، I_L=12A. جد I_T.",
+    opts: ["5 A", "23 A", "17 A", "1 A"], a: 0,
+    why: "I_T = √(I_R² + (I_C−I_L)²) = √(3² + (8−12)²) = √(9+16) = √25 = 5 A." },
+  { q: "بنفس الدائرة أعلاه (I_L=12A أكبر من I_C=8A)، ما خواص الدائرة؟",
+    opts: [ "سعوية، لأن I_L أكبر","حثّية، لأن تيار فرع المحث أكبر من تيار فرع المتسعة", "أومية صرفة", "لا يمكن تحديد ذلك من التيارات"], a: 1,
+    why: "بالتوازي: I_L>I_C ⟹ الدائرة حثّية الخواص (عكس اتجاه المقارنة بالتوالي تماماً)." },
+  { q: "بدائرة توالية، الحكم على نوع الدائرة يعتمد على مقارنة X_L بـX_C مباشرة. بدائرة توازي، على أي كمية تعتمد المقارنة بدلاً من ذلك؟",
+    opts: [ "مقارنة R بـZ فقط", "نفس مقارنة X_L وX_C بالضبط وبنفس الاتجاه","مقارنة تيار فرع المحث I_L بتيار فرع المتسعة I_C (باتجاه معاكس تماماً لقاعدة التوالي)", "لا توجد أي طريقة للتفريق بينهما بالتوازي"], a: 2,
+    why: "بالتوازي، I=V/X علاقة عكسية، فالفرع ذو الرادة الأصغر يسحب التيار الأكبر — لذا ينعكس اتجاه المقارنة عن التوالي." },
+  { q: "دائرة توازي فرق جهدها 240V، وتياراتها I_R=3A، I_C=8A، I_L=12A (فـI_T=5A). ما الممانعة الكلية Z؟",
+    opts: [ "1200 Ω", "80 Ω", "28.8 Ω","48 Ω"], a: 3,
+    why: "Z = V/I_T = 240/5 = 48 Ω." }
+]
+};
+</script>
+<script src="../../js/activity.js"></script>
+</body>
+</html>

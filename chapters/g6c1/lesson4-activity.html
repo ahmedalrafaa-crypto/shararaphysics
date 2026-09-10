@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نشاط منزلي — الدرس 4: العوامل المؤثرة في سعة المتسعة — السادس العلمي</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="activityRoot"></div>
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var ACTIVITY = {
+  ch: "g6c1",
+  lesson: "4",
+  title: "العوامل المؤثرة في سعة المتسعة",
+  // نفس أسئلة "اختبر نفسك" الموجودة بنهاية الدرس (lesson4.html) — إعادة استخدام بدل التكرار.
+  questions: [
+  { q: "أيّ العلاقات صحيحة لسعة المتسعة ذات الصفيحتين المتوازيتين؟",
+    opts: ["C = kε₀A/d", "C = kε₀d/A", "C = ε₀Ad", "C = A/(kε₀d)"], a: 0,
+    why: "C = kε₀A/d — طردية مع المساحة A وثابت العزل k، عكسية مع البعد d." },
+  { q: "متسعة سعتها C قُرّبت صفيحتاها حتى صار البعد بينهما ⅓ ما كان. سعتها الجديدة تساوي:",
+    opts: ["C/9", "C/3", "3C", "9C"], a: 2,
+    why: "C تتناسب عكسياً مع البعد d؛ فإذا صار d ← d/3 تصبح السعة 3C." },
+  { q: "إذا ضاعفنا المساحة المتقابلة لصفيحتي متسعة وأبقينا كل شيء آخر ثابتاً، فإن السعة:",
+    opts: ["تتضاعف", "تصبح نصفاً", "لا تتغيّر", "تصبح ربعاً"], a: 0,
+    why: "C ∝ A؛ مضاعفة المساحة تضاعف السعة." },
+  { q: "علّل: يُحدَّد أقصى فرق جهد تعمل عنده المتسعة.",
+    opts: ["لأن السعة تتغيّر مع الجهد", "لتجنّب الانهيار الكهربائي للعازل وتفريغ المتسعة من شحنتها", "لأن البطارية تتلف", "لتصغير حجمها"], a: 1,
+    why: "زيادة الجهد تزيد المجال حتى يخترق شرارةٌ العازلَ فتتفرّغ المتسعة وتتلف." },
+  { q: "أيّ العوامل التالية لا يؤثّر في سعة متسعة معيّنة؟",
+    opts: ["المساحة A", "البعد d", "نوع العازل k", "فرق الجهد المسلَّط ΔV"], a: 3,
+    why: "السعة صفة هندسية تعتمد على A و d و k فقط؛ ΔV لا يظهر في القانون ولا يغيّر السعة." }
+]
+};
+</script>
+<script src="../../js/activity.js"></script>
+</body>
+</html>

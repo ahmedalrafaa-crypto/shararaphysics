@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نشاط منزلي — الدرس 6: عامل القدرة والقدرة المستهلكة — السادس العلمي</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="activityRoot"></div>
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var ACTIVITY = {
+  ch: "g6c3",
+  lesson: "6",
+  title: "عامل القدرة والقدرة المستهلكة",
+  // نفس أسئلة "اختبر نفسك" الموجودة بنهاية الدرس (lesson6.html) — إعادة استخدام بدل التكرار.
+  questions: [
+  { q: "ما الفرق بين القدرة الحقيقية P_real والقدرة الظاهرية P_app؟",
+    opts: [ "P_app أكبر من P_real دائماً بمقدار ثابت 90 واط", "لا فرق، متساويتان دائماً بكل دائرة","P_real هي المستهلكة فعلاً بالمقاومة (P_real=I V_T cosΦ)، وP_app=I V_T بلا اعتبار لفرق الطور", "P_real تقاس بـV·A وP_app تقاس بـW"], a: 2,
+    why: "القدرة الحقيقية تراعي زاوية الطور (تُضرب بـcosΦ) لأنها المستهلكة فعلاً بالمقاومة، بينما الظاهرية هي حاصل ضرب I×V_T مباشرة بلا اعتبار للطور." },
+  { q: "ما قانون عامل القدرة pf؟",
+    opts: [ "pf = tan Φ", "pf = sin Φ = X/Z", "pf = Z/R","pf = cos Φ = R/Z"], a: 3,
+    why: "عامل القدرة هو نسبة القدرة الحقيقية للظاهرية، ويساوي cosΦ = R/Z." },
+  { q: "دائرة مقاومتها R=30Ω وممانعتها Z=50Ω. ما عامل القدرة؟",
+    opts: ["0.6", "0.3", "1.67", "50"], a: 0,
+    why: "pf = R/Z = 30/50 = 0.6." },
+  { q: "بمقاومة صرفة (R فقط، بلا محث أو متسعة)، ما مقدار عامل القدرة؟",
+    opts: [ "0","1 (كل القدرة الظاهرية تُستهلك فعلاً)", "0.5", "يعتمد على قيمة R"], a: 1,
+    why: "بمقاومة صرفة Φ=0°، وpf=cos0°=1 — أعلى عامل قدرة ممكن." },
+  { q: "بمحث صرف أو متسعة صرفة (بلا مقاومة)، ما مقدار عامل القدرة ولماذا؟",
+    opts: [ "0.5 دائماً بكل الحالات", "1، تماماً مثل المقاومة","0، لأن Φ=90° وcos90°=0", "يعتمد على قيمة L أو C فقط"], a: 2,
+    why: "بمحث أو متسعة صرفة Φ=90°، وcos90°=0، أي لا استهلاك حقيقي للقدرة إطلاقاً رغم مرور تيار." },
+  { q: "ملف رُبط بمصدر V_T=100V فمرّ به تيار I=5A بزاوية طور Φ=37° (cos37°=0.8). ما مقاومة الملف R؟",
+    opts: [ "80 Ω", "20 Ω", "12.5 Ω","16 Ω"], a: 3,
+    why: "Z=V_T/I=100/5=20Ω، ثم من pf=cosΦ=R/Z: R=Z×cosΦ=20×0.8=16Ω." }
+]
+};
+</script>
+<script src="../../js/activity.js"></script>
+</body>
+</html>
