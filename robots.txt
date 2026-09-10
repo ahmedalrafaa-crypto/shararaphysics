@@ -3,5 +3,6 @@ Allow: /
 Disallow: /admin.html
 Disallow: /visits.html
 Disallow: /report-demo.html
+Disallow: /assets/logo-maker.html
 
 Sitemap: https://shararaphysics.netlify.app/sitemap.xml

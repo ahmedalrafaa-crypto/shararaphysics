@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://shararaphysics.netlify.app/</loc></url>
-  <url><loc>https://shararaphysics.netlify.app/chapters/ch0/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/subscribe</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/analysis/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/mock-exam-g3/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/mock-exam-g6/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/predictions/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/predictions-g6/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/search/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/weird-questions/</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch0/</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch0/lesson1</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch0/lesson2</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch0/lesson3</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch0/lesson4</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch0/lesson5</loc></url>
-  <url><loc>https://shararaphysics.netlify.app/chapters/ch1/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch0/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch0/review</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch1/</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch1/lesson1</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch1/lesson2</loc></url>
@@ -17,7 +25,8 @@
   <url><loc>https://shararaphysics.netlify.app/chapters/ch1/lesson5</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch1/lesson6</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch1/lesson7</loc></url>
-  <url><loc>https://shararaphysics.netlify.app/chapters/ch2/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch1/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch1/review</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch2/</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch2/lesson1</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch2/lesson2</loc></url>
@@ -25,7 +34,8 @@
   <url><loc>https://shararaphysics.netlify.app/chapters/ch2/lesson4</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch2/lesson5</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch2/lesson6</loc></url>
-  <url><loc>https://shararaphysics.netlify.app/chapters/ch3/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch2/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch2/review</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch3/</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch3/lesson1</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch3/lesson2</loc></url>
@@ -35,7 +45,8 @@
   <url><loc>https://shararaphysics.netlify.app/chapters/ch3/lesson6</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch3/lesson7</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch3/lesson8</loc></url>
-  <url><loc>https://shararaphysics.netlify.app/chapters/ch4/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch3/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch3/review</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch4/</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch4/lesson1</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch4/lesson2</loc></url>
@@ -44,7 +55,8 @@
   <url><loc>https://shararaphysics.netlify.app/chapters/ch4/lesson5</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch4/lesson6</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch4/lesson7</loc></url>
-  <url><loc>https://shararaphysics.netlify.app/chapters/ch5/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch4/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch4/review</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch5/</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch5/lesson1</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch5/lesson2</loc></url>
@@ -54,7 +66,8 @@
   <url><loc>https://shararaphysics.netlify.app/chapters/ch5/lesson6</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch5/lesson7</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch5/lesson8</loc></url>
-  <url><loc>https://shararaphysics.netlify.app/chapters/ch6/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch5/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch5/review</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch6/</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch6/lesson1</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch6/lesson2</loc></url>
@@ -64,7 +77,8 @@
   <url><loc>https://shararaphysics.netlify.app/chapters/ch6/lesson6</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch6/lesson7</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch6/lesson8</loc></url>
-  <url><loc>https://shararaphysics.netlify.app/chapters/ch7/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch6/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch6/review</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch7/</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch7/lesson1</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch7/lesson2</loc></url>
@@ -74,7 +88,8 @@
   <url><loc>https://shararaphysics.netlify.app/chapters/ch7/lesson6</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch7/lesson7</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch7/lesson8</loc></url>
-  <url><loc>https://shararaphysics.netlify.app/chapters/ch8/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch7/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch7/review</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch8/</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch8/lesson1</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch8/lesson2</loc></url>
@@ -84,7 +99,8 @@
   <url><loc>https://shararaphysics.netlify.app/chapters/ch8/lesson6</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch8/lesson7</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch8/lesson8</loc></url>
-  <url><loc>https://shararaphysics.netlify.app/chapters/ch9/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch8/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch8/review</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch9/</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch9/lesson1</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch9/lesson2</loc></url>
@@ -94,6 +110,173 @@
   <url><loc>https://shararaphysics.netlify.app/chapters/ch9/lesson6</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch9/lesson7</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/ch9/lesson8</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch9/exam</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/ch9/review</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c1/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c1/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c1/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c1/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c1/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c2/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c2/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c2/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c2/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c3/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c3/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c3/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c3/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c3/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c4/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c4/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c4/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c4/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c5/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c5/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c5/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g1c5/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c1/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c1/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c1/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c1/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c1/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c2/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c2/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c2/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c2/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c3/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c3/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c3/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c3/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c4/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c4/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c4/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c4/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c5/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c5/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c5/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c5/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c6/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c6/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c6/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c6/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g2c6/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c1/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c1/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c1/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c1/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c1/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c1/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c1/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c2/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c2/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c2/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c2/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c2/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c2/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c3/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c3/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c3/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c3/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c3/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c3/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c3/lesson6</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c3/lesson7</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c3/lesson8</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c3/lesson9</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c3/lesson10</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c3/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c5/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c5/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c5/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c5/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c5/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c5/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c5/lesson6</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c5/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c6/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c6/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c6/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c6/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c6/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c6/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c6/lesson6</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c6/lesson7</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c6/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c7/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c7/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c7/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c7/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c7/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c7/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c7/lesson6</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c7/lesson7</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c7/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c9/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c9/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c9/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c9/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c9/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c9/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c9/lesson6</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c9/lesson7</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g4c9/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c1/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c1/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c1/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c1/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c1/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c1/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c1/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c10/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c10/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c10/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c10/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c10/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c10/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c10/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c2/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c2/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c2/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c2/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c2/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c2/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c2/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c3/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c3/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c3/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c3/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c3/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c3/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c3/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c4/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c4/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c4/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c4/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c4/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c4/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c4/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c5/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c5/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c5/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c5/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c5/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c5/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c5/lesson6</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c5/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c7/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c7/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c7/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c7/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c7/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c7/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c7/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c9/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c9/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c9/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c9/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c9/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c9/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g5c9/questions</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/g6c1/</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/g6c1/lesson1</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/g6c1/lesson2</loc></url>
@@ -104,6 +287,7 @@
   <url><loc>https://shararaphysics.netlify.app/chapters/g6c1/lesson7</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/g6c1/lesson8</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/g6c1/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c1/review</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/g6c2/</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/g6c2/lesson1</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/g6c2/lesson2</loc></url>
@@ -114,8 +298,90 @@
   <url><loc>https://shararaphysics.netlify.app/chapters/g6c2/lesson7</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/g6c2/lesson8</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/g6c2/lesson9</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c2/lesson10</loc></url>
   <url><loc>https://shararaphysics.netlify.app/chapters/g6c2/questions</loc></url>
-  <url><loc>https://shararaphysics.netlify.app/predictions/</loc></url>
-  <url><loc>https://shararaphysics.netlify.app/analysis/</loc></url>
-  <url><loc>https://shararaphysics.netlify.app/subscribe</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c2/review</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c3/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c3/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c3/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c3/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c3/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c3/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c3/lesson6</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c3/lesson7</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c3/lesson8</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c3/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c3/review</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c4/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c4/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c4/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c4/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c4/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c4/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c4/lesson6</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c4/lesson7</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c4/lesson8</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c4/lesson9</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c4/lesson10</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c4/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c4/review</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c5/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c5/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c5/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c5/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c5/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c5/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c5/lesson6</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c5/lesson7</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c5/lesson8</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c5/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c5/review</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/lesson6</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/lesson7</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/lesson8</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/lesson9</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/lesson10</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/lesson11</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/lesson12</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c6/review</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c7/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c7/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c7/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c7/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c7/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c7/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c7/lesson6</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c7/lesson7</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c7/lesson8</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c7/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c7/review</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c8/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c8/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c8/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c8/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c8/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c8/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c8/lesson6</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c8/lesson7</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c8/lesson8</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c8/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c8/review</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c9/</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c9/lesson1</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c9/lesson2</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c9/lesson3</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c9/lesson4</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c9/lesson5</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c9/lesson6</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c9/lesson7</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c9/lesson8</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c9/questions</loc></url>
+  <url><loc>https://shararaphysics.netlify.app/chapters/g6c9/review</loc></url>
 </urlset>
