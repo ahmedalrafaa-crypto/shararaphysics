@@ -1,105 +1,99 @@
 /* ============================================================
-   الصفحة الرئيسية لمنصة شرارة — هوية بصرية جديدة
+   الصفحة الرئيسية لمنصة شرارة — الهوية البصرية الثانية
+   (خريف 2026): بطاقة واحدة بدل الفوضى اللونية، شريط تبويبات
+   للمراحل، وبانر توقعات/أدوات يتغيّر حسب المرحلة.
    يُربط هذا الملف من index.html فقط، وكل قاعدة هنا مقيّدة
    بـ body.home كي لا تؤثر إطلاقاً على أي صفحة أخرى بالموقع
    (باقي الموقع يستمر يستخدم css/style.css بدون أي تغيير).
    ============================================================ */
 
 body.home {
-  /* خلفية وسطوح ونص */
-  --bg: #FAF7F1;              /* خلفية عاجية دافئة */
-  --card: #FFFFFF;            /* بطاقات بيضاء نظيفة */
-  --ink: #33302C;             /* نص فحمي دافئ بدل الأسود القاسي */
-  --ink-soft: #6B6660;
-  --hairline: rgba(51, 48, 44, 0.10);
+  --ink: #101a33;
+  --ink-2: #1c2a4d;
+  --ink-3: #0b1226;
+  --accent: #e2542f;
+  --accent-dk: #c2410c;
+  --accent-soft: #fdeade;
+  --accent-ink: #9a3412;
+  --muted: #5c6580;
+  --muted-2: #8a93a6;
+  --muted-3: #6b7689;
+  --slate: #475569;
+  --line: #e4e8ef;
+  --line-2: #dfe4ec;
+  --surface: #ffffff;
+  --bg: #f4f6f9;
+  --soft: #f1f4f9;
+  --track: #eef1f6;
+  --free-bg: #e8f6f1; --free-bd: #bfe3d7; --free-ink: #134e42;
+  --wa: #25d366; --wa-ink: #06331a;
+  --on-dark: #b9c4da; --on-dark-2: #a9b6cd; --on-dark-3: #9fadc9;
+  --on-dark-4: #8d9bb5; --on-dark-5: #c7d2e6; --on-dark-6: #dbe3f2; --on-dark-7: #e6ecf7;
 
-  /* الألوان الأساسية — نفس أسماء المتغيرات المستخدمة بكل مكوّنات
-     الموقع الحالية (الأزرار، البطاقات، أشرطة التقدم...) فتتلوّن
-     تلقائياً بالهوية الجديدة بلا إعادة كتابة كل قاعدة */
-  --violet: #0F9488;          /* تركوازي — اللون الأساسي */
-  --violet-deep: #0B7A6F;     /* تركوازي غامق — hover وعناوين */
-  --blue: #0C87B8;            /* أزرق سماوي */
-  --teal: #38BDF8;            /* أزرق كهربائي فاتح */
+  --r-pill: 999px; --r-sm: 8px; --r-md: 11px; --r-lg: 16px; --r-xl: 20px;
+  --sh-card: 0 8px 24px rgba(16, 26, 51, .07);
+  --sh-cta: 0 6px 18px rgba(226, 84, 47, .28);
 
-  /* تأكيد محدود فقط — أزرار رئيسية بارزة + تنبيهات، وليس لوناً عاماً */
-  --coral: #FF7A5C;
-
-  --radius: 20px;
-  --shadow: 0 8px 24px rgba(15, 148, 136, 0.08);
-  --shadow-lift: 0 16px 36px rgba(15, 148, 136, 0.14);
+  background: var(--bg);
+  color: var(--ink);
 }
+body.home::before, body.home::after { content: none; }
 
-/* حتى لا يختفي عنوان القسم خلف الشريط العلوي الثابت عند التمرير السلس */
-body.home [id] { scroll-margin-top: 90px; }
-
-/* أشكال الخلفية الضبابية: نُبقيها كلمسة هوية خفيفة لكن أخفّ كثيراً
-   كي تبقى لطيفة فوق الخلفية العاجية بدل أن "توحّل" اللون */
-body.home::before, body.home::after { opacity: .13; }
-
-/* إيقاع مسافات ثابت بين كل الأقسام الرئيسية — يمنع تلاصق البطاقات */
-body.home .wrap > .hero,
-body.home .wrap > .features-bar,
-body.home .wrap > section,
-body.home .wrap > footer.site {
-  margin-top: 64px;
+body.home .wrap {
+  max-width: 1140px; padding: 0 20px 0; margin: 0 auto;
 }
-body.home .wrap > .hero { margin-top: 28px; }
-body.home section > .section-title:first-child { margin-top: 0; }
-
-/* حالات focus واضحة لكل عنصر قابل للنقر */
+body.home [id] { scroll-margin-top: 76px; }
 body.home .btn:focus-visible,
 body.home a:focus-visible,
 body.home button:focus-visible {
-  outline: 3px solid var(--teal);
-  outline-offset: 2px;
+  outline: 3px solid var(--ink); outline-offset: 2px;
 }
 
 /* ============================================================
-   1) الشريط العلوي الثابت + قائمة الهاتف
+   1) الشريط العلوي الثابت
    ============================================================ */
 body.home .home-nav {
   position: sticky; top: 0; z-index: 40;
-  background: rgba(250, 247, 241, .92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--hairline);
+  background: rgba(244, 246, 249, .92);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
 }
 body.home .home-nav-inner {
-  position: relative;
-  max-width: 880px; margin: 0 auto; padding: 14px 18px;
-  display: flex; align-items: center; gap: 16px;
+  position: relative; max-width: 1140px; margin: 0 auto;
+  padding: 12px 20px; display: flex; align-items: center; gap: 20px;
 }
 body.home .home-nav-brand {
-  display: flex; align-items: center; gap: 8px;
-  font-weight: 900; font-size: 1.05rem; color: var(--violet-deep);
-  text-decoration: none;
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 900; font-size: 17px; color: var(--ink); text-decoration: none;
 }
-body.home .home-nav-logo {
-  width: 34px; height: 34px; border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(15, 148, 136, .25);
-}
+body.home .home-nav-logo { width: 34px; height: 34px; border-radius: 10px; object-fit: contain; box-shadow: none; }
 body.home .home-nav-links {
-  display: flex; align-items: center; gap: 22px;
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
   margin-inline-start: auto;
 }
 body.home .home-nav-links a:not(.btn) {
-  color: var(--ink); text-decoration: none; font-weight: 700; font-size: .93rem;
-  padding: 6px 2px; border-bottom: 2px solid transparent;
-  transition: color .15s, border-color .15s;
+  color: var(--slate); text-decoration: none; font-weight: 600; font-size: 14px;
+  padding: 8px 12px; border-radius: var(--r-sm); white-space: nowrap;
+  border: 1px solid transparent; transition: background .15s, color .15s;
+}
+body.home .home-nav-links a.home-nav-search {
+  color: var(--ink); font-weight: 700; border-color: var(--line);
 }
 body.home .home-nav-links a:not(.btn):hover,
 body.home .home-nav-links a:not(.btn):focus-visible {
-  color: var(--violet-deep); border-color: var(--violet);
+  background: var(--soft); color: var(--ink);
 }
+body.home .home-nav-links .btn {
+  background: var(--ink); color: #fff; font-weight: 700; font-size: 14px;
+  padding: 9px 16px; border-radius: var(--r-sm); box-shadow: none;
+}
+body.home .home-nav-links .btn:hover { background: var(--ink-2); transform: none; box-shadow: none; }
 body.home .home-nav-toggle {
   display: none; flex-direction: column; justify-content: center; gap: 4px;
   width: 40px; height: 40px; border: none; background: none; cursor: pointer;
   margin-inline-start: auto; padding: 0;
 }
-body.home .home-nav-toggle span {
-  width: 100%; height: 2.5px; background: var(--ink); border-radius: 2px;
-  transition: transform .2s, opacity .2s;
-}
+body.home .home-nav-toggle span { width: 100%; height: 2.5px; background: var(--ink); border-radius: 2px; transition: transform .2s, opacity .2s; }
 body.home .home-nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 body.home .home-nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 body.home .home-nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
@@ -108,206 +102,335 @@ body.home .home-nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: 
   body.home .home-nav-toggle { display: flex; }
   body.home .home-nav-links {
     position: absolute; inset-inline: 0; top: 100%;
-    background: var(--card); border-bottom: 1px solid var(--hairline);
-    flex-direction: column; align-items: stretch; gap: 0;
-    padding: 6px 18px 16px;
-    max-height: 0; overflow: hidden; opacity: 0;
+    background: var(--surface); border-bottom: 1px solid var(--line);
+    flex-direction: column; align-items: stretch; gap: 2px;
+    padding: 10px 18px 16px; max-height: 0; overflow: hidden; opacity: 0;
     transition: max-height .25s ease, opacity .2s ease;
   }
-  body.home .home-nav-links.open { max-height: 320px; opacity: 1; }
-  body.home .home-nav-links a:not(.btn) { padding: 12px 4px; border-bottom: 1px solid var(--hairline); }
+  body.home .home-nav-links.open { max-height: 360px; opacity: 1; }
+  body.home .home-nav-links a:not(.btn) { padding: 12px 4px; border-radius: 0; border-bottom: 1px solid var(--line); }
   body.home .home-nav-links .btn { margin-top: 10px; text-align: center; }
 }
 
 /* ============================================================
-   2) Hero — بطاقة بيضاء بدل التدرّج الملوّن الداكن
+   2) Hero
    ============================================================ */
 body.home .hero.with-photo {
-  display: flex; align-items: center; gap: 36px;
-  background: var(--card); color: var(--ink);
-  border: 1px solid var(--hairline); box-shadow: var(--shadow);
+  display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(240px, 1fr);
+  gap: 32px; align-items: center;
+  padding: 44px 0 8px; margin: 0; background: none; border: none; box-shadow: none; color: var(--ink);
 }
-body.home .hero.with-photo .chip { background: var(--violet-deep); color: #fff; backdrop-filter: none; }
-body.home .hero.with-photo p { opacity: 1; color: var(--ink-soft); }
-body.home .hero h1 .accent { color: var(--violet-deep); }
-body.home .hero-copy { flex: 1 1 auto; min-width: 0; }
-body.home .hero-cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 22px; }
-body.home .hero-cta { margin-top: 0; }
+body.home .hero.with-photo::before { content: none; }
+body.home .hero-copy { min-width: 0; }
+body.home .hero .chip {
+  display: inline-block; background: var(--accent-soft); color: var(--accent-ink);
+  font-weight: 700; font-size: 13px; padding: 6px 13px; border-radius: var(--r-pill);
+  backdrop-filter: none;
+}
+body.home .hero h1 {
+  font-size: clamp(30px, 4.4vw, 50px); line-height: 1.25; font-weight: 900;
+  letter-spacing: -.5px; margin: 16px 0 0; text-wrap: balance; color: var(--ink);
+}
+body.home .hero h1 .accent { color: var(--accent); }
+body.home .hero.with-photo p {
+  font-size: 17px; color: var(--muted); opacity: 1; max-width: 52ch; margin: 14px 0 0; text-wrap: pretty;
+}
+body.home .hero.with-photo p b { color: var(--ink); }
+body.home .hero-cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+body.home .hero-cta-row .btn { margin-top: 0; }
+
+body.home .hero-stats {
+  display: flex; gap: 26px; flex-wrap: wrap; margin-top: 26px; padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+body.home .hero-stat-num { font-size: 21px; font-weight: 900; color: var(--ink); }
+body.home .hero-stat-label { font-size: 13px; color: var(--muted-3); font-weight: 600; }
 
 body.home .hero-teacher-card {
-  flex-shrink: 0; width: 220px;
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  text-align: center; padding: 24px 18px;
-  background: var(--card); border: 1px solid var(--hairline);
-  border-radius: var(--radius); box-shadow: var(--shadow);
+  background: var(--ink); border-radius: var(--r-xl); padding: 22px; color: #fff;
+  text-align: center; box-shadow: none; width: auto;
 }
 body.home .hero-photo {
-  width: 120px; height: 120px;
-  border: 3px solid var(--violet);
-  box-shadow: 0 0 0 5px rgba(15, 148, 136, .12), 0 10px 24px rgba(15, 148, 136, .18);
-  background: var(--card);
+  width: 100%; aspect-ratio: 1 / 1; height: auto; border-radius: 14px;
+  object-fit: cover; background: var(--ink-2); border: none; box-shadow: none;
 }
-body.home .hero-teacher-badge {
-  display: inline-block; background: rgba(15, 148, 136, .12); color: var(--violet-deep);
-  font-size: .78rem; font-weight: 800; padding: 4px 14px; border-radius: 999px;
+body.home .hero-teacher-name { font-weight: 900; font-size: 18px; margin: 14px 0 0; }
+body.home .hero-teacher-line { color: var(--on-dark-3); font-size: 13px; font-weight: 700; margin: 4px 0 0; }
+body.home .hero-teacher-contact {
+  margin: 12px 0 0; font-size: 13px; background: var(--ink-2); border-radius: var(--r-sm);
+  padding: 8px; color: var(--on-dark-7);
 }
-body.home .hero-teacher-line { color: var(--ink-soft); font-size: .88rem; font-weight: 700; margin: 0; }
 
 @media (max-width: 760px) {
-  body.home .hero.with-photo { flex-direction: column; text-align: center; padding: 30px 22px; }
-  body.home .hero-teacher-card { width: 100%; max-width: 260px; }
-  body.home .hero-cta-row { justify-content: center; }
+  body.home .hero.with-photo { grid-template-columns: 1fr; text-align: center; padding: 30px 0 8px; }
+  body.home .hero.with-photo .hero-teacher-card { order: 2; max-width: 280px; margin: 26px auto 0; }
+  body.home .hero-cta-row, body.home .hero-stats { justify-content: center; }
+  body.home .hero.with-photo p { max-width: none; }
 }
 
 /* ============================================================
-   3) شريط المزايا
+   3) قسم المراحل
    ============================================================ */
-body.home .features-bar {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
-}
-body.home .feature-item {
-  background: var(--card); border: 1px solid var(--hairline); border-radius: var(--radius);
-  box-shadow: var(--shadow); padding: 22px 16px; text-align: center;
-}
-body.home .feature-item .fi-ico {
-  display: inline-grid; place-items: center; width: 52px; height: 52px;
-  border-radius: 16px; font-size: 1.5rem; margin-bottom: 10px;
-  background: linear-gradient(135deg, var(--violet), var(--blue)); color: #fff;
-}
-body.home .feature-item b { display: block; font-size: 1rem; margin-bottom: 4px; }
-body.home .feature-item p { color: var(--ink-soft); font-size: .84rem; margin: 0; }
+body.home #stages { padding: 40px 0 0; }
+body.home .stages-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+body.home .stages-head h2 { font-size: 24px; font-weight: 900; margin: 0; color: var(--ink); }
+body.home .stages-hint { color: var(--muted-3); font-size: 14px; }
 
-@media (max-width: 760px) { body.home .features-bar { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 460px) { body.home .features-bar { grid-template-columns: 1fr; } }
-
-/* ============================================================
-   4) قسم المراحل — بطاقات كبيرة بدل شريط التبويبات الصغير
-      (نفس منطق select(grade) الحالي، فقط شكل جديد)
-   ============================================================ */
 body.home .gradetabs {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-  background: none; padding: 0; box-shadow: none; margin-bottom: 0;
+  display: flex; gap: 8px; overflow-x: auto; padding: 0 0 6px; margin-bottom: 24px;
+  background: none; border-radius: 0; box-shadow: none;
 }
 body.home .gradetab {
-  flex-direction: row; align-items: center; justify-content: space-between;
-  background: var(--card); border: 2px solid var(--hairline);
-  border-radius: 18px; box-shadow: var(--shadow);
-  padding: 20px 22px; min-height: 74px;
-  font-size: 1.02rem; color: var(--ink);
-  transition: transform .15s, box-shadow .15s, border-color .15s;
+  flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 3px;
+  padding: 10px 16px; min-height: 56px; border-radius: 12px; text-align: start;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line-2);
+  box-shadow: none; transition: border-color .15s;
 }
-body.home .gradetab:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: var(--violet); color: var(--ink); }
-body.home .gradetab.active {
-  background: linear-gradient(135deg, var(--violet), var(--blue));
-  border-color: transparent; color: #fff;
-  box-shadow: 0 10px 26px rgba(15, 148, 136, .28);
+body.home .gradetab:hover { color: var(--ink); border-color: var(--ink); }
+body.home .gradetab.active,
+body.home .gradetab[data-grade="g6"].active {
+  background: var(--ink); color: #fff; border-color: var(--ink); box-shadow: none;
 }
-body.home .stage-name { font-weight: 800; }
-body.home .stage-badge {
-  font-size: .72rem; font-weight: 800; padding: 3px 12px; border-radius: 999px;
-  background: rgba(15, 148, 136, .12); color: var(--violet-deep);
-}
-body.home .gradetab.active .stage-badge { background: rgba(255, 255, 255, .25); color: #fff; }
-body.home .stage-badge--curriculum { background: rgba(255, 122, 92, .16); color: #C44A30; }
-body.home .gradetab.active .stage-badge--curriculum { background: rgba(255, 255, 255, .3); color: #fff; }
+body.home .stage-name { font-weight: 800; font-size: 15px; }
+body.home .stage-badge { font-size: 11px; font-weight: 700; opacity: .7; background: none; color: inherit; padding: 0; border-radius: 0; }
 
-@media (max-width: 640px) {
-  body.home .gradetabs { grid-template-columns: 1fr; }
-  body.home .gradetab { padding: 16px 18px; min-height: 60px; font-size: .95rem; }
-}
+@media (max-width: 620px) { body.home .gradetabs { display: flex; } }
 
 /* ============================================================
-   5) الدورات الإلكترونية / محاكي الامتحان — بطاقات فاتحة
-      بدل التدرّج الداكن (كحلي/أحمر داكن) الحالي
+   4) بانر التوقعات — g3/g6 فقط
    ============================================================ */
-body.home .courses-promo {
-  background: var(--card);
-  box-shadow: var(--shadow);
-  border: 1px solid var(--hairline);
+body.home .pred-promo {
+  margin: 0 0 28px; padding: 28px; background: var(--ink); border-radius: var(--r-xl); color: #fff;
+  display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(220px, 1fr); gap: 24px; align-items: center;
+  box-shadow: none;
 }
-body.home .courses-promo:hover { box-shadow: var(--shadow-lift); }
-body.home .courses-promo-bg { color: var(--violet); opacity: .07; }
-body.home .courses-promo-badge { background: var(--violet-deep); }
-body.home .courses-promo-inner h3,
-body.home .courses-promo-dialog-head h3 { color: var(--ink); }
-body.home .courses-promo-sub { color: var(--ink-soft); }
-body.home .courses-promo-pill { background: rgba(15, 148, 136, .10); color: var(--violet-deep); border: 1px solid rgba(15, 148, 136, .18); }
+body.home .pred-promo-bg { display: none; }
+body.home .pred-promo-badge {
+  display: inline-block; background: var(--accent); color: #fff; font-weight: 800; font-size: 12px;
+  padding: 5px 12px; border-radius: var(--r-pill);
+}
+body.home .pred-promo-inner h3, body.home #predTitle {
+  font-size: 25px; font-weight: 900; margin: 12px 0 8px; color: #fff;
+}
+body.home .pred-promo-sub { color: var(--on-dark); font-size: 15px; max-width: 58ch; margin: 0; text-wrap: pretty; }
+body.home .pred-promo-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+body.home .pred-promo-pill {
+  background: var(--ink-2); color: var(--on-dark-6); font-size: 13px; font-weight: 600;
+  padding: 6px 12px; border-radius: var(--r-sm);
+}
+body.home .pred-promo-match {
+  margin-top: 14px; background: var(--ink-2); border-radius: var(--r-sm); padding: 10px 12px;
+  font-size: 13px; color: var(--on-dark-7); line-height: 1.6;
+}
+body.home .pred-promo-action { display: flex; flex-direction: column; gap: 10px; }
+body.home .pred-promo-cta {
+  display: block; background: var(--accent); color: #fff; font-weight: 800; font-size: 16px;
+  padding: 14px; border-radius: var(--r-md); text-align: center; text-decoration: none;
+}
+body.home .pred-promo-cta:hover { background: var(--accent-dk); }
+body.home .pred-promo-note { font-size: 12px; color: var(--on-dark-4); margin: 0; text-align: center; }
 
-body.home .courses-promo-form {
-  background: var(--card);
-  border: 1px solid var(--hairline);
+@media (max-width: 760px) {
+  body.home .pred-promo { grid-template-columns: 1fr; padding: 24px 20px; }
 }
-body.home .courses-promo-close { background: rgba(51, 48, 44, .08); color: var(--ink); }
-body.home .courses-promo-close:hover { background: rgba(51, 48, 44, .16); }
-body.home .courses-promo-field label { color: var(--ink-soft); }
-body.home .courses-promo-field input,
-body.home .courses-promo-field select {
-  background: #fff; color: var(--ink); border: 2px solid var(--hairline);
-}
-body.home .courses-promo-field input:focus,
-body.home .courses-promo-field select:focus { border-color: var(--violet); }
-body.home .courses-promo-error { color: #B23B27; background: rgba(255, 122, 92, .12); border: 1px solid rgba(255, 122, 92, .3); }
-
-/* ============================================================
-   6) قسم الفصول — عمودان بدل الشبكة التلقائية، وبطاقات
-      مستطيلة موحّدة الشكل لكل المراحل بدل المربّعات الصغيرة
-   ============================================================ */
-body.home #chapters .chmap,
-body.home #chapters .chmap--square {
-  grid-template-columns: 1fr 1fr;
-}
-@media (max-width: 640px) {
-  body.home #chapters .chmap,
-  body.home #chapters .chmap--square { grid-template-columns: 1fr; }
-}
-body.home .chcard.tile {
-  aspect-ratio: auto; display: block; text-align: start;
-  align-items: stretch; justify-content: flex-start; padding: 22px;
-}
-body.home .chcard.tile .chico { margin-bottom: 12px; }
-body.home .chcard.tile h3 { font-size: 1.05rem; line-height: 1.4; }
-body.home .chcard.tile .chkicker { font-size: .76rem; margin-top: 4px; display: block; }
-body.home .chcard-cta { color: var(--violet-deep); font-weight: 800; }
 
 /* ============================================================
-   7) أدوات الطالب — 3 بطاقات متساوية
+   5) أدوات الطالب / الإشعار المجاني — كلاهما داخل المنطقة المتبدّلة
    ============================================================ */
 body.home .tools-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;
+  margin-bottom: 30px;
 }
 body.home .tool-card {
-  background: var(--card); border: 1px solid var(--hairline); border-radius: var(--radius);
-  box-shadow: var(--shadow); padding: 26px 22px; text-align: center;
-  display: flex; flex-direction: column; align-items: center;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg);
+  padding: 20px; text-align: start; display: block; box-shadow: none;
+  align-items: normal; text-decoration: none; color: inherit;
 }
+body.home .tool-card:hover { border-color: var(--ink); box-shadow: var(--sh-card); }
 body.home .tool-ico {
-  width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center;
-  font-size: 1.7rem; background: rgba(15, 148, 136, .10); margin-bottom: 12px;
+  width: auto; height: auto; border-radius: 0; background: none; display: inline-block;
+  font-size: 26px; margin-bottom: 0;
 }
-body.home .tool-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
-body.home .tool-card p { color: var(--ink-soft); font-size: .88rem; margin-bottom: 10px; flex: 1; }
-body.home .tool-unavailable { display: block; color: #B23B27; font-size: .78rem; font-weight: 800; margin-bottom: 12px; }
-body.home .tool-card.disabled { opacity: .6; }
-body.home .tool-card.disabled .btn { pointer-events: none; background: #E7E3DA; color: var(--ink-soft); box-shadow: none; }
+body.home .tool-card h3 { font-size: 17px; font-weight: 800; margin: 8px 0 6px; }
+body.home .tool-card p { color: var(--muted); font-size: 14px; margin: 0; flex: none; text-wrap: pretty; }
+body.home .tool-card .tool-cta { display: inline-block; margin-top: 12px; font-weight: 800; font-size: 14px; color: var(--accent-dk); }
+
+body.home #freeNotice {
+  background: var(--free-bg); border: 1px solid var(--free-bd); border-radius: 14px;
+  padding: 16px 18px; margin: 0 0 30px; font-size: 15px; color: var(--free-ink);
+}
+body.home #freeNotice b { color: var(--free-ink); }
 
 @media (max-width: 860px) { body.home .tools-grid { grid-template-columns: 1fr; } }
 
 /* ============================================================
-   8/9) عن الأستاذ + القسم الختامي
+   6) شبكة الفصول — بطاقة موحّدة لكل المراحل، بلا ألوان لكل فصل
    ============================================================ */
-body.home #about p { color: var(--ink-soft); max-width: 720px; }
-body.home .final-cta {
-  text-align: center; background: var(--card); border: 1px solid var(--hairline);
-  border-radius: var(--radius); box-shadow: var(--shadow); padding: 48px 24px;
+body.home .chapters-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+body.home .chapters-head h2 { font-size: 22px; font-weight: 900; margin: 0; color: var(--ink); }
+body.home .chapters-hint { color: var(--muted-3); font-size: 14px; }
+
+body.home #chapters .chmap {
+  grid-template-columns: repeat(auto-fill, minmax(268px, 1fr)); gap: 14px;
 }
-body.home .final-cta h2 { font-size: 1.6rem; margin-bottom: 18px; }
+body.home .chcard,
+body.home .chcard.tile {
+  aspect-ratio: auto; display: flex; flex-direction: column; align-items: stretch;
+  justify-content: flex-start; text-align: start; gap: 8px; padding: 18px;
+  background: var(--surface); border: 1px solid var(--line); border-top: 1px solid var(--line);
+  border-radius: var(--r-lg); box-shadow: none; transition: border-color .15s, box-shadow .15s;
+}
+body.home .chcard:hover { transform: none; border-color: var(--ink); box-shadow: var(--sh-card); }
+body.home .chcard-head { display: flex; align-items: center; gap: 10px; }
+body.home .chcard .chico,
+body.home .chcard.tile .chico {
+  width: 38px; height: 38px; border-radius: var(--r-md); background: var(--soft);
+  display: grid; place-items: center; font-size: 19px; flex: 0 0 auto; margin: 0;
+}
+body.home .chcard-meta { min-width: 0; display: flex; flex-direction: column; }
+body.home .chkicker,
+body.home .chcard.tile .chkicker {
+  font-size: 12px; font-weight: 700; color: var(--muted-2); display: block; margin: 0;
+}
+body.home .chmeta { font-size: 12px; font-weight: 700; color: var(--muted); }
+body.home .chcard h3,
+body.home .chcard.tile h3 { font-size: 16px; font-weight: 800; margin: 0; line-height: 1.4; text-wrap: pretty; }
+body.home .chcard p { font-size: 13px; color: var(--muted); margin: 0; text-wrap: pretty; }
+body.home .chcard-foot { margin-top: auto; padding-top: 10px; }
+body.home .chcard .pbar {
+  height: 6px; border-radius: var(--r-pill); background: var(--track); margin: 0; overflow: hidden;
+}
+body.home .chcard .pbar > div { background: var(--accent); border-radius: var(--r-pill); height: 100%; }
+body.home .chcard-progress-row {
+  display: flex; justify-content: space-between; align-items: center; margin-top: 7px;
+  font-size: 12px; font-weight: 700;
+}
+body.home .chcard-progress-row span:first-child { color: var(--muted); }
+body.home .chcard-cta { color: var(--accent-dk); font-weight: 800; }
+
+/* الفصل المقفل: غير منشور بعد */
+body.home .chcard.locked { opacity: .55; pointer-events: none; }
+body.home .chcard.locked .pbar { background: transparent; }
+body.home .chcard.locked .chcard-progress-row span:first-child { color: var(--muted); }
+body.home .chcard.locked .chcard-cta { color: var(--muted); }
+
+/* شارة "🔒 يحتاج تفعيل" (ch3-ch9 بالثالث المتوسط) تبقى من style.css؛
+   هنا فقط نحيّد الألوان القديمة لكل فصل كي تصير الحدود موحّدة */
+body.home .chcard[data-ch] { --cc: var(--line); --cc-soft: var(--soft); }
 
 /* ============================================================
-   10) التذييل
+   7) الأوسمة — بطاقة واحدة، شرائح إنلاين بدل ١٣ مربّعاً
    ============================================================ */
-body.home .footer-links {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 18px;
-  margin-bottom: 6px;
+body.home .badges-card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg);
+  padding: 20px; margin-top: 28px;
 }
-body.home .footer-links a { color: var(--ink-soft); text-decoration: none; font-weight: 700; font-size: .85rem; }
-body.home .footer-links a:hover { color: var(--violet-deep); }
+body.home .badges-card-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+body.home .badges-card-head h2 { font-size: 18px; font-weight: 900; margin: 0; color: var(--ink); }
+body.home .badges-card-head span { font-size: 13px; color: var(--muted-3); }
+body.home .badges { display: flex; gap: 8px; flex-wrap: wrap; }
+body.home .badge {
+  display: inline-flex; align-items: center; gap: 5px; background: none;
+  border: 1px solid var(--line); border-radius: var(--r-pill); padding: 7px 13px;
+  font-size: 13px; font-weight: 700; color: var(--muted-3); opacity: .42;
+  box-shadow: none; min-width: 0; text-align: start; animation: none;
+}
+body.home .badge.won { opacity: 1; color: var(--ink); animation: none; }
+body.home .badge .em { font-size: 13px; display: inline; }
+body.home .badge b { font-size: 13px; font-weight: 700; }
+
+/* ============================================================
+   8) الدورات الإلكترونية
+   ============================================================ */
+body.home #courses { padding: 44px 0; }
+body.home .courses-card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-xl);
+  padding: 30px; display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(220px, 1fr);
+  gap: 24px; align-items: center;
+}
+body.home .courses-badge {
+  display: inline-block; background: var(--ink); color: #fff; font-weight: 800; font-size: 12px;
+  padding: 5px 12px; border-radius: var(--r-pill);
+}
+body.home .courses-card h2 { font-size: 25px; font-weight: 900; margin: 12px 0 8px; color: var(--ink); }
+body.home .courses-card > div > p { color: var(--muted); font-size: 15px; margin: 0; max-width: 58ch; text-wrap: pretty; }
+body.home .courses-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+body.home .courses-pill { background: var(--soft); color: var(--slate); font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: var(--r-sm); }
+body.home .courses-cta {
+  background: var(--ink); color: #fff; font-weight: 800; font-size: 16px; padding: 14px;
+  border-radius: var(--r-md); border: 0; cursor: pointer; font-family: inherit;
+}
+body.home .courses-cta:hover { background: var(--ink-2); }
+
+@media (max-width: 760px) { body.home .courses-card { grid-template-columns: 1fr; text-align: center; } }
+
+/* نافذة التسجيل بالدورات */
+body.home .courses-promo-dialog::backdrop { background: rgba(11, 18, 38, .6); }
+body.home .courses-promo-form {
+  background: var(--surface); border-radius: 18px; padding: 24px; box-shadow: none;
+}
+body.home .courses-promo-dialog-head h3 { color: var(--ink); font-size: 19px; font-weight: 900; }
+body.home .courses-promo-close { background: var(--soft); color: var(--ink); border-radius: var(--r-sm); }
+body.home .courses-promo-close:hover { background: var(--line); }
+body.home .courses-promo-field label { color: var(--muted); font-weight: 700; font-size: 13px; }
+body.home .courses-promo-field input,
+body.home .courses-promo-field select {
+  background: #fff; color: var(--ink); border: 1px solid var(--line-2); border-radius: 10px;
+  font-weight: 400; font-size: 15px; padding: 11px;
+}
+body.home .courses-promo-field input:focus,
+body.home .courses-promo-field select:focus { border-color: var(--ink); }
+body.home .courses-promo-error { color: #b91c1c; background: #fdecec; border: 1px solid #f7c9c9; }
+body.home .courses-promo-submit {
+  background: var(--wa); color: var(--wa-ink); font-weight: 800; font-size: 15px;
+  padding: 13px; border-radius: var(--r-md); border: 0; width: 100%; cursor: pointer; font-family: inherit;
+}
+body.home .courses-promo-submit:hover { filter: brightness(1.05); transform: none; box-shadow: none; }
+
+/* ============================================================
+   9) عن المنصة
+   ============================================================ */
+body.home #about { padding: 0 0 44px; }
+body.home .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+body.home .about-grid h2 { font-size: 22px; font-weight: 900; margin: 0 0 10px; color: var(--ink); }
+body.home .about-grid p { color: var(--slate); font-size: 15px; margin: 0; text-wrap: pretty; }
+body.home .about-grid p b { color: var(--ink); }
+
+/* ============================================================
+   10) الشريط الختامي + التذييل — بعرض كامل خارج .wrap
+   ============================================================ */
+body.home .final-band { background: var(--ink); color: #fff; }
+body.home .final-band-inner { max-width: 1140px; margin: 0 auto; padding: 52px 20px; text-align: center; }
+body.home .final-band-inner h2 { font-size: clamp(24px, 3.2vw, 34px); font-weight: 900; margin: 0; color: #fff; }
+body.home .final-band-inner p { color: var(--on-dark-2); font-size: 16px; margin: 10px 0 22px; }
+body.home .final-band-inner .btn { display: inline-block; }
+
+body.home footer.site {
+  background: var(--ink-3); color: var(--on-dark-4); margin: 0; padding: 0; border: none;
+  display: block; text-align: start;
+}
+body.home footer.site::before { content: none; }
+body.home .footer-inner {
+  max-width: 1140px; margin: 0 auto; padding: 26px 20px; display: flex; gap: 16px;
+  flex-wrap: wrap; align-items: center; justify-content: space-between; font-size: 14px;
+}
+body.home .footer-links { display: flex; gap: 16px; flex-wrap: wrap; margin: 0; }
+body.home .footer-links a { color: var(--on-dark-5); text-decoration: none; font-weight: 700; font-size: 14px; }
+body.home .footer-links a:hover { color: #fff; }
+body.home footer.site p { margin: 0; font-weight: 700; }
+
+/* ============================================================
+   11) الأزرار المشتركة (hero / final band)
+   ============================================================ */
+body.home .btn.coral {
+  background: var(--accent); color: #fff; font-weight: 800; font-size: 16px;
+  padding: 13px 26px; border-radius: var(--r-md); box-shadow: var(--sh-cta); white-space: nowrap;
+}
+body.home .btn.coral:hover { background: var(--accent-dk); transform: none; box-shadow: var(--sh-cta); }
+body.home .btn.ghost {
+  background: var(--surface); color: var(--ink); font-weight: 700; font-size: 16px;
+  padding: 13px 24px; border-radius: var(--r-md); border: 1px solid var(--line-2); box-shadow: none;
+  white-space: nowrap;
+}
+body.home .btn.ghost:hover { background: var(--soft); transform: none; box-shadow: none; }
+body.home .final-band .btn.coral { padding: 14px 32px; }
