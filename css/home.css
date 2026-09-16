@@ -204,6 +204,7 @@ body.home .pred-promo {
   display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(220px, 1fr); gap: 24px; align-items: center;
   box-shadow: none;
 }
+body.home .pred-promo[hidden] { display: none; }
 body.home .pred-promo-bg { display: none; }
 body.home .pred-promo-badge {
   display: inline-block; background: var(--accent); color: #fff; font-weight: 800; font-size: 12px;
@@ -241,6 +242,7 @@ body.home .tools-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;
   margin-bottom: 30px;
 }
+body.home .tools-grid[hidden] { display: none; }
 body.home .tool-card {
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg);
   padding: 20px; text-align: start; display: block; box-shadow: none;
