@@ -73,6 +73,8 @@
 <script>
 (function() {
   if (localStorage.getItem('phy3m_owner')) return;
+  if (location.hostname !== 'shararaphysics.netlify.app') return;
+  if (/bot|crawl|spider|slurp|bingpreview|facebookexternalhit|preview|headless|lighthouse|pagespeed|gtmetrix/i.test(navigator.userAgent || '')) return;
   if (sessionStorage.getItem('phy3m_visit_logged')) return;
   sessionStorage.setItem('phy3m_visit_logged', '1');
   var img = new Image();
