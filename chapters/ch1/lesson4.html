@@ -17,6 +17,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="../../assets/logo-ar.png">
 <link rel="stylesheet" href="../../css/style.css">
+<!-- تجربة: صندوق أهداف الدرس — نمط محلي لهذه الصفحة فقط (لا يمسّ style.css المشترك) -->
+<style>
+.goals-box {
+  background: linear-gradient(135deg, #eafbf3, #f2fffa);
+  border: 2px solid var(--green); border-radius: var(--radius);
+  padding: 18px 22px; margin-bottom: 20px;
+}
+.goals-title {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 900; font-size: 1.02rem; color: var(--ink); margin-bottom: 10px;
+}
+.goals-title .ico { font-size: 1.3rem; }
+.goals-box ul { list-style: none; display: grid; gap: 8px; }
+.goals-box li { display: flex; gap: 8px; align-items: flex-start; font-size: .95rem; color: var(--ink-soft); }
+.goals-box li::before { content: "✓"; color: var(--green); font-weight: 900; flex-shrink: 0; }
+</style>
 <!-- seo-jsonld -->
 <script type="application/ld+json">
 {
@@ -95,6 +111,17 @@
   <div class="hook">
     <span class="em">🕵️‍♀️</span>
     <span>كيف نعرف إن كان جسم ما <b>مشحوناً</b>؟ وكيف نعرف <b>نوع</b> شحنته؟ المحقق الذي يجيب عن السؤالين اسمه <b>الكشاف الكهربائي</b>!</span>
+  </div>
+
+  <!-- تجربة: صندوق أهداف الدرس، مبني من الأغراض السلوكية بدليل المرشد بعد إعادة صياغتها بصيغة الطالب -->
+  <div class="goals-box">
+    <div class="goals-title"><span class="ico">🎯</span> بعد هذا الدرس ستكون قادراً على:</div>
+    <ul>
+      <li>تعرف تركيب الكشاف الكهربائي وأجزاءه.</li>
+      <li>تميّز بين طريقتي شحنه: بالتماس وبالحث.</li>
+      <li>تفسّر لماذا تنفرج ورقتا الكشاف أو تنطبقان في كل حالة.</li>
+      <li>تستعمل الكشاف لمعرفة نوع شحنة أي جسم مجهول.</li>
+    </ul>
   </div>
 
   <div class="section-title"><span class="ico">📖</span> تعريفه وتركيبه</div>
