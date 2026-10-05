@@ -183,7 +183,13 @@ var Phy = (function () {
       k = s.indexOf(MT_END, j) + MT_END.length; while (k < s.length && MT_TERM.test(s[k])) k++;
       return [k, s.slice(j, k), false];
     }
-    k = j; while (k < s.length && MT_TERM.test(s[k])) k++;
+    // 1/2π√(LC): الضرب الضمني بعد الشرطة كله مقام (كما بالكتاب)، ومعه الجذر الملاصق
+    k = j;
+    while (k < s.length) {
+      if (MT_TERM.test(s[k])) k++;
+      else if (k > j && s.substr(k, MT_SQ_OPEN.length) === MT_SQ_OPEN) k = s.indexOf(MT_END, k) + MT_END.length;
+      else break;
+    }
     return k === j ? null : [k, s.slice(j, k), false];
   }
   function mtInCaret(s, i) {
@@ -201,7 +207,8 @@ var Phy = (function () {
       if (!L || !R) continue;
       ls = L[0]; lt = L[1]; re = R[0]; rt = R[1];
       if (!R[2] && /\.$/.test(rt) && !/[0-9]/.test(s[re] || "")) { rt = rt.slice(0, -1); re--; }
-      if (/.(json|js|html|pdf|png)$/.test(rt)) continue;                    // مسار ملف
+      if (/\.(json|js|html|pdf|png)$/.test(rt)) continue;                   // مسار ملف
+      if (/^[·×]/.test(lt)) continue;                                       // بسط مبتور (√K·q/F غامض) ← يبقى سطرياً
       if (mtInCaret(s, i)) continue;                                        // 10^(n/2)
       if (s[ls - 1] === "/" || s[re] === "/") continue;                     // تواريخ وسلاسل a/b/c
       if (/^\d{4}$/.test(lt) && /^\d{4}$/.test(rt)) continue;              // سنتان: 2025/2026
