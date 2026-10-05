@@ -177,8 +177,8 @@
       }
     ],
     "qa": [],
-    "has_simulation": true,
-    "simulation_title": "🧪 آلة الأسس"
+    "has_simulation": false,
+    "simulation_title": ""
   },
   {
     "chapter_number": "g6c0",
