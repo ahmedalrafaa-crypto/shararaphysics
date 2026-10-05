@@ -86,12 +86,16 @@ var Phy = (function () {
     }
     return nodes.join("");
   }
+  // data-n="3" على العنصر = جذر تكعيبي (∛) يُرسم <mroot> بدليل 3 فوق علامة الجذر
   function upgradeSqrts(root) {
     (root || document).querySelectorAll(".sqrt").forEach(function (el) {
       var rad = el.querySelector(".rad");
-      var txt = rad ? rad.textContent : el.textContent.replace("√", "");
+      var txt = rad ? rad.textContent : el.textContent.replace(/[√∛]/, "");
+      var idx = el.getAttribute("data-n");
       var holder = document.createElement("span");
-      holder.innerHTML = '<math><msqrt><mrow>' + mmlFromText(txt) + '</mrow></msqrt></math>';
+      holder.innerHTML = idx
+        ? '<math><mroot><mrow>' + mmlFromText(txt) + '</mrow><mn>' + idx + '</mn></mroot></math>'
+        : '<math><msqrt><mrow>' + mmlFromText(txt) + '</mrow></msqrt></math>';
       el.replaceWith(holder.firstChild);
     });
   }
@@ -198,6 +202,8 @@ var Phy = (function () {
       h += "</div>";
       if (item.why) h += '<div class="qexpl">💡 ' + item.why + "</div>";
       div.innerHTML = h;
+      // الاختبار قد يُبنى بعد DOMContentLoaded (صفحات النشاط المنزلي) فنحوّل جذوره هنا
+      upgradeSqrts(div);
       host.appendChild(div);
     });
 

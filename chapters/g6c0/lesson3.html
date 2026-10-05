@@ -122,8 +122,8 @@
       <tr><th>مكان المجهول</th><th>مثال</th><th>الحركة</th></tr>
       <tr><td>بالمقام</td><td><span class="formula-inline">λ = h/(mv)</span> ← v</td><td>اضرب الطرفين بالمقام ثم اقسم: <span class="formula-inline">v = h/(mλ)</span></td></tr>
       <tr><td>مع ½</td><td><span class="formula-inline">PE = ½LI²</span> ← L</td><td>اضرب الطرفين في 2 أولاً: <span class="formula-inline">L = 2PE/I²</span></td></tr>
-      <tr><td>مربّع</td><td><span class="formula-inline">PE = ½CΔV²</span> ← ΔV</td><td>اعزل المربع ثم جذّر: <span class="formula-inline">ΔV = √(2PE/C)</span></td></tr>
-      <tr><td>تحت جذر</td><td><span class="formula-inline">M = √(L₁L₂)</span> ← L₂</td><td>ربّع الطرفين: <span class="formula-inline">L₂ = M²/L₁</span></td></tr>
+      <tr><td>مربّع</td><td><span class="formula-inline">PE = ½CΔV²</span> ← ΔV</td><td>اعزل المربع ثم جذّر: <span class="formula-inline">ΔV = <span class='sqrt'>√<span class='rad'>2PE/C</span></span></span></td></tr>
+      <tr><td>تحت جذر</td><td><span class="formula-inline">M = <span class='sqrt'>√<span class='rad'>L₁L₂</span></span></span> ← L₂</td><td>ربّع الطرفين: <span class="formula-inline">L₂ = M²/L₁</span></td></tr>
     </table></div>
     <div class="notebox">
       <b>🔁 التعويض بين قانونين:</b> إذا القانون الأول ينقصه مقدار، شوف هل يطلع من قانون ثاني. مثل <span class="formula-inline">PE = ½LI²</span> بس I ما معطاة، فنحسبها من <span class="formula-inline">I = V/R</span>.
@@ -179,7 +179,7 @@
     <div class="step"><b>الخطوة ٢:</b> نعوّض:
       <div class="math">ΔV² = (2 × 0.02) / (4×10⁻⁶) = 0.04 / (4×10⁻⁶) = 10⁴</div></div>
     <div class="step"><b>الخطوة ٣:</b> نجذّر:
-      <div class="math">ΔV = √10⁴ = 10² = 100 V</div></div>
+      <div class="math">ΔV = <span class='sqrt'>√<span class='rad'>10⁴</span></span> = 10² = 100 V</div></div>
   </div>
 
   <div class="example">
@@ -254,7 +254,7 @@ Phy.quiz("quiz3", [
     opts: ["55 μF", "1/5 μF", "5 μF", "30 μF"], a: 2,
     why: "المقام المشترك 30: 3/30 + 2/30 + 1/30 = 6/30 = 1/5، نقلبه: 5 μF." },
   { q: "من القانون PE = ½CΔV²، فرق الجهد يساوي:",
-    opts: ["ΔV = √(2PE/C)", "ΔV = 2PE/C", "ΔV = √(PE/2C)", "ΔV = √(2C/PE)"], a: 0,
+    opts: ["ΔV = <span class='sqrt'>√<span class='rad'>2PE/C</span></span>", "ΔV = 2PE/C", "ΔV = <span class='sqrt'>√<span class='rad'>PE/2C</span></span>", "ΔV = <span class='sqrt'>√<span class='rad'>2C/PE</span></span>"], a: 0,
     why: "نضرب في 2: 2PE = CΔV²، نقسم على C: ΔV² = 2PE/C، ثم نجذّر." },
   { q: "متسعة سعتها 4μF تختزن 0.02J. فرق الجهد بين صفيحتيها:",
     opts: ["10 V", "1000 V", "50 V", "100 V"], a: 3,

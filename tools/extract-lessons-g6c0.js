@@ -17,7 +17,10 @@ const DIR = path.join(ROOT, 'chapters', CH);
 const PRE = 'window.PHY_LESSONS = (window.PHY_LESSONS || []).concat(';
 
 const ENT = { '&nbsp;': ' ', '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'" };
-const text = h => h.replace(/<br\s*\/?>/g, ' ').replace(/<[^>]+>/g, ' ')
+// ترميز الجذر (يرسمه core.js بشكل الكتاب) يرجع نصاً: √X للعدد البسيط و√(…) لغيره
+const rootsToText = h => h.replace(/<span class=['"]sqrt['"](?: data-n=['"]3['"])?>([√∛])<span class=['"]rad['"]>([^<]*)<\/span><\/span>/g,
+  (m, sym, rad) => sym + (/^[0-9.]+$/.test(rad) ? rad : '(' + rad + ')'));
+const text = h => rootsToText(h).replace(/<br\s*\/?>/g, ' ').replace(/<[^>]+>/g, ' ')
   .replace(/&[a-z#0-9]+;/g, e => ENT[e] || e).replace(/\s+/g, ' ').trim();
 
 // كل عناصر <tag class="... cls ..."> مع محتواها، بموازنة الوسوم المتداخلة من نفس النوع
@@ -94,7 +97,7 @@ function finalExam() {
     chapter_number: CH, chapter_title: CH_TITLE,
     lesson_number: N_LESSONS + 1, lesson_title: 'أسئلة ومسائل نهاية الفصل', order_index: N_LESSONS + 1,
     hook: '', concepts: [], laws: [], notes: [], tables: [], examples: [],
-    qa: qs.map(q => ({ question: q.q, answer: q.opts[q.a] + ' — ' + q.why, type: 'سؤال', ministerial: false })),
+    qa: qs.map(q => ({ question: rootsToText(q.q), answer: rootsToText(q.opts[q.a] + ' — ' + q.why), type: 'سؤال', ministerial: false })),
     has_simulation: false, simulation_title: ''
   };
 }

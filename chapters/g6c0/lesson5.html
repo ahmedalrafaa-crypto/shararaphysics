@@ -142,7 +142,7 @@
       <b>الثلاثيات اللي يحبها الوزاري:</b> 3-4-5 ومضاعفاتها (6-8-10، 30-40-50، 60-80-100)، و5-12-13. إذا شفت ضلعين منها، الثالث جاهز بلا جذر. ومثلث 3-4-5 هو نفسه سبب الزاويتين 37° و 53°.
     </div>
     <div class="defbox">
-      📌 <b class="term">بالتوازي:</b> نفس الفكرة على التيارات: <span class="formula-inline">I_T² = I_R² + (I_C − I_L)²</span>. وبالنسبية: <span class="formula-inline">√(1 − 0.8²) = 0.6</span> هو نفس مثلث 3-4-5 بوتر 1.
+      📌 <b class="term">بالتوازي:</b> نفس الفكرة على التيارات: <span class="formula-inline">I_T² = I_R² + (I_C − I_L)²</span>. وبالنسبية: <span class="formula-inline"><span class='sqrt'>√<span class='rad'>1 − 0.8²</span></span> = 0.6</span> هو نفس مثلث 3-4-5 بوتر 1.
     </div>
   </div>
 
@@ -275,8 +275,9 @@
     ctx.fillText(X > 0 ? "حثّية (X_L > X_C)" : X < 0 ? "سعوية (X_C > X_L)" : "رنين: Z = R و Φ = 0", cv.width - 16, 24);
 
     var sinP = X / Z, cosP = R / Z, tanP = X / R;
-    out.innerHTML = "Z = √(" + R + "² + " + (X < 0 ? "(" + X + ")" : X) + "²) " + (exactZ ? "= " + Z + " Ω ✓ (ثلاثية كاملة)" : "≈ " + f3(Z) + " Ω") +
+    out.innerHTML = "Z = <span class='sqrt'>√<span class='rad'>" + R + "² + " + (X < 0 ? "(" + X + ")" : X) + "²</span></span> " + (exactZ ? "= " + Z + " Ω ✓ (ثلاثية كاملة)" : "≈ " + f3(Z) + " Ω") +
       " — Φ ≈ " + f3(phi) + "° — sinΦ = " + f3(sinP) + " · cosΦ = R/Z = " + f3(cosP) + " · tanΦ = " + f3(tanP);
+    Phy.upgradeSqrts(out);
   }
   [rR, lR, cR].forEach(function (e) { e.addEventListener("input", render); });
   render();
