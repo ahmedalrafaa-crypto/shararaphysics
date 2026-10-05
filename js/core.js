@@ -62,7 +62,7 @@ var Phy = (function () {
   function mmlFromText(str) {
     var nodes = [], i = 0, n = str.length;
     function isDigit(c) { return c >= "0" && c <= "9"; }
-    function isLetter(c) { return /[A-Za-zΑ-Ωα-ωء-ي]/.test(c); }
+    function isLetter(c) { return /[A-Za-zΑ-Ωα-ωℓء-ي]/.test(c); }
     while (i < n) {
       var c = str[i];
       if (c === " ") { i++; continue; }
@@ -89,7 +89,7 @@ var Phy = (function () {
         var id = ""; while (i < n && isLetter(str[i])) { id += str[i]; i++; }
         nodes.push("<mi>" + id + "</mi>"); continue;
       }
-      nodes.push("<mo>" + c + "</mo>"); i++;
+      nodes.push("<mo>" + (c === "<" ? "&lt;" : c === "&" ? "&amp;" : c === ">" ? "&gt;" : c) + "</mo>"); i++;
     }
     return nodes.join("");
   }
@@ -121,7 +121,158 @@ var Phy = (function () {
       el.replaceWith(holder.firstChild);
     });
   }
-  document.addEventListener("DOMContentLoaded", function () { upgradeSqrts(document); });
+  /* MATH-TEXT:START — محوّل نصي خالص (بلا DOM): «√X» و«√(…)» و«∛X» و«a/b» ← ترميز .sqrt/.frac.
+     نفس القواعد المجرَّبة بالفصل التمهيدي للسادس. نسخة مطابقة بمنصة المعلم:
+     Teacher-Platform/demo/src/lib/mathText.js — عدّلهما معاً.
+     لا يُحوَّل: الوحدات (m/s، A/s، N/m²، kg/m³، km/h)، الأسس 10^(n/2)، النص العربي،
+     التواريخ (2026/10/05) والسنوات (2013/2014)، والروابط. */
+  var MT_TERM = /[A-Za-z0-9.Α-Ωα-ωΔ_₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹⁻′'ₑ×πθ·ℓ]/;
+  var MT_RTOKEN = /[0-9.A-Za-z₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹⁻×ℓ]/;
+  // رموز الوحدات وأسماؤها المكتوبة بالموقع؛ «وحدة/وحدة» تبقى سطرية مثل الكتاب
+  var MT_UNITS = /^(m|s|s²|A|V|J|kJ|W|kW|KW|KW\.h|kW\.h|K|T|N|C|F|H|Pa|g|Wb|MeV|kg\.m|kg·m|kg·m²|kg|rad|N·m²|C²|m²|m³|cm³|m²K⁴|nucleon|Hz|Ω|cm|km|min|line|lines|Dinar|Joule|joule|Col|Coulomb|coulomb|Coulomb²|volt|Volt|amper|Ampere|ampere|Second|second|Weber|weber|Lumen|Newton|newton|N.m²|meter|Meter|kV|u|cm²)$/;
+  var MT_SQ_OPEN = "<span class='sqrt'", MT_END = "</span></span>";
+  function mtIsUnit(w) { return MT_UNITS.test(w.replace(/^[0-9.⁰¹²³⁴⁵⁶⁷⁸⁹⁻×]+/, "")); }
+  function mtEsc(t) { return t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  function mtRoots(s) {
+    var out = "", i = 0;
+    while (i < s.length) {
+      var ch = s[i];
+      if (ch !== "√" && ch !== "∛") { out += ch; i++; continue; }
+      var j = i + 1, rad = null, k, depth;
+      if (s[j] === "(") {
+        for (depth = 0, k = j; k < s.length; k++) { if (s[k] === "(") depth++; else if (s[k] === ")" && --depth === 0) break; }
+        if (k < s.length) { rad = s.slice(j + 1, k); j = k + 1; }
+      } else {
+        k = j; while (k < s.length && MT_RTOKEN.test(s[k])) k++;
+        if (k > j) { rad = s.slice(j, k); j = k; }
+      }
+      if (rad === null || /[<>]/.test(rad)) { out += ch; i++; continue; }
+      out += "<span class='sqrt'" + (ch === "∛" ? " data-n='3'" : "") + ">" + ch + "<span class='rad'>" + rad + "</span></span>";
+      i = j;
+    }
+    return out;
+  }
+  function mtLeft(s, i) {
+    var j = i, k, depth, a;
+    while (j > 0 && s[j - 1] === " ") j--;
+    if (s[j - 1] === ")") {
+      for (depth = 0, k = j - 1; k >= 0; k--) { if (s[k] === ")") depth++; else if (s[k] === "(" && --depth === 0) break; }
+      if (k < 0 || s[k - 1] === "^") return null;
+      return [k, s.slice(k, j), true];
+    }
+    if (s.slice(0, j).slice(-MT_END.length) === MT_END) {
+      a = s.lastIndexOf(MT_SQ_OPEN, j); while (a > 0 && MT_TERM.test(s[a - 1])) a--;
+      return [a, s.slice(a, j), false];
+    }
+    k = j; while (k > 0 && MT_TERM.test(s[k - 1])) k--;
+    // (ΔV)²/R: أس بعد قوس ← البسط هو المجموعة كلها مع أسّها
+    if (k < j && s[k - 1] === ")" && /^[⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+$/.test(s.slice(k, j))) {
+      for (depth = 0, a = k - 1; a >= 0; a--) { if (s[a] === ")") depth++; else if (s[a] === "(" && --depth === 0) break; }
+      if (a >= 0) return [a, s.slice(a, j), false];
+    }
+    return k === j ? null : [k, s.slice(k, j), false];
+  }
+  function mtRight(s, i) {
+    var j = i, k, depth;
+    while (s[j] === " ") j++;
+    if (s[j] === "(") {
+      for (depth = 0, k = j; k < s.length; k++) { if (s[k] === "(") depth++; else if (s[k] === ")" && --depth === 0) break; }
+      return k >= s.length ? null : [k + 1, s.slice(j + 1, k), true];
+    }
+    if (s.substr(j, MT_SQ_OPEN.length) === MT_SQ_OPEN) {
+      k = s.indexOf(MT_END, j) + MT_END.length; while (k < s.length && MT_TERM.test(s[k])) k++;
+      return [k, s.slice(j, k), false];
+    }
+    k = j; while (k < s.length && MT_TERM.test(s[k])) k++;
+    return k === j ? null : [k, s.slice(j, k), false];
+  }
+  function mtInCaret(s, i) {
+    for (var d = 0, k = i - 1; k >= 0; k--) {
+      if (s[k] === ")") d++;
+      else if (s[k] === "(") { if (d === 0) return s[k - 1] === "^"; d--; }
+    }
+    return false;
+  }
+  function mtFracs(s) {
+    var hits = [], i, L, R, ls, lt, re, rt, m;
+    for (i = 0; i < s.length; i++) {
+      if (s[i] !== "/" || s[i - 1] === "<" || s[i + 1] === ">") continue;
+      L = mtLeft(s, i); R = mtRight(s, i + 1);
+      if (!L || !R) continue;
+      ls = L[0]; lt = L[1]; re = R[0]; rt = R[1];
+      if (!R[2] && /\.$/.test(rt) && !/[0-9]/.test(s[re] || "")) { rt = rt.slice(0, -1); re--; }
+      if (/.(json|js|html|pdf|png)$/.test(rt)) continue;                    // مسار ملف
+      if (mtInCaret(s, i)) continue;                                        // 10^(n/2)
+      if (s[ls - 1] === "/" || s[re] === "/") continue;                     // تواريخ وسلاسل a/b/c
+      if (/^\d{4}$/.test(lt) && /^\d{4}$/.test(rt)) continue;              // سنتان: 2025/2026
+      if (/^(19|20)\d\d$/.test(lt) || /^(19|20)\d\d$/.test(rt)) continue;  // الدور/السنة: 1/2019
+      if (mtIsUnit(lt.trim()) && (mtIsUnit(rt.trim()) || (/^(km|kJ|kW|KW)$/.test(lt) && rt === "h"))) continue; // وحدات
+      if (lt === "cm" && /^[0-9.]+$/.test(rt)) { m = s.slice(0, ls).match(/([0-9.]+) $/); if (m) { ls -= m[0].length; lt = m[0] + lt; } } // 1 cm / 2000
+      hits.push([ls, re, L[2] ? lt.slice(1, -1) : lt, rt]);
+    }
+    var out = s, lastStart = Infinity, h;
+    for (i = hits.length - 1; i >= 0; i--) {
+      h = hits[i];
+      if (h[1] > lastStart) continue;
+      out = out.slice(0, h[0]) + "<span class='frac'><span class='num'>" + h[2] + "</span><span class='den'>" + h[3] + "</span></span>" + out.slice(h[1]);
+      lastStart = h[0];
+    }
+    return out;
+  }
+  // نص خام ← HTML مُهرَّب فيه ترميز الجذور والكسور، أو null إن لم يتغيّر شيء
+  function mathTextToMarkup(text) {
+    if (!/[√∛\/]/.test(text) || /:\/\/|www\.|\.app\/|wa\.me/.test(text)) return null;
+    var esc = mtEsc(text), out = mtFracs(mtRoots(esc));
+    return out === esc ? null : out;
+  }
+  /* MATH-TEXT:END */
+
+  // يحوّل النصوص العادية داخل root إلى جذور وكسور بشكل الكتاب (MathML)
+  var MT_SKIP = "script,style,textarea,input,select,option,code,pre,math,svg,canvas,title,.no-math,.topbar,.crumbs,footer,.chip,.stars,.quiz-result";
+  function mathify(root) {
+    root = root || document.body;
+    if (!root || root.nodeType !== 1 || (root.closest && root.closest(MT_SKIP))) return;
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        if (!/[√∛\/]/.test(n.nodeValue)) return NodeFilter.FILTER_REJECT;
+        var p = n.parentElement;
+        return (!p || p.closest(MT_SKIP) || p.closest(".sqrt, .frac")) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var list = [], n;
+    while ((n = walker.nextNode())) list.push(n);
+    list.forEach(function (t) {
+      var html = mathTextToMarkup(t.nodeValue);
+      if (html === null) return;
+      var holder = document.createElement("span");
+      holder.innerHTML = html;
+      upgradeSqrts(holder);
+      var frag = document.createDocumentFragment();
+      while (holder.firstChild) frag.appendChild(holder.firstChild);
+      t.parentNode.replaceChild(frag, t);
+    });
+    upgradeSqrts(root);
+  }
+  // المحتوى المبني لاحقاً بالجافاسكربت (المراجعة، الامتحانات، التوقعات، الأنشطة) يُحوَّل تلقائياً
+  var mtObserver = null;
+  function startMathObserver() {
+    if (mtObserver || typeof MutationObserver === "undefined") return;
+    var pending = [], scheduled = false;
+    mtObserver = new MutationObserver(function (muts) {
+      muts.forEach(function (m) { m.addedNodes.forEach(function (a) { if (a.nodeType === 1 || a.nodeType === 3) pending.push(a.nodeType === 1 ? a : a.parentElement); }); });
+      if (scheduled) return;
+      scheduled = true;
+      setTimeout(function () {
+        scheduled = false;
+        var batch = pending; pending = [];
+        mtObserver.disconnect();
+        batch.forEach(function (el) { if (el && el.isConnected) mathify(el); });
+        mtObserver.observe(document.body, { childList: true, subtree: true });
+      }, 0);
+    });
+    mtObserver.observe(document.body, { childList: true, subtree: true });
+  }
+  document.addEventListener("DOMContentLoaded", function () { mathify(document.body); startMathObserver(); });
 
   /* ---------- confetti ---------- */
   function confetti() {
@@ -322,7 +473,7 @@ var Phy = (function () {
     load: load, getLesson: getLesson, setLesson: setLesson,
     setExam: setExam, getExam: getExam,
     chapterPercent: chapterPercent, starsStr: starsStr,
-    quiz: quiz, confetti: confetti, upgradeSqrts: upgradeSqrts,
+    quiz: quiz, confetti: confetti, upgradeSqrts: upgradeSqrts, mathify: mathify,
     getAttempts: getAttempts, clearAttempts: clearAttempts,
     recordAttempt: recordAttempt, inferSkill: inferSkill,
     pageContext: pageContext, pageTopic: pageTopic

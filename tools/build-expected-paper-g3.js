@@ -230,8 +230,9 @@ const html =
   "</span><span>✉️ " + CONTACT.email + '</span></div><div class="csite">🌐 ' + CONTACT.site + "</div></div>\n\n" +
   "<footer>ورقة متوقّعة مبنية على أسئلة وزارية حقيقية (2018–2026) · تُحدَّث وتُقيَّم علناً بعد كل دور امتحاني</footer>\n" +
   "</div>\n" +
-  // القفل لنسخة الطالب فقط — نسخة المعلّم تُولَّد خارج الموقع ولا تُرفع أصلاً
-  (TEACHER ? '' : '<script src="../js/access-control.js"></script>\n');
+  // القفل لنسخة الطالب فقط — نسخة المعلّم تُولَّد خارج الموقع ولا تُرفع أصلاً.
+  // core.js يرسم الجذور والكسور بشكل الكتاب (Phy.mathify)
+  (TEACHER ? '' : '<script src="../js/core.js"></script>\n<script src="../js/access-control.js"></script>\n');
 
 fs.writeFileSync(OUT, html, "utf8");
 const ids = PAPER.questions.flatMap((q) => q.parts.flatMap((p) => p.ids || [p.id]));
