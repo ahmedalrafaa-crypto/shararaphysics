@@ -94,7 +94,7 @@
 
   <div class="hook">
     <span class="em">📻</span>
-    <span>بمسألة الرنين يطلب منك <span class="formula-inline">ω_r = 1/<span class='sqrt'>√<span class='rad'>LC</span></span></span> وعندك L = 0.04H و C = 25μF. يعني لازم تحسب <span class="formula-inline">1/<span class='sqrt'>√<span class='rad'>0.04×25×10⁻⁶</span></span></span>… بلا حاسبة. تبين؟ الجواب بثلاث خطوات: <b>اضرب، جذّر، اقلب</b>.</span>
+    <span>بمسألة الرنين يطلب منك <span class="formula-inline">ω_r = <span class='frac'><span class='num'>1</span><span class='den'><span class='sqrt'>√<span class='rad'>LC</span></span></span></span></span> وعندك L = 0.04H و C = 25μF. يعني لازم تحسب <span class="formula-inline"><span class='frac'><span class='num'>1</span><span class='den'><span class='sqrt'>√<span class='rad'>0.04×25×10⁻⁶</span></span></span></span></span>… بلا حاسبة. تبين؟ الجواب بثلاث خطوات: <b>اضرب، جذّر، اقلب</b>.</span>
   </div>
 
   <div class="section-title"><span class="ico">📜</span> قاعدة الجذر التربيعي للعدد الأسي</div>
@@ -115,10 +115,10 @@
   <div class="card">
     <div class="tblwrap"><table class="nice">
       <tr><th>الشكل</th><th>وين يجي</th><th>الطريقة</th></tr>
-      <tr><td><span class="formula-inline"><span class='sqrt'>√<span class='rad'>LC</span></span></span> و <span class="formula-inline">1/<span class='sqrt'>√<span class='rad'>LC</span></span></span></td><td>الرنين، دائرة الاهتزاز</td><td>اضرب L×C أولاً، جذّر، ثم اقلب</td></tr>
+      <tr><td><span class="formula-inline"><span class='sqrt'>√<span class='rad'>LC</span></span></span> و <span class="formula-inline"><span class='frac'><span class='num'>1</span><span class='den'><span class='sqrt'>√<span class='rad'>LC</span></span></span></span></span></td><td>الرنين، دائرة الاهتزاز</td><td>اضرب L×C أولاً، جذّر، ثم اقلب</td></tr>
       <tr><td><span class="formula-inline">M = <span class='sqrt'>√<span class='rad'>L₁L₂</span></span></span></td><td>الحث المتبادل (ترابط تام)</td><td>اضرب ثم جذّر</td></tr>
-      <tr><td><span class="formula-inline"><span class='sqrt'>√<span class='rad'>1 − v²/c²</span></span></span></td><td>النسبية</td><td>v = 0.8c ← <span class='sqrt'>√<span class='rad'>0.36</span></span> = 0.6</td></tr>
-      <tr><td><span class="formula-inline">v = <span class='sqrt'>√<span class='rad'>2eV/m</span></span></span></td><td>طول موجة دي برولي</td><td>الأس الفردي غالباً — انتبه</td></tr>
+      <tr><td><span class="formula-inline"><span class='sqrt'>√<span class='rad'>1 − <span class='frac'><span class='num'>v²</span><span class='den'>c²</span></span></span></span></span></td><td>النسبية</td><td>v = 0.8c ← <span class='sqrt'>√<span class='rad'>0.36</span></span> = 0.6</td></tr>
+      <tr><td><span class="formula-inline">v = <span class='sqrt'>√<span class='rad'><span class='frac'><span class='num'>2eV</span><span class='den'>m</span></span></span></span></span></td><td>طول موجة دي برولي</td><td>الأس الفردي غالباً — انتبه</td></tr>
       <tr><td><span class="formula-inline">R = r₀A^(1/3)</span></td><td>نصف قطر النواة</td><td>جذر تكعيبي لعدد كامل</td></tr>
     </table></div>
   </div>
@@ -126,7 +126,7 @@
   <div class="section-title"><span class="ico">🧊</span> الجذر التكعيبي</div>
   <div class="card">
     <div class="defbox">
-      الجذر التكعيبي <span class="formula-inline">∛</span> (أو الأس <span class="formula-inline">1/3</span>) يسأل: أي عدد إذا ضربناه بنفسه <b>ثلاث مرات</b> يرجّع الأصل؟ <span class="formula-inline"><span class='sqrt' data-n='3'>∛<span class='rad'>64</span></span> = 4</span> لأن <span class="formula-inline">4×4×4 = 64</span>.
+      الجذر التكعيبي <span class="formula-inline">∛</span> (أو الأس <span class="formula-inline"><span class='frac'><span class='num'>1</span><span class='den'>3</span></span></span>) يسأل: أي عدد إذا ضربناه بنفسه <b>ثلاث مرات</b> يرجّع الأصل؟ <span class="formula-inline"><span class='sqrt' data-n='3'>∛<span class='rad'>64</span></span> = 4</span> لأن <span class="formula-inline">4×4×4 = 64</span>.
     </div>
     <div class="tblwrap"><table class="nice">
       <tr><th>A</th><th>1</th><th>8</th><th>27</th><th>64</th><th>125</th><th>216</th><th>343</th></tr>
@@ -154,30 +154,30 @@
   <div class="section-title"><span class="ico">✏️</span> أمثلة محلولة خطوة بخطوة</div>
 
   <div class="example">
-    <div class="exq">مثال ١: دائرة رنين فيها L = 0.04H و C = 25μF. احسب السرعة الزاوية الرنينية <span class="formula-inline">ω_r = 1/<span class='sqrt'>√<span class='rad'>LC</span></span></span></div>
+    <div class="exq">مثال ١: دائرة رنين فيها L = 0.04H و C = 25μF. احسب السرعة الزاوية الرنينية <span class="formula-inline">ω_r = <span class='frac'><span class='num'>1</span><span class='den'><span class='sqrt'>√<span class='rad'>LC</span></span></span></span></span></div>
     <div class="givens">L = 0.04 H — C = 25 μF = 25×10⁻⁶ F</div>
     <div class="step"><b>الخطوة ١:</b> اضرب أولاً:
       <div class="math">LC = 0.04 × 25 × 10⁻⁶ = 1 × 10⁻⁶</div></div>
     <div class="step"><b>الخطوة ٢:</b> جذّر (الأس زوجي):
       <div class="math"><span class='sqrt'>√<span class='rad'>1×10⁻⁶</span></span> = 1 × 10⁻³</div></div>
     <div class="step"><b>الخطوة ٣:</b> اقلب:
-      <div class="math">ω_r = 1 / 10⁻³ = 10³ = 1000 rad/s</div></div>
+      <div class="math">ω_r = <span class='frac'><span class='num'>1</span><span class='den'>10⁻³</span></span> = 10³ = 1000 rad/s</div></div>
   </div>
 
   <div class="example">
-    <div class="exq">مثال ٢ (الأس الفردي): دائرة فيها L = 0.4H و C = 0.4μF. احسب <span class="formula-inline">ω_r = 1/<span class='sqrt'>√<span class='rad'>LC</span></span></span></div>
+    <div class="exq">مثال ٢ (الأس الفردي): دائرة فيها L = 0.4H و C = 0.4μF. احسب <span class="formula-inline">ω_r = <span class='frac'><span class='num'>1</span><span class='den'><span class='sqrt'>√<span class='rad'>LC</span></span></span></span></span></div>
     <div class="step"><b>الخطوة ١:</b> الضرب:
       <div class="math">LC = 0.4 × 0.4 × 10⁻⁶ = 0.16 × 10⁻⁶ = 1.6 × 10⁻⁷</div></div>
     <div class="step"><b>الخطوة ٢:</b> الأس −7 فردي، ننقل عشرة للمعامل:
       <div class="math">1.6 × 10⁻⁷ = 16 × 10⁻⁸  →  <span class='sqrt'>√<span class='rad'>16 × 10⁻⁸</span></span> = 4 × 10⁻⁴</div></div>
     <div class="step"><b>الخطوة ٣:</b> نقلب:
-      <div class="math">ω_r = 1 / (4×10⁻⁴) = 0.25 × 10⁴ = 2500 rad/s</div></div>
+      <div class="math">ω_r = <span class='frac'><span class='num'>1</span><span class='den'>4×10⁻⁴</span></span> = 0.25 × 10⁴ = 2500 rad/s</div></div>
   </div>
 
   <div class="example">
-    <div class="exq">مثال ٣: سفينة فضائية طول سكونها L₀ = 40m تتحرك بسرعة 0.8c. احسب طولها كما يقيسه مراقب ساكن <span class="formula-inline">L = L₀<span class='sqrt'>√<span class='rad'>1 − v²/c²</span></span></span></div>
-    <div class="step"><b>الخطوة ١:</b> النسبة v/c = 0.8، نربّعها:
-      <div class="math">v²/c² = 0.8² = 0.64</div></div>
+    <div class="exq">مثال ٣: سفينة فضائية طول سكونها L₀ = 40m تتحرك بسرعة 0.8c. احسب طولها كما يقيسه مراقب ساكن <span class="formula-inline">L = L₀<span class='sqrt'>√<span class='rad'>1 − <span class='frac'><span class='num'>v²</span><span class='den'>c²</span></span></span></span></span></div>
+    <div class="step"><b>الخطوة ١:</b> النسبة <span class='frac'><span class='num'>v</span><span class='den'>c</span></span> = 0.8، نربّعها:
+      <div class="math"><span class='frac'><span class='num'>v²</span><span class='den'>c²</span></span> = 0.8² = 0.64</div></div>
     <div class="step"><b>الخطوة ٢:</b> نطرح من 1 ونجذّر:
       <div class="math"><span class='sqrt'>√<span class='rad'>1 − 0.64</span></span> = <span class='sqrt'>√<span class='rad'>0.36</span></span> = 0.6</div></div>
     <div class="step"><b>الخطوة ٣:</b> نضرب:
@@ -200,10 +200,10 @@
     <b>📍 وين راح تحتاجها؟</b>
     <ul>
       <li><a href="../g6c2/lesson7.html">الحث المتبادل</a>: <span class="formula-inline">M = <span class='sqrt'>√<span class='rad'>L₁L₂</span></span></span>.</li>
-      <li><a href="../g6c3/lesson7.html">دائرة الرنين</a>: <span class="formula-inline">f_r = 1/(2π<span class='sqrt'>√<span class='rad'>LC</span></span>)</span>.</li>
+      <li><a href="../g6c3/lesson7.html">دائرة الرنين</a>: <span class="formula-inline">f_r = <span class='frac'><span class='num'>1</span><span class='den'>2π<span class='sqrt'>√<span class='rad'>LC</span></span></span></span></span>.</li>
       <li><a href="../g6c4/lesson5.html">دائرة الإرسال والتسلم</a>: نفس قانون الرنين بأعداد أسية صغيرة جداً.</li>
-      <li><a href="../g6c6/lesson5.html">الموجات المادية</a>: <span class="formula-inline">v = <span class='sqrt'>√<span class='rad'>2eV/m</span></span></span>.</li>
-      <li><a href="../g6c6/lesson11.html">نتائج النسبية الخاصة</a>: <span class="formula-inline"><span class='sqrt'>√<span class='rad'>1 − v²/c²</span></span></span>.</li>
+      <li><a href="../g6c6/lesson5.html">الموجات المادية</a>: <span class="formula-inline">v = <span class='sqrt'>√<span class='rad'><span class='frac'><span class='num'>2eV</span><span class='den'>m</span></span></span></span></span>.</li>
+      <li><a href="../g6c6/lesson11.html">نتائج النسبية الخاصة</a>: <span class="formula-inline"><span class='sqrt'>√<span class='rad'>1 − <span class='frac'><span class='num'>v²</span><span class='den'>c²</span></span></span></span></span>.</li>
       <li><a href="../g6c9/lesson1.html">النواة وخصائصها</a>: <span class="formula-inline">R = r₀A^(1/3)</span>.</li>
     </ul>
   </div>
@@ -262,13 +262,13 @@ Phy.quiz("quiz2", [
   { q: "ملفان بينهما ترابط تام، L₁ = 0.1H و L₂ = 0.9H. معامل الحث المتبادل M = <span class='sqrt'>√<span class='rad'>L₁L₂</span></span> يساوي:",
     opts: ["0.3 H", "0.09 H", "0.5 H", "1 H"], a: 0,
     why: "L₁L₂ = 0.09، وجذرها 0.3 H (المراتب العشرية تتنصّف)." },
-  { q: "جسم يتحرك بسرعة 0.6c. قيمة <span class='sqrt'>√<span class='rad'>1 − v²/c²</span></span> تساوي:",
+  { q: "جسم يتحرك بسرعة 0.6c. قيمة <span class='sqrt'>√<span class='rad'>1 − <span class='frac'><span class='num'>v²</span><span class='den'>c²</span></span></span></span> تساوي:",
     opts: ["0.6", "0.36", "0.64", "0.8"], a: 3,
     why: "0.6² = 0.36، و 1 − 0.36 = 0.64، وجذرها 0.8." },
   { q: "نواة عددها الكتلي A = 125. نصف قطرها R = 1.2×10⁻¹⁵ × A^(1/3) يساوي:",
     opts: ["41.7×10⁻¹⁵ m", "6×10⁻¹⁵ m", "150×10⁻¹⁵ m", "13.4×10⁻¹⁵ m"], a: 1,
     why: "<span class='sqrt' data-n='3'>∛<span class='rad'>125</span></span> = 5 (لأن 5×5×5 = 125)، إذن R = 1.2×5×10⁻¹⁵ = 6×10⁻¹⁵ m." },
-  { q: "دائرة فيها L = 0.01H و C = 1μF. قيمة ω_r = 1/<span class='sqrt'>√<span class='rad'>LC</span></span> تساوي:",
+  { q: "دائرة فيها L = 0.01H و C = 1μF. قيمة ω_r = <span class='frac'><span class='num'>1</span><span class='den'><span class='sqrt'>√<span class='rad'>LC</span></span></span></span> تساوي:",
     opts: ["10⁴ rad/s", "10⁸ rad/s", "10⁻⁴ rad/s", "10² rad/s"], a: 0,
     why: "LC = 10⁻² × 10⁻⁶ = 10⁻⁸، جذرها 10⁻⁴، ومقلوبها 10⁴ rad/s." },
   { q: "<span class='sqrt'>√<span class='rad'>0.04</span></span> يساوي:",

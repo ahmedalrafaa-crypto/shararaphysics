@@ -107,7 +107,7 @@
       <tr><th>θ</th><th>0°</th><th>30°</th><th>37°</th><th>45°</th><th>53°</th><th>60°</th><th>90°</th><th>180°</th></tr>
       <tr><td>sin</td><td>0</td><td>0.5</td><td>0.6</td><td>0.707</td><td>0.8</td><td>0.866</td><td>1</td><td>0</td></tr>
       <tr><td>cos</td><td>1</td><td>0.866</td><td>0.8</td><td>0.707</td><td>0.6</td><td>0.5</td><td>0</td><td>−1</td></tr>
-      <tr><td>tan</td><td>0</td><td>0.577</td><td>0.75</td><td>1</td><td>4/3</td><td>1.732</td><td>—</td><td>0</td></tr>
+      <tr><td>tan</td><td>0</td><td>0.577</td><td>0.75</td><td>1</td><td><span class='frac'><span class='num'>4</span><span class='den'>3</span></span></td><td>1.732</td><td>—</td><td>0</td></tr>
     </table></div>
     <div class="notebox">
       <b>الزاويتان المتتامتان:</b> إذا <span class="formula-inline">α + β = 90°</span> فإن <span class="formula-inline">sinα = cosβ</span>. لهذا <span class="formula-inline">sin37° = cos53° = 0.6</span> و <span class="formula-inline">sin53° = cos37° = 0.8</span>.
@@ -127,7 +127,7 @@
       <b>القاعدة:</b> إذا أُعطيت الزاوية <b>مع مستوى اللفة</b> (α)، فالزاوية بالقانون <span class="formula-inline">θ = 90° − α</span>. وإذا كانت B <b>عمودية على مستوى اللفة</b> فإن θ = 0 والفيض أكبر ما يمكن.
     </div>
     <div class="defbox">
-      📌 <b class="term">تأثير كومبتن:</b> <span class="formula-inline">Δλ = (h/mₑc)(1 − cosθ)</span>. احفظ: <span class="formula-inline">1 − cos60° = 0.5</span>، <span class="formula-inline">1 − cos90° = 1</span>، <span class="formula-inline">1 − cos180° = 2</span> (لأن cos180° = −1).
+      📌 <b class="term">تأثير كومبتن:</b> <span class="formula-inline">Δλ = (<span class='frac'><span class='num'>h</span><span class='den'>mₑc</span></span>)(1 − cosθ)</span>. احفظ: <span class="formula-inline">1 − cos60° = 0.5</span>، <span class="formula-inline">1 − cos90° = 1</span>، <span class="formula-inline">1 − cos180° = 2</span> (لأن cos180° = −1).
     </div>
   </div>
 
@@ -136,7 +136,7 @@
     <div class="lawbox">
       ربط التوالي R-L-C
       <div class="formula">Z² = R² + (X_L − X_C)²</div>
-      <div class="formula">cosΦ = R/Z · tanΦ = (X_L − X_C)/R</div>
+      <div class="formula">cosΦ = <span class='frac'><span class='num'>R</span><span class='den'>Z</span></span> · tanΦ = <span class='frac'><span class='num'>X_L − X_C</span><span class='den'>R</span></span></div>
     </div>
     <div class="notebox">
       <b>الثلاثيات اللي يحبها الوزاري:</b> 3-4-5 ومضاعفاتها (6-8-10، 30-40-50، 60-80-100)، و5-12-13. إذا شفت ضلعين منها، الثالث جاهز بلا جذر. ومثلث 3-4-5 هو نفسه سبب الزاويتين 37° و 53°.
@@ -167,9 +167,9 @@
 
   <div class="example">
     <div class="exq">مثال ١ (سؤال وزاري، 2016 الدور الثالث): ملف N=50، نصف قطره 20cm (A=4π×10⁻²m²)، B يتغيّر من 0 إلى 0.6T خلال Δt=π s. احسب ε عندما: 1) المساحة توازي الكثافة (θ=0) 2) الكثافة تصنع 37° مع مستوى اللفة (θ_عمودي=53°، cos53°=0.6).</div>
-    <div class="givens">القانون: ε = N·A·ΔB·cosθ / Δt — لاحظ π بالبسط والمقام (ترجع لها بالدرس 6)</div>
+    <div class="givens">القانون: ε = <span class='frac'><span class='num'>N·A·ΔB·cosθ</span><span class='den'>Δt</span></span> — لاحظ π بالبسط والمقام (ترجع لها بالدرس 6)</div>
     <div class="step"><b>الخطوة ١:</b> الحالة الأولى θ = 0 و cos0 = 1:
-      <div class="math">ε = 50 × 4π×10⁻² × 0.6 × 1 / π = 50 × 4×10⁻² × 0.6 = 1.2 V</div></div>
+      <div class="math">ε = 50 × 4π×10⁻² × 0.6 × <span class='frac'><span class='num'>1</span><span class='den'>π</span></span> = 50 × 4×10⁻² × 0.6 = 1.2 V</div></div>
     <div class="step"><b>الخطوة ٢:</b> الحالة الثانية: 37° مع المستوى ← مع العمود 90° − 37° = 53°:
       <div class="math">θ = 53°  →  cos53° = 0.6</div></div>
     <div class="step"><b>الخطوة ٣:</b> نعوّض:
@@ -182,15 +182,15 @@
     <div class="step"><b>الخطوة ١:</b> الفرق بين الرادتين:
       <div class="math">X_L − X_C = 18 − 10 = 8 Ω</div></div>
     <div class="step"><b>الخطوة ٢:</b> فيثاغورس (6-8-10 = ضعف 3-4-5):
-      <div class="math">Z² = 6² + 8² = 36 + 64 = 100  →  Z = 10 Ω  →  I = V/Z = 50/10 = 5 A</div></div>
+      <div class="math">Z² = 6² + 8² = 36 + 64 = 100  →  Z = 10 Ω  →  I = <span class='frac'><span class='num'>V</span><span class='den'>Z</span></span> = <span class='frac'><span class='num'>50</span><span class='den'>10</span></span> = 5 A</div></div>
     <div class="step"><b>الخطوة ٣:</b> زاوية الطور وعامل القدرة:
-      <div class="math">tanΦ = 8/6 = 4/3  →  Φ = 53°  ,  cosΦ = R/Z = 6/10 = 0.6</div></div>
+      <div class="math">tanΦ = <span class='frac'><span class='num'>8</span><span class='den'>6</span></span> = <span class='frac'><span class='num'>4</span><span class='den'>3</span></span>  →  Φ = 53°  ,  cosΦ = <span class='frac'><span class='num'>R</span><span class='den'>Z</span></span> = <span class='frac'><span class='num'>6</span><span class='den'>10</span></span> = 0.6</div></div>
   </div>
 
   <div class="example">
-    <div class="exq">مثال ٣ (سؤال وزاري، 2018): ملف معامل حثه الذاتي L=(4/5π)H بين قطبي مصدر متناوب V=200V. زاوية فرق الطور بين الفولطية والتيار=53°، I=2A. — المطلوب هنا: R و X_L.</div>
+    <div class="exq">مثال ٣ (سؤال وزاري، 2018): ملف معامل حثه الذاتي L=(<span class='frac'><span class='num'>4</span><span class='den'>5π</span></span>)H بين قطبي مصدر متناوب V=200V. زاوية فرق الطور بين الفولطية والتيار=53°، I=2A. — المطلوب هنا: R و X_L.</div>
     <div class="step"><b>الخطوة ١:</b> الممانعة:
-      <div class="math">Z = V/I = 200/2 = 100 Ω</div></div>
+      <div class="math">Z = <span class='frac'><span class='num'>V</span><span class='den'>I</span></span> = <span class='frac'><span class='num'>200</span><span class='den'>2</span></span> = 100 Ω</div></div>
     <div class="step"><b>الخطوة ٢:</b> المجاور = الوتر × cos:
       <div class="math">R = Z cosΦ = 100 × cos53° = 100 × 0.6 = 60 Ω</div></div>
     <div class="step"><b>الخطوة ٣:</b> الضلع الثالث من الثلاثية 60-80-100:
@@ -199,7 +199,7 @@
   </div>
 
   <div class="example">
-    <div class="exq">مثال ٤: فوتون أشعة سينية يُستطار عن إلكترون حر. احسب الزيادة بطوله الموجي عند زاوية استطارة 90° ثم 180°، علماً أن h/mₑc = 0.24×10⁻¹¹ m.</div>
+    <div class="exq">مثال ٤: فوتون أشعة سينية يُستطار عن إلكترون حر. احسب الزيادة بطوله الموجي عند زاوية استطارة 90° ثم 180°، علماً أن <span class='frac'><span class='num'>h</span><span class='den'>mₑc</span></span> = 0.24×10⁻¹¹ m.</div>
     <div class="step"><b>الخطوة ١:</b> عند 90°:
       <div class="math">Δλ = 0.24×10⁻¹¹ × (1 − cos90°) = 0.24×10⁻¹¹ × (1 − 0) = 0.24×10⁻¹¹ m</div></div>
     <div class="step"><b>الخطوة ٢:</b> عند 180° (cos180° = −1):
@@ -276,7 +276,7 @@
 
     var sinP = X / Z, cosP = R / Z, tanP = X / R;
     out.innerHTML = "Z = <span class='sqrt'>√<span class='rad'>" + R + "² + " + (X < 0 ? "(" + X + ")" : X) + "²</span></span> " + (exactZ ? "= " + Z + " Ω ✓ (ثلاثية كاملة)" : "≈ " + f3(Z) + " Ω") +
-      " — Φ ≈ " + f3(phi) + "° — sinΦ = " + f3(sinP) + " · cosΦ = R/Z = " + f3(cosP) + " · tanΦ = " + f3(tanP);
+      " — Φ ≈ " + f3(phi) + "° — sinΦ = " + f3(sinP) + " · cosΦ = <span class='frac'><span class='num'>R</span><span class='den'>Z</span></span> = " + f3(cosP) + " · tanΦ = " + f3(tanP);
     Phy.upgradeSqrts(out);
   }
   [rR, lR, cR].forEach(function (e) { e.addEventListener("input", render); });
@@ -287,7 +287,7 @@
 Phy.quiz("quiz5", [
   { q: "قيمة cos53° (من مثلث 3-4-5) تساوي:",
     opts: ["0.8", "0.6", "0.75", "1.33"], a: 1,
-    why: "cos53° = sin37° = 3/5 = 0.6." },
+    why: "cos53° = sin37° = <span class='frac'><span class='num'>3</span><span class='den'>5</span></span> = 0.6." },
   { q: "مجال مغناطيسي يصنع زاوية 30° مع مستوى لفة. الزاوية θ التي تُعوَّض في Φ = BA cosθ هي:",
     opts: ["30°", "120°", "60°", "0°"], a: 2,
     why: "θ تُقاس من العمود على المستوى: 90° − 30° = 60°." },
@@ -296,13 +296,13 @@ Phy.quiz("quiz5", [
     why: "X_L − X_C = 40، و Z² = 30² + 40² = 2500، إذن Z = 50Ω (ثلاثية 30-40-50)." },
   { q: "في نفس الدائرة (R = 30Ω و Z = 50Ω)، زاوية الطور Φ تساوي:",
     opts: ["37°", "45°", "60°", "53°"], a: 3,
-    why: "cosΦ = R/Z = 30/50 = 0.6، والزاوية التي جيب تمامها 0.6 هي 53°." },
+    why: "cosΦ = <span class='frac'><span class='num'>R</span><span class='den'>Z</span></span> = <span class='frac'><span class='num'>30</span><span class='den'>50</span></span> = 0.6، والزاوية التي جيب تمامها 0.6 هي 53°." },
   { q: "قيمة (1 − cos180°) بقانون كومبتن تساوي:",
     opts: ["0", "1", "2", "−1"], a: 2,
     why: "cos180° = −1، إذن 1 − (−1) = 2." },
   { q: "دائرة توالي فيها R = 40Ω و X_L − X_C = 30Ω. زاوية الطور Φ:",
     opts: ["53°", "37°", "30°", "45°"], a: 1,
-    why: "tanΦ = 30/40 = 0.75، وهي ظل الزاوية 37°." }
+    why: "tanΦ = <span class='frac'><span class='num'>30</span><span class='den'>40</span></span> = 0.75، وهي ظل الزاوية 37°." }
 ], { onDone: function (stars) { Phy.setLesson("g6c0", "5", { stars: stars }); } });
 </script>
 </body>

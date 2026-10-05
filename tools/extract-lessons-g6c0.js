@@ -17,9 +17,22 @@ const DIR = path.join(ROOT, 'chapters', CH);
 const PRE = 'window.PHY_LESSONS = (window.PHY_LESSONS || []).concat(';
 
 const ENT = { '&nbsp;': ' ', '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'" };
-// ترميز الجذر (يرسمه core.js بشكل الكتاب) يرجع نصاً: √X للعدد البسيط و√(…) لغيره
-const rootsToText = h => h.replace(/<span class=['"]sqrt['"](?: data-n=['"]3['"])?>([√∛])<span class=['"]rad['"]>([^<]*)<\/span><\/span>/g,
-  (m, sym, rad) => sym + (/^[0-9.]+$/.test(rad) ? rad : '(' + rad + ')'));
+const rootsToText = (h) => {
+  // ترميز الجذر والكسر (يرسمه core.js بشكل الكتاب) يرجع نصاً: √(…) و a/b، من الداخل للخارج
+  // البسط بلا قوسين إن كان حدّاً واحداً بلا عمليات (2PE، ΔI)، والمقام بلا قوسين إن كان رمزاً
+  // مفرداً أو عدداً (C، Δt، C_eq، 24)، وإلا بين قوسين: h/(mλ)، 1/(2πfC)
+  const simpleNum = (x) => /^[0-9A-Za-zΑ-Ωα-ωΔΦ_₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹ₑπ.]+$/.test(x) || /^[√∛]\([^()]*\)$/.test(x)
+  const simpleDen = (x) => /^[0-9.]+$/.test(x) || /^Δ?[A-Za-zΑ-Ωα-ω](_[A-Za-z0-9]+|[₀-₉ₑ⁰¹²³⁴⁵⁶⁷⁸⁹]*)$/.test(x) || /^[√∛]\([^()]*\)$/.test(x)
+  let prev
+  do {
+    prev = h
+    h = h.replace(/<span class=['"]sqrt['"](?: data-n=['"]3['"])?>([√∛])<span class=['"]rad['"]>([^<]*)<\/span><\/span>/g,
+      (m, sym, rad) => sym + (/^[0-9.]+$/.test(rad) ? rad : '(' + rad + ')'))
+    h = h.replace(/<span class=['"]frac['"]><span class=['"]num['"]>([^<]*)<\/span><span class=['"]den['"]>([^<]*)<\/span><\/span>/g,
+      (m, n, d) => (simpleNum(n) ? n : '(' + n + ')') + '/' + (simpleDen(d) ? d : '(' + d + ')'))
+  } while (h !== prev)
+  return h
+}
 const text = h => rootsToText(h).replace(/<br\s*\/?>/g, ' ').replace(/<[^>]+>/g, ' ')
   .replace(/&[a-z#0-9]+;/g, e => ENT[e] || e).replace(/\s+/g, ' ').trim();
 

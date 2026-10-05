@@ -52,18 +52,25 @@ var Phy = (function () {
     return s;
   }
 
-  /* ---------- تحويل علامات الجذر إلى MathML (جذر حقيقي متصل) ----------
-     المصدر في الصفحات: <span class="sqrt">√<span class="rad">المقدار</span></span>
-     ونحن نحوّله إلى <math><msqrt>…</msqrt></math> */
+  /* ---------- تحويل الجذور والكسور إلى MathML (شكل الكتاب) ----------
+     المصدر في الصفحات:
+       جذر:  <span class="sqrt">√<span class="rad">المقدار</span></span>   (data-n="3" = تكعيبي)
+       كسر:  <span class="frac"><span class="num">البسط</span><span class="den">المقام</span></span>
+     ويجوز تداخلهما (جذر داخل مقام، كسر تحت جذر). */
   var SUPMAP = { "⁰": "0", "¹": "1", "²": "2", "³": "3", "⁴": "4", "⁵": "5", "⁶": "6", "⁷": "7", "⁸": "8", "⁹": "9", "⁻": "−", "⁺": "+" };
-  var SUBMAP = { "₀": "0", "₁": "1", "₂": "2", "₃": "3", "₄": "4", "₅": "5", "₆": "6", "₇": "7", "₈": "8", "₉": "9" };
+  var SUBMAP = { "₀": "0", "₁": "1", "₂": "2", "₃": "3", "₄": "4", "₅": "5", "₆": "6", "₇": "7", "₈": "8", "₉": "9", "ₑ": "e" };
   function mmlFromText(str) {
     var nodes = [], i = 0, n = str.length;
     function isDigit(c) { return c >= "0" && c <= "9"; }
-    function isLetter(c) { return /[A-Za-zء-ي]/.test(c); }
+    function isLetter(c) { return /[A-Za-zΑ-Ωα-ωء-ي]/.test(c); }
     while (i < n) {
       var c = str[i];
       if (c === " ") { i++; continue; }
+      // X_L و C_eq: ما بعد الشرطة السفلية دليل سفلي للحرف السابق
+      if (c === "_" && nodes.length && i + 1 < n && /[A-Za-z0-9]/.test(str[i + 1])) {
+        var s2 = ""; i++; while (i < n && /[A-Za-z0-9]/.test(str[i])) { s2 += str[i]; i++; }
+        nodes.push("<msub>" + nodes.pop() + "<mi>" + s2 + "</mi></msub>"); continue;
+      }
       if (SUPMAP[c]) {
         var sup = ""; while (i < n && SUPMAP[str[i]]) { sup += SUPMAP[str[i]]; i++; }
         var p = nodes.pop() || "<mn></mn>";
@@ -86,16 +93,31 @@ var Phy = (function () {
     }
     return nodes.join("");
   }
-  // data-n="3" على العنصر = جذر تكعيبي (∛) يُرسم <mroot> بدليل 3 فوق علامة الجذر
+  // يحوّل عقدة (نص أو جذر أو كسر أو غلاف) إلى MathML بشكل تعاودي
+  function mmlFromNode(node) {
+    if (node.nodeType === 3) return mmlFromText(node.textContent);
+    if (node.nodeType !== 1) return "";
+    var cl = node.classList;
+    if (cl.contains("sqrt")) {
+      var rad = node.querySelector(".rad");
+      var inner = rad ? mmlFromNode(rad) : mmlFromText(node.textContent.replace(/[√∛]/, ""));
+      var idx = node.getAttribute("data-n");
+      // data-n="3" = جذر تكعيبي (∛) يُرسم <mroot> بدليل 3 فوق علامة الجذر
+      return idx ? "<mroot><mrow>" + inner + "</mrow><mn>" + idx + "</mn></mroot>"
+                 : "<msqrt><mrow>" + inner + "</mrow></msqrt>";
+    }
+    if (cl.contains("frac")) {
+      var num = node.querySelector(".num"), den = node.querySelector(".den");
+      return "<mfrac><mrow>" + (num ? mmlFromNode(num) : "") + "</mrow><mrow>" + (den ? mmlFromNode(den) : "") + "</mrow></mfrac>";
+    }
+    return Array.prototype.map.call(node.childNodes, mmlFromNode).join("");
+  }
+  // الاسم القديم محفوظ (تستدعيه صفحات كثيرة) لكنه الآن يحوّل الكسور أيضاً
   function upgradeSqrts(root) {
-    (root || document).querySelectorAll(".sqrt").forEach(function (el) {
-      var rad = el.querySelector(".rad");
-      var txt = rad ? rad.textContent : el.textContent.replace(/[√∛]/, "");
-      var idx = el.getAttribute("data-n");
+    (root || document).querySelectorAll(".sqrt, .frac").forEach(function (el) {
+      if (!el.isConnected || (el.parentElement && el.parentElement.closest(".sqrt, .frac"))) return; // الخارجي فقط
       var holder = document.createElement("span");
-      holder.innerHTML = idx
-        ? '<math><mroot><mrow>' + mmlFromText(txt) + '</mrow><mn>' + idx + '</mn></mroot></math>'
-        : '<math><msqrt><mrow>' + mmlFromText(txt) + '</mrow></msqrt></math>';
+      holder.innerHTML = "<math>" + mmlFromNode(el) + "</math>";
       el.replaceWith(holder.firstChild);
     });
   }

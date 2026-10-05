@@ -95,7 +95,7 @@
   <div class="hook">
     <span class="em">⚡</span>
     <span>بدرس الأشعة السينية توصل لهذا السطر:
-      <span class="bigout" style="display:block;font-size:1rem">λ_min = (6.63×10⁻³⁴ × 3×10⁸) / (3×10⁴ × 1.6×10⁻¹⁹)</span>
+      <span class="bigout" style="display:block;font-size:1rem">λ_min = <span class='frac'><span class='num'>6.63×10⁻³⁴ × 3×10⁸</span><span class='den'>3×10⁴ × 1.6×10⁻¹⁹</span></span></span>
       أربعة أعداد، أربعة أسس، وبلا حاسبة… شلون تطلع الجواب بدقيقة؟ السر: <b>افصل الأرقام عن الأسس</b>.</span>
   </div>
 
@@ -104,7 +104,7 @@
     <div class="lawbox">
       الضرب: نضرب المعاملات ونجمع الأسس — القسمة: نقسم المعاملات ونطرح الأسس
       <div class="formula">(a×10ᵐ)(b×10ⁿ) = ab × 10ᵐ⁺ⁿ</div>
-      <div class="formula">(a×10ᵐ) / (b×10ⁿ) = (a/b) × 10ᵐ⁻ⁿ</div>
+      <div class="formula"><span class='frac'><span class='num'>a×10ᵐ</span><span class='den'>b×10ⁿ</span></span> = (<span class='frac'><span class='num'>a</span><span class='den'>b</span></span>) × 10ᵐ⁻ⁿ</div>
     </div>
     <div class="defbox">
       📌 <b class="term">القوة للقوة:</b> نضرب الأسس <span class="formula-inline">(10⁻²)² = 10⁻⁴</span>. و<b class="term">الجمع والطرح:</b> لا نجمع إلا بعد توحيد الأس، مثل:
@@ -156,14 +156,14 @@
   </div>
 
   <div class="example">
-    <div class="exq">مثال ٢: أقصر طول موجي لأشعة سينية من أنبوبة فرق جهدها 30000V. احسب <span class="formula-inline">λ_min = hc / (Ve)</span></div>
+    <div class="exq">مثال ٢: أقصر طول موجي لأشعة سينية من أنبوبة فرق جهدها 30000V. احسب <span class="formula-inline">λ_min = <span class='frac'><span class='num'>hc</span><span class='den'>Ve</span></span></span></div>
     <div class="givens">h = 6.63×10⁻³⁴ J·s — c = 3×10⁸ m/s — V = 30000 V = 3×10⁴ V — e = 1.6×10⁻¹⁹ C</div>
     <div class="step"><b>الخطوة ١:</b> البسط:
       <div class="math">hc = (6.63 × 3) × 10⁻³⁴⁺⁸ = 19.89 × 10⁻²⁶</div></div>
     <div class="step"><b>الخطوة ٢:</b> المقام:
       <div class="math">Ve = (3 × 1.6) × 10⁴⁻¹⁹ = 4.8 × 10⁻¹⁵</div></div>
     <div class="step"><b>الخطوة ٣:</b> القسمة (نطرح الأسس):
-      <div class="math">λ_min = (19.89 / 4.8) × 10⁻²⁶⁻⁽⁻¹⁵⁾ ≈ 4.14 × 10⁻¹¹ m</div>
+      <div class="math">λ_min = (<span class='frac'><span class='num'>19.89</span><span class='den'>4.8</span></span>) × 10⁻²⁶⁻⁽⁻¹⁵⁾ ≈ 4.14 × 10⁻¹¹ m</div>
       💡 نفس الجواب الموجود بدرس <a href="../g6c8/lesson4.html">الأشعة السينية</a>.</div>
   </div>
 
@@ -175,15 +175,15 @@
     <div class="step"><b>الخطوة ٢:</b> التحويل (cm² = 10⁻⁴ m²):
       <div class="math">ΔA = −500 × 10⁻⁴ = −5 × 10⁻² m²</div></div>
     <div class="step"><b>الخطوة ٣:</b> المقدار والتيار:
-      <div class="math">ε = |ΔA|·B / Δt = (5×10⁻² × 0.16) / 0.2 = 0.04 V</div>
-      <div class="math">I = ε / R = 0.04 / 8 = 5 × 10⁻³ A</div>
+      <div class="math">ε = <span class='frac'><span class='num'>|ΔA|·B</span><span class='den'>Δt</span></span> = <span class='frac'><span class='num'>5×10⁻² × 0.16</span><span class='den'>0.2</span></span> = 0.04 V</div>
+      <div class="math">I = <span class='frac'><span class='num'>ε</span><span class='den'>R</span></span> = <span class='frac'><span class='num'>0.04</span><span class='den'>8</span></span> = 5 × 10⁻³ A</div>
       ⚠️ لو حوّلت بـ 10⁻² بدل 10⁻⁴ يطلع الجواب أكبر بمئة مرة.</div>
   </div>
 
   <div class="example">
     <div class="exq">مثال ٤: محزز فيه 2000 خط لكل سنتيمتر. احسب ثابته d بالمتر، ثم حوّل طاقة فوتون مقدارها 2.86eV إلى جول.</div>
     <div class="step"><b>الخطوة ١:</b> ثابت المحزز = المسافة ÷ عدد الخطوط:
-      <div class="math">d = 1 cm / 2000 = 5 × 10⁻⁴ cm</div></div>
+      <div class="math">d = <span class='frac'><span class='num'>1 cm</span><span class='den'>2000</span></span> = 5 × 10⁻⁴ cm</div></div>
     <div class="step"><b>الخطوة ٢:</b> إلى المتر (× 10⁻²):
       <div class="math">d = 5 × 10⁻⁴ × 10⁻² = 5 × 10⁻⁶ m</div></div>
     <div class="step"><b>الخطوة ٣:</b> من eV إلى J نضرب في 1.6×10⁻¹⁹:
@@ -197,7 +197,7 @@
       <li><a href="../g6c2/lesson4.html">قانون فاراداي</a>: المساحات بالـ cm².</li>
       <li><a href="../g6c5/lesson6.html">محزز الحيود</a>: الخطوط لكل سنتيمتر والأطوال بالـ nm.</li>
       <li><a href="../g6c6/lesson3.html">الظاهرة الكهروضوئية</a>: أسس بعيدة مثل 10⁻³⁴ و10⁻¹⁹.</li>
-      <li><a href="../g6c8/lesson4.html">الأشعة السينية</a>: القانون <span class="formula-inline">hc/(Ve)</span> بالضبط.</li>
+      <li><a href="../g6c8/lesson4.html">الأشعة السينية</a>: القانون <span class="formula-inline"><span class='frac'><span class='num'>hc</span><span class='den'>Ve</span></span></span> بالضبط.</li>
       <li><a href="../g6c9/lesson2.html">طاقة الربط النووية</a>: التحويل من u إلى MeV بالضرب في 931.</li>
     </ul>
   </div>
@@ -236,7 +236,7 @@ Phy.quiz("quiz1", [
     why: "نضرب في 1.6×10⁻¹⁹: 5×1.6 = 8، إذن 8×10⁻¹⁹ J." },
   { q: "محزز فيه 5000 خط لكل سنتيمتر. ثابته d بالمتر:",
     opts: ["2×10⁻⁴ m", "5×10⁻⁵ m", "2×10⁻⁸ m", "2×10⁻⁶ m"], a: 3,
-    why: "d = 1cm/5000 = 2×10⁻⁴ cm، وبالمتر نضرب في 10⁻²: 2×10⁻⁶ m." }
+    why: "d = <span class='frac'><span class='num'>1cm</span><span class='den'>5000</span></span> = 2×10⁻⁴ cm، وبالمتر نضرب في 10⁻²: 2×10⁻⁶ m." }
 ], { onDone: function (stars) { Phy.setLesson("g6c0", "1", { stars: stars }); } });
 </script>
 </body>

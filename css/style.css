@@ -381,9 +381,11 @@ body::after {
   padding: 2px 5px 0 2px;
   margin-inline-start: -1px;
 }
-/* الجذر الحقيقي عبر MathML */
-math { direction: ltr; font-size: 1.12em; color: inherit; }
+/* الجذر والكسر الحقيقيان عبر MathML — math-style: normal يُبقي البسط والمقام
+   بحجم الخط العادي (مثل الكتاب) بدل تصغيرهما داخل السطر */
+math { direction: ltr; font-size: 1.12em; color: inherit; math-style: normal; }
 math msqrt { padding-inline: 1px; }
+math mfrac { padding-inline: 2px; }
 
 /* ---------- hook box ---------- */
 .hook {
