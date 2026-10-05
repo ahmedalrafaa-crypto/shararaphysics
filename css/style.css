@@ -933,6 +933,23 @@ footer.site::before {
 .theme-g6c9 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(21, 128, 61, .35); }
 .theme-g6c9 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(21, 128, 61, .45); }
 
+/* السادس الإعدادي — الفصل التمهيدي: رياضيات الفيزياء — رمادي السبّورة وأصفر الطباشير */
+.theme-g6c0 {
+  --violet: #334155;
+  --violet-deep: #1e293b;
+  --blue: #ca8a04;
+  --shadow: 0 10px 30px rgba(51, 65, 85, 0.10);
+  --shadow-lift: 0 16px 40px rgba(51, 65, 85, 0.18);
+}
+.theme-g6c0::before { background: radial-gradient(circle, #334155, transparent 70%); }
+.theme-g6c0::after { background: radial-gradient(circle, #eab308, transparent 70%); }
+.theme-g6c0 .hero::before { content: "📐"; }
+.theme-g6c0 .path::before { border-inline-start-color: #dbe2ea; }
+.theme-g6c0 .node:not(.done):not(.exam):not(.qna):not(.review) .dot { border-color: #dbe2ea; }
+.theme-g6c0 .topbar .brand-logo { box-shadow: 0 4px 12px rgba(51, 65, 85, 0.30); }
+.theme-g6c0 .btn:not(.green):not(.coral):not(.ghost) { box-shadow: 0 6px 16px rgba(51, 65, 85, .35); }
+.theme-g6c0 .btn:not(.green):not(.coral):not(.ghost):hover { box-shadow: 0 10px 22px rgba(51, 65, 85, .45); }
+
 /* ===== الخامس العلمي — هوية سماوي/كهرماني (مجاني، مميّزة عن الثالث والسادس) ===== */
 .theme-g5c1 {
   --violet: #0891b2;

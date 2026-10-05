@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نشاط منزلي — الدرس 3: الكسور والمقلوب وإيجاد المجهول — السادس العلمي</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="activityRoot"></div>
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var ACTIVITY = {
+  ch: "g6c0",
+  lesson: "3",
+  title: "الكسور والمقلوب وإيجاد المجهول",
+  // نفس أول 5 أسئلة من "اختبر نفسك" بنهاية الدرس (lesson3.html) — إعادة استخدام بدل التكرار.
+  questions: [
+    { q: "متسعتان 4μF و 12μF على التوالي. سعتهما المكافئة:",
+      opts: ["16 μF", "3 μF", "8 μF", "0.33 μF"], a: 1,
+      why: "الضرب على الجمع: (4×12)/(4+12) = 48/16 = 3 μF." },
+    { q: "ثلاث متسعات 10μF و 15μF و 30μF على التوالي. سعتها المكافئة:",
+      opts: ["55 μF", "1/5 μF", "5 μF", "30 μF"], a: 2,
+      why: "المقام المشترك 30: 3/30 + 2/30 + 1/30 = 6/30 = 1/5، نقلبه: 5 μF." },
+    { q: "من القانون PE = ½CΔV²، فرق الجهد يساوي:",
+      opts: ["ΔV = √(2PE/C)", "ΔV = 2PE/C", "ΔV = √(PE/2C)", "ΔV = √(2C/PE)"], a: 0,
+      why: "نضرب في 2: 2PE = CΔV²، نقسم على C: ΔV² = 2PE/C، ثم نجذّر." },
+    { q: "متسعة سعتها 4μF تختزن 0.02J. فرق الجهد بين صفيحتيها:",
+      opts: ["10 V", "1000 V", "50 V", "100 V"], a: 3,
+      why: "ΔV² = 2×0.02/(4×10⁻⁶) = 10⁴، إذن ΔV = 100 V." },
+    { q: "أكمل: ²³⁸₉₂U → X + ⁴₂He. النواة X هي:",
+      opts: ["²³⁴₉₀Th", "²³⁴₉₄Th", "²⁴²₉₀Th", "²³⁸₉₀Th"], a: 0,
+      why: "الكتلي: 238 − 4 = 234. الذري: 92 − 2 = 90." }
+  ]
+};
+</script>
+<script src="../../js/activity.js"></script>
+</body>
+</html>

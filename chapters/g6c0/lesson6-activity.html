@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نشاط منزلي — الدرس 6: π والراديان والدالة الجيبية — السادس العلمي</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="activityRoot"></div>
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var ACTIVITY = {
+  ch: "g6c0",
+  lesson: "6",
+  title: "π والراديان والدالة الجيبية",
+  // نفس أول 5 أسئلة من "اختبر نفسك" بنهاية الدرس (lesson6.html) — إعادة استخدام بدل التكرار.
+  questions: [
+    { q: "ملف معامل حثه L = 1/π H بمصدر تردده 50Hz. رادة حثه X_L = 2πfL تساوي:",
+      opts: ["314 Ω", "100 Ω", "50 Ω", "31.4 Ω"], a: 1,
+      why: "X_L = 2π × 50 × 1/π — π تختصر: 2 × 50 = 100Ω." },
+    { q: "الزاوية π/3 rad بالدرجات تساوي:",
+      opts: ["30°", "90°", "120°", "60°"], a: 3,
+      why: "π rad = 180°، إذن π/3 = 180°/3 = 60°." },
+    { q: "فولطية متناوبة V = 220 sin(100πt). تردد المصدر:",
+      opts: ["50 Hz", "100 Hz", "314 Hz", "100π Hz"], a: 0,
+      why: "ω = 100π، و f = ω/2π = 100π/2π = 50Hz." },
+    { q: "القيمة العظمى لفولطية متناوبة 100V. قيمتها المؤثرة:",
+      opts: ["141.4 V", "50 V", "70.7 V", "100 V"], a: 2,
+      why: "V_eff = 0.707 × V_m = 0.707 × 100 = 70.7V." },
+    { q: "قوة دافعة ε = 10 sin(100πt). قيمتها عند t = 1/200 s:",
+      opts: ["0 V", "5 V", "7.07 V", "10 V"], a: 3,
+      why: "ωt = 100π/200 = π/2 = 90°، و sin90° = 1، إذن ε = 10V." }
+  ]
+};
+</script>
+<script src="../../js/activity.js"></script>
+</body>
+</html>

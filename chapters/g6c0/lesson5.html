@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدرس 5: المثلثات وفيثاغورس — السادس العلمي</title>
+<meta name="description" content="الدرس 5: المثلثات وفيثاغورس — درس ضمن الفصل التمهيدي: رياضيات الفيزياء، فيزياء السادس العلمي: شرح مبسط وأمثلة محلولة خطوة بخطوة | شرارة">
+<link rel="canonical" href="https://shararaphysics.netlify.app/chapters/g6c0/lesson5">
+<meta property="og:type" content="website">
+<meta property="og:title" content="الدرس 5: المثلثات وفيثاغورس — السادس العلمي">
+<meta property="og:description" content="الدرس 5: المثلثات وفيثاغورس — درس ضمن الفصل التمهيدي: رياضيات الفيزياء، فيزياء السادس العلمي: شرح مبسط وأمثلة محلولة خطوة بخطوة | شرارة">
+<meta property="og:image" content="https://shararaphysics.netlify.app/assets/og-image.png">
+<meta property="og:url" content="https://shararaphysics.netlify.app/chapters/g6c0/lesson5">
+<meta property="og:locale" content="ar_IQ">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+<!-- seo-jsonld -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LearningResource",
+      "name": "الدرس 5: المثلثات وفيثاغورس — السادس العلمي",
+      "url": "https://shararaphysics.netlify.app/chapters/g6c0/lesson5",
+      "description": "الدرس 5: المثلثات وفيثاغورس — درس ضمن الفصل التمهيدي: رياضيات الفيزياء، فيزياء السادس العلمي: شرح مبسط وأمثلة محلولة خطوة بخطوة | شرارة",
+      "inLanguage": "ar",
+      "educationalLevel": "السادس العلمي",
+      "learningResourceType": "درس",
+      "isPartOf": {
+        "@type": "Course",
+        "name": "الفصل التمهيدي: رياضيات الفيزياء",
+        "url": "https://shararaphysics.netlify.app/chapters/g6c0/"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "شرارة",
+        "sameAs": "https://shararaphysics.netlify.app/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://shararaphysics.netlify.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "الفصل التمهيدي",
+          "item": "https://shararaphysics.netlify.app/chapters/g6c0/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "الدرس 5",
+          "item": "https://shararaphysics.netlify.app/chapters/g6c0/lesson5"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="theme-g6c0">
+<script>
+(function() {
+  if (localStorage.getItem('phy3m_owner')) return;
+  if (location.hostname !== 'shararaphysics.netlify.app') return;
+  if (/bot|crawl|spider|slurp|bingpreview|facebookexternalhit|preview|headless|lighthouse|pagespeed|gtmetrix/i.test(navigator.userAgent || '')) return;
+  if (sessionStorage.getItem('phy3m_visit_logged')) return;
+  sessionStorage.setItem('phy3m_visit_logged', '1');
+  var img = new Image();
+  img.src = 'https://script.google.com/macros/s/AKfycbw8veop0lgoNiMdaJiiESAG6vvna7ey-3npPECaxt1d5pMhmnl1Pu__JdHlQeGyHa0TXQ/exec?action=logVisit&page=' + encodeURIComponent(location.pathname);
+})();
+</script>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ <a href="index.html">الفصل التمهيدي</a> / الدرس 5</span>
+  </div>
+
+  <div class="hero">
+    <h1>📐 الدرس 5: المثلثات وفيثاغورس</h1>
+    <p>الدوال الثلاث <span class="formula-inline">sin · cos · tan</span> مو ألغاز، هي نِسَب أضلاع مثلث قائم. ونفس المثلث يرجع بالتيار المتناوب باسم <b>مثلث الممانعة</b>.</p>
+  </div>
+
+  <div class="hook">
+    <span class="em">🧲</span>
+    <span>بسؤال الفيض تقرأ: «الكثافة تصنع 37° مع مستوى اللفة». تعوّض <span class="formula-inline">cos37°</span> لو <span class="formula-inline">cos53°</span>؟ هنا يخسر أغلب الطلاب الدرجة. الجواب: <b>cos53°</b>، لأن الزاوية بالقانون تُقاس من <b>العمود</b> على مستوى اللفة.</span>
+  </div>
+
+  <div class="section-title"><span class="ico">📜</span> الدوال الثلاث من المثلث القائم</div>
+  <div class="card">
+    <div class="lawbox">
+      SOH · CAH · TOA
+      <div class="formula">sinθ = المقابل/الوتر · cosθ = المجاور/الوتر · tanθ = المقابل/المجاور</div>
+    </div>
+    <div class="tblwrap"><table class="nice">
+      <tr><th>θ</th><th>0°</th><th>30°</th><th>37°</th><th>45°</th><th>53°</th><th>60°</th><th>90°</th><th>180°</th></tr>
+      <tr><td>sin</td><td>0</td><td>0.5</td><td>0.6</td><td>0.707</td><td>0.8</td><td>0.866</td><td>1</td><td>0</td></tr>
+      <tr><td>cos</td><td>1</td><td>0.866</td><td>0.8</td><td>0.707</td><td>0.6</td><td>0.5</td><td>0</td><td>−1</td></tr>
+      <tr><td>tan</td><td>0</td><td>0.577</td><td>0.75</td><td>1</td><td>4/3</td><td>1.732</td><td>—</td><td>0</td></tr>
+    </table></div>
+    <div class="notebox">
+      <b>الزاويتان المتتامتان:</b> إذا <span class="formula-inline">α + β = 90°</span> فإن <span class="formula-inline">sinα = cosβ</span>. لهذا <span class="formula-inline">sin37° = cos53° = 0.6</span> و <span class="formula-inline">sin53° = cos37° = 0.8</span>.
+    </div>
+    <div class="defbox">
+      📌 <b class="term">قيمة معطاة بالسؤال:</b> لو السؤال قال <span class="formula-inline">sin7.5° = 0.128</span> فاستعملها كما هي، ولا تحاول تحسبها. وإذا طلع عندك <span class="formula-inline">sinθ = 0.128</span> فالجواب مباشرة <span class="formula-inline">θ = 7.5°</span>.
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">🧭</span> مع السطح أو مع العمود؟</div>
+  <div class="card">
+    <div class="lawbox">
+      الفيض المغناطيسي — θ بين B والعمود على مستوى الحلقة
+      <div class="formula">Φ_B = B A cosθ</div>
+    </div>
+    <div class="notebox">
+      <b>القاعدة:</b> إذا أُعطيت الزاوية <b>مع مستوى اللفة</b> (α)، فالزاوية بالقانون <span class="formula-inline">θ = 90° − α</span>. وإذا كانت B <b>عمودية على مستوى اللفة</b> فإن θ = 0 والفيض أكبر ما يمكن.
+    </div>
+    <div class="defbox">
+      📌 <b class="term">تأثير كومبتن:</b> <span class="formula-inline">Δλ = (h/mₑc)(1 − cosθ)</span>. احفظ: <span class="formula-inline">1 − cos60° = 0.5</span>، <span class="formula-inline">1 − cos90° = 1</span>، <span class="formula-inline">1 − cos180° = 2</span> (لأن cos180° = −1).
+    </div>
+  </div>
+
+  <div class="section-title"><span class="ico">🔺</span> فيثاغورس ومثلث الممانعة</div>
+  <div class="card">
+    <div class="lawbox">
+      ربط التوالي R-L-C
+      <div class="formula">Z² = R² + (X_L − X_C)²</div>
+      <div class="formula">cosΦ = R/Z · tanΦ = (X_L − X_C)/R</div>
+    </div>
+    <div class="notebox">
+      <b>الثلاثيات اللي يحبها الوزاري:</b> 3-4-5 ومضاعفاتها (6-8-10، 30-40-50، 60-80-100)، و5-12-13. إذا شفت ضلعين منها، الثالث جاهز بلا جذر. ومثلث 3-4-5 هو نفسه سبب الزاويتين 37° و 53°.
+    </div>
+    <div class="defbox">
+      📌 <b class="term">بالتوازي:</b> نفس الفكرة على التيارات: <span class="formula-inline">I_T² = I_R² + (I_C − I_L)²</span>. وبالنسبية: <span class="formula-inline">√(1 − 0.8²) = 0.6</span> هو نفس مثلث 3-4-5 بوتر 1.
+    </div>
+  </div>
+
+  <!-- ======== مثلث الممانعة ======== -->
+  <div class="sim">
+    <h3>🧪 مثلث الممانعة الحي</h3>
+    <p class="sim-sub">حرّك R و X_L و X_C، وشوف المثلث يتغيّر مع Z وزاوية الطور Φ وقيم الدوال الثلاث.</p>
+    <div class="sim-scroll"><canvas id="triSim" width="700" height="260"></canvas></div>
+    <p class="sim-hint">↔️ اسحب الرسم يميناً ويساراً لرؤيته كاملاً</p>
+    <div class="controls">
+      <div class="slider-group">R (Ω): <b id="rV">60</b>
+        <input type="range" id="rR" min="10" max="100" step="5" value="60"></div>
+      <div class="slider-group">X_L (Ω): <b id="lV">100</b>
+        <input type="range" id="lR" min="0" max="120" step="5" value="100"></div>
+      <div class="slider-group">X_C (Ω): <b id="cV">20</b>
+        <input type="range" id="cR" min="0" max="120" step="5" value="20"></div>
+    </div>
+    <div class="readout" id="triOut" style="margin-top:14px"></div>
+  </div>
+
+  <div class="section-title"><span class="ico">✏️</span> أمثلة محلولة خطوة بخطوة</div>
+
+  <div class="example">
+    <div class="exq">مثال ١ (سؤال وزاري، 2016 الدور الثالث): ملف N=50، نصف قطره 20cm (A=4π×10⁻²m²)، B يتغيّر من 0 إلى 0.6T خلال Δt=π s. احسب ε عندما: 1) المساحة توازي الكثافة (θ=0) 2) الكثافة تصنع 37° مع مستوى اللفة (θ_عمودي=53°، cos53°=0.6).</div>
+    <div class="givens">القانون: ε = N·A·ΔB·cosθ / Δt — لاحظ π بالبسط والمقام (ترجع لها بالدرس 6)</div>
+    <div class="step"><b>الخطوة ١:</b> الحالة الأولى θ = 0 و cos0 = 1:
+      <div class="math">ε = 50 × 4π×10⁻² × 0.6 × 1 / π = 50 × 4×10⁻² × 0.6 = 1.2 V</div></div>
+    <div class="step"><b>الخطوة ٢:</b> الحالة الثانية: 37° مع المستوى ← مع العمود 90° − 37° = 53°:
+      <div class="math">θ = 53°  →  cos53° = 0.6</div></div>
+    <div class="step"><b>الخطوة ٣:</b> نعوّض:
+      <div class="math">ε = 1.2 × 0.6 = 0.72 V</div>
+      ⚠️ لو عوّضت cos37° = 0.8 يطلع 0.96V — جواب غلط.</div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٢ (سؤال وزاري، 2017 الدور الثالث): دائرة توالي: R=6Ω، متسعة X_C=10Ω، ملف X_L=18Ω، مصدر V=50V.</div>
+    <div class="step"><b>الخطوة ١:</b> الفرق بين الرادتين:
+      <div class="math">X_L − X_C = 18 − 10 = 8 Ω</div></div>
+    <div class="step"><b>الخطوة ٢:</b> فيثاغورس (6-8-10 = ضعف 3-4-5):
+      <div class="math">Z² = 6² + 8² = 36 + 64 = 100  →  Z = 10 Ω  →  I = V/Z = 50/10 = 5 A</div></div>
+    <div class="step"><b>الخطوة ٣:</b> زاوية الطور وعامل القدرة:
+      <div class="math">tanΦ = 8/6 = 4/3  →  Φ = 53°  ,  cosΦ = R/Z = 6/10 = 0.6</div></div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٣ (سؤال وزاري، 2018): ملف معامل حثه الذاتي L=(4/5π)H بين قطبي مصدر متناوب V=200V. زاوية فرق الطور بين الفولطية والتيار=53°، I=2A. — المطلوب هنا: R و X_L.</div>
+    <div class="step"><b>الخطوة ١:</b> الممانعة:
+      <div class="math">Z = V/I = 200/2 = 100 Ω</div></div>
+    <div class="step"><b>الخطوة ٢:</b> المجاور = الوتر × cos:
+      <div class="math">R = Z cosΦ = 100 × cos53° = 100 × 0.6 = 60 Ω</div></div>
+    <div class="step"><b>الخطوة ٣:</b> الضلع الثالث من الثلاثية 60-80-100:
+      <div class="math">X_L² = 100² − 60² = 10000 − 3600 = 6400  →  X_L = 80 Ω</div>
+      💡 الجزء الباقي (إيجاد التردد f من L فيها π) تكمله بالدرس 6.</div>
+  </div>
+
+  <div class="example">
+    <div class="exq">مثال ٤: فوتون أشعة سينية يُستطار عن إلكترون حر. احسب الزيادة بطوله الموجي عند زاوية استطارة 90° ثم 180°، علماً أن h/mₑc = 0.24×10⁻¹¹ m.</div>
+    <div class="step"><b>الخطوة ١:</b> عند 90°:
+      <div class="math">Δλ = 0.24×10⁻¹¹ × (1 − cos90°) = 0.24×10⁻¹¹ × (1 − 0) = 0.24×10⁻¹¹ m</div></div>
+    <div class="step"><b>الخطوة ٢:</b> عند 180° (cos180° = −1):
+      <div class="math">Δλ = 0.24×10⁻¹¹ × (1 − (−1)) = 0.24×10⁻¹¹ × 2 = 0.48×10⁻¹¹ m</div>
+      هذه أكبر زيادة ممكنة.</div>
+  </div>
+
+  <div class="notebox">
+    <b>📍 وين راح تحتاجها؟</b>
+    <ul>
+      <li><a href="../g6c2/lesson1.html">قوة لورنتز</a>: <span class="formula-inline">F = qvB sinθ</span>.</li>
+      <li><a href="../g6c2/lesson3.html">الفيض المغناطيسي</a>: <span class="formula-inline">BA cosθ</span> وفخ الزاوية مع المستوى.</li>
+      <li><a href="../g6c3/lesson5.html">ربط التوالي R-L-C</a> و<a href="../g6c3/lesson6.html">عامل القدرة</a>: مثلث الممانعة و 37°/53°.</li>
+      <li><a href="../g6c3/lesson8.html">ربط التوازي R-L-C</a>: مثلث التيارات.</li>
+      <li><a href="../g6c5/lesson6.html">محزز الحيود</a>: <span class="formula-inline">d sinθ = mλ</span>.</li>
+      <li><a href="../g6c8/lesson5.html">تأثير كومبتن</a>: <span class="formula-inline">1 − cosθ</span>.</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="ico">✅</span> اختبر نفسك</div>
+  <div id="quiz5"></div>
+
+  <div class="notebox" style="margin-top:20px">
+    <b>🏠 نشاط منزلي:</b> ثبّت الدرس بـ 5 أسئلة إضافية وأنت بالبيت — اسأل أستاذك عن كلمة السر.
+    <br><a class="btn ghost small" href="lesson5-activity.html" style="margin-top:10px">ابدأ النشاط المنزلي</a>
+  </div>
+
+  <div class="lesson-nav">
+    <a class="btn ghost" href="lesson4.html">⬅ الدرس السابق</a>
+    <a class="btn" href="lesson6.html">الدرس التالي: π والدالة الجيبية ⬅</a>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+/* ---------- مثلث الممانعة الحي ---------- */
+(function () {
+  var cv = document.getElementById("triSim"), ctx = cv.getContext("2d");
+  var rR = document.getElementById("rR"), lR = document.getElementById("lR"), cR = document.getElementById("cR");
+  var out = document.getElementById("triOut");
+  function f3(x) { return String(parseFloat(x.toFixed(3))); }
+  function render() {
+    var R = +rR.value, XL = +lR.value, XC = +cR.value, X = XL - XC;
+    document.getElementById("rV").textContent = R;
+    document.getElementById("lV").textContent = XL;
+    document.getElementById("cV").textContent = XC;
+    var Z = Math.sqrt(R * R + X * X), phi = Math.atan2(X, R) * 180 / Math.PI;
+    var exactZ = Math.abs(Z - Math.round(Z)) < 1e-9;
+
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    // مقياس متغيّر حتى يبقى المثلث داخل اللوحة دائماً، والقاعدة تنزل أو تصعد حسب إشارة X
+    var s = Math.min(2.2, 190 / Math.max(Math.abs(X), 1), 420 / R), ox = 110, oy = X >= 0 ? 225 : 35;
+    var x1 = ox + R * s, y1 = oy - X * s;
+    ctx.lineWidth = 4; ctx.lineCap = "round";
+    ctx.strokeStyle = "#334155"; ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(x1, oy); ctx.stroke();
+    ctx.strokeStyle = X >= 0 ? "#2563eb" : "#dc2626"; ctx.beginPath(); ctx.moveTo(x1, oy); ctx.lineTo(x1, y1); ctx.stroke();
+    ctx.strokeStyle = "#ca8a04"; ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(x1, y1); ctx.stroke();
+    // قوس الزاوية
+    ctx.lineWidth = 2; ctx.strokeStyle = "#64748b"; ctx.beginPath();
+    var a = Math.atan2(X, R);
+    ctx.arc(ox, oy, 34, a > 0 ? -a : 0, a > 0 ? 0 : -a); ctx.stroke();
+    ctx.font = "bold 14px Cairo"; ctx.fillStyle = "#1e293b"; ctx.textAlign = "center";
+    ctx.fillText("R = " + R + " Ω", (ox + x1) / 2, oy + (X >= 0 ? 22 : -10));
+    ctx.textAlign = "left";
+    ctx.fillText("X_L − X_C = " + X + " Ω", x1 + 10, (oy + y1) / 2 + 5);
+    ctx.fillStyle = "#a16207"; ctx.textAlign = "right";
+    ctx.fillText("Z = " + (exactZ ? Z : f3(Z)) + " Ω", (ox + x1) / 2 - 8, (oy + y1) / 2 - 6);
+    ctx.fillStyle = "#475569"; ctx.textAlign = "left";
+    ctx.fillText("Φ", ox + 40, oy - (X >= 0 ? 8 : -18));
+    ctx.textAlign = "right"; ctx.font = "bold 13px Cairo";
+    ctx.fillText(X > 0 ? "حثّية (X_L > X_C)" : X < 0 ? "سعوية (X_C > X_L)" : "رنين: Z = R و Φ = 0", cv.width - 16, 24);
+
+    var sinP = X / Z, cosP = R / Z, tanP = X / R;
+    out.innerHTML = "Z = √(" + R + "² + " + (X < 0 ? "(" + X + ")" : X) + "²) " + (exactZ ? "= " + Z + " Ω ✓ (ثلاثية كاملة)" : "≈ " + f3(Z) + " Ω") +
+      " — Φ ≈ " + f3(phi) + "° — sinΦ = " + f3(sinP) + " · cosΦ = R/Z = " + f3(cosP) + " · tanΦ = " + f3(tanP);
+  }
+  [rR, lR, cR].forEach(function (e) { e.addEventListener("input", render); });
+  render();
+})();
+
+/* ---------- الاختبار ---------- */
+Phy.quiz("quiz5", [
+  { q: "قيمة cos53° (من مثلث 3-4-5) تساوي:",
+    opts: ["0.8", "0.6", "0.75", "1.33"], a: 1,
+    why: "cos53° = sin37° = 3/5 = 0.6." },
+  { q: "مجال مغناطيسي يصنع زاوية 30° مع مستوى لفة. الزاوية θ التي تُعوَّض في Φ = BA cosθ هي:",
+    opts: ["30°", "120°", "60°", "0°"], a: 2,
+    why: "θ تُقاس من العمود على المستوى: 90° − 30° = 60°." },
+  { q: "دائرة توالي: R = 30Ω و X_L = 50Ω و X_C = 10Ω. الممانعة Z تساوي:",
+    opts: ["50 Ω", "90 Ω", "70 Ω", "2500 Ω"], a: 0,
+    why: "X_L − X_C = 40، و Z² = 30² + 40² = 2500، إذن Z = 50Ω (ثلاثية 30-40-50)." },
+  { q: "في نفس الدائرة (R = 30Ω و Z = 50Ω)، زاوية الطور Φ تساوي:",
+    opts: ["37°", "45°", "60°", "53°"], a: 3,
+    why: "cosΦ = R/Z = 30/50 = 0.6، والزاوية التي جيب تمامها 0.6 هي 53°." },
+  { q: "قيمة (1 − cos180°) بقانون كومبتن تساوي:",
+    opts: ["0", "1", "2", "−1"], a: 2,
+    why: "cos180° = −1، إذن 1 − (−1) = 2." },
+  { q: "دائرة توالي فيها R = 40Ω و X_L − X_C = 30Ω. زاوية الطور Φ:",
+    opts: ["53°", "37°", "30°", "45°"], a: 1,
+    why: "tanΦ = 30/40 = 0.75، وهي ظل الزاوية 37°." }
+], { onDone: function (stars) { Phy.setLesson("g6c0", "5", { stars: stars }); } });
+</script>
+</body>
+</html>

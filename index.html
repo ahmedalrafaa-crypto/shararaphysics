@@ -328,9 +328,21 @@
   <div class="gradepanel" id="panel-g6" role="tabpanel" hidden>
     <div class="chapters-head">
       <h2>فصول السادس العلمي</h2>
-      <span class="chapters-hint">الفصول التسعة كلها متوفّرة الآن.</span>
+      <span class="chapters-hint">الفصول التسعة كلها متوفّرة، ومعها فصل تمهيدي مجاني لرياضيات الفيزياء.</span>
     </div>
     <div class="chmap">
+      <a class="chcard" href="chapters/g6c0/index.html">
+        <div class="chcard-head">
+          <span class="em chico">📐</span>
+          <div class="chcard-meta"><span class="chkicker">الفصل التمهيدي</span><span class="chmeta">٧ دروس · مجاني</span></div>
+        </div>
+        <h3>رياضيات الفيزياء</h3>
+        <p>الأسس والوحدات، الجذور، إيجاد المجهول، التناسب، المثلثات، π ومعدل التغيّر.</p>
+        <div class="chcard-foot">
+          <div class="pbar"><div id="p-g6c0" style="width:0%"></div></div>
+          <div class="chcard-progress-row"><span id="t-g6c0">٠٪ مكتمل</span><span class="chcard-cta" id="cta-g6c0">ابدأ الفصل ←</span></div>
+        </div>
+      </a>
       <a class="chcard" href="chapters/g6c1/index.html">
         <div class="chcard-head">
           <span class="em chico">🔷</span>
@@ -933,7 +945,7 @@ var CH_LESSONS = {
   g2c1: 3, g2c2: 2, g2c3: 2, g2c4: 2, g2c5: 2, g2c6: 3,
   g4c1: 5, g4c2: 4, g4c3: 10, g4c5: 6, g4c6: 7, g4c7: 7, g4c9: 7,
   g5c1: 5, g5c2: 5, g5c3: 5, g5c4: 5, g5c5: 6, g5c7: 5, g5c9: 5, g5c10: 5,
-  g6c1: 8, g6c2: 10, g6c3: 8, g6c4: 10, g6c5: 8, g6c6: 12, g6c7: 8, g6c8: 8, g6c9: 8
+  g6c0: 7, g6c1: 8, g6c2: 10, g6c3: 8, g6c4: 10, g6c5: 8, g6c6: 12, g6c7: 8, g6c8: 8, g6c9: 8
 };
 Object.keys(CH_LESSONS).forEach(function (id) {
   var pct = Phy.chapterPercent(id, CH_LESSONS[id]);
@@ -999,7 +1011,7 @@ Object.keys(CH_LESSONS).forEach(function (id) {
   var freeNotice = document.getElementById("freeNotice");
   var freeNoticeName = document.getElementById("freeNoticeName");
 
-  var HERO_HREF = { g1: "chapters/g1c1/index.html", g2: "chapters/g2c1/index.html", g3: "chapters/ch0/index.html", g4: "chapters/g4c1/index.html", g5: "chapters/g5c1/index.html", g6: "chapters/g6c1/index.html" };
+  var HERO_HREF = { g1: "chapters/g1c1/index.html", g2: "chapters/g2c1/index.html", g3: "chapters/ch0/index.html", g4: "chapters/g4c1/index.html", g5: "chapters/g5c1/index.html", g6: "chapters/g6c0/index.html" };
   var HERO_CHIP = {
     g1: "🎁 الأول متوسط — مجاني بالكامل", g2: "🎁 الثاني متوسط — مجاني بالكامل",
     g3: "📚 الثالث المتوسط — المنهج الوزاري 2027", g4: "🎁 الرابع العلمي — مجاني بالكامل",

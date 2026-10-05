@@ -22,7 +22,7 @@ let pass = 0, fail = 0;
 const ok  = m => { pass++; console.log('  \x1b[32m✓\x1b[0m ' + m); };
 const bad = m => { fail++; console.log('  \x1b[31m✗\x1b[0m ' + m); };
 
-const G6 = ['g6c1','g6c2','g6c3','g6c4','g6c5','g6c6','g6c7','g6c8','g6c9'];
+const G6 = ['g6c0','g6c1','g6c2','g6c3','g6c4','g6c5','g6c6','g6c7','g6c8','g6c9'];
 const G3 = ['ch0','ch1','ch2','ch3','ch4','ch5','ch6','ch7','ch8','ch9'];
 const G5 = ['g5c1','g5c2','g5c3','g5c4','g5c5','g5c7','g5c9','g5c10'];
 const G1 = ['g1c1', 'g1c2', 'g1c3', 'g1c4', 'g1c5'];
@@ -67,7 +67,7 @@ for (const [f, banned] of [
 // ── ٣) صفحات المراجعة موجودة لكل فصول السادس ───────────────────────────────
 console.log('\n\x1b[1m٣) صفحات المراجعة السريعة (السادس)\x1b[0m');
 const missing = G6.filter(ch => !fs.existsSync(p('chapters', ch, 'review.html')));
-missing.length ? bad('ناقصة: ' + missing.join(', ')) : ok('كل الفصول التسعة لها review.html');
+missing.length ? bad('ناقصة: ' + missing.join(', ')) : ok(`كل فصول السادس (${G6.length}) لها review.html`);
 
 // ── ٤) عدم تسريب بيانات الدروس قبل التفعيل ─────────────────────────────────
 // الثغرة الأصلية: lessons-data*.js كان يُحمَّل بوسم <script src> ثابت بصفحات
@@ -121,6 +121,22 @@ const teacherLeaks = ['predictions-g6/expected-paper-teacher.html', 'predictions
 teacherLeaks.length
   ? bad('داخل مجلد الموقع وستُرفع: ' + teacherLeaks.join(', ') + ' — مكانها Desktop/شرارة-نسخ-المعلم')
   : ok('نسخة المعلّم وصفحة الإحصاءات خارج مجلد الموقع');
+
+// ── ٧) الفصل التمهيدي للسادس مجاني فعلاً ─────────────────────────────────────
+// requiredStage() بـ access-control.js تطابق /g6c\d+/ فتشمل g6c0 — أي درس أو اختبار أو
+// نشاط فيه يحمّل السكربت سيُقفل خلف كود اشتراك، بينما الفصل معلَن للطلاب كمجاني.
+// المسموح فقط: الخريطة (بوضع الشارات data-badges-only) والمراجعة (مقفلة مثل باقي المراجعات).
+console.log('\n\x1b[1m٧) الفصل التمهيدي للسادس (g6c0) مجاني\x1b[0m');
+if (fs.existsSync(p('chapters', 'g6c0'))) {
+  const locked = chapters('g6c0').filter(f => {
+    if (f === 'review.html') return false;
+    const src = read(path.join('chapters', 'g6c0', f));
+    if (f === 'index.html') return /access-control\.js"(?![^>]*data-badges-only)/.test(src);
+    return src.includes('access-control.js');
+  });
+  locked.length ? bad('صفحات g6c0 تحمّل access-control.js وستُقفل: ' + locked.join(', '))
+                : ok('دروس g6c0 واختباره وأنشطته بلا قفل اشتراك');
+}
 
 // ── الخلاصة ────────────────────────────────────────────────────────────────
 console.log(`\n${fail ? '\x1b[31m' : '\x1b[32m'}\x1b[1m${fail ? '✗ فشل' : '✓ نجح'}\x1b[0m  ناجح: ${pass} · فاشل: ${fail}\n`);
