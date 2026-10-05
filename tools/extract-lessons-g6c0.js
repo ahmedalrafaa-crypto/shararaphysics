@@ -12,7 +12,7 @@
  */
 const fs = require('fs'), path = require('path');
 const ROOT = path.join(__dirname, '..');
-const CH = 'g6c0', CH_TITLE = 'الفصل التمهيدي: رياضيات الفيزياء', N_LESSONS = 7;
+const CH = 'g6c0', CH_TITLE = 'الفصل التمهيدي: رياضيات الفيزياء', N_LESSONS = 4;
 const DIR = path.join(ROOT, 'chapters', CH);
 const PRE = 'window.PHY_LESSONS = (window.PHY_LESSONS || []).concat(';
 

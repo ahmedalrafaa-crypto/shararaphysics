@@ -43,7 +43,8 @@ var Phy = (function () {
       for (var k in d[ch].lessons) if (d[ch].lessons[k].done) done++;
     }
     if (d[ch] && d[ch].exam) done++;
-    return Math.round(100 * done / (totalLessons + 1));
+    // سقف 100%: تقدّم دروس أُلغيت لاحقاً قد يبقى محفوظاً بالمتصفح
+    return Math.min(100, Math.round(100 * done / (totalLessons + 1)));
   }
 
   function starsStr(n) {
