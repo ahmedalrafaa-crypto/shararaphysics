@@ -19,6 +19,10 @@ var ShararahAccess = (function () {
   var LEGACY_EXPIRY_ISO = "2027-08-08T00:00:00Z";
   // كل كم مدة نتأكد مع السيرفر إن الجهاز لسا مصرّح له فعلاً، بدل الثقة الدائمة بالتخزين المحلي وحده.
   var REVALIDATE_INTERVAL_MS = 20 * 60 * 60 * 1000;
+  // موسم الانتشار: كل الصفحات مفتوحة بلا كود حتى هذا التاريخ، عدا المسارات المدفوعة أدناه.
+  // لإنهاء العرض بدّل التاريخ أو اجعله null؛ أكواد المشتركين تبقى صالحة للمدفوع.
+  var FREE_UNTIL_ISO = "2027-08-01T00:00:00Z";
+  var ALWAYS_PAID_PATHS = ["/predictions/", "/predictions-g6/", "/weird-questions/"];
 
   if (ACCESS_CONTROL_URL.indexOf("PASTE_") === 0) {
     console.warn("[access-control] رابط Google Apps Script غير مضبوط بعد — عدّل ACCESS_CONTROL_URL في js/access-control.js");
@@ -104,6 +108,16 @@ var ShararahAccess = (function () {
     localStorage.removeItem(STAGE_KEY);
   }
 
+  // true = الصفحة الحالية مفتوحة للجميع ضمن موسم الانتشار.
+  function freeSeasonOpen() {
+    if (!FREE_UNTIL_ISO || Date.now() >= Date.parse(FREE_UNTIL_ISO)) return false;
+    var p = (location.pathname || "").toLowerCase();
+    for (var i = 0; i < ALWAYS_PAID_PATHS.length; i++) {
+      if (p.indexOf(ALWAYS_PAID_PATHS[i]) !== -1) return false;
+    }
+    return true;
+  }
+
   function subscriptionActive() {
     if (localStorage.getItem(UNLOCK_KEY) !== "true") return false;
     var expiresAt = localStorage.getItem(EXPIRY_KEY);
@@ -111,6 +125,7 @@ var ShararahAccess = (function () {
   }
 
   function isUnlocked() {
+    if (freeSeasonOpen()) return true;
     if (!subscriptionActive()) return false;
     return stageAllows(currentStage(), requiredStage());
   }
@@ -130,7 +145,7 @@ var ShararahAccess = (function () {
     var nodes = document.querySelectorAll("[data-req-stage]");
     for (var i = 0; i < nodes.length; i++) {
       var stage = nodes[i].getAttribute("data-req-stage");
-      var covered = subscriptionActive() && stageAllows(currentStage(), stage);
+      var covered = freeSeasonOpen() || subscriptionActive() && stageAllows(currentStage(), stage);
       nodes[i].classList.toggle("needs-code", !covered);
     }
   }
@@ -397,6 +412,8 @@ var ShararahAccess = (function () {
     getDeviceToken();
     decorateLockBadges();
     if (BADGES_ONLY) return;
+    // صفحة مفتوحة بموسم الانتشار: لا قفل ولا تحقق دوري (قد يعرض نافذة قفل لمن لا يملك كوداً).
+    if (freeSeasonOpen()) return;
     if (isUnlocked()) {
       maybeRevalidate();
       return;
