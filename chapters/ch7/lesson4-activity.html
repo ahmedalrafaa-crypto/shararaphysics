@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نشاط منزلي — الدرس 4: قانون المحولة ونسبة التحويل — الثالث المتوسط</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="activityRoot"></div>
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var ACTIVITY = {
+  ch: "ch7",
+  lesson: "4",
+  title: "قانون المحولة ونسبة التحويل",
+  // نفس أسئلة "اختبر نفسك" الموجودة بنهاية الدرس (lesson4.html) — إعادة استخدام بدل التكرار.
+  questions: [
+  { q: "قانون المحولة الذي يربط الفولطية بعدد اللفات هو:",
+    opts: [ "N₂/N₁ = V₁/V₂","N₂/N₁ = V₂/V₁", "N₂ × N₁ = V₂ × V₁", "N₂ − N₁ = V₂ − V₁"], a: 1,
+    why: "الفولطية تتناسب طردياً مع عدد اللفات." },
+  { q: "لإيجاد فولطية الثانوي نستخدم:",
+    opts: [ "V₂ = V₁ + N₂", "V₂ = V₁ × (N₁/N₂)","V₂ = V₁ × (N₂/N₁)", "V₂ = N₂/V₁"], a: 2,
+    why: "من N₂/N₁ = V₂/V₁ نضرب طرفياً: V₂ = V₁ × N₂/N₁." },
+  { q: "النسبة N₂/N₁ تُسمّى:",
+    opts: [ "نسبة الخسارة", "الكفاءة", "القدرة","نسبة التحويل"], a: 3,
+    why: "نسبة التحويل هي التي تحدّد نوع المحولة." },
+  { q: "إذا كانت نسبة التحويل N₂/N₁ أكبر من الواحد فالمحولة:",
+    opts: ["رافعة للفولطية", "خافضة للفولطية", "لا تعمل", "تحوّل التيار إلى مستمر"], a: 0,
+    why: "N₂/N₁ > 1 ⟵ V₂ > V₁ ⟵ رافعة." },
+  { q: "إذا كانت نسبة التحويل N₂/N₁ أقل من الواحد فالمحولة:",
+    opts: [ "رافعة للفولطية","خافضة للفولطية", "مثالية دائماً", "متوقفة"], a: 1,
+    why: "N₂/N₁ < 1 ⟵ V₂ < V₁ ⟵ خافضة." },
+  { q: "محولة V₁ = 220V و N₁ = 800 و N₂ = 400 ، تكون V₂ =",
+    opts: [ "220 V", "440 V","110 V", "55 V"], a: 2,
+    why: "V₂ = 220 × (400/800) = 220 × 0.5 = 110V." },
+  { q: "محولة V₁ = 120V و N₁ = 200 و N₂ = 600 ، تكون V₂ =",
+    opts: [ "240 V", "40 V", "120 V","360 V"], a: 3,
+    why: "V₂ = 120 × (600/200) = 120 × 3 = 360V (رافعة)." },
+  { q: "محولة V₁ = 240V ، V₂ = 12V ، N₁ = 500 لفة ، فإن N₂ =",
+    opts: ["25 لفة", "10000 لفة", "50 لفة", "500 لفة"], a: 0,
+    why: "N₂ = (N₁ × V₂)/V₁ = (500 × 12)/240 = 25 لفة." }
+]
+};
+</script>
+<script src="../../js/activity.js"></script>
+</body>
+</html>

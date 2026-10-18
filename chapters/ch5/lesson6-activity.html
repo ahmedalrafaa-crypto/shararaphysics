@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نشاط منزلي — الدرس 6: كلفة الطاقة الكهربائية — الثالث المتوسط</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../assets/logo-ar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="activityRoot"></div>
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="../../js/core.js"></script>
+<script>
+var ACTIVITY = {
+  ch: "ch5",
+  lesson: "6",
+  title: "كلفة الطاقة الكهربائية",
+  // نفس أسئلة "اختبر نفسك" الموجودة بنهاية الدرس (lesson6.html) — إعادة استخدام بدل التكرار.
+  questions: [
+  { q: "قانون كلفة الطاقة المستهلكة:",
+    opts: ["cost = P × t × unit price", "cost = P ÷ t", "cost = V × I ÷ unit price", "cost = R × I"], a: 0,
+    why: "الكلفة = القدرة (kW) × الزمن (h) × ثمن الوحدة — او cost = E × unit price." },
+  { q: "قبل حساب الكلفة اذا كانت القدرة بالواط:",
+    opts: [ "نضرب في 1000","نقسم على (1000) لتحويلها الى كيلو واط", "نتركها كما هي", "نقسم على 60"], a: 1,
+    why: "القدرة يجب ان تكون بالكيلو واط: نقسم الواط على 1000." },
+  { q: "اذا كان الزمن بالدقائق نحوله الى ساعات بالقسمة على:",
+    opts: [ "1000", "3600","60", "100"], a: 2,
+    why: "دقائق ÷ 60 = ساعات، اما الثواني فنقسم على 3600." },
+  { q: "مكنسة (1 kw) عملت (30 minutes) وثمن الوحدة (100 Dinar/KW-h) — المبلغ الواجب دفعه:",
+    opts: [ "25 Dinar", "3000 Dinar", "100 Dinar","50 Dinar"], a: 3,
+    why: "cost = 1 × 0.5 × 100 = 50 دينار." },
+  { q: "غسالة (500 w) عملت (30 minutes) وثمن الوحدة (100 Dinar) — المبلغ:",
+    opts: ["25 Dinar", "50 Dinar", "2500 Dinar", "15 Dinar"], a: 0,
+    why: "P = 0.5kW و t = 0.5h ⟸ cost = 0.5 × 0.5 × 100 = 25 دينار." },
+  { q: "غسالة (600 w) عملت (40 minutes) وثمن الوحدة (100 Dinar) — المبلغ:",
+    opts: ["36 Dinar", "40 Dinar", "60 Dinar", "24000 Dinar"], a: 1,
+    why: "P = 600/1000 = 0.6 kW، و t = 40/60 = 0.667 h ⟸ cost = 0.6 × 0.667 × 100 = 40 دينار. (36 ديناراً خطأ شائع سببه تقريب 0.667 إلى 0.6.)" },
+  { q: "سخان (300 w) عمل (3 hours) وثمن الوحدة (30 Dinar) — المبلغ:",
+    opts: [ "90 Dinar", "270 Dinar","27 Dinar", "9 Dinar"], a: 2,
+    why: "0.3 × 3 × 30 = 27 دينار." },
+  { q: "مكواة على (220 v) بتيار (3A) — قدرتها:",
+    opts: [ "73 W", "223 W", "66 W","660 W"], a: 3,
+    why: "P = IV = 3 × 220 = 660W = 0.66kW." },
+  { q: "المكواة السابقة (0.66 kW) عملت نصف ساعة بثمن وحدة (100 Dinar) — المبلغ:",
+    opts: ["33 Dinar", "66 Dinar", "330 Dinar", "16.5 Dinar"], a: 0,
+    why: "cost = 0.66 × 0.5 × 100 = 33 دينار." }
+]
+};
+</script>
+<script src="../../js/activity.js"></script>
+</body>
+</html>
