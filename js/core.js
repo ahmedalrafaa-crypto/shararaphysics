@@ -237,9 +237,120 @@ var Phy = (function () {
 
   // يحوّل النصوص العادية داخل root إلى جذور وكسور بشكل الكتاب (MathML)
   var MT_SKIP = "script,style,textarea,input,select,option,code,pre,math,svg,canvas,title,.no-math,.topbar,.crumbs,footer,.chip,.stars,.quiz-result";
+
+  /* LTR-ISOLATE:START — محوّل نصي خالص (بلا DOM): يعزل التعابير العددية (رقم + أس + وحدة) لتُعرض من اليسار لليمين.
+     السبب: الرقم الذي يلي حرفاً عربياً (أو يقع في فقرة RTL) تعدّه خوارزمية Unicode «رقماً عربياً» فتنقلب إشارته
+     وأسّه ووحدته: «+9×10⁻⁶ C» تظهر «C ⁶⁻10×9+» و«90°» تظهر «°90». يلفّ فقط التعبير الذي يبدأ برقم أو إشارة
+     ويحوي عملية/أساً/درجة/فراغ وحدة؛ لا يلفّ الأرقام المجرّدة ولا قوائم الأرقام ولا ما يبدأ بحرف لاتيني (يُعرض صحيحاً أصلاً). */
+  var LT_RUN = /[A-Za-z0-9_\u00B0-\u00B3\u00B5\u00B7\u00B9\u00D7\u00F7\u0370-\u03FF\u2032\u2033\u2070-\u209F\u2113\u2126\u2190-\u21FF\u2200-\u22FF+\-=\/^%.,<>()\[\]'~\u00A0 ]+/g;
+  var LT_HEAD = /[A-Za-z0-9\u0370-\u03FF(\[+\-\u2212\u00B1\u221A\u221B]/;
+  var LT_TAIL = /[A-Za-z0-9\u0370-\u03FF)\]%\u00B0\u00B2\u00B3\u00B9\u2032\u2033\u2070-\u209F\u2113\u2126]/;
+  var LT_LEAD = /^(?:[(\[]+\s*(?:[~\u2248\u2264\u2265<>=\u00D7\u00F7+\-\u2212\u00B1]\s*){0,2}[(\[]*|[+\-\u2212\u00B1]?[(\[]*)[0-9]/;
+  function ltrBounds(s) {
+    var a = 0, b = s.length, again = true, i, c, st, bad;
+    while (again) {
+      again = false;
+      while (a < b && !LT_HEAD.test(s.charAt(a))) a++;
+      while (b > a && !LT_TAIL.test(s.charAt(b - 1))) b--;
+      st = []; bad = {};
+      for (i = a; i < b; i++) {
+        c = s.charAt(i);
+        if (c === "(" || c === "[") st.push(i);
+        else if (c === ")" || c === "]") { if (st.length) st.pop(); else bad[i] = 1; }
+      }
+      st.forEach(function (k) { bad[k] = 1; });
+      if (bad[a]) { a++; again = true; }
+      else if (bad[b - 1]) { b--; again = true; }
+    }
+    return b > a ? [a, b] : null;
+  }
+  // يقسّم الجولة عند « · » وعند فراغ يفصل رقماً عن رقم تالٍ (قائمة أرقام لا تعبير واحد)
+  function ltrPieces(run) {
+    var out = [], off = 0;
+    run.split(/ [\u00B7\u2022] /).forEach(function (part) {
+      var from = 0, i, p, n;
+      for (i = 1; i < part.length - 1; i++) {
+        if (part.charAt(i) !== " ") continue;
+        p = part.charAt(i - 1); n = part.charAt(i + 1);
+        if (/[0-9\u2070-\u2079)\],%\u00B0]/.test(p) && /[0-9]/.test(n)) { out.push([off + from, part.slice(from, i)]); from = i + 1; }
+      }
+      out.push([off + from, part.slice(from)]);
+      off += part.length + 3;
+    });
+    return out;
+  }
+  function ltrNeeded(c) { return /[0-9]/.test(c) && LT_LEAD.test(c) && /[^0-9A-Za-z\u0370-\u03FF\u2126.,()\[\]%\/]/.test(c); }
+  // نص خام ← مقاطع [{t, ltr, nb}] أو null إن لم يلزم عزل شيء.
+  // conv(chain) اختياري: يُرجع true إن كان التعبير سيتحوّل لاحقاً إلى كسر/جذر (MathML)، فيُعزل كله ليبقى بترتيب واحد
+  function ltrSegments(text, conv) {
+    if (!/[0-9]/.test(text)) return null;
+    var hits = [], m, pieces, i, bd, s, e, c;
+    LT_RUN.lastIndex = 0;
+    while ((m = LT_RUN.exec(text))) {
+      pieces = ltrPieces(m[0]);
+      for (i = 0; i < pieces.length; i++) {
+        bd = ltrBounds(pieces[i][1]);
+        if (!bd) continue;
+        s = m.index + pieces[i][0] + bd[0]; e = m.index + pieces[i][0] + bd[1];
+        // «ب-1» و«يورانيوم-235»: شرطة ملاصقة لحرف عربي (غير واو العطف) فاصلة لا إشارة سالبة ← لا تدخل في التعبير
+        while (s < e && text.charAt(s) === "-" && s > 0 && /[\u0600-\u06FF]/.test(text.charAt(s - 1)) && text.charAt(s - 1) !== "\u0648") s++;
+        c = text.slice(s, e);
+        if (ltrNeeded(c) || (conv && /[0-9]/.test(c) && conv(c))) hits.push([s, e]);
+      }
+    }
+    if (!hits.length) return null;
+    var segs = [], last = 0;
+    hits.forEach(function (h) {
+      if (h[0] > last) segs.push({ t: text.slice(last, h[0]) });
+      c = text.slice(h[0], h[1]);
+      segs.push({ t: c, ltr: true, nb: c.length <= 32 });
+      last = h[1];
+    });
+    if (last < text.length) segs.push({ t: text.slice(last) });
+    return segs;
+  }
+  /* LTR-ISOLATE:END */
+
+  // لا يُلفّ: ما يتجدّد كل إطار (مختبر كولوم) أو ما هو مرسوم أصلاً. أما صناديق LTR (.math…) فتُلفّ إن كان فيها نص عربي
+  // لأن الحرف العربي قبل الأرقام يقلبها حتى داخل فقرة LTR.
+  var LTR_SKIP = "script,style,textarea,input,select,option,code,pre,math,svg,canvas,title,.no-math,.topbar,.crumbs,footer,.ltr,.readout,.sim";
+  var LTR_BOX = ".math,.formula,.formula-inline,.bigout,.big-code,[dir='ltr']";
+  var ltrStyled = false;
+  function ltrify(root) {
+    if (root.closest && root.closest(".sim,.readout")) return;
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) { return /[0-9]/.test(n.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT; }
+    });
+    var list = [], n;
+    while ((n = walker.nextNode())) list.push(n);
+    list.forEach(function (t) {
+      var segs = ltrSegments(t.nodeValue, mathTextToMarkup), p = t.parentElement, box;
+      if (!segs || !p || p.closest(LTR_SKIP)) return;
+      box = p.closest(LTR_BOX);
+      if (box && !/[\u0600-\u06FF]/.test(box.textContent)) return;
+      if (!ltrStyled && document.head) {
+        ltrStyled = true;
+        var st = document.createElement("style");
+        st.textContent = ".ltr{direction:ltr;unicode-bidi:isolate}.ltr.nb{white-space:nowrap}";
+        document.head.appendChild(st);
+      }
+      var frag = document.createDocumentFragment();
+      segs.forEach(function (s) {
+        if (!s.ltr) { frag.appendChild(document.createTextNode(s.t)); return; }
+        var sp = document.createElement("span");
+        sp.className = s.nb ? "ltr nb" : "ltr";
+        sp.textContent = s.t;
+        frag.appendChild(sp);
+      });
+      t.parentNode.replaceChild(frag, t);
+    });
+  }
+
   function mathify(root) {
     root = root || document.body;
-    if (!root || root.nodeType !== 1 || (root.closest && root.closest(MT_SKIP))) return;
+    if (!root || root.nodeType !== 1) return;
+    ltrify(root);
+    if (root.closest && root.closest(MT_SKIP)) return;
     var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
       acceptNode: function (n) {
         if (!/[√∛\/]/.test(n.nodeValue)) return NodeFilter.FILTER_REJECT;
