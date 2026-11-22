@@ -73,9 +73,16 @@
       .toLowerCase();
   }
 
+  // أساس الروابط: مجلد هذه الصفحة على السيرفر (الموقع الحي أو localhost). أما لو
+  // انفتحت الصفحة كملف من الجهاز (file://) فروابطها ما تشتغل عند الطلاب ولا حتى
+  // بالمعاينة (location.origin يصير "file://" فيطلع file:///chapters/...) —
+  // فنستعمل الموقع الحي بدلها.
+  var LINK_BASE = location.protocol === "file:"
+    ? "https://shararaphysics.netlify.app/"
+    : new URL(".", location.href).href;
+
   function activityUrl(item) {
-    // location.origin يخلي الروابط تشتغل محلياً وعلى الموقع المنشور بلا تعديل.
-    return location.origin + "/chapters/" + item.ch + "/lesson" + item.lesson +
+    return LINK_BASE + "chapters/" + item.ch + "/lesson" + item.lesson +
       "-activity.html?p=" + encodeURIComponent(CLASS_PASSWORD);
   }
 
