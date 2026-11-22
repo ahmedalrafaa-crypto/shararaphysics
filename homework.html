@@ -24,6 +24,8 @@
     <p>اختر الدرس وافتح واجبه: أسئلة سريعة تثبّت الدرس، والنتيجة توصل للأستاذ تلقائياً.</p>
   </div>
 
+  <div id="hwTabs"></div>
+
   <div class="card">
     <input type="text" class="act-search" id="hwSearch" placeholder="🔍 دوّر باسم الدرس... (مثلاً: العازل، الليزر، المحولة)">
     <div id="hwList"></div>
@@ -43,23 +45,8 @@
   var m = (location.search || "").match(/[?&]p=([^&]*)/);
   var passParam = m ? "?p=" + m[1] : "";
 
-  var host = document.getElementById("hwList");
-  var currentCh = null;
-
-  (window.SHARARA_ACTIVITIES || []).forEach(function (item) {
-    if (item.chapterName) {
-      var head = document.createElement("div");
-      head.className = "act-chapter-head";
-      head.setAttribute("data-chapter", "1");
-      head.textContent = item.chapterName;
-      host.appendChild(head);
-      currentCh = head;
-      return;
-    }
-    // أول درس تحت عنوان الفصل يعطي العنوان معرّفاً (#g6c1 مثلاً) حتى يقفز له
-    // زر "فهرس الواجبات" بصفحة الواجب مباشرة على فصل الطالب.
-    if (currentCh && !currentCh.id) currentCh.id = item.ch;
-
+  // كل مرحلة بتبويب خاص (الثالث المتوسط / السادس العلمي) — البناء مشترك مع صفحة الأستاذ.
+  renderActivityStages(document.getElementById("hwTabs"), function (item) {
     var row = document.createElement("div");
     row.className = "act-row";
     row.setAttribute("data-title", item.title);
@@ -72,18 +59,11 @@
     link.textContent = "📝 افتح الواجب";
     row.appendChild(title);
     row.appendChild(link);
-    host.appendChild(row);
-  });
-
-  document.getElementById("hwSearch").addEventListener("input", function () {
-    filterActivityList(host, this.value);
-  });
-
-  // القوائم تُبنى بالسكربت، فالقفز التلقائي لـ #الفصل ما يلحقها — نقفز يدوياً بعد
-  // اكتمال التحميل (الخطوط وإضافات core.js تغيّر الارتفاعات قبلها فيضيع الموضع).
-  window.addEventListener("load", function () {
-    var target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
-    if (target) target.scrollIntoView({ block: "start" });
+    return row;
+  }, {
+    panelsHost: document.getElementById("hwList"),
+    search: document.getElementById("hwSearch"),
+    storageKey: "shararah_homework_stage"
   });
 })();
 </script>

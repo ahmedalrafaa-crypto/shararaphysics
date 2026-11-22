@@ -189,3 +189,122 @@ function filterActivityList(host, query) {
   });
   closeGroup();
 }
+
+// يبني قائمة الأنشطة مقسومة بتبويبات حسب المرحلة (كل عنوان يبدأ بـ «══» يفتح مرحلة).
+// تستعمله صفحتا activities.html و homework.html — كل صفحة تعطي طريقة رسم صف الدرس فقط.
+//   host        : العنصر اللي تنبني بداخله أزرار التبويبات
+//   opts.panelsHost : مكان قوائم الدروس (افتراضياً نفس host تحت الأزرار)
+//   renderRow   : function(item) ترجع عنصر صف الدرس (act-row مع data-title)
+//   opts.search : خانة البحث (تفلتر المرحلة المفتوحة فقط)
+//   opts.headPrefix : نص قبل اسم الفصل (مثل "📖 ")
+//   opts.storageKey : مفتاح localStorage لتذكّر آخر مرحلة فتحها المستخدم
+// المرحلة المفتوحة أولاً: فصل الرابط (#g6c1) إن وُجد، وإلا آخر مرحلة محفوظة، وإلا الأولى.
+function renderActivityStages(host, renderRow, opts) {
+  opts = opts || {};
+  var stages = [];
+  var stage = null, currentHead = null;
+
+  (window.SHARARA_ACTIVITIES || []).forEach(function (item) {
+    if (item.chapterName && /^══/.test(item.chapterName)) {
+      stage = { label: item.chapterName.replace(/═/g, "").trim(), grade: "", list: document.createElement("div"), count: 0 };
+      stages.push(stage);
+      currentHead = null;
+      return;
+    }
+    if (!stage) return;
+    if (item.chapterName) {
+      currentHead = document.createElement("div");
+      currentHead.className = "act-chapter-head";
+      currentHead.setAttribute("data-chapter", "1");
+      currentHead.textContent = (opts.headPrefix || "") + item.chapterName;
+      stage.list.appendChild(currentHead);
+      return;
+    }
+    // أول درس تحت عنوان الفصل يعطي العنوان معرّفاً (#g6c1 مثلاً) حتى تقفز له
+    // روابط "فهرس الواجبات" من صفحات الواجب مباشرة على فصل الطالب.
+    if (currentHead && !currentHead.id) currentHead.id = item.ch;
+    if (!stage.grade) stage.grade = /^g6/.test(item.ch) ? "g6" : "g3";
+    stage.count++;
+    stage.list.appendChild(renderRow(item));
+  });
+
+  var tabs = document.createElement("div");
+  tabs.className = "gradetabs act-stagetabs";
+  tabs.setAttribute("role", "tablist");
+  tabs.setAttribute("aria-label", "اختر المرحلة الدراسية");
+  var panelsHost = opts.panelsHost || host;
+  host.innerHTML = "";
+  if (panelsHost !== host) panelsHost.innerHTML = "";
+  host.appendChild(tabs);
+
+  stages.forEach(function (s, i) {
+    s.panel = document.createElement("div");
+    s.panel.className = "gradepanel";
+    s.panel.id = "stage-panel-" + i;
+    s.panel.setAttribute("role", "tabpanel");
+    s.panel.appendChild(s.list);
+    panelsHost.appendChild(s.panel);
+
+    s.tab = document.createElement("button");
+    s.tab.type = "button";
+    s.tab.className = "gradetab";
+    s.tab.setAttribute("role", "tab");
+    s.tab.setAttribute("aria-controls", s.panel.id);
+    s.tab.setAttribute("data-grade", s.grade);
+    s.tab.textContent = s.label + " ";
+    var badge = document.createElement("span");
+    badge.className = "tab-badge";
+    badge.textContent = s.count;
+    s.tab.appendChild(badge);
+    s.tab.addEventListener("click", function () { select(i, true); });
+    tabs.appendChild(s.tab);
+  });
+
+  var active = 0;
+  function select(i, remember) {
+    active = i;
+    stages.forEach(function (s, j) {
+      var on = j === i;
+      s.tab.classList.toggle("active", on);
+      s.tab.setAttribute("aria-selected", on ? "true" : "false");
+      s.panel.hidden = !on;
+    });
+    if (opts.search) filterActivityList(stages[i].list, opts.search.value);
+    if (remember && opts.storageKey) {
+      try { localStorage.setItem(opts.storageKey, String(i)); } catch (e) {}
+    }
+  }
+
+  var start = 0;
+  var hashCh = decodeURIComponent((location.hash || "").slice(1));
+  var target = hashCh && document.getElementById(hashCh);
+  var fromHash = -1;
+  stages.forEach(function (s, i) { if (target && s.list.contains(target)) fromHash = i; });
+  if (fromHash >= 0) {
+    start = fromHash;
+  } else if (opts.storageKey) {
+    try {
+      var saved = parseInt(localStorage.getItem(opts.storageKey), 10);
+      if (saved >= 0 && saved < stages.length) start = saved;
+    } catch (e) {}
+  }
+  select(start, false);
+
+  if (opts.search) {
+    opts.search.addEventListener("input", function () {
+      filterActivityList(stages[active].list, this.value);
+    });
+  }
+
+  // القوائم تُبنى بالسكربت، فالقفز التلقائي لـ #الفصل ما يلحقها — نقفز يدوياً بعد
+  // اكتمال التحميل (الخطوط وإضافات core.js تغيّر الارتفاعات قبلها فيضيع الموضع).
+  if (fromHash >= 0) {
+    // قفزة فورية (instant): الموقع مفعّل فيه scroll-behavior: smooth، والتمرير
+    // الناعم وقت التحميل ينقطع فتبقى الصفحة بأعلاها.
+    var jump = function () {
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 12, behavior: "instant" });
+    };
+    if (document.readyState === "complete") jump();
+    else window.addEventListener("load", jump);
+  }
+}

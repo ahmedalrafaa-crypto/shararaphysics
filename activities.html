@@ -33,8 +33,10 @@
       <p>كل رابط يفتح نشاط الدرس مباشرة (كلمة السر محمولة داخل الرابط، فالطالب ما يحتاج يكتبها).</p>
     </div>
 
+    <div id="actTabs"></div>
+
     <div class="card">
-      <h2>⚡ أنشطة السادس العلمي (80 درساً)</h2>
+      <h2>⚡ الأنشطة الجاهزة</h2>
       <input type="text" class="act-search" id="actSearch" placeholder="🔍 دوّر باسم الدرس... (مثلاً: العازل، الليزر، النواة)">
       <div id="actList"></div>
     </div>
@@ -104,16 +106,8 @@
 
   function render() {
     var host = document.getElementById("actList");
-    host.innerHTML = "";
-    ACTIVITIES.forEach(function (item) {
-      if (item.chapterName) {
-        var head = document.createElement("div");
-        head.className = "act-chapter-head";
-        head.setAttribute("data-chapter", "1");
-        head.textContent = "📖 " + item.chapterName;
-        host.appendChild(head);
-        return;
-      }
+    // كل مرحلة بتبويب خاص أعلى الصفحة — البناء والبحث مشتركان مع فهرس الواجبات.
+    renderActivityStages(document.getElementById("actTabs"), function (item) {
       var row = document.createElement("div");
       row.className = "act-row";
       row.setAttribute("data-title", item.title);
@@ -125,7 +119,12 @@
           '<a class="btn ghost small" target="_blank" rel="noopener noreferrer" href="' + waHref(item) + '">📱 واتساب</a>' +
           '<a class="btn ghost small" target="_blank" rel="noopener noreferrer" href="' + previewUrl(item) + '">👁 معاينة</a>' +
         "</div>";
-      host.appendChild(row);
+      return row;
+    }, {
+      panelsHost: host,
+      search: document.getElementById("actSearch"),
+      headPrefix: "📖 ",
+      storageKey: "shararah_activities_stage"
     });
 
     host.addEventListener("click", function (e) {
@@ -147,15 +146,6 @@
     });
 
     document.getElementById("pwEcho").textContent = CLASS_PASSWORD;
-
-    document.getElementById("actSearch").addEventListener("input", function () {
-      applyFilter(this.value);
-    });
-  }
-
-  // الفلترة بالاسم مشتركة مع فهرس الواجبات (js/activities-list.js).
-  function applyFilter(query) {
-    filterActivityList(document.getElementById("actList"), query);
   }
 
   function showMain() {
