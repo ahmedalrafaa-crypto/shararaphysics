@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>فهرس الواجبات المنزلية — شرارة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/logo-ar.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>
+    <span class="crumbs">/ فهرس الواجبات</span>
+  </div>
+
+  <div class="hero">
+    <span class="chip">🏠 الواجبات المنزلية</span>
+    <h1>📚 فهرس الواجبات المنزلية</h1>
+    <p>اختر الدرس وافتح واجبه: أسئلة سريعة تثبّت الدرس، والنتيجة توصل للأستاذ تلقائياً.</p>
+  </div>
+
+  <div class="card">
+    <input type="text" class="act-search" id="hwSearch" placeholder="🔍 دوّر باسم الدرس... (مثلاً: العازل، الليزر، المحولة)">
+    <div id="hwList"></div>
+  </div>
+
+  <footer class="site">إعداد الأستاذ أحمد رافع</footer>
+</div>
+
+<script src="js/core.js"></script>
+<script src="js/activities-list.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  // لو وصل الطالب لهذا الفهرس من رابط واجب يحمل كلمة السر (?p=...) نمرّرها لكل
+  // روابط الفهرس، فيتنقّل بين الواجبات بلا ما يعيد كتابتها. وبدونها تطلبها صفحة الواجب.
+  var m = (location.search || "").match(/[?&]p=([^&]*)/);
+  var passParam = m ? "?p=" + m[1] : "";
+
+  var host = document.getElementById("hwList");
+  var currentCh = null;
+
+  (window.SHARARA_ACTIVITIES || []).forEach(function (item) {
+    if (item.chapterName) {
+      var head = document.createElement("div");
+      head.className = "act-chapter-head";
+      head.setAttribute("data-chapter", "1");
+      head.textContent = item.chapterName;
+      host.appendChild(head);
+      currentCh = head;
+      return;
+    }
+    // أول درس تحت عنوان الفصل يعطي العنوان معرّفاً (#g6c1 مثلاً) حتى يقفز له
+    // زر "فهرس الواجبات" بصفحة الواجب مباشرة على فصل الطالب.
+    if (currentCh && !currentCh.id) currentCh.id = item.ch;
+
+    var row = document.createElement("div");
+    row.className = "act-row";
+    row.setAttribute("data-title", item.title);
+    var title = document.createElement("div");
+    title.className = "act-title";
+    title.textContent = "درس " + item.lesson + " — " + item.title;
+    var link = document.createElement("a");
+    link.className = "btn ghost small";
+    link.href = "chapters/" + item.ch + "/lesson" + item.lesson + "-activity.html" + passParam;
+    link.textContent = "📝 افتح الواجب";
+    row.appendChild(title);
+    row.appendChild(link);
+    host.appendChild(row);
+  });
+
+  document.getElementById("hwSearch").addEventListener("input", function () {
+    filterActivityList(host, this.value);
+  });
+
+  // القوائم تُبنى بالسكربت، فالقفز التلقائي لـ #الفصل ما يلحقها — نقفز يدوياً بعد
+  // اكتمال التحميل (الخطوط وإضافات core.js تغيّر الارتفاعات قبلها فيضيع الموضع).
+  window.addEventListener("load", function () {
+    var target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target) target.scrollIntoView({ block: "start" });
+  });
+})();
+</script>
+</body>
+</html>

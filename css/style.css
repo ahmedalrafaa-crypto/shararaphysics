@@ -1516,3 +1516,13 @@ footer.site::before {
 @media (prefers-reduced-motion: reduce) {
   .pred-promo, .pred-promo * { transition: none !important; }
 }
+
+/* ===== قوائم الأنشطة المنزلية (activities.html + homework.html) ===== */
+.act-search { width: 100%; box-sizing: border-box; padding: 12px 14px; border-radius: 12px; border: 1.5px solid rgba(0,0,0,.12); font-family: inherit; font-size: 1rem; margin-bottom: 6px; }
+.act-chapter-head { font-weight: 900; font-size: 1.05rem; margin: 18px 0 4px; padding-top: 10px; border-top: 2px solid rgba(0,0,0,.06); }
+.act-chapter-head:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+.act-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,.07); }
+.act-row:last-child { border-bottom: none; }
+.act-title { font-weight: 800; flex: 1 1 220px; min-width: 0; }
+.act-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+.act-empty { color: #888; padding: 10px 0; }

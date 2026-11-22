@@ -68,10 +68,14 @@ var ShararahActivity = (function () {
 
   function buildMarkup(cfg) {
     var title = cfg.title || "نشاط منزلي";
+    // رابط فهرس الواجبات (homework.html) مفتوحاً على فصل هذا الدرس، ويحمل كلمة السر
+    // لو جاء الطالب برابط فيه ?p= — حتى يفتح واجباً ثانياً بلا ما يعيد كتابتها.
+    var pm = (location.search || "").match(/[?&]p=([^&]*)/);
+    var hwIndex = "../../homework.html" + (pm ? "?p=" + encodeURIComponent(decodeURIComponent(pm[1].replace(/\+/g, " "))) : "") + "#" + encodeURIComponent(cfg.ch || "");
     return '' +
       '<div class="topbar">' +
         '<a class="brand" href="../../index.html"><img class="brand-logo" src="../../assets/logo-ar.png" alt="شعار أ. أحمد رافع"> فيزياء أ. أحمد رافع</a>' +
-        '<span class="crumbs">/ نشاط منزلي</span>' +
+        '<span class="crumbs">/ <a href="' + hwIndex + '">فهرس الواجبات</a> / نشاط منزلي</span>' +
       '</div>' +
 
       '<div id="actPinScreen">' +
@@ -111,6 +115,12 @@ var ShararahActivity = (function () {
         '<div class="hero"><h1>🏠 نشاط منزلي: ' + title + '</h1></div>' +
         '<div id="actQuiz"></div>' +
         '<div id="actSendStatus" class="notebox" style="display:none;margin-top:16px"></div>' +
+      '</div>' +
+
+      // زر ثابت بكل الشاشات (كلمة السر/الاسم/الأسئلة): يفتح فهرس الواجبات المنزلية
+      // على فصل هذا الدرس — نفس صنف lesson-nav المستخدم بصفحات الدروس.
+      '<div class="lesson-nav">' +
+        '<a class="btn ghost" href="' + hwIndex + '">📚 فهرس الواجبات</a>' +
       '</div>';
     // الفوتر يبقى ثابتاً بالصفحة نفسها (خارج activityRoot) حتى يلقاه core.js
     // عند DOMContentLoaded فيحقن صندوق "بلّغ عن خطأ" بمكانه الصحيح.
